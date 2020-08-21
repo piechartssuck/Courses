@@ -1,0 +1,280 @@
+---
+title: Syllabus
+slug: syllabus
+citeproc: true
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    toc: true
+    fig_caption: false
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(tibble)
+library(pander)
+```
+
+`r blogdown::shortcode("courseinfo")`
+
+## Course objectives
+
+Students will become proficient in the following aspects:
+1. Administering surveys via the Internet.
+2. Constructing online surveys.^[Sure paper surveys are important but they are rarely used barring small samples.]
+3. Creating aesthetically pleasing surveys using color theory and design techniques^[Pretty is good!].
+4. Determining how to assess survey reliability and validity of items and instruments.
+5. Enhancing the look and feel of surveys using programming techniques.^[Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.] 
+6. Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.
+7. Using R and RStudio to pull, analyze, and construct reports on survey data. 
+
+## FAQ
+
+### Is the course content difficult?
+You've probably heard an answer like this before: *At times some of the material can be dense.* Well that isn't much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
+
+### Is R difficult?
+Learning R can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+
+### What if I find a mistake?
+Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
+
+## Course materials
+There is two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well
+
+### Books, articles, and other materials
+
+We'll rely on the texts below:
+
+- Dillman, D.A., Smyth, J.D., and Christian, L.M. (2014). *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* (4th ed.). Wiley.
+
+- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
+
+There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+
+Subscribing to the [R Weekly newsletter](https://rweekly.org/){target="_blank"} provides many helpful tutorials about how to do R. This certainly is not a requirement.
+
+### Quatrics
+
+All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at 304-293-4444.
+
+### R and RStudio
+
+You will do all of your analysis with the open source (and free!) programming language [R](https://cran.r-project.org/){target="_blank"}. You will use [RStudio](https://www.rstudio.com/){target="_blank"} as the main program to access R. **Think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+
+**you do not need to have any programming experience to use R**
+
+R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free [RStudio.cloud](http://rstudio.cloud/){target="_blank"} service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.
+
+The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you'll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.
+
+You can [find instructions for installing R, RStudio, and all the tidyverse packages here](/resource/install/).
+
+### Online help
+
+Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!
+
+Fortunately there are many online resources to help. Two of the most important are [StackOverflow](https://stackoverflow.com/){target="_blank"} (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/){target="_blank"} (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. 
+
+If you use Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"}. The community there is exceptionally generous and helpful.
+
+Searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter. 
+
+You can email me with questions about content, R or whatever (after giving an effort of course). Please include the subject header **EDP 619 "the title of your email"** where the title of your email is given without the quotes. I have a mail filter that will automatically bring your email to a top priority status. In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly. 
+
+Finally, we have a class chatroom at [Slack](2020edp619.slack.com){target="_blank"} where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare instances where I  keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+
+## Assignments and grades
+
+You can find descriptions for all the assignments on the [assignments page](/assignment/).
+
+```{r assignments-grades, include=FALSE}
+assignments <- tribble(
+  ~Points,  ~Assignment,
+  13 * 10, "Data Camp (6 × 20)",
+  2 * 30, "Data Tasks (6 × 20)",
+  10, "Selecting a Population",
+  25, "Survey Draft",
+  25, "Pilot Study Review",
+  25, "Final Survey",
+  100, "Report",
+  25, "Presentation" 
+) %>%
+  mutate(Percent = Points / sum(Points),
+         Percent = scales::percent(Percent, accuracy = 1))
+
+grading <- tribble(
+  ~Grade, ~Range,
+  "A",  "90–100%",
+  "B",  "80%-89%",  
+  "C",  "70–79%",
+  "D",  "60–69%", 
+  "F",  "< 60%"
+)
+```
+
+
+<div class="centered-table">
+
+```{r show-assignments-table, echo=FALSE, results="asis"}
+assignments_total <- tibble(Assignment = "Total",
+                            Points = sum(assignments$Points),
+                            Percent = NA)
+
+bind_rows(assignments, assignments_total) %>% 
+  select(Assignment, Points, Percent) %>% 
+  pandoc.table(justify = "lcc", missing = "—")
+```
+</div>
+
+<br />
+<div class="centered-table">
+
+```{r show-grades-table, echo=FALSE, results="asis"}
+grading %>%
+  pandoc.table(justify = "lc", 
+               col.names = c("Grade", "Range"))
+```
+
+<div>
+
+### Your hours
+
+Please watch this video:
+
+<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+
+Your hours (formerly known as office hours) are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed. This is not just a local issue!](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/){target="_blank"}, which is the exact opposite of what they are for!]). This means that I will be ~~in my office~~ at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
+
+Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through either e-mail or Slack. 
+
+### Class conduct and expectations
+
+Here are the rules, expectations, and policies that I came up or stole from other professors:
+
+- **Late work**: Barring the final project, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
+- **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.
+- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:
+
+1.	When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric. 
+2.	If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
+3.	Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
+4.	Unless you are in a very specific area, the real world does not use rubrics! 
+
+- **Technology use**: Use phones, computers, etc. responsibly. You're all adults...well I am most of the time.
+
+
+### Learning during a pandemic
+
+There's really no other way to say it - life sucks right now! 
+
+You probably know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even died. Additionally your work responsibilities have most likely shifted, coming with it added stress and worries. Please take note of the following:
+
+**I am fully committed to making sure that you learn everything you were hoping to learn from this class!** 
+
+I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that *you keep an open line of communication!* Furthermore, if you feel like you are behind or not understanding everything, **do not suffer in silence!** Please talk to me! 
+
+I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, proving that $0.99999\ldots = 1$ - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis. 
+
+## Course policies
+
+**Its pretty simple: Be nice. Be honest. Don't cheat. Be a good human.**
+
+We will also follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code){target="_blank"}.
+
+This syllabus reflects a plan for the term. Deviations may become necessary as the course progresses. Note that **I reserve the right to alter or amend this syllabus.** I will send notifications if course tasks are affected.
+
+## COVID-19 Statement
+
+WVU is committed to maintaining a safe learning environment for all students, faculty, and staff. Should campus operations change because of health concerns related to the COVID-19 pandemic, it is possible that this course will move to a fully online delivery format. If that occurs, students will be advised of technical and/or equipment requirements, including remote proctoring software.
+
+In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
+
+If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes. 
+
+### Psychological and Psychiatric Services
+
+Life at WVU can be complicated and challenging, especially during a pandemic! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. [Psychological and Psychiatric Services](https://carruth.wvu.edu/home){target="_blank"} provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.
+
+### CARE Team
+
+If you or anyone you know may be at-risk such as those listed [here](https://careteam.wvu.edu/referrals){target="_blank"}, please make a CARE referral. You may do so directly at the main [WVU CARE TEAM](https://careteam.wvu.edu/home){target="_blank"} site.
+
+### Lauren's Promise
+
+**I will listen and believe you if someone is threatening you.**
+
+Lauren McCluskey, a 21-year-old honors student athlete, [was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus](https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html){target="_blank"}. We must all take action to ensure that this never happens again.
+
+If you are in immediate danger, call 911 or the Campus Police at 304-293-3136.
+
+If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private [Title IX On-Call Line](https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options){target="_blank"} (304-906-9930).
+
+Any form of sexual harassment or violence will not be excused or tolerated at West Virginia University. WVU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims.
+
+### Academic Integrity
+
+The integrity of the classes offered by any academic institution solidifies the foundation of its mission and cannot be sacrificed to expediency, ignorance, or blatant fraud. Therefore, I will enforce rigorous standards of academic integrity in all aspects and assignments of this course. For the detailed policy of West Virginia University regarding the definitions of acts considered to fall under academic dishonesty and possible ensuing sanctions, please see the West Virginia University Academic Catalog at [http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext](http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext){target="_blank"}. Should you have any questions about possibly improper research citations or references, or any other activity that may be interpreted as an attempt at academic dishonesty, please see me before the assignment is due to discuss the matter. 
+
+### Inclusivity Statement
+
+The West Virginia University community is committed to creating and fostering a positive learning and working environment based on open communication, mutual respect, and inclusion.
+
+If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services (293-6700).  
+
+For more information on West Virginia University's Diversity, Equity, and Inclusion initiatives, please see [http://diversity.wvu.edu](http://diversity.wvu.edu){target="_blank"}.
+
+### Incomplete Grades
+
+Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract.  The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at [Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract.  The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at
+[http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext](http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext){target="_blank"}.
+
+### Sale of Course Materials
+
+All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/){target="_blank"}. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. Basically you can share what you like but don't try to make a buck.
+
+### Student Evaluation of Instruction (SEI) 
+
+Effective teaching is a primary mission of West Virginia University. Student evaluation of instruction provides the university and the instructor with feedback about your experiences in the course for review and course improvement. Your participation in the evaluation of course instruction is both strongly encouraged and highly valued. Results are strictly confidential, anonymous, and not available to the instructor until after final grades are released by Admissions and Records. Information about how you can complete this evaluation will be provided later.
+
+### University Attendance Policy
+
+At West Virginia University, class attendance contributes significantly to academic success. Students who attend classes regularly tend to earn higher grades and have higher passing rates in courses. Excessive absences may jeopardize students' grades or even their ability to continue in their courses. There is a strong correlation between regular class attendance and academic success. 
+
+### Course Netiquette
+
+The basic premise is that the etiquette expected of students in the online environment is the same as that expected in a classroom. Common courtesy is the guiding rule of Internet communications. Be prepared to communicate effectively when taking an online course. Following these simple netiquette rules in your online class or education environment will ensure your success:
+
+-	Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate. 
+-	Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
+-	Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE. 
+-	Act as professionally, via your writing, as you would in a face to face classroom. 
+-	Refrain from inappropriate language and derogatory or personal attacks. 
+-	Do not dominate any discussion. Give other students the opportunity to join in the discussion.
+-	Disagree with ideas but avoid challenges that may be interpreted as a personal attack. 
+-	Check that you are replying to the specific person you intend, and not to the entire class. 
+-	Never give your password to another person. 
+-	Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space. 
+-	Never spam your classmates. 
+-	If you quote someone's previous post, only quote enough to make your point. 
+
+Be aware of the University’s Academic Integrity and Dishonesty Policy [http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext](http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext){target="_blank"}. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at [http://campuslife.wvu.edu/r/download/1802350](http://campuslife.wvu.edu/r/download/180235){target="_blank"}.
+
+### Response Time
+I generally respond to Slack queries in the same day while responses to emails and discussion posts are within 48 hours, except during holidays. Often, I will reply much more quickly but you should not count on a immediate. Please plan accordingly so that you don’t miss deadlines! I generally return assignments within one to two weeks after a final submission date.
+
+### Technical Requirements
+Students need to have access to a computer for word processing, e-mail and access to eCampus. Access to the Internet is necessary for completion of this course. Run the Browser Check. This tool will check that you are using a supported Internet browser and have a valid Java version installed. The required technical skills to participate in this course are:
+
+1.	Navigate the web
+2.	Use email with attachments 
+3.	Create and submit files in commonly used word processing program formats
+4.	Copy and paste
+5.	Download and install software
+6.	Consult software tutorials and other online sources as a method of learning software features 
+
+### Technical Support
+Technical support regarding your use of eCampus is available by contacting [304-293-4444](callto: 304-293-4444) (telephone), [1-877-327-9260](callto: 1-877-327-9260) (toll free number), [itshelp@mail.wvu.edu](mailto: itshelp@mail.wvu.edu) (email), and/or [http://it.wvu.edu](http://it.wvu.edu){target="_blank"} (website).
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

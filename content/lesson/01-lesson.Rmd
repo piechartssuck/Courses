@@ -1,0 +1,20 @@
+---
+title: "Getting Familiar with the Course"
+linktitle: "Lesson: Getting Familiar with the Course"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Lesson
+
+While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. There is a lot on there but please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks.
+

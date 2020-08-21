@@ -1,0 +1,68 @@
+---
+title: Course Tasks
+menu:
+  assignment:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+You will get the most of out this class if you:
+
+1. engage with the readings and materials,
+2. use R to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis,
+3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
+4. keep an open and honest line of communication with me and your peers if possible.
+
+Each type of assignment in this class helps with at least one one of these criteria.
+
+## Lessons
+
+Most class sessions have [interactive lessons](/lesson/) via [Data Camp](https://www.datacamp.com/). Your task is simply to go through these. 
+
+I will grade these short excercises using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Modules are 100% completed. Every task was attempted and answered, and most answers are correct. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Modules are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Modules are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
+
+Otherwise *0 points (0%) in gradebook*.
+
+
+## Exercises
+
+Some classes also have [fully annotated examples](/example/) of CSS, HTML, Javascript or R code that teach and demonstrate how to do specific tasks in R we cover here or elsewhere and on [Data Camp](https://www.datacamp.com/){target="_blank"}. Your task will be to submit a materials to show that these have been applied.
+
+I will grade these short exercises using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document are clean and easy to follow. This indicates that your work is exceptional. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Exercises are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
+
+Again, I am not grading your coding ability, checking each line of code or syntax to make sure it produces the exact output, and most importantly, I am not looking for perfection! Try hard, get frustrated, do good work and you'll get a ✓ or even a ✔+.
+
+I encourage you to work together on the courses if possible, but you must turn in your own work on [eCampus](https://ecampus.wvu.edu){target="_blank"}.
+
+Otherwise *0 points (0%) in gradebook*.
+
+## Final Task
+
+At the end of the course, you will demonstrate your data visualization skills by completing a final task.
+
+Complete details for this will be posted here soon. To preview, you will need to design, pilot, and administer a survey to a identify a group, organization, etc. to survey, 
+
+**This project serves as your final exam.**
+
+The project will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and other course items throughout the course, you should do just fine with the course task.
+
+<hr />
+
+## A Note About Discussion Board Postings
+
+While you may like or even love them, I hate discussion board posts. I hated them as a graduate student and still hate them as a professor. I recently made the decision to never use discussion board posts again for many reasons which are not useful to discuss here.
+
+I always prefer face to face or at least conferencing if needed. With that said, we have Zoom and a [Slack channel](https:/2020edp613.slack.com) so please use both! 

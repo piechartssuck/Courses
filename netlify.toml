@@ -1,0 +1,27 @@
+[build]
+  command = "hugo --gc --minify"
+#  base    = "exampleSite"
+  publish = "public"
+
+[build.environment]
+  HUGO_THEME = "hugo-academic"
+  HUGO_VERSION = "0.74.3"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.branch-deploy]
+  command = "make staging"
+
+[context.feature]
+  command = "make feature"
+
+[context."features/branch"]
+  command = "gulp"
+
+[context.branch-deploy.environment]
+    HUGO_VERSION = "0.74.3" # if older, use format: 0.53 (no trailing zero)
+
+[context.deploy-preview.environment]
+    HUGO_VERSION = "0.74.3"

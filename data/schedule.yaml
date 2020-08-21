@@ -1,0 +1,11 @@
+lessons:
+  - title: '<span class="fake-header-table">Concentration</span>'
+    header: True
+
+  - title: 'Getting Familar with the Course'
+    session: 1
+    date: "August 23, 2020"
+    readings: "01-readings"
+    lesson: "01-lesson"
+    example: "01-example"
+    assignment: "01-assignment"

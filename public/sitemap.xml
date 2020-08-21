@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/resource/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/citations/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/01-assignment/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/01-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/01-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/resource/data/</loc>
+  </url>
+  
+  <url>
+    <loc>/resource/design/</loc>
+  </url>
+  
+  <url>
+    <loc>/resource/install/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/markdown/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/r/</loc>
+  </url>
+  
+  <url>
+    <loc>/resource/rmarkdown/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/style/</loc>
+  </url>
+  
+  <url>
+    <loc>/resource/visualization/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/unzipping/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/dr.-abhik-roy/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/dr.-abhik-roy/</loc>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/01-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/schedule/</loc>
+  </url>
+  
+  <url>
+    <loc>/syllabus/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>
