@@ -12,7 +12,7 @@
   HUGO_ENV = "production"
 
 [context.branch-deploy]
-  command = "make staging"
+  command = "make edp619"
 
 [context.feature]
   command = "make feature"
