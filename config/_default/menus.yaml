@@ -20,12 +20,15 @@ main:
   - name: Resources
     url: /resource/
     weight: 7
+  - name: Teacher
+    url: /resource/
+    weight: 8
   - name: '<i class="fab fa-slack"></i>'
     url: "https://2020edp619.slack.com"
-    weight: 8
+    weight: 9
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://rstudio.cloud/"
-    weight: 9
+    weight: 10
 
 content:
   - name: Overview
