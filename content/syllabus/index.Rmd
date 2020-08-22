@@ -102,7 +102,7 @@ I have a mail filter that will automatically bring your email to a top priority 
 
 You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you're more likely to remember things you've figured out rather than those you've been shown or told. 
 
-## Assignments and grades
+## Assignments and Grades
 
 You can find descriptions for all the assignments on the [assignments page](/assignment/).
 
@@ -188,7 +188,9 @@ There's really no other way to say it - life sucks right now!
 
 You probably know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even died. Additionally your work responsibilities have most likely shifted, coming with it added stress and worries. Please take note of the following:
 
+<div class="text-center">
 **I am fully committed to making sure that you learn everything you were hoping to learn from this class!** 
+</div>
 
 I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that *you keep an open line of communication!* Furthermore, if you feel like you are behind or not understanding everything, **do not suffer in silence!** Please talk to me! 
 
@@ -196,7 +198,9 @@ I selfishly want you to learn lots of things from this class (design! analysis! 
 
 ## Course policies
 
+<div class="text-center">
 **Its pretty simple: Be nice. Be honest. Don't cheat. Be a good human.**
+</div>
 
 We will also follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code){target="_blank"}.
 
@@ -220,7 +224,9 @@ If you or anyone you know may be at-risk such as those listed [here](https://car
 
 ### Lauren's Promise
 
+<div class="text-center">
 **I will listen and believe you if someone is threatening you.**
+</div>
 
 Lauren McCluskey, a 21-year-old honors student athlete, [was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus](https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html){target="_blank"}. We must all take action to ensure that this never happens again.
 
@@ -249,7 +255,7 @@ Students who want to be considered for an Incomplete must apply to their instruc
 
 ### Sale of Course Materials
 
-All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/){target="_blank"}. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. Basically you can share what you like but don't try to make a buck.
+All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/){target="_blank"}. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. **Basically you can share what you like but don't try to make a buck.**
 
 ### Student Evaluation of Instruction (SEI) 
 
@@ -265,7 +271,7 @@ The basic premise is that the etiquette expected of students in the online envir
 
 -	Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate. 
 -	Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
--	Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE. 
+-	Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
 -	Act as professionally, via your writing, as you would in a face to face classroom. 
 -	Refrain from inappropriate language and derogatory or personal attacks. 
 -	Do not dominate any discussion. Give other students the opportunity to join in the discussion.
@@ -289,7 +295,10 @@ Students need to have access to a computer for word processing, e-mail and acces
 3.	Create and submit files in commonly used word processing program formats
 4.	Copy and paste
 5.	Download and install software
-6.	Consult software tutorials and other online sources as a method of learning software features 
+6.	Consult software tutorials and other online sources as a method of learning software features
+7. Use syntax when necessary
+
+Notice that programming is not on here!
 
 ### Technical Support
 Technical support regarding your use of eCampus is available by contacting [304-293-4444](callto: 304-293-4444) (telephone), [1-877-327-9260](callto: 1-877-327-9260) (toll free number), [itshelp@mail.wvu.edu](mailto: itshelp@mail.wvu.edu) (email), and/or [http://it.wvu.edu](http://it.wvu.edu){target="_blank"} (website).

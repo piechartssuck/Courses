@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Examples | Survey Reseach Methods</title>
-    <link>https://www.theoreticalphysed.com/example/</link>
-      <atom:link href="https://www.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>/example/</link>
+      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
     <description>Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://www.theoreticalphysed.com/img/social-image.png</url>
+      <url>/img/social-image.png</url>
       <title>Examples</title>
-      <link>https://www.theoreticalphysed.com/example/</link>
+      <link>/example/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://www.theoreticalphysed.com/example/01-example/</link>
+      <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/example/01-example/</guid>
+      <guid>/example/01-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
