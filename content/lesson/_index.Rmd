@@ -11,8 +11,10 @@ shiny: true
 
 Each class session has an interactive lesson that you will work through ***after*** doing the readings and watching a lecture (if applicable). These lessons are a central part of the class—they will teach you how to use R and other packages eventually leading to the **tidyverse** family.
 
-Interactive training sections are provided on [Data Camp](https://www.datacamp.com/). 
+Interactive training sections are provided on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
 
 Here is some advice. Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
+
+**Please note that if you have (1) used Data Camp before and (2) are logged in with the same username, then any module that was successfully completed will not have to be done again.**
 
 
