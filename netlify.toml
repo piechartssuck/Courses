@@ -8,15 +8,27 @@
   HUGO_VERSION = "0.74.3"
   HUGO_ENABLEGITINFO = "true"
 
+  [context.production]
+  publish = "output/"
+  command = "make publish"
+  environment = { ACCESS_TOKEN = "super secret", NODE_ENV = "8.0.1" }
+# Deploy Preview context: All Deploy Previews (https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/)
+# will inherit these settings.
+[context.deploy-preview]
+  publish = "dist/"
+# Here is another way to define context specific environment variables
+[context.deploy-preview.environment]
+  ACCESS_TOKEN = "not so secret"
+
 [context.production.environment]
   HUGO_ENV = "production"
 
   [context.branch-deploy]
     command = "echo branch"
 
-  [context.staging] # 'staging' is a branch name
-    command = "echo 'staging'"
-    base = "staging"
+  [context.edp619] # 'edp619' is a branch name
+    command = "echo 'edp619'"
+    base = "edp619"
 
   [context."feat/branch"]
     command = "echo 'special branch'"
