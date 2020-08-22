@@ -8,29 +8,6 @@
   HUGO_VERSION = "0.74.3"
   HUGO_ENABLEGITINFO = "true"
 
-  [context.production]
-  publish = "output/"
-  command = "make publish"
-  environment = { ACCESS_TOKEN = "super secret", NODE_ENV = "8.0.1" }
-
-
-[context.deploy-preview]
-  publish = "dist/"
-
-[context.production.environment]
-  HUGO_ENV = "production"
-
-  [context.branch-deploy]
-    command = "echo branch"
-
-  [context.edp619] # 'edp619' is a branch name
-    command = "echo 'edp619'"
-    base = "edp619"
-
-  [context."feat/branch"]
-    command = "echo 'special branch'"
-    base = "branch"
-
 [context.branch-deploy.environment]
     HUGO_VERSION = "0.74.3" # if older, use format: 0.53 (no trailing zero)
 
