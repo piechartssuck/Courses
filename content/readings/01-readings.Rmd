@@ -14,17 +14,19 @@ output:
     toc: true
 ---
 
-## Readings
-
-- First things first:
+### Get Some Advice
+First things first:
 <br>
 <br>
 <iframe src="/videos/snoop_syllabus.mp4" width="320" height="480" frameBorder="0">Read the syllabus.</iframe>
 <br>
 <br>Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible!
 
-- Review the overviews of the other areas as well:  [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class.
-- Read <i class="fas fa-book"></i> Chapter 1 in Dillman, Smyth, and Christian. 
+### Review Syllabus
+Review the overviews of the other areas as well:  [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class.
+
+### Book Stuff
+Read *Chapter 1:Sample Surveys in Our Electronic World* in Dillman, Smyth, and Christian. 
 
 
 

@@ -14,7 +14,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Example
-
+### Nothing!
 There are no examples this week. Go do something!
 

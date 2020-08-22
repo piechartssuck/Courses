@@ -14,7 +14,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Lesson
-
-While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. There is a lot on there but please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks.
+### Data Camp
+While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. There is a lot on there but please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks. Just remember, this is not a programming class!
 

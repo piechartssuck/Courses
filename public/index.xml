@@ -38,35 +38,44 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#exercise&#34;&gt;Exercise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mulling-bad-survey-questions&#34;&gt;Mulling Bad Survey Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#verify-qualtrics-account-login&#34;&gt;Verify Qualtrics Account Login&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;exercise&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Exercise&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Most important task of the week - well to me at least. Please&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account 2. Register if you have to. You do not have to use your WVU account but its not a bad idea.&lt;/li&gt;
-&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example:
+&lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
+&lt;p&gt;Most important task of the week - well to me at least - is to
+1. Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account
+2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
+3. Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
 &lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind!&lt;/em&gt;
-&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below&lt;/li&gt;
-&lt;/ul&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
+4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mulling-bad-survey-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
+This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
 &lt;center&gt;
-&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; alt=&#34;Terrible Item&#34; /&gt;
+&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;/li&gt;
-&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now download the &lt;a href=&#34;/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
+–&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I will post solutions of what may be the most egregious errors next week.
+&lt;/div&gt;
+&lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at 304-293-4444 as soon as possible. We will be working with Qualtrics very soon!&lt;br&gt;
 :::&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -80,12 +89,12 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nothing&#34;&gt;Nothing!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;example&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Example&lt;/h2&gt;
+&lt;div id=&#34;nothing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nothing!&lt;/h3&gt;
 &lt;p&gt;There are no examples this week. Go do something!&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -100,13 +109,13 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lesson&#34;&gt;Lesson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;lesson&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Lesson&lt;/h2&gt;
-&lt;p&gt;While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks.&lt;/p&gt;
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1194,22 +1203,28 @@ mpg %&amp;gt;%
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#readings&#34;&gt;Readings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#review-syllabus&#34;&gt;Review Syllabus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;readings&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Readings&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;First things first:
+&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get Some Advice&lt;/h3&gt;
+&lt;p&gt;First things first:
 &lt;br&gt;
 &lt;br&gt;
 &lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
 &lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Read &lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1 in Dillman, Smyth, and Christian.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;review-syllabus&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Review Syllabus&lt;/h3&gt;
+&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 1:Sample Surveys in Our Electronic World&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1291,10 +1306,9 @@ mpg %&amp;gt;%
 &lt;li&gt;&lt;a href=&#34;#what-if-i-find-a-mistake&#34;&gt;What if I find a mistake?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#course-materials&#34;&gt;Course materials&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#books-articles-and-other-materials&#34;&gt;Books, articles, and other materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#quatrics&#34;&gt;Quatrics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#r-and-rstudio&#34;&gt;R and RStudio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#online-help&#34;&gt;Online help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#texts&#34;&gt;Texts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#note-online-help&#34;&gt;Note: Online help&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and grades&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#your-hours&#34;&gt;Your hours&lt;/a&gt;&lt;/li&gt;
@@ -1354,14 +1368,16 @@ mpg %&amp;gt;%
 
 &lt;div id=&#34;course-objectives&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course objectives&lt;/h2&gt;
-&lt;p&gt;Students will become proficient in the following aspects:
-1. Administering surveys via the Internet.
-2. Constructing online surveys.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
-3. Creating aesthetically pleasing surveys using color theory and design techniques&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.
-4. Determining how to assess survey reliability and validity of items and instruments.
-5. Enhancing the look and feel of surveys using programming techniques.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
-6. Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.
-7. Using R and RStudio to pull, analyze, and construct reports on survey data.&lt;/p&gt;
+&lt;p&gt;Students will become proficient in the following aspects:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Administering surveys via the Internet.&lt;/li&gt;
+&lt;li&gt;Constructing online surveys.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creating aesthetically pleasing surveys using color theory and design techniques&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Determining how to assess survey reliability and validity of items and instruments.&lt;/li&gt;
+&lt;li&gt;Enhancing the look and feel of surveys using programming techniques.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.&lt;/li&gt;
+&lt;li&gt;Using R and RStudio to pull, analyze, and construct reports on survey data.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;faq&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;FAQ&lt;/h2&gt;
@@ -1380,9 +1396,9 @@ mpg %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;course-materials&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course materials&lt;/h2&gt;
-&lt;p&gt;There is two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well&lt;/p&gt;
-&lt;div id=&#34;books-articles-and-other-materials&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Books, articles, and other materials&lt;/h3&gt;
+&lt;p&gt;There are two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.&lt;/p&gt;
+&lt;div id=&#34;texts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Texts&lt;/h3&gt;
 &lt;p&gt;We’ll rely on the texts below:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Dillman, D.A., Smyth, J.D., and Christian, L.M. (2014). &lt;em&gt;Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method&lt;/em&gt; (4th ed.). Wiley.&lt;/p&gt;&lt;/li&gt;
@@ -1391,20 +1407,23 @@ mpg %&amp;gt;%
 &lt;p&gt;There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.&lt;/p&gt;
 &lt;p&gt;Subscribing to the &lt;a href=&#34;https://rweekly.org/&#34; target=&#34;_blank&#34;&gt;R Weekly newsletter&lt;/a&gt; provides many helpful tutorials about how to do R. This certainly is not a requirement.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;quatrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Quatrics&lt;/h3&gt;
+&lt;div id=&#34;software&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Software&lt;/h3&gt;
+&lt;div id=&#34;quatrics&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Quatrics&lt;/h4&gt;
 &lt;p&gt;All survey design, construction and deployment will occur in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt;. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at 304-293-4444.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;r-and-rstudio&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;R and RStudio&lt;/h3&gt;
+&lt;div id=&#34;r-and-rstudio&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;R and RStudio&lt;/h4&gt;
 &lt;p&gt;You will do all of your analysis with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. &lt;strong&gt;Think of R as an engine and RStudio as a car dashboard&lt;/strong&gt; — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;you do not need to have any programming experience to use R&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34; target=&#34;_blank&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.&lt;/p&gt;
 &lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you’ll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.&lt;/p&gt;
 &lt;p&gt;You can &lt;a href=&#34;/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;online-help&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Online help&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;note-online-help&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Note: Online help&lt;/h3&gt;
 &lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
 &lt;p&gt;Fortunately there are many online resources to help. Two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration.&lt;/p&gt;
 &lt;p&gt;If you use Twitter, post R-related questions and content with &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;. The community there is exceptionally generous and helpful.&lt;/p&gt;

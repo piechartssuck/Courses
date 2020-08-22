@@ -21,6 +21,7 @@ library(pander)
 ## Course objectives
 
 Students will become proficient in the following aspects:
+
 1. Administering surveys via the Internet.
 2. Constructing online surveys.^[Sure paper surveys are important but they are rarely used barring small samples.]
 3. Creating aesthetically pleasing surveys using color theory and design techniques^[Pretty is good!].
@@ -41,9 +42,9 @@ Learning R can be especially challenging at first—it's akin to learning a new 
 Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
 
 ## Course materials
-There is two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well
+There are two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
 
-### Books, articles, and other materials
+### Texts
 
 We'll rely on the texts below:
 
@@ -55,11 +56,13 @@ There will occasionally be additional articles and videos to read and watch. Whe
 
 Subscribing to the [R Weekly newsletter](https://rweekly.org/){target="_blank"} provides many helpful tutorials about how to do R. This certainly is not a requirement.
 
-### Quatrics
+### Software
+
+#### Quatrics
 
 All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at 304-293-4444.
 
-### R and RStudio
+#### R and RStudio
 
 You will do all of your analysis with the open source (and free!) programming language [R](https://cran.r-project.org/){target="_blank"}. You will use [RStudio](https://www.rstudio.com/){target="_blank"} as the main program to access R. **Think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
@@ -71,7 +74,7 @@ The service is convenient, but please keep in mind that it can be slow and is no
 
 You can [find instructions for installing R, RStudio, and all the tidyverse packages here](/resource/install/).
 
-### Online help
+### Note: Online help
 
 Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!
 
