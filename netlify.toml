@@ -21,10 +21,11 @@
 # Specific branch context: Deploys from this branch
 # will take these settings and override their
 # current ones.
-[context.edp619] # 'edp619' is a branch name
+# 'edp619' is a branch name
+[context.edp619] 
   command = "echo 'edp619'"
   base = "edp619"
-  
+
 # For contexts of branches with special characters, enclose the branch name with quotes
 [context."feat/branch"]
   command = "echo 'special branch'"
