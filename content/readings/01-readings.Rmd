@@ -3,11 +3,12 @@ title: "Getting Familiar with the Course"
 linktitle: "Reading: Getting Familiar with the Course"
 menu:
   content:
-    parent: Readings
+    parent: Course content
     weight: 1
 type: docs
 bibliography: "../../static/bib/references.bib"
 csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+slides: "01-slides"
 output:
   blogdown::html_page:
     toc: true
