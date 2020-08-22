@@ -11,25 +11,19 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
-[# Branch Deploy context: All deploys that are not resulting from a Pull/Merge Request and not from the primary, linked branch will inherit these settings.
-[context.branch-deploy]
-  command = "echo branch"
+  [context.branch-deploy]
+    command = "echo branch"
 
-[context.branch-deploy.environment]
-  NODE_ENV = "development"
+  [context.branch-deploy.environment]
+    NODE_ENV = "development"
 
-# Specific branch context: Deploys from this branch
-# will take these settings and override their
-# current ones.
-# 'edp619' is a branch name
-[context.edp619] 
-  command = "echo 'edp619'"
-  base = "edp619"
+  [context.staging] # 'staging' is a branch name
+    command = "echo 'staging'"
+    base = "staging"
 
-# For contexts of branches with special characters, enclose the branch name with quotes
-[context."feat/branch"]
-  command = "echo 'special branch'"
-  base = "branch"
+  [context."feat/branch"]
+    command = "echo 'special branch'"
+    base = "branch"
 
 [context.branch-deploy.environment]
     HUGO_VERSION = "0.74.3" # if older, use format: 0.53 (no trailing zero)
