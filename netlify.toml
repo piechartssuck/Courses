@@ -14,9 +14,6 @@
   [context.branch-deploy]
     command = "echo branch"
 
-  [context.branch-deploy.environment]
-    NODE_ENV = "development"
-
   [context.staging] # 'staging' is a branch name
     command = "echo 'staging'"
     base = "staging"
