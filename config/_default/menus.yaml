@@ -21,7 +21,7 @@ main:
     url: /resource/
     weight: 7
   - name: Teacher
-    url: /resource/
+    url: /teacher/
     weight: 8
   - name: '<i class="fab fa-slack"></i>'
     url: "https://2020edp619.slack.com"
