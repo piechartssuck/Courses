@@ -26,7 +26,7 @@ Students will become proficient in the following aspects:
 2. Constructing online surveys.^[Sure paper surveys are important but they are rarely used barring small samples.]
 3. Creating aesthetically pleasing surveys using color theory and design techniques^[Pretty is good!].
 4. Determining how to assess survey reliability and validity of items and instruments.
-5. Enhancing the look and feel of surveys using programming techniques.^[Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.] 
+5. Enhancing the look and feel of surveys using programming techniques^[Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.]. 
 6. Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.
 7. Using R and RStudio to pull, analyze, and construct reports on survey data. 
 
@@ -54,7 +54,7 @@ We'll rely on the texts below:
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
-Subscribing to the [R Weekly newsletter](https://rweekly.org/){target="_blank"} provides many helpful tutorials about how to do R. This certainly is not a requirement.
+
 
 ### Software
 
@@ -78,9 +78,9 @@ You can [find instructions for installing R, RStudio, and all the tidyverse pack
 
 ### Note: Online help
 
-Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!
+Data science and statistical programming can be difficult. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
 
-Fortunately there are many online resources to help. 
+But there are multiple resources online to help.
 
 - First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to recieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel like an uphill battle.
 
@@ -185,27 +185,25 @@ Here are the rules, expectations, and policies that I came up or stole from othe
 
 ### Learning during a pandemic
 
-There's really no other way to say it - life sucks right now! 
-
-You probably know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even died. Additionally your work responsibilities have most likely shifted, coming with it added stress and worries. Please take note of the following:
+There's really no other way to say it - at the current moment, life just sucks! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you're probably more stressed than usual. With that in mins, please keep the following in mind:
 
 <div class="text-center">
-**I am fully committed to making sure that you learn everything you were hoping to learn from this class!** 
+**As long as you keep an open line, show initiative, and let me know ahead of time^[I realize sometimes this just isn't possible so contact me as soon as you can.], I will do everything within reason to help you learn everything you were hoping to learn from this class!** 
 </div>
 
-I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that *you keep an open line of communication!* Furthermore, if you feel like you are behind or not understanding everything, **do not suffer in silence!** Please talk to me! 
+I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** Drop me a line!
 
 I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, proving that $0.99999\ldots = 1$ - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis. 
 
 ## Course policies
 
 <div class="text-center">
-**Its pretty simple: Be nice. Be honest. Don't cheat. Be a good human.**
+**Its pretty simple: Be nice. Be honest. Don't cheat. Stay in touch. Be a good human.**
 </div>
 
 We will also follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code){target="_blank"}.
 
-This syllabus reflects a plan for the term. Deviations may become necessary as the course progresses. Note that **I reserve the right to alter or amend this syllabus.** I will send notifications if course tasks are affected.
+This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus** and will send notifications if course tasks are affected.
 
 ## COVID-19 Statement
 

@@ -1373,7 +1373,7 @@ mpg %&amp;gt;%
 &lt;li&gt;Constructing online surveys.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Creating aesthetically pleasing surveys using color theory and design techniques&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Determining how to assess survey reliability and validity of items and instruments.&lt;/li&gt;
-&lt;li&gt;Enhancing the look and feel of surveys using programming techniques.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enhancing the look and feel of surveys using programming techniques&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.&lt;/li&gt;
 &lt;li&gt;Using R and RStudio to pull, analyze, and construct reports on survey data.&lt;/li&gt;
 &lt;/ol&gt;
@@ -1404,7 +1404,6 @@ mpg %&amp;gt;%
 &lt;li&gt;&lt;p&gt;American Psychological Association. (2020). &lt;em&gt;Publication manual of the American Psychological Association&lt;/em&gt; (7th ed.).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.&lt;/p&gt;
-&lt;p&gt;Subscribing to the &lt;a href=&#34;https://rweekly.org/&#34; target=&#34;_blank&#34;&gt;R Weekly newsletter&lt;/a&gt; provides many helpful tutorials about how to do R. This certainly is not a requirement.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;software&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Software&lt;/h3&gt;
@@ -1425,8 +1424,8 @@ mpg %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;note-online-help&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Note: Online help&lt;/h3&gt;
-&lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
-&lt;p&gt;Fortunately there are many online resources to help.&lt;/p&gt;
+&lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
+&lt;p&gt;But there are multiple resources online to help.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;First you will have access to &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which allows you to recieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R’s initial steep learning curve won’t feel like an uphill battle.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Second two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a &lt;a href=&#34;https://stackoverflow.com/help/minimal-reproducible-example&#34; target=&#34;_blank&#34;&gt;minimally reproducible example&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
@@ -1581,22 +1580,21 @@ mpg %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;learning-during-a-pandemic&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Learning during a pandemic&lt;/h3&gt;
-&lt;p&gt;There’s really no other way to say it - life sucks right now!&lt;/p&gt;
-&lt;p&gt;You probably know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even died. Additionally your work responsibilities have most likely shifted, coming with it added stress and worries. Please take note of the following:&lt;/p&gt;
+&lt;p&gt;There’s really no other way to say it - at the current moment, life just sucks! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you’re probably more stressed than usual. With that in mins, please keep the following in mind:&lt;/p&gt;
 &lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;I am fully committed to making sure that you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;As long as you keep an open line, show initiative, and let me know ahead of time&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;, I will do everything within reason to help you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that &lt;em&gt;you keep an open line of communication!&lt;/em&gt; Furthermore, if you feel like you are behind or not understanding everything, &lt;strong&gt;do not suffer in silence!&lt;/strong&gt; Please talk to me!&lt;/p&gt;
+&lt;p&gt;I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, &lt;strong&gt;please please please do not stay silent!&lt;/strong&gt; Drop me a line!&lt;/p&gt;
 &lt;p&gt;I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, proving that &lt;span class=&#34;math inline&#34;&gt;\(0.99999\ldots = 1\)&lt;/span&gt; - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-policies&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course policies&lt;/h2&gt;
 &lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Its pretty simple: Be nice. Be honest. Don’t cheat. Be a good human.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Its pretty simple: Be nice. Be honest. Don’t cheat. Stay in touch. Be a good human.&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We will also follow &lt;a href=&#34;https://studentconduct.wvu.edu/campus-student-code&#34; target=&#34;_blank&#34;&gt;WVU’s Code of Conduct&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This syllabus reflects a plan for the term. Deviations may become necessary as the course progresses. Note that &lt;strong&gt;I reserve the right to alter or amend this syllabus.&lt;/strong&gt; I will send notifications if course tasks are affected.&lt;/p&gt;
+&lt;p&gt;This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that &lt;strong&gt;I reserve the right to alter or amend this syllabus&lt;/strong&gt; and will send notifications if course tasks are affected.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;covid-19-statement&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;COVID-19 Statement&lt;/h2&gt;
@@ -1698,6 +1696,7 @@ mpg %&amp;gt;%
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Pretty is good!&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;There is some misunderstanding about what office hours actually are! &lt;a href=&#34;https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/&#34; target=&#34;_blank&#34;&gt;For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I &lt;em&gt;should not&lt;/em&gt; be disturbed. This is not just a local issue!&lt;/a&gt;, which is the exact opposite of what they are for!&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I realize sometimes this just isn’t possible so contact me as soon as you can.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
