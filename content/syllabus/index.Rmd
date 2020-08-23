@@ -60,7 +60,7 @@ Subscribing to the [R Weekly newsletter](https://rweekly.org/){target="_blank"} 
 
 #### Quatrics
 
-All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at <a href="tel:3042934444">304-293-4444</a>.
+All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at [304-293-4444](callto: 304-293-4444).
 
 #### R and RStudio
 
@@ -94,9 +94,9 @@ Fortunately there are many online resources to help.
 
 - Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 619 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
 
-- A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
-- A copy of your data set (if applicable).
-- A copy of your script or Rmarkdown document with comments throughout so I know what you've tried historically leading up to the issue.
+  - A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
+  - A copy of your data set (if applicable).
+  - A copy of your script or Rmarkdown document with comments throughout so I know what you've tried historically leading up to the issue.
 
 I have a mail filter that will automatically bring your email to a top priority status.^ [In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
 
@@ -175,10 +175,10 @@ Here are the rules, expectations, and policies that I came up or stole from othe
 - **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.
 - **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:
 
-1.	When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric. 
-2.	If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
-3.	Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
-4.	Unless you are in a very specific area, the real world does not use rubrics! 
+  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric. 
+  2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
+  3. Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
+  4. Unless you are in a very specific area, the real world does not use rubrics! 
 
 - **Technology use**: Use phones, computers, etc. responsibly. You're all adults...well I am most of the time.
 
@@ -231,9 +231,9 @@ If you or anyone you know may be at-risk such as those listed [here](https://car
 
 Lauren McCluskey, a 21-year-old honors student athlete, [was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus](https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html){target="_blank"}. We must all take action to ensure that this never happens again.
 
-If you are in immediate danger, call 911 or the Campus Police at 304-293-3136.
+If you are in immediate danger, call 911 or the Campus Police at [304-293-3136](callto: 304-293-3136).
 
-If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private [Title IX On-Call Line](https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options){target="_blank"} (304-906-9930).
+If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private [Title IX On-Call Line](https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options){target="_blank"} [304-906-9930](callto: 304-906-9930).
 
 Any form of sexual harassment or violence will not be excused or tolerated at West Virginia University. WVU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims.
 
@@ -245,7 +245,7 @@ The integrity of the classes offered by any academic institution solidifies the 
 
 The West Virginia University community is committed to creating and fostering a positive learning and working environment based on open communication, mutual respect, and inclusion.
 
-If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services (293-6700).  
+If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services ([304-293-6700](callto: 304-293-3136)).  
 
 For more information on West Virginia University's Diversity, Equity, and Inclusion initiatives, please see [http://diversity.wvu.edu](http://diversity.wvu.edu){target="_blank"}.
 

@@ -1,6 +1,6 @@
 ---
-title: Teacher
-slug: teacher
+title: Professor
+slug: professor
 citeproc: true
 output:
   blogdown::html_page:
