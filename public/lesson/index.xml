@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interactive lessons | Survey Reseach Methods</title>
-    <link>/lesson/</link>
-      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/lesson/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>Interactive lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/social-image.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/social-image.png</url>
       <title>Interactive lessons</title>
-      <link>/lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/lesson/01-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -27,7 +27,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;p&gt;While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

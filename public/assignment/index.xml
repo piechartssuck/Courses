@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Tasks | Survey Reseach Methods</title>
-    <link>/assignment/</link>
-      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/assignment/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>Course Tasks</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/social-image.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/social-image.png</url>
       <title>Course Tasks</title>
-      <link>/assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/assignment/01-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/01-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/01-assignment/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -41,10 +41,10 @@
 &lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
 This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
 &lt;center&gt;
-&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
+&lt;img src=&#34;https://edp619.theoreticalphysed.com/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Now download the &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
 –&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
