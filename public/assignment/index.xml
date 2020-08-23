@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Assignments | Survey Reseach Methods</title>
-    <link>https://edp619.theoreticalphysed.com/assignment/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>/assignment/</link>
+      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/social-image.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>https://edp619.theoreticalphysed.com/assignment/</link>
+      <link>/assignment/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/assignment/datacamp-assignment/</link>
+      <link>/assignment/datacamp-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/assignment/datacamp-assignment/</guid>
+      <guid>/assignment/datacamp-assignment/</guid>
       <description>
 
 
-&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or direectly to the modules if you are alrwady signed in):&lt;/p&gt;
+&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or direectly to the modules if you are alrwady signed in):&lt;/p&gt;
 &lt;center&gt;
-&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp619.theoreticalphysed.com/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 </description>
     </item>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/assignment/01-assignment/</link>
+      <link>/assignment/01-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/assignment/01-assignment/</guid>
+      <guid>/assignment/01-assignment/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -56,10 +56,10 @@
 &lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
 This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
 &lt;center&gt;
-&lt;img src=&#34;https://edp619.theoreticalphysed.com/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
+&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Now download the &lt;a href=&#34;/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
 –&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;

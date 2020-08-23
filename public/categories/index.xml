@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Survey Reseach Methods</title>
-    <link>https://edp619.theoreticalphysed.com/categories/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/</link>
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/social-image.png</url>
+      <url>/img/course_info.png</url>
       <title>Categories</title>
-      <link>https://edp619.theoreticalphysed.com/categories/</link>
+      <link>/categories/</link>
     </image>
     
   </channel>
