@@ -262,10 +262,8 @@ div.warning:before {
     margin: 0 !important;
 }
 
-ul
-{
-    display: inline;
-    margin: 0 0 3px 0;
+li.menu-item {
+   margin:0 0 3px 0;   
 }
 
 /* Space after plotly widgets */
