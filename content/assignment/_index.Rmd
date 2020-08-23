@@ -1,5 +1,5 @@
 ---
-title: Course Tasks
+title: "About the Assignments"
 menu:
   assignment:
     parent: Overview

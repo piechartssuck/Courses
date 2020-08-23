@@ -1,13 +1,13 @@
 ---
 title: "Getting Familiar with the Course"
-linktitle: "Example: Getting Familiar with the Course"
+linktitle: "Week 1: Getting Familiar with the Course"
 output:
   blogdown::html_page:
     toc: true
 menu:
   assignment:
-    parent: Assignments
-    weight: 1
+    parent: Daily(ish) Tasks
+    weight: 2
 type: docs
 weight: 1
 editor_options: 
@@ -33,5 +33,5 @@ This week you have nothing to turn in but there is still something to do! First 
   --*I will post solutions of what may be the most egregious errors next week.*--<br>
 
 ### Verify Qualtrics Account Login
-Go to the [WVU Qualtrics login page](https://wvu.qualtrics.com){target="_blank"} and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at 304-293-4444 as soon as possible. We will be working with Qualtrics very soon!<br>
+Go to the [WVU Qualtrics login page](https://wvu.qualtrics.com){target="_blank"} and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible. We will be working with Qualtrics very soon!<br>
 :::

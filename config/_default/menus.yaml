@@ -48,10 +48,24 @@ example:
 assignment:
   - name: Overview
     weight: 1
-  - name: Projects
+  - name: Daily(ish) Tasks
     weight: 2
-  - name: Exercises
+  - name: Data Camp
     weight: 3
+  - name: Data Tasks
+    weight: 4
+  - name: Selecting a Population
+    weight: 5
+  - name: Survey Draft
+    weight: 6
+  - name: Pilot Study Review
+    weight: 7
+  - name: Final Survey
+    weight: 8
+  - name: Report
+    weight: 9
+  - name: Presentation
+    weight: 10
 resource:
   - name: Resources
     weight: 1

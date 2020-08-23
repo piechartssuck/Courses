@@ -1,6 +1,6 @@
 ---
 title: "Getting Familiar with the Course"
-linktitle: "Lesson: Getting Familiar with the Course"
+linktitle: "Week 1: Getting Familiar with the Course"
 output:
   blogdown::html_page:
     toc: true

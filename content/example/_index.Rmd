@@ -1,5 +1,5 @@
 ---
-title: Examples
+title: "About the Examples"
 menu:
   example:
     parent: Overview

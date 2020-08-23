@@ -109,8 +109,9 @@ You can find descriptions for all the assignments on the [assignments page](/ass
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
   ~Points,  ~Assignment,
-  13 * 10, "Data Camp (6 × 20)",
-  2 * 30, "Data Tasks (6 × 20)",
+  10 * 10, "Daily(ish) Tasks",
+  13 * 10, "Data Camp",
+  2 * 30, "Data Tasks",
   10, "Selecting a Population",
   25, "Survey Draft",
   25, "Pilot Study Review",

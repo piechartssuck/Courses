@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Examples | Survey Reseach Methods</title>
-    <link>https://edp619.theoreticalphysed.com/example/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
-    <description>Examples</description>
+    <title>About the Examples | Survey Reseach Methods</title>
+    <link>/example/</link>
+      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
+    <description>About the Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/social-image.png</url>
-      <title>Examples</title>
-      <link>https://edp619.theoreticalphysed.com/example/</link>
+      <url>/img/social-image.png</url>
+      <title>About the Examples</title>
+      <link>/example/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/example/01-example/</link>
+      <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/01-example/</guid>
+      <guid>/example/01-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
