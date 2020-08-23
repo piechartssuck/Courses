@@ -1,5 +1,5 @@
 ---
-title: "Where is Data Camp?"
+title: "What is a Data Camp?"
 linktitle: "Data Camp Assignments"
 output:
   blogdown::html_page:
