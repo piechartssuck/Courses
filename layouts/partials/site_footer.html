@@ -11,16 +11,16 @@
             </p>
 
             <p>
-                <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
                     {{ .Site.Params.instructor.name }}</a> &emsp;&emsp;
-                <a href="mailto:{{ .Site.Params.instructor.email }}"><i class="fas fa-envelope"></i>
+                <a href="mailto:{{ .Site.Params.instructor.email }}"><i class="fas fa-envelope fa-fw"></i>
                     {{ .Site.Params.instructor.email }}</a>
             </p>
 
             <p>
                 <i class="far fa-calendar-alt"></i> {{ .Site.Params.course.days }} &emsp;&emsp;
                 <i class="far fa-clock"></i> {{ .Site.Params.course.time }}
-                {{ if isset .Site.Params.course "location" }}<br><i class="fas fa-university"></i> {{ .Site.Params.course.location }}{{end}}
+                {{ if isset .Site.Params.course "location" }}<br><i class="fas fa-university fa-fw"></i> {{ .Site.Params.course.location }}{{end}}
             </p>
         </div>
 
