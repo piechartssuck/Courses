@@ -60,7 +60,7 @@ Subscribing to the [R Weekly newsletter](https://rweekly.org/){target="_blank"} 
 
 #### Quatrics
 
-All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at 304-293-4444.
+All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at <a href="tel:3042934444">304-293-4444</a>.
 
 #### R and RStudio
 
