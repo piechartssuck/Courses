@@ -30,10 +30,10 @@ main:
     url: "https://rstudio.cloud/"
     weight: 10
 
-content:
+readings:
   - name: Overview
     weight: 1
-  - name: Course content
+  - name: Readings
     weight: 2
 lesson:
   - name: Overview

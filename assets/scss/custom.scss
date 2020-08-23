@@ -263,8 +263,12 @@ div.warning:before {
 }
 
 li.menu-item {
-   margin:0 0 3px 0;   
+   margin:0 0 3px 0;
 }
+
+td a i { padding-left: 3px;
+         padding-right: 3px;
+} 
 
 /* Space after plotly widgets */
 .widgetframe {
