@@ -14,12 +14,12 @@ Every class session has four important sections. You should read about the detai
 **tl;dr**: I recommend that you follow these lessons in the following order:
 
 <div class="text-center">
-<i class="fas fa-book"></i>
-<i class="fas fa-long-arrow-alt-right"></i> 
-<i class="fas fa-chalkboard"></i> 
-<i class="fas fa-long-arrow-alt-right"> 
-<i class="fas fa-lightbulb"></i> 
-<i class="fas fa-plus"></i></i> 
+<i class="fas fa-book"></i>&nbsp;
+<i class="fas fa-long-arrow-alt-right"></i>&nbsp;
+<i class="fas fa-chalkboard"></i>&nbsp;
+<i class="fas fa-long-arrow-alt-right">&nbsp;
+<i class="fas fa-lightbulb"></i>&nbsp;
+<i class="fas fa-plus"></i></i>&nbsp; 
 <i class="fas fa-tasks"></i> 
 </div>
 
