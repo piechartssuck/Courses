@@ -20,7 +20,7 @@ library(pander)
 
 ## Course objectives
 
-Students will become proficient in the following aspects:
+Students will become proficient and be able to describe in detail the following aspects:
 
 1. Administering surveys via the Internet.
 2. Constructing online surveys.^[Sure paper surveys are important but they are rarely used barring small samples.]
@@ -82,7 +82,7 @@ Data science and statistical programming can be difficult. Computers are stupid 
 
 But there are multiple resources online to help.
 
-- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to recieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel like an uphill battle.
+- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel like an uphill battle.
 
 - Second two of the most important are [StackOverflow](https://stackoverflow.com/){target="_blank"} (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/){target="_blank"} (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a [minimally reproducible example](https://stackoverflow.com/help/minimal-reproducible-example){target="_blank"}.
 
@@ -161,7 +161,7 @@ grading %>%
 
 Please watch this video:
 
-<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
 
 Your hours (formerly known as office hours) are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed. This is not just a local issue!](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/){target="_blank"}, which is the exact opposite of what they are for!]). This means that I will be ~~in my office~~ at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
 
@@ -184,17 +184,31 @@ Here are the rules, expectations, and policies that I came up or stole from othe
 - **Technology use**: Use phones, computers, etc. responsibly. You're all adults...well I am most of the time.
 
 
-### Learning during a pandemic
+### Learning and knowledge during a pandemic
 
-I'm not sure how to articulate this any better - at the current moment life just sucks! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you're probably more stressed than usual. With that in mins, please keep the following in mind:
+Ok I'm going to get a bit philosophical but it's not too deep and there's a point so please bear with me. Let's first start with something at the top of a syllabus that many people skip - the course objectives. Well now that you're no doubt excited excited, read the rest this rant to figure out if you have learned something or you actually know it.
+
+When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *learned*. But learning isn't knowledge. 
+
+To save you from a long philosophical narrative on epistemology, in a nutshell we humans are not really good at evaluating a person's knowledge within a short timeframe...oh say like a semester. With that said you probably spend a lot of time with you, so you should be pretty good at knowing if you know something but you may not know how to figure out what you actually know. If your head doesn't hurt and you really want a good indicator that something you learned has become knowledge, ask this simple question that is often difficult to answer:
 
 <div class="text-center">
-**As long as you keep an open line, show initiative, and let me know ahead of time^[I realize sometimes this just isn't possible so contact me as soon as you can.], I will do everything within reason to help you learn everything you were hoping to learn from this class!** 
+Can I explain *whatever* using basic everyday language so that a fourth grader can understand it?
 </div>
 
-I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** Drop me a line!
+So the fourth grader isn't that important as much as self assessing if you can explain a concept to someone who lacks any basic understanding using every day language. This is basically what good teachers can do, in that they are able to take a high level concept that may be inaccessible to most of us and bring it down to a level we can all generally understand. 
 
-I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, proving that $0.99999\ldots = 1$ - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis. 
+Many, if not all of you will fall somewhere in the spectrum of somewhat to mostly. If you're sitting on the absolute Yes end, then consider a career in survey research because it can be very fulfilling and lucrative. But if you find yourself on the absolute No end, then please contact me and let's try to get you where you need to be. There are a lot of moving parts in this course and not being able to translate some of what you've learned into knowledge can have a cascading effect. And by now in your life, you should have a pretty good idea when anyone uses the term cascading, its rarely a good thing.
+
+On top of what's noted above and I'm not sure how to articulate this any better - life just sucks right now in general! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you're probably more stressed than usual. So here is my promise to you:
+
+<div class="text-center">
+**If you keep an open line, show initiative, and let me know ahead of time if something is going not according to plan^[I realize sometimes this just isn't possible so contact me as soon as you can.], I will do everything I can to help you learn everything you were hoping to learn from this class!**
+</div>
+
+So what does that mean? Well I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** As I said earlier, drop me a line!
+
+I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, no parallel lines exist in 3D - ok maybe not that last one but its true and really easy to show. If you want to know, ask!). There is a lot to do in this course and some of the content can be frustrating, so make sure to take breaks, go relax, even curse my name if you have to - do whatever you need to stay healthy, balanced, and grounded during this crisis.
 
 ## Course policies
 

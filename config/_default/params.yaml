@@ -91,17 +91,6 @@ edit_page:
 
 author: Abhik Roy
 
-instructor:
-  name: Dr. Abhik Roy
-  email: Abhik.Roy@mail.wvu.edu
-  url: "https://lshd.wvu.edu/faculty-staff/roy"
-  twitter: DrTheoreticalPE
-  github: piechartssuck
-  office: "Allen Hall 504O"
-  contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
-  appointment_url: "https://calendly.com/nopiecharts/short30"
-
 course:
   number: "EDP 619"
   semester: "Fall 2020"
@@ -113,13 +102,24 @@ course:
   copyrightYear: "2020"
   slack: "https://2020edp619.slack.com"
 
-university:
-  name: West Virginia University
-  url: "https://www.wvu.edu"
+instructor:
+  name: Dr. Abhik Roy
+  email: Abhik.Roy@mail.wvu.edu
+  url: "https://lshd.wvu.edu/faculty-staff/roy"
+  twitter: DrTheoreticalPE
+  github: piechartssuck
+  office: "Allen Hall 504O"
+  contact_policy: >-
+    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
+  appointment_url: "https://calendly.com/nopiecharts/short30"
 
 school:
   name: Counseling & Learning Sciences
   url: "https://lshd.wvu.edu/"
+
+university:
+  name: West Virginia University
+  url: "https://www.wvu.edu"
 
 
 ############################

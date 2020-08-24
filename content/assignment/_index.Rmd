@@ -24,7 +24,7 @@ Each type of assignment in this class helps with at least one one of these crite
 
 Most class sessions have [interactive lessons](/lesson/) via [Data Camp](https://www.datacamp.com/). Your task is simply to go through these. 
 
-I will grade these short excercises using a check system:
+I will grade these short exercises using a check system:
 
 - ✔+: (*11.5 points (115%) in gradebook*) Modules are 100% completed. Every task was attempted and answered, and most answers are correct. These are not earned often.
 - ✔: (*10 points (100%) in gradebook*) Modules are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
