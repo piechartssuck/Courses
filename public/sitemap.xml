@@ -48,6 +48,22 @@
   </url>
   
   <url>
+    <loc>/readings/01-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/02-assignment/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/02-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/02-readings/</loc>
+  </url>
+  
+  <url>
     <loc>/resource/design/</loc>
   </url>
   
@@ -122,10 +138,6 @@
   
   <url>
     <loc>/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/01-readings/</loc>
   </url>
   
 </urlset>

@@ -76,7 +76,7 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Now download the &lt;a href=&#34;/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
 –&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -130,7 +130,7 @@ This week you have nothing to turn in but there is still something to do! First 
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;While the first module is not due until next Friday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;p&gt;While the first module is not due until next Sunday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -151,6 +151,150 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/datasets&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Kaggle&lt;/strong&gt;&lt;/a&gt;: Kaggle hosts machine learning competitions where people compete to create the fastest, most efficient, most predictive algorithms. A byproduct of these competitions is a host of fascinating datasets that are generally free and open to the public.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://us-cities.survey.okfn.org/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;US City Open Data Census&lt;/strong&gt;&lt;/a&gt;: More than 100 US cities have committed to sharing dozens of types of data, including data about crime, budgets, campaign finance, lobbying, transit, and zoning. This site from the &lt;a href=&#34;http://sunlightfoundation.com/&#34;&gt;Sunlight Foundation&lt;/a&gt; and &lt;a href=&#34;http://www.codeforamerica.org//&#34;&gt;Code for America&lt;/a&gt; collects this data and rates cities by how well they’re doing.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Familiar with the Course</title>
+      <link>/readings/01-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/01-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#review-syllabus&#34;&gt;Review Syllabus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get Some Advice&lt;/h3&gt;
+&lt;p&gt;First things first:
+&lt;br&gt;
+&lt;br&gt;
+&lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;br&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;review-syllabus&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Review Syllabus&lt;/h3&gt;
+&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 1: Sample Surveys in Our Electronic World&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Surveys</title>
+      <link>/assignment/02-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/02-assignment/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#mulling-bad-survey-questions-solutions&#34;&gt;Mulling Bad Survey Questions Solutions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#qualtrics&#34;&gt;Qualtrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;mulling-bad-survey-questions-solutions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mulling Bad Survey Questions Solutions&lt;/h3&gt;
+&lt;p&gt;To follow up from last week, look over the possible solutions to the &lt;a href=&#34;/files/Week%202/Bad_Questions_Solutions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions document&lt;/a&gt;. If you found something that you disagree with or believe you’ve found a more egregious error, drop me a line.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;qualtrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Qualtrics&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Download the following:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%202/An%20Introduction%20to%20Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%202/Exploratory%20Draft%20Survey%20Design%20Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Head over to &lt;a href=&#34;https://basecamp.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics XM basecamp&lt;/a&gt; and follow the directions in the walkthrough below to navigate to find some needed training videos
+&lt;center&gt;
+&lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
+&lt;source src=&#34;/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/center&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Think about an ideal group you would like to survey and what you would survey them about. I don’t care if they are real or imaginary - it doesn’t really matter.&lt;/li&gt;
+&lt;li&gt;Using the Exploratory Draft Survey Design Template, create a ten item survey in &lt;a href=&#34;wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; following the guidelines provided in the document.&lt;/li&gt;
+&lt;li&gt;Follow the steps below to share your draft with me by typing in &lt;code&gt;aroy3#wvu&lt;/code&gt; in the appropriate field in lieu of the name shown in the video. Finally please select all of the items in the Collaboration menu.
+&lt;center&gt;
+&lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
+&lt;source src=&#34;/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.
+:::&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Surveys</title>
+      <link>/lesson/02-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/02-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation&#34;&gt;Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The first module is due this Friday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module will cover:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro to basics&lt;/li&gt;
+&lt;li&gt;Vectors&lt;/li&gt;
+&lt;li&gt;Matrices&lt;/li&gt;
+&lt;li&gt;Factors&lt;/li&gt;
+&lt;li&gt;Data frames&lt;/li&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Evaluation&lt;/h3&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Surveys</title>
+      <link>/readings/02-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/02-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#article&#34;&gt;Article&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;article&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Article&lt;/h3&gt;
+&lt;p&gt;Read &lt;a href=&#34;&#34;&gt;&lt;em&gt;How to Create a Bad Survey Instrument&lt;/em&gt;&lt;/a&gt; by Sullivan &amp;amp; Artino (2017).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 2: Reducing Peoples Reluctance to Respond to Surveys&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -1787,41 +1931,6 @@ You can check out more about what I do here:
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;There is some misunderstanding about what office hours actually are! &lt;a href=&#34;https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/&#34; target=&#34;_blank&#34;&gt;For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I &lt;em&gt;should not&lt;/em&gt; be disturbed. This is not just a local issue!&lt;/a&gt;, which is the exact opposite of what they are for!&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I realize sometimes this just isn’t possible so contact me as soon as you can.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Familiar with the Course</title>
-      <link>/readings/01-readings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/01-readings/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#review-syllabus&#34;&gt;Review Syllabus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get Some Advice&lt;/h3&gt;
-&lt;p&gt;First things first:
-&lt;br&gt;
-&lt;br&gt;
-&lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
-&lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;review-syllabus&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Review Syllabus&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Book Stuff&lt;/h3&gt;
-&lt;p&gt;Read &lt;em&gt;Chapter 1: Sample Surveys in Our Electronic World&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
