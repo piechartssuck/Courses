@@ -1,0 +1,11 @@
+lessons:
+  - title: '<span class="fake-header-table">Concentration</span>'
+    header: True
+
+  - title: 'The What and Why of Statistics'
+    session: 1
+    date: "September 22, 2020"
+    readings: "01-readings"
+    lesson: "01-lesson"
+    example: "01-example"
+    assignment: "01-assignment"

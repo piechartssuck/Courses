@@ -1,0 +1,13 @@
+---
+title: "About the Examples"
+menu:
+  example:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+This section contains extra material to help you understand a concepts covered for that week. Sometimes this is just a few links for you to look at and other times its fully annotated R code that you can use as a reference for helping you along with a task. Please access the material on this site this section after you have finished the reading(s). 
+
+From time to time, I may also contains video of coding some examples pieces so you can see what it looks like to work with R in real time. You'll definitely notice that I make all sorts of errors, which *is absolutely normal* and happens to everyone!

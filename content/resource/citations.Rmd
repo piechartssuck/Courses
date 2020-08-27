@@ -1,0 +1,16 @@
+---
+title: Citations and bibliography
+menu:
+  resource:
+    parent: Resources
+type: docs
+weight: 1
+---
+
+You can [download a BibTeX file](/bib/references.bib){target="_blank"} of all the readings in the course:
+
+- [<i class="fas fa-book"></i> `references.bib`](/bib/references.bib){target="_blank"}
+
+You can open the file in [BibDesk on macOS](http://bibdesk.sourceforge.net/){target="_blank"}, [JabRef on Windows/macOS](http://www.jabref.org/){target="_blank"}, or [Zotero](https://www.zotero.org/){target="_blank"} or [Mendeley](https://www.mendeley.com/){target="_blank"} online.
+
+If you are comfortable with the terminal in a Mac, then the [bib2ris](http://refdb.sourceforge.net/manual-0.9.6/sect-bibtoris.html){target="_blank"} may be easy to implement. 

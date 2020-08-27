@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About the Lessons | Statistical Methods I</title>
+    <link>/lesson/</link>
+      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <description>About the Lessons</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/img/course_info.png</url>
+      <title>About the Lessons</title>
+      <link>/lesson/</link>
+    </image>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/lesson/01-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/01-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The first module is due next Wednesday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module will cover:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro to basics&lt;/li&gt;
+&lt;li&gt;Vectors&lt;/li&gt;
+&lt;li&gt;Matrices&lt;/li&gt;
+&lt;li&gt;Factors&lt;/li&gt;
+&lt;li&gt;Data frames&lt;/li&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook
+- &lt;a href=&#34;/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and
+- &lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

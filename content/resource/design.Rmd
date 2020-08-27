@@ -1,0 +1,61 @@
+---
+title: Design
+menu:
+  resource:
+    parent: Resources
+type: docs
+weight: 3
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+## Accessibility
+
+- [**Color Oracle**](http://colororacle.org/index.html){target="_blank"}: Simulate how your images look for people with different forms of colorblindness (desktop-based, more types of colorblindness)
+- [**Vischeck**](http://www.vischeck.com/vischeck/vischeckImage.php){target="_blank"}: Simulate how your images look for people with different forms of colorblindness (web-based)
+
+## Colors
+
+- [**Adobe Color**](https://color.adobe.com){target="_blank"}: Create, share, and explore rule-based and custom color palettes.
+- [**ColorBrewer**](http://colorbrewer2.org/){target="_blank"}: Sequential, diverging, and qualitative color palettes that take accessibility into account.
+- [**Colorgorical**](http://vrl.cs.brown.edu/color){target="_blank"}: Create color palettes based on fancy mathematical rules for perceptual distance.
+- [**Color Hex Color Codes**](https://www.color-hex.com/){target="_blank"}: A collection of colors and palettes given only by hex identifiers.
+- [**Colorpicker for data**](http://tristen.ca/hcl-picker/){target="_blank"}: More fancy mathematical rules for color palettes ([explanation](https://www.vis4.net/blog/posts/avoid-equidistant-hsv-colors/){target="_blank"}).
+- [**ColourLovers**](http://www.colourlovers.com/){target="_blank"}: Like Facebook for color palettes.
+- [**Comprehensive list of color palettes in r**](Comprehensive list of color palettes in r){target="_blank"}: A wided ranging collection of various palettes from the entire R community. These can now all be downloaded within a the package `paleteer` by running `install.packages("paletteer")`. More information can be found [here](https://github.com/EmilHvitfeldt/paletteer){target="_blank"}. 
+- [**iWantHue**](http://tools.medialab.sciences-po.fr/iwanthue/){target="_blank"}: Yet another perceptual distance-based color palette builder.
+- [**Photochrome**](https://photochrome.io/){target="_blank"}: Word-based color palettes.
+- [**PolicyViz Design Color Tools**](https://policyviz.com/better-presentations/design-resources/design-color-tools/){target="_blank"}: Large collection of useful color resources
+- [**Scientific Colour-Maps**](http://www.fabiocrameri.ch/colourmaps.php): Perceptually uniform color scales like viridis. Use them in R with [**scico**](https://github.com/thomasp85/scico){target="_blank"}.
+- [**viridis**](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html){target="_blank"}: Perceptually uniform color scales.
+- [**Wes Anderson Palettes**](https://github.com/karthik/wesanderson){target="_blank"}:  Palettes based off of Wes Anderson films and also one of my personal favorite sites to choose colors.
+
+
+## Fonts
+
+- [**Google Fonts**](https://fonts.google.com/){target="_blank"}: Huge collection of free, well-made fonts.
+- [**The Ultimate Collection of Google Font Pairings**](https://www.reliablepsd.com/ultimate-google-font-pairings/){target="_blank"}: A list of great, well-designed font pairings from all those fonts hosted by Google (for when you're looking for good contrasting or complementary fonts).
+
+
+## Graphic assets
+
+### Images
+
+- [**Burst**](https://burst.shopify.com/){target="_blank"}
+- [**freephotos.cc**](https://freephotos.cc/){target="_blank"}
+- [**Pexels**](https://www.pexels.com/){target="_blank"}
+- [**Pixabay**](https://pixabay.com/){target="_blank"}
+- [**StockSnap.io**](https://stocksnap.io/){target="_blank"}
+- [**Unsplash**](https://unsplash.com/){target="_blank"}
+- Use the Creative Commons filters on Google Images or Flickr
+
+### Vectors
+
+- [**aiconica**](http://aiconica.net/){target="_blank"}: 1,000+ vector icons
+- [**Noun Project**](https://thenounproject.com/){target="_blank"}: Thousands of free simple vector images
+- [**Vecteezy**](https://www.vecteezy.com/){target="_blank"}: Thousands of free vector images
+
+### Vectors, photos, videos, and other assets
+
+- [**Stockio**](https://www.stockio.com/){target="_blank"}

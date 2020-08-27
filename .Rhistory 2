@@ -1,0 +1,512 @@
+scale_color_distiller(palette = "BuPu") +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_distiller(palette = "BuPuGn") +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_distiller(palette = "PuBuGn") +
+theme_void()
+pal <- wes_palette("Zissou1", 100, type = "continuous")
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradientn(colours = pal) +
+theme_void()
+pal <- wes_palette("Darjeeling2",
+100,
+type = "continuous")
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradientn(colours = pal) +
+theme_void()
+pal <- c("#FFDB6D", "#C4961A", "#F4EDCA",
+"#D16103", "#C3D7A4", "#52854C", "#4E84C4", "#293352")
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradientn(colours = pal) +
+theme_void()
+pal <- c("#52854C", "#4E84C4", "#293352")
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradientn(colours = pal) +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#d9534f",
+high = "#428bca") +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#5bc0de,
+high = "#428bca") +
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#5bc0de",
+high = "#428bca") +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#d9534f",
+high = "#5bc0de") +
+theme_void()
+# plot
+ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+# Set the working directory as source ----
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=5.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=7,
+s_x=1.0,
+s_y=1.0,
+s_width=1.6,
+s_height=1.6,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=1,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=7,
+s_x=1.0,
+s_y=1.0,
+s_width=1.6,
+s_height=1.6,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.5,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=7,
+s_x=1.0,
+s_y=1.0,
+s_width=1.6,
+s_height=1.6,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.4,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.6,
+s_height=1.6,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+sticker(sin_w,
+package="EDP 619",
+p_size=6.0,
+s_x=1.0,
+s_y=1.0,
+s_width=1.6,
+s_height=1.6,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.3,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.2,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.1,
+alpha=0.5,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.1,
+alpha=0.7,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.1,
+alpha=0.9,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "No Tears Bold",
+filename="course_hex.png")
+font_add("Cabin Medium", "Cabin-Medium.ttf")
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Cabin Medium",
+filename="course_hex.png")
+# Graphic for the bottom of the main page
+# Set the working directory as source ----
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+# Remove objects ----
+rm(list = ls())
+# Libraries
+library(tidyverse)
+library(RColorBrewer)
+library(ggpomological)
+library(ggridges)
+library(hexSticker)
+library(wesanderson)
+library(showtext)
+font_add("Cabin Medium", "Cabin-Medium.ttf")
+showtext_auto()
+# library
+library(ggplot2)
+library(dplyr)
+# Create data (this takes more sense with a numerical X axis)
+x <- seq(0, 2*pi,
+length.out=50)
+data <- data.frame(
+x=x,
+y=sin(x) +
+rnorm(500,
+sd=0.2)
+)
+# Add a column with your condition for the color
+data <- data %>%
+mutate(mycolor = ifelse(y > 0,
+"type1",
+"type2"))
+pal <- c("#52854C", "#4E84C4", "#293352")
+# plot
+sin_w <- ggplot(data, aes(x=x,
+y=y)) +
+geom_segment(aes(x=x,
+xend=x,
+y=0,
+yend=y,
+color=y),
+size=0.1,
+alpha=0.9,
+show.legend = FALSE) +
+scale_color_gradient(low = "#ff5b77",
+high = "#5bc0de") +
+theme_void()
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Cabin Medium",
+filename="course_hex.png")
+font_add("Fira Code Medium", "FiraCode-Medium.otf")
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Fira Code Medium",
+filename="course_hex.png")
+font_add("Helvetica Neue", "HelveticaNeueLTStd-Cn.otf")
+font_add("Helvetica Neue LT Std", "HelveticaNeueLTStd-Cn.otf")
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Helvetica Neue LT Std",
+filename="course_hex.png")
+font_add("Kit&Caboodle Regular", "KitAndCaboodle.otf")
+sticker(sin_w,
+package="EDP 619",
+p_size=6.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Kit&Caboodle Regular",
+filename="course_hex.png")
+sticker(sin_w,
+package="EDP 619",
+p_size=7.5,
+s_x=1.0,
+s_y=1.0,
+s_width=1.5,
+s_height=1.5,
+h_fill="#292A30",
+h_color="#293840",
+p_family = "Kit&Caboodle Regular",
+filename="course_hex.png")

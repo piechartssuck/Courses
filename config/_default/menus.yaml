@@ -1,0 +1,66 @@
+main:
+  - name: Syllabus
+    url: /syllabus/
+    weight: 1
+  - name: Schedule
+    url: /schedule/
+    weight: 2
+  - name: Readings
+    url: /readings/
+    weight: 3
+  - name: Lessons
+    url: /lesson/
+    weight: 4
+  - name: Examples
+    url: /example/
+    weight: 5
+  - name: Assignments
+    url: /assignment/
+    weight: 6
+  - name: Resources
+    url: /resource/
+    weight: 7
+  - name: Professor
+    url: /professor/
+    weight: 8
+  - name: '<i class="fab fa-slack"></i>'
+    url: "https://2020edp613.slack.com"
+    weight: 9
+  - name: '<i class="fab fa-r-project"></i>'
+    url: "https://rstudio.cloud/"
+    weight: 10
+
+readings:
+  - name: Overview
+    weight: 1
+  - name: Readings
+    weight: 2
+lesson:
+  - name: Overview
+    weight: 1
+  - name: Lessons
+    weight: 2
+example:
+  - name: Overview
+    weight: 1
+  - name: Examples
+    weight: 2
+assignment:
+  - name: Overview
+    weight: 1
+  - name: Homeworks
+    weight: 2
+  - name: Data Camp
+    weight: 3
+  - name: Data Explorations
+    weight: 4
+  - name: Quizzes
+    weight: 5
+  - name: Exams
+    weight: 6
+
+resource:
+  - name: Resources
+    weight: 1
+  - name: Guides
+    weight: 2

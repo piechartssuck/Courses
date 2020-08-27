@@ -1,0 +1,64 @@
+---
+title: "About the Assignments"
+menu:
+  assignment:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+You will get the most of out this class if you:
+
+1. engage with the readings and materials,
+2. use R to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis,
+3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
+4. keep an open and honest line of communication with me and your peers if possible.
+
+Each type of assignment in this class helps with at least one one of these criteria.
+
+## Lessons via Data Camp
+
+Most class sessions have [interactive lessons](/lesson/) via [Data Camp](https://www.datacamp.com/). Your task is simply to go through these. 
+
+I will grade these short exercises using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Modules are 100% completed. Every task was attempted and answered, and most answers are correct. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Modules are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Modules are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
+
+Otherwise *0 points (0%) in gradebook*.
+
+## Homeworks
+On most weeks, you will be asked to submit a set of problems assigned after the prior week's class. These must be submitted as a single document in the correct numerical order and submitted on the Submission Portal within  [ecampus](https://ecampus.wvu.edu/){target="_blank"} as a single cohesive document (in either in docx or pdf format). If you learn how to type your homework in [Rmarkdown](https://rmarkdown.rstudio.com/){target="_blank"}, you will earn an extra 5% on each submission where this is done.
+
+## Data Tasks
+
+Some classes also have [fully annotated examples](/example/) of performing tasks in R code that teach and demonstrate how to do specific concepots we cover here or elsewhere and on [Data Camp](https://www.datacamp.com/){target="_blank"}.
+
+I will grade these short exercises using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document are clean and easy to follow. This indicates that your work is exceptional. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Exercises are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
+
+Otherwise *0 points (0%) in gradebook*.
+
+Again, I am not grading your coding ability, checking each line of code or syntax to make sure it produces the exact output, and most importantly, I am not looking for perfection! Try hard, get frustrated, do good work and you'll get a ✓ or even a ✔+.
+
+I encourage you to work together on the courses if possible, but you must turn in your own work on [eCampus](https://ecampus.wvu.edu){target="_blank"}.
+
+## Quizzes and Exams
+
+Exact dates will be posted here soon but you will have a announced quizzes, three exams and a final. Please note **if you have an A going into the final exam, you do not need to take it!**
+
+<hr />
+
+## A Note About Discussion Board Postings
+
+While you may like or even love them, I hate discussion board posts. I hated them as a graduate student and still hate them as a professor. I recently made the decision to never use discussion board posts again for many reasons which are not useful to discuss here.
+
+I always prefer face to face or at least conferencing if needed. With that said, we have Zoom and a [Slack channel](https:/2020edp613.slack.com) so please use both! 
