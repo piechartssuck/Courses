@@ -9,3 +9,11 @@ lessons:
     lesson: "01-lesson"
     example: "01-example"
     assignment: "01-assignment"
+
+  - title: 'An Introduction to Surveys'
+    session: 2
+    date: "August 30, 2020"
+    readings: "02-readings"
+    lesson: "02-lesson"
+    example: "02-example"
+    assignment: "02-assignment"
