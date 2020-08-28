@@ -1575,7 +1575,8 @@ You can check out more about what I do here:
 &lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the Situations and Final Project. &lt;strong&gt;Assignments are due by 11:59 PM on the day they are listed.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week.&lt;strong&gt;Assignments are due by 11:59 PM on the day they are listed.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::: note &lt;br/&gt;
 &lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
@@ -1583,12 +1584,14 @@ You can check out more about what I do here:
 &lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt; 
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example(s) to help you with the assignments.
+&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example (if given) along with the assignment to help you with what is due.
 &lt;br /&gt;
 :::&lt;/p&gt;
 &lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
@@ -1601,12 +1604,12 @@ You can check out more about what I do here:
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Lesson&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Example&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Assignment&lt;/td&gt;
+            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Due&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 23, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Getting Familar with the Course&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/readings/01-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/01-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/01-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
@@ -1614,19 +1617,26 @@ You can check out more about what I do here:
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/01-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/01-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 30, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;An Introduction to Surveys&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/readings/02-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/02-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/02-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/02-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/02-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/02-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;
