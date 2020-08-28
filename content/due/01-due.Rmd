@@ -1,0 +1,24 @@
+---
+title: "Getting Familiar with the Course"
+linktitle: "Week 1: Getting Familiar with the Course"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+
+Qualtrics? | Name | Description
+:---: | --- | --- |
+`r fa("square", fill = "steelblue")` | Introduce yourself in Slack.  |  [Link](/assignment/01-assignment/#class-slack-account-access-1)

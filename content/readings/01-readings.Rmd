@@ -4,7 +4,7 @@ linktitle: "Week 1: Getting Familiar with the Course"
 menu:
   content:
     parent: Readings
-    weight: 2
+    weight: 3
 type: docs
 weight: 1
 bibliography: "../../static/bib/references.bib"
