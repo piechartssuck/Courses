@@ -56,15 +56,15 @@
   </url>
   
   <url>
-    <loc>/assignment/02-assignment/</loc>
-  </url>
-  
-  <url>
     <loc>/due/02-due/</loc>
   </url>
   
   <url>
     <loc>/resource/data/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/02-assignment/</loc>
   </url>
   
   <url>
