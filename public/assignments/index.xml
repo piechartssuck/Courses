@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About the Assignments | Statistical Methods I</title>
+    <link>/assignments/</link>
+      <atom:link href="/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <description>About the Assignments</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/img/course_info.png</url>
+      <title>About the Assignments</title>
+      <link>/assignments/</link>
+    </image>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/assignments/01-assignments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignments/01-assignments/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#weekly-task&#34;&gt;Weekly Task&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
+&lt;p&gt;Please sign up for Slack!
+1. Go to the course &lt;a href=&#34;2020edp613.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account
+2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
+3. Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
+&lt;br&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
+4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly-task&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Weekly Task&lt;/h3&gt;
+&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.
+:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What is a Data Camp?</title>
+      <link>/assignments/datacamp-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignments/datacamp-assignment/</guid>
+      <description>
+
+
+&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
+&lt;center&gt;
+&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,7 @@ output:
     toc: true
 menu:
   assignment:
-    parent: Assignments
+    parent: Daily(ish) Tasks
     weight: 2
 type: docs
 weight: 1
@@ -23,6 +23,6 @@ Please sign up for Slack!
 *I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!* ^[Shameless plug]
   4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!<br>
 
-### Homework
+### Weekly Task
 Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.
 :::

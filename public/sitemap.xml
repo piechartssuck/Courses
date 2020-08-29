@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>/assignment/</loc>
+    <loc>/assignments/</loc>
   </url>
   
   <url>
@@ -28,10 +28,6 @@
   </url>
   
   <url>
-    <loc>/assignment/datacamp-assignment/</loc>
-  </url>
-  
-  <url>
     <loc>/example/01-example/</loc>
   </url>
   
@@ -40,7 +36,7 @@
   </url>
   
   <url>
-    <loc>/assignment/01-assignment/</loc>
+    <loc>/assignments/01-assignments/</loc>
   </url>
   
   <url>
@@ -49,6 +45,10 @@
   
   <url>
     <loc>/resource/data/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/datacamp-assignment/</loc>
   </url>
   
   <url>
