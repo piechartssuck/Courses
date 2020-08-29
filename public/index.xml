@@ -54,45 +54,13 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mulling-bad-survey-questions&#34;&gt;Mulling Bad Survey Questions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#verify-qualtrics-account-login&#34;&gt;Verify Qualtrics Account Login&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
 &lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
-&lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
-&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
-&lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mulling-bad-survey-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
-This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
-&lt;center&gt;
-&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
-&lt;/center&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
-–&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
-&lt;p&gt;Go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible. We will be working with Qualtrics very soon!&lt;br&gt;
-:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -231,20 +199,19 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
 &lt;source src=&#34;/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/center&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;/video&gt;
+&lt;/center&gt;&lt;/li&gt;
 &lt;li&gt;Think about an ideal group you would like to survey and what you would survey them about. I don’t care if they are real or imaginary - it doesn’t really matter.&lt;/li&gt;
 &lt;li&gt;Using the Exploratory Draft Survey Design Template, create a ten item survey in &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; following the guidelines provided in the document.&lt;/li&gt;
 &lt;li&gt;Follow the steps below to share your draft with me by typing in &lt;code&gt;aroy3#wvu&lt;/code&gt; in the appropriate field in lieu of the name shown in the video. Finally please select all of the items in the Collaboration menu.
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
 &lt;source src=&#34;/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/li&gt;
+&lt;/video&gt;
+&lt;/center&gt;
+After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.&lt;br&gt;
+:::&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.&lt;br&gt;
-:::&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
