@@ -8,6 +8,10 @@ output:
   blogdown::html_page:
     toc: true
     fig_caption: false
+menu:
+  sylabus:
+    parent: Syllabus
+    weight: 1
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
