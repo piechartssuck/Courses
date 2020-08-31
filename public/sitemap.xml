@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>/example/01-example/</loc>
+    <loc>/due/</loc>
   </url>
   
   <url>
@@ -37,6 +37,14 @@
   
   <url>
     <loc>/assignment/01-homeworks/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/01-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/01-example/</loc>
   </url>
   
   <url>

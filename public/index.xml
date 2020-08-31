@@ -31,26 +31,6 @@
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/example/01-example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/01-example/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#nothing&#34;&gt;Nothing!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;nothing&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Nothing!&lt;/h3&gt;
-&lt;p&gt;There are no examples this week. Go do something!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Familiar with the Course</title>
       <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/01-readings/</guid>
@@ -79,7 +59,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
-&lt;p&gt;Read &lt;em&gt;The What and the Why of Statistics&lt;/em&gt; in Frankfort-Nachmias and Leon-Guerrero.&lt;/p&gt;
+&lt;p&gt;Read Chapter 1: &lt;em&gt;The What and the Why of Statistics&lt;/em&gt; in Frankfort-Nachmias and Leon-Guerrero.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -102,17 +82,17 @@
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
 &lt;p&gt;Please sign up for Slack!&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Go to the course &lt;a href=&#34;2020edp613.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:&lt;br&gt;
+&lt;li&gt;Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
+&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:&lt;br&gt;
 &lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;weekly-task&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Weekly Task&lt;/h3&gt;
-&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.
+&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.&lt;br&gt;
 :::&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -120,6 +100,63 @@
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/due/01-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/01-due/</guid>
+      <description>
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;eCampus?&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Complete a module in Data Camp.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Introduce yourself in Slack.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Complete problems 3, 4, 6, 7, and 8 in Chapter 1&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/example/01-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/01-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nothing&#34;&gt;Nothing!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;nothing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nothing!&lt;/h3&gt;
+&lt;p&gt;There are no examples this week. Go do something!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1365,7 +1402,8 @@ You can check out more about what I do here:
 &lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the Situations and Final Project. &lt;strong&gt;Assignments are due by 11:59 PM on the day they are listed.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Wednesday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::: note &lt;br/&gt;
 &lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
@@ -1373,12 +1411,14 @@ You can check out more about what I do here:
 &lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt; 
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example(s) to help you with the assignments.
+&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example (if given) along with the assignment to help you with what is due.
 &lt;br /&gt;
 :::&lt;/p&gt;
 &lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
@@ -1391,12 +1431,12 @@ You can check out more about what I do here:
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Lesson&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Example&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Assignment&lt;/td&gt;
+            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Due&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 22, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;The What and Why of Statistics&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/readings/01-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/01-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/01-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
@@ -1404,6 +1444,10 @@ You can check out more about what I do here:
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/01-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;

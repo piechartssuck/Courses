@@ -1,0 +1,26 @@
+---
+title: "The What and Why of Statistics"
+linktitle: "Week 1: The What and Why of Statistics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+
+eCampus? | Name | Description
+:---: | --- | --- |
+`r fa("square", fill = "steelblue")` | Complete a module in Data Camp.  |  [Link](/lesson/01-lesson/#data-camp-1)
+`r fa("square", fill = "steelblue")` | Introduce yourself in Slack.  |  [Link](/assignment/01-assignment/#class-slack-account-access-1)
+`r fa("check-square", fill = "steelblue")` | Complete problems 3, 4, 6, 7, and 8 in Chapter 1  |  [Link](/assignment/02-assignment/#qualtrics-1)

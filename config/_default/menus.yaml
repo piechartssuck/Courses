@@ -17,18 +17,21 @@ main:
   - name: Assignments
     url: /assignment/
     weight: 6
+  - name: Due?
+    url: /due/
+    weight: 7
   - name: Resources
     url: /resource/
-    weight: 7
+    weight: 8
   - name: Professor
     url: /professor/
-    weight: 8
-  - name: '<i class="fab fa-slack"></i>'
-    url: "https://2020edp613.slack.com"
     weight: 9
+  - name: '<i class="fab fa-slack"></i>'
+    url: "https://2020edp619.slack.com"
+    weight: 10
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://rstudio.cloud/"
-    weight: 10
+    weight: 11
 
 readings:
   - name: Overview
@@ -45,6 +48,11 @@ example:
     weight: 1
   - name: Examples
     weight: 2
+due:
+  - name: Overview
+    weight: 1
+  - name: Due?
+    weight: 2
 assignment:
   - name: Overview
     weight: 1
@@ -58,7 +66,6 @@ assignment:
     weight: 5
   - name: Exams
     weight: 6
-
 resource:
   - name: Resources
     weight: 1
