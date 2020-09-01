@@ -23,7 +23,7 @@ library(pander)
 Students will become proficient and be able to describe in detail the following aspects:
 
 1. Administering surveys via the Internet.
-2. Constructing online surveys.^[Sure paper surveys are important but they are rarely used barring small samples.]
+2. Constructing online surveys^[Sure paper surveys are important but they are rarely used barring small samples.].
 3. Creating aesthetically pleasing surveys using color theory and design techniques^[Pretty is good!].
 4. Determining how to assess survey reliability and validity of items and instruments.
 5. Enhancing the look and feel of surveys using programming techniques^[Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.]. 
