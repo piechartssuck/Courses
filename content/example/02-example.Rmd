@@ -1,0 +1,34 @@
+---
+title: "The Organization and Graphic Presentation of Data"
+linktitle: "Week 2: The Organization and Graphic Presentation of Data"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Crash Course Statistics^[Most weeks I'll post some external resources that may help you get the overall idea of what we are covering. These are **optional**, but the presentations are generally engaging and the visuals are created by people who are more talented than me so it may be worth your time.]
+[Crash Course Statistics](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"} is a freely available channel on YouTube  which covers a range of topics in..well statistics. While I encourage you to watch all of their videos, the ones that really applies to Chapter 2 is one of two discussions on visualizations which you can see below.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hEWY6kkBdpo?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+### Social Explorer
+[Social Explorer](https://www.socialexplorer.com){target="_blank"} is a paid site that allows people to visualize public data sets pretty easily and without the need for coding anything. Luckily WVU has a site license for the site but it can be a bit difficult to locate. Follow the video below to get an idea of Social Explorer and the WVU Database.
+
+<center>
+<video width="320" height="240" controls>
+  <source src="/videos/Social_Explorer.mp4" type="video/mp4">
+</video>
+</center>
+
+

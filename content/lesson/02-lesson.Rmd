@@ -1,0 +1,32 @@
+---
+title: "The Organization and Graphic Presentation of Data"
+linktitle: "Week 2: The Organization and Graphic Presentation of Data"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The second [Data Camp](https://www.datacamp.com/){target="_blank"} module is due next Wednesday and covers the the tidyverse family of functions in R which we will be using throughout the remainder of the course. In particular, the sections are:
+
+- Data wrangling^[Please get used to this term!]
+- Data visualization
+- Grouping and summarizing
+- Types of visualizations
+
+### Book Materials
+Download the textbook
+
+- [PowerPoint](/slides/Week 1/SSDS_Ch2.pptx){target="_blank"} and
+- [Lecture Notes](/lecture_notes/Week 1/SSDS_Ch2.docx){target="_blank"}.
+
+### Class Notes
+*posted after class*

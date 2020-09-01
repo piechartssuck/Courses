@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Getting Familiar with the Course</title>
+      <title>The What and Why of Statistics</title>
       <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/01-readings/</guid>
@@ -43,6 +43,26 @@
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read Chapter 1: &lt;em&gt;The What and the Why of Statistics&lt;/em&gt; in Frankfort-Nachmias and Leon-Guerrero.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Organization and Graphic Presentation of Data</title>
+      <link>/readings/02-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/02-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read Chapter 2: &lt;em&gt;The Organization and Graphic Presentation of Data&lt;/em&gt; in Frankfort-Nachmias and Leon-Guerrero.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

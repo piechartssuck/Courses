@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The first module is due next Wednesday which covers the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. The module will cover:
+The first [Data Camp](https://www.datacamp.com/){target="_blank"} module is due next Wednesday and covers the basics of R. In particular, the sections are:
 
 - Intro to basics
 - Vectors
@@ -28,8 +28,12 @@ As noted last week, there is a lot on there but please refer to the [syllabus](/
 
 ### Book Materials
 Download the textbook
+
 - [PowerPoint](/slides/Week 1/SSDS_Ch1.pptx){target="_blank"} and 
 - [Lecture Notes](/lecture_notes/Week 1/SSDS_Ch1.docx){target="_blank"}.
 
 ### Class Notes
-*posted after class*
+Download the in-class slides via
+
+- [PDF](/slides/Week 1/ICS_Ch1.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week 1/ICN_Ch1.pdf){target="_blank"}.

@@ -29,7 +29,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The first module is due next Wednesday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module will cover:&lt;/p&gt;
+&lt;p&gt;The first &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the basics of R. In particular, the sections are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro to basics&lt;/li&gt;
 &lt;li&gt;Vectors&lt;/li&gt;
@@ -42,13 +42,65 @@
 &lt;/div&gt;
 &lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Materials&lt;/h3&gt;
-&lt;p&gt;Download the textbook
-- &lt;a href=&#34;/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and
-- &lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the in-class slides via&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%201/ICS_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/ICN_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Organization and Graphic Presentation of Data</title>
+      <link>/lesson/02-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/02-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The second &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the the tidyverse family of functions in R which we will be using throughout the remainder of the course. In particular, the sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data wrangling&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Grouping and summarizing&lt;/li&gt;
+&lt;li&gt;Types of visualizations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Please get used to this term!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

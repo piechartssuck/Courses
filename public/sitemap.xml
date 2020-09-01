@@ -32,10 +32,6 @@
   </url>
   
   <url>
-    <loc>/readings/01-readings/</loc>
-  </url>
-  
-  <url>
     <loc>/assignment/01-homeworks/</loc>
   </url>
   
@@ -49,6 +45,26 @@
   
   <url>
     <loc>/lesson/01-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/01-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/02-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/02-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/02-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/02-readings/</loc>
   </url>
   
   <url>
