@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The first module is due this Friday which covers the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. The module will cover:
+The first module is due on Sunday which covers the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. It will cover:
 
 - Intro to basics
 - Vectors
@@ -27,4 +27,4 @@ The first module is due this Friday which covers the basics of R on [Data Camp](
 As noted last week, there is a lot on there but please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks. Just remember, this is not a programming class!
 
 ### Evaluation
-Download a slideshow both in [PowerPoint](/slides/Week 2/Intro to PE.pptx){target="_blank"} or [PDF](/slides/Week 2/Intro to PE.pdf){target="_blank"} formats learn about or review foundational concepts in evaluation. 
+Download a slideshow both in [PowerPoint](/slides/Week 2/Intro to PE.pptx){target="_blank"} or [PDF](/slides/Week 2/Intro to PE.pdf){target="_blank"} formats to learn about or review foundational concepts in evaluation. 

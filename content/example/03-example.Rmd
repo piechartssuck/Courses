@@ -1,0 +1,19 @@
+---
+title: "Covering the Population and Selecting Who to Survey"
+linktitle: "Week 3: Covering the Population and Selecting Who to Survey"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Javascript in Qualtrics
+We will be using your initial surveys built in Qualtrics. Videos will be uploaded shortly.
+

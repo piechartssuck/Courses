@@ -18,3 +18,12 @@ lessons:
     lesson: "02-lesson"
     assignment: "02-assignment"
     due: "02-due"
+
+  - title: 'Covering the Population and Selecting Who to Survey'
+    session: 3
+    date: "September 6, 2020"
+    readings: "03-readings"
+    lesson: "03-lesson"
+    example: "03-example"
+    assignment: "03-assignment"
+    due: "03-due"

@@ -1,0 +1,45 @@
+---
+title: "Covering the Population and Selecting Who to Survey"
+linktitle: "Week 3: Covering the Population and Selecting Who to Survey"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The second exploration in R is a skill track consisting of four modules and is due on Sunday in two weeks. This covers using the tidyverse family in R on [Data Camp](https://www.datacamp.com/){target="_blank"}. It will cover:
+
+1. Introduction to the Tidyverse
+  - Data Wrangling
+  - Data visualization
+  - Grouping and summarizing
+  - Types of visualizations
+
+2. Working with Data in the Tidyverse
+  - Explore your data
+  - Tame your data
+  - Tidy your data
+  - Transform your data
+  
+3. Project: Dr. Semmelweis and the Discovery of Handwashing
+
+4. Modeling with Data in the Tidyverse
+  - Introduction to Modeling
+  - Modeling with Basic Regression
+  - Modeling with Multiple Regression
+  - Model Assessment and Selection
+
+<div class="text-center">
+**Please get started asap. There is a lot to cover!**
+</div>
+
+### Sampling
+Download a slideshow both in [PowerPoint](/slides/Week 3/Sampling.pptx){target="_blank"} or [PDF](/slides/Week 3/Sampling.pdf){target="_blank"} formats to lreview different sampling techniques. 
