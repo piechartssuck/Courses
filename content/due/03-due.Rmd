@@ -22,5 +22,5 @@ library(fontawesome)
 Qualtrics? | Name | Description
 :---: | --- | --- |
 `r fa("square", fill = "steelblue")` | Complete a skill series in Data Camp.  |  [Link](/lesson/03-lesson/#data-camp-1)^[Due in two weeks. Please get started as there is a lot to cover!]
-`r fa("square", fill = "steelblue")` | Submit a a course task: Selecting a Population.  |  [Link](/assignment/03-assignment/#planning-selecting-a-population-1)
+`r fa("square", fill = "steelblue")` | Submit a course task: Selecting a Population.  |  [Link](/assignment/03-assignment/#planning-selecting-a-population-1)
 

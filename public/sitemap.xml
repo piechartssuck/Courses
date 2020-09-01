@@ -32,11 +32,23 @@
   </url>
   
   <url>
+    <loc>/due/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/01-assignment/</loc>
   </url>
   
   <url>
+    <loc>/due/01-due/</loc>
+  </url>
+  
+  <url>
     <loc>/example/01-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/03a-example/</loc>
   </url>
   
   <url>
@@ -45,6 +57,22 @@
   
   <url>
     <loc>/readings/01-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/02-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/02-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/03-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/03-example/</loc>
   </url>
   
   <url>
@@ -61,6 +89,18 @@
   
   <url>
     <loc>/readings/02-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/03-assignment/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/03-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/03-readings/</loc>
   </url>
   
   <url>

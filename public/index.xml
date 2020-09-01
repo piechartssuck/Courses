@@ -61,13 +61,15 @@
 
 &lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
-&lt;p&gt;Most important task of the week - well to me at least - is to
-1. Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account
-2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
-3. Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
+&lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
+&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
 &lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
-4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/p&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mulling-bad-survey-questions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
@@ -77,9 +79,9 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Now download the &lt;a href=&#34;/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;
-–&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;–&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
@@ -92,6 +94,33 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Familiar with the Course</title>
+      <link>/due/01-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/01-due/</guid>
+      <description>
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Qualtrics?&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Introduce yourself in Slack.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -111,6 +140,26 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;div id=&#34;nothing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Nothing!&lt;/h3&gt;
 &lt;p&gt;There are no examples this week. Go do something!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Familiar with the Course</title>
+      <link>/example/03a-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/03a-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
+&lt;p&gt;We will be using your initial surveys built in Qualtrics. Videos will be uploaded shortly.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -171,6 +220,116 @@ This week you have nothing to turn in but there is still something to do! First 
     </item>
     
     <item>
+      <title>An Introduction to Surveys</title>
+      <link>/due/02-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/02-due/</guid>
+      <description>
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Qualtrics?&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Complete a module in Data Camp.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Submit a very early test survey.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Surveys</title>
+      <link>/example/02-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/02-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#nothing&#34;&gt;Nothing!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;nothing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Nothing!&lt;/h3&gt;
+&lt;p&gt;There are no examples this week.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/due/03-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/03-due/</guid>
+      <description>
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Qualtrics?&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Complete a skill series in Data Camp.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Submit a course task: Selecting a Population.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/assignment/03-assignment/#planning-selecting-a-population-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Due in two weeks. Please get started as there is a lot to cover!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/example/03-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/03-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
+&lt;p&gt;We will be using your initial surveys built in Qualtrics. Videos will be uploaded shortly.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data</title>
       <link>/resource/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -213,28 +372,27 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;li&gt;Download the following:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/An%20Introduction%20to%20Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/Exploratory%20Draft%20Survey%20Design%20Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%202/An_Introduction_to_Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%202/Exploratory_Survey_Design_Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Head over to &lt;a href=&#34;https://basecamp.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics XM basecamp&lt;/a&gt; and follow the directions in the walkthrough below to navigate to find some needed training videos
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
 &lt;source src=&#34;/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/center&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;/video&gt;
+&lt;/center&gt;&lt;/li&gt;
 &lt;li&gt;Think about an ideal group you would like to survey and what you would survey them about. I don’t care if they are real or imaginary - it doesn’t really matter.&lt;/li&gt;
-&lt;li&gt;Using the Exploratory Draft Survey Design Template, create a ten item survey in &lt;a href=&#34;wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; following the guidelines provided in the document.&lt;/li&gt;
+&lt;li&gt;Using the Exploratory Draft Survey Design Template, create a ten item survey in &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; following the guidelines provided in the document.&lt;/li&gt;
 &lt;li&gt;Follow the steps below to share your draft with me by typing in &lt;code&gt;aroy3#wvu&lt;/code&gt; in the appropriate field in lieu of the name shown in the video. Finally please select all of the items in the Collaboration menu.
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
 &lt;source src=&#34;/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/li&gt;
+&lt;/video&gt;
+&lt;/center&gt;
+After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.&lt;br&gt;
+:::&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.
-:::&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -255,7 +413,7 @@ This week you have nothing to turn in but there is still something to do! First 
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The first module is due this Friday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module will cover:&lt;/p&gt;
+&lt;p&gt;The first module is due on Sunday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro to basics&lt;/li&gt;
 &lt;li&gt;Vectors&lt;/li&gt;
@@ -268,7 +426,7 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;/div&gt;
 &lt;div id=&#34;evaluation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Evaluation&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -294,6 +452,130 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read &lt;em&gt;Chapter 2: Reducing Peoples Reluctance to Respond to Surveys&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/assignment/03-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/03-assignment/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#planning-selecting-a-population&#34;&gt;Planning: Selecting a Population&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;planning-selecting-a-population&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Planning: Selecting a Population&lt;/h3&gt;
+&lt;p&gt;In this class, you will plan, create, pilot, administer, and analyze a survey from start to finish. In this first step, consider an accessible population of people you would like to survey. While you’re not stuck with your choice, think hard about this because. Moving on to any stage beyond planning can mean hours if not days or weeks of work wasted.&lt;/p&gt;
+&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Submit&lt;/h4&gt;
+&lt;p&gt;A one to three page assessment&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of your target population including descriptions of the&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;population itself;&lt;/li&gt;
+&lt;li&gt;need for a survey;&lt;/li&gt;
+&lt;li&gt;type of sampling methodology and a justification(s);&lt;/li&gt;
+&lt;li&gt;anticipated pilot study;&lt;/li&gt;
+&lt;li&gt;expected response rate&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;; and&lt;/li&gt;
+&lt;li&gt;any additional information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your task is to convince a stakeholder that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there is a need to study your population;&lt;/li&gt;
+&lt;li&gt;your sample is accessible; and&lt;/li&gt;
+&lt;li&gt;your sampling method is feasible&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please submit this to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by Sunday at 11:59PM.&lt;br&gt;
+:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Front only, 12 point New Roman font, double-spaced, and follows all APA 7th edition guidelines.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;You simply need a baseline so take a guess if you don’t know much about your population.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Note: The best sampling method may not be the most doable!&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/lesson/03-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/03-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sampling&#34;&gt;Sampling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due on Sunday in two weeks. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Introduction to the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Wrangling&lt;/li&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Grouping and summarizing&lt;/li&gt;
+&lt;li&gt;Types of visualizations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Working with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore your data&lt;/li&gt;
+&lt;li&gt;Tame your data&lt;/li&gt;
+&lt;li&gt;Tidy your data&lt;/li&gt;
+&lt;li&gt;Transform your data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Project: Dr. Semmelweis and the Discovery of Handwashing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Modeling with Data in the Tidyverse&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Model Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;text-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Please get started asap. There is a lot to cover!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sampling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Sampling&lt;/h3&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to lreview different sampling techniques.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/readings/03-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/03-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 3: Covering the Population and Selecting Who to Survey&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1464,7 +1746,8 @@ You can check out more about what I do here:
 &lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the Situations and Final Project. &lt;strong&gt;Assignments are due by 11:59 PM on the day they are listed.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Sunday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::: note &lt;br/&gt;
 &lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
@@ -1472,12 +1755,14 @@ You can check out more about what I do here:
 &lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt; 
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
 &lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example(s) to help you with the assignments.
+&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example (if given) along with the assignment to help you with what is due.
 &lt;br /&gt;
 :::&lt;/p&gt;
 &lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
@@ -1490,12 +1775,12 @@ You can check out more about what I do here:
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Lesson&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Example&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Assignment&lt;/td&gt;
+            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Due&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 23, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Getting Familar with the Course&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/readings/01-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/01-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/01-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
@@ -1503,19 +1788,41 @@ You can check out more about what I do here:
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/01-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/01-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 30, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;An Introduction to Surveys&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/readings/02-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/02-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/02-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/02-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/02-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/02-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 6, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Covering the Population and Selecting Who to Survey&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/03-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/03-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/03-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/03-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/03-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;

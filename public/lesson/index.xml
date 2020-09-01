@@ -48,7 +48,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The first module is due this Friday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module will cover:&lt;/p&gt;
+&lt;p&gt;The first module is due on Sunday which covers the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro to basics&lt;/li&gt;
 &lt;li&gt;Vectors&lt;/li&gt;
@@ -61,7 +61,63 @@
 &lt;/div&gt;
 &lt;div id=&#34;evaluation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Evaluation&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Covering the Population and Selecting Who to Survey</title>
+      <link>/lesson/03-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/03-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sampling&#34;&gt;Sampling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due on Sunday in two weeks. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Introduction to the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Wrangling&lt;/li&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Grouping and summarizing&lt;/li&gt;
+&lt;li&gt;Types of visualizations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Working with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore your data&lt;/li&gt;
+&lt;li&gt;Tame your data&lt;/li&gt;
+&lt;li&gt;Tidy your data&lt;/li&gt;
+&lt;li&gt;Transform your data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Project: Dr. Semmelweis and the Discovery of Handwashing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Modeling with Data in the Tidyverse&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Model Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;text-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Please get started asap. There is a lot to cover!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sampling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Sampling&lt;/h3&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to lreview different sampling techniques.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
