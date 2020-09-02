@@ -23,7 +23,7 @@ Qualtrics does not provide a default option to expand or contract the width of t
 Here is a [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.] You'll need it for the walkthrough.
 
 #### Try it out
-Try using your initial surveys in Qualtrics to test out how to expand the open text boxes.
+Try using your initial surveys in [Qualtrics](wvu.qualtrics.com){target="_blank"} to test out how to expand the open text boxes.
 
 #### Walkthrough
 <center>
