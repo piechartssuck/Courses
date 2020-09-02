@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>So What&#39;s Due? | Survey Research Methods</title>
-    <link>/due/</link>
-      <atom:link href="/due/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/due/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
       <title>So What&#39;s Due?</title>
-      <link>/due/</link>
+      <link>https://edp619.theoreticalphysed.com/due/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/due/01-due/</link>
+      <link>https://edp619.theoreticalphysed.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/01-due/</guid>
+      <guid>https://edp619.theoreticalphysed.com/due/01-due/</guid>
       <description>
 
 
@@ -32,7 +32,7 @@
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
 &lt;td&gt;Introduce yourself in Slack.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -41,9 +41,9 @@
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>/due/02-due/</link>
+      <link>https://edp619.theoreticalphysed.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/02-due/</guid>
+      <guid>https://edp619.theoreticalphysed.com/due/02-due/</guid>
       <description>
 
 
@@ -59,12 +59,12 @@
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
 &lt;td&gt;Complete a module in Data Camp.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
 &lt;td&gt;Submit a very early test survey.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -73,9 +73,9 @@
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>/due/03-due/</link>
+      <link>https://edp619.theoreticalphysed.com/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/03-due/</guid>
+      <guid>https://edp619.theoreticalphysed.com/due/03-due/</guid>
       <description>
 
 
@@ -91,12 +91,12 @@
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
 &lt;td&gt;Complete a skill series in Data Camp.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
 &lt;td&gt;Submit a course task: Selecting a Population.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;/assignment/03-assignment/#planning-selecting-a-population-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/03-assignment/#planning-selecting-a-population-1&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
