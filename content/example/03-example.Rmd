@@ -20,7 +20,7 @@ editor_options:
 Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you'll figur eout how to use the Javascript engine to rule over Qualtrics! 
 
 #### What you need
-Here is the [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.]
+Here is a [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.] You'll need it for the walkthrough.
 
 #### Try it out
 Try using your initial surveys in Qualtrics to test out how to expand the open text boxes.
