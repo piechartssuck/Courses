@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Examples | Statistical Methods I</title>
-    <link>https://edp613.theoreticalphysed.com/example/</link>
-      <atom:link href="https://edp613.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>/example/</link>
+      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Examples</title>
-      <link>https://edp613.theoreticalphysed.com/example/</link>
+      <link>/example/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>https://edp613.theoreticalphysed.com/example/01-example/</link>
+      <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/01-example/</guid>
+      <guid>/example/01-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -34,9 +34,9 @@
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>https://edp613.theoreticalphysed.com/example/02-example/</link>
+      <link>/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/02-example/</guid>
+      <guid>/example/02-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -60,7 +60,7 @@
 &lt;p&gt;&lt;a href=&#34;https://www.socialexplorer.com&#34; target=&#34;_blank&#34;&gt;Social Explorer&lt;/a&gt; is a paid site that allows people to visualize public data sets pretty easily and without the need for coding anything. Luckily WVU has a site license for the site but it can be a bit difficult to locate. Follow the video below to get an idea of Social Explorer and the WVU Database.&lt;/p&gt;
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;https://edp613.theoreticalphysed.com/videos/Social_Explorer.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;source src=&#34;/videos/Social_Explorer.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;
 &lt;/div&gt;

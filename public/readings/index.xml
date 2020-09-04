@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Readings | Statistical Methods I</title>
-    <link>https://edp613.theoreticalphysed.com/readings/</link>
-      <atom:link href="https://edp613.theoreticalphysed.com/readings/index.xml" rel="self" type="application/rss+xml" />
+    <link>/readings/</link>
+      <atom:link href="/readings/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Readings</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Readings</title>
-      <link>https://edp613.theoreticalphysed.com/readings/</link>
+      <link>/readings/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>https://edp613.theoreticalphysed.com/readings/01-readings/</link>
+      <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/readings/01-readings/</guid>
+      <guid>/readings/01-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -32,13 +32,13 @@
 &lt;p&gt;First things first:
 &lt;br&gt;
 &lt;br&gt;
-&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
 &lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp613.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;review-syllabus&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Review Syllabus&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;https://edp613.theoreticalphysed.com/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;https://edp613.theoreticalphysed.com/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;https://edp613.theoreticalphysed.com/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
+&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
@@ -49,9 +49,9 @@
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>https://edp613.theoreticalphysed.com/readings/02-readings/</link>
+      <link>/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/readings/02-readings/</guid>
+      <guid>/readings/02-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -69,9 +69,9 @@
     
     <item>
       <title>Measures of Central Tendency</title>
-      <link>https://edp613.theoreticalphysed.com/readings/03-readings/</link>
+      <link>/readings/03-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/readings/03-readings/</guid>
+      <guid>/readings/03-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

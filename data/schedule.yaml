@@ -10,3 +10,12 @@ lessons:
     example: "01-example"
     assignment: "01-assignment"
     due: "01-due"
+
+  - title: 'The Organization and Graphic Presentation of Data'
+    session: 2
+    date: "September 9, 2020"
+    readings: "02-readings"
+    lesson: "02-lesson"
+    example: "02-example"
+    assignment: "02-assignment"
+    due: "02-due"
