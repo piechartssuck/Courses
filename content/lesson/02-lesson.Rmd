@@ -38,7 +38,7 @@ Download the in-class slides via
 
 Here is the R presentation from this week. You may
 
-- Move back and forth through the presentation using the <- and -> buttons on your keyboard.
+- Move back and forth through the presentation using the ⬅ and ⮕ buttons on your keyboard.
 - Press the letter **O** at any point to see see a tile view of the presentation.
 - Use this [link](/slides/Week 2/Slides-Week-2.html){target="_blank"} to view a larger version of presentation in a new window.
 

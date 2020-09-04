@@ -15,7 +15,7 @@ xaringanthemer::style_duo(
   text_font_google   = xaringanthemer::google_font("Jost", "400")
 )
 
-xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
 # Looking at Data Like You're Used to
