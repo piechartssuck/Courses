@@ -1,0 +1,130 @@
+---
+title: "What? How Can you Frame a Data?"
+subtitle: "EDP 613"
+author: "Week 2"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r echo = FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bb86fc",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+```
+
+# Looking at Data Like You're Used to
+>- We nearly always look at data by rows and columns! 
+>- In Excel, that format is called a cell structure.
+>- In R, that format is called a data frame.
+
+---
+
+## First Things First!
+Let's do the following:
+
+>- Create a folder with subfolders by class week (e.g. Week 2, Week 3, etc.) somewhere on your hard drive where you can stick all of the R stuff. 
+>- Go back to RStudio.
+>- Use **File > New File > R Script** to create a new script.
+>- Save it with a name ending in `.r` or `.R` in the new folder or subfolder you created.
+>- Type in `getwd()` in the Console. If that doesn't look right, do this: **Session > Set Working Directory > To Source File Location**
+
+---
+
+## Data Frames: A Very Basic Rundown
+
+>- Shows data in rows and columns.
+>- Is really good for manipulating data.
+>- Closest thing to Excel.
+
+---
+
+## Get the Gapminder data and load it up
+
+We will work with some of the data from the [Gapminder project](https://www.gapminder.org/){target="_blank"}.
+
+```{r echo = TRUE, eval = FALSE}
+install.packages("gapminder")
+```
+
+```{r echo = TRUE}
+library(gapminder)
+```
+
+---
+
+## Look at the variables inside a data frame
+
+>- To specify a single variable from a data frame, use the dollar sign `$`.
+
+```{r  echo = TRUE}
+head(gapminder$lifeExp)
+```
+
+```{r  echo = TRUE}
+summary(gapminder$lifeExp)
+```
+
+---
+
+## Plotting
+
+>- We can visualize the data.
+
+```{r echo = TRUE}
+hist(gapminder$lifeExp)
+```
+
+---
+
+## Getting underlying information about our data
+
+```{r echo = TRUE}
+class(gapminder$continent)
+```
+
+
+```{r echo = TRUE}
+summary(gapminder$continent)
+```
+
+---
+
+## Levels
+
+```{r echo = TRUE}
+levels(gapminder$continent)
+```
+
+>- The __levels__ of the factor `continent` are "Africa", "Americas", etc.
+
+```{r echo = TRUE}
+nlevels(gapminder$continent)
+```
+
+>-  __nlevels__ tells you how many there are.
+
+---
+
+## We can see the data about levels
+
+```{r echo = TRUE}
+table(gapminder$continent)
+```
+
+---
+
+## And we can even plot them!
+
+```{r echo = TRUE}
+barplot(table(gapminder$continent))
+```
+
+---
+
+## That's it for today!

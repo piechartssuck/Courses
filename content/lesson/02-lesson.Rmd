@@ -36,7 +36,14 @@ Download the in-class slides via
 
 ### R Walkthrough
 
+Here is the R presentation from this week. You may
 
-knitr::include_url(https://edp613.theoreticalphysed.com/slides/Week 2/Slides-Week-2.html)
+- Go back and forth using your <- and -> on your keyboard.
+- Press O (the letter O) at any point and you can see a tile view.
+- Use this [link](/slides/Week 2/Slides-Week-2.html){target="_blank"} to view a larger version of presentation in a new window.
 
-You can download a [PDF](/slides/Week 2/Slides-Week-2.pdf){target="_blank"} of the presentation too.
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 2/Slides-Week-2.html")
+```
+
+You can download a [PDF](/slides/Week 2/Slides-Week-2.pdf){target="_blank"} of the presentation above.
