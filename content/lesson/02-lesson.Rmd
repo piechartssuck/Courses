@@ -35,4 +35,6 @@ Download the in-class slides via
 - [Outline](/lecture_notes/Week 2/ICN_Ch2.pdf){target="_blank"}.
 
 ### R Walkthrough
+knitr::include_url('https://edp613.theoreticalphysed.com/slides/Week 2/Slides-Week-2.html')
 
+You can download a [PDF](/slides/Week 2/Slides-Week-2.pdf){target="_blank"} of the presentation too.
