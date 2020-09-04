@@ -365,7 +365,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
-&lt;p&gt;knitr::include_url(‘&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week&#34; class=&#34;uri&#34;&gt;https://edp613.theoreticalphysed.com/slides/Week&lt;/a&gt; 2/Slides-Week-2.html’)&lt;/p&gt;
+&lt;p&gt;knitr::include_url(&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week&#34; class=&#34;uri&#34;&gt;https://edp613.theoreticalphysed.com/slides/Week&lt;/a&gt; 2/Slides-Week-2.html)&lt;/p&gt;
 &lt;p&gt;You can download a &lt;a href=&#34;/slides/Week%202/Slides-Week-2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation too.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
