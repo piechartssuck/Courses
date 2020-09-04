@@ -18,6 +18,7 @@ menu:
 library(dplyr)
 library(tibble)
 library(pander)
+library(kableExtra)
 ```
 
 `r blogdown::shortcode("courseinfo")`
@@ -114,9 +115,7 @@ assignments <- tribble(
   20, "Quizzes",
   25, "Exams",
   25, "Final Exam"
-) %>%
-  mutate(Percent = sum(Percent),
-         Percent = scales::percent(Percent, accuracy = 1))
+) 
 
 grading <- tribble(
   ~Grade, ~Range,
@@ -129,29 +128,33 @@ grading <- tribble(
 ```
 
 
-<div class="centered-table">
-
 ```{r show-assignments-table, echo=FALSE, results="asis"}
-assignments_total <- tibble(Assignment = "Total",
-                            Points = sum(assignments$Points),
-                            Percent = NA)
-
-bind_rows(assignments, assignments_total) %>% 
-  select(Assignment, Points, Percent) %>% 
-  pandoc.table(justify = "lcc", missing = "—")
+assignments %>%
+  kbl(align='cl',
+               col.names = c("Percent", "Assignment"),
+      ) %>%
+  kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE)
 ```
-</div>
 
 <br />
-<div class="centered-table">
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  pandoc.table(justify = "lc", 
-               col.names = c("Grade", "Range"))
+  kableExtra::kbl(align='cl',
+               col.names = c("Grade", "Range")) %>%
+   kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE)
 ```
 
-<div>
 
 ### Your hours
 

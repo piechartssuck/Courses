@@ -1699,6 +1699,8 @@ You can check out more about what I do here:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/syllabus/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1846,100 +1848,123 @@ You can check out more about what I do here:
 &lt;div id=&#34;assignments-and-grades&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Assignments and Grades&lt;/h2&gt;
 &lt;p&gt;You can find descriptions for all the assignments on the &lt;a href=&#34;/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;centered-table&#34;&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Unknown or uninitialised column: `Points`.&lt;/code&gt;&lt;/pre&gt;
-&lt;table style=&#34;width:54%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;27%&#34; /&gt;
-&lt;col width=&#34;12%&#34; /&gt;
-&lt;col width=&#34;13%&#34; /&gt;
-&lt;/colgroup&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;Assignment&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Points&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Percent&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Percent
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Assignment
+&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Data Camp&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Data Camp
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Data Explorations&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Data Explorations
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Homeworks&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Homeworks
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Quizzes&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Quizzes
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Exams&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Exams
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Final Exam&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;10 000%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Final Exam
+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;br /&gt;
-&lt;div class=&#34;centered-table&#34;&gt;
-
-
-&lt;table style=&#34;width:25%;&#34;&gt;
-&lt;colgroup&gt;
-&lt;col width=&#34;11%&#34; /&gt;
-&lt;col width=&#34;13%&#34; /&gt;
-&lt;/colgroup&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;Grade&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Range&lt;/th&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Grade
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Range
+&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;A&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;90–100%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+A
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+90–100%
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;B&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;80%-89%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+B
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+80%-89%
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;C&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;70–79%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+C
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+70–79%
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;D&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;60–69%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+D
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+60–69%
+&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;F&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;lt; 60%&lt;/td&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+F
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;lt; 60%
+&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div&gt;
-
 &lt;div id=&#34;your-hours&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Your hours&lt;/h3&gt;
 &lt;p&gt;Please watch this video:&lt;/p&gt;
