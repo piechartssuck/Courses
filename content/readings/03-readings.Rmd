@@ -1,0 +1,21 @@
+---
+title: "Measures of Central Tendency"
+linktitle: "Week 3: Measures of Central Tendency"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read Chapter 3: *Measures of Central Tendency* in Frankfort-Nachmias and Leon-Guerrero. 
+
+
+

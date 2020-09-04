@@ -31,4 +31,5 @@ Area | Description | Location
 :---: | --- | --- |
 <i class="fas fa-book"></i> | Read chapter 2 in the text | [Link](/readings/02-readings/#book-stuff-1)
 <i class="fas fa-chalkboard"></i> | Look over the text PowerPoint and corresponding notes | [Link](/lesson/02-lesson/#book-materials-1)
+<i class="fas fa-lightbulb"></i> | Watch a video on Social Explorer and teh WVU Libraries Database | [Link](/example/02-example/#social-explorer-1)
 <i class="fas fa-lightbulb"></i> | Watch a video on Data Visualization | [Link](/example/02-example/#crash-course-statistics-1)^[Optional but recommended.]

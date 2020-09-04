@@ -52,7 +52,7 @@
   </url>
   
   <url>
-    <loc>/due/02-due/</loc>
+    <loc>/assignment/02-homeworks/</loc>
   </url>
   
   <url>
@@ -65,6 +65,10 @@
   
   <url>
     <loc>/readings/02-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/03-readings/</loc>
   </url>
   
   <url>

@@ -71,6 +71,7 @@
 &lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough&#34;&gt;R Walkthrough&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -94,7 +95,14 @@
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Download the in-class slides via&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%202/ICS_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/ICN_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough&lt;/h3&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;

@@ -1,0 +1,19 @@
+---
+title: "The Organization and Graphic Presentation of Data"
+linktitle: "Week 2: The Organization and Graphic Presentation of Data"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Homeworks
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Weekly Task
+Chapter 2 Exercises: 1, 2, 3, 4, 5, 6 and 7. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+:::
