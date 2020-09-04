@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Assignments | Statistical Methods I</title>
-    <link>/assignment/</link>
-      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp613.theoreticalphysed.com/assignment/</link>
+      <atom:link href="https://edp613.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>/assignment/</link>
+      <link>https://edp613.theoreticalphysed.com/assignment/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>/assignment/01-homeworks/</link>
+      <link>https://edp613.theoreticalphysed.com/assignment/01-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-homeworks/</guid>
+      <guid>https://edp613.theoreticalphysed.com/assignment/01-homeworks/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -54,9 +54,9 @@
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>/assignment/02-homeworks/</link>
+      <link>https://edp613.theoreticalphysed.com/assignment/02-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-homeworks/</guid>
+      <guid>https://edp613.theoreticalphysed.com/assignment/02-homeworks/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -75,15 +75,15 @@
     
     <item>
       <title>What is a Data Camp?</title>
-      <link>/assignment/datacamp-assignment/</link>
+      <link>https://edp613.theoreticalphysed.com/assignment/datacamp-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/datacamp-assignment/</guid>
+      <guid>https://edp613.theoreticalphysed.com/assignment/datacamp-assignment/</guid>
       <description>
 
 
-&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
+&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
 &lt;center&gt;
-&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 </description>
     </item>
