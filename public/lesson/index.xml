@@ -89,8 +89,8 @@
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%202/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -118,6 +118,68 @@
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Please get used to this term!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measures of Central Tendency</title>
+      <link>/lesson/03-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/03-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough&#34;&gt;R Walkthrough&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The third &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the the data manipulation with the tidyverse package &lt;code&gt;dplyr&lt;/code&gt; which we will be using throughout the remainder of the course. In particular, the sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transforming Data with dplyr&lt;/li&gt;
+&lt;li&gt;Aggregating Data&lt;/li&gt;
+&lt;li&gt;Selecting and Transforming Data&lt;/li&gt;
+&lt;li&gt;Case Study: The babynames Dataset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This now sets us up to do meaningful statistics in R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%203/SSDS_Ch3.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%203/SSDS_Ch3.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;!--Download the in-class slides via
+
+- [PDF](/slides/Week 3/ICS_Ch3.pdf){target=&#34;_blank&#34;} and 
+- [Outline](/lecture_notes/Week 3/ICN_Ch3.pdf){target=&#34;_blank&#34;}.
+--&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;!--
+First click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 2/Slides-Week-2.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
+
+&lt;iframe src=&#34;/slides/Week 2/Slides-Week-2.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+
+You can download a [PDF](/slides/Week 3/Slides-Week-3.pdf){target=&#34;_blank&#34;} of the presentation above. 
+--&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -56,6 +56,10 @@
   </url>
   
   <url>
+    <loc>/due/02-due/</loc>
+  </url>
+  
+  <url>
     <loc>/example/02-example/</loc>
   </url>
   
@@ -65,6 +69,14 @@
   
   <url>
     <loc>/readings/02-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/03-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/03-lesson/</loc>
   </url>
   
   <url>

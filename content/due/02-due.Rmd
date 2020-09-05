@@ -1,0 +1,34 @@
+---
+title: "The Organization and Graphic Presentation of Data"
+linktitle: "Week 2: The Organization and Graphic Presentation of Data"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+### What to do for Week 2 after class ends^[For grading.]
+eCampus? | Description | Location
+:---: | --- | --- |
+`r fa("square", fill = "steelblue")` | Complete a module in Data Camp.  |  [Link](/lesson/01-lesson/#data-camp-1)
+`r fa("check-square", fill = "steelblue")` | Complete problems 1, 2, 3, 4, 5, 6 and 7 in Chapter 2  |  [Link](/assignment/02-homeworks/#weekly-task-1)
+
+
+### What to do for Week 3 before coming to class^[For preparation.]
+Area | Description | Location
+:---: | --- | --- |
+<i class="fas fa-book"></i> | Read chapter 3 in the text | [Link](/readings/03-readings/#book-stuff-1)
+<i class="fas fa-chalkboard"></i> | Look over the text PowerPoint and corresponding notes | [Link](/lesson/03-lesson/#book-materials-1)
+<i class="fas fa-lightbulb"></i> | Watch a video on some nuances that will save you time and possibly your sanity | <!--[Link](/example/03-example/#maintaining-R-1)--> *coming soon*
+<i class="fas fa-lightbulb"></i> | Watch a video on the Measures of Central Tendency | [Link](/example/03-example/#crash-course-statistics-1)^[Optional but recommended.]
+
