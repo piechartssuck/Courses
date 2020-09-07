@@ -35,14 +35,40 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/01-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#weekly-task&#34;&gt;Weekly Task&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#solutions&#34;&gt;Solutions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;style&gt;
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+&lt;/style&gt;
 &lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
 &lt;p&gt;Please sign up for Slack!&lt;/p&gt;
@@ -57,14 +83,138 @@
 &lt;/div&gt;
 &lt;div id=&#34;weekly-task&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Weekly Task&lt;/h3&gt;
-&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.&lt;br&gt;
-:::&lt;/p&gt;
+&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;solutions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Solutions&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;3&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Interval–ratio&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Interval–ratio&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Nominal&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Ordinal&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Nominal&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Interval–ratio&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Ordinal&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;4&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Discrete&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Continuous&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Continuous&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;6&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;Unemployment records could be used to determine the actual number of unemployed; a &lt;span class=&#34;boxed&#34;&gt;descriptive statistic&lt;/span&gt; based upon the population.&lt;/li&gt;
+&lt;li&gt;A survey is taken to estimate student opinions about the quality of food; &lt;span class=&#34;boxed&#34;&gt;inferential statistic&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;National health records can be used to determine the incidence rate of breast cancer among all Asian women, so this would be a &lt;span class=&#34;boxed&#34;&gt;descriptive statistic&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The ratings will be gathered from a survey, so this is an &lt;span class=&#34;boxed&#34;&gt;inferential statistic&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;A university should be able to report GPA by major, so this is a &lt;span class=&#34;boxed&#34;&gt;descriptive statistic&lt;/span&gt; based upon the population.&lt;/li&gt;
+&lt;li&gt;In theory, the United States records all immigrants to this country. Therefore, the number of South East Asian immigrants would be a &lt;span class=&#34;boxed&#34;&gt;descriptive statistic&lt;/span&gt;. However, because of illegal immigration, surveys are also taken to estimate the total number of legal and unauthorized immigrants. In that event, the number of immigrants would be an &lt;span class=&#34;boxed&#34;&gt;inferential statistic&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;Annual income&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Gender: &lt;span class=&#34;boxed&#34;&gt;nominal&lt;/span&gt;&lt;br&gt;
+Number of hours worked per week: &lt;span class=&#34;boxed&#34;&gt;interval ratio&lt;/span&gt;&lt;br&gt;
+Years of education: &lt;span class=&#34;boxed&#34;&gt;interval ratio&lt;/span&gt;&lt;br&gt;
+Job title: &lt;span class=&#34;boxed&#34;&gt;nominal&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;This is an application of &lt;span class=&#34;boxed&#34;&gt;inferential statistics&lt;/span&gt;. The researcher is using information based on her sample to predict the annual income of a larger population of young graduates.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;8&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;At the nominal level, a simple measure of political participation is whether or not someone voted in the most recent general election. This variable would be coded either &lt;span class=&#34;boxed&#34;&gt;yes&lt;/span&gt; or &lt;span class=&#34;boxed&#34;&gt;no&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;At the ordinal level, a composite measure could be constructed of both voting and political party membership, like this:&lt;/p&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Behavior
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Code
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Didn’t vote; No membership
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Voted; No membership OR Membership; Didn’t vote
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Voted; Membership
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These codes are &lt;span class=&#34;boxed&#34;&gt;ordinal&lt;/span&gt; in scale because the amount of political participation can be ranked from high to low. Other possible ordinal variables can be constructed from other sets of behaviors, such as working in a candidate’s campaign and signing a petition. The key points are to create a variable whose values can be ranked and whose values are not on an interval–ratio scale.&lt;/p&gt;
+&lt;p&gt;At the &lt;span class=&#34;boxed&#34;&gt;interval–ratio&lt;/span&gt; level, political participation could be measured by the percentage of elections in which a person has voted since becoming eligible to vote, or the amount of money a person donated to political candidates during some specified time period.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/assignment/01-homeworks_solutions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/01-homeworks_solutions/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#weekly-task&#34;&gt;Weekly Task&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#solutions&#34;&gt;Solutions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;weekly-task&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Weekly Task&lt;/h3&gt;
+&lt;p&gt;Chapter 1 Exercises: 3, 4, 6, 7, and 8.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;solutions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Solutions&lt;/h3&gt;
 &lt;/div&gt;
 </description>
     </item>

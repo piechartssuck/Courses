@@ -14,6 +14,36 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+```
+
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+</style>
+
 ### Class Slack Account Access
 Please sign up for Slack!
 
@@ -27,4 +57,87 @@ Please sign up for Slack!
 
 ### Weekly Task
 Chapter 1 Exercises: 3, 4, 6, 7, and 8. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+### Solutions
+
+<details><summary>3</summary>
+<p>
+
+a. <span class="boxed">Interval–ratio</span>
+b. <span class="boxed">Interval–ratio</span>
+c. <span class="boxed">Nominal</span>
+d. <span class="boxed">Ordinal</span>
+e. <span class="boxed">Nominal</span>
+f. <span class="boxed">Interval–ratio</span>
+g. <span class="boxed">Ordinal</span> 
+
+</p>
+</details>
+
+<details><summary>4</summary>
+<p>
+
+a. <span class="boxed">Discrete</span>
+b. <span class="boxed">Continuous</span> 
+c. <span class="boxed">Continuous</span> 
+
+</p>
+</details>
+
+<details><summary>6</summary>
+<p>
+
+a. Unemployment records could be used to determine the actual number of unemployed; a <span class="boxed">descriptive statistic</span> based upon the population. 
+b. A survey is taken to estimate student opinions about the quality of food; <span class="boxed">inferential statistic</span>.
+c. National health records can be used to determine the incidence rate of breast cancer among all Asian women, so this would be a <span class="boxed">descriptive statistic</span>. 
+d. The ratings will be gathered from a survey, so this is an <span class="boxed">inferential statistic</span>.
+e. A university should be able to report GPA by major, so this is a <span class="boxed">descriptive statistic</span> based upon the population. 
+f. In theory, the United States records all immigrants to this country. Therefore, the number of South East Asian immigrants would be a <span class="boxed">descriptive statistic</span>. However, because of illegal immigration, surveys are also taken to estimate the total number of legal and unauthorized immigrants. In that event, the number of immigrants would be an <span class="boxed">inferential statistic</span>.
+
+</p>
+</details>
+
+<details><summary>7</summary>
+<p>
+
+a. <span class="boxed">Annual income</span> 
+b. Gender: <span class="boxed">nominal</span><br>
+Number of hours worked per week: <span class="boxed">interval ratio</span><br>
+Years of education: <span class="boxed">interval ratio</span><br> 
+Job title: <span class="boxed">nominal</span>. 
+c. This is an application of <span class="boxed">inferential statistics</span>. The researcher is using information based on her sample to predict the annual income of a larger population of young graduates.
+
+
+</p>
+</details>
+
+<details><summary>8</summary>
+<p>
+At the nominal level, a simple measure of political participation is whether or not someone voted in the most recent general election. This variable would be coded either <span class="boxed">yes</span> or <span class="boxed">no</span>. 
+
+At the ordinal level, a composite measure could be constructed of both voting and political party membership, like this:
+
+```{r echo = FALSE}
+dt <- tibble(
+  Text_1 = c("Didn’t vote; No membership","Voted; No membership OR Membership; Didn’t vote", "Voted;  Membership"),
+  Text_2 = c("0", "1", "2")
+)
+```
+
+```{r echo=FALSE}
+kable(dt, 
+      align = c('l', "c"), 
+      col.names = c("Behavior", "Code") 
+      ) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) 
+```
+
+These codes are <span class="boxed">ordinal</span> in scale because the amount of political participation can be ranked from high to low. Other possible ordinal variables can be constructed from other sets of behaviors, such as working in a candidate’s campaign and signing a petition. The key points are to create a variable whose values can be ranked and whose values are not on an interval–ratio scale.
+
+At the <span class="boxed">interval–ratio</span> level, political participation could be measured by the percentage of elections in which a person has voted since becoming eligible to vote, or the amount of money a person donated to political candidates during some specified time period. 
+
+
+</p>
+</details>
 :::
