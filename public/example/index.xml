@@ -83,7 +83,6 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#r-nuances&#34;&gt;R Nuances&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -96,11 +95,10 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Remember you can always access a Crash Course Statistics playlist using the following &lt;a href=&#34;https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;r-nuances&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;R Nuances&lt;/h3&gt;
-&lt;p&gt;The following video is a bit of a compilation of things that come up that are frustrating unless someone points them out. (&lt;em&gt;coming soon&lt;/em&gt;)&lt;/p&gt;
-&lt;!--
+&lt;!-- ### R Nuances
+The following video is a bit of a compilation of things that come up that are frustrating unless someone points them out. (*coming soon*)
+
+
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
   &lt;source src=&#34;/videos/R_nuances.mp4&#34; type=&#34;video/mp4&#34;&gt;
