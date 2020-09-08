@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Lessons | Survey Research Methods</title>
-    <link>https://edp619.theoreticalphysed.com/lesson/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <link>/lesson/</link>
+      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Lessons</title>
-      <link>https://edp619.theoreticalphysed.com/lesson/</link>
+      <link>/lesson/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/lesson/01-lesson/</link>
+      <link>/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/lesson/01-lesson/</guid>
+      <guid>/lesson/01-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -27,16 +27,16 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;While the first module is not due until next Sunday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;p&gt;While the first module is not due until next Sunday, if you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>https://edp619.theoreticalphysed.com/lesson/02-lesson/</link>
+      <link>/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/lesson/02-lesson/</guid>
+      <guid>/lesson/02-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -57,20 +57,20 @@
 &lt;li&gt;Data frames&lt;/li&gt;
 &lt;li&gt;Lists&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;evaluation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Evaluation&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>https://edp619.theoreticalphysed.com/lesson/03-lesson/</link>
+      <link>/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/lesson/03-lesson/</guid>
+      <guid>/lesson/03-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -117,7 +117,115 @@
 &lt;/div&gt;
 &lt;div id=&#34;sampling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Sampling&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to lreview different sampling techniques.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to review different sampling techniques.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fundamentals of Writing Questions</title>
+      <link>/lesson/04-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/04-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#survey-design&#34;&gt;Survey Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Introduction to the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Wrangling&lt;/li&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Grouping and summarizing&lt;/li&gt;
+&lt;li&gt;Types of visualizations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Working with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore your data&lt;/li&gt;
+&lt;li&gt;Tame your data&lt;/li&gt;
+&lt;li&gt;Tidy your data&lt;/li&gt;
+&lt;li&gt;Transform your data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Project: Dr. Semmelweis and the Discovery of Handwashing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Modeling with Data in the Tidyverse&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Model Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;looking-ahead&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Looking Ahead&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;If you are wanting to work ahead&lt;/strong&gt;, the next set of modules that are due in four weeks are listed below:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Communicating with Data in the Tidyverse&lt;/li&gt;
+&lt;li&gt;Categorical Data in the Tidyverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Exploratory Data Analysis in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Modeling Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Dealing with Missing Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Why care about missing data?&lt;/li&gt;
+&lt;li&gt;Wrangling and tidying up missing values&lt;/li&gt;
+&lt;li&gt;Testing missing relationships&lt;/li&gt;
+&lt;li&gt;Connecting the dots (Imputation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inference for Categorical Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference for a single parameter&lt;/li&gt;
+&lt;li&gt;Proportions: testing and power&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: independence&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: goodness of fit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;survey-design&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Survey Design&lt;/h2&gt;
+&lt;p&gt;Download&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; a slideshow both in &lt;a href=&#34;https://drive.google.com/file/d/1TXaKxvo1GDBUry8_u4eTXa7akI_4OkX1/view?usp=sharing&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; or &lt;a href=&#34;https://drive.google.com/file/d/1VKIFm6H4tXMjUvuJCS3UCwkeiPgwkYKe/view?usp=sharing&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; formats to review different item constructions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;These files are pretty big and are hosted on WVU’s Google Drive. You will have to login with your &lt;strong&gt;WVU MIX&lt;/strong&gt; account to access them.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;With my voice. Listen I’m no Morgan Freeman.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Without audio.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

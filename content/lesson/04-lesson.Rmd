@@ -1,0 +1,72 @@
+---
+title: "The Fundamentals of Writing Questions"
+linktitle: "Week 4: The Fundamentals of Writing Questions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on [Data Camp](https://www.datacamp.com/){target="_blank"}. It will cover:
+
+1. Introduction to the Tidyverse
+  - Data Wrangling
+  - Data visualization
+  - Grouping and summarizing
+  - Types of visualizations
+
+2. Working with Data in the Tidyverse
+  - Explore your data
+  - Tame your data
+  - Tidy your data
+  - Transform your data
+  
+3. Project: Dr. Semmelweis and the Discovery of Handwashing
+
+4. Modeling with Data in the Tidyverse
+  - Introduction to Modeling
+  - Modeling with Basic Regression
+  - Modeling with Multiple Regression
+  - Model Assessment and Selection
+
+##### Looking Ahead
+**If you are wanting to work ahead**,  the next set of modules that are due in four weeks are listed below:
+
+1. Modeling with Data in the Tidyverse
+ - Communicating with Data in the Tidyverse
+ - Categorical Data in the Tidyverse
+ 
+ 2. Exploratory Data Analysis in R
+ - Exploring Categorical Data
+ - Exploring Numerical Data
+ - Numerical Summaries
+ - Case study
+ 
+ 3. Modeling with Data in the Tidyverse
+ - Introduction to Modeling
+ - Modeling with Basic Regression
+ - Modeling with Multiple Regression
+ - Modeling Assessment and Selection 
+ 
+ 4. Dealing with Missing Data in R
+ - Why care about missing data?
+ - Wrangling and tidying up missing values 
+ - Testing missing relationships 
+ - Connecting the dots (Imputation) 
+ 
+ 5. Inference for Categorical Data in R
+ -  Inference for a single parameter 
+ - Proportions: testing and power
+ - Comparing many parameters: independence
+ - Comparing many parameters: goodness of fit
+
+## Survey Design
+Download^[These files are pretty big and are hosted on WVU's Google Drive. You will have to login with your **WVU MIX** account to access them.] a slideshow both in [PowerPoint](https://drive.google.com/file/d/1TXaKxvo1GDBUry8_u4eTXa7akI_4OkX1/view?usp=sharing){target="_blank"}^[With my voice. Listen I'm no Morgan Freeman.] or [PDF](https://drive.google.com/file/d/1VKIFm6H4tXMjUvuJCS3UCwkeiPgwkYKe/view?usp=sharing){target="_blank"}^[Without audio.] formats to review different item constructions. 

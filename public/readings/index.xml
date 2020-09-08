@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Readings | Survey Research Methods</title>
-    <link>https://edp619.theoreticalphysed.com/readings/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/readings/index.xml" rel="self" type="application/rss+xml" />
+    <link>/readings/</link>
+      <atom:link href="/readings/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Readings</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Readings</title>
-      <link>https://edp619.theoreticalphysed.com/readings/</link>
+      <link>/readings/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/readings/01-readings/</link>
+      <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/readings/01-readings/</guid>
+      <guid>/readings/01-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -32,13 +32,13 @@
 &lt;p&gt;First things first:
 &lt;br&gt;
 &lt;br&gt;
-&lt;iframe src=&#34;https://edp619.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
 &lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;review-syllabus&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Review Syllabus&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;https://edp619.theoreticalphysed.com/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;https://edp619.theoreticalphysed.com/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;https://edp619.theoreticalphysed.com/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
+&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
@@ -49,9 +49,9 @@
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>https://edp619.theoreticalphysed.com/readings/02-readings/</link>
+      <link>/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/readings/02-readings/</guid>
+      <guid>/readings/02-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -63,7 +63,7 @@
 
 &lt;div id=&#34;article&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Article&lt;/h3&gt;
-&lt;p&gt;Read &lt;a href=&#34;&#34;&gt;&lt;em&gt;How to Create a Bad Survey Instrument&lt;/em&gt;&lt;/a&gt; by Sullivan &amp;amp; Artino (2017).&lt;/p&gt;
+&lt;p&gt;Read &lt;a href=&#34;/files/Week%202/Sullivan%20&amp;amp;%20Artino%20(2017).pdf&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;How to Create a Bad Survey Instrument&lt;/strong&gt;&lt;/a&gt; by Sullivan &amp;amp; Artino (2017).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
@@ -74,9 +74,9 @@
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>https://edp619.theoreticalphysed.com/readings/03-readings/</link>
+      <link>/readings/03-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/readings/03-readings/</guid>
+      <guid>/readings/03-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -88,6 +88,39 @@
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read &lt;em&gt;Chapter 3: Covering the Population and Selecting Who to Survey&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fundamentals of Writing Questions</title>
+      <link>/readings/04-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/04-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#article&#34;&gt;Article&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;article&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Article&lt;/h3&gt;
+&lt;p&gt;Read&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; &lt;a href=&#34;https://drive.google.com/file/d/1HCXeRuyFz0ifEtoI2liVNt-W_x3PzQRn/view?usp=sharing&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Material Incentives and Other Potential Factors Associated With Response Rates to Internet Surveys of American Evaluation Association Members: Findings
+From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, Westine CD, Mateu PF, Abu-Obaid RN, Hobson KA, Schröter DC, Dodds EL, Vo AT &amp;amp; Ramlow M.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 4: The Fundamentals of Writing Questions&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This is a mostly new publication and is copyright protected so you will have to login with your &lt;strong&gt;WVU MIX&lt;/strong&gt; account to access it.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Full disclosure: I serve on the American Evaluation Association Survey Workgroup that creates the annual survey outlined in the article. Additionally many of the authors on the paper are friends and colleagues and some were also in my doctoral cohort. Regardless, you will be able to see the breakdown of a mass survey administered to a large audience, some of which could inform your upcoming survey design and administration.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
