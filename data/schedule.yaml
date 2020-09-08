@@ -26,3 +26,11 @@ lessons:
     example: "03-example"
     assignment: "03-assignment"
     due: "03-due"
+
+  - title: 'The Fundamentals of Writing Questions'
+    session: 4
+    date: "September 13, 2020"
+    readings: "04-readings"
+    lesson: "04-lesson"
+    example: "04-example"
+    due: "04-due"

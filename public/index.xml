@@ -146,26 +146,6 @@ This week you have nothing to turn in but there is still something to do! First 
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/example/03a-example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/03a-example/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
-&lt;p&gt;We will be using your initial surveys built in Qualtrics. Videos will be uploaded shortly.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Familiar with the Course</title>
       <link>/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/01-lesson/</guid>
@@ -318,15 +298,15 @@ This week you have nothing to turn in but there is still something to do! First 
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-textbox-width&#34;&gt;Javascript in Qualtrics: Textbox Width&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
+&lt;div id=&#34;javascript-in-qualtrics-textbox-width&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics: Textbox Width&lt;/h3&gt;
 &lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Synopsis&lt;/h4&gt;
-&lt;p&gt;Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you’ll figur eout how to use the Javascript engine to rule over Qualtrics!&lt;/p&gt;
+&lt;p&gt;Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you’ll figure out how to use the Javascript engine to rule over Qualtrics!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
@@ -350,6 +330,75 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Depending on your settings, you may have to right click to download the file.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fundamentals of Writing Questions</title>
+      <link>/due/04-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/04-due/</guid>
+      <description>
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Qualtrics?&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;/&gt;&lt;/svg&gt;&lt;/td&gt;
+&lt;td&gt;Complete a skill series in Data Camp.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Due this week!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fundamentals of Writing Questions</title>
+      <link>/example/04-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/04-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-structural-items&#34;&gt;Javascript in Qualtrics: Structural Items&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;javascript-in-qualtrics-structural-items&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics: Structural Items&lt;/h3&gt;
+&lt;p&gt;Posting soon!&lt;/p&gt;
+&lt;!--
+#### Synopsis
+Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you&#39;ll figure out how to use the Javascript engine to rule over Qualtrics! 
+
+#### What you need
+Here is a [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.]. You&#39;ll need it for the walkthrough.
+
+#### Try it out
+Try using your initial surveys in [Qualtrics](wvu.qualtrics.com){target=&#34;_blank&#34;} to test out how to expand the open text boxes.
+
+#### Walkthrough
+&lt;center&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+*Note: If the link for Atom is not working, please use this [link](https://atom.io/){target=&#34;_blank&#34;}.*
+--&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1989,6 +2038,23 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/03-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/03-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 13, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;The Fundamentals of Writing Questions&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/04-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/04-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/04-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/04-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

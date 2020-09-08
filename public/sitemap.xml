@@ -48,10 +48,6 @@
   </url>
   
   <url>
-    <loc>/example/03a-example/</loc>
-  </url>
-  
-  <url>
     <loc>/lesson/01-lesson/</loc>
   </url>
   
@@ -73,6 +69,14 @@
   
   <url>
     <loc>/example/03-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/04-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/04-example/</loc>
   </url>
   
   <url>

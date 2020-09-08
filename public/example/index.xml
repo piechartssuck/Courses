@@ -33,26 +33,6 @@
     </item>
     
     <item>
-      <title>Getting Familiar with the Course</title>
-      <link>/example/03a-example/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/03a-example/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
-&lt;p&gt;We will be using your initial surveys built in Qualtrics. Videos will be uploaded shortly.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>An Introduction to Surveys</title>
       <link>/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -81,15 +61,15 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics&#34;&gt;Javascript in Qualtrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-textbox-width&#34;&gt;Javascript in Qualtrics: Textbox Width&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;javascript-in-qualtrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Javascript in Qualtrics&lt;/h3&gt;
+&lt;div id=&#34;javascript-in-qualtrics-textbox-width&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics: Textbox Width&lt;/h3&gt;
 &lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Synopsis&lt;/h4&gt;
-&lt;p&gt;Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you’ll figur eout how to use the Javascript engine to rule over Qualtrics!&lt;/p&gt;
+&lt;p&gt;Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you’ll figure out how to use the Javascript engine to rule over Qualtrics!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
@@ -113,6 +93,42 @@
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Depending on your settings, you may have to right click to download the file.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Fundamentals of Writing Questions</title>
+      <link>/example/04-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/04-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-structural-items&#34;&gt;Javascript in Qualtrics: Structural Items&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;javascript-in-qualtrics-structural-items&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics: Structural Items&lt;/h3&gt;
+&lt;p&gt;Posting soon!&lt;/p&gt;
+&lt;!--
+#### Synopsis
+Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you&#39;ll figure out how to use the Javascript engine to rule over Qualtrics! 
+
+#### What you need
+Here is a [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.]. You&#39;ll need it for the walkthrough.
+
+#### Try it out
+Try using your initial surveys in [Qualtrics](wvu.qualtrics.com){target=&#34;_blank&#34;} to test out how to expand the open text boxes.
+
+#### Walkthrough
+&lt;center&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+*Note: If the link for Atom is not working, please use this [link](https://atom.io/){target=&#34;_blank&#34;}.*
+--&gt;
 &lt;/div&gt;
 </description>
     </item>
