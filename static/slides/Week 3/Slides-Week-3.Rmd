@@ -68,7 +68,7 @@ But by using R (or any other data analysis package), we look at frequency distri
 To explore this, let's load the 2012 voter fraud file first and assign it to a variable. We can do this using the `read_csv` command from the `readr` package within `tidyverse`.
 
 ```{r echo = TRUE, eval = TRUE}
-voter_fraud <- read_csv("2012 Voter Fraud.csv")
+voter_fraud <- read_csv("2012_Voter_Fraud.csv")
 ```
 
 ---
