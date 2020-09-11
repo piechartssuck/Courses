@@ -38,18 +38,22 @@ Download the class
 
 ### R Walkthrough
 
-*posted after class*
+1. Download all four of the following files and put them wherever you want BUT remember where they are.
 
-<!--
-First click on the presentation itself and then you may
+- [2012 Voter Fraud Codebook](/slides/Week 3/2012_Voter_Fraud_Codebook.pdf){target="_blank"} 
+- [2012 Voter Fraud.csv](/slides/Week 3/2012 Voter Fraud.csv){target="_blank"}
+
+- [Box Office Codebook](/slides/Week 3/Box_Office_Codebook.pdf){target="_blank"} 
+- [Box Office.csv](/slides/Week 3/Box Office.csv){target="_blank"}
+
+2. Click on the presentation itself and then you may
 
 - Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
 - Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 2/Slides-Week-2.html){target="_blank"} to view a larger version of slideshow in a new window.
+- Use this [link](/slides/Week 3/Slides-Week-3.html){target="_blank"} to view a larger version of slideshow in a new window.
 
 ```{r echo = FALSE}
-knitr::include_url("/slides/Week 2/Slides-Week-2.html")
+knitr::include_url("/slides/Week 3/Slides-Week-3.html")
 ```
 
 You can download a [PDF](/slides/Week 3/Slides-Week-3.pdf){target="_blank"} of the presentation above. 
--->
