@@ -23,6 +23,8 @@ class: center, middle, inverse, title-slide
 
 
 
+
+
 # Prepping
 To repeat last week's idea: Everytime you start anything new in R and want a record, do the following:
 
@@ -40,8 +42,11 @@ To repeat last week's idea: Everytime you start anything new in R and want a rec
 
 &gt;- Install the packages `car` and `descr`. Remember you can download it using **Tools &gt; Install Packages** and typing in the name. Please make sure the **Install Dependencies** option has a checkmark beside of it. The install may take a minute.
 
-&lt;img src="install_packages.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;center&gt;
 
+![:scale 45%](install-packages.png)
+
+&lt;/center&gt;
 ---
 
 &gt;- Load up the packages along with `tidyverse`.
@@ -251,7 +256,7 @@ That seems like a lot. Let's plot them on a bar chart using the `freq` command f
 freq(voter_fraud$total, plot = TRUE)
 ```
 
-&lt;img src="Slides-Week-3_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Slides-Week-3_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
 
 ```
 ## voter_fraud$total 
@@ -294,11 +299,10 @@ freq(voter_fraud$total, plot = TRUE)
 
 ... and you get something like this
 
-&lt;img src="freq_secondary_output.png" width="30%" style="display: block; margin: auto auto auto 0;" /&gt;
 
+![:scale 30%](freq-secondary-output.png)
 
 ---
---- 
 
 
 While you could present the results by going through each newspaper by stating 1 newspaper had zero articles, 1 newspaper had one article, 2 newspapers had two articles and so on. 
@@ -370,7 +374,7 @@ Now let's plot the bar chart again but in this case, we'll be using our new colu
 freq(voter_fraud$ranges, plot = TRUE)
 ```
 
-![](Slides-Week-3_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+![](Slides-Week-3_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
 
 ```
 ## voter_fraud$ranges 

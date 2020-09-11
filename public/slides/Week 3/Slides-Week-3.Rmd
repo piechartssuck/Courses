@@ -7,6 +7,10 @@ output:
    css: xaringan-themer.css
 ---
 
+```{r setup, include=FALSE}
+library(knitr)
+```
+
 ```{r echo = FALSE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
@@ -35,9 +39,9 @@ To repeat last week's idea: Everytime you start anything new in R and want a rec
 
 >- Install the packages `car` and `descr`. Remember you can download it using **Tools > Install Packages** and typing in the name. Please make sure the **Install Dependencies** option has a checkmark beside of it. The install may take a minute.
 
-```{r eval = TRUE, echo = FALSE, out.width= "45%", fig.align="center"}
-knitr::include_graphics("install_packages.png")
-```
+<center>
+<img src="install-packages.png" width="343" height="252" alt="Italian Trulli">
+</center>
 
 ---
 
@@ -164,13 +168,9 @@ freq(voter_fraud$total, plot = TRUE)
 
 ... and you get something like this
 
-```{r echo = TRUE, eval = TRUE, echo = FALSE, out.width= "30%", fig.align="left"}
-knitr::include_graphics("freq_secondary_output.png")
-```
-
+<img src="freq-secondary-output.png" width="239" height="460" alt="Install Packages Window">
 
 ---
---- 
 
 
 While you could present the results by going through each newspaper by stating 1 newspaper had zero articles, 1 newspaper had one article, 2 newspapers had two articles and so on. 

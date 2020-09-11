@@ -39,11 +39,10 @@ To repeat last week's idea: Everytime you start anything new in R and want a rec
 
 >- Install the packages `car` and `descr`. Remember you can download it using **Tools > Install Packages** and typing in the name. Please make sure the **Install Dependencies** option has a checkmark beside of it. The install may take a minute.
 
-<center>
+```{r eval = TRUE, echo = FALSE, out.width= "45%", fig.align="center"}
+include_graphics("/slides/Week3/install_packages.png", error = FALSE)
+```
 
-![:scale 45%](install-packages.png)
-
-</center>
 ---
 
 >- Load up the packages along with `tidyverse`.
@@ -169,10 +168,13 @@ freq(voter_fraud$total, plot = TRUE)
 
 ... and you get something like this
 
+```{r echo = TRUE, eval = TRUE, echo = FALSE, out.width= "30%", fig.align="left"}
+knitr::include_graphics("/slides/Week3/freq_secondary_output.png")
+```
 
-![:scale 30%](freq-secondary-output.png)
 
 ---
+--- 
 
 
 While you could present the results by going through each newspaper by stating 1 newspaper had zero articles, 1 newspaper had one article, 2 newspapers had two articles and so on. 

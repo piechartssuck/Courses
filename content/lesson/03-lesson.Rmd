@@ -57,7 +57,3 @@ knitr::include_url("/slides/Week 3/Slides-Week-3.html")
 ```
 
 You can download a [PDF](/slides/Week 3/Slides-Week-3.pdf){target="_blank"} of the presentation above. 
-
-
-3. 
-jnibno

@@ -40,10 +40,9 @@ To repeat last week's idea: Everytime you start anything new in R and want a rec
 >- Install the packages `car` and `descr`. Remember you can download it using **Tools > Install Packages** and typing in the name. Please make sure the **Install Dependencies** option has a checkmark beside of it. The install may take a minute.
 
 <center>
-
-![:scale 45%](install-packages.png)
-
+<img src="install-packages.png" width="343" height="252" alt="Italian Trulli">
 </center>
+
 ---
 
 >- Load up the packages along with `tidyverse`.
@@ -169,8 +168,7 @@ freq(voter_fraud$total, plot = TRUE)
 
 ... and you get something like this
 
-
-![:scale 30%](freq-secondary-output.png)
+<img src="freq-secondary-output.png" width="239" height="460" alt="Install Packages Window">
 
 ---
 
