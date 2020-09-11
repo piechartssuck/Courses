@@ -1,0 +1,55 @@
+---
+title: "Measures of Central Tendency"
+linktitle: "Week 3: Measures of Central Tendency"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The third [Data Camp](https://www.datacamp.com/){target="_blank"} module is due next Wednesday and covers the the data manipulation with the tidyverse package `dplyr` which we will be using throughout the remainder of the course. In particular, the sections are:
+
+- Transforming Data with dplyr
+- Aggregating Data
+- Selecting and Transforming Data
+- Case Study: The babynames Dataset
+
+This now sets us up to do meaningful statistics in R.
+
+### Book Materials
+Download the textbook
+
+- [PowerPoint](/slides/Week 3/SSDS_Ch3.pptx){target="_blank"} and
+- [Lecture Notes](/lecture_notes/Week 3/SSDS_Ch3.docx){target="_blank"}.
+
+### Class Notes
+Download the class
+
+- [PDF](/slides/Week 3/ICS_Ch3.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week 3/ICN_Ch3.pdf){target="_blank"}.
+
+### R Walkthrough
+
+1. Download the data sets and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+
+- [Week 3 Walkthrough Materials](/slides/Week 3/Week3data.zip){target="_blank"}
+
+2. Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 3/Slides-Week-3.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 3/Slides-Week-3.html")
+```
+
+You can download a [PDF](/slides/Week 3/Slides-Week-3.pdf){target="_blank"} of the presentation above. 
