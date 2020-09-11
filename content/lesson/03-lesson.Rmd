@@ -38,7 +38,7 @@ Download the class
 
 ### R Walkthrough
 
-1. Download the data sets and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
 
 - [Week 3 Walkthrough Materials](/slides/Week 3/Week3data.zip){target="_blank"}
 
