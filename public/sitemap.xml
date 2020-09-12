@@ -76,6 +76,14 @@
   </url>
   
   <url>
+    <loc>/assignment/03-homeworks/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/03-due/</loc>
+  </url>
+  
+  <url>
     <loc>/example/03-example/</loc>
   </url>
   
@@ -85,6 +93,14 @@
   
   <url>
     <loc>/readings/03-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/04-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/04-readings/</loc>
   </url>
   
   <url>

@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The third [Data Camp](https://www.datacamp.com/){target="_blank"} module is due next Wednesday and covers the the data manipulation with the tidyverse package `dplyr` which we will be using throughout the remainder of the course. In particular, the sections are:
+The third [Data Camp](https://www.datacamp.com/){target="_blank"} module is due the  Wednesday following the completion of the Week 3 class. It covers a particular tidyverse package called `dplyr` which is by far the one of the most useful tools you can use. In particular the sections address:
 
 - Transforming Data with dplyr
 - Aggregating Data

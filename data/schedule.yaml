@@ -19,3 +19,12 @@ lessons:
     example: "02-example"
     assignment: "02-assignment"
     due: "02-due"
+
+  - title: 'Measures of Central Tendency'
+    session: 3
+    date: "September 16, 2020"
+    readings: "03-readings"
+    lesson: "03-lesson"
+    example: "03-example"
+    assignment: "03-assignment"
+    due: "03-due"

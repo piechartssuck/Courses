@@ -29,7 +29,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The first &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the basics of R. In particular, the sections are:&lt;/p&gt;
+&lt;p&gt;The first &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due the Wednesday following the completion of the Week 1 class. It provides an introduction to the structure in and elementary use of R with an end goal of getting you familiar with its functionality. In particular the sections address:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro to basics&lt;/li&gt;
 &lt;li&gt;Vectors&lt;/li&gt;
@@ -77,7 +77,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The second &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the the tidyverse family of functions in R which we will be using throughout the remainder of the course. In particular, the sections are:&lt;/p&gt;
+&lt;p&gt;The second &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due the Wednesday following the completion of the Week 2 class. It covers the tidyverse family of packages in R which we will be using throughout the remainder of the course. In particular the sections address:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Data wrangling&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Data visualization&lt;/li&gt;
@@ -140,7 +140,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The third &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due next Wednesday and covers the the data manipulation with the tidyverse package &lt;code&gt;dplyr&lt;/code&gt; which we will be using throughout the remainder of the course. In particular, the sections are:&lt;/p&gt;
+&lt;p&gt;The third &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due the Wednesday following the completion of the Week 3 class. It covers a particular tidyverse package called &lt;code&gt;dplyr&lt;/code&gt; which is by far the one of the most useful tools you can use. In particular the sections address:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Transforming Data with dplyr&lt;/li&gt;
 &lt;li&gt;Aggregating Data&lt;/li&gt;
@@ -189,6 +189,78 @@
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You will have to unzip this file. If you are unfamilair with this process, please check the &lt;a href=&#34;/resource/unzipping/&#34;&gt;Unzipping files&lt;/a&gt; section under Resources for assistance.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measures of Variability</title>
+      <link>/lesson/04-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/04-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough---super-mario-brothers&#34;&gt;R Walkthrough - Super Mario Brothers!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The fourth &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due the Wednesday following the completion of the Week 4 class. The module covers doing basic descriptive statistics in R out of the box&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. In particular, the sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Variables&lt;/li&gt;
+&lt;li&gt;Histograms and Distributions&lt;/li&gt;
+&lt;li&gt;Scales of Measurement&lt;/li&gt;
+&lt;li&gt;Measures of Central Tendency&lt;/li&gt;
+&lt;li&gt;Measures of Variability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As promised, we start performing basic statistical analyses in R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%204/SSDS_Ch4.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%204/SSDS_Ch4.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;!--
+- [PDF](/slides/Week 4/ICS_Ch4.pdf){target=&#34;_blank&#34;} and 
+- [Outline](/lecture_notes/Week 4/ICN_Ch4.pdf){target=&#34;_blank&#34;}.
+--&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough---super-mario-brothers&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough - Super Mario Brothers!&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;!--
+1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+
+- [Week 3 Walkthrough Materials](/slides/Week 4/Week4data.zip){target=&#34;_blank&#34;}
+
+2. Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
+
+&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+
+You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
+--&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Mostly without any additional packages or what is known as Base R&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

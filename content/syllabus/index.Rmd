@@ -98,13 +98,14 @@ But there are multiple resources online to help.
   - A copy of your data set (if applicable).
   - A copy of your script or Rmarkdown document with comments throughout so I know what you've tried historically leading up to the issue.
 
-I have a mail filter that will automatically bring your email to a top priority status.^ [In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
+I have a mail filter that will automatically bring your email to a top priority status.^[In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
 
 You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you're more likely to remember things you've figured out rather than those you've been shown or told. 
 
 ## Assignments and Grades
 
 You can find descriptions for all the assignments on the [assignments page](/assignment/).
+
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
@@ -127,6 +128,7 @@ grading <- tribble(
 )
 ```
 
+<center>
 
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
@@ -138,10 +140,16 @@ assignments %>%
                                       "hover", 
                                       "condensed", 
                                       "responsive"),
-                full_width = FALSE)
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em")
 ```
 
+</center>
+
 <br />
+
+<center>
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
@@ -152,9 +160,12 @@ grading %>%
                                       "hover", 
                                       "condensed", 
                                       "responsive"),
-                full_width = FALSE)
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em")
 ```
 
+</center>
 
 ### Your hours
 

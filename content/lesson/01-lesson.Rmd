@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The first [Data Camp](https://www.datacamp.com/){target="_blank"} module is due next Wednesday and covers the basics of R. In particular, the sections are:
+The first [Data Camp](https://www.datacamp.com/){target="_blank"} module is due the  Wednesday following the completion of the Week 1 class. It provides an introduction to the structure in and elementary use of R with an end goal of getting you familiar with its functionality. In particular the sections address:
 
 - Intro to basics
 - Vectors

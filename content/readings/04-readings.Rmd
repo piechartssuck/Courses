@@ -1,0 +1,21 @@
+---
+title: "Measures of Variability"
+linktitle: "Week 4: Measures of Variability"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read Chapter 4: *Measures of Variability*^[Remember to please take this sections slow and to pay particular attention to the ideas of standard deviation and variance. These are essentially "gateway" concepts which is to say your ability to understand the remaining concepts in the course hinges on really knowing what both of these are, what they measure, and how they are found. No pressure!] in Frankfort-Nachmias and Leon-Guerrero. 
+
+
+
