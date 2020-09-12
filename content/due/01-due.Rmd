@@ -15,20 +15,81 @@ editor_options:
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
 library(fontawesome)
+library(knitr)
+library(kableExtra)
 ```
 
 ### What to do for Week 1 after class ends^[For grading.]
-eCampus? | Description | Location
-:---: | --- | --- |
-`r fa("square", fill = "steelblue")` | Complete a module in Data Camp that addressed the basics of R.  |  [Link](/lesson/01-lesson/#data-camp-1)
-`r fa("check-square", fill = "steelblue")` | Complete problems 3, 4, 6, 7, and 8 in Chapter 1  |  [Link](/assignment/01-homeworks/#weekly-task-1)
 
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+"eCampus?" = c(unchecked, 
+               checked),
+
+Description = c("Start a module in Data Camp that addresses the basic elements of R",
+               "Complete problems 3, 4, 6, 7, and 8 in Chapter 1."),
+
+Location = c("[Link](/lesson/01-lesson/#data-camp-1)", 
+             "[Link](/assignment/01-homeworks/#weekly-task-1)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+<br />
 
 ### What to do for Week 2 before coming to class^[For preparation.]
-Area | Description | Location
-:---: | --- | --- |
-<i class="fas fa-book"></i> | Read chapter 2 in the text | [Link](/readings/02-readings/#book-stuff-1)
-<i class="fas fa-chalkboard"></i> | Look over the text PowerPoint and corresponding notes | [Link](/lesson/02-lesson/#book-materials-1)
-<i class="fas fa-lightbulb"></i> | Watch a video on Social Explorer and teh WVU Libraries Database | [Link](/example/02-example/#social-explorer-1)
-<i class="fas fa-lightbulb"></i> | Watch a video on Data Visualization | [Link](/example/02-example/#crash-course-statistics-1)^[Optional but recommended.]
+
+```{r eval = TRUE, echo = FALSE}
+book <- as.character(fontawesome::fa("book", fill = "#4682b4"))
+
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "#4682b4"))
+
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "#4682b4"))
+
+wk_pre <- tibble(
+Area = c(book, 
+         chalkboard, 
+         lightbulb,
+         lightbulb
+         ),
+
+Description = c("Read chapter 2 in the text.",
+               "Look over the text PowerPoint and corresponding notes.",
+               "Watch a video on Social Explorer and the WVU Libraries Database.",
+               "Watch a video on Data Visualization.^[Optional but recommended]"),
+
+Location = c("[Link](/readings/02-readings/#book-stuff-1)", 
+             "[Link](/lesson/02-lesson/#book-materials-1)",
+             "[Link](/example/02-example/#social-explorer-1)",
+             "[Link](/example/02-example/#crash-course-statistics-1)")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_pre, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+

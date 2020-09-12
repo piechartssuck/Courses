@@ -54,6 +54,8 @@ kable(wk_post,
   column_spec(3, width = "10em")
 ```
 
+<br />
+
 ### What to do for Week 4 before coming to class^[For preparation.]
 
 ```{r eval = TRUE, echo = FALSE}
@@ -65,10 +67,10 @@ lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
 
 wk_pre <- tibble(
 Area = c(book, 
-               chalkboard, 
-               lightbulb),
+         chalkboard, 
+         lightbulb),
 
-Description = c("Read chapter 3 in the text.",
+Description = c("Read chapter 4 in the text.",
                "Look over the text PowerPoint and corresponding notes.",
                "Watch a video on the Measures of Variability.^[Optional but recommended.]"),
 
