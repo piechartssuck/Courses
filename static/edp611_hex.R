@@ -66,21 +66,6 @@ steam_preview <- steam +
 
 steam_preview
 
-steam_trans <- steam + 
-               theme_void() + 
-               theme_transparent() +
-               theme(panel.background = element_rect(fill = "#293840"))
-
-ggsave("steam_flow.png",
-       steam_trans,
-       device = "png",
-       dpi = 600,
-       width = 18.06,
-       height = 18.06,
-       units = "cm")
-
-    
-
 sticker(steam_trans, 
         package="EDP 611", 
         p_size=8, 
@@ -91,5 +76,17 @@ sticker(steam_trans,
         h_fill="#292A30",
         h_color="#293840",
         p_family = "Jost* Bold",
-        filename="steamhex.png")
+        filename="hex.png")
+
+sticker(steam_trans, 
+        package="", 
+        p_size=8, 
+        s_x=1, 
+        s_y=1.0, 
+        s_width=2.2, 
+        s_height=2.2,
+        h_fill="#292A30",
+        h_color="#293840",
+        p_family = "Jost* Bold",
+        filename="icon.png")
 

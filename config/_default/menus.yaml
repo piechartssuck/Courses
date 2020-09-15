@@ -5,8 +5,8 @@ main:
   - name: Schedule
     url: /schedule/
     weight: 2
-  - name: Content
-    url: /content/
+  - name: Readings
+    url: /readings/
     weight: 3
   - name: Lessons
     url: /lesson/
@@ -27,10 +27,10 @@ main:
     url: "https://rstudio.cloud/"
     weight: 9
 
-content:
+readings:
   - name: Overview
     weight: 1
-  - name: Course content
+  - name: Readings
     weight: 2
 lesson:
   - name: Overview
