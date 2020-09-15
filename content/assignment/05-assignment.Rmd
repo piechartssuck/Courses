@@ -1,0 +1,25 @@
+---
+title: "Week 5: How to Write Open- and Closed-Ended Questions"
+linktitle: "Week 5: How to Write Open- and Closed-Ended Questions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Survey Draft
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+### Construction: Designing a Survey Draft
+In this class, you will plan, **create**, pilot, administer, and analyze a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.
+
+#### Submit
+1. A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer.
+2. A *draft* form of your survey submitted in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"} two Sundays from now. In this case a *draft* does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week's [PowerPoint](/lesson/04-lesson/#survey-design-1) and in Chapters 4-6 of the text. Your earned score will reflect this.
+
+**Note that You have two weeks to complete this task.**
+:::

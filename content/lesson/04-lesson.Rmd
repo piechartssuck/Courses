@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on [Data Camp](https://www.datacamp.com/){target="_blank"}. It will cover:
+The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular, they are:
 
 1. Introduction to the Tidyverse
   - Data Wrangling

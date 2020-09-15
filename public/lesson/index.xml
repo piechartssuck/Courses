@@ -138,7 +138,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
+&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Introduction to the Tidyverse&lt;/li&gt;
 &lt;/ol&gt;
@@ -226,6 +226,69 @@
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;With my voice. Listen I’m no Morgan Freeman.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Without audio.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Write Open- and Closed-Ended Questions</title>
+      <link>/lesson/05-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/05-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The third exploration in R is a skill track consisting of multiple modules covering modeling and statistical analysis. These can be accessed at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Communicating with Data in the Tidyverse&lt;/li&gt;
+&lt;li&gt;Categorical Data in the Tidyverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Exploratory Data Analysis in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Modeling Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Dealing with Missing Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Why care about missing data?&lt;/li&gt;
+&lt;li&gt;Wrangling and tidying up missing values&lt;/li&gt;
+&lt;li&gt;Testing missing relationships&lt;/li&gt;
+&lt;li&gt;Connecting the dots (Imputation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inference for Categorical Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference for a single parameter&lt;/li&gt;
+&lt;li&gt;Proportions: testing and power&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: independence&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: goodness of fit&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>

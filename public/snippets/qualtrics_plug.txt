@@ -1,0 +1,7 @@
+<script>
+var plug = document.getElementById('Plug');
+
+if (plug) {
+  plug.parentNode.removeChild(plug);
+} 
+</script>

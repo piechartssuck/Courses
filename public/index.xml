@@ -368,37 +368,100 @@ This week you have nothing to turn in but there is still something to do! First 
     </item>
     
     <item>
-      <title>The Fundamentals of Writing Questions</title>
-      <link>/example/04-example/</link>
+      <title>How to Write Open- and Closed-Ended Questions</title>
+      <link>/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/04-example/</guid>
+      <guid>/due/05-due/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#things-coming-up&#34;&gt;Things coming up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Qualtrics?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Participate in the &lt;strong&gt;EDP 619 Survey About Nothing&lt;/strong&gt;.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+A unique link was sent to your WVU MIX email at 8am on September 15.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Things coming up&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in a month.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/05-assignment/&#34;&gt;Survey Draft&lt;/a&gt; due in two weeks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Write Open- and Closed-Ended Questions</title>
+      <link>/example/05-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/05-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-structural-items&#34;&gt;Javascript in Qualtrics: Structural Items&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript-in-qualtrics-the-plug&#34;&gt;Javascript in Qualtrics: The Plug&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;javascript-in-qualtrics-structural-items&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Javascript in Qualtrics: Structural Items&lt;/h3&gt;
-&lt;p&gt;Posting soon!&lt;/p&gt;
-&lt;!--
-#### Synopsis
-Qualtrics does not provide a default option to expand or contract the width of the text box. In this walkthrough, you&#39;ll figure out how to use the Javascript engine to rule over Qualtrics! 
-
-#### What you need
-Here is a [snippet](/snippets/text_box_size.txt)^[Depending on your settings, you may have to right click to download the file.]. You&#39;ll need it for the walkthrough.
-
-#### Try it out
-Try using your initial surveys in [Qualtrics](wvu.qualtrics.com){target=&#34;_blank&#34;} to test out how to expand the open text boxes.
-
-#### Walkthrough
+&lt;div id=&#34;javascript-in-qualtrics-the-plug&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Javascript in Qualtrics: The Plug&lt;/h3&gt;
+&lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;Sometimes Qualtrics likes to include things you don’t want. In this walkthrough, you’ll figure out how to use the Javascript engine to get rid of some free advertisement that the service plugs into your survey.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;What you need&lt;/h4&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;/snippets/qualtrics_plug.txt.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Walkthrough&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;/iframe&gt;
 &lt;/center&gt;
-*Note: If the link for Atom is not working, please use this [link](https://atom.io/){target=&#34;_blank&#34;}.*
---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Depending on your settings, you may have to right click to download the file.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -545,7 +608,7 @@ After you have determined a sample and what you would like to assess, think abou
 
 &lt;div id=&#34;planning-selecting-a-population&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Planning: Selecting a Population&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, create, pilot, administer, and analyze a survey from start to finish. In this first step, consider an accessible population of people you would like to survey. While you’re not stuck with your choice, think hard about this because. Moving on to any stage beyond planning can mean hours if not days or weeks of work wasted.&lt;/p&gt;
+&lt;p&gt;In this class, you will &lt;strong&gt;plan&lt;/strong&gt;, create, pilot, administer, and analyze a survey from start to finish. In this first step, consider an accessible population of people you would like to survey. While you’re not stuck with your choice, think hard about this because. Moving on to any stage beyond planning can mean hours if not days or weeks of work wasted.&lt;/p&gt;
 &lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Submit&lt;/h4&gt;
 &lt;p&gt;A one to three page assessment&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of your target population including descriptions of the&lt;/p&gt;
@@ -670,7 +733,7 @@ After you have determined a sample and what you would like to assess, think abou
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
-&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. It will cover:&lt;/p&gt;
+&lt;p&gt;The second exploration in R is a skill track consisting of four modules and is due this Sunday. This covers using the tidyverse family in R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Introduction to the Tidyverse&lt;/li&gt;
 &lt;/ol&gt;
@@ -791,6 +854,118 @@ From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, We
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This is a mostly new publication and is copyright protected so you will have to login with your &lt;strong&gt;WVU MIX&lt;/strong&gt; account to access it.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Full disclosure: I serve on the American Evaluation Association Survey Workgroup that creates the annual survey outlined in the article. Additionally many of the authors on the paper are friends and colleagues and some were also in my doctoral cohort. Regardless, you will be able to see the breakdown of a mass survey administered to a large audience, some of which could inform your upcoming survey design and administration.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 5: How to Write Open- and Closed-Ended Questions</title>
+      <link>/assignment/05-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/05-assignment/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#construction-designing-a-survey-draft&#34;&gt;Construction: Designing a Survey Draft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;construction-designing-a-survey-draft&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Construction: Designing a Survey Draft&lt;/h3&gt;
+&lt;p&gt;In this class, you will plan, &lt;strong&gt;create&lt;/strong&gt;, pilot, administer, and analyze a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
+&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Submit&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; two Sundays from now. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note that You have two weeks to complete this task.&lt;/strong&gt;
+:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Write Open- and Closed-Ended Questions</title>
+      <link>/lesson/05-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/05-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The third exploration in R is a skill track consisting of multiple modules covering modeling and statistical analysis. These can be accessed at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Communicating with Data in the Tidyverse&lt;/li&gt;
+&lt;li&gt;Categorical Data in the Tidyverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Exploratory Data Analysis in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Modeling Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Dealing with Missing Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Why care about missing data?&lt;/li&gt;
+&lt;li&gt;Wrangling and tidying up missing values&lt;/li&gt;
+&lt;li&gt;Testing missing relationships&lt;/li&gt;
+&lt;li&gt;Connecting the dots (Imputation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inference for Categorical Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference for a single parameter&lt;/li&gt;
+&lt;li&gt;Proportions: testing and power&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: independence&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: goodness of fit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Write Open- and Closed-Ended Questions</title>
+      <link>/readings/05-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/05-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 5: How to Write Open- and Closed-Ended Questions&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2055,6 +2230,21 @@ You can check out more about what I do here:
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/04-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 20, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;How to Write Open- and Closed-Ended Questions&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/05-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/05-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/05-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/05-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/05-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

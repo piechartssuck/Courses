@@ -1,0 +1,56 @@
+---
+title: "How to Write Open- and Closed-Ended Questions"
+linktitle: "Week 5: How to Write Open- and Closed-Ended Questions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"Qualtrics?" = c(checked),
+
+Description = c("Participate in the **EDP 619 Survey About Nothing**."),
+
+Location = c("A unique link was sent to your WVU MIX email at 8am on September 15.")
+
+)
+```
+
+### What's Due?
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "20em")
+```
+
+### Things coming up
+
+- [Data Camp modules](/lesson/05-lesson/#data-camp-1) due in a month.
+- [Survey Draft](/assignment/05-assignment/) due in two weeks.
+
+
