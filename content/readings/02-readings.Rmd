@@ -17,8 +17,8 @@ output:
 ## Readings
 
 - The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
-- <i class="fas fa-book"></i> Chapter 3-4 in James McDavid, *Program Evaluation and Performance Measurement* 
-- <i class="fas fa-book"></i> [Chapter 2](https://www.thetaminusb.com/intro-measurement-r/introduction.html) in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+- <i class="fas fa-book fa-fw"></i> Chapter 3-4 in James McDavid, *Program Evaluation and Performance Measurement* 
+- <i class="fas fa-book fa-fw"></i> [Chapter 2](https://www.thetaminusb.com/intro-measurement-r/introduction.html) in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
 
 
 ### Questions to reflect on

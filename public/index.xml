@@ -3140,8 +3140,8 @@ mpg %&amp;gt;%
 &lt;h2&gt;Readings&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Questions to reflect on&lt;/h3&gt;
@@ -3178,7 +3178,7 @@ mpg %&amp;gt;%
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 5-6 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/applications.html&#34; target=&#34;_blank&#34;&gt;Chapters 3-5&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/applications.html&#34; target=&#34;_blank&#34;&gt;Chapters 3-5&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;I am not concerned whether you know a formula or not, rather I want you to understand the general idea so please take your time on Chapter 5!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3229,8 +3229,8 @@ mpg %&amp;gt;%
 &lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 8-9 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html&#34; target=&#34;_blank&#34;&gt;Chapters 6-7&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapters 8-9 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html&#34; target=&#34;_blank&#34;&gt;Chapters 6-7&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;Chapter 7 is somewhat dense and you are not expected to memorize formulas. Get the basic idea of what an IRT is and what it is used for and ask questions as needed!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3270,8 +3270,8 @@ mpg %&amp;gt;%
 &lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 10-12 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/dimensionality.html&#34; target=&#34;_blank&#34;&gt;Chapter 10&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapters 10-12 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/dimensionality.html&#34; target=&#34;_blank&#34;&gt;Chapter 10&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suggestions&#34; class=&#34;section level2&#34;&gt;
@@ -3286,6 +3286,104 @@ mpg %&amp;gt;%
 &lt;li&gt;What do the different types of factor analyses do and how could they inform specific parts of an questionnaire?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Professor</title>
+      <link>/professor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/professor/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-me&#34;&gt;This is me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-what-i-am&#34;&gt;This is what I am&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-where-i-come-from&#34;&gt;This is where I come from&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-what-i-research&#34;&gt;This is what I research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-how-you-can-contact-me&#34;&gt;This is how you can contact me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#this-is-sparta&#34;&gt;This is Sparta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;this-is-me&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is me&lt;/h3&gt;
+&lt;center&gt;
+&lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/me.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-is-what-i-am&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is what I am&lt;/h3&gt;
+&lt;p&gt;Professor of &lt;a href=&#34;https://lshd.wvu.edu/academics&#34; target=&#34;_blank&#34;&gt;Educational Psychology&lt;/a&gt; and head of the &lt;a href=&#34;https://lshd.wvu.edu/program-evaluation-certificate&#34; target=&#34;_blank&#34;&gt;Program Evaluation Certificate at WVU&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-is-where-i-come-from&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is where I come from&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD in Program Evaluation from Western Michigan University.&lt;/li&gt;
+&lt;li&gt;MS in Mathematical Sciences from Michigan Technological University.&lt;/li&gt;
+&lt;li&gt;BS in Mathematics from West Virginia Wesleyan College.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-is-what-i-research&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is what I research&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Transference of Foundational Evaluation Concepts&lt;/li&gt;
+&lt;li&gt;Modeling using Machine Learning&lt;/li&gt;
+&lt;li&gt;Applications of Predictive Hierarchical Social Networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;which are just fancy ways of saying&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How people learn basic concepts in evaluation&lt;/li&gt;
+&lt;li&gt;Programming a type of artificial intelligence and then training it to do some of my work for me&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Figuring out how things are related to each other and then making judgments&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+You can check out more about what I do here:
+&lt;br&gt;
+&lt;p&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #A6CE39;&#34;&gt;
+&lt;i class=&#34;fab fa-orcid fa-fw&#34;&gt;&lt;/i&gt; 
+&lt;/span&gt;
+&lt;a href=&#34;https://orcid.org/0000-0002-7085-8964&#34; target=&#34;_blank&#34;&gt;ORCID&lt;/a&gt;
+&lt;br&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #24292e;&#34;&gt;
+&lt;i class=&#34;fab fa-github fa-fw&#34;&gt;&lt;/i&gt; 
+&lt;/span&gt;
+&lt;a href=&#34;https://github.com/piechartssuck/&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;
+&lt;br&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #60D1AE;&#34;&gt;
+&lt;i class=&#34;fab fa-researchgate fa-fw&#34;&gt;&lt;/i&gt; 
+&lt;/span&gt;
+&lt;a href=&#34;https://www.researchgate.net/profile/Abhik_Roy2&#34; target=&#34;_blank&#34;&gt;ResearchGate&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-is-how-you-can-contact-me&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is how you can contact me&lt;/h3&gt;
+&lt;p&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #004B87;&#34;&gt;
+&lt;i class=&#34;far fa-envelope fa-fw&#34;&gt;&lt;/i&gt;&lt;/i&gt; 
+&lt;/span&gt;
+&lt;a href=&#34;mailto:%20Abhik.Roy@mail.wvu.edu&#34;&gt;Abhik.Roy&lt;/a&gt;
+&lt;br&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #004B87;&#34;&gt;
+&lt;i class=&#34;fab fa-twitter fa-fw&#34;&gt;&lt;/i&gt;&lt;/i&gt;&lt;/i&gt; 
+&lt;/span&gt;
+&lt;a href=&#34;https://twitter.com/DrTheoreticalPE&#34; target=&#34;_blank&#34;&gt;@DrTheoreticalPE&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;this-is-sparta&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;This is Sparta&lt;/h3&gt;
+&lt;center&gt;
+&lt;img src=&#34;/img/sparta.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;No its not Skynet. I said it in the syllabus and I’ll say it here: computers are stupid.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Which is a very evaluation like thing to do!&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

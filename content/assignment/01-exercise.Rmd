@@ -14,10 +14,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r write-data, include=FALSE}
-readr::write_csv(ggplot2::mpg, here::here("static", "data", "cars.csv"))
-```
-
 ## Task 1: There is no Task 1
 
 Please take this time to go through the first week of material on Data Camp. It is important that you understand the basics so for that reason, no weekly tasks are assigned.

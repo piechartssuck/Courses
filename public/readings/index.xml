@@ -67,8 +67,8 @@
 &lt;h2&gt;Readings&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Questions to reflect on&lt;/h3&gt;
@@ -105,7 +105,7 @@
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 5-6 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/applications.html&#34; target=&#34;_blank&#34;&gt;Chapters 3-5&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/applications.html&#34; target=&#34;_blank&#34;&gt;Chapters 3-5&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;I am not concerned whether you know a formula or not, rather I want you to understand the general idea so please take your time on Chapter 5!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -156,8 +156,8 @@
 &lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 8-9 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html&#34; target=&#34;_blank&#34;&gt;Chapters 6-7&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapters 8-9 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html&#34; target=&#34;_blank&#34;&gt;Chapters 6-7&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;Chapter 7 is somewhat dense and you are not expected to memorize formulas. Get the basic idea of what an IRT is and what it is used for and ask questions as needed!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -197,8 +197,8 @@
 &lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 10-12 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/dimensionality.html&#34; target=&#34;_blank&#34;&gt;Chapter 10&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapters 10-12 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/dimensionality.html&#34; target=&#34;_blank&#34;&gt;Chapter 10&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;suggestions&#34; class=&#34;section level2&#34;&gt;

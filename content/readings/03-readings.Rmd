@@ -17,7 +17,7 @@ output:
 
 - <i class="fas fa-book"></i> Chapters 5-6 in James McDavid, *Program Evaluation and Performance Measurement* 
 
-- <i class="fas fa-book"></i> [Chapters 3-5](https://www.thetaminusb.com/intro-measurement-r/applications.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+- <i class="fas fa-book fa-fw"></i> [Chapters 3-5](https://www.thetaminusb.com/intro-measurement-r/applications.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
 
 Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, **I am not concerned whether you know a formula or not, rather I want you to understand the general idea so please take your time on Chapter 5!**
 

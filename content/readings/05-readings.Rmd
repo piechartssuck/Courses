@@ -15,9 +15,9 @@ output:
 
 ## Read
 
-- <i class="fas fa-book"></i> Chapters 10-12 in James McDavid, *Program Evaluation and Performance Measurement*. 
+- <i class="fas fa-book fa-fw"></i> Chapters 10-12 in James McDavid, *Program Evaluation and Performance Measurement*. 
 
-- <i class="fas fa-book"></i> [Chapter 10](https://www.thetaminusb.com/intro-measurement-r/dimensionality.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R*. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.
+- <i class="fas fa-book fa-fw"></i> [Chapter 10](https://www.thetaminusb.com/intro-measurement-r/dimensionality.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R*. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.
 
 ## Suggestions
 

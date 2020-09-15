@@ -1,0 +1,85 @@
+---
+title: Professor
+slug: professor
+citeproc: true
+output:
+  blogdown::html_page:
+    toc: true
+    fig_caption: false
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(tibble)
+library(pander)
+```
+
+### This is me
+
+<center>
+[![Me](/img/me.png){width=50%}](https://lshd.wvu.edu/faculty-staff/roy){target="_blank"}
+</center>
+
+### This is what I am
+
+Professor of [Educational Psychology](https://lshd.wvu.edu/academics){target="_blank"} and head of the [Program Evaluation Certificate at WVU](https://lshd.wvu.edu/program-evaluation-certificate){target="_blank"}.
+
+### This is where I come from
+
+- PhD in Program Evaluation from Western Michigan University.
+- MS in Mathematical Sciences from Michigan Technological University.
+- BS in Mathematics from West Virginia Wesleyan College.
+
+### This is what I research
+
+- Transference of Foundational Evaluation Concepts
+- Modeling using Machine Learning
+- Applications of Predictive Hierarchical Social Networks
+
+which are just fancy ways of saying
+
+- How people learn basic concepts in evaluation
+- Programming a type of artificial intelligence and then training it to do some of my work for me^[No its not Skynet. I said it in the syllabus and I'll say it here: computers are stupid.]
+- Figuring out how things are related to each other and then making judgments^[Which is a very evaluation like thing to do!]  
+
+You can check out more about what I do here:
+<br>
+<p>
+<span style="font-size: 1.0em; color: #A6CE39;">
+<i class="fab fa-orcid fa-fw"></i>&nbsp;
+</span>
+[ORCID](https://orcid.org/0000-0002-7085-8964){target="_blank"}
+<br>
+<span style="font-size: 1.0em; color: #24292e;">
+<i class="fab fa-github fa-fw"></i>&nbsp;
+</span>
+[GitHub](https://github.com/piechartssuck/){target="_blank"}
+<br>
+<span style="font-size: 1.0em; color: #60D1AE;">
+<i class="fab fa-researchgate fa-fw"></i>&nbsp;
+</span>
+[ResearchGate](https://www.researchgate.net/profile/Abhik_Roy2){target="_blank"}
+</p>
+
+### This is how you can contact me
+
+<p>
+<span style="font-size: 1.0em; color: #004B87;">
+<i class="far fa-envelope fa-fw"></i></i>&nbsp;
+</span>
+[Abhik.Roy](mailto: Abhik.Roy@mail.wvu.edu)
+<br>
+<span style="font-size: 1.0em; color: #004B87;">
+<i class="fab fa-twitter fa-fw"></i></i></i>&nbsp;
+</span>
+[\@DrTheoreticalPE](https://twitter.com/DrTheoreticalPE){target="_blank"}
+</p>
+
+### This is Sparta
+
+<center>
+![Me](/img/sparta.png){width=50%}
+</center>
+
+
+

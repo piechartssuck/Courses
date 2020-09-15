@@ -15,9 +15,9 @@ output:
 
 ## Read
 
-- <i class="fas fa-book"></i> Chapters 8-9 in James McDavid, *Program Evaluation and Performance Measurement*. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.
+- <i class="fas fa-book fa-fw"></i> Chapters 8-9 in James McDavid, *Program Evaluation and Performance Measurement*. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.
 
-- <i class="fas fa-book"></i> [Chapters 6-7](https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+- <i class="fas fa-book fa-fw"></i> [Chapters 6-7](https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
 
 Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, **Chapter 7 is somewhat dense and you are not expected to memorize formulas. Get the basic idea of what an IRT is and what it is used for and ask questions as needed!**
 
