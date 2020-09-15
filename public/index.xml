@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Course materials | EDP 611</title>
+    <title>Course materials | Measurement/Evaluation in Educational Psychology</title>
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
@@ -3086,9 +3086,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>Readings</title>
-      <link>/content/01-content/</link>
+      <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/content/01-content/</guid>
+      <guid>/readings/01-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3122,9 +3122,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>More Readings</title>
-      <link>/content/02-content/</link>
+      <link>/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/content/02-content/</guid>
+      <guid>/readings/02-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3159,9 +3159,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>Even More Readings</title>
-      <link>/content/03-content/</link>
+      <link>/readings/03-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/content/03-content/</guid>
+      <guid>/readings/03-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3211,9 +3211,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>More Readings? Seriously?</title>
-      <link>/content/04-content/</link>
+      <link>/readings/04-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/content/04-content/</guid>
+      <guid>/readings/04-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3252,9 +3252,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>Less Readings? Seriously?</title>
-      <link>/content/05-content/</link>
+      <link>/readings/05-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/content/05-content/</guid>
+      <guid>/readings/05-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3297,26 +3297,28 @@ mpg %&amp;gt;%
       <description>
 
 
-&lt;p&gt;Here is your road map for the next six weeks!&lt;/p&gt;
-&lt;p&gt;Every class session has four important sections. You should read about the details for each using the main menu at the top of this webpage.&lt;/p&gt;
+&lt;p&gt;Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/content/&#34;&gt;&lt;strong&gt;Content&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings, slides, and recorded lectures for the topic. Read these first each day.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains an interactive lesson that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the Situations and Final Project. &lt;strong&gt;Assignments are due by 11:59 PM on the day they’re listed.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Sunday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::: note &lt;br/&gt;
 &lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
 &lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt;
-&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;
-&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;
-&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt;&lt;/i&gt;
-&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;
+&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
+&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp, and use the potential example(s) to help you with the assignment(s).
+&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, complete data camp with other possible items, and then use the example (if given) along with the assignment to help you with what is due.
 &lt;br /&gt;
 :::&lt;/p&gt;
 &lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
@@ -3325,75 +3327,96 @@ mpg %&amp;gt;%
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;&lt;span class=&#34;fake-header-table&#34;&gt;Concentration&lt;/span&gt;&lt;/td&gt;
 
-            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Content&lt;/td&gt;
+            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Readings&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Lesson&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Example&lt;/td&gt;
             &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Assignment&lt;/td&gt;
+            &lt;td style=&#34;width:8%;text-align:center&#34; class=&#34;mid-table-header&#34;&gt;Due&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 5&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 5, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;An Introduction or Review of Evaluation&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/content/01-content/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/01-lesson/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/01-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/01-exercise/&#34;&gt;
-                    &lt;i class=&#34;fas fa-pencil-ruler fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/01-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 12&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 12, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Neverending Designs, Measures, and Methods&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/content/02-content/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/02-lesson/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/02-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/02-exercise/&#34;&gt;
-                    &lt;i class=&#34;fas fa-pencil-ruler fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/02-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 19&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 19, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Truthiness, Damned Truthiness, and Statistics&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/content/03-content/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/03-lesson/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/03-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/03-exercise/&#34;&gt;
-                    &lt;i class=&#34;fas fa-pencil-ruler fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/03-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 26&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 26, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Everything is Out to Get Me&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/content/04-content/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/04-lesson/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/04-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/04-exercise/&#34;&gt;
-                    &lt;i class=&#34;fas fa-pencil-ruler fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/04-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 2&lt;/td&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 2, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Wait is this Algebra?&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a
-                    href=&#34;/content/05-content/&#34;&gt;
-                    &lt;i class=&#34;fas fa-book-reader fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/05-lesson/&#34;&gt;
-                    &lt;i class=&#34;fas fa-chalkboard-teacher fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/05-example/&#34;&gt;
-                    &lt;i class=&#34;fas fa-laptop-code fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/05-exercise/&#34;&gt;
-                    &lt;i class=&#34;fas fa-pencil-ruler fa-lg&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/05-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;
@@ -3419,16 +3442,17 @@ mpg %&amp;gt;%
 &lt;li&gt;&lt;a href=&#34;#what-if-i-find-a-mistake&#34;&gt;What if I find a mistake?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#course-materials&#34;&gt;Course materials&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#books-articles-and-other-materials&#34;&gt;Books, articles, and other materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#r-and-rstudio&#34;&gt;R and RStudio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#online-help&#34;&gt;Online help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#texts&#34;&gt;Texts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#note-online-help&#34;&gt;Note: Online help&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and grades&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#your-hours&#34;&gt;Your hours&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#class-conduct-and-expectations&#34;&gt;Class conduct and expectations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#learning-during-a-pandemic&#34;&gt;Learning during a pandemic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learning-and-knowledge-during-a-pandemic&#34;&gt;Learning and knowledge during a pandemic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#course-policies&#34;&gt;Course policies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#course-policies&#34;&gt;Course policies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#covid-19-statement&#34;&gt;COVID-19 Statement&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#psychological-and-psychiatric-services&#34;&gt;Psychological and Psychiatric Services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#care-team&#34;&gt;CARE Team&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#laurens-promise&#34;&gt;Lauren’s Promise&lt;/a&gt;&lt;/li&gt;
@@ -3451,11 +3475,11 @@ mpg %&amp;gt;%
         &lt;h3&gt;Instructor&lt;/h3&gt;
 
         &lt;ul class=&#34;icon-list&#34;&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-user&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Abhik Roy&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; Allen Hall 504O&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-envelope&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:Abhik.Roy@mail.wvu.edu&#34;&gt; Abhik.Roy@mail.wvu.edu&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fab fa-twitter&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/DrTheoreticalPE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; @DrTheoreticalPE&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-calendar-check&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://calendly.com/nopiecharts/60min&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Schedule an appointment&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-user fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Abhik Roy&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-university fa-fw&#34;&gt;&lt;/i&gt; Allen Hall 504O&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-envelope fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:Abhik.Roy@mail.wvu.edu&#34;&gt; Abhik.Roy@mail.wvu.edu&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fab fa-twitter fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/DrTheoreticalPE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; @DrTheoreticalPE&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-calendar-check fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://calendly.com/nopiecharts/short30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Schedule an appointment&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
@@ -3463,18 +3487,18 @@ mpg %&amp;gt;%
         &lt;h3&gt;Course details&lt;/h3&gt;
 
         &lt;ul class=&#34;icon-list&#34;&gt;
-            &lt;li&gt;&lt;i class=&#34;far fa-calendar&#34;&gt;&lt;/i&gt; Forever (for the next six weeks)&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;far fa-calendar-alt&#34;&gt;&lt;/i&gt; Jun 29–Aug 7, 2020&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;far fa-clock&#34;&gt;&lt;/i&gt; You pick!&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-university&#34;&gt;&lt;/i&gt; Online&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fab fa-slack&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://2020edp611.slack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slack&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;far fa-calendar fa-fw&#34;&gt;&lt;/i&gt; Forever (for the next six weeks)&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;far fa-calendar-alt fa-fw&#34;&gt;&lt;/i&gt; Jun 29–Aug 7, 2020&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;far fa-clock fa-fw&#34;&gt;&lt;/i&gt; You pick!&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fas fa-university fa-fw&#34;&gt;&lt;/i&gt; Online&lt;/li&gt;
+            &lt;li&gt;&lt;i class=&#34;fab fa-slack fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://2020edp611.slack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slack&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
     &lt;div class=&#34;col-md-4 contact-policy&#34;&gt;
         &lt;h3&gt;Contacting me&lt;/h3&gt;
 
-        &lt;p&gt;E-mail and Slack are the best ways to get in contact with me. Response times are typically within in 48 and 24 hours, respectively. Please remember that life is somewhat chaotic at this time!&lt;/p&gt;
+        &lt;p&gt;Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3509,9 +3533,9 @@ mpg %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;course-materials&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course materials&lt;/h2&gt;
-&lt;p&gt;There are three texts and two software packages necessary for this course.&lt;/p&gt;
-&lt;div id=&#34;books-articles-and-other-materials&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Books, articles, and other materials&lt;/h3&gt;
+&lt;p&gt;There are two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.&lt;/p&gt;
+&lt;div id=&#34;texts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Texts&lt;/h3&gt;
 &lt;p&gt;We’ll rely on the texts below:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;McDavid, J. C., Huse, I., &amp;amp; Hawthorn, L. R. L. (2019). &lt;em&gt;Program evaluation and performance measurement an introduction to practice&lt;/em&gt; (3rd ed.). SAGE.&lt;/p&gt;&lt;/li&gt;
@@ -3521,22 +3545,38 @@ mpg %&amp;gt;%
 &lt;p&gt;There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.&lt;/p&gt;
 &lt;p&gt;Subscribing to the &lt;a href=&#34;https://rweekly.org/&#34;&gt;R Weekly newsletter&lt;/a&gt; provides many helpful tutorials about how to do R. This certainly is not a requirement.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;r-and-rstudio&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;R and RStudio&lt;/h3&gt;
-&lt;p&gt;You will do all of your analysis with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. &lt;strong&gt;Think of R as an engine and RStudio as a car dashboard&lt;/strong&gt;—R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that&lt;/p&gt;
+&lt;div id=&#34;software&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Software&lt;/h3&gt;
+&lt;div id=&#34;r-and-rstudio&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;R and RStudio&lt;/h4&gt;
+&lt;p&gt;You will do all of your analysis with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. &lt;strong&gt;Think of R as an engine and RStudio as a car dashboard&lt;/strong&gt; — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that&lt;/p&gt;
+&lt;div class=&#34;text-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;you do not need to have any programming experience to use R&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now. We will have a shared class work space in RStudio.cloud that will let you quickly copy templates for examples, exercises, and mini projects.&lt;/p&gt;
-&lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you’ll probably want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud. This isn’t 100% necessary, but it’s helpful.&lt;/p&gt;
-&lt;p&gt;You can &lt;a href=&#34;/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;online-help&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Online help&lt;/h3&gt;
-&lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and little errors in your commands can cause hours of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
-&lt;p&gt;Fortunately there are many online resources to help. Two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration.&lt;/p&gt;
-&lt;p&gt;If you use Twitter, post R-related questions and content with &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34;&gt;#rstats&lt;/a&gt;. The community there is exceptionally generous and helpful.&lt;/p&gt;
-&lt;p&gt;Searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter.&lt;/p&gt;
-&lt;p&gt;You can email me with questions about content or R (after giving it an effort of course). Please include the subject header &lt;strong&gt;EDP 611 “the title of your email”&lt;/strong&gt; where the title of your email is given without the quotes. I have a mail filter that will automatically bring your email to a top priority status. In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.&lt;/p&gt;
-&lt;p&gt;Finally, we have a class chatroom at &lt;a href=&#34;2020edp611.slack.com&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;
+&lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34; target=&#34;_blank&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.&lt;/p&gt;
+&lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you’ll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;note-online-help&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Note: Online help&lt;/h3&gt;
+&lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
+&lt;p&gt;But there are multiple resources online to help.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First you will have access to &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R’s initial steep learning curve won’t feel like an uphill battle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Second two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a &lt;a href=&#34;https://stackoverflow.com/help/minimal-reproducible-example&#34; target=&#34;_blank&#34;&gt;minimally reproducible example&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Third using Twitter you can post R-related questions and content with &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;. The community there is exceptionally generous and helpful.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fifth we have a class chatroom which may be accessed via &lt;a href=&#34;2020edp611.slack.com&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header &lt;strong&gt;EDP 613 “the title of your email”&lt;/strong&gt; where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).&lt;/li&gt;
+&lt;li&gt;A copy of your data set (if applicable).&lt;/li&gt;
+&lt;li&gt;A copy of your script or Rmarkdown document with comments throughout so I know what you’ve tried historically leading up to the issue.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have a mail filter that will automatically bring your email to a top priority status.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you’re more likely to remember things you’ve figured out rather than those you’ve been shown or told.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;assignments-and-grades&#34; class=&#34;section level2&#34;&gt;
@@ -3590,7 +3630,7 @@ mpg %&amp;gt;%
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;div class=&#34;centered-table&#34;&gt;
 
 
@@ -3633,77 +3673,96 @@ mpg %&amp;gt;%
 &lt;div id=&#34;your-hours&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Your hours&lt;/h3&gt;
 &lt;p&gt;Please watch this video:&lt;/p&gt;
-&lt;iframe src=&#34;https://player.vimeo.com/video/270014784&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; fullscreen&#34; allowfullscreen style=&#34;display: block; margin: 0 auto 1rem;&#34;&gt;
+&lt;iframe src=&#34;https://player.vimeo.com/video/270014784&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; allow=&#34;fullscreen&#34; allowfullscreen style=&#34;display: block; margin: 0 auto 1rem;&#34;&gt;
 &lt;/iframe&gt;
-&lt;p&gt;Your hours (formerly known as office hours) are set times dedicated to you the student!&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;). This means that I will be &lt;del&gt;in my office&lt;/del&gt; at home waiting for you to &lt;del&gt;come by&lt;/del&gt; talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.&lt;/p&gt;
+&lt;p&gt;Your hours (formerly known as office hours) are set times dedicated to you the student!&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;). This means that I will be &lt;del&gt;in my office&lt;/del&gt; at home waiting for you to &lt;del&gt;come by&lt;/del&gt; talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.&lt;/p&gt;
 &lt;p&gt;Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through either e-mail or Slack.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-conduct-and-expectations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class conduct and expectations&lt;/h3&gt;
 &lt;p&gt;Here are the rules, expectations, and policies that I came up or stole from other professors:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Late work&lt;/strong&gt;: Barring the final project, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Participation&lt;/strong&gt;: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rubrics&lt;/strong&gt;: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not provide nor use a such an item to guide or evaluate your submission due to four primary concerns:&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Late work&lt;/strong&gt;: Barring the final project, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Participation&lt;/strong&gt;: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rubrics&lt;/strong&gt;: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;When writing a thesis, dissertation, journal article, report, etc., there is (typically) no such document as a rubric.&lt;/li&gt;
+&lt;li&gt;When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric.&lt;/li&gt;
 &lt;li&gt;If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).&lt;/li&gt;
 &lt;li&gt;Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.&lt;/li&gt;
-&lt;li&gt;Unless you are in a very specific area, the real world does not use rubrics!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Technology use&lt;/strong&gt;: Use phones, computers, etc. responsibly. You’re all adults.&lt;/li&gt;
+&lt;li&gt;Unless you are in a very specific area, the real world does not use rubrics!
+&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technology use&lt;/strong&gt;: Use phones, computers, etc. responsibly. You’re all adults…well I am most of the time.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;learning-during-a-pandemic&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Learning during a pandemic&lt;/h3&gt;
-&lt;p&gt;There’s really no other way to say it - life sucks right now!&lt;/p&gt;
-&lt;p&gt;You probably know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even died. Additionally your work responsibilities have most likly shifted, coming iwth it added stress and worries. Please take note of the following:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;I am fully committed to making sure that you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you jay need to concentarte on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that &lt;em&gt;you keep an open line of communication!&lt;/em&gt; Furthermore, if you feel like you are behind or not understanding everything, &lt;strong&gt;do not suffer in silence!&lt;/strong&gt; Please talk to me!&lt;/p&gt;
-&lt;p&gt;I selfishly want you to learn lots of things from this class (measurement! R! creating visualizations!, proving that &lt;span class=&#34;math inline&#34;&gt;\(0.99999\ldots = 1\)&lt;/span&gt; - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis.&lt;/p&gt;
+&lt;div id=&#34;learning-and-knowledge-during-a-pandemic&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Learning and knowledge during a pandemic&lt;/h3&gt;
+&lt;p&gt;Ok I’m going to get a bit philosophical but it’s not too deep and there’s a point so please bear with me. Let’s first start with something at the top of a syllabus that many people skip - the course objectives. Well now that you’re no doubt excited excited, read the rest this rant to figure out if you have learned something or you actually know it.&lt;/p&gt;
+&lt;p&gt;When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have &lt;em&gt;learned&lt;/em&gt;. But learning isn’t knowledge.&lt;/p&gt;
+&lt;p&gt;To save you from a long philosophical narrative on epistemology, in a nutshell we humans are not really good at evaluating a person’s knowledge within a short timeframe…oh say like a semester. With that said you probably spend a lot of time with you, so you should be pretty good at knowing if you know something but you may not know how to figure out what you actually know. If your head doesn’t hurt and you really want a good indicator that something you learned has become knowledge, ask this simple question that is often difficult to answer:&lt;/p&gt;
+&lt;div class=&#34;text-center&#34;&gt;
+&lt;p&gt;Can I explain &lt;em&gt;whatever&lt;/em&gt; using basic everyday language so that a fourth grader can understand it?&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;So the fourth grader isn’t that important as much as self assessing if you can explain a concept to someone who lacks any basic understanding using every day language. This is basically what good teachers can do, in that they are able to take a high level concept that may be inaccessible to most of us and bring it down to a level we can all generally understand.&lt;/p&gt;
+&lt;p&gt;Many, if not all of you will fall somewhere in the spectrum of somewhat to mostly. If you’re sitting on the absolute Yes end, then consider a career in survey research because it can be very fulfilling and lucrative. But if you find yourself on the absolute No end, then please contact me and let’s try to get you where you need to be. There are a lot of moving parts in this course and not being able to translate some of what you’ve learned into knowledge can have a cascading effect. And by now in your life, you should have a pretty good idea when anyone uses the term cascading, its rarely a good thing.&lt;/p&gt;
+&lt;p&gt;On top of what’s noted above and I’m not sure how to articulate this any better - life just sucks right now in general! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you’re probably more stressed than usual. So here is my promise to you:&lt;/p&gt;
+&lt;div class=&#34;text-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;If you keep an open line, show initiative, and let me know ahead of time if something is going not according to plan&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, I will do everything I can to help you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;So what does that mean? Well I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, &lt;strong&gt;please please please do not stay silent!&lt;/strong&gt; As I said earlier, drop me a line!&lt;/p&gt;
+&lt;p&gt;I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, no parallel lines exist in 3D - ok maybe not that last one but its true and really easy to show. If you want to know, ask!). There is a lot to do in this course and some of the content can be frustrating, so make sure to take breaks, go relax, even curse my name if you have to - do whatever you need to stay healthy, balanced, and grounded during this crisis.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;course-policies&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course policies&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Its pretty simple: Be nice. Be honest. Don’t cheat. Be a good human.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We will also follow &lt;a href=&#34;https://studentconduct.wvu.edu/campus-student-code&#34;&gt;WVU’s Code of Conduct&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This syllabus reflects a plan for the summer. Deviations may become necessary as the course progresses. Note that &lt;strong&gt;I reserve the right to alter or amend this syllabus.&lt;/strong&gt; I will send notifications if course tasks are affected.&lt;/p&gt;
+&lt;div class=&#34;text-center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Its pretty simple: Be nice. Be honest. Don’t cheat. Stay in touch. Be a good human.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We will also follow &lt;a href=&#34;https://studentconduct.wvu.edu/campus-student-code&#34; target=&#34;_blank&#34;&gt;WVU’s Code of Conduct&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that &lt;strong&gt;I reserve the right to alter or amend this syllabus&lt;/strong&gt; and will send notifications if course tasks are affected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;covid-19-statement&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;COVID-19 Statement&lt;/h2&gt;
+&lt;p&gt;WVU is committed to maintaining a safe learning environment for all students, faculty, and staff. Should campus operations change because of health concerns related to the COVID-19 pandemic, it is possible that this course will move to a fully online delivery format. If that occurs, students will be advised of technical and/or equipment requirements, including remote proctoring software.&lt;/p&gt;
+&lt;p&gt;In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.&lt;/p&gt;
+&lt;p&gt;If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.&lt;/p&gt;
 &lt;div id=&#34;psychological-and-psychiatric-services&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Psychological and Psychiatric Services&lt;/h3&gt;
-&lt;p&gt;Life at WVU can be complicated and challenging, especially during a pandemic! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. &lt;a href=&#34;https://carruth.wvu.edu/home&#34;&gt;Psychological and Psychiatric Services&lt;/a&gt; provides free, &lt;em&gt;confidential&lt;/em&gt; support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.&lt;/p&gt;
+&lt;p&gt;Life at WVU can be complicated and challenging, especially during a pandemic! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. &lt;a href=&#34;https://carruth.wvu.edu/home&#34; target=&#34;_blank&#34;&gt;Psychological and Psychiatric Services&lt;/a&gt; provides free, &lt;em&gt;confidential&lt;/em&gt; support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;care-team&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;CARE Team&lt;/h3&gt;
-&lt;p&gt;If you or anyone you know may be at-risk such as those listed &lt;a href=&#34;https://careteam.wvu.edu/referrals&#34;&gt;here&lt;/a&gt;, please make a CARE referral. You may do so directly at the main &lt;a href=&#34;https://careteam.wvu.edu/home&#34;&gt;WVU CARE TEAM&lt;/a&gt; site.&lt;/p&gt;
+&lt;p&gt;If you or anyone you know may be at-risk such as those listed &lt;a href=&#34;https://careteam.wvu.edu/referrals&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;, please make a CARE referral. You may do so directly at the main &lt;a href=&#34;https://careteam.wvu.edu/home&#34; target=&#34;_blank&#34;&gt;WVU CARE TEAM&lt;/a&gt; site.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;laurens-promise&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Lauren’s Promise&lt;/h3&gt;
+&lt;div class=&#34;text-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;I will listen and believe you if someone is threatening you.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Lauren McCluskey, a 21-year-old honors student athlete, &lt;a href=&#34;https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html&#34;&gt;was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus&lt;/a&gt;. We must all take action to ensure that this never happens again.&lt;/p&gt;
-&lt;p&gt;If you are in immediate danger, call 911 or the Campus Police at 304-293-3136.&lt;/p&gt;
-&lt;p&gt;If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private &lt;a href=&#34;https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options&#34;&gt;Title IX On-Call Line&lt;/a&gt; (304-906-9930).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Lauren McCluskey, a 21-year-old honors student athlete, &lt;a href=&#34;https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html&#34; target=&#34;_blank&#34;&gt;was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus&lt;/a&gt;. We must all take action to ensure that this never happens again.&lt;/p&gt;
+&lt;p&gt;If you are in immediate danger, call 911 or the Campus Police at &lt;a href=&#34;callto:%20304-293-3136&#34;&gt;304-293-3136&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private &lt;a href=&#34;https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options&#34; target=&#34;_blank&#34;&gt;Title IX On-Call Line&lt;/a&gt; &lt;a href=&#34;callto:%20304-906-9930&#34;&gt;304-906-9930&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Any form of sexual harassment or violence will not be excused or tolerated at West Virginia University. WVU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;academic-integrity&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Academic Integrity&lt;/h3&gt;
-&lt;p&gt;The integrity of the classes offered by any academic institution solidifies the foundation of its mission and cannot be sacrificed to expediency, ignorance, or blatant fraud. Therefore, I will enforce rigorous standards of academic integrity in all aspects and assignments of this course. For the detailed policy of West Virginia University regarding the definitions of acts considered to fall under academic dishonesty and possible ensuing sanctions, please see the West Virginia University Academic Catalog at &lt;a href=&#34;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&#34;&gt;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&lt;/a&gt;. Should you have any questions about possibly improper research citations or references, or any other activity that may be interpreted as an attempt at academic dishonesty, please see me before the assignment is due to discuss the matter.&lt;/p&gt;
+&lt;p&gt;The integrity of the classes offered by any academic institution solidifies the foundation of its mission and cannot be sacrificed to expediency, ignorance, or blatant fraud. Therefore, I will enforce rigorous standards of academic integrity in all aspects and assignments of this course. For the detailed policy of West Virginia University regarding the definitions of acts considered to fall under academic dishonesty and possible ensuing sanctions, please see the West Virginia University Academic Catalog at &lt;a href=&#34;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&#34; target=&#34;_blank&#34;&gt;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&lt;/a&gt;. Should you have any questions about possibly improper research citations or references, or any other activity that may be interpreted as an attempt at academic dishonesty, please see me before the assignment is due to discuss the matter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;inclusivity-statement&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Inclusivity Statement&lt;/h3&gt;
 &lt;p&gt;The West Virginia University community is committed to creating and fostering a positive learning and working environment based on open communication, mutual respect, and inclusion.&lt;/p&gt;
-&lt;p&gt;If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services (293-6700).&lt;/p&gt;
-&lt;p&gt;For more information on West Virginia University’s Diversity, Equity, and Inclusion initiatives, please see &lt;a href=&#34;http://diversity.wvu.edu&#34;&gt;http://diversity.wvu.edu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services (&lt;a href=&#34;callto:%20304-293-3136&#34;&gt;304-293-6700&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;For more information on West Virginia University’s Diversity, Equity, and Inclusion initiatives, please see &lt;a href=&#34;http://diversity.wvu.edu&#34; target=&#34;_blank&#34;&gt;http://diversity.wvu.edu&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;incomplete-grades&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Incomplete Grades&lt;/h3&gt;
 &lt;p&gt;Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract. The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at [Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract. The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at
-&lt;a href=&#34;http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext&#34;&gt;http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext&#34; target=&#34;_blank&#34;&gt;http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sale-of-course-materials&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Sale of Course Materials&lt;/h3&gt;
-&lt;p&gt;All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code.&lt;/p&gt;
+&lt;p&gt;All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. &lt;strong&gt;Basically you can share what you like but don’t try to make a buck.&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;student-evaluation-of-instruction-sei&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Student Evaluation of Instruction (SEI)&lt;/h3&gt;
@@ -3730,7 +3789,7 @@ mpg %&amp;gt;%
 &lt;li&gt;Never spam your classmates.&lt;/li&gt;
 &lt;li&gt;If you quote someone’s previous post, only quote enough to make your point.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Be aware of the University’s Academic Integrity and Dishonesty Policy &lt;a href=&#34;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&#34;&gt;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&lt;/a&gt;. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at &lt;a href=&#34;http://campuslife.wvu.edu/r/download/180235&#34;&gt;http://campuslife.wvu.edu/r/download/1802350&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Be aware of the University’s Academic Integrity and Dishonesty Policy &lt;a href=&#34;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&#34; target=&#34;_blank&#34;&gt;http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext&lt;/a&gt;. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at &lt;a href=&#34;http://campuslife.wvu.edu/r/download/180235&#34; target=&#34;_blank&#34;&gt;http://campuslife.wvu.edu/r/download/1802350&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;response-time&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Response Time&lt;/h3&gt;
@@ -3746,18 +3805,22 @@ mpg %&amp;gt;%
 &lt;li&gt;Copy and paste&lt;/li&gt;
 &lt;li&gt;Download and install software&lt;/li&gt;
 &lt;li&gt;Consult software tutorials and other online sources as a method of learning software features&lt;/li&gt;
+&lt;li&gt;Use syntax when necessary&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;Notice that programming is not on here!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;technical-support&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Technical Support&lt;/h3&gt;
-&lt;p&gt;Technical support regarding your use of eCampus is available by contacting &lt;a href=&#34;callto:%20304-293-4444&#34;&gt;304-293-4444&lt;/a&gt; (telephone), &lt;a href=&#34;callto:%201-877-327-9260&#34;&gt;1-877-327-9260&lt;/a&gt; (toll free number), &lt;a href=&#34;mailto:%20itshelp@mail.wvu.edu&#34;&gt;itshelp@mail.wvu.edu&lt;/a&gt; (email), and/or &lt;a href=&#34;http://it.wvu.edu&#34;&gt;http://it.wvu.edu&lt;/a&gt; (website).&lt;/p&gt;
+&lt;p&gt;Technical support regarding your use of eCampus is available by contacting &lt;a href=&#34;callto:%20304-293-4444&#34;&gt;304-293-4444&lt;/a&gt; (telephone), &lt;a href=&#34;callto:%201-877-327-9260&#34;&gt;1-877-327-9260&lt;/a&gt; (toll free number), &lt;a href=&#34;mailto:%20itshelp@mail.wvu.edu&#34;&gt;itshelp@mail.wvu.edu&lt;/a&gt; (email), and/or &lt;a href=&#34;http://it.wvu.edu&#34; target=&#34;_blank&#34;&gt;http://it.wvu.edu&lt;/a&gt; (website).&lt;/p&gt;
 &lt;p&gt;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;There is some misunderstanding about what office hours actually are! &lt;a href=&#34;https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/&#34;&gt;For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I &lt;em&gt;should not&lt;/em&gt; be disturbed. This is not just a local issue!&lt;/a&gt;, which is the exact opposite of what they are for!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;There is some misunderstanding about what office hours actually are! &lt;a href=&#34;https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/&#34; target=&#34;_blank&#34;&gt;For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I &lt;em&gt;should not&lt;/em&gt; be disturbed. This is not just a local issue!&lt;/a&gt;, which is the exact opposite of what they are for!&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I realize sometimes this just isn’t possible so contact me as soon as you can.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

@@ -17,4 +17,5 @@ design:
 
 {{< courseinfo >}}
 
+
 {{< figure src="/img/steamplot.png" alt="Steam Plot" >}}
