@@ -1,0 +1,29 @@
+---
+title: "Pirates Cause Global Warming"
+linktitle: "4: Everything is Out to Get Me"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 4
+type: docs
+weight: 4
+editor_options: 
+  chunk_output_type: console
+---
+
+This week please complete both the **Survey and Measurement Development in R** and **Correlation and Regression in R** courses on [Data Camp](https://www.datacamp.com/){target="_blank"} which includes
+
+- Preparing to analyze survey data
+- Exploratory factor analysis & survey development
+- Confirmatory factor analysis & construct validation
+- Criterion validity & replication
+
+
+- Visualizing two variables
+- Correlation
+- Simple linear regression
+- Interpreting regression models
+- Model Fit

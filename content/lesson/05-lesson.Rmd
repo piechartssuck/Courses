@@ -1,0 +1,29 @@
+---
+title: ""
+linktitle: "5: Wait is this Algebra?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 5
+type: docs
+weight: 5
+editor_options: 
+  chunk_output_type: console
+---
+
+While we have head the same saying that correlation $\nRightarrow$ causation, it CAN imply it (with enough evidence!) Watch this visualization of the concept below.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HUti6vGctQM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+Now please complete the **Correlation and Regression in R** courses on [Data Camp](https://www.datacamp.com/){target="_blank"} which includes
+
+- Visualizing two variables
+- Correlation
+- Simple linear regression
+- Interpreting regression models
+- Model Fit

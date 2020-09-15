@@ -1,0 +1,724 @@
+## Get your libraries ----
+require(qualtRics)
+library(tidyverse)
+library(textclean)
+library(readr)
+library(magrittr)
+library(car)
+library(pwr)
+library(likert)
+library(ggrepel)
+library(ggthemes)
+library(viridis)
+library(likert)
+library(ggstance)
+library(Hmisc)
+library(showtext)
+font_add("Jost* Semi", "Jost-600-Semi.otf")
+font_add("Jost* Semi Italic", "Jost-600-SemiItalic.otf")
+font_add("Jost* Black", "Jost-900-Black.otf")
+font_add("Jost* Medium", "Jost-500-Medium.otf")
+font_add("Jost* Light", "Jost-300-Light.otf")
+font_add("Jost* Heavy", "Jost-800-Heavy.otf")
+showtext_auto()
+
+
+## Get your directory ----
+setwd("~/Documents/WVU/Research/WVCTSI/Surveys/WE/Analysis/Visualizations")
+
+
+## Get your wrapper ----
+wrapper <- function(x, ...) 
+{
+  paste(strwrap(x, ...), collapse = "\n")
+}
+
+
+
+## Get your order, levels, and colors ----
+desired.order = rev(c("Not Applicable", "Strongly Disagree", "Disagree", "Neither Agree nor Disagree", "Agree", "Strongly Agree"))
+numlevels <-length(desired.order)
+my_colors <- viridis_pal()(numlevels-1) %>%
+  enframe(name = NULL)%>%
+  mutate(value = sub("#FDE725FF", "#c8635dFF",value)) %>%
+  select(value) %>%
+  .[["value"]] %>%
+  append("#99aab5FF")
+
+# Define the entire survey ----
+full_survey <- raw_survey %>%
+  na_if("NOT_APPLICABLE") %>%
+  rename(`I feel a sense of connectedness to my colleagues`= Q1_7) %>%
+  rename(`My unique strengths are valued at work`= Q1_6) %>%
+  rename(`I feel more valued by the institution when I am well-funded`= Q1_8) %>%
+  rename(`I seek opportunities to work outside of my main area of expertise`= Q1_4) %>%
+  rename(`I have strong personal relationships at work that are a source of emotional support`= Q1_3) %>%
+  rename(`I am an important part of the University community`= Q2_7) %>%
+  rename(`My input is sought when institutional decisions are being made`= Q2_6) %>%
+  rename(`The environment at work is very competitive`= Q2_8) %>%
+  rename(`Mistakes are accepted as a critical part of learning in our work environment`= Q2_4) %>%
+  rename(`I feel self-confident at work`= Q2_3) %>%
+  rename(`I am reluctant to resubmit a grant that scored poorly upon initial review`= Q3_3) %>%
+  rename(`I “fit in” with my colleagues at work`= Q3_7) %>%
+  rename(`My work environment is very collegial`= Q3_6) %>%
+  rename(`I am very familiar with the expertise of colleagues outside of my department`= Q3_8) %>%
+  rename(`I feel embarrassed when my grants are not funded`= Q3_4) %>%
+  rename(`I feel pressure to secure extramural funding`= Q4_9) %>%
+  rename(`I have adequate time for development of new scientific directions`= Q4_7) %>%
+  rename(`I tend to “bounce back quickly” from grants that are not well received`= Q4_6) %>%
+  rename(`Innovation is rewarded in our current institutional structure`= Q4_8) %>%
+  rename(`It is encouraged to put new “high risk” ideas forward at work`= Q4_4) %>%
+  rename(`I am comfortable asking questions in diverse settings`= Q5_10) %>%
+  rename(`I am optimistic about my future role at the Institution`= Q5_11) %>%
+  rename(`Change in the workplace is a positive force`= Q5_12) %>%
+  rename(`My work-life integration is optimal`= Q5_13) %>%
+  rename(`I have adequate time for creative thought`= Q5_16) %>%
+  na_if("Other (please specify):") %>%
+  mutate(Q7_TEXT = na_if(Q7_TEXT, "NA")) %>%
+  mutate(Q7 = coalesce(Q7, Q7_TEXT)) %>%
+  mutate(Q7 = sapply(Q7, toString)) %>%
+  mutate(Q7 = str_replace(Q7,  "Tenured faculty member", "I am a tenured faculty member")) %>%
+  mutate(Q7 = str_replace(Q7,  "Tenured", "I am a tenured faculty member")) %>%
+  mutate(Q7 = str_replace(Q7,  "I am in a non-tenure track position.", "I am in a non-tenure track position")) %>%
+  mutate(Q7 = str_replace(Q7, "Clinical", "Clinical track")) %>%
+  mutate(Q7 = str_replace(Q7, "Clinical track track", "Clinical track")) %>%
+  mutate(Q7 = na_if(Q7, "NA")) %>%
+  rename(`Tenure Status`= Q7) %>%
+  drop_na(`Tenure Status`) %>%
+  filter(!`Tenure Status` == "Clinical track") %>%
+  filter(!`Tenure Status` == "FE-AP") %>%
+  filter(!`Tenure Status` == "Lab Technician") %>%
+  filter(!`Tenure Status` == "Physician Researcher") %>%
+  select(-c("Description Q2", "Description Q3", "Description Q4", "Description Q5", "Demographics", "Q6", "Q7_TEXT", "Q8")) %>%
+  mutate(`Tenure Status`= str_replace(`Tenure Status`, "I am a tenured faculty member", "Tenured")) %>%
+  mutate(`Tenure Status`= str_replace(`Tenure Status`, "I am in a non-tenure track position", "Non Tenure Track")) %>%
+  mutate(`Tenure Status`= str_replace(`Tenure Status`, "I am in a tenure track but have not yet received tenure", "Tenure Track")) %>%
+  mutate(`Tenure Status` = factor(`Tenure Status`, levels = c("Tenured", "Tenure Track", "Non Tenure Track"), ordered = TRUE))
+
+# Define subsets-----
+gold <-  full_survey %>%
+  select(`My work-life integration is optimal`, `I am comfortable asking questions in diverse settings`, `My unique strengths are valued at work`, `I seek opportunities to work outside of my main area of expertise`, `It is encouraged to put new “high risk” ideas forward at work`, `Innovation is rewarded in our current institutional structure`, `I have adequate time for development of new scientific directions`, `The environment at work is very competitive`, `My input is sought when institutional decisions are being made`, `Mistakes are accepted as a critical part of learning in our work environment`, `I am an important part of the University community`, `Tenure Status`) 
+
+teal <- full_survey %>%
+  select(`I have adequate time for creative thought`, `I am optimistic about my future role at the Institution`, `Change in the workplace is a positive force`, `I have strong personal relationships at work that are a source of emotional support`, `I feel a sense of connectedness to my colleagues`, `My work environment is very collegial`, `I am very familiar with the expertise of colleagues outside of my department`, `I “fit in” with my colleagues at work`, `I feel self-confident at work`, `Tenure Status`)
+
+yellow <- full_survey %>%
+  select(`I feel more valued by the institution when I am well-funded`, `I tend to “bounce back quickly” from grants that are not well received`, `I feel pressure to secure extramural funding`, `I feel embarrassed when my grants are not funded`,  `I am reluctant to resubmit a grant that scored poorly upon initial review`, `Tenure Status`)
+
+
+
+# Gather each data frame ----
+#~Gold----
+gold_standard <- gold %>%
+  rowid_to_column("SID") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup()
+
+write_csv(gold_standard, "Gold Group.csv")
+
+# Calculate overall ----
+gold_standard_range <- gold_standard %>%
+  select(Selection, `Agreement or Disagreement`, `Tenure Status`) %>%
+  mutate(`Agreement or Disagreement`= case_when(
+    `Agreement or Disagreement` == "Not Applicable" ~ 0,
+    `Agreement or Disagreement` == "Strongly Disagree" ~ 1,
+    `Agreement or Disagreement` == "Disagree" ~ 2,
+    `Agreement or Disagreement` == "Neither Agree nor Disagree" ~ 3,
+    `Agreement or Disagreement` == "Agree" ~ 4,
+    `Agreement or Disagreement` == "Strongly Agree" ~ 5
+  )) %>%
+  filter(`Tenure Status`== "Tenured" | `Tenure Status`== "Tenure Track")
+  
+gold_standard_range
+
+# var.test(gold_standard_range$`Agreement or Disagreement`, gold_standard_range$`Tenure Status`) 
+
+t.test(`Agreement or Disagreement` ~ `Tenure Status`, data = gold_standard_range, var.equal = FALSE)
+  
+gold.aov <-aov(`Agreement or Disagreement` ~ `Tenure Status`, data = gold_standard_range)
+  
+summary(gold.aov)
+## p > 0.63 NS
+
+# 1. Homogeneity of variances
+plot(gold.aov, 1)
+leveneTest(`Agreement or Disagreement` ~ `Tenure Status`, data = gold_standard_range)
+
+# 2. Normality
+plot(gold.aov, 2)
+# Extract the residuals
+gold_residuals <- residuals(object = gold.aov)
+# Run Shapiro-Wilk test
+shapiro.test(x = gold_residuals)
+# Kruskals
+kruskal.test(`Agreement or Disagreement` ~ `Tenure Status`, data = gold_standard_range)
+
+#~Teal----
+teal_standard <- teal %>%
+  rowid_to_column("SID") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup()
+
+# Calculate overall ----
+teal_standard_range <- teal_standard %>%
+  select(Selection, `Agreement or Disagreement`, `Tenure Status`) %>%
+  mutate(`Agreement or Disagreement`= case_when(
+    `Agreement or Disagreement` == "Not Applicable" ~ 0,
+    `Agreement or Disagreement` == "Strongly Disagree" ~ 1,
+    `Agreement or Disagreement` == "Disagree" ~ 2,
+    `Agreement or Disagreement` == "Neither Agree nor Disagree" ~ 3,
+    `Agreement or Disagreement` == "Agree" ~ 4,
+    `Agreement or Disagreement` == "Strongly Agree" ~ 5
+  )) %>%
+  filter(`Tenure Status`== "Tenured" | `Tenure Status`== "Tenure Track")
+
+teal_standard_range
+
+# var.test(gold_standard_range$`Agreement or Disagreement`, gold_standard_range$`Tenure Status`) 
+
+
+t.test(`Agreement or Disagreement` ~ `Tenure Status`, data = teal_standard_range, var.equal = FALSE)
+
+teal.aov <-aov(`Agreement or Disagreement` ~ `Tenure Status`, data = teal_standard_range)
+
+summary(teal.aov)
+## p > 0.92 NS
+
+yellow_standard <- yellow %>%
+  rowid_to_column("SID") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup()
+
+# Calculate overall ----
+yellow_standard_range <- yellow_standard %>%
+  select(Selection, `Agreement or Disagreement`, `Tenure Status`) %>%
+  mutate(`Agreement or Disagreement`= case_when(
+    `Agreement or Disagreement` == "Not Applicable" ~ 0,
+    `Agreement or Disagreement` == "Strongly Disagree" ~ 1,
+    `Agreement or Disagreement` == "Disagree" ~ 2,
+    `Agreement or Disagreement` == "Neither Agree nor Disagree" ~ 3,
+    `Agreement or Disagreement` == "Agree" ~ 4,
+    `Agreement or Disagreement` == "Strongly Agree" ~ 5
+  )) %>%
+  filter(`Tenure Status`== "Tenured" | `Tenure Status`== "Tenure Track")
+
+yellow_standard_range
+
+# var.test(gold_standard_range$`Agreement or Disagreement`, gold_standard_range$`Tenure Status`) 
+
+t.test(`Agreement or Disagreement` ~ `Tenure Status`, data = yellow_standard_range, var.equal = FALSE)=
+
+yellow.aov <-aov(`Agreement or Disagreement` ~ `Tenure Status`, data = yellow_standard_range)
+
+summary(yellow.aov)
+
+
+#~Allin aggregation
+all_standard_chunks <- rbind(gold_standard_range, teal_standard_range, yellow_standard_range)
+
+t.test(all_standard_chunks$`Agreement or Disagreement` ~ all_standard_chunks$`Tenure Status`, var.equal = FALSE)
+
+all.aov <-aov(`Agreement or Disagreement` ~ `Tenure Status`, data = all_standard_chunks)
+
+summary(all.aov)
+## p > 0.61 NS
+
+
+## Tenured v Tenure-track ----
+Role.order = c("Tenured", "Tenure track", "Non-tenure track", "Clinical track", "FE-AP", "Lab Technician", "Physician Researcher")
+
+tenured_or_tenuretrack_count <- Question7 %>%
+  na_if("Other (please specify):") %>%
+  mutate(Q7_all = coalesce(Q7, Q7_TEXT)) %>%
+  select(Q7_all) %>%
+  na.omit() %>%
+  as_tibble() %>%
+  mutate(Q7_all = sapply(Q7_all, toString)) %>%
+  mutate(Q7_all = str_replace(Q7_all,  "Tenured faculty member", "Tenured")) %>%
+  mutate(Q7_all = str_replace(Q7_all,  "I am a tenured faculty member", "Tenured")) %>%
+  mutate(Q7_all = str_replace(Q7_all,  "I am in a non-tenure track position.", "Non-tenure track")) %>%
+  mutate(Q7_all = str_replace(Q7_all, "Clinical", "Clinical track")) %>%
+  mutate(Q7_all = str_replace(Q7_all, "Clinical track track", "Clinical track")) %>%
+  mutate(Q7_all = str_replace(Q7_all, "I am in a tenure track but have not yet received tenure", "Tenure track")) %>%
+  mutate(Q7_all = na_if(Q7_all, "NA")) %>%
+  na.omit() %>%
+  arrange(Q7_all) %>%
+  rename(Role = Q7_all) %>%
+  select(Role) %>%
+  filter(Role == "Tenured" | Role == "Tenure track") %>%
+  group_by(Role) %>%
+  count(Role) %>%
+  ungroup() %>%
+  rename(`Frequency`= n) %>%
+  mutate(TotalCount = sum(Frequency)) %>% 
+  mutate(TotalPercent = Frequency/TotalCount) 
+
+  
+  summary(tenured_or_tenuretrack_count)
+ # mutate(`Role` = as.numeric(`Role`)) %>%
+  summarise(Average = mean(`Role`), `Standard Deviation` = sd(`Role`), Count =length(`Role`))
+  
+  count(Role) %>%
+  rename(`Frequency`= n) %>%
+  mutate(TotalCount = sum(Frequency)) %>% 
+  mutate(TotalPercent = Frequency/TotalCount) 
+
+# Define counts by status of tenure ----
+all_standard_chunks_character <- all_standard_chunks%>%
+  select(Selection, `Agreement or Disagreement`, `Tenure Status`) %>%
+  mutate(`Agreement or Disagreement`= case_when(
+    `Agreement or Disagreement` == 0 ~ "Not Applicable" ,
+    `Agreement or Disagreement` == 1 ~ "Strongly Disagree",
+    `Agreement or Disagreement` == 2 ~ "Disagree",
+    `Agreement or Disagreement` == 3 ~ "Neither Agree nor Disagree",
+    `Agreement or Disagreement` == 4 ~ "Agree",
+    `Agreement or Disagreement` == 5 ~ "Strongly Agree"
+  )) %>%
+  filter(`Tenure Status`== "Tenured" | `Tenure Status`== "Tenure Track") %>%
+  group_by(`Tenure Status`) %>%
+  count(`Agreement or Disagreement`) %>%
+  rename(`Frequency`= n) %>%
+  mutate(TotalCount = sum(Frequency)) %>% 
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup() %>% 
+  group_by(`Tenure Status`)
+  
+summary_stats_for_chunks <- all_standard_chunks_character %>%
+  summarise(Average = mean(`Frequency`), `Standard Deviation` = sd(`Frequency`), `Choice Count Check` =length(`Frequency`))
+
+summary_stats_for_chunks
+  
+
+
+## Plot!!!---
+agree_or_disagree <- ggplot(all_standard_chunks_character, aes(`Agreement or Disagreement`, `Frequency`, fill = `Tenure Status`)) +
+  geom_bar(position="dodge", stat="identity", color = "#dddddd") + 
+  geom_label(aes(label = Frequency), family = "Jost* Semi", color = "#FFFFFF", position=position_dodge(width=0.9), vjust=-0.25, show.legend = FALSE) +
+  scale_fill_manual(values=c("#ee4035", "#0392cf")) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_text(size=15, family = "Jost* Medium", color = "#59595B"),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(t = 0.5, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  scale_color_brewer(labels = stringr::str_pad(all_standard_chunks_character$`Tenure Status`, 10, "right"), palette = "Dark2")
+
+agree_or_disagree 
+
+#~~Save Agree_or_Disagree -----
+ggsave(agree_or_disagree, filename="agree_or_disagree.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")
+
+
+# Calcualte power for a t-test ----
+n_count = max(all_standard_chunks_character$TotalCount) + min(all_standard_chunks_character$TotalCount)
+M1 = max(summary_stats_for_chunks$Average[1])
+M2 = min(summary_stats_for_chunks$Average[2])
+S1 = max(summary_stats_for_chunks$`Standard Deviation`[1])
+S2 = min(summary_stats_for_chunks$`Standard Deviation`[2])
+
+
+Cohen.d = (M1 - M2)/sqrt(((S1^2) + (S2^2))/2)  
+
+pwr.t.test(
+  n = NULL,                  # Observations in _each_ group
+  d = Cohen.d,            
+  sig.level = 0.20,          # Type I probability
+  power = 0.70,              # 1 minus Type II probability
+  type = "two.sample",       # Change for one- or two-sample
+  alternative = "greater"
+)
+
+
+
+
+## Plot!!!---
+# Define Gold (there's no gold) ----
+gold_numbers <- length(unique(gold_standard$Selection))
+gold_colors <- c("#2e4045", "#5e3c58", "#382d2d", "#2b4936", "#403217", "#005c5a", "#022e4f", "#070542", "#330031", "#ab4a43", "#7b2d26")
+length(gold_colors) == gold_numbers 
+#Checks out with 11 colors needed
+
+#~Gold ---- 
+faculty_gold <- ggplot(gold_standard, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 1.6, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=gold_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Indicators of Psychological Safety", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_gold
+
+#~~Save Gold -----
+ggsave(faculty_gold, filename="Faculty_gold.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+
+
+# Define Teal (there's no teal) ----
+teal_numbers <- length(unique(teal_standard$Selection))
+teal_colors <- c("#244369", "#693F48", "#1c222e", "#41533b", "#7B3B41", "#672B47", "#554840", "#7C453C", "#343436")
+length(teal_colors) == teal_numbers 
+#Checks out with 11 colors needed
+
+#~Teal ---- 
+faculty_teal <- ggplot(teal_standard, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 1.6, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=teal_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Indicators of Resilience", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_teal
+
+#~~Save Teal -----
+ggsave(faculty_teal, filename="Faculty_teal.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+
+
+# Define yellow (there's no yellow) ----
+yellow_numbers <- length(unique(yellow_standard$Selection))
+yellow_colors <- c("#521515", "#006069", "#062C48", "#0e450e", "#2D343B")
+length(yellow_colors) == yellow_numbers 
+#Checks out with 11 colors needed
+
+#~Yellow ---- 
+faculty_yellow <- ggplot(yellow_standard, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 2.2, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=yellow_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Perceptions Related to Funding", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_yellow
+
+#~~Save yellow -----
+ggsave(faculty_yellow, filename="Faculty_yellow.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+
+## Variants-----
+gold_tenureEl <- gold %>%
+  rowid_to_column("SID") %>%
+  filter(!`Tenure Status` == "Non Tenure Track") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup() %>%
+  mutate(`Tenure Status` = factor(`Tenure Status`, levels = c("Tenured", "Tenure Track"), ordered = TRUE))
+
+
+teal_tenureEl <- teal %>%
+  rowid_to_column("SID") %>%
+  filter(!`Tenure Status` == "Non Tenure Track") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup() %>%
+  mutate(`Tenure Status` = factor(`Tenure Status`, levels = c("Tenured", "Tenure Track"), ordered = TRUE))
+
+
+yellow_tenureEl <- yellow %>%
+  rowid_to_column("SID") %>%
+  filter(!`Tenure Status` == "Non Tenure Track") %>%
+  gather("var", "value", -SID, -`Tenure Status`, na.rm = TRUE) %>%
+  mutate(value = sub("NA", "Not Applicable", value)) %>%
+  select(var, value, `Tenure Status`) %>%
+  count(var, value, `Tenure Status`) %>%
+  group_by(`Tenure Status`, var) %>%
+  rename(`Frequency`= n) %>%
+  rename(`Agreement or Disagreement`= value) %>%
+  rename(`Selection`= var) %>%
+  mutate(TotalCount = sum(Frequency)) %>%
+  mutate(TotalPercent = Frequency/TotalCount) %>%
+  mutate(`Agreement or Disagreement` = str_replace(`Agreement or Disagreement`, "Neither Agree not Disagree", "Neither Agree nor Disagree")) %>%
+  mutate(`Agreement or Disagreement` = factor(`Agreement or Disagreement`, levels = desired.order, ordered = TRUE)) %>%
+  ungroup() %>%
+  mutate(`Tenure Status` = factor(`Tenure Status`, levels = c("Tenured", "Tenure Track"), ordered = TRUE))
+
+
+#~Gold for tenure v tenure-track ---- 
+faculty_gold_tenureEl <- ggplot(gold_tenureEl, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 1.6, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=gold_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Indicators of Psychological Safety", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_gold_tenureEl
+
+#~~Save Gold -----
+ggsave(faculty_gold_tenureEl, filename="Faculty_gold_ten_tentrack.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+
+#~Teal for tenure v tenure-track ---- 
+faculty_teal_tenureEl <- ggplot(teal_tenureEl, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 1.6, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=teal_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Indicators of Resilience", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_teal_tenureEl
+
+#~~Save Teal -----
+ggsave(faculty_teal_tenureEl, filename="Faculty_teal_ten_tentrack.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+
+
+#~Yellow for tenure v tenure-track ---- 
+faculty_yellow_tenureEl <- ggplot(yellow_tenureEl, aes(Selection, TotalPercent, fill=Selection, order = as.numeric(`Agreement or Disagreement`))) +
+  geom_bar(stat="identity") +
+  geom_text(aes(label=ifelse(TotalPercent >= 0.05, paste0(sprintf("%0.0f", round(TotalPercent*100),digits = 0),"%"), ''), group = `Agreement or Disagreement`), position = position_stack(vjust = 0.5), family = "Jost* Semi", fill ="#FFFFFF", color = "#FFFFFF", size = 1.6, show.legend = FALSE, angle = 0, direction = "x") +
+  scale_fill_manual(values=yellow_colors, labels = function(y) str_wrap(y, width = 40), expand=c(0.3, 0)) +
+  theme(plot.title = element_text(size = 26, family = "Jost* Black", color ="#144146", margin = margin(20, 0, 5, 0)),
+        plot.caption = element_text(size = 9, family = "Jost* Medium", color = "#59595B"),
+        axis.title.x=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        legend.title=element_blank(), 
+        legend.text=element_text(size=12, family = "Jost* Semi", color = "#59595B", margin = margin(t = 0)),
+        legend.position="bottom",
+        legend.key = element_rect(color = NA, fill = NA),
+        legend.key.size = unit(1, "cm"),
+        legend.background = element_rect(size=0, linetype="dashed", color = "#FFFFFF"),
+        legend.key.height=unit(2, "cm"),
+        legend.spacing.x = unit(0.25, 'cm'),
+        legend.margin = margin(b = 0, unit='cm'),
+        panel.background = element_blank(),
+        panel.spacing.y=unit(1, "lines"),
+        panel.spacing.x=unit(1, "lines")) +
+  theme(strip.background = element_blank(),
+        strip.text = element_text(size = 12, family = "Jost* Black", color = "#59595B")) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(str_wrap("Perceptions Related to Funding", 60)) +
+  guides(fill=guide_legend(ncol=3)) +
+  labs(caption = "Unlabeled bars represent less than 5% of the sample.") +
+  facet_grid(`Tenure Status`~`Agreement or Disagreement`, labeller = label_wrap_gen(width=11))
+
+faculty_yellow_tenureEl
+
+#~~Save yellow -----
+ggsave(faculty_yellow_tenureEl, filename="Faculty_yellow_ten_tentrack.pdf", device = cairo_pdf, width = 297, height = 210, units = "mm")  
+
+

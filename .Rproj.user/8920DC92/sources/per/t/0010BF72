@@ -1,0 +1,32 @@
+{
+    "id": "0010BF72",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1596528983108.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "expression": "ttest_wrangle",
+        "caption": "ttest_wrangle",
+        "totalObservations": 804,
+        "displayedObservations": 804,
+        "variables": 3,
+        "cacheKey": "DF60D0E3",
+        "object": "ttest_wrangle",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=ttest_wrangle&cache_key=DF60D0E3&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3328209740260600929,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1596528983108,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Task: Exercise II Note: Triangulation!    Task: Exercise II Please use this roadmap to download a data set of your choice to analyze: 1. Go to the data repository ICPSR out of the University of Michigan.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/assignment/03-exercise/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/assignment/03-exercise/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="EDP 611">
+  <meta property="og:url" content="/assignment/03-exercise/">
+  <meta property="og:title" content="Rule #31: Friends Don’t Let Friends Make Pie Charts, Especially in R. | EDP 611">
+  <meta property="og:description" content="Task: Exercise II Note: Triangulation!    Task: Exercise II Please use this roadmap to download a data set of your choice to analyze: 1. Go to the data repository ICPSR out of the University of Michigan."><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="EDP 611: EDP 611" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>Rule #31: Friends Don’t Let Friends Make Pie Charts, Especially in R. | EDP 611</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://edpsych611.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/">Assignment overview</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Projects</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/01-exercise/">Exercises</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/01-exercise/">1: An Introduction (or Review) of Some Things</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/02-exercise/">2: Neverending Designs, Measures, and Methods</a>
+      </li>
+      
+      <li class="active">
+        <a href="/assignment/03-exercise/">3: Truthiness, Damned Truths, and Statistics</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/04-exercise/">4: Everything is Out to Get Me</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/05-exercise/">5: Wait is this Algebra?</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Rule #31: Friends Don’t Let Friends Make Pie Charts, Especially in R.</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#task-exercise-ii">Task: Exercise II</a><ul>
+<li><a href="#note-triangulation">Note: Triangulation!</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="task-exercise-ii" class="section level2">
+<h2>Task: Exercise II</h2>
+<p>Please use this roadmap to download a data set of your choice to analyze:
+1. Go to the data repository <a href="https://www.icpsr.umich.edu/" target="_blank">ICPSR</a> out of the University of Michigan.
+2. Sign up for an account <strong>with your university email address</strong> because you will be able to download available data sets given that WVU is a member institution.
+3. After logging in fully, go to the <code>FIND DATA</code> tab and then select <code>FIND DATA</code> in the drop down (that’s not confusing at all).
+4. Search for a data set that both interests you and is measurable by typing in a topic. Ideally you want to find a data set that have responses that are quantified, have a scale, and that scale is consistent across multiple items.
+5. After the search has completed, you may notice there are filters on the left hand side. Scroll down to <code>Data Availibility</code> and select <code>Public Data</code>. If you do not see this option, then you’ll have to search for some other topic.
+6. You can also enable other filters like <code>Data Format</code> where you can find both <code>Delimited</code> (aka <code>csv</code> files) and <code>R</code> files too!</p>
+<p>Your task is three fold:</p>
+<ol style="list-style-type: decimal">
+<li>describe the data in layman’s terms but not informally. Explain it to me as if you were trying to describe it to a fourth - sixth grade student. A popular indicator is through the a score derived from the <a href="https://readable.com/" target="_blank">Flesch–Kincaid Reading Grade Level</a>. This tool has about 50 years of controversy attached to it, which could easily be an entire chapter of a clearance bin book. Please note that you do not need to report if you applied a readability test to your narrative or how you did it. I just wanted to point out an approach that may be useful in giving you an idea if your narrative is in the ballpark.</li>
+</ol>
+<div id="note-triangulation" class="section level3">
+<h3>Note: Triangulation!</h3>
+<p>Whatever side of the coin you may settle on, this is just a perfect example of why using a single measure is simply a bad idea since you run the risk of an entire study or studies being reliant on a single measure whose validity in this case may be in flux. Barring some well known measures, it is recommended that at least three different indicators are used to assess a construct. This three way assessemment strategy is called <em>triangulation</em>. An well-written and relatively short description of this idea can be accessed through the <a href="https://assessment.uncc.edu/student-learning-outcomes/resources/triangulation-student-learning-outcomes-assessment" target="_blank">UNC Charlotte Office of Academic Affairs</a> Regardless, its utility is widespread and so much so that it has been a default measure within <a href="https://support.microsoft.com/en-us/office/get-your-document-s-readability-and-level-statistics-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2" target="_blank">Microsoft Word</a> for nearly twenty years.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Run some reliability checks<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of one to three constructs (not items - you group items together to assess a construct). Then decide which single measure most accurately describes the true internal consistency. Defend your choice with a maximum 280 word (aka 1 Tweet’s worth) or less argument. My advice is to first look at both the codebook and measures. Additionally, choose wisely because you’ll be addressing validity, or rather something called <strong>threats to validity</strong> next week.</li>
+</ol>
+<p>Please submit the following using the Submission Portal on [eCampus](.</p>
+<ol style="list-style-type: decimal">
+<li><p>an R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Again please provgide comments where it is not obvious what you are doing. Perpetually, an example script is included which can be accessed <a href="/exscripts/example_script.R" target="_blank">here</a>. The more directions you include, the better the response! You may either right click and download the file to open it or copy and paste the content to your own blank script.</p></li>
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>a maximum one page 12-point font double spaced reflection that includes brief narratives on what</li>
+</ol>
+<ul>
+<li><p>the data set was about,</p></li>
+<li><p>was explored,</p></li>
+<li><p>you wish you knew how to do in R to better understand the data set, and</p></li>
+<li><p>reliability measures were tested, your final decision, and what brought you to that choice.</p></li>
+<li><p>a one page data visualization of your choice with a maximum 280 word or less argument defending your choice.</p></li>
+</ul>
+<p>:::</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Please note that you are not restricted to the ones covered in this week’s Example<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/edp611.theoreticalphysed.com/edit/master/content/assignment/03-exercise.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 611: EDP 611 (Summer II 2020)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://lshd.wvu.edu/" target="_blank" rel="noopener">Learning Sciences &amp; Human Development</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Forever (for the next six weeks) &emsp;&emsp;
+                <i class="far fa-clock"></i> You pick! 
+                <br><i class="fas fa-university"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/piechartssuck/edp11.theoreticalphysed.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.cbb55fd8eafa574bce72dcb94f65cd2c.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

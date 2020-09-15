@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interactive lessons | EDP 611</title>
+    <link>/lesson/</link>
+      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <description>Interactive lessons</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Interactive lessons</title>
+      <link>/lesson/</link>
+    </image>
+    
+    <item>
+      <title>What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming</title>
+      <link>/lesson/01-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/01-lesson/</guid>
+      <description>
+
+
+&lt;p&gt;This week please complete the &lt;strong&gt;Introduction to R&lt;/strong&gt; course on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro to basics&lt;/li&gt;
+&lt;li&gt;Vectors&lt;/li&gt;
+&lt;li&gt;Matrices&lt;/li&gt;
+&lt;li&gt;Factors&lt;/li&gt;
+&lt;li&gt;Data frames&lt;/li&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wait I Have to Clean my Room and my Data? Adulting is Hard.</title>
+      <link>/lesson/02-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/02-lesson/</guid>
+      <description>
+
+
+&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to the Tidyverse&lt;/strong&gt; and &lt;strong&gt;Exploratory Data Analysis in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data wrangling&lt;/li&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Grouping and summarizing&lt;/li&gt;
+&lt;li&gt;Types of visualizations
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case Study (case study of email spam)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;respectively.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wrangling Data? That Sounds Like So Much Zzzzzzzz.....</title>
+      <link>/lesson/03-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/03-lesson/</guid>
+      <description>
+
+
+&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to the Tidyverse&lt;/strong&gt; and &lt;strong&gt;Exploratory Data Analysis in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language of data&lt;/li&gt;
+&lt;li&gt;Study types and cautionary tales&lt;/li&gt;
+&lt;li&gt;Sampling strategies and experimental design&lt;/li&gt;
+&lt;li&gt;Case study (physical appearance of instructors and course evals)
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case Study (case study of email spam)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;respectively.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pirates Cause Global Warming</title>
+      <link>/lesson/04-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/04-lesson/</guid>
+      <description>
+
+
+&lt;p&gt;This week please complete both the &lt;strong&gt;Survey and Measurement Development in R&lt;/strong&gt; and &lt;strong&gt;Correlation and Regression in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Preparing to analyze survey data&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Exploratory factor analysis &amp;amp; survey development&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Confirmatory factor analysis &amp;amp; construct validation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Criterion validity &amp;amp; replication&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Visualizing two variables&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Correlation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Simple linear regression&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Interpreting regression models&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Model Fit&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/lesson/05-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/05-lesson/</guid>
+      <description>
+
+
+&lt;p&gt;While we have head the same saying that correlation &lt;span class=&#34;math inline&#34;&gt;\(\nRightarrow\)&lt;/span&gt; causation, it CAN imply it (with enough evidence!) Watch this visualization of the concept below.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/HUti6vGctQM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;Now please complete the &lt;strong&gt;Correlation and Regression in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visualizing two variables&lt;/li&gt;
+&lt;li&gt;Correlation&lt;/li&gt;
+&lt;li&gt;Simple linear regression&lt;/li&gt;
+&lt;li&gt;Interpreting regression models&lt;/li&gt;
+&lt;li&gt;Model Fit&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

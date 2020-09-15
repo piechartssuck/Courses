@@ -1,0 +1,37 @@
+---
+title: "Nerds!"
+linktitle: "5: Wait is this Algebra?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 5
+type: docs
+weight: 5
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+
+library(tidyverse)
+library(fivethirtyeight)
+library(psych)
+library(knitr)
+library(kableExtra)
+```
+
+<script src="//yihui.org/js/math-code.js"></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction Expectations Prerequisites Data Files Chopping a Data Set Up Saving Objects Style Guide     Introduction First things first, once a package has been loaded, you can use a ?">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/example/02-example/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/example/02-example/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="EDP 611">
+  <meta property="og:url" content="/example/02-example/">
+  <meta property="og:title" content="How Data Doesn&#39;t Care About Your Beliefs or Feelings and Other Obviuous Observations I&#39;ve Had to Tell People for Some Reason | EDP 611">
+  <meta property="og:description" content="Introduction Expectations Prerequisites Data Files Chopping a Data Set Up Saving Objects Style Guide     Introduction First things first, once a package has been loaded, you can use a ?"><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="EDP 611: EDP 611" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>How Data Doesn&#39;t Care About Your Beliefs or Feelings and Other Obviuous Observations I&#39;ve Had to Tell People for Some Reason | EDP 611</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://edpsych611.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/01-example/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/01-example/">1: An Introduction (or Review) of Some Things</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/02-example/">2: Neverending Designs, Measures, and Methods</a>
+      </li>
+      
+      <li >
+        <a href="/example/03-example/">3: Truthiness, Damned Truthiness, and Statistics</a>
+      </li>
+      
+      <li >
+        <a href="/example/04-example/">4: Everything is Out to Get Me</a>
+      </li>
+      
+      <li >
+        <a href="/example/05-example/">5: Wait is this Algebra?</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>How Data Doesn&#39;t Care About Your Beliefs or Feelings and Other Obviuous Observations I&#39;ve Had to Tell People for Some Reason</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#expectations">Expectations</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#data-files">Data Files</a><ul>
+<li><a href="#chopping-a-data-set-up">Chopping a Data Set Up</a></li>
+<li><a href="#saving-objects">Saving Objects</a></li>
+<li><a href="#style-guide">Style Guide</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>First things first, once a package has been loaded, you can use a <code>?</code> in front of any command to get more information about it. Sometimes the descriptions and/or examples aren’t very helpful, but most of the time you should be able to find the information you are looking for.</p>
+<div id="expectations" class="section level2">
+<h2>Expectations</h2>
+<p>If you skim through this, you may notice that all of the outputs are already done for you. I strongly encourage you to take some time to go through these walkthroughs and to ask questions as needed! Much like any other language, R requires fluency but that cannot occur without a good foundation.</p>
+</div>
+<div id="prerequisites" class="section level2 unnumbered">
+<h2>Prerequisites</h2>
+<p>In this session, we will use the <code>tidyverse</code> and <code>fivethirtyeight</code> packages. If you have loaded the former, then please skip ahead to the next paragraph. If not, please select <strong>Tools &gt; Install Packages</strong> and then type in <code>tidyverse</code> and ensure that <strong>Install dependencies</strong> is selected or simply run the following in your console.</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;, dependencies = TRUE)</code></pre>
+<p>followed by</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)</code></pre>
+<p>to load the family. Now try doing the same for <code>fivethirtyeight</code> by running</p>
+<pre class="r"><code>install.packages(&quot;fivethirtyeight&quot;, dependencies = TRUE)</code></pre>
+<p>followed by</p>
+<pre class="r"><code>library(&quot;fivethirtyeight&quot;)</code></pre>
+<p>Please note that once a package is on your computer, you never have to install it again unless it is somehow deleted. This means from now on you will only have to use the second command <code>library("WHATEVER PACKAGE YOU ALREADY HAVE DOWNLOADED")</code> to use that package.</p>
+<p>Before moving on, here is a good place to reiterate how you can use <code>?</code> to find more information. When you look at the package list for <code>fiverthirtyeight</code>, not all of the names do a great job of describing what that data set consists of. To see this, type in <code>fiverthirtyeight::</code> and scroll through the pop up list of available data sets and commands. Let’s say the data set <code>tarantino</code> caught your eye but you weren’t really sure what it consisted of. Hovering over the set in that pop up list tells you that it <em>contains data behind the story A Complete Catalog Of Every Time Someone Cursed Or Bled Out In A Quentin Tarantino Movie</em>.</p>
+<p>OK well that’s a good start but to be able to do anything with that data, we really need to know what its variables are. To do this, run the command below</p>
+<pre class="r"><code>?tarantino</code></pre>
+<p>You should have noticed the <strong>Help</strong> tab on the lower right hand window is prominent and there is a significant amount of information explaining the data set including the variable names and corresponding descriptions.</p>
+</div>
+<div id="data-files" class="section level2">
+<h2>Data Files</h2>
+<p>Data sets used in R are typically accessible in one of two ways.</p>
+<ol style="list-style-type: decimal">
+<li>They can be distributed within R packages. These are often smaller data sets used in examples, interactive guides, or tutorials within packages. These are loaded with the <code>data()</code> function. For example you can load UN data on demographic statistics from the <strong>fivethirtyeight</strong> library, which has plenty of data sets used by the poll analysis site <a href="https://fivethirtyeight.com/" target="_blank">FiveThirtyEight</a>. To see the entire list, you can run the command <code>data()</code>. In this case, the <code>drinks</code> data set looks like something I may want to look at. To view the data set, run</li>
+</ol>
+<pre class="r"><code>data(&quot;drinks&quot;, package = &quot;fivethirtyeight&quot;)</code></pre>
+<p>followed by</p>
+<pre class="r"><code>drinks</code></pre>
+<pre><code>## # A tibble: 193 x 5
+##    country      beer_servings spirit_servings wine_servings total_litres_of_pur…
+##    &lt;chr&gt;                &lt;int&gt;           &lt;int&gt;         &lt;int&gt;                &lt;dbl&gt;
+##  1 Afghanistan              0               0             0                  0  
+##  2 Albania                 89             132            54                  4.9
+##  3 Algeria                 25               0            14                  0.7
+##  4 Andorra                245             138           312                 12.4
+##  5 Angola                 217              57            45                  5.9
+##  6 Antigua &amp; B…           102             128            45                  4.9
+##  7 Argentina              193              25           221                  8.3
+##  8 Armenia                 21             179            11                  3.8
+##  9 Australia              261              72           212                 10.4
+## 10 Austria                279              75           191                  9.7
+## # … with 183 more rows</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>They can be loaded from external files including both stored R file formats <code>.RData</code> and <code>.rda</code>, and other more familiar formats such as <code>.csv</code> and <code>.sav</code>. In this session, we’ll look at reading and writing a <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">csv</a> file using R by enabling the commands <code>read_csv</code> and <code>write_csv</code> from the <code>readr</code> library (which is a part of <code>tidyverse</code> so you don’t have to load it separately).</li>
+</ol>
+<p>The <code>drinks</code> data set can also be found <a href="https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv" target="_blank">here</a>. As long as data is somewhere and accessible, chances are R can get it! For example, we can use the <code>read_csv</code> command to get the data we need like so</p>
+<pre class="r"><code>drinks &lt;- read_csv(&quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   country = col_character(),
+##   beer_servings = col_double(),
+##   spirit_servings = col_double(),
+##   wine_servings = col_double(),
+##   total_litres_of_pure_alcohol = col_double()
+## )</code></pre>
+<p>followed by</p>
+<pre class="r"><code>drinks</code></pre>
+<pre><code>## # A tibble: 193 x 5
+##    country      beer_servings spirit_servings wine_servings total_litres_of_pur…
+##    &lt;chr&gt;                &lt;dbl&gt;           &lt;dbl&gt;         &lt;dbl&gt;                &lt;dbl&gt;
+##  1 Afghanistan              0               0             0                  0  
+##  2 Albania                 89             132            54                  4.9
+##  3 Algeria                 25               0            14                  0.7
+##  4 Andorra                245             138           312                 12.4
+##  5 Angola                 217              57            45                  5.9
+##  6 Antigua &amp; B…           102             128            45                  4.9
+##  7 Argentina              193              25           221                  8.3
+##  8 Armenia                 21             179            11                  3.8
+##  9 Australia              261              72           212                 10.4
+## 10 Austria                279              75           191                  9.7
+## # … with 183 more rows</code></pre>
+<p>As you can see from the outputs are identical. While you were typing you may have noticed that that there is a <code>read.csv()</code> and <code>read_csv()</code>. The former is what we call a base command, or one that is pre-built into R. However, you will want to stick to the latter which is from the <code>readr</code> package for many reasons we will get into later on, but for now just know it is a bit faster and returns a <code>tibble</code> instead of a data frame which is far easier to work with! You can check what type of variable you have by using <code>class()</code> on it. For example, the following</p>
+<pre class="r"><code>class(drinks)</code></pre>
+<pre><code>## [1] &quot;spec_tbl_df&quot; &quot;tbl_df&quot;      &quot;tbl&quot;         &quot;data.frame&quot;</code></pre>
+<p>tells us that we not only have a data frame, but a tibble as well as well as some other formats we’ll ignore for the time being. If you want more information, please see <a href="http://r4ds.had.co.nz/">R for Data Science</a> <a href="http://r4ds.had.co.nz/tibbles.html#introduction-4">Ch 10: Tibbles</a>.</p>
+<p>Note that we loaded the file directly from a web address URL, but say you had it as a local file on your computer in the same directory as your R script. The command</p>
+<pre class="r"><code>drinks &lt;- read_csv(&quot;drinks.csv&quot;)
+
+drinks</code></pre>
+<p>would work just as well.</p>
+<div id="chopping-a-data-set-up" class="section level3">
+<h3>Chopping a Data Set Up</h3>
+<p>You may already know that the single bracket, <code>[</code>, is useful to select rows and columns in simple cases.</p>
+<pre class="r"><code>drinks[c(1, 2, 3, 4, 5), ]</code></pre>
+<pre><code>## # A tibble: 5 x 5
+##   country    beer_servings spirit_servings wine_servings total_litres_of_pure_a…
+##   &lt;chr&gt;              &lt;dbl&gt;           &lt;dbl&gt;         &lt;dbl&gt;                   &lt;dbl&gt;
+## 1 Afghanist…             0               0             0                     0  
+## 2 Albania               89             132            54                     4.9
+## 3 Algeria               25               0            14                     0.7
+## 4 Andorra              245             138           312                    12.4
+## 5 Angola               217              57            45                     5.9</code></pre>
+<p>There are <code>tidyverse</code> options to handle this via the package <code>dplyr</code> to select rows by number, to select rows by certain criteria, or to select columns.</p>
+<p>For example, to select rows 1–5, we can use the <code>slice()</code> command.</p>
+<pre class="r"><code>slice(drinks, 1:5)</code></pre>
+<pre><code>## # A tibble: 5 x 5
+##   country    beer_servings spirit_servings wine_servings total_litres_of_pure_a…
+##   &lt;chr&gt;              &lt;dbl&gt;           &lt;dbl&gt;         &lt;dbl&gt;                   &lt;dbl&gt;
+## 1 Afghanist…             0               0             0                     0  
+## 2 Albania               89             132            54                     4.9
+## 3 Algeria               25               0            14                     0.7
+## 4 Andorra              245             138           312                    12.4
+## 5 Angola               217              57            45                     5.9</code></pre>
+<p>Base R allows you to choose the column <code>beer_servings</code> from the <code>drinks</code> data frame in a number of ways. For example, each of the following</p>
+<pre class="r"><code>drinks[, &quot;beer_servings&quot;]
+drinks$beer_servings
+drinks[[&quot;beer_servings&quot;]]</code></pre>
+<p>yields</p>
+<pre><code>##   [1]   0  89  25 245 217 102 193  21 261 279  21 122  42   0 143 142 295 263
+##  [19]  34  23 167  76 173 245  31 231  25  88  37 144  57 147 240  17  15 130
+##  [37]  79 159   1  76   0 149 230  93 192 361   0  32 224  15  52 193 162   6
+##  [55]  52  92  18 224  20  77 263 127 347   8  52 346  31 133 199  53   9  28
+##  [73]  93   1  69 234 233   9   5   0   9 313  63  85  82  77   6 124  58  21
+##  [91]   0  31  62 281  20  82  19   0 343 236  26   8  13   0   5 149   0   0
+## [109]  98 238  62   0  77  31  12  47   5 376  49   5 251 203  78   3  42 188
+## [127] 169  22   0 306 285  44 213 163  71 343 194   1 140 109 297 247  43 194
+## [145] 171 120 105   0  56   0   9 283 157  25  60 196 270  56   0 225 284  16
+## [163]   8 128  90 152 185   5   2  99 106   1  36  36 197  51  51  19   6  45
+## [181] 206  16 219  36 249 115  25  21 333 111   6  32  64</code></pre>
+<p>Unlike <code>[</code>, the <code>[[</code> and <code>$</code> operators can only select a single column and return a vector.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+The <code>dplyr</code> function <code>select()</code> <strong>always</strong> returns a tibble, and never a vector, even if only one column is selected.</p>
+<p>For example, note that selecting rows 1–5 of the <code>beer_servings</code> column using base R gives us a vector.</p>
+<pre class="r"><code>drinks[1:5, &quot;beer_servings&quot;]</code></pre>
+<pre><code>## # A tibble: 5 x 1
+##   beer_servings
+##           &lt;dbl&gt;
+## 1             0
+## 2            89
+## 3            25
+## 4           245
+## 5           217</code></pre>
+<p>Whereas in the <code>dplyr</code> world, the same series of functions can be performed using a pipe operator: <code>%&gt;%</code> which retains the table like format.</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(beer_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 1
+##   beer_servings
+##           &lt;dbl&gt;
+## 1             0
+## 2            89
+## 3            25
+## 4           245
+## 5           217</code></pre>
+<p>This example may seem verbose, but later we can produce more complicated transformations of the data by chaining together simple functions. For example, it is far easier to use them to select multiple columns like so</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(country, beer_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   country     beer_servings
+##   &lt;chr&gt;               &lt;dbl&gt;
+## 1 Afghanistan             0
+## 2 Albania                89
+## 3 Algeria                25
+## 4 Andorra               245
+## 5 Angola                217</code></pre>
+<p>or to get rid of a column</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(-spirit_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   country     beer_servings wine_servings total_litres_of_pure_alcohol
+##   &lt;chr&gt;               &lt;dbl&gt;         &lt;dbl&gt;                        &lt;dbl&gt;
+## 1 Afghanistan             0             0                          0  
+## 2 Albania                89            54                          4.9
+## 3 Algeria                25            14                          0.7
+## 4 Andorra               245           312                         12.4
+## 5 Angola                217            45                          5.9</code></pre>
+<p>We’ll talk more about pipes next week!</p>
+</div>
+<div id="saving-objects" class="section level3">
+<h3>Saving Objects</h3>
+<p>There are two types of saves you should consider at this point</p>
+<ul>
+<li>The workspace save</li>
+<li>An output save</li>
+</ul>
+<p>The workspace save is everything you see in your RStudio window (e.g. the syntax, script, outputs, etc). When you close out of RStudio, you may be asked to save your workspace which essentially means the next time you load a saved script up, you’ll pick up exactly where you left off.</p>
+<p>While convenient, it is not recommended that do this. Like rebooting a computer, you really want to have a fresh start every time RStudio starts up. While certainly not mandated, you never know what piece of rogue commands could have affected your progress when you last saved the file. Opting not to save an image of your workspace removes all of the previous commands while keeping your script intact.</p>
+<p>An output save occurs when you are trying to save a data set or result in a particular format. Firstly, you have to ensure that you have both downloaded and loaded a necessary package. For example, base R does not have an ability to read in and flatten SPSS files. However, installing and enabling the package <code>foreign</code> makes both reading in and writing to SPSS a cinch.</p>
+<p>Let’s say we want to export our <code>drinks</code> output to a csv file. Well luckily we have the package <code>readr</code> already loaded and it has the command <code>write_csv()</code> that does exactly what we want. The command requires that you note the variable name, <code>drinks</code>, and what you want to call it which in this case I am calling <code>new_drinks.csv</code>. If you are wondering, you absolutely have to out the format type at the end.</p>
+<pre class="r"><code>write_csv(drinks, &quot;new_drinks.csv&quot;)</code></pre>
+<p>Well that’s great but say we wanted to save it as a SPSS file. Running</p>
+<pre class="r"><code>?write_csv</code></pre>
+<p>doesn’t yield any information about saving any data set or output as a SPSS file. If we run a simple Google search (e.g. with the terms <em>save SPSS R tidy</em>) and click on the first link, it seems like a package called <code>haven</code> both saves a data frame as a SPSS file and is tidy as well which the package <code>foreign</code> I mentioned earlier does not. While the latter condition isn’t required, having packages that do keep your data tidy will make your life <strong>so much easier</strong>! Now we can just do the following</p>
+<pre class="r"><code>write_sav(drinks, &quot;new_drinks.sav&quot;) </code></pre>
+<p>Now you are free to go use SPSS for some reason.</p>
+</div>
+<div id="style-guide" class="section level3">
+<h3>Style Guide</h3>
+<p>Following a consistent coding style is important for your code to be readable by you and others. The preferred style is the <a href="http://style.tidyverse.org/" target="_blank">tidyverse style guide</a>, which differs slightly from <a href="http://style.tidyverse.org/" target="_blank">Google’s R style guide</a>.</p>
+<ul>
+<li><p>The <a href="https://github.com/jimhester/lintr" target="_blank">lintr</a> package will check files for style errors.</p></li>
+<li><p>The <a href="https://github.com/r-lib/styler" target="_blank">styler</a> package provides functions for automatically formatting R code according to style guides.</p></li>
+</ul>
+<p>You will be expected to turn in a script with any submission where R is needed. Much like any writing, if your script is easy to read, then it is most likely easy to grade. A messy script without comments, spacing, and style may lead to misunderstandings. Long story short: make it look good and easy to interpret and your score will reflect that!</p>
+<p>If you want a warning about styling your script, open RStudio and go to the <strong>Tools &gt; Global Options &gt; Code &gt; Diagnostics</strong> pane. Then check the box to activate style warnings. On this pane, there are other options that can be set in order to increase or decrease the amount of warnings while writing in RStudio.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Please see the discussion in
+<a href="http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame" target="_blank">R for DataScience</a> on how <code>tibble</code> objects differ from base <code>data.frame</code> objects in how the single bracket <code>[</code> is handled.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/edp611.theoreticalphysed.com/edit/master/content/example/02-example.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 611: EDP 611 (Summer II 2020)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://lshd.wvu.edu/" target="_blank" rel="noopener">Learning Sciences &amp; Human Development</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Forever (for the next six weeks) &emsp;&emsp;
+                <i class="far fa-clock"></i> You pick! 
+                <br><i class="fas fa-university"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/piechartssuck/edp11.theoreticalphysed.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.cbb55fd8eafa574bce72dcb94f65cd2c.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

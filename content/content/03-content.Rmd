@@ -1,0 +1,44 @@
+---
+title: "Even More Readings"
+linktitle: "3: Truthiness, Damned Truthiness, and Statistics"
+menu:
+  content:
+    parent: Course content
+    weight: 3
+type: docs
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+## Read
+
+- <i class="fas fa-book"></i> Chapters 5-6 in James McDavid, *Program Evaluation and Performance Measurement* 
+
+- <i class="fas fa-book"></i> [Chapters 3-5](https://www.thetaminusb.com/intro-measurement-r/applications.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+
+Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, **I am not concerned whether you know a formula or not, rather I want you to understand the general idea so please take your time on Chapter 5!**
+
+## Suggestions
+
+Take some time to review or get a first look at some basic statistics. Again, I do not care if you can memorize a formula. We have these things called books and the Internet to get those. Rather if you can understand what's going on and when to use a method (e.g. when is it more appropriate to take the mean, median, or mode of a sample). 
+
+-  The statistics videos over at Crash Course are fantastic and pretty entertaining. If interested, you can see the entire list of Crash Course: Statistics series by clicking [here](https://www.youtube.com/playlist?list=PLH2l6uzC4UEW3iJO4T0qUeUEp_X-f1U7S){target="_blank"}. The example video below is on *sampling and bias*.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rf-fIpB4D50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+- A good resource for doing foundational level statistics in R, check out [Learning statistics with R: A tutorial for psychology students and other beginners](https://tidylsr.djnavarro.net/index.html){target="_blank"} which is part of an ongoing effort to bring [statistics with R](https://learningstatisticswithr.com/){target="_blank"} to the masses.  
+
+### Questions to reflect on
+
+- What do descriptive statistics really tell us?
+- What can't descriptive statistics tell us?
+- How are both assessment and evaluation used in CTT (classical test theory)?
+- Why is reliability important?
+- How is reliability used in analyzing qualitative data?
+
+Note: These reflection items *can* be integrated into this week's reflection which is item #2 in the [Exercise II Task](). 

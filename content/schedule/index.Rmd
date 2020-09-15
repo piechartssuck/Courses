@@ -1,0 +1,32 @@
+---
+title: "Schedule"
+slug: schedule
+---
+
+Here is your road map for the next six weeks!
+
+Every class session has four important sections. You should read about the details for each using the main menu at the top of this webpage.
+
+- [**Content**](/content/) (<i class="fas fa-book"></i>): This page contains the readings, slides, and recorded lectures for the topic. Read these first each day.
+- [**Lesson**](/lesson/) (<i class="fas fa-chalkboard"></i>): This page contains an interactive lesson that teaches you the principles and code you need to know. Go through these after doing the content.
+- [**Example**](/example/) (<i class="fas fa-lightbulb"></i>): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.
+- [**Assignment**](/assignment/) (<i class="fas fa-tasks"></i>): This page contains the instructions for all student related tasks including information about the Situations and Final Project. **Assignments are due by 11:59 PM on the day they're listed.**
+
+::: note <br/>
+**tl;dr**: I recommend that you follow these lessons in the following order:
+
+<div class="text-center">
+<i class="fas fa-book"></i>
+<i class="fas fa-long-arrow-alt-right"></i>
+<i class="fas fa-chalkboard"></i>
+<i class="fas fa-long-arrow-alt-right">
+<i class="fas fa-lightbulb"></i>
+<i class="fas fa-plus"></i></i>
+<i class="fas fa-tasks"></i>
+</div>
+
+or in terms that aren't as [ambiguous as emojis](https://doi.org/10.1016/j.chb.2020.106361), follow this process: read the material, complete data camp, and use the potential example(s) to help you with the assignment(s).
+<br />
+:::
+
+`r blogdown::shortcode("schedule")`

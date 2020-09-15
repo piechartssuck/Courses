@@ -1,0 +1,32 @@
+{
+    "id": "D70715C9",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1596494873498.0,
+    "source_on_save": false,
+    "relative_order": 9,
+    "properties": {
+        "expression": "questions_t1",
+        "caption": "questions_t1",
+        "totalObservations": 18,
+        "displayedObservations": 18,
+        "variables": 4,
+        "cacheKey": "8557B3E9",
+        "object": "questions_t1",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=questions_t1&cache_key=8557B3E9&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 519691042913,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1596494873498,
+    "read_only": false,
+    "read_only_alternatives": []
+}

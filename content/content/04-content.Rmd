@@ -1,0 +1,36 @@
+---
+title: "More Readings? Seriously?"
+linktitle: "4: Everything is Out to Get Me"
+menu:
+  content:
+    parent: Course content
+    weight: 4
+type: docs
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+## Read
+
+- <i class="fas fa-book"></i> Chapters 8-9 in James McDavid, *Program Evaluation and Performance Measurement*. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.
+
+- <i class="fas fa-book"></i> [Chapters 6-7](https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+
+Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, **Chapter 7 is somewhat dense and you are not expected to memorize formulas. Get the basic idea of what an IRT is and what it is used for and ask questions as needed!**
+
+## Suggestions
+
+Next week we cover Item Response Theory (IRT) in greater detail. While Chapter 7 in Albano's online text is a needed read, it is a bit difficult to fully comprehend at first so we'll be emphasizing  the procedural aspects of conducting one. If you want a grounded conceptual (not statistical or mathematical) introduction, check out [Karon F. Cook's short 6-part series](https://www.youtube.com/playlist?list=PLJNUIJnElUzDmrIPunMyF3tTvIHb65wNb){target="_blank"}. She does a really good job bringing a relatively high level concept down to Earth.
+
+### Questions to reflect on
+
+This week first head over to the [new version](https://www.tylervigen.com/spurious-correlations){target="_blank"} and [old version](https://tylervigen.com/old-version.html){target="_blank"} of Spurious Correlations: the often hilarious and always ridiculous examples of why correlation doesn’t imply causation. Pick one out, paste it into a word document and then write a one paragraph narrative on
+
+- why you chose the one that you did?
+- do you think correlation is ever enough? what is that point?
+- how do you think correlation is tied to measurement?
+
+Stuck? Please take a look at [this](/handouts/bad_survey.pdf){target="_blank"} read of some common survey design mistakes that lead to all kinds of measurement errors.

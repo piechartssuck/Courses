@@ -1,0 +1,29 @@
+---
+title: "Wait I Have to Clean my Room and my Data? Adulting is Hard."
+linktitle: "2: Neverending Designs, Measures, and Methods"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 2
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+This week please complete both the **Introduction to the Tidyverse** and **Exploratory Data Analysis in R** courses on [Data Camp](https://www.datacamp.com/) which includes
+
+- Data wrangling
+- Data visualization 
+- Grouping and summarizing
+- Types of visualizations
+<br />
+- Exploring Categorical Data
+- Exploring Numerical Data
+- Numerical Summaries 
+- Case Study (case study of email spam)
+
+respectively. 

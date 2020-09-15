@@ -1,0 +1,33 @@
+# Adapted from http://adrianbruegger.com/import-and-tidy-spss-files-generated-by-qualtrics/
+tidy_labels <- function(...,
+                       stripHTML = TRUE) {
+  
+  item_labels <- sjlabelled::get_label(...) 
+  
+  # Remove html
+  if(stripHTML) {
+    pattern <- "</?\\w+((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[^'\">\\s]+))?)+\\s*|\\s*)/?>" # nolint
+    item_labels <- gsub(pattern, "\\4", item_labels)
+  }
+  
+  # Remove text in front of matrix questions, return subquestion:
+  # If it matches one of ".?!" followed by "-", take subsequent part
+  subquestions <- stringr::str_match(item_labels, ".*[:punct:]\\s*-(.*)")[,2]
+  
+  # Else if subquestion returns NA, use whole string
+  subquestions[is.na(subquestions)] <- unlist(item_labels[is.na(subquestions)])
+  
+  # Remaining NAs default to 'empty string'
+  subquestions[is.na(subquestions)] <- ""
+  
+  # Add labels to data
+  rawdata <- sjlabelled::set_label(..., unlist(subquestions)) %>%
+    sjlabelled::label_to_colnames() %>%
+    sjlabelled::remove_label() %>% 
+    rename_all(~ str_remove_all(., "[[:punct:]]")) %>%
+    rename_all(~ str_remove_all(., "^Q")) %>% 
+    rename_all(~ str_remove_all(., "[[:digit:]]+")) %>%
+    rename_all(~ str_trim(.)) 
+  return(rawdata)
+}
+

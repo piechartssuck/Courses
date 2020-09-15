@@ -1,0 +1,24 @@
+---
+title: "What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming"
+linktitle: "1: An Introduction (or Review) of Some Things"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+This week please complete the **Introduction to R** course on [Data Camp](https://www.datacamp.com/) which includes
+
+- Intro to basics
+- Vectors
+- Matrices
+- Factors
+- Data frames
+- Lists

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Content: Readings | EDP 611</title>
+    <link>/content/</link>
+      <atom:link href="/content/index.xml" rel="self" type="application/rss+xml" />
+    <description>Content: Readings</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>/img/social-image.png</url>
+      <title>Content: Readings</title>
+      <link>/content/</link>
+    </image>
+    
+    <item>
+      <title>Readings</title>
+      <link>/content/01-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/content/01-content/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#readings&#34;&gt;Readings&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-to-reflect-on&#34;&gt;Questions to reflect on&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;readings&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Readings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 1-2 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 1&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions to reflect on&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;How do we know what is true?&lt;/li&gt;
+&lt;li&gt;Does everything need evaluated?&lt;/li&gt;
+&lt;li&gt;Why do we perform program evaluations?&lt;/li&gt;
+&lt;li&gt;What is evaluation in a nutshell?&lt;/li&gt;
+&lt;li&gt;How do you choose what type of evaluation to administer?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>More Readings</title>
+      <link>/content/02-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/content/02-content/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#readings&#34;&gt;Readings&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-to-reflect-on&#34;&gt;Questions to reflect on&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;readings&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Readings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions to reflect on&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What is a measure?&lt;/li&gt;
+&lt;li&gt;How do we actually know if a variable is actually numerical or categorical?&lt;/li&gt;
+&lt;li&gt;Should validity or reliability be tested first?&lt;/li&gt;
+&lt;li&gt;What relationship do evaluation and measurement have?&lt;/li&gt;
+&lt;li&gt;Should all quantitative data have measures?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;&#34;&gt;Exercise I Task&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Even More Readings</title>
+      <link>/content/03-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/content/03-content/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read&#34;&gt;Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#suggestions&#34;&gt;Suggestions&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-to-reflect-on&#34;&gt;Questions to reflect on&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 5-6 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/applications.html&#34; target=&#34;_blank&#34;&gt;Chapters 3-5&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;I am not concerned whether you know a formula or not, rather I want you to understand the general idea so please take your time on Chapter 5!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suggestions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Suggestions&lt;/h2&gt;
+&lt;p&gt;Take some time to review or get a first look at some basic statistics. Again, I do not care if you can memorize a formula. We have these things called books and the Internet to get those. Rather if you can understand what’s going on and when to use a method (e.g. when is it more appropriate to take the mean, median, or mode of a sample).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The statistics videos over at Crash Course are fantastic and pretty entertaining. If interested, you can see the entire list of Crash Course: Statistics series by clicking &lt;a href=&#34;https://www.youtube.com/playlist?list=PLH2l6uzC4UEW3iJO4T0qUeUEp_X-f1U7S&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The example video below is on &lt;em&gt;sampling and bias&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Rf-fIpB4D50&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A good resource for doing foundational level statistics in R, check out &lt;a href=&#34;https://tidylsr.djnavarro.net/index.html&#34; target=&#34;_blank&#34;&gt;Learning statistics with R: A tutorial for psychology students and other beginners&lt;/a&gt; which is part of an ongoing effort to bring &lt;a href=&#34;https://learningstatisticswithr.com/&#34; target=&#34;_blank&#34;&gt;statistics with R&lt;/a&gt; to the masses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions to reflect on&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;What do descriptive statistics really tell us?&lt;/li&gt;
+&lt;li&gt;What can’t descriptive statistics tell us?&lt;/li&gt;
+&lt;li&gt;How are both assessment and evaluation used in CTT (classical test theory)?&lt;/li&gt;
+&lt;li&gt;Why is reliability important?&lt;/li&gt;
+&lt;li&gt;How is reliability used in analyzing qualitative data?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;&#34;&gt;Exercise II Task&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>More Readings? Seriously?</title>
+      <link>/content/04-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/content/04-content/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read&#34;&gt;Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#suggestions&#34;&gt;Suggestions&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-to-reflect-on&#34;&gt;Questions to reflect on&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 8-9 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs. If the idea of something like a cost-benefit analysis interests you, please read this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html&#34; target=&#34;_blank&#34;&gt;Chapters 6-7&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: Firefox appears to have some problems rendering the formulas in the text properly. Google Chrome, Safari, and Tor do not appear to have this problem. With that said, &lt;strong&gt;Chapter 7 is somewhat dense and you are not expected to memorize formulas. Get the basic idea of what an IRT is and what it is used for and ask questions as needed!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suggestions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Suggestions&lt;/h2&gt;
+&lt;p&gt;Next week we cover Item Response Theory (IRT) in greater detail. While Chapter 7 in Albano’s online text is a needed read, it is a bit difficult to fully comprehend at first so we’ll be emphasizing the procedural aspects of conducting one. If you want a grounded conceptual (not statistical or mathematical) introduction, check out &lt;a href=&#34;https://www.youtube.com/playlist?list=PLJNUIJnElUzDmrIPunMyF3tTvIHb65wNb&#34; target=&#34;_blank&#34;&gt;Karon F. Cook’s short 6-part series&lt;/a&gt;. She does a really good job bringing a relatively high level concept down to Earth.&lt;/p&gt;
+&lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions to reflect on&lt;/h3&gt;
+&lt;p&gt;This week first head over to the &lt;a href=&#34;https://www.tylervigen.com/spurious-correlations&#34; target=&#34;_blank&#34;&gt;new version&lt;/a&gt; and &lt;a href=&#34;https://tylervigen.com/old-version.html&#34; target=&#34;_blank&#34;&gt;old version&lt;/a&gt; of Spurious Correlations: the often hilarious and always ridiculous examples of why correlation doesn’t imply causation. Pick one out, paste it into a word document and then write a one paragraph narrative on&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why you chose the one that you did?&lt;/li&gt;
+&lt;li&gt;do you think correlation is ever enough? what is that point?&lt;/li&gt;
+&lt;li&gt;how do you think correlation is tied to measurement?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stuck? Please take a look at &lt;a href=&#34;/handouts/bad_survey.pdf&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; read of some common survey design mistakes that lead to all kinds of measurement errors.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Less Readings? Seriously?</title>
+      <link>/content/05-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/content/05-content/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read&#34;&gt;Read&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#suggestions&#34;&gt;Suggestions&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-to-reflect-on&#34;&gt;Questions to reflect on&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;read&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; Chapters 10-12 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/dimensionality.html&#34; target=&#34;_blank&#34;&gt;Chapter 10&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;. There is not a hint of syntax in this chapter, rather its just a decent summary of the primary items related to measurement. Please skim it over to see if you have compartmentalized the ideas related to each.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suggestions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Suggestions&lt;/h2&gt;
+&lt;p&gt;Start working on your final proposal. If you want feedback on some chunks of your narrative (at most three paragraphs unless we have discussed prior), please send them along. I’ll provide this on a first come-first serve basis.&lt;/p&gt;
+&lt;div id=&#34;questions-to-reflect-on&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions to reflect on&lt;/h3&gt;
+&lt;p&gt;For this week, here are some possible questions to mull around:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What can a factor analysis do when assessing surveys?&lt;/li&gt;
+&lt;li&gt;What types of questions can a factor analysis answer?&lt;/li&gt;
+&lt;li&gt;What do the different types of factor analyses do and how could they inform specific parts of an questionnaire?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

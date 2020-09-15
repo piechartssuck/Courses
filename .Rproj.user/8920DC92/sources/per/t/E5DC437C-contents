@@ -1,0 +1,189 @@
+# Aggregate Findings
+
+# lapply(paste('package:',names(sessionInfo()$otherPkgs),sep=`"),detach,character.only=TRUE,unload=TRUE)
+
+# Set working directory ----
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+# Load libraries ----
+require(qualtRics)
+library(tidyverse)
+library(tidytext)
+library(textclean)
+library(readr)
+library(magrittr)
+library(ggwordcloud)
+library(stm)
+library(furrr)
+library(knitr)
+library(LaCroixColoR)
+library(textclean)
+library(vctrs)
+library(showtext)
+font_add("Jost* Light", "Jost-300-Light.otf")
+font_add("Jost* Book", "Jost-400-Book.otf")
+font_add("Jost* Book Italic", "Jost-400-BookItalic.otf")
+font_add("Jost* Medium", "Jost-500-Medium.otf")
+font_add("Jost* Semi", "Jost-600-Semi.otf")
+font_add("Jost* Semi Italic", "Jost-600-SemiItalic.otf")
+font_add("Jost* Black", "Jost-900-Black.otf")
+font_add("Jost* Heavy", "Jost-800-Heavy.otf")
+showtext_auto()
+## Functions ##
+
+# Set working directory ----
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+## Functions ----
+# ~ Define unlisting function ----
+rbind_to_tbl <- function(...) {
+  as_tibble(vec_rbind(...))
+}
+
+# ~ Define tidying labels ----
+# Adapted from http://adrianbruegger.com/import-and-tidy-spss-files-generated-by-qualtrics/
+# Adapted from http://adrianbruegger.com/import-and-tidy-spss-files-generated-by-qualtrics/
+tidy_labels <- function(...,
+                        stripHTML = TRUE) {
+  
+  item_labels <- sjlabelled::get_label(...) 
+  
+  # Remove html
+  if(stripHTML) {
+    pattern <- "</?\\w+((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[^'\">\\s]+))?)+\\s*|\\s*)/?>" # nolint
+    item_labels <- gsub(pattern, "\\4", item_labels)
+  }
+  
+  # Remove text in front of matrix questions, return subquestion:
+  # If it matches one of ".?!" followed by "-", take subsequent part
+  subquestions <- stringr::str_match(item_labels, ".*[:punct:]\\s*-(.*)")[,2]
+  
+  # Else if subquestion returns NA, use whole string
+  subquestions[is.na(subquestions)] <- unlist(item_labels[is.na(subquestions)])
+  
+  # Remaining NAs default to 'empty string'
+  subquestions[is.na(subquestions)] <- ""
+  
+  # Add labels to data
+  rawdata <- sjlabelled::set_label(..., unlist(subquestions)) %>%
+    sjlabelled::label_to_colnames() %>%
+    sjlabelled::remove_label() %>% 
+    rename_all(~ str_remove_all(., "[[:punct:]]")) %>%
+  #  rename_all(~ str_remove_all(., "^Q")) %>% 
+  #  rename_all(~ str_remove_all(., "[[:digit:]]+")) %>%
+    rename_all(~ str_trim(.)) 
+  return(rawdata)
+}
+
+# Define notin ----
+`%notin%` <- Negate(`%in%`)
+
+## Set credentials ----
+qualtrics_api_credentials(api_key = "gvw1f1OxuVsZy650cd2lUr2hj7KXDNToHuuyvI6t", 
+                          base_url = "wvu.ca1.qualtrics.com", 
+                          install = TRUE,
+                          overwrite =TRUE)
+
+readRenviron("~/.Renviron") 
+
+
+## Get all surveys ----
+surveys <- all_surveys() 
+
+## Use Qualtrics survey ids ----
+t1 = "SV_1SRKrPLiiqntdvT"
+t2 = "SV_43pLAT2kYIoaTT7"
+
+## Choose question items ----
+items <- c("Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8")
+
+## Get response counts
+responsecounts_t1 <- metadata(t1,
+                 get = list(questions = TRUE,
+                            responsecounts = TRUE)) %>%
+  rbind_to_tbl(list()) %>%
+  unnest(cols = c(metadata, questions, responsecounts)) %>%
+  select(auditable) %>%
+  distinct()
+
+responsecounts_t2 <- metadata(t2,
+                              get = list(questions = TRUE,
+                                         responsecounts = TRUE)) %>%
+  rbind_to_tbl(list()) %>%
+  unnest(cols = c(metadata, questions, responsecounts)) %>%
+  select(auditable) %>%
+  distinct()
+
+## Get survey items ----
+# ~ Grab surveys and tidy ----
+elam_t1 <- fetch_survey(t1,
+                        verbose = TRUE,
+                        label = TRUE,
+                        force_request = TRUE
+                      ) %>%
+           select(RecipientLastName, 
+                  RecipientFirstName, 
+                  RecipientEmail, 
+                  c(19:48)) %>%
+           unite(Name, c(RecipientLastName, RecipientFirstName), sep = ", ") %>%
+           na_if("Other (please specify):") %>%
+           mutate(across(contains('TEXT'), na_if, "NA")) %>%
+           mutate(Q7 = coalesce(Q7, Q7_4_TEXT)) %>%
+           mutate(`Tenure Status` = case_when(
+             str_detect(Q7, "Tenured") ~ "Tenured",
+             str_detect(Q7, "tenure track") ~ "Tenure Track",
+             str_detect(Q7, "non-tenure") ~ "Non-Tenure Track",
+             str_detect(Q7, "Clinical") ~ "Clinical"
+              )
+            ) %>%
+           select(-starts_with("Q7")) %>%
+           tidy_labels() %>%
+           rename(Email = "Recipient Email")
+
+
+elam_t2 <- fetch_survey(t2,
+                        verbose = TRUE,
+                        label = TRUE,
+                        force_request = TRUE
+                      ) %>%
+            select(RecipientLastName, 
+                   RecipientFirstName, 
+                   RecipientEmail, 
+                   c(19:47)) %>%
+            unite(Name, c(RecipientLastName, RecipientFirstName), sep = ", ") %>%
+            na_if("Other (please specify):") %>%
+            mutate(across(contains('TEXT'), na_if, "NA")) %>%
+            mutate(Q7 = coalesce(Q7, Q7_4_TEXT)) %>%
+            mutate(`Tenure Status` = case_when(
+              str_detect(Q7, "Tenured") ~ "Tenured",
+              str_detect(Q7, "tenure track") ~ "Tenure Track",
+              str_detect(Q7, "non-tenure") ~ "Non-Tenure Track",
+              str_detect(Q7, "Clinical") ~ "Clinical"
+            )
+            ) %>%
+            select(-starts_with("Q7")) %>%
+            tidy_labels() %>%
+            rename(Email = "Recipient Email")
+
+# ~ Join the two data sets ---- 
+# ~~ full
+elam_long_full <- full_join(elam_t1, elam_t2, by = c("Name", "Email")) %>%
+                  select(order(colnames(.))) %>%
+                  rename_all(list(~str_replace_all(., "\\.x", "_1"))) %>%
+                  rename_all(list(~str_replace_all(., "\\.y", "_2"))) %>%
+                  mutate(`Tenure Status` = coalesce(`Tenure Status_1`, `Tenure Status_2`)) %>%
+                  select(one_of("Name", "Email", "Tenure Status"), -c("Tenure Status_1", "Tenure Status_2"), everything())  
+
+# ~~ inner
+elam_long_inner <- inner_join(elam_t1, elam_t2, by = c("Name", "Email")) %>%
+                   select(order(colnames(.))) %>%
+                   rename_all(list(~str_replace_all(., "\\.x", "_1"))) %>%
+                   rename_all(list(~str_replace_all(., "\\.y", "_2"))) %>%
+                   mutate(`Tenure Status` = coalesce(`Tenure Status_1`, `Tenure Status_2`)) %>%
+                   select(one_of("Name", "Email", "Tenure Status"), -c("Tenure Status_1", "Tenure Status_2"), everything())  
+
+# Save list ----
+# elam_long_inner %>%
+#  select("Name", "Email", "Tenure Status") %>%
+#  write_csv("Common Respondents.csv")
+

@@ -1,0 +1,14 @@
+---
+title: "Content: Readings"
+menu:
+  content:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+Each class session has a set of required readings that you should complete ***before*** doing anything else. 
+
+I've included a set of questions that might guide your reflection response. You should not try to respond to all of these (or any of them if you don't want to)—they'll just help you know what to look for and think about as you read.
+

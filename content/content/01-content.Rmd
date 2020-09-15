@@ -1,0 +1,31 @@
+---
+title: "Readings"
+linktitle: "1: An Introduction (or Review) of Some Things"
+menu:
+  content:
+    parent: Course content
+    weight: 1
+type: docs
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+slides: "01-slides"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+## Readings
+
+- The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
+- <i class="fas fa-book"></i> Chapter 1-2 in James McDavid, *Program Evaluation and Performance Measurement* 
+- <i class="fas fa-book"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html) in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+
+
+### Questions to reflect on
+
+- How do we know what is true?
+- Does everything need evaluated?
+- Why do we perform program evaluations?
+- What is evaluation in a nutshell?
+- How do you choose what type of evaluation to administer?
+

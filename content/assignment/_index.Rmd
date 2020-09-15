@@ -1,0 +1,85 @@
+---
+title: Assignment overview
+menu:
+  assignment:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+You will get the most of out this class if you:
+
+1. engage with the readings and materials,
+2. use R to complete any analysis,
+3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
+4. keep an open and honest line of communication with me and your peers if possible.
+
+Each type of assignment in this class helps with at least one one of these criteria.
+
+## Reflections
+
+To encourage engagement with the course content, you'll need to write a ~150 word reflection about the readings for the day. That's fairly short: there are ~250 words on a typical double-spaced page in Microsoft Word (500 when single-spaced). 
+
+You can do a lot of different things with this memo: discuss something you learned from the course content, write about the best or worst type of measure you've seen, connect the course content to your own work, etc. These reflections let you explore and answer some of the key questions of this course, including:
+
+- What is measurement?
+- Why do we measure?
+- Can everything be measured? Should everything be measured?
+- What makes up a valid and reliable measure? What makes up a poor measure?
+- How do you choose which type of measure to use?
+
+The course content for each day will also include a set of questions specific to that topic. *You do not have to answer all (or any) of these questions*. That would be impossible. They exist to guide your thinking, that's all.
+
+I will grade these memos using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Reflection shows phenomenal thought and engagement with the course content. I will not assign these often.
+- ✔: (*10 points (100%) in gradebook*) Reflection is thoughtful, well-written, and shows engagement with the course content. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Reflection is hastily composed, too short, and/or only cursorily engages with the course content. This grade signals that you need to improve next time. I will hopefully not assign these often.
+
+Everything else is scored as a 0 which should signal that this is essentially a scaled completion-based system. I am not grading your writing ability, counting the exact number of words you're writing, or looking for citations from the reading(s). I am looking for thoughtful engagement and that's it! Do good work and you'll earn a ✓.
+
+You will turn these reflections on the Discussion Board on [eCampus](https://ecampus.wvu.edu/webapps/login/).
+
+
+## Exercises
+
+Each class session has [interactive lessons](/lesson/) and [fully annotated examples](/example/) of code that teach and demonstrate how to do specific tasks in R via [Data Camp](https://www.datacamp.com/). You can easily find answers online but without practicing these foundational aspects of R, you may have trouble later! Note that this is also essentially a pass/fail system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document is clean and easy to follow. Work is exceptional. I will not assign these often.
+- ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Exercises are less than 70% complete and/or most answers are incorrect. This indicates that you need to improve next time. I will hopefully not assign these often.
+
+Again, I am not grading your coding ability, checking each line of code or syntax to make sure it produces the exact output, and most importantly, I am not looking for perfection! Try hard, get frustrated, do good work and you'll get a ✓.
+
+I encourage you to work together on the courses if possible, but you must turn in your own work on Data Camp.
+
+
+## Situations
+
+To give you practice with the data and design principles you'll learn in this class, you will complete three mini projects consisting of situations that necessitate some concept related to assessment and measurement. I will provide you with real-world data and pose one or more questions—you will answer those questions. Sometimes this involves just answering using what you've learnt while others involve using R to assess data.
+
+The submissions will be graded using a check system:
+
+- ✔+: (*85 points (≈115%) in gradebook*) Project is phenomenally well-designed and uses advanced R techniques. The project uncovers an important story that is not readily apparent from just looking at the raw data. I will not assign these often.
+- ✔: (*75 points (100%) in gradebook*) Project is fine, follows most design principles, answers a question from the data, and uses R correctly. This is the expected level of performance.
+- ✔−: (*37.5 points (50%) in gradebook*) Project is missing large components, is poorly designed, does not answer a relevant question, and/or uses R incorrectly. This indicates that you need to improve next time. I will hopefully not assign these often.
+
+Because these tasks give you practice for the final project, I will provide you with extensive feedback on your submissions.
+
+
+## Final project
+
+At the end of the course, you will demonstrate your data visualization skills by completing a final project.
+
+Complete details for the final project will be posted here at the halfway point through the course. To preview, you will
+
+1. Develop a test with items.
+2. Conduct assessments addressing the test's validity and reliability including performing a factor analysis.
+
+**This project serves as your final exam.**
+
+The project will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final project.

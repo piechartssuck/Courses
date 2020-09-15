@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Task: Exercise IV Locating Data What to Turn in    Note: The title for this week is a terrible pun but I lost a bet so her we are.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/assignment/05-exercise/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/assignment/05-exercise/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="EDP 611">
+  <meta property="og:url" content="/assignment/05-exercise/">
+  <meta property="og:title" content="Can We Be Factors Forever? | EDP 611">
+  <meta property="og:description" content="Task: Exercise IV Locating Data What to Turn in    Note: The title for this week is a terrible pun but I lost a bet so her we are."><meta property="og:image" content="/img/social-image.png">
+  <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <meta name="application-name" content="EDP 611: EDP 611" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+
+
+  <title>Can We Be Factors Forever? | EDP 611</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">EDP 611</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/content/"><span>Content</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://edpsych611.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/">Assignment overview</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" >Projects</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/01-exercise/">Exercises</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/01-exercise/">1: An Introduction (or Review) of Some Things</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/02-exercise/">2: Neverending Designs, Measures, and Methods</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/03-exercise/">3: Truthiness, Damned Truths, and Statistics</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/04-exercise/">4: Everything is Out to Get Me</a>
+      </li>
+      
+      <li class="active">
+        <a href="/assignment/05-exercise/">5: Wait is this Algebra?</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Can We Be Factors Forever?</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+
+<div id="TOC">
+<ul>
+<li><a href="#task-exercise-iv">Task: Exercise IV</a><ul>
+<li><a href="#locating-data">Locating Data</a></li>
+<li><a href="#what-to-turn-in">What to Turn in</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>Note: The title for this week is a terrible pun but I lost a bet so her we are.</p>
+<div id="task-exercise-iv" class="section level2">
+<h2>Task: Exercise IV</h2>
+<div id="locating-data" class="section level3">
+<h3>Locating Data</h3>
+<p>You’ll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns). Make sure you keep an accurate record of what data set was used and where you got it from.</p>
+<p>Where can you find data you ask? Oh you didn’t. Well its too late now so here are some suggestions. These are given in alphabetical order without any preferential ranking:</p>
+<ul>
+<li><p><a href="https://registry.opendata.aws/" target="_blank">AWS public datasets</a> - This stands for Amazon Web Service and yes its that Amazon. Believe it or not, Amazon is one of the largest providers of APIs (acronym for <em>application programming interface</em> which is a fancy way to say a service where computer programs can talk to each other), data analytics (fancy of way of saying that a computer is being used for stats), data processing (fancy way of say how efficient data can be analyzed, rearranged, whatever), and storage cloud computing (fancy way of saying securing, sharing and storing data and sharing it). To this end, a lot and I mean a lot of data sets are publicly available.</p></li>
+<li><p><a href="https://ai.baidu.com/broad/introduction?dataset=dureader" target="_blank">Baidu Research</a> - Baidu provides a wide range of data sets at no cost for research and personal uses. They provide data from the various business units like automated car testing, medical, video highlight. While it is unlikely you’ll locate a survey response set, this is a good thing to note.</p></li>
+<li><p><a href="https://www.data.gov/" target="_blank">data.gov</a> - In the United States, all publicly funded data sets are available barring those that may pose a security threat (but you can even get those eventually using the <a href="https://www.foia.gov/data.html" target="_blank">Freedom of Information Act</a>). Other bodies freely share their data as well such as the <a href="https://data.gov.uk/" target="_blank">UK</a>, the <a href="https://data.europa.eu/euodp/en/data/" target="_blank">EU</a>, and <a href="https://data.gov.in/" target="_blank">India</a>. There are plenty of other organizations that share their data too. For example, whatever your opinion is on the <a href="https://data.worldbank.org/" target="_blank">World Bank</a>or even if you don’t have one, even they shares their data since it is publicly funded as well!</p></li>
+<li><p><a href="https://data.world/" target="_blank">data.world</a> - One of the best publicly available repos out there. Some of the sets even come with full R scripts! Other software scripts like Excel, Python, SPSS, SAS, etc are available as well. This is strictly user driven so availability is contingent on who shares what and how.</p></li>
+<li><p>Github - Not only are public data sets plentiful on Github, but people have also taken the time to compile a list for the rest of us. Here are a few popular ones (I promise not every repo is named awesome on Github):</p>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Public Datasets</a></li>
+<li><a href="https://github.com/viisar/awesome-datasets" target="_blank">Awesome Data</a> <br><br></li>
+</ul></li>
+<li><p><a href="https://toolbox.google.com/datasetsearch" target="_blank">Google Dataset Search</a> - Much like nearly every other Google service (e.g. <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>), Goggle Datasets doesn’t actually house anything, rather it is a means for you to get to data, aka a portal what a fantastic name), without having to search all over the web. It is fairly new and their database grows every second - actually its faster than that but as humans we have trouble compartmentalizing any unit of time smaller than a second. Now if you’ve heard the term <em>indexing</em>, that is not this. The best analogy I can think of is creating a grocery shopping list as needed through the week (aka adding to the data base) and then reordering and grouping food items that are closest in proximity to each other so that you can get out of the store as quick and efficiently as possible<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p></li>
+<li><p><a href="https://www.kaggle.com" target="_blank">Kaggle</a> - Described as an AirBnB for data scientists, this site has a ton of public and sometimes private data that has been cleared for public consumption. More than that, it is an absolute playpen if you like exploring data. If you go headfirst into a data set and cannot and I mean cannot cognitively picture an end goal or what the data will tell you until something is done with it, this is the place for you!</p></li>
+</ul>
+</div>
+<div id="what-to-turn-in" class="section level3">
+<h3>What to Turn in</h3>
+<p>After you have located a data set, do the data scientist thing and please follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open up the codebook and locate two columns:</li>
+</ol>
+<ul>
+<li>one that has a unique identifier</li>
+<li>one f your choice that is preferably not filled with demographical information</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Use the same steps outlined in the example piece to conduct your own factor analysis.</p></li>
+<li><p>Answer the following questions on a word document. As usual, please put your name in the upper left hand corner.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the official name of the data set you chose?</li>
+<li>What repository did you get it from (e.g. data.world, Kaggle, etc)? If you did not get it from a place where data is housed, please copy and paste the web address. Please do not copy and paste any additional nonsense that say search engines put on a web address. For example, if you’ve ever copied and pasted a website after using Google, you may notice that the address is obnoxiously long. I don’t want that. If you are having trouble, contact me and I’ll help you through it.</li>
+<li>How did you determine the number of factors?</li>
+<li>What are the factors likely representative of? <em>hint: look at the loadings</em></li>
+<li>Describe the results into a single paragraph narrative. Try to be specific and concise. There is a very narrow way to interpret the results of a factor analysis.</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Submit your script, a copy of the data set and responses on <a href="https://ecampus.wvu.edu/" target="_blank">eCampus</a>.</li>
+</ol>
+<p>:::</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Try doing this if you don’t like shopping!<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/edp611.theoreticalphysed.com/edit/master/content/assignment/05-exercise.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 611: EDP 611 (Summer II 2020)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://lshd.wvu.edu/" target="_blank" rel="noopener">Learning Sciences &amp; Human Development</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt"></i> Forever (for the next six weeks) &emsp;&emsp;
+                <i class="far fa-clock"></i> You pick! 
+                <br><i class="fas fa-university"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            
+            <p>Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+        
+            <p>This site created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. </p>
+            
+            <p><a href="https://github.com/piechartssuck/edp11.theoreticalphysed.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.cbb55fd8eafa574bce72dcb94f65cd2c.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
