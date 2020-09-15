@@ -29,7 +29,7 @@ checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 wk_post <- tibble(
 "Qualtrics?" = c(checked),
 
-Description = c("Participate in the **EDP 619 Survey About Nothing**."),
+Description = c("Participate in the **EDP 619 Survey About Nothing**^[We'll be using R to pull the results directly out of Qualtrics, namely out of something called the Qualtrics API.]."),
 
 Location = c("A unique link was sent to your WVU MIX email at 8am on September 15.")
 

@@ -182,7 +182,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
-Participate in the &lt;strong&gt;EDP 619 Survey About Nothing&lt;/strong&gt;.
+Participate in the &lt;strong&gt;EDP 619 Survey About Nothing&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
 A unique link was sent to your WVU MIX email at 8am on September 15.
@@ -197,6 +197,12 @@ A unique link was sent to your WVU MIX email at 8am on September 15.
 &lt;li&gt;&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in a month.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/assignment/05-assignment/&#34;&gt;Survey Draft&lt;/a&gt; due in two weeks.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;We’ll be using R to pull the results directly out of Qualtrics, namely out of something called the Qualtrics API.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
