@@ -74,9 +74,9 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/piechartssuck/edp611.theoreticalphysed.com'
+  repo_url: 'https://github.com/piechartssuck/Courses/edp611'
   content_dir: ''
-  repo_branch: master
+  repo_branch: edp611
   editable:
     docs: true
     page: false
