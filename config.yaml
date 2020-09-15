@@ -1,6 +1,6 @@
-git@github.com: Permission denied (publickey).baseurl: https://www.theoreticalphysed.com/
+git@github.com: baseurl: https://edp611.theoreticalphysed.com/
 defaultContentLanguage: en
-title: "Measurement/Evaluation in Educational Psychology"
+title: "EDP 611"
 theme: hugo-academic
 
 
