@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "Understand measurement and assess it using R"
+description: "A course providing a foundational look at how evaluation and measurement are used to study programs."
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -91,6 +91,17 @@ edit_page:
 
 author: Abhik Roy
 
+course:
+  number: "EDP 611"
+  semester: "Summer II 2020"
+  days: "Forever (for the next six weeks)"
+  time: "You pick!"
+  location: "Online"
+  dates: "Jun 29–Aug 7, 2020"
+  github: piechartssuck/Courses/tree/edp611
+  copyrightYear: "2020"
+  slack: "https://2020edp611.slack.com"
+
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
@@ -99,27 +110,18 @@ instructor:
   github: piechartssuck
   office: "Allen Hall 504O"
   contact_policy: >-
-    E-mail and Slack are the best ways to get in contact with me. Response times are typically within in 48 and 24 hours, respectively. Please remember that life is somewhat chaotic at this time!
-  appointment_url: "https://calendly.com/nopiecharts/60min"
+    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
+  appointment_url: "https://calendly.com/nopiecharts/short30"
+  office_hours: "By appointment only"
 
-course:
-  number: "EDP 611"
-  semester: "Summer II 2020"
-  days: "Forever (for the next six weeks)"
-  time: "You pick!"
-  location: "Online"
-  dates: "Jun 29–Aug 7, 2020"
-  github: "piechartssuck/edp11.theoreticalphysed.com"
-  copyrightYear: "2020"
-  slack: "https://2020edp611.slack.com"
+
+school:
+  name: Counseling & Learning Sciences
+  url: "https://lshd.wvu.edu/"
 
 university:
   name: West Virginia University
   url: "https://www.wvu.edu"
-
-school:
-  name: Learning Sciences & Human Development
-  url: "https://lshd.wvu.edu/"
 
 
 ############################
