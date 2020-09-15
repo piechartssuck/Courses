@@ -658,6 +658,7 @@ big_five_data_EXT_rev&lt;/code&gt;&lt;/pre&gt;
 ## # … with 90 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let’s take a look at a sample of the first six rows between the two tables to see if the columns were indeed reverse coded.&lt;/p&gt;
 &lt;div align=&#34;center&#34;&gt;
+
 &lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;

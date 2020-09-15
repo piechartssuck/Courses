@@ -208,7 +208,8 @@ big_five_data_EXT_rev
 Let's take a look at a sample of the first six rows between the two tables to see if the columns were indeed reverse coded.
 
 <div align="center">
-```{r, echo = FALSE, fig.align = 'center'}
+
+```{r, echo = FALSE}
 kable(big_five_data_EXT 
         %>% head(),
       align = "c") %>%
@@ -223,7 +224,7 @@ kable(big_five_data_EXT
                 column_spec(10, color='white', background='#317256', include_thead = TRUE) %>%                        add_header_above(c("Original Data Set" = 10))
 ```
 
-```{r, echo = FALSE, fig.align = 'center'}
+```{r, echo = FALSE}
 kable(big_five_data_EXT_rev 
         %>% head(),
       align = "c") %>%
@@ -238,6 +239,7 @@ kable(big_five_data_EXT_rev
                 column_spec(10, color='white', background='#317256', include_thead = TRUE) %>%
                 add_header_above(c("Data Set with Reverse Coded Columns" = 10))
 ```
+
 </div>
 
 That looks correct! Notice that in the <a style="color:	#FFFFFF; background-color: #419873">green</a> columns, the numbers flip along the neutral measure (3), or maybe a better observation is that the numerical complement is correct if adding two corresponding cells equals 5. If you have had any upper level mathematics courses, you may notice these as a modulo or mod 5 system.
@@ -325,7 +327,7 @@ Note we'll talk about a `left_join()` and other types of `joins` next week but f
 In any case, it looks like `EXT4`, `EXT5`, `EXT10`, and `EXT7` have the strongest correlation. The list below has been arranged to represent the data in descending order of measure.
 
 <div align="center">
-```{r, echo = FALSE, fig.align = 'center'}
+```{r, echo = FALSE}
 big_five_correlations_num %>%
   rename("Variable" = "rowname") %>%
   rename("Internal Consistency Measure" = "inter_measure") %>%

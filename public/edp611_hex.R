@@ -68,9 +68,18 @@ steam_preview
 
 steam_trans <- steam + 
                theme_void() + 
-               theme_transparent()  
+               theme_transparent() +
+               theme(panel.background = element_rect(fill = "#293840"))
 
-steam_trans
+ggsave("steam_flow.png",
+       steam_trans,
+       device = "png",
+       dpi = 600,
+       width = 18.06,
+       height = 18.06,
+       units = "cm")
+
+    
 
 sticker(steam_trans, 
         package="EDP 611", 
