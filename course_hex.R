@@ -88,3 +88,15 @@ sticker(circos,
         p_family = "No Tears Bold",
         filename="circoshex.png")
 
+sticker(circos, 
+        package="", 
+        p_size=7, 
+        s_x=1.0, 
+        s_y=1.0, 
+        s_width=1.6, 
+        s_height=1.6,
+        h_fill="#292A30",
+        h_color="#293840",
+        p_family = "No Tears Bold",
+        filename="icon.png")
+
