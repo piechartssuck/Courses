@@ -66,3 +66,16 @@ sticker(sin_w,
         p_family = "Kit&Caboodle Regular",
         filename="course_hex.png")
 
+
+sticker(sin_w, 
+        package="", 
+        p_size=9.5, 
+        s_x=1.0, 
+        s_y=1.0, 
+        s_width=1.5, 
+        s_height=1.5,
+        h_fill="#292A30",
+        h_color="#293840",
+        p_family = "Kit&Caboodle Regular",
+        filename="icon.png")
+

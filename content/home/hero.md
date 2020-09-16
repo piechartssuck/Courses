@@ -23,4 +23,4 @@ cta_note:
   label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
-**A foundational course focused on Bayesian Statistics.**
+**A foundational course with a sprinkling of Bayesian Statistics**
