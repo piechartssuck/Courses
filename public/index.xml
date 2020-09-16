@@ -36,7 +36,6 @@
       <guid>/assignment/01-homeworks/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -226,7 +225,6 @@ Voted; Membership
       <guid>/due/01-due/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -495,7 +493,6 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
       <guid>/due/02-due/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -786,7 +783,6 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
       <guid>/due/03-due/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1834,10 +1830,13 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;p&gt;These resources are also really really helpful:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://cslu.ohsu.edu/~bedricks/courses/cs631/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;CSE 631: Principles &amp;amp; Practice of Data Visualization&lt;/strong&gt;&lt;/a&gt;: Yet another introductory course for R and ggplot2 by &lt;a href=&#34;https://twitter.com/apreshill&#34; target=&#34;_blank&#34;&gt;Dr. Alison Presmanes Hill&lt;/a&gt; at RStudio.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kdpsingh.lab.medicine.umich.edu/lhs-610&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;LHS 610: Exploratory Data Analysis for Health&lt;/strong&gt;&lt;/a&gt;: A comprehensive way to learn R using health based data sets by &lt;a href=&#34;https://twitter.com/kdpsinghlab&#34; target=&#34;_blank&#34;&gt;Dr. Karandeep Singh&lt;/a&gt; out of the University of Michigan.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R for Data Science&lt;/strong&gt;&lt;/a&gt;: A free online book for learning the basics of R and the tidyverse.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R and RStudio cheat sheets&lt;/strong&gt;&lt;/a&gt;: A large collection of simple cheat sheets for RStudio, &lt;strong&gt;ggplot2&lt;/strong&gt;, and other R-related things.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stat545.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stat 545&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/JennyBryan&#34;&gt;Dr. Jenny Bryan&lt;/a&gt; at RStudio has an entire introductory course in R, visualization, and data analysis online.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www2.stat.duke.edu/courses/Fall17/sta112.01/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;STA 112FS: Data Science&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/minebocek&#34; target=&#34;_blank&#34;&gt;Dr. Mine Çetinkaya-Rundel&lt;/a&gt; at the University of Edinburgh / Duke University has an entire introductory course in R, visualization, and data science online.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/allisonhorst/stats-illustrations&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stats Illustrations&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/allison_horst&#34; target=&#34;_blank&#34;&gt;Dr. Allison Horst&lt;/a&gt; created and continues to build beautiful illustrations of many R commands you will probably use.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tinystats.github.io/teacups-giraffes-and-statistics/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Teacup Giraffes&lt;/strong&gt;&lt;/a&gt;: A fantastic and visually stunning way to learn R using animations accessible to children but for adults by &lt;a href=&#34;https://twitter.com/dcossyle&#34; target=&#34;_blank&#34;&gt;Dr. Desirée De Leon&lt;/a&gt; at RStudio.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-in-the-wild&#34; class=&#34;section level2&#34;&gt;
@@ -1848,13 +1847,15 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;h2&gt;Sample of R Visualizations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://rudeboybert.github.io/fivethirtyeight/articles/bob_ross.html&#34; target=&#34;_blank&#34;&gt;Bob Ross - Joy of Painting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rudeboybert.github.io/fivethirtyeight/articles/bechdel.html&#34; target=&#34;_blank&#34;&gt;Bechdel analysis using the tidyverse&lt;/a&gt;: There are also a bunch of other examples &lt;a href=&#34;https://rudeboybert.github.io/fivethirtyeight/articles/&#34; target=&#34;_blank&#34;&gt;using data from FiveThirtyEight&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rudeboybert.github.io/fivethirtyeight/articles/bechdel.html&#34; target=&#34;_blank&#34;&gt;Bechdel analysis using the tidyverse&lt;/a&gt;: There are also a bunch of other examples &lt;a href=&#34;https://rudeboybert.github.io/fivethirtyeight/articles/&#34; target=&#34;_blank&#34;&gt;using data from FiveThirtyEight&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://soc301s2017.netlify.com/group_projects/group5&#34; target=&#34;_blank&#34;&gt;Comparison of Quentin Tarantino Movies by Box Office and the Bechdel Test&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://blog.karawoo.com/2016/09/22/A-decade-ish-of-listening-to-Sigur-Ros&#34; target=&#34;_blank&#34;&gt;A decade(ish) of listening to Sigur Rós&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rud.is/b/2017/06/18/r%E2%81%B6-disproving-approval/&#34; target=&#34;_blank&#34;&gt;Disproving Approval&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EmilHvitfeldt/r-color-palettes&#34; target=&#34;_blank&#34;&gt;R color Palettes&lt;/a&gt; by &lt;a href=&#34;https://www.hvitfeldt.me/&#34; target=&#34;_blank&#34;&gt;Emil Hvitfeldt&lt;/a&gt; is a very comprehensive list of pre packaged color palettes you can get. He has even compiled all of them into an R package called &lt;a href=&#34;https://github.com/EmilHvitfeldt/paletteer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;paletteer&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rud.is/b/2017/07/25/r%E2%81%B6-general-attys-distributions/&#34; target=&#34;_blank&#34;&gt;General (Attys) Distributions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://juliasilge.com/blog/health-care-indicators/&#34; target=&#34;_blank&#34;&gt;Health care indicators in Utah counties&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/&#34; target=&#34;_blank&#34;&gt;Mapping Fall Foliage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://isabella-b.com/&#34; target=&#34;_blank&#34;&gt;Personal Blog&lt;/a&gt; from &lt;a href=&#34;https://twitter.com/_isabellamb&#34; target=&#34;_blank&#34;&gt;Isabella Benabaye&lt;/a&gt; with some fun and colorful R and Python data visualizations&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://rpubs.com/Jwhitman/Final_Project&#34; target=&#34;_blank&#34;&gt;Sexism on the Silver Screen: Exploring film’s gender divide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://juliasilge.com/blog/song-lyrics-across/&#34; target=&#34;_blank&#34;&gt;Song lyrics across the United States&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://varianceexplained.org/r/trump-tweets/&#34; target=&#34;_blank&#34;&gt;Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half&lt;/a&gt; (with a &lt;a href=&#34;http://varianceexplained.org/r/trump-followup/&#34; target=&#34;_blank&#34;&gt;follow-up&lt;/a&gt;)&lt;/li&gt;
@@ -2388,7 +2389,7 @@ You can check out more about what I do here:
       <description>
 
 
-&lt;p&gt;Every class session has four important sections. You should read about the details for each using the main menu at the top of this webpage.&lt;/p&gt;
+&lt;p&gt;Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
@@ -2484,7 +2485,6 @@ You can check out more about what I do here:
       <guid>/syllabus/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2526,13 +2526,13 @@ You can check out more about what I do here:
 &lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;col-md-4&#34;&gt;
         &lt;h3&gt;Instructor&lt;/h3&gt;
+
         &lt;ul class=&#34;icon-list&#34;&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-user fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Dr. Abhik Roy&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-university fa-fw&#34;&gt;&lt;/i&gt; Allen Hall 504O&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-envelope fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;mailto:Abhik.Roy@mail.wvu.edu&#34;&gt; Abhik.Roy@mail.wvu.edu&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fab fa-twitter fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://twitter.com/DrTheoreticalPE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; @DrTheoreticalPE&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;i class=&#34;fas fa-calendar-check fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://calendly.com/nopiecharts/short30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Schedule an appointment&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;i class=&#34;fas fa-video fa-fw&#34;&gt;&lt;/i&gt; Mondays from 1-3 PM via Zoom&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
@@ -2617,7 +2617,7 @@ You can check out more about what I do here:
 &lt;li&gt;&lt;p&gt;Second two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a &lt;a href=&#34;https://stackoverflow.com/help/minimal-reproducible-example&#34; target=&#34;_blank&#34;&gt;minimally reproducible example&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Third using Twitter you can post R-related questions and content with &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;. The community there is exceptionally generous and helpful.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Fifth we have class chatroom at &lt;a href=&#34;2020edp613.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fifth we have a class chatroom which may be accessed via &lt;a href=&#34;2020edp613.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header &lt;strong&gt;EDP 613 “the title of your email”&lt;/strong&gt; where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).&lt;/li&gt;

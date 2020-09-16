@@ -132,7 +132,7 @@ grading <- tribble(
 
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
-  kbl(align='cl',
+  kableExtra::kable(align='cl',
                col.names = c("Percent", "Assignment"),
       ) %>%
   kable_styling(position = "center",
@@ -153,7 +153,7 @@ assignments %>%
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  kableExtra::kbl(align='cl',
+  kableExtra::kable(align='cl',
                col.names = c("Grade", "Range")) %>%
    kable_styling(position = "center",
                 bootstrap_options = c("striped", 
