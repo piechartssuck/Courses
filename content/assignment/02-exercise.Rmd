@@ -1,6 +1,6 @@
 ---
-title: "Graduating from Diapers to Pull Ups with R"
-linktitle: "2: Neverending Designs, Measures, and Methods"
+title: "80% of Your Time with Data is Dedicated to Wrangling!"
+linktitle: "Week 2: 80% of Your Time with Data is Dedicated to Wrangling!"
 output:
   blogdown::html_page:
     toc: true
@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Task: Exercise I
+## Task: Assessing Common Descriptives
 
 Load the `fivethirtyeight` package and scroll through the data sets or alternatively click [here](https://github.com/fivethirtyeight/data){target="_blank"} to see the FiveThirtyEight GitHub repository. Locate a response set that is derived from a survey. 
 

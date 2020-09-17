@@ -1,6 +1,6 @@
 ---
-title: "Readings"
-linktitle: "1: An Introduction (or Review) of Some Things"
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
 menu:
   content:
     parent: Course content
@@ -18,7 +18,7 @@ output:
 
 - The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
 - <i class="fas fa-book fa-fw"></i> Chapter 1-2 in James McDavid, *Program Evaluation and Performance Measurement* 
-- <i class="fas fa-book fa-fw"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html) in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+- <i class="fas fa-book fa-fw"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
 
 
 ### Questions to reflect on
@@ -29,3 +29,4 @@ output:
 - What is evaluation in a nutshell?
 - How do you choose what type of evaluation to administer?
 
+Please submit your narrative to [eCampus](https://ecampus.wvu.edu/){target="_blank"}.

@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Evaluation Checklists Logic Models A Whole Lot of Methods   For a group of people who love conciseness, evaluators often use tools with soem complexity. Below are three chunks that are on a need to know so I can get hired and paid basis.">
+  <meta name="description" content="Evaluation Checklists Logic Models A Whole Lot of Methods   For a group of people who love conciseness, evaluators often use tools with some complexity. Below are three chunks that are on a need to know so I can get hired and paid basis.">
 
   
   <link rel="alternate" hreflang="en-us" href="/example/01-example/">
@@ -240,8 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/example/01-example/">
-  <meta property="og:title" content="Tools that Make Evaluations Easier...or Harder. Things Happen. | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content="Evaluation Checklists Logic Models A Whole Lot of Methods   For a group of people who love conciseness, evaluators often use tools with soem complexity. Below are three chunks that are on a need to know so I can get hired and paid basis."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="Does it Work and Why Does it Work? | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Evaluation Checklists Logic Models A Whole Lot of Methods   For a group of people who love conciseness, evaluators often use tools with some complexity. Below are three chunks that are on a need to know so I can get hired and paid basis."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -276,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Tools that Make Evaluations Easier...or Harder. Things Happen. | Measurement/Evaluation in Educational Psychology</title>
+  <title>Does it Work and Why Does it Work? | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -664,23 +684,27 @@
     <ul class="nav docs-sidenav">
       
       <li class="active">
-        <a href="/example/01-example/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/example/01-example/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/example/02-example/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/example/02-example/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/example/03-example/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/example/03-example/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/example/04-example/">4: Everything is Out to Get Me</a>
+        <a href="/example/04-example/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/example/05-example/">5: Wait is this Algebra?</a>
+        <a href="/example/05-example/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
+      </li>
+      
+      <li >
+        <a href="/example/06-example/">Week 6: From a Certain Poimt of View... A Certain Point of View?</a>
       </li>
       
     </ul>
@@ -700,7 +724,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Tools that Make Evaluations Easier...or Harder. Things Happen.</h1>
+                    <h1>Does it Work and Why Does it Work?</h1>
 
                     
 
@@ -719,7 +743,7 @@
 </ul>
 </div>
 
-<p>For a group of people who love conciseness, evaluators often use tools with soem complexity. Below are three chunks that are on a <strong>need to know so I can get hired and paid</strong> basis.</p>
+<p>For a group of people who love conciseness, evaluators often use tools with some complexity. Below are three chunks that are on a <strong>need to know so I can get hired and paid</strong> basis.</p>
 <div id="evaluation-checklists" class="section level2">
 <h2>Evaluation Checklists</h2>
 <p>Evaluators love checklists and so much so that there is repository solely dedicated to housing them. Head over to <a href="https://wmich.edu/evaluation/checklists">The Evaluation Center</a> at Western Michigan University to take a look.</p>

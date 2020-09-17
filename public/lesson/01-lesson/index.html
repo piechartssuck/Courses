@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content=" This week please complete the Introduction to R course on Data Camp which includes
- Intro to basics Vectors Matrices Factors Data frames Lists  ">
+  <meta name="description" content="Data Camp   Data Camp This week please complete both the Introduction to R and Introduction to the Tidyverse courses on Data Camp. The modules cover an:">
 
   
   <link rel="alternate" hreflang="en-us" href="/lesson/01-lesson/">
@@ -241,9 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/lesson/01-lesson/">
-  <meta property="og:title" content="What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content=" This week please complete the Introduction to R course on Data Camp which includes
- Intro to basics Vectors Matrices Factors Data frames Lists  "><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="Does it Work and Why Does it Work? | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Data Camp   Data Camp This week please complete both the Introduction to R and Introduction to the Tidyverse courses on Data Camp. The modules cover an:"><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -261,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -278,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming | Measurement/Evaluation in Educational Psychology</title>
+  <title>Does it Work and Why Does it Work? | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -674,23 +692,23 @@
     <ul class="nav docs-sidenav">
       
       <li class="active">
-        <a href="/lesson/01-lesson/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/lesson/01-lesson/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/lesson/02-lesson/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/lesson/02-lesson/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/lesson/03-lesson/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/lesson/03-lesson/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/lesson/04-lesson/">4: Everything is Out to Get Me</a>
+        <a href="/lesson/04-lesson/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/lesson/05-lesson/">5: Wait is this Algebra?</a>
+        <a href="/lesson/05-lesson/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
       </li>
       
     </ul>
@@ -710,7 +728,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming</h1>
+                    <h1>Does it Work and Why Does it Work?</h1>
 
                     
 
@@ -721,16 +739,32 @@
                     <div class="article-style">
                         
 
+<div id="TOC">
+<ul>
+<li><a href="#data-camp">Data Camp</a></li>
+</ul>
+</div>
 
-<p>This week please complete the <strong>Introduction to R</strong> course on <a href="https://www.datacamp.com/">Data Camp</a> which includes</p>
+<div id="data-camp" class="section level2">
+<h2>Data Camp</h2>
+<p>This week please complete both the <strong>Introduction to R</strong> and <strong>Introduction to the Tidyverse</strong> courses on <a href="https://www.datacamp.com/">Data Camp</a>. The modules cover an:</p>
 <ul>
 <li>Intro to basics</li>
 <li>Vectors</li>
 <li>Matrices</li>
 <li>Factors</li>
 <li>Data frames</li>
-<li>Lists</li>
+<li>Lists
+<br>
+and
+<br></li>
+<li>Data wrangling</li>
+<li>Data visualization</li>
+<li>Grouping and summarizing</li>
+<li>Types of visualizations</li>
 </ul>
+<p><em>Please take your time with these modules. While the first gives you an understand of the R environment, the second deals with data wrangling, namely making sure data is “tidy”. We’ll be using this idea moving forward in the course.</em></p>
+</div>
 
                     </div>
 

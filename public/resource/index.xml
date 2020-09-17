@@ -133,7 +133,7 @@
     </item>
     
     <item>
-      <title>Installing R, RStudio, tidyverse, and tinytex</title>
+      <title>Installing R, RStudio, and tidyverse</title>
       <link>/resource/install/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/install/</guid>
@@ -798,7 +798,7 @@ output:
 &lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;---
 title: &amp;quot;My document&amp;quot;
 author: &amp;quot;My name&amp;quot;
-date: &amp;quot;January 13, 2020&amp;quot;
+date: &amp;quot;August 19, 2020&amp;quot;
 output: 
   html_document: 
     toc: yes

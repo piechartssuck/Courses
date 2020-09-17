@@ -13,70 +13,113 @@
     </image>
     
     <item>
-      <title>What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming</title>
+      <title>Does it Work and Why Does it Work?</title>
       <link>/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/01-lesson/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;This week please complete the &lt;strong&gt;Introduction to R&lt;/strong&gt; course on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to R&lt;/strong&gt; and &lt;strong&gt;Introduction to the Tidyverse&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt;. The modules cover an:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro to basics&lt;/li&gt;
 &lt;li&gt;Vectors&lt;/li&gt;
 &lt;li&gt;Matrices&lt;/li&gt;
 &lt;li&gt;Factors&lt;/li&gt;
 &lt;li&gt;Data frames&lt;/li&gt;
-&lt;li&gt;Lists&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Wait I Have to Clean my Room and my Data? Adulting is Hard.</title>
-      <link>/lesson/02-lesson/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/02-lesson/</guid>
-      <description>
-
-
-&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to the Tidyverse&lt;/strong&gt; and &lt;strong&gt;Exploratory Data Analysis in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;Lists
+&lt;br&gt;
+and
+&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Data wrangling&lt;/li&gt;
 &lt;li&gt;Data visualization&lt;/li&gt;
 &lt;li&gt;Grouping and summarizing&lt;/li&gt;
-&lt;li&gt;Types of visualizations
-&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
-&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
-&lt;li&gt;Numerical Summaries&lt;/li&gt;
-&lt;li&gt;Case Study (case study of email spam)&lt;/li&gt;
+&lt;li&gt;Types of visualizations&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;respectively.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please take your time with these modules. While the first gives you an understand of the R environment, the second deals with data wrangling, namely making sure data is “tidy”. We’ll be using this idea moving forward in the course.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Wrangling Data? That Sounds Like So Much Zzzzzzzz.....</title>
+      <title>Truthiness, Damned Truthiness, and Statistics</title>
       <link>/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/03-lesson/</guid>
       <description>
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to the Tidyverse&lt;/strong&gt; and &lt;strong&gt;Exploratory Data Analysis in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;This week please complete both the &lt;strong&gt;Correlation and Regression in R&lt;/strong&gt; and &lt;strong&gt;Survey and Measurement Development in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The modules cover:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visualizing two variables&lt;/li&gt;
+&lt;li&gt;Correlation&lt;/li&gt;
+&lt;li&gt;Simple linear regression&lt;/li&gt;
+&lt;li&gt;Interpreting regression models&lt;/li&gt;
+&lt;li&gt;Model Fit
+&lt;br&gt;
+and
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Preparing to analyze survey data&lt;/li&gt;
+&lt;li&gt;Exploratory factor analysis &amp;amp; survey development&lt;/li&gt;
+&lt;li&gt;Confirmatory factor analysis &amp;amp; construct validation&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Criterion validity &amp;amp; replication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
+      <link>/lesson/02-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/02-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-note-about-the-title&#34;&gt;A Note About the Title&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;This week please complete both the &lt;strong&gt;Introduction to Data in R&lt;/strong&gt; and &lt;strong&gt;Exploratory Data Analysis in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The modules cover the:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Language of data&lt;/li&gt;
 &lt;li&gt;Study types and cautionary tales&lt;/li&gt;
 &lt;li&gt;Sampling strategies and experimental design&lt;/li&gt;
 &lt;li&gt;Case study (physical appearance of instructors and course evals)
-&lt;br /&gt;&lt;/li&gt;
+&lt;br&gt;
+and
+&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Exploring Categorical Data&lt;/li&gt;
 &lt;li&gt;Exploring Numerical Data&lt;/li&gt;
 &lt;li&gt;Numerical Summaries&lt;/li&gt;
 &lt;li&gt;Case Study (case study of email spam)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;respectively.&lt;/p&gt;
+&lt;div id=&#34;a-note-about-the-title&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Note About the Title&lt;/h3&gt;
+&lt;p&gt;That 80% figure is based on the &lt;a href=&#34;https://en.wikipedia.org/wiki/Pareto_principle&#34; target=&#34;_blank&#34;&gt;Pareto Principal&lt;/a&gt; and is meant to be taken as a hyperbole. It roughly translates to the idea that 80 percent you time is spent simply finding, cleansing, and organizing data - aka wrangling - leaving only 20 percent for meaningful analyses.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -87,43 +130,73 @@
       <guid>/lesson/04-lesson/</guid>
       <description>
 
-
-&lt;p&gt;This week please complete both the &lt;strong&gt;Survey and Measurement Development in R&lt;/strong&gt; and &lt;strong&gt;Correlation and Regression in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Preparing to analyze survey data&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Exploratory factor analysis &amp;amp; survey development&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Confirmatory factor analysis &amp;amp; construct validation&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Criterion validity &amp;amp; replication&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Visualizing two variables&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Correlation&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Simple linear regression&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Interpreting regression models&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Model Fit&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#correlation-may-equal-causation&#34;&gt;Correlation may Equal Causation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/lesson/05-lesson/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/05-lesson/</guid>
-      <description>
+&lt;/div&gt;
 
-
+&lt;div id=&#34;correlation-may-equal-causation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Correlation may Equal Causation&lt;/h2&gt;
 &lt;p&gt;While we have head the same saying that correlation &lt;span class=&#34;math inline&#34;&gt;\(\nRightarrow\)&lt;/span&gt; causation, it CAN imply it (with enough evidence!) Watch this visualization of the concept below.&lt;/p&gt;
 &lt;p align=&#34;center&#34;&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/HUti6vGctQM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;/p&gt;
-&lt;p&gt;Now please complete the &lt;strong&gt;Correlation and Regression in R&lt;/strong&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which includes&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;This week please complete both the &lt;strong&gt;Intermediate R&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and &lt;strong&gt;Foundations of Inference&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; courses on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The modules cover:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Visualizing two variables&lt;/li&gt;
-&lt;li&gt;Correlation&lt;/li&gt;
-&lt;li&gt;Simple linear regression&lt;/li&gt;
-&lt;li&gt;Interpreting regression models&lt;/li&gt;
-&lt;li&gt;Model Fit&lt;/li&gt;
+&lt;li&gt;Conditionals and Control Flow&lt;/li&gt;
+&lt;li&gt;Loops&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;li&gt;The apply family&lt;/li&gt;
+&lt;li&gt;Utilities
+&lt;br&gt;
+and
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Introduction to ideas of inference&lt;/li&gt;
+&lt;li&gt;Completing a randomization test: gender discrimination&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Hypothesis testing errors: opportunity cost&lt;/li&gt;
+&lt;li&gt;Confidence intervals&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The Intermediate R module is a little heavy on the programming aspect so get an idea of what these functions do in general, but don’t spend too much time on any of the problems.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Foundations of Inference assumed you have had some introduction to statistics at some point in your past. If you have not, please check out the &lt;a href=&#34;https://edp611.theoreticalphysed.com/resource/r/#learning-r-1&#34;&gt;Resources&lt;/a&gt; page for some suggestions on statistical reviews.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
+      <link>/lesson/05-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/05-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;Please complete the &lt;strong&gt;Factor Analysis in R&lt;/strong&gt; course on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. The module covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluating your measure with factor analysis&lt;/li&gt;
+&lt;li&gt;Multidimensional EFA&lt;/li&gt;
+&lt;li&gt;Confirmatory Factor Analysis&lt;/li&gt;
+&lt;li&gt;Refining your measure and/or model Interpreting regression models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </description>
     </item>
     

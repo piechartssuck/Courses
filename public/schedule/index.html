@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -734,7 +754,7 @@
         </tr>
         <tr>
             <td align="right" style="width:18%;text-align:right">July 5, 2020</td>
-            <td style="width:50%;text-align:left">An Introduction or Review of Evaluation</td>
+            <td style="width:50%;text-align:left">Does it Work and Why Does it Work?</td>
             <td align="center" style="width:10%;text-align:center"><a href="/readings/01-readings/">
                     <i class="fas fa-book fa-lg fa-fw"></i></a></td>
             <td align="center" style="width:10%;text-align:center"><a href="/lesson/01-lesson/">
@@ -779,7 +799,7 @@
         </tr>
         <tr>
             <td align="right" style="width:18%;text-align:right">July 26, 2020</td>
-            <td style="width:50%;text-align:left">Everything is Out to Get Me</td>
+            <td style="width:50%;text-align:left">Pirates Cause Global Warming</td>
             <td align="center" style="width:10%;text-align:center"><a href="/readings/04-readings/">
                     <i class="fas fa-book fa-lg fa-fw"></i></a></td>
             <td align="center" style="width:10%;text-align:center"><a href="/lesson/04-lesson/">
@@ -794,7 +814,7 @@
         </tr>
         <tr>
             <td align="right" style="width:18%;text-align:right">August 2, 2020</td>
-            <td style="width:50%;text-align:left">Wait is this Algebra?</td>
+            <td style="width:50%;text-align:left">Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</td>
             <td align="center" style="width:10%;text-align:center"><a href="/readings/05-readings/">
                     <i class="fas fa-book fa-lg fa-fw"></i></a></td>
             <td align="center" style="width:10%;text-align:center"><a href="/lesson/05-lesson/">
@@ -804,6 +824,25 @@
             <td align="center" style="width:10%;text-align:center"><a href="/assignment/05-exercise/">
                     <i class="fas fa-tasks fa-lg fa-fw"></i></a></td>
             <td align="center" style="width:10%;text-align:center"><a href="/due/05-due/">
+              <font color="008080">
+                    <i class="fas fa-folder-open fa-lg fa-fw"></i></a></td>
+        </tr>
+        <tr>
+            <td align="right" style="width:18%;text-align:right">August 9, 2020</td>
+            <td style="width:50%;text-align:left">From a Certain Poimt of View&hellip; A Certain Point of View?</td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-book fa-lg fa-fw"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center">
+                <font color="f1f1f1">
+                    <i class="fas fa-chalkboard fa-lg fa-fw"></i></font>
+            </td>
+            <td align="center" style="width:10%;text-align:center"><a href="/example/06-example/">
+                    <i class="fas fa-lightbulb fa-lg fa-fw"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a href="/assignment/06-exercise/">
+                    <i class="fas fa-tasks fa-lg fa-fw"></i></a></td>
+            <td align="center" style="width:10%;text-align:center"><a href="/due/06-due/">
               <font color="008080">
                     <i class="fas fa-folder-open fa-lg fa-fw"></i></a></td>
         </tr>

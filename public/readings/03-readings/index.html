@@ -241,7 +241,7 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/readings/03-readings/">
-  <meta property="og:title" content="Even More Readings | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:title" content="Truthiness, Damned Truthiness, and Statistics | Measurement/Evaluation in Educational Psychology">
   <meta property="og:description" content="Read Suggestions Questions to reflect on    Read   Chapters 5-6 in James McDavid, Program Evaluation and Performance Measurement
   Chapters 3-5 in Tony Albano, Introduction to Educational and Psychological Measurement Using R"><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
@@ -261,8 +261,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -278,7 +298,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Even More Readings | Measurement/Evaluation in Educational Psychology</title>
+  <title>Truthiness, Damned Truthiness, and Statistics | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -661,23 +681,23 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/readings/01-readings/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/readings/01-readings/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/readings/02-readings/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/readings/02-readings/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li class="active">
-        <a href="/readings/03-readings/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/readings/03-readings/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/readings/04-readings/">4: Everything is Out to Get Me</a>
+        <a href="/readings/04-readings/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/readings/05-readings/">5: Wait is this Algebra?</a>
+        <a href="/readings/05-readings/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
       </li>
       
     </ul>
@@ -710,7 +730,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Even More Readings</h1>
+                    <h1>Truthiness, Damned Truthiness, and Statistics</h1>
 
                     
 
@@ -752,7 +772,7 @@
 <li>A good resource for doing foundational level statistics in R, check out <a href="https://tidylsr.djnavarro.net/index.html" target="_blank">Learning statistics with R: A tutorial for psychology students and other beginners</a> which is part of an ongoing effort to bring <a href="https://learningstatisticswithr.com/" target="_blank">statistics with R</a> to the masses.</li>
 </ul>
 <div id="questions-to-reflect-on" class="section level3">
-<h3>Questions to reflect on</h3>
+<h3>Questions to reflect on<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h3>
 <ul>
 <li>What do descriptive statistics really tell us?</li>
 <li>What can’t descriptive statistics tell us?</li>
@@ -760,8 +780,14 @@
 <li>Why is reliability important?</li>
 <li>How is reliability used in analyzing qualitative data?</li>
 </ul>
-<p>Note: These reflection items <em>can</em> be integrated into this week’s reflection which is item #2 in the <a href="">Exercise II Task</a>.</p>
+<p>Please submit your narrative to <a href="https://ecampus.wvu.edu/" target="_blank">eCampus</a>.</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>These reflection items <em>can</em> be integrated into this week’s reflection which is item #2 in the <a href="/assignment/03-exercise/#task-exercise-ii-1">Exercise II Task</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
                     </div>

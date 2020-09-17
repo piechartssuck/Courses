@@ -3,7 +3,7 @@ title: Syllabus
 slug: syllabus
 citeproc: true
 bibliography: ../../static/bib/references.bib
-csl: ../../static/bib/chicago-syllabus-no-bib.csl
+csl: ../../static/bib/apa7th.csl
 output:
   blogdown::html_page:
     toc: true
@@ -97,7 +97,7 @@ But there are multiple resources online to help.
 
 - Fifth we have a class chatroom which may be accessed via [Slack](2020edp611.slack.com) where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
 
-- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 613 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
+- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 611 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
 
   - A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
   - A copy of your data set (if applicable).

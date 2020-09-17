@@ -1,6 +1,6 @@
 ---
-title: "If You Haven't Tested It, Assume Its Broken"
-linktitle: "4: Everything is Out to Get Me"
+title: "Pirates Cause Global Warming"
+linktitle: "Week 4: Pirates Cause Global Warming"
 output:
   blogdown::html_page:
     toc: true

@@ -1,29 +1,33 @@
 ---
-title: "Wrangling Data? That Sounds Like So Much Zzzzzzzz....."
-linktitle: "3: Truthiness, Damned Truthiness, and Statistics"
+title: "Truthiness, Damned Truthiness, and Statistics"
+linktitle: "Week 3: Truthiness, Damned Truthiness, and Statistics"
 output:
   blogdown::html_page:
     toc: true
 menu:
   lesson:
     parent: Lessons
-    weight: 3
+    weight: 4
 type: docs
 weight: 3
 editor_options: 
   chunk_output_type: console
 ---
 
-This week please complete both the **Introduction to the Tidyverse** and **Exploratory Data Analysis in R** courses on [Data Camp](https://www.datacamp.com/) which includes
+## Data Camp
 
-- Language of data
-- Study types and cautionary tales 
-- Sampling strategies and experimental design
-- Case study (physical appearance of instructors and course evals)
-<br />
-- Exploring Categorical Data
-- Exploring Numerical Data
-- Numerical Summaries 
-- Case Study (case study of email spam)
+This week please complete both the **Correlation and Regression in R** and **Survey and Measurement Development in R** courses on [Data Camp](https://www.datacamp.com/){target="_blank"}. The modules cover:
 
-respectively. 
+- Visualizing two variables
+- Correlation
+- Simple linear regression
+- Interpreting regression models
+- Model Fit
+<br>
+and
+<br>
+- Preparing to analyze survey data
+- Exploratory factor analysis & survey development 
+- Confirmatory factor analysis & construct validation  
+- Criterion validity & replication
+

@@ -1,0 +1,56 @@
+---
+title: "From a Certain Poimt of View. A Certain Point of View?"
+linktitle: "Week 6: From a Certain Poimt of View. A Certain Point of View?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 7
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to submit for Week 6
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"eCampus?" = c(unchecked, 
+               checked, 
+               checked),
+
+Description = c("Submit an analysis of a survey data using principal component analysis.",
+               "Submit your final instrument^[Note if you would like either no feedback, general feedback, or itemwise feedback. The latter takes an extensive amount of time so please only request this if you intend to use the instrument sometime in the near future or if it is part of or informs your research in some capacity.].",
+               "Please complete the exit survey^[Optional but your feedback will help to inform the shape and structure of the course moving forward.]."),
+
+Location = c("[Link](/example/06-example/#principal-component-analysis-pca)",
+             "[Link](/assignment/#anchorwk6)",
+             "A unique Qualtrics link was sent to your WVU MIX email this morning.")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "20em")
+```
+

@@ -1,6 +1,6 @@
 ---
-title: "Tools that Make Evaluations Easier...or Harder. Things Happen."
-linktitle: "1: An Introduction (or Review) of Some Things"
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
 output:
   blogdown::html_page:
     toc: true
@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-For a group of people who love conciseness, evaluators often use tools with soem complexity. Below are three chunks that are on a **need to know so I can get hired and paid** basis.
+For a group of people who love conciseness, evaluators often use tools with some complexity. Below are three chunks that are on a **need to know so I can get hired and paid** basis.
 
 ## Evaluation Checklists
 
@@ -26,4 +26,4 @@ Logic models are simply a visual(ish) way to depict the moving parts of a progra
 
 ## A Whole Lot of Methods
 
-Being an evaluator is akin to "being a jack of all trades but a master of none."  That is not meant to be demeaning in any way (or else I'd just be putting myself down). We are typically  methodologists and/or have an innate ability to construct studies to determine the needs of a program. However evaluators are rarely content experts and even if we are, the likelihood of evaluating something within our content is pretty low. Take a look at [Better Evaluation](https://www.betterevaluation.org/en) to get an idea of the breadth of methods and approaches evaluators need to know in order to do their job effectively.
+Being an evaluator is akin to "being a jack of all trades but a master of none." That is not meant to be demeaning in any way (or else I'd just be putting myself down). We are typically methodologists and/or have an innate ability to construct studies to determine the needs of a program. However evaluators are rarely content experts and even if we are, the likelihood of evaluating something within our content is pretty low. Take a look at [Better Evaluation](https://www.betterevaluation.org/en) to get an idea of the breadth of methods and approaches evaluators need to know in order to do their job effectively.

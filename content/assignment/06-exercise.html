@@ -1,0 +1,80 @@
+---
+title: "From a Certain Poimt of View... A Certain Point of View?"
+linktitle: "Week 6: From a Certain Poimt of View... A Certain Point of View?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Exercises
+    weight: 5
+type: docs
+weight: 5
+editor_options: 
+  chunk_output_type: console
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#idea-principle-component-analysis-pca">Idea: Principle Component Analysis (PCA)</a><ul>
+<li><a href="#locating-data">Locating Data</a></li>
+<li><a href="#what-to-turn-in">What to Turn in</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="idea-principle-component-analysis-pca" class="section level2">
+<h2>Idea: Principle Component Analysis (PCA)</h2>
+<div id="locating-data" class="section level3">
+<h3>Locating Data</h3>
+<p>You’ll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns). Make sure you keep an accurate record of what data set was used and where you got it from.</p>
+<p>Where can you find data you ask? Oh you didn’t. Well its too late now so here are some suggestions. These are given in alphabetical order without any preferential ranking:</p>
+<ul>
+<li><p><a href="https://registry.opendata.aws/" target="_blank">AWS public datasets</a> - This stands for Amazon Web Service and yes its that Amazon. Believe it or not, Amazon is one of the largest providers of APIs (acronym for <em>application programming interface</em> which is a fancy way to say a service where computer programs can talk to each other), data analytics (fancy of way of saying that a computer is being used for stats), data processing (fancy way of say how efficient data can be analyzed, rearranged, whatever), and storage cloud computing (fancy way of saying securing, sharing and storing data and sharing it). To this end, a lot and I mean a lot of data sets are publicly available.</p></li>
+<li><p><a href="https://ai.baidu.com/broad/introduction?dataset=dureader" target="_blank">Baidu Research</a> - Baidu provides a wide range of data sets at no cost for research and personal uses. They provide data from the various business units like automated car testing, medical, video highlight. While it is unlikely you’ll locate a survey response set, this is a good thing to note.</p></li>
+<li><p><a href="https://www.data.gov/" target="_blank">data.gov</a> - In the United States, all publicly funded data sets are available barring those that may pose a security threat (but you can even get those eventually using the <a href="https://www.foia.gov/data.html" target="_blank">Freedom of Information Act</a>). Other bodies freely share their data as well such as the <a href="https://data.gov.uk/" target="_blank">UK</a>, the <a href="https://data.europa.eu/euodp/en/data/" target="_blank">EU</a>, and <a href="https://data.gov.in/" target="_blank">India</a>. There are plenty of other organizations that share their data too. For example, whatever your opinion is on the <a href="https://data.worldbank.org/" target="_blank">World Bank</a>or even if you don’t have one, even they shares their data since it is publicly funded as well!</p></li>
+<li><p><a href="https://data.world/" target="_blank">data.world</a> - One of the best publicly available repos out there. Some of the sets even come with full R scripts! Other software scripts like Excel, Python, SPSS, SAS, etc are available as well. This is strictly user driven so availability is contingent on who shares what and how.</p></li>
+<li><p>Github - Not only are public data sets plentiful on Github, but people have also taken the time to compile a list for the rest of us. Here are a few popular ones (I promise not every repo is named awesome on Github):</p>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Public Datasets</a></li>
+<li><a href="https://github.com/viisar/awesome-datasets" target="_blank">Awesome Data</a> <br><br></li>
+</ul></li>
+<li><p><a href="https://toolbox.google.com/datasetsearch" target="_blank">Google Dataset Search</a> - Much like nearly every other Google service (e.g. <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>), Goggle Datasets doesn’t actually house anything, rather it is a means for you to get to data, aka a portal what a fantastic name), without having to search all over the web. It is fairly new and their database grows every second - actually its faster than that but as humans we have trouble compartmentalizing any unit of time smaller than a second. Now if you’ve heard the term <em>indexing</em>, that is not this. The best analogy I can think of is creating a grocery shopping list as needed through the week (aka adding to the data base) and then reordering and grouping food items that are closest in proximity to each other so that you can get out of the store as quick and efficiently as possible<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p></li>
+<li><p><a href="https://www.kaggle.com" target="_blank">Kaggle</a> - Described as an AirBnB for data scientists, this site has a ton of public and sometimes private data that has been cleared for public consumption. More than that, it is an absolute playpen if you like exploring data. If you go headfirst into a data set and cannot and I mean cannot cognitively picture an end goal or what the data will tell you until something is done with it, this is the place for you!</p></li>
+</ul>
+</div>
+<div id="what-to-turn-in" class="section level3">
+<h3>What to Turn in</h3>
+<p>After you have located a data set, do the data scientist thing and please follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open up the codebook and locate multiple columns:</li>
+</ol>
+<ul>
+<li>one that has a unique identifier</li>
+<li>multiple with quantiative data that have relationships or are being used to assess the same measure<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Use the same steps outlined in the example piece to conduct your own principal component analysis.</p></li>
+<li><p>Answer the following questions on a word document. As usual, please put your name in the upper left hand corner.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the official name of the data set you chose?</li>
+<li>What repository did you get it from (e.g. data.world, Kaggle, etc)? If you did not get it from a place where data is housed, please copy and paste the web address. Please do not copy and paste any additional nonsense that say search engines put on a web address. For example, if you’ve ever copied and pasted a website after using Google, you may notice that the address is obnoxiously long. I don’t want that. If you are having trouble, contact me and I’ll help you through it.</li>
+<li>How did you determine the number of components?</li>
+<li>What do the components tell you? <em>hint: look at the loadings</em></li>
+<li>Describe the results into a single paragraph narrative. Try to be specific and concise. There is a very narrow way to interpret the results of a PCA.</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Submit your script, a copy of the data set and responses on <a href="https://ecampus.wvu.edu/" target="_blank">eCampus</a>.</li>
+</ol>
+<p>:::</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Try doing this if you don’t like shopping!<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>None should be filled with demographical information.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

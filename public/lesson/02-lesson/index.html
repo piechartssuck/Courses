@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content="This week please complete both the Introduction to the Tidyverse and Exploratory Data Analysis in R courses on Data Camp which includes
- Data wrangling Data visualization Grouping and summarizing Types of visualizations  Exploring Categorical Data Exploring Numerical Data Numerical Summaries Case Study (case study of email spam)  respectively.">
+  <meta name="description" content="Data Camp A Note About the Title    Data Camp This week please complete both the Introduction to Data in R and Exploratory Data Analysis in R courses on Data Camp.">
 
   
   <link rel="alternate" hreflang="en-us" href="/lesson/02-lesson/">
@@ -241,9 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/lesson/02-lesson/">
-  <meta property="og:title" content="Wait I Have to Clean my Room and my Data? Adulting is Hard. | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content="This week please complete both the Introduction to the Tidyverse and Exploratory Data Analysis in R courses on Data Camp which includes
- Data wrangling Data visualization Grouping and summarizing Types of visualizations  Exploring Categorical Data Exploring Numerical Data Numerical Summaries Case Study (case study of email spam)  respectively."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="80% of Your Time with Data is Dedicated to Wrangling! | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Data Camp A Note About the Title    Data Camp This week please complete both the Introduction to Data in R and Exploratory Data Analysis in R courses on Data Camp."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -261,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -278,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Wait I Have to Clean my Room and my Data? Adulting is Hard. | Measurement/Evaluation in Educational Psychology</title>
+  <title>80% of Your Time with Data is Dedicated to Wrangling! | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -674,23 +692,23 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/lesson/01-lesson/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/lesson/01-lesson/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li class="active">
-        <a href="/lesson/02-lesson/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/lesson/02-lesson/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/lesson/03-lesson/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/lesson/03-lesson/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/lesson/04-lesson/">4: Everything is Out to Get Me</a>
+        <a href="/lesson/04-lesson/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/lesson/05-lesson/">5: Wait is this Algebra?</a>
+        <a href="/lesson/05-lesson/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
       </li>
       
     </ul>
@@ -710,7 +728,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Wait I Have to Clean my Room and my Data? Adulting is Hard.</h1>
+                    <h1>80% of Your Time with Data is Dedicated to Wrangling!</h1>
 
                     
 
@@ -721,20 +739,36 @@
                     <div class="article-style">
                         
 
-
-<p>This week please complete both the <strong>Introduction to the Tidyverse</strong> and <strong>Exploratory Data Analysis in R</strong> courses on <a href="https://www.datacamp.com/">Data Camp</a> which includes</p>
+<div id="TOC">
 <ul>
-<li>Data wrangling</li>
-<li>Data visualization</li>
-<li>Grouping and summarizing</li>
-<li>Types of visualizations
-<br /></li>
+<li><a href="#data-camp">Data Camp</a><ul>
+<li><a href="#a-note-about-the-title">A Note About the Title</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="data-camp" class="section level2">
+<h2>Data Camp</h2>
+<p>This week please complete both the <strong>Introduction to Data in R</strong> and <strong>Exploratory Data Analysis in R</strong> courses on <a href="https://www.datacamp.com/" target="_blank">Data Camp</a>. The modules cover the:</p>
+<ul>
+<li>Language of data</li>
+<li>Study types and cautionary tales</li>
+<li>Sampling strategies and experimental design</li>
+<li>Case study (physical appearance of instructors and course evals)
+<br>
+and
+<br></li>
 <li>Exploring Categorical Data</li>
 <li>Exploring Numerical Data</li>
 <li>Numerical Summaries</li>
 <li>Case Study (case study of email spam)</li>
 </ul>
 <p>respectively.</p>
+<div id="a-note-about-the-title" class="section level3">
+<h3>A Note About the Title</h3>
+<p>That 80% figure is based on the <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">Pareto Principal</a> and is meant to be taken as a hyperbole. It roughly translates to the idea that 80 percent you time is spent simply finding, cleansing, and organizing data - aka wrangling - leaving only 20 percent for meaningful analyses.</p>
+</div>
+</div>
 
                     </div>
 

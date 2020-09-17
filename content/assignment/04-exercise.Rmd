@@ -1,6 +1,6 @@
 ---
-title: "Thinking About Instruments"
-linktitle: "4: Everything is Out to Get Me"
+title: "Pirates Cause Global Warming"
+linktitle: "Week 4: Pirates Cause Global Warming"
 output:
   blogdown::html_page:
     toc: true
@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Task: Request of Proposal (RFP)
+## Task: RFPs with Reliability and Validity
 
 A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation. For example, you can go to the [American Evaluation Association's (AEA) Career Center](https://careers.eval.org/){target="_blank"} and simply type `rfp` in the Keyword or Job Title box to take a look at current opportunities and their respective requirements. 
 
@@ -48,14 +48,4 @@ The deadline for this RFP is Thursday, August 6 by 11:59PM. The structure and pa
 - follow all APA 7th Edition guidelines. 
 - have support (e.g. references of previous studies) where *an assertion is made*. 
 - be clearly and concisely written, You simply do not have enough space to get wordy, so read and critique your proposal over and over until you are simply sick of it. If you get to the point where all criteria are met but you are at the "to hell with this and him" stage, then the proposal is probably in a good state to be submitted.
-
-## Task: Exercise III
-
-This task is pretty simple and is also tied to you final proposal. By Tuesday please send me an email answering one of the following bullets points:
-
-- If you have chosen to create your own instrument and if so, for what purpose? How do you currently envision the data collection tool? Who or what is your intended audience? What is your timeframe?
-- If you have chosen to assess a current instrument and if so, what is it and for what purpose? Have there been any test for validity and/or reliability performed? How widespread is its usage.
-
-Please put `EDP 611` or `EDP611` the header! Remember a filter is set up so that emails with that in the subject line populate first in my inbox!
-
 :::

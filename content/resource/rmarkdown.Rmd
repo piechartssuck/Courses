@@ -143,7 +143,7 @@ The indentation of the YAML section matters, especially when you have settings n
 ---
 title: "My document"
 author: "My name"
-date: "January 13, 2020"
+date: "August 19, 2020"
 output: 
   html_document: 
     toc: yes

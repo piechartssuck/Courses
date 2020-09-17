@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Task: Request of Proposal (RFP) Task: Exercise III   Task: Request of Proposal (RFP) A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation.">
+  <meta name="description" content="Task: RFPs with Reliability and Validity   Task: RFPs with Reliability and Validity A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation.">
 
   
   <link rel="alternate" hreflang="en-us" href="/assignment/04-exercise/">
@@ -240,8 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/assignment/04-exercise/">
-  <meta property="og:title" content="Thinking About Instruments | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content="Task: Request of Proposal (RFP) Task: Exercise III   Task: Request of Proposal (RFP) A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="Pirates Cause Global Warming | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Task: RFPs with Reliability and Validity   Task: RFPs with Reliability and Validity A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -276,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Thinking About Instruments | Measurement/Evaluation in Educational Psychology</title>
+  <title>Pirates Cause Global Warming | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -677,23 +697,27 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/assignment/01-exercise/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/assignment/01-exercise/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/assignment/02-exercise/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/assignment/02-exercise/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/assignment/03-exercise/">3: Truthiness, Damned Truths, and Statistics</a>
+        <a href="/assignment/03-exercise/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li class="active">
-        <a href="/assignment/04-exercise/">4: Everything is Out to Get Me</a>
+        <a href="/assignment/04-exercise/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/assignment/05-exercise/">5: Wait is this Algebra?</a>
+        <a href="/assignment/05-exercise/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/06-exercise/">Week 6: From a Certain Poimt of View... A Certain Point of View?</a>
       </li>
       
     </ul>
@@ -713,7 +737,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Thinking About Instruments</h1>
+                    <h1>Pirates Cause Global Warming</h1>
 
                     
 
@@ -726,13 +750,12 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#task-request-of-proposal-rfp">Task: Request of Proposal (RFP)</a></li>
-<li><a href="#task-exercise-iii">Task: Exercise III</a></li>
+<li><a href="#task-rfps-with-reliability-and-validity">Task: RFPs with Reliability and Validity</a></li>
 </ul>
 </div>
 
-<div id="task-request-of-proposal-rfp" class="section level2">
-<h2>Task: Request of Proposal (RFP)</h2>
+<div id="task-rfps-with-reliability-and-validity" class="section level2">
+<h2>Task: RFPs with Reliability and Validity</h2>
 <p>A request for proposal (RFP) is a dispersed document that solicits proposals by an agency, company or organization interested in conducting an evaluation. For example, you can go to the <a href="https://careers.eval.org/" target="_blank">American Evaluation Association’s (AEA) Career Center</a> and simply type <code>rfp</code> in the Keyword or Job Title box to take a look at current opportunities and their respective requirements.</p>
 <p>These types of proposals are often lucrative but highly competitive.
 Since most RFPs are submitted without any opportunities for follow-ups or clarifications, stakeholder or sponsor will pick the one that has the greatest detail, clearly written, and does not promise too little or even too much!</p>
@@ -763,18 +786,9 @@ Since most RFPs are submitted without any opportunities for follow-ups or clarif
 <li>have a full working or current draft of the proposed instrument attached in an appendix.</li>
 <li>follow all APA 7th Edition guidelines.</li>
 <li>have support (e.g. references of previous studies) where <em>an assertion is made</em>.</li>
-<li>be clearly and concisely written, You simply do not have enough space to get wordy, so read and critique your proposal over and over until you are simply sick of it. If you get to the point where all criteria are met but you are at the “to hell with this and him” stage, then the proposal is probably in a good state to be submitted.</li>
+<li>be clearly and concisely written, You simply do not have enough space to get wordy, so read and critique your proposal over and over until you are simply sick of it. If you get to the point where all criteria are met but you are at the “to hell with this and him” stage, then the proposal is probably in a good state to be submitted.
+:::</li>
 </ul>
-</div>
-<div id="task-exercise-iii" class="section level2">
-<h2>Task: Exercise III</h2>
-<p>This task is pretty simple and is also tied to you final proposal. By Tuesday please send me an email answering one of the following bullets points:</p>
-<ul>
-<li>If you have chosen to create your own instrument and if so, for what purpose? How do you currently envision the data collection tool? Who or what is your intended audience? What is your timeframe?</li>
-<li>If you have chosen to assess a current instrument and if so, what is it and for what purpose? Have there been any test for validity and/or reliability performed? How widespread is its usage.</li>
-</ul>
-<p>Please put <code>EDP 611</code> or <code>EDP611</code> the header! Remember a filter is set up so that emails with that in the subject line populate first in my inbox!</p>
-<p>:::</p>
 </div>
 
                     </div>

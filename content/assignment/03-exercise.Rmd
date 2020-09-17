@@ -1,6 +1,6 @@
 ---
-title: "Rule #31: Friends Don’t Let Friends Make Pie Charts, Especially in R."
-linktitle: "3: Truthiness, Damned Truths, and Statistics"
+title: "Truthiness, Damned Truthiness, and Statistics"
+linktitle: "Week 3: Truthiness, Damned Truthiness, and Statistics"
 output:
   blogdown::html_page:
     toc: true
@@ -9,12 +9,12 @@ menu:
     parent: Exercises
     weight: 3
 type: docs
-weight: 3
+weight: 2
 editor_options: 
   chunk_output_type: console
 ---
 
-## Task: Exercise II
+## Task: Exploring ICPSR
 
 Please use this roadmap to download a data set of your choice to analyze:
 1. Go to the data repository [ICPSR](https://www.icpsr.umich.edu/){target="_blank"} out of the University of Michigan. 
@@ -32,20 +32,19 @@ Your task is three fold:
 
 Whatever side of the coin you may settle on, this is just a perfect example of why using a single measure is simply a bad idea since you run the risk of an entire study or studies being reliant on a single measure whose validity in this case may be in flux. Barring some well known measures, it is recommended that at least three different indicators are used to assess a construct. This three way assessemment strategy is called *triangulation*. An well-written and relatively short description of this idea can be accessed through the [UNC Charlotte Office of Academic Affairs](https://assessment.uncc.edu/student-learning-outcomes/resources/triangulation-student-learning-outcomes-assessment){target="_blank"} Regardless, its utility is widespread and so much so that it has been a default measure within [Microsoft Word](https://support.microsoft.com/en-us/office/get-your-document-s-readability-and-level-statistics-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2){target="_blank"} for nearly twenty years.
 
-2. Run some reliability checks^[Please note that you are not restricted to the ones covered in this week's Example] of one to three constructs (not items - you group items together to assess a construct). Then decide which single measure most accurately describes the true internal consistency. Defend your choice with a maximum 280 word (aka 1 Tweet's worth) or less argument. My advice is to first look at both the codebook and measures. Additionally, choose wisely because you'll be addressing validity, or rather something called **threats to validity** next week.  
+2. Run some reliability checks^[Please note that you are not restricted to the ones covered in this week's Example] of one to three constructs (not items - you group items together to assess a construct). Then decide which single measure most accurately describes the true internal consistency. Defend your choice with a maximum 280 word (aka 1 Tweet's worth) or less argument. My advice is to first look at both the codebook and measures. Additionally, choose wisely because you'll be addressing validity, or rather something called *threats to validity* next week.  
 
-Please submit the following using the Submission Portal on [eCampus](.
+Please submit the items below as separate pieces using the Submission Portal on [eCampus](https://ecampus.wvu.edu/){target="_blank"}.
 
-1. an R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Again please provgide comments where it is not obvious what you are doing. Perpetually, an example script is included which can be accessed [here](/exscripts/example_script.R){target="_blank"}. The more directions you include, the better the response! You may either right click and download the file to open it or copy and paste the content to your own blank script.
+1. an R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Again please provide comments where it is not obvious what you are doing. Perpetually, an example script is included which can be accessed [here](/exscripts/example_script.R){target="_blank"}. The more directions you include, the better the response! You may either right click and download the file to open it or copy and paste the content to your own blank script.
 
-2. 
-a. a maximum one page 12-point font double spaced reflection that includes brief narratives on what
+2. a maximum one page 12-point font double spaced reflection that includes brief narratives on what
 
   - the data set was about,
   - was explored,
   - you  wish you knew how to do in R to better understand the data set, and
   - reliability measures were tested, your final decision, and what brought you to that choice. 
-
-- a one page data visualization of your choice with a maximum 280 word or less argument defending your choice.   
+  
+3. a one page data visualization of your choice with a maximum 280 word or less argument defending your choice.   
 
 :::

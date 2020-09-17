@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Task: Exercise I   Task: Exercise I Load the fivethirtyeight package and scroll through the data sets or alternatively click here to see the FiveThirtyEight GitHub repository. Locate a response set that is derived from a survey.">
+  <meta name="description" content="Task: Assessing Common Descriptives   Task: Assessing Common Descriptives Load the fivethirtyeight package and scroll through the data sets or alternatively click here to see the FiveThirtyEight GitHub repository.">
 
   
   <link rel="alternate" hreflang="en-us" href="/assignment/02-exercise/">
@@ -240,8 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/assignment/02-exercise/">
-  <meta property="og:title" content="Graduating from Diapers to Pull Ups with R | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content="Task: Exercise I   Task: Exercise I Load the fivethirtyeight package and scroll through the data sets or alternatively click here to see the FiveThirtyEight GitHub repository. Locate a response set that is derived from a survey."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="80% of Your Time with Data is Dedicated to Wrangling! | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Task: Assessing Common Descriptives   Task: Assessing Common Descriptives Load the fivethirtyeight package and scroll through the data sets or alternatively click here to see the FiveThirtyEight GitHub repository."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -276,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Graduating from Diapers to Pull Ups with R | Measurement/Evaluation in Educational Psychology</title>
+  <title>80% of Your Time with Data is Dedicated to Wrangling! | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -677,23 +697,27 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/assignment/01-exercise/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/assignment/01-exercise/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li class="active">
-        <a href="/assignment/02-exercise/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/assignment/02-exercise/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/assignment/03-exercise/">3: Truthiness, Damned Truths, and Statistics</a>
+        <a href="/assignment/03-exercise/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/assignment/04-exercise/">4: Everything is Out to Get Me</a>
+        <a href="/assignment/04-exercise/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/assignment/05-exercise/">5: Wait is this Algebra?</a>
+        <a href="/assignment/05-exercise/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/06-exercise/">Week 6: From a Certain Poimt of View... A Certain Point of View?</a>
       </li>
       
     </ul>
@@ -713,7 +737,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Graduating from Diapers to Pull Ups with R</h1>
+                    <h1>80% of Your Time with Data is Dedicated to Wrangling!</h1>
 
                     
 
@@ -726,12 +750,12 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#task-exercise-i">Task: Exercise I</a></li>
+<li><a href="#task-assessing-common-descriptives">Task: Assessing Common Descriptives</a></li>
 </ul>
 </div>
 
-<div id="task-exercise-i" class="section level2">
-<h2>Task: Exercise I</h2>
+<div id="task-assessing-common-descriptives" class="section level2">
+<h2>Task: Assessing Common Descriptives</h2>
 <p>Load the <code>fivethirtyeight</code> package and scroll through the data sets or alternatively click <a href="https://github.com/fivethirtyeight/data" target="_blank">here</a> to see the FiveThirtyEight GitHub repository. Locate a response set that is derived from a survey.</p>
 <p>Run some basic descriptive statistics on the set. What you explore and/or report on is up to you. What I really want is for you to get comfortable (well as much as possible) with writing syntax. The more you try, the more I can comment on! Please turn in</p>
 <ol style="list-style-type: decimal">

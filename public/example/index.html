@@ -258,8 +258,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -663,23 +683,27 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/example/01-example/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/example/01-example/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/example/02-example/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/example/02-example/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/example/03-example/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/example/03-example/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/example/04-example/">4: Everything is Out to Get Me</a>
+        <a href="/example/04-example/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/example/05-example/">5: Wait is this Algebra?</a>
+        <a href="/example/05-example/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
+      </li>
+      
+      <li >
+        <a href="/example/06-example/">Week 6: From a Certain Poimt of View... A Certain Point of View?</a>
       </li>
       
     </ul>

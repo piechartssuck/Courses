@@ -1,6 +1,6 @@
 ---
-title: "Even More Readings"
-linktitle: "3: Truthiness, Damned Truthiness, and Statistics"
+title: "Truthiness, Damned Truthiness, and Statistics"
+linktitle: "Week 3: Truthiness, Damned Truthiness, and Statistics"
 menu:
   content:
     parent: Course content
@@ -33,7 +33,7 @@ Take some time to review or get a first look at some basic statistics. Again, I 
 
 - A good resource for doing foundational level statistics in R, check out [Learning statistics with R: A tutorial for psychology students and other beginners](https://tidylsr.djnavarro.net/index.html){target="_blank"} which is part of an ongoing effort to bring [statistics with R](https://learningstatisticswithr.com/){target="_blank"} to the masses.  
 
-### Questions to reflect on
+### Questions to reflect on^[These reflection items *can* be integrated into this week's reflection which is item #2 in the [Exercise II Task](/assignment/03-exercise/#task-exercise-ii-1).]
 
 - What do descriptive statistics really tell us?
 - What can't descriptive statistics tell us?
@@ -41,4 +41,4 @@ Take some time to review or get a first look at some basic statistics. Again, I 
 - Why is reliability important?
 - How is reliability used in analyzing qualitative data?
 
-Note: These reflection items *can* be integrated into this week's reflection which is item #2 in the [Exercise II Task](). 
+Please submit your narrative to [eCampus](https://ecampus.wvu.edu/){target="_blank"}.

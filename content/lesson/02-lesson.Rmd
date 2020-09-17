@@ -1,29 +1,37 @@
 ---
-title: "Wait I Have to Clean my Room and my Data? Adulting is Hard."
-linktitle: "2: Neverending Designs, Measures, and Methods"
+title: "80% of Your Time with Data is Dedicated to Wrangling!"
+linktitle: "Week 2: 80% of Your Time with Data is Dedicated to Wrangling!"
 output:
   blogdown::html_page:
     toc: true
 menu:
   lesson:
     parent: Lessons
-    weight: 2
+    weight: 4
 type: docs
-weight: 2
+weight: 4
 editor_options: 
   chunk_output_type: console
 ---
 
-This week please complete both the **Introduction to the Tidyverse** and **Exploratory Data Analysis in R** courses on [Data Camp](https://www.datacamp.com/) which includes
+## Data Camp
 
-- Data wrangling
-- Data visualization 
-- Grouping and summarizing
-- Types of visualizations
-<br />
+This week please complete both the **Introduction to Data in R** and **Exploratory Data Analysis in R** courses on [Data Camp](https://www.datacamp.com/){target="_blank"}. The modules cover the:
+
+- Language of data
+- Study types and cautionary tales 
+- Sampling strategies and experimental design
+- Case study (physical appearance of instructors and course evals)
+<br>
+and
+<br>
 - Exploring Categorical Data
 - Exploring Numerical Data
 - Numerical Summaries 
 - Case Study (case study of email spam)
 
 respectively. 
+
+### A Note About the Title
+
+That 80% figure is based on the [Pareto Principal](https://en.wikipedia.org/wiki/Pareto_principle){target="_blank"} and is meant to be taken as a hyperbole. It roughly translates to the idea that 80 percent you time is spent simply finding, cleansing, and organizing data - aka wrangling - leaving only 20 percent for meaningful analyses.

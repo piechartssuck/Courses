@@ -8,18 +8,6 @@
   </url>
   
   <url>
-    <loc>/assignment/01-exercise/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/01-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/01-lesson/</loc>
-  </url>
-  
-  <url>
     <loc>/assignment/</loc>
   </url>
   
@@ -40,15 +28,43 @@
   </url>
   
   <url>
-    <loc>/assignment/02-exercise/</loc>
+    <loc>/due/</loc>
   </url>
   
   <url>
-    <loc>/example/02-example/</loc>
+    <loc>/assignment/01-exercise/</loc>
   </url>
   
   <url>
-    <loc>/lesson/02-lesson/</loc>
+    <loc>/due/01-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/01-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/01-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/02-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/03-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/04-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/05-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/06-due/</loc>
   </url>
   
   <url>
@@ -56,11 +72,11 @@
   </url>
   
   <url>
-    <loc>/example/03-example/</loc>
+    <loc>/assignment/02-exercise/</loc>
   </url>
   
   <url>
-    <loc>/lesson/03-lesson/</loc>
+    <loc>/example/02-example/</loc>
   </url>
   
   <url>
@@ -72,8 +88,20 @@
   </url>
   
   <url>
+    <loc>/example/03-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/03-lesson/</loc>
+  </url>
+  
+  <url>
     <loc>/resource/install/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/lesson/02-lesson/</loc>
   </url>
   
   <url>
@@ -89,6 +117,14 @@
   </url>
   
   <url>
+    <loc>/example/05-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/06-example/</loc>
+  </url>
+  
+  <url>
     <loc>/resource/markdown/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
@@ -98,11 +134,11 @@
   </url>
   
   <url>
-    <loc>/example/05-example/</loc>
+    <loc>/lesson/05-lesson/</loc>
   </url>
   
   <url>
-    <loc>/lesson/05-lesson/</loc>
+    <loc>/assignment/06-exercise/</loc>
   </url>
   
   <url>
@@ -130,26 +166,6 @@
   <url>
     <loc>/resource/unzipping/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/readings/01-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/02-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/03-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/04-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/05-readings/</loc>
   </url>
   
   <url>
@@ -186,6 +202,26 @@
   
   <url>
     <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/01-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/02-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/03-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/04-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/05-readings/</loc>
   </url>
   
 </urlset>

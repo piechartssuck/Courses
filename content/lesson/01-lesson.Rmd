@@ -1,6 +1,6 @@
 ---
-title: "What is R? A 10 Part Series in the Journey into the Metaphysical Nature of Programming"
-linktitle: "1: An Introduction (or Review) of Some Things"
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
 output:
   blogdown::html_page:
     toc: true
@@ -14,7 +14,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-This week please complete the **Introduction to R** course on [Data Camp](https://www.datacamp.com/) which includes
+## Data Camp
+
+This week please complete both the **Introduction to R** and **Introduction to the Tidyverse** courses on [Data Camp](https://www.datacamp.com/). The modules cover an:
 
 - Intro to basics
 - Vectors
@@ -22,3 +24,12 @@ This week please complete the **Introduction to R** course on [Data Camp](https:
 - Factors
 - Data frames
 - Lists
+<br>
+and
+<br>
+- Data wrangling
+- Data visualization 
+- Grouping and summarizing
+- Types of visualizations
+
+*Please take your time with these modules. While the first gives you an understand of the R environment, the second deals with data wrangling, namely making sure data is "tidy". We'll be using this idea moving forward in the course.*

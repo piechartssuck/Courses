@@ -1,6 +1,6 @@
 ---
-title: "Can We Be Factors Forever?"
-linktitle: "5: Wait is this Algebra?"
+title: "Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!"
+linktitle: "Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!"
 output:
   blogdown::html_page:
     toc: true
@@ -14,15 +14,13 @@ editor_options:
   chunk_output_type: console
 ---
 
-Note: The title for this week is a terrible pun but I lost a bet so her we are.
-
-## Task: Exercise IV
+## Idea: Exploratory Factor Analysis (EFA)
 
 ### Locating Data
 
 You'll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns). Make sure you keep an accurate record of what data set was used and where you got it from.
 
-Where can you find data you ask? Oh you didn't. Well its too late now so here are some suggestions. These are given in alphabetical order without any preferential ranking:
+Here's the same list of possible resources from last week:
 
 - [AWS public datasets](https://registry.opendata.aws/){target="_blank"} - This stands for Amazon Web Service and yes its that Amazon. Believe it or not, Amazon is one of the largest providers of APIs (acronym for *application programming interface* which is a fancy way to say a service where computer programs can talk to each other), data analytics (fancy of way of saying that a computer is being used for stats), data processing (fancy way of say how efficient data can be analyzed, rearranged, whatever), and storage cloud computing (fancy way of saying securing, sharing and storing data and sharing it). To this end, a lot and I mean a lot of data sets are publicly available.
 
@@ -45,11 +43,11 @@ Where can you find data you ask? Oh you didn't. Well its too late now so here ar
 
 After you have located a data set, do the data scientist thing and please follow these steps:
 
-1. Open up the codebook and locate two columns:
+1. Open up the codebook and locate multiple columns:
   - one that has a unique identifier
-  - one f your choice that is preferably not filled with demographical information
+  - one quantiative column of your choice that is not filled with demographical information.
   
-2. Use the same steps outlined in the example piece to conduct your own factor analysis. 
+2. Use the same steps outlined in the example piece to conduct your own exploratory factor analysis (EFA). 
 
 3. Answer the following questions on a word document. As usual, please put your name in the upper left hand corner.
   a. What is the official name of the data set you chose?

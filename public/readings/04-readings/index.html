@@ -240,7 +240,7 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/readings/04-readings/">
-  <meta property="og:title" content="More Readings? Seriously? | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:title" content="Pirates Cause Global Warming | Measurement/Evaluation in Educational Psychology">
   <meta property="og:description" content="Read Suggestions Questions to reflect on    Read   Chapters 8-9 in James McDavid, Program Evaluation and Performance Measurement. While not required Chapter 7 is on economic evaluation, that is the content is solely focused on assessing whether the potential or actual benefits from interventions are greater than the projected or existing loss in benefits from a reduction in other programs."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -276,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>More Readings? Seriously? | Measurement/Evaluation in Educational Psychology</title>
+  <title>Pirates Cause Global Warming | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -659,23 +679,23 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/readings/01-readings/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/readings/01-readings/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/readings/02-readings/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/readings/02-readings/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/readings/03-readings/">3: Truthiness, Damned Truthiness, and Statistics</a>
+        <a href="/readings/03-readings/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li class="active">
-        <a href="/readings/04-readings/">4: Everything is Out to Get Me</a>
+        <a href="/readings/04-readings/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li >
-        <a href="/readings/05-readings/">5: Wait is this Algebra?</a>
+        <a href="/readings/05-readings/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
       </li>
       
     </ul>
@@ -708,7 +728,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>More Readings? Seriously?</h1>
+                    <h1>Pirates Cause Global Warming</h1>
 
                     
 

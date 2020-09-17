@@ -2,7 +2,7 @@ lessons:
   - title: '<span class="fake-header-table">Concentration</span>'
     header: True
 
-  - title: 'An Introduction or Review of Evaluation'
+  - title: 'Does it Work and Why Does it Work?'
     session: 1
     date: "July 5, 2020"
     readings: "01-readings"
@@ -29,7 +29,7 @@ lessons:
     assignment: "03-exercise"
     due: "03-due"
 
-  - title: 'Everything is Out to Get Me'
+  - title: 'Pirates Cause Global Warming'
     session: 4
     date: "July 26, 2020"
     readings: "04-readings"
@@ -38,7 +38,7 @@ lessons:
     assignment: "04-exercise"
     due: "04-due"
 
-  - title: 'Wait is this Algebra?'
+  - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
     session: 5
     date: "August 2, 2020"
     readings: "05-readings"
@@ -46,3 +46,10 @@ lessons:
     example: "05-example"
     assignment: "05-exercise"
     due: "05-due"
+
+  - title: 'From a Certain Poimt of View... A Certain Point of View?'
+    session: 6
+    date: "August 9, 2020"
+    example: "06-example"
+    assignment: "06-exercise"
+    due: "06-due"

@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Task: Exercise IV Locating Data What to Turn in    Note: The title for this week is a terrible pun but I lost a bet so her we are.">
+  <meta name="description" content="Idea: Exploratory Factor Analysis (EFA) Locating Data What to Turn in    Idea: Exploratory Factor Analysis (EFA) Locating Data You’ll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns).">
 
   
   <link rel="alternate" hreflang="en-us" href="/assignment/05-exercise/">
@@ -240,8 +240,8 @@
   
   <meta property="og:site_name" content="Measurement/Evaluation in Educational Psychology">
   <meta property="og:url" content="/assignment/05-exercise/">
-  <meta property="og:title" content="Can We Be Factors Forever? | Measurement/Evaluation in Educational Psychology">
-  <meta property="og:description" content="Task: Exercise IV Locating Data What to Turn in    Note: The title for this week is a terrible pun but I lost a bet so her we are."><meta property="og:image" content="/img/social-image.png">
+  <meta property="og:title" content="Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them! | Measurement/Evaluation in Educational Psychology">
+  <meta property="og:description" content="Idea: Exploratory Factor Analysis (EFA) Locating Data What to Turn in    Idea: Exploratory Factor Analysis (EFA) Locating Data You’ll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns)."><meta property="og:image" content="/img/social-image.png">
   <meta property="twitter:image" content="/img/social-image.png"><meta property="og:locale" content="en-us">
   
     
@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -276,7 +296,7 @@
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
-  <title>Can We Be Factors Forever? | Measurement/Evaluation in Educational Psychology</title>
+  <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them! | Measurement/Evaluation in Educational Psychology</title>
 
 </head>
 
@@ -677,23 +697,27 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/assignment/01-exercise/">1: An Introduction (or Review) of Some Things</a>
+        <a href="/assignment/01-exercise/">Week 1: Does it Work and Why Does it Work?</a>
       </li>
       
       <li >
-        <a href="/assignment/02-exercise/">2: Neverending Designs, Measures, and Methods</a>
+        <a href="/assignment/02-exercise/">Week 2: 80% of Your Time with Data is Dedicated to Wrangling!</a>
       </li>
       
       <li >
-        <a href="/assignment/03-exercise/">3: Truthiness, Damned Truths, and Statistics</a>
+        <a href="/assignment/03-exercise/">Week 3: Truthiness, Damned Truthiness, and Statistics</a>
       </li>
       
       <li >
-        <a href="/assignment/04-exercise/">4: Everything is Out to Get Me</a>
+        <a href="/assignment/04-exercise/">Week 4: Pirates Cause Global Warming</a>
       </li>
       
       <li class="active">
-        <a href="/assignment/05-exercise/">5: Wait is this Algebra?</a>
+        <a href="/assignment/05-exercise/">Week 5: Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/06-exercise/">Week 6: From a Certain Poimt of View... A Certain Point of View?</a>
       </li>
       
     </ul>
@@ -713,7 +737,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Can We Be Factors Forever?</h1>
+                    <h1>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</h1>
 
                     
 
@@ -726,20 +750,19 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#task-exercise-iv">Task: Exercise IV</a><ul>
+<li><a href="#idea-exploratory-factor-analysis-efa">Idea: Exploratory Factor Analysis (EFA)</a><ul>
 <li><a href="#locating-data">Locating Data</a></li>
 <li><a href="#what-to-turn-in">What to Turn in</a></li>
 </ul></li>
 </ul>
 </div>
 
-<p>Note: The title for this week is a terrible pun but I lost a bet so her we are.</p>
-<div id="task-exercise-iv" class="section level2">
-<h2>Task: Exercise IV</h2>
+<div id="idea-exploratory-factor-analysis-efa" class="section level2">
+<h2>Idea: Exploratory Factor Analysis (EFA)</h2>
 <div id="locating-data" class="section level3">
 <h3>Locating Data</h3>
 <p>You’ll want to first locate a raw data set with (a) survey responses using the same column and row formatting structure as the set that was used in the example AND (b) a code book that has clearly defined the variables (columns). Make sure you keep an accurate record of what data set was used and where you got it from.</p>
-<p>Where can you find data you ask? Oh you didn’t. Well its too late now so here are some suggestions. These are given in alphabetical order without any preferential ranking:</p>
+<p>Here’s the same list of possible resources from last week:</p>
 <ul>
 <li><p><a href="https://registry.opendata.aws/" target="_blank">AWS public datasets</a> - This stands for Amazon Web Service and yes its that Amazon. Believe it or not, Amazon is one of the largest providers of APIs (acronym for <em>application programming interface</em> which is a fancy way to say a service where computer programs can talk to each other), data analytics (fancy of way of saying that a computer is being used for stats), data processing (fancy way of say how efficient data can be analyzed, rearranged, whatever), and storage cloud computing (fancy way of saying securing, sharing and storing data and sharing it). To this end, a lot and I mean a lot of data sets are publicly available.</p></li>
 <li><p><a href="https://ai.baidu.com/broad/introduction?dataset=dureader" target="_blank">Baidu Research</a> - Baidu provides a wide range of data sets at no cost for research and personal uses. They provide data from the various business units like automated car testing, medical, video highlight. While it is unlikely you’ll locate a survey response set, this is a good thing to note.</p></li>
@@ -758,14 +781,14 @@
 <h3>What to Turn in</h3>
 <p>After you have located a data set, do the data scientist thing and please follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>Open up the codebook and locate two columns:</li>
+<li>Open up the codebook and locate multiple columns:</li>
 </ol>
 <ul>
 <li>one that has a unique identifier</li>
-<li>one f your choice that is preferably not filled with demographical information</li>
+<li>one quantiative column of your choice that is not filled with demographical information.</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Use the same steps outlined in the example piece to conduct your own factor analysis.</p></li>
+<li><p>Use the same steps outlined in the example piece to conduct your own exploratory factor analysis (EFA).</p></li>
 <li><p>Answer the following questions on a word document. As usual, please put your name in the upper left hand corner.</p></li>
 </ol>
 <ol style="list-style-type: lower-alpha">

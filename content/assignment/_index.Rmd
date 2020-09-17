@@ -1,5 +1,9 @@
 ---
 title: Assignment overview
+citeproc: true
+bibliography: ../../static/bib/references.bib
+link-citations: true
+csl: ../../static/bib/apa7th.csl
 menu:
   assignment:
     parent: Overview
@@ -22,7 +26,7 @@ Each type of assignment in this class helps with at least one one of these crite
 
 ## Reflections
 
-To encourage engagement with the course content, you'll need to write a ~150 word reflection about the readings for the day. That's fairly short: there are ~250 words on a typical double-spaced page in Microsoft Word (500 when single-spaced). 
+To encourage engagement with the course content, you'll need to write a ~150 word reflection about the readings for the day. That's fairly short as there are ~250 words on a typical double-spaced page in Microsoft Word (500 when single-spaced). 
 
 You can do a lot of different things with this memo: discuss something you learned from the course content, write about the best or worst type of measure you've seen, connect the course content to your own work, etc. These reflections let you explore and answer some of the key questions of this course, including:
 
@@ -42,7 +46,7 @@ I will grade these memos using a check system:
 
 Everything else is scored as a 0 which should signal that this is essentially a scaled completion-based system. I am not grading your writing ability, counting the exact number of words you're writing, or looking for citations from the reading(s). I am looking for thoughtful engagement and that's it! Do good work and you'll earn a ✓.
 
-You will turn these reflections on the Discussion Board on [eCampus](https://ecampus.wvu.edu/webapps/login/).
+Please turn these weekly reflections in the Submission Portal on [eCampus](https://ecampus.wvu.edu/webapps/login/){target="_blank"}.
 
 
 ## Exercises
@@ -71,15 +75,67 @@ The submissions will be graded using a check system:
 Because these tasks give you practice for the final project, I will provide you with extensive feedback on your submissions.
 
 
-## Final project
+## Final project 
 
-At the end of the course, you will demonstrate your data visualization skills by completing a final project.
+Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in the development of an instrument which will serve as a final project^[These will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final project.].
 
-Complete details for the final project will be posted here at the halfway point through the course. To preview, you will
+<div id="anchorwk1"> 
+<details><summary>Week 1: Think about assessment.</summary>
+<br>
+<p>
+Construct a one paragraph case for a population^[A population does not necessarily refer to people.] that needs to be researched, why it should be be studied, and how the data would be quantitative.
+</p>
+</details>
+</div>
+<br>
 
-1. Develop a test with items.
-2. Conduct assessments addressing the test's validity and reliability including performing a factor analysis.
+<div id="anchorwk2">
+<details><summary>Week 2: Create an argument. </summary>
+<br>
+<p>
+Submit a one to three page proposal outlining specific questions that you would like to assess and then describe an instrument that would be used to assess those items. Include general details on what measures would be used. 
+</p>
+</details>
+</div>
+<br>
 
-**This project serves as your final exam.**
+<div id="anchorwk3">
+<details><summary>Week 3. Develop a draft.</summary>
+<br>
+<p>
+Create a draft of your instrument^[If the instrument is housed elsewhere (e.g. Qualtrics), then simply provide a link and ensure that access is granted to me.] by whatever medium you choose and then derive a skeleton. Map the measures directly to the items and group them if possible. 
+</p>
+</details>
+</div>
+<br>
 
-The project will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final project.
+<div id="anchorwk4">
+<details><summary>Week 4. Refine the draft.</summary>
+<br>
+<p>
+Based on feedback, amend the instrument if necessary and resubmit for further assessment. Explicitly detail what changes were made using a matrix. After approval, administer the instrument for pilot testing.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk5">
+<details><summary>Week 5. Address a priori and post analyses.</summary>
+<br>
+<p>
+Submit a one to three page with a description of what approaches were used to assess validity and reliability, and all corresponding data and analyses by csv and an R script, respectively.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk6">
+<details><summary>Week 6. Refine and submit final instrument.</summary>
+<br>
+<p>
+After amending, submit the final version of your instrument.
+</p>
+</details>
+</div>
+
+

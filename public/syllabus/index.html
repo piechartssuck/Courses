@@ -259,8 +259,28 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var target = this.hash,
+        $target = $(target);
+        $(target + ' details').attr('open', true);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 400, 'swing', function() {
+        window.location.hash = target;
+      });
+
+    });
+  });
+</script>
+
+
+
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
@@ -830,7 +850,7 @@
 <li><p>Third using Twitter you can post R-related questions and content with <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a>. The community there is exceptionally generous and helpful.</p></li>
 <li><p>Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter.</p></li>
 <li><p>Fifth we have a class chatroom which may be accessed via <a href="2020edp611.slack.com">Slack</a> where you can poise a question. <strong>I will monitor Slack regularly and will respond quickly.</strong> (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.</p></li>
-<li><p>Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header <strong>EDP 613 “the title of your email”</strong> where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:</p>
+<li><p>Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header <strong>EDP 611 “the title of your email”</strong> where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:</p>
 <ul>
 <li>A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).</li>
 <li>A copy of your data set (if applicable).</li>

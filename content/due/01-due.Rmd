@@ -1,0 +1,55 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to submit for Week 1
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+"eCampus?" = c(unchecked,
+               checked,
+               checked),
+
+Description = c("Complete modules in Data Camp that address the basic elements of R and tidying data.",
+                "Think about a population to test",
+                "Submit your Week 1 Reflections."),
+
+Location = c("[Link](/lesson/01-lesson/#data-camp-1)",
+             "[Link](/assignment/#anchorwk1)",
+             "[Link](/readings/01-readings/#questions-to-reflect-on-1)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>% 
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
