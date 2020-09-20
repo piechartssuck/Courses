@@ -3,7 +3,7 @@ title: Syllabus
 slug: syllabus
 citeproc: true
 bibliography: ../../static/bib/references.bib
-csl: ../../static/bib/chicago-syllabus-no-bib.csl
+csl: ../../static/bib/apa7th.csl
 output:
   blogdown::html_page:
     toc: true

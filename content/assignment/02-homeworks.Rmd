@@ -14,6 +14,288 @@ editor_options:
   chunk_output_type: console
 ---
 
-### Weekly Task
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(patchwork)
+```
+
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+</style>
+
+### Week 2 Problem Set
+
+#### Assignment
 Chapter 2 Exercises: 1, 2, 3, 4, 5, 6 and 7. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+#### Solutions
+
+<details><summary>1</summary>
+<p>
+
+a. Race is a <span class="boxed">nominal</span>. variable; Since categories can be ordered, Class is an <span class="boxed">ordinal</span> variable; Trauma is an <span class="boxed">interval</span> variable.
+
+b. Frequency table for Race:
+```{r echo = FALSE}
+dt <- tibble(
+  Text_1 = c("White", "Non-White", "Total"),
+  Text_2 = c("17", "13", "30")
+)
+```
+
+<center>
+
+```{r echo=FALSE}
+kable(dt, 
+      align = c('l', "c"), 
+      col.names = c("Race", "Frequency") 
+      ) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) %>%
+  row_spec(c(3), bold = T, color = "white", background = "#559e83")
+```
+
+</center>
+
+c. We have
+```{r echo = FALSE}
+dt <- tibble(
+  Text_1 = c("White", "Non-White", "Total"),
+  Text_2 = c("17/30 = 0.57", "13/30 = 0.43", "30/30 = 1.00")
+)
+```
+
+<center>
+
+```{r echo=FALSE}
+kable(dt, 
+      align = c('l', "c"), 
+      col.names = c("Classification", "Proportion") 
+      ) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) %>%
+  row_spec(c(3), bold = T, color = "white", background = "#559e83")
+```
+
+</center>
+
+</p>
+</details>
+
+<details><summary>2</summary>
+<p>
+Frequency and Percentage Distribution Table for Class:
+```{r echo = FALSE}
+dt <- tibble(
+  Text_1 = c("Lower", "Working", "Middle", "Upper", "Total"),
+  Text_2 = c("3", "15", "11", "1", "30"),
+  Text_3 = c("10", "50", "36.7", "3.3", "100")
+)
+```
+
+<center>
+
+```{r echo=FALSE}
+kable(dt, 
+      align = c('l', 'c', 'c'), 
+      col.names = c("Class", "Frequency", "Percent") 
+      ) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) %>%
+  row_spec(c(5), bold = T, color = "white", background = "#559e83")
+```
+
+</center>
+
+a. The smallest perceived class group is the <span class="boxed">upper class</span>, making up only 3.3% of the survey.
+
+b. Together, the <span class="boxed">working</span> and <span class="boxed">middle class</span> make up 50% + 36.7% = 86.7% of the survey.
+</p>
+</details>
+
+
+<details><summary>3</summary>
+<p>
+
+Frequency table for Traumas:
+```{r echo = FALSE}
+dt <- tibble(
+  Text_1 = c("0", "1", "2", "Total"),
+  Text_2 = c("15", "11", "4", "30")
+)
+```
+
+<center>
+
+```{r echo=FALSE}
+kable(dt, 
+      align = c('l', "c"), 
+      col.names = c("Number of Traumas", "Frequency") 
+      ) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) %>%
+  row_spec(c(4), bold = T, color = "white", background = "#559e83")
+```
+
+</center>
+
+a. Trauma is an <span class="boxed">interval- or ratio-level variable</span>, since it has a real zero point and a meaningful numeric scale. 
+
+b. People in this survey are more likely to have experienced <span class="boxed">no traumas</span> last year (50% of the group). 
+
+c. The proportion who experienced one or more traumas is calculated by first adding 36.7% and 13.3% equaling 50% and then divide that number by 100 to obtain the proportion, 0.50, or half the group. 
+
+</p>
+</details>
+
+<details><summary>4</summary>
+<p>
+Unfortunately since other visualizations have not been introduced, pie charts are likely the best method approach to present these data. 
+
+```{r echo=FALSE , message=FALSE}
+ch2p4 <-read_csv(here("static", "data", "homeworks", "ch2p4.csv"))
+
+race <- ch2p4 %>%
+  select(Race) %>%
+  group_by(Race) %>%
+  count() %>% 
+  ungroup() %>% 
+  arrange(desc(Race)) %>%
+  mutate(prop = `n`/sum(`n`)) %>%
+  mutate(ypos = cumsum(prop) - 0.5 * prop) %>%
+  mutate(label = scales::percent(prop)) %>%
+  ggplot(aes(x = "", y = prop, fill = Race)) +
+  geom_bar(stat = "identity", 
+           alpha = 0.85,
+           color = "#FFFFFF") +
+  coord_polar("y", start = 0) +
+  geom_label(aes(y = ypos, 
+                 label = label),
+             color = "#FFFFFF",
+             show.legend = FALSE,
+             size = 4.2,
+             fontface = "bold") +
+  scale_fill_manual(values = c("#4682b4", "#ff6347"),
+                    labels = c("Non-whites", "Whites")) +
+  theme_void() +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=12,
+                                    face = "bold"),
+        legend.title.align = 0.5) + 
+  guides(fill = guide_legend(title.position = "top"))
+
+trauma <- ch2p4 %>%
+  select(Trauma) %>%
+  mutate(Trauma = as.character(Trauma)) %>%
+  group_by(Trauma) %>%
+  count() %>% 
+  ungroup() %>% 
+  arrange(desc(Trauma)) %>%
+  rename(`Incident(s) of Trauma` = Trauma) %>%
+  mutate(prop = `n`/sum(`n`)) %>%
+  mutate(ypos = cumsum(prop) - 0.5 * prop) %>%
+  mutate(label = scales::percent(prop)) %>%
+  ggplot(aes(x = "", y = prop, fill = `Incident(s) of Trauma`)) +
+  geom_bar(stat = "identity", 
+           width = 1,
+           alpha = 0.85,
+           color = "#FFFFFF") +
+  coord_polar("y", start = 0) +
+  geom_label(aes(y = ypos, 
+                 label = label),
+             color = "#FFFFFF",
+             show.legend = FALSE,
+             size = 4.2,
+             fontface = "bold") +
+ scale_fill_manual(values = c("#7bc043", "#f37736", "#ee4035"),
+                  labels = c("Zero", "One", "Two")) +
+  theme_void() +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=12,
+                                    face = "bold"),
+        legend.title.align = 0.5) + 
+  guides(fill = guide_legend(title.position = "top"))
+
+race + trauma
+```
+
+</p>
+</details>
+
+<details><summary>5</summary>
+<p>
+
+<span class="boxed">Yes</span> because <span class="boxed">79.2% had “hardly any” confidence in the press</span>, compared to 19.3% of those who voted for Clinton.   
+
+</p>
+</details>
+
+<details><summary>6</summary>
+<p>
+
+```{r echo=FALSE , message=FALSE}
+ch2p6 <-read_csv(here("static", "data", "homeworks", "ch2p6.csv")) %>% 
+   mutate_if(is.numeric, as.character) %>%
+  replace(., is.na(.), "") 
+```
+
+<center>
+
+```{r echo=FALSE}
+ch2p6  %>% 
+  mutate_all(~cell_spec(
+    .x, 
+    color = ifelse(.x == "99", "white", "black"),
+    background = ifelse(.x == "99", "#2e4045", "NA"),
+    bold = ifelse(.x == "99", TRUE, "NA"))) %>%
+  kable(escape = F,
+        align = c('l', "c", "c", "c", "c"), 
+        col.names = c("E-mail Hours Per Week", 
+                      "Frequency",
+                      "Cumulative Frequency",
+                      "Percent",
+                      "Cumulative Percent")) %>%
+  kable_styling(position = "center",
+                full_width = FALSE) %>%
+  row_spec(c(12), color = "white", background = "#559e83")
+```
+
+</center>
+
+</p>
+</details>
+
+<details><summary>7</summary>
+<p>
+
+According to this time series chart, rates of voting have consistently varied by race and Hispanic origin. The group with the largest increase in voting rates is Blacks, from 53% in 1996 to 66.6% in 2012. However, in 2016, the voting rates for Blacks declined to 59.6%--the lowest it has been since the 2000 election when it was 56.9%. Hispanic voting rates have, for the most part, remained stable, although with some fluctuation most notably from the 1992 election (51.6%) to the 1996 election (44%). As noted in the exercise, in the 2012 presidential election, Blacks had the highest voting rates for all groups, followed by non-Hispanic Whites, non-Hispanic other races, and Hispanics. White voting rates increased by 1.2% from 2012 to 2016. The highest voting rate for Whites was in 1992 (70.2%), 1992 for Hispanics (51.6%), 2012 for Blacks (66.6%), and 1992 for non-Hispanic other races (54%). 
+
+</p>
+</details>
 :::

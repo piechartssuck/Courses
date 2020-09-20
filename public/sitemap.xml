@@ -36,10 +36,6 @@
   </url>
   
   <url>
-    <loc>/assignment/01-homeworks_solutions/</loc>
-  </url>
-  
-  <url>
     <loc>/due/01-due/</loc>
   </url>
   
@@ -93,6 +89,10 @@
   
   <url>
     <loc>/readings/03-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/04-homeworks/</loc>
   </url>
   
   <url>
