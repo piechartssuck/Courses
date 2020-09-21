@@ -1,0 +1,47 @@
+---
+title: "Measures of Variability"
+linktitle: "Week 4: Measures of Variability"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Homeworks
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+</style>
+
+### Week 4 Problem Set
+
+#### Assignment
+Chapter 4 Exercises: 1, 2, 3, 7, 8, 12, 13. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+#### Solutions
+
+:::
