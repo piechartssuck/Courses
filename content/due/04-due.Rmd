@@ -21,7 +21,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-### What to do for Week 3 after class ends^[For grading.]
+### What to do for Week 4 after class ends^[For grading.]
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
@@ -53,7 +53,7 @@ kable(wk_post,
 
 <br />
 
-### What to do for Week 4 before coming to class^[For preparation.]
+### What to do for Week 5 before coming to class^[For preparation.]
 
 ```{r eval = TRUE, echo = FALSE}
 book <- as.character(fontawesome::fa("book", fill = "steelblue"))
