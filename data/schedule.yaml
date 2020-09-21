@@ -28,3 +28,21 @@ lessons:
     example: "03-example"
     assignment: "03-assignment"
     due: "03-due"
+
+  - title: 'Measures of Variability'
+    session: 4
+    date: "September 23, 2020"
+    readings: "04-readings"
+    lesson: "04-lesson"
+    example: "04-example"
+    assignment: "04-assignment"
+    due: "04-due"
+
+  - title: 'The Normal Distribution'
+    session: 5
+    date: "September 30, 2020"
+    readings: "05-readings"
+    lesson: "05-lesson"
+    example: "05-example"
+    assignment: "05-assignment"
+    due: "05-due"

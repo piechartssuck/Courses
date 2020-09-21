@@ -1,6 +1,6 @@
 ---
-title: "Measures of Variability"
-linktitle: "Week 4: Measures of Variability"
+title: "The Normal Distribution"
+linktitle: "Week 5: The Normal Distribution"
 output:
   blogdown::html_page:
     toc: true
@@ -15,29 +15,28 @@ editor_options:
 ---
 
 ### Data Camp
-The fourth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due the Wednesday following the completion of the Week 4 class. The module covers doing basic descriptive statistics in R out of the box^[Mostly without any additional packages or what is known as Base R]. In particular, the sections are:
+The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due **two Wednesdays** following the completion of the Week 5 class. The module covers types of datam sampling, and experiments. In particular, the sections are:
 
-- Variables
-- Histograms and Distributions
-- Scales of Measurement
-- Measures of Central Tendency
-- Measures of Variability
-
-As promised, we start performing basic statistical analyses in R.
+- Language of data
+- Study types and cautionary tales 
+- Sampling strategies and experimental design
+- Case study
 
 ### Book Materials
 Download the textbook
 
-- [PowerPoint](/slides/Week 4/SSDS_Ch4.pptx){target="_blank"} and
-- [Lecture Notes](/lecture_notes/Week 4/SSDS_Ch4.docx){target="_blank"}.
+- [PowerPoint](/slides/Week 5/SSDS_Ch5.pptx){target="_blank"} and
+- [Lecture Notes](/lecture_notes/Week 5/SSDS_Ch5.docx){target="_blank"}.
 
 ### Class Notes
 *Posted after class*
 
-- [PDF](/slides/Week 4/ICS_Ch4.pdf){target="_blank"} and 
-- [Outline](/lecture_notes/Week 4/ICN_Ch4.pdf){target="_blank"}.
+<!--
+- [PDF](/slides/Week 5/ICS_Ch5.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week5/ICN_Ch5.pdf){target="_blank"}.
+-->
 
-### R Walkthrough - Doing the Class Notes
+### R Walkthrough
 *Posted after class*
 
 <!--
