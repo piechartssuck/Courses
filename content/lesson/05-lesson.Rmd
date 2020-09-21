@@ -15,7 +15,7 @@ editor_options:
 ---
 
 ### Data Camp
-The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due **two Wednesdays** following the completion of the Week 5 class. The module covers types of datam sampling, and experiments. In particular, the sections are:
+The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due **two Wednesdays** following the completion of the Week 5 class. The module covers types of data sampling, and experiments. In particular, the sections are:
 
 - Language of data
 - Study types and cautionary tales 
