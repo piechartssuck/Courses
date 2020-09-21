@@ -108,6 +108,14 @@
   </url>
   
   <url>
+    <loc>/example/05-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/05-readings/</loc>
+  </url>
+  
+  <url>
     <loc>/resource/data/</loc>
   </url>
   

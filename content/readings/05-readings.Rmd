@@ -1,0 +1,21 @@
+---
+title: "The Normal Distribution"
+linktitle: "Week 5: The Normal Distribution"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read Chapter 5: *The Normal Distribution*
+
+
+
