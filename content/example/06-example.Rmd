@@ -28,5 +28,7 @@ An open text file to copy and keep ID numbers securely.
 </center>
 
 #### Walkthrough: Part II - Using R to Access Qualtrics
-
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
 
