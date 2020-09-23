@@ -374,6 +374,7 @@ This week you have nothing to turn in but there is still something to do! First 
       <guid>/due/05-due/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -409,7 +410,7 @@ Location
 Participate in the &lt;strong&gt;EDP 619 Survey About Nothing&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
-A unique link was sent to your WVU MIX email at 8am on September 15.
+A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -452,7 +453,7 @@ A unique link was sent to your WVU MIX email at 8am on September 15.
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;/snippets/qualtrics_plug.txt.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;/snippets/qualtrics_plug.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough&lt;/h4&gt;
@@ -467,6 +468,145 @@ A unique link was sent to your WVU MIX email at 8am on September 15.
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Depending on your settings, you may have to right click to download the file.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
+      <link>/due/06-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/06-due/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#things-coming-up&#34;&gt;Things coming up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Qualtrics?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+eCampus?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Submit a one paragraph narrative about your survey.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;a href=&#34;/assignment/05-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Submit a draft survey.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;a href=&#34;/assignment/05-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Watch a two-part walkthrough on accessing the Qualtrics API visa R.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;a href=&#34;/example/06-example/#using-the-qualtrics-api-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Things coming up&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in three weeks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
+      <link>/example/06-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/06-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#using-the-qualtrics-api&#34;&gt;Using the Qualtrics API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;using-the-qualtrics-api&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Using the Qualtrics API&lt;/h3&gt;
+&lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;Using the typical approach of logging into Qualtrics, clicking through menu items and then downloading a data set is cumbersome. Moreover the output given by Qualtrics is rarely formatted in user friendly way. In this walkthrough, you’ll figure out how to use the R to access the Qualtrics API. Once you see how easy it is to pull data directly from the source, you may never go back!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;What you need&lt;/h4&gt;
+&lt;p&gt;An open text file to copy and keep ID numbers securely.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;walkthrough-part-i---gathering-ids&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Walkthrough: Part I - Gathering IDs&lt;/h4&gt;
+&lt;center&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/QualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;walkthrough-part-ii---using-r-to-access-qualtrics&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Walkthrough: Part II - Using R to Access Qualtrics&lt;/h4&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -971,6 +1111,89 @@ From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, We
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read &lt;em&gt;Chapter 5: How to Write Open- and Closed-Ended Questions&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
+      <link>/lesson/06-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/06-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The third exploration in R is a skill track consisting of multiple modules covering modeling and statistical analysis. These can be accessed at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Communicating with Data in the Tidyverse&lt;/li&gt;
+&lt;li&gt;Categorical Data in the Tidyverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Exploratory Data Analysis in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Modeling Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Dealing with Missing Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Why care about missing data?&lt;/li&gt;
+&lt;li&gt;Wrangling and tidying up missing values&lt;/li&gt;
+&lt;li&gt;Testing missing relationships&lt;/li&gt;
+&lt;li&gt;Connecting the dots (Imputation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inference for Categorical Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference for a single parameter&lt;/li&gt;
+&lt;li&gt;Proportions: testing and power&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: independence&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: goodness of fit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
+      <link>/readings/06-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/06-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 6: Aural Versus Visual Design of Questions and Questionnaires&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1585,6 +1808,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;li&gt;&lt;a href=&#34;https://kdpsingh.lab.medicine.umich.edu/lhs-610&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;LHS 610: Exploratory Data Analysis for Health&lt;/strong&gt;&lt;/a&gt;: A comprehensive way to learn R using health based data sets by &lt;a href=&#34;https://twitter.com/kdpsinghlab&#34; target=&#34;_blank&#34;&gt;Dr. Karandeep Singh&lt;/a&gt; out of the University of Michigan.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R for Data Science&lt;/strong&gt;&lt;/a&gt;: A free online book for learning the basics of R and the tidyverse.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R and RStudio cheat sheets&lt;/strong&gt;&lt;/a&gt;: A large collection of simple cheat sheets for RStudio, &lt;strong&gt;ggplot2&lt;/strong&gt;, and other R-related things.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/handouts/RStudioConf_2019Cheatsheets.pdf&#34;&gt;&lt;strong&gt;RStudio Conference cheat sheets&lt;/strong&gt;&lt;/a&gt;: A comprehensive collection of all recognized RStudio cheat sheets from &lt;a href=&#34;https://rstudio.com/resources/rstudioconf-2019/&#34;&gt;rstudio::conf 2019&lt;/a&gt;. In fact if you are interested in R, check out the &lt;a href=&#34;https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/&#34;&gt;conference workshop materials&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stat545.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stat 545&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/JennyBryan&#34;&gt;Dr. Jenny Bryan&lt;/a&gt; at RStudio has an entire introductory course in R, visualization, and data analysis online.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www2.stat.duke.edu/courses/Fall17/sta112.01/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;STA 112FS: Data Science&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/minebocek&#34; target=&#34;_blank&#34;&gt;Dr. Mine Çetinkaya-Rundel&lt;/a&gt; at the University of Edinburgh / Duke University has an entire introductory course in R, visualization, and data science online.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/allisonhorst/stats-illustrations&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stats Illustrations&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/allison_horst&#34; target=&#34;_blank&#34;&gt;Dr. Allison Horst&lt;/a&gt; created and continues to build beautiful illustrations of many R commands you will probably use.&lt;/li&gt;
@@ -2255,6 +2479,21 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/05-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/05-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 27, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Aural Versus Visual Design of Questions and Questionnaires&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/06-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/06-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/06-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/06-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/06-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

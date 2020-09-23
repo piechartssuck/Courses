@@ -262,6 +262,16 @@
 
 <script src="media/scripts/embedded-smart-player.min.js"></script>
 
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
@@ -687,6 +697,10 @@
         <a href="/example/05-example/">Week 5: How to Write Open- and Closed-Ended Questions</a>
       </li>
       
+      <li >
+        <a href="/example/06-example/">Week 6: Aural Versus Visual Design of Questions and Questionnaires</a>
+      </li>
+      
     </ul>
     
 
@@ -729,7 +743,7 @@
 </div>
 <div id="what-you-need" class="section level4">
 <h4>What you need</h4>
-<p>Here is a <a href="/snippets/qualtrics_plug.txt.txt">snippet</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. You’ll need it for the walkthrough.</p>
+<p>Here is a <a href="/snippets/qualtrics_plug.txt">snippet</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. You’ll need it for the walkthrough.</p>
 </div>
 <div id="walkthrough" class="section level4">
 <h4>Walkthrough</h4>

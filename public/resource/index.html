@@ -261,6 +261,16 @@
 
 <script src="media/scripts/embedded-smart-player.min.js"></script>
 
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />

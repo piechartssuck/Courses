@@ -1,0 +1,65 @@
+---
+title: "Aural Versus Visual Design of Questions and Questionnaires"
+linktitle: "Week 6: Aural Versus Visual Design of Questions and Questionnaires"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"Qualtrics?" = c(unchecked,
+                 checked,
+                 unchecked),
+
+"eCampus?" = c(checked,
+               unchecked,
+               unchecked),
+
+Description = c("Submit a one paragraph narrative about your survey.",
+                "Submit a draft survey.",
+                "Watch a two-part walkthrough on accessing the Qualtrics API visa R."),
+
+Location = c("[Link](/assignment/05-assignment/#submit-1)", 
+             "[Link](/assignment/05-assignment/#submit-1)",
+             "[Link](/example/06-example/#using-the-qualtrics-api-1)")
+
+)
+```
+
+### What's Due?
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "20em")
+```
+
+### Things coming up
+
+- [Data Camp modules](/lesson/05-lesson/#data-camp-1) due in three weeks.
+
+

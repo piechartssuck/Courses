@@ -262,6 +262,16 @@
 
 <script src="media/scripts/embedded-smart-player.min.js"></script>
 
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
@@ -691,6 +701,10 @@
         <a href="/due/05-due/">Week 5: How to Write Open- and Closed-Ended Questions</a>
       </li>
       
+      <li >
+        <a href="/due/06-due/">Week 6: Aural Versus Visual Design of Questions and Questionnaires</a>
+      </li>
+      
     </ul>
     
 
@@ -719,6 +733,7 @@
                     <div class="article-style">
                         
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -754,7 +769,7 @@ Location
 Participate in the <strong>EDP 619 Survey About Nothing</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.
 </td>
 <td style="text-align:left;width: 20em; ">
-A unique link was sent to your WVU MIX email at 8am on September 15.
+A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.
 </td>
 </tr>
 </tbody>

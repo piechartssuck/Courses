@@ -1,0 +1,22 @@
+---
+title: "Aural Versus Visual Design of Questions and Questionnaires"
+linktitle: "Week 6: Aural Versus Visual Design of Questions and Questionnaires"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 2
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read *Chapter 6: Aural Versus Visual Design of Questions and Questionnaires* in Dillman, Smyth, and Christian. 
+
+
+
+
