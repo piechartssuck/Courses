@@ -112,7 +112,15 @@
   </url>
   
   <url>
+    <loc>/walkthroughs/nfl/nflpipes/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/05-homeworks/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/05-due/</loc>
   </url>
   
   <url>
@@ -125,6 +133,14 @@
   
   <url>
     <loc>/readings/05-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/06-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/readings/06-readings/</loc>
   </url>
   
   <url>
@@ -210,6 +226,10 @@
   
   <url>
     <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/walkthroughs/</loc>
   </url>
   
 </urlset>

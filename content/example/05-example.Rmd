@@ -24,3 +24,9 @@ This week we have another brief introduction from Crash Course Statistics on the
 <br>
 
 Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+
+
+### Pipes and the NFL
+
+Take a look at a [walkthrough](/walkthroughs/nfl/nflpipes/) about using NFL data and pipes from `tidyverse`.
+

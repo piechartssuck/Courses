@@ -32,7 +32,7 @@ wk_post <- tibble(
 "eCampus?" = c(unchecked, 
                checked),
 
-Description = c("Complete a module in Data Camp focused on basic descriptive statistics and an introdcution to probability.",
+Description = c("Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.",
                "Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4."),
 
 Location = c("[Link](/lesson/04-lesson/#data-camp-1)", 

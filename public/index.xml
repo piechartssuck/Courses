@@ -2010,7 +2010,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Complete a module in Data Camp focused on basic descriptive statistics and an introdcution to probability.
+Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
@@ -2244,6 +2244,591 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     </item>
     
     <item>
+      <title>Pipes and the NFL</title>
+      <link>/walkthroughs/nfl/nflpipes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/walkthroughs/nfl/nflpipes/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#an-introduction-to-dplyr&#34;&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packages&#34;&gt;Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-tidyverse-package&#34;&gt;The Tidyverse Package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tidy-data&#34;&gt;Tidy Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basics&#34;&gt;Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-pipe-operator&#34;&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gapminder&#34;&gt;Gapminder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mutate-adds-new-variables&#34;&gt;&lt;code&gt;mutate()&lt;/code&gt; adds new variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#try-these-out&#34;&gt;Try These Out&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#group_by-operates-on-groups&#34;&gt;&lt;code&gt;group_by()&lt;/code&gt; operates on groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summarize-with-group_by&#34;&gt;&lt;code&gt;summarize()&lt;/code&gt; with &lt;code&gt;group_by()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#arrange-orders-columns&#34;&gt;&lt;code&gt;arrange()&lt;/code&gt; orders columns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nfl-data-set&#34;&gt;NFL Data Set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#task&#34;&gt;Task&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-science&#34;&gt;Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;an-introduction-to-dplyr&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
+&lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Purpose&lt;/h2&gt;
+&lt;p&gt;What are some common things you like to do with your data? Maybe remove rows or columns, do calculations and maybe add new columns? This is called &lt;strong&gt;data wrangling&lt;/strong&gt;. It’s not data management or data manipulation: you &lt;strong&gt;keep the raw data raw&lt;/strong&gt; and do these things programatically in R with the &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You are going to be introduced to data wrangling in R without using the base package, or “Base R.” The &lt;code&gt;tidyverse&lt;/code&gt; is a suite of packages that match a philosophy of data science developed by Hadley Wickham and the RStudio team. It is a more straight-forward way to learn R. I encourage you to take a look around the &lt;code&gt;tidyverse&lt;/code&gt; web page just to see everything it can do. You can fine it here: &lt;a href=&#34;https://www.tidyverse.org/&#34;&gt;https://www.tidyverse.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now that you have had two weeks of utter frustration with “Base R”, which means, in R without using any additional packages (though we have used a bit of tidyverse), I will show you by comparison what code will look like in “Base R”. For some things, base-R is more straightforward and where tat is apparent, I will note it. Whenever we use a function that is from the &lt;code&gt;tidyverse&lt;/code&gt;, we will prefix it so you’ll know for sure.&lt;/p&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Objectives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;discuss tidying data&lt;/li&gt;
+&lt;li&gt;read data from a &lt;code&gt;csv&lt;/code&gt; file into R&lt;/li&gt;
+&lt;li&gt;explore &lt;code&gt;gapminder&lt;/code&gt; data with base-R functions&lt;/li&gt;
+&lt;li&gt;wrangle &lt;code&gt;gapminder&lt;/code&gt; data with &lt;code&gt;dplyr&lt;/code&gt; from the &lt;code&gt;tidyverse&lt;/code&gt; family of functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Packages&lt;/h3&gt;
+&lt;p&gt;Please load up the following packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ───────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter()     masks stats::filter()
+## x dplyr::group_rows() masks kableExtra::group_rows()
+## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gapminder)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Remember to download them if you receive an error:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidyverse&amp;quot;)
+install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-tidyverse-package&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Tidyverse Package&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;tidyverse&lt;/code&gt; package is actually a family of packages that have been constructed to take all kinds of data sets in multiple formats and to &lt;strong&gt;tidy&lt;/strong&gt; them. Before we get into that concept, the typical path that we take when working with real world data sets is relatively simple…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;…yet the process can be extremely complex and time consuming as described below:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information &lt;a href=&#34;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&#34;&gt;(NYTimes, 2014)&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;tidyverse&lt;/code&gt; provides packages - given in &lt;span style=&#34; font-weight: bold;    color: #28453B !important;&#34;&gt;green&lt;/span&gt; - that address all of these notions, but we won’t even be able to scratch the surface of most of them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In this walk through, we’ll be concentrating on the use of pipes using the &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidy-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tidy Data&lt;/h2&gt;
+&lt;p&gt;Let’s start off discussing &lt;strong&gt;tidy data&lt;/strong&gt; which has simple convention: put variables in the columns and observations in the rows - amazing right?&lt;/p&gt;
+&lt;p&gt;There are three interrelated rules which make a data set tidy:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Each variable must have its own column.&lt;/li&gt;
+&lt;li&gt;Each observation must have its own row.&lt;/li&gt;
+&lt;li&gt;Each value must have its own cell.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We are going to wrangle - yup that is a real term for messing with the structure of data - a tidy-ish data set (the &lt;strong&gt;Mutate&lt;/strong&gt; part of the cycle), and then come back to tidying messy data using &lt;code&gt;tidyr&lt;/code&gt; once we’ve gotten it into proper form.&lt;/p&gt;
+&lt;p&gt;Conceptually, making data tidy first is really critical. Instead of building your analyses around whatever format your data are in, we’ll take deliberate steps to make your data tidy. When your data are in this format, you can use a growing assortment of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data. This will save you time since you aren’t reinventing the wheel, and will make your work more clear and understandable to your collaborators. Additionally after struggling with Base R and its arduous process, pipes will probably be something you welcome!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;basics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Basics&lt;/h2&gt;
+&lt;p&gt;There are six functions in &lt;code&gt;dplyr&lt;/code&gt; that you will primarily use to wrangle data. Remember that variables are the column names while observations are the values within a column.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick observations by their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R5.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;select()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick variables by their names.&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R6.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/strong&gt; command which let’s you create new variables with functions of existing variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R7.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;summarise()&lt;/code&gt;&lt;/strong&gt; command which let’s you collapse multiple values to a single summary.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R8.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;group_by()&lt;/code&gt;&lt;/strong&gt; command which let’s you perform operations with respect to a variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R9.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;strong&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/strong&gt; command which let’s you reorder the rows of a data frame.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(nope there isn’t a picture for this)
+&lt;br&gt;
+Should you memorize these? NO! NEVER! DON’T DO IT! That’s what the internet is for! As with any data set, the main objective is to logically think about what you can do to achieve a goal. The commands are simply paths you could take to get there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-pipe-operator&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/h2&gt;
+&lt;p&gt;Pipes are a logical operator from the &lt;code&gt;magrittr&lt;/code&gt; package that allows you to pass logic down a chain. Find that confusing? Let’s try to explain it another way:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;I %&amp;gt;% 
+  woke up %&amp;gt;%
+  showered %&amp;gt;%
+  got dressed %&amp;gt;%
+  ate breakfast %&amp;gt;%
+  showed up for work&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here every act is dependent on all of the previous acts. This essentially signifies what pipes do, in that you can fit multiple commands in a row without having to do them one by one as in Base R. Pipes are given by the &lt;code&gt;%&amp;gt;%&lt;/code&gt; symbol. In RStudio, the keyboard shortcut for a pipe is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Cmd + Shift + M (Mac or Linux)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + M (Windows)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;gapminder&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Gapminder&lt;/h3&gt;
+&lt;p&gt;In this walk through, we’ll be using &lt;a href=&#34;http://www.gapminder.org/world&#34;&gt;Gapminder data&lt;/a&gt;, which represents the health and wealth of nations. It was pioneered by &lt;a href=&#34;https://www.ted.com/speakers/hans_rosling&#34;&gt;Hans Rosling&lt;/a&gt;, who is famous for describing the prosperity of nations over time through famines, wars and other historic events with an interactive data visualization in his &lt;a href=&#34;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34;&gt;2006 TED Talk: The best stats you’ve ever seen&lt;/a&gt; which you can access by selecting the image on the next page.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.gapminder.org/world&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/R/R1.png&#34; alt=&#34;Gapminder Motion Chart&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let’s take a look at the gapminder data set.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(gapminder)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+##   country     continent  year lifeExp      pop gdpPercap
+##   &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 Afghanistan Asia       1952    28.8  8425333      779.
+## 2 Afghanistan Asia       1957    30.3  9240934      821.
+## 3 Afghanistan Asia       1962    32.0 10267083      853.
+## 4 Afghanistan Asia       1967    34.0 11537966      836.
+## 5 Afghanistan Asia       1972    36.1 13079460      740.
+## 6 Afghanistan Asia       1977    38.4 14880372      786.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now using pipes, we could have done&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;% 
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+##   country     continent  year lifeExp      pop gdpPercap
+##   &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 Afghanistan Asia       1952    28.8  8425333      779.
+## 2 Afghanistan Asia       1957    30.3  9240934      821.
+## 3 Afghanistan Asia       1962    32.0 10267083      853.
+## 4 Afghanistan Asia       1967    34.0 11537966      836.
+## 5 Afghanistan Asia       1972    36.1 13079460      740.
+## 6 Afghanistan Asia       1977    38.4 14880372      786.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here are some others using the &lt;code&gt;filter&lt;/code&gt; and &lt;code&gt;select&lt;/code&gt; commands with multiple steps:&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;no-pipes&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;No Pipes&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapusa_filter &amp;lt;- filter(gapminder, country == &amp;quot;United States&amp;quot;)
+
+gapusa_filter&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 12 x 6
+##    country       continent  year lifeExp       pop gdpPercap
+##    &amp;lt;fct&amp;gt;         &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;     &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 United States Americas   1952    68.4 157553000    13990.
+##  2 United States Americas   1957    69.5 171984000    14847.
+##  3 United States Americas   1962    70.2 186538000    16173.
+##  4 United States Americas   1967    70.8 198712000    19530.
+##  5 United States Americas   1972    71.3 209896000    21806.
+##  6 United States Americas   1977    73.4 220239000    24073.
+##  7 United States Americas   1982    74.6 232187835    25010.
+##  8 United States Americas   1987    75.0 242803533    29884.
+##  9 United States Americas   1992    76.1 256894189    32004.
+## 10 United States Americas   1997    76.8 272911760    35767.
+## 11 United States Americas   2002    77.3 287675526    39097.
+## 12 United States Americas   2007    78.2 301139947    42952.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapusa_select &amp;lt;- select(gapusa_filter, -continent, -lifeExp)
+
+gapusa_select&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 12 x 4
+##    country        year       pop gdpPercap
+##    &amp;lt;fct&amp;gt;         &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 United States  1952 157553000    13990.
+##  2 United States  1957 171984000    14847.
+##  3 United States  1962 186538000    16173.
+##  4 United States  1967 198712000    19530.
+##  5 United States  1972 209896000    21806.
+##  6 United States  1977 220239000    24073.
+##  7 United States  1982 232187835    25010.
+##  8 United States  1987 242803533    29884.
+##  9 United States  1992 256894189    32004.
+## 10 United States  1997 272911760    35767.
+## 11 United States  2002 287675526    39097.
+## 12 United States  2007 301139947    42952.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;with-pipes&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;With Pipes&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapusa &amp;lt;- gapminder %&amp;gt;% 
+  filter(country == &amp;quot;United States&amp;quot;) %&amp;gt;%
+  select(-continent, -lifeExp) 
+
+gapusa&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 12 x 4
+##    country        year       pop gdpPercap
+##    &amp;lt;fct&amp;gt;         &amp;lt;int&amp;gt;     &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 United States  1952 157553000    13990.
+##  2 United States  1957 171984000    14847.
+##  3 United States  1962 186538000    16173.
+##  4 United States  1967 198712000    19530.
+##  5 United States  1972 209896000    21806.
+##  6 United States  1977 220239000    24073.
+##  7 United States  1982 232187835    25010.
+##  8 United States  1987 242803533    29884.
+##  9 United States  1992 256894189    32004.
+## 10 United States  1997 272911760    35767.
+## 11 United States  2002 287675526    39097.
+## 12 United States  2007 301139947    42952.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By using multiple lines you can actually read this like a story and there aren’t temporary variables that get confusing. This reads like:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“start with the &lt;code&gt;gapminder&lt;/code&gt; data,
+and then filter for the United States,
+and lastly drop the variables continent and lifeExp.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mutate-adds-new-variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;mutate()&lt;/code&gt; adds new variables&lt;/h3&gt;
+&lt;p&gt;Let’s say we needed to add an index column so we know which order these data came in. Let’s not make a new variable, let’s add a column to our gapminder data frame. How do we do that? With the &lt;code&gt;mutate()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;Imagine we want to know each country’s annual GDP. We can multiply &lt;code&gt;pop&lt;/code&gt; by &lt;code&gt;gdpPercap&lt;/code&gt; to create a new column named &lt;code&gt;gdp&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  mutate(gdp = pop * gdpPercap)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,704 x 7
+##    country     continent  year lifeExp      pop gdpPercap          gdp
+##    &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
+##  1 Afghanistan Asia       1952    28.8  8425333      779.  6567086330.
+##  2 Afghanistan Asia       1957    30.3  9240934      821.  7585448670.
+##  3 Afghanistan Asia       1962    32.0 10267083      853.  8758855797.
+##  4 Afghanistan Asia       1967    34.0 11537966      836.  9648014150.
+##  5 Afghanistan Asia       1972    36.1 13079460      740.  9678553274.
+##  6 Afghanistan Asia       1977    38.4 14880372      786. 11697659231.
+##  7 Afghanistan Asia       1982    39.9 12881816      978. 12598563401.
+##  8 Afghanistan Asia       1987    40.8 13867957      852. 11820990309.
+##  9 Afghanistan Asia       1992    41.7 16317921      649. 10595901589.
+## 10 Afghanistan Asia       1997    41.8 22227415      635. 14121995875.
+## # … with 1,694 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;try-these-out&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Try These Out&lt;/h3&gt;
+&lt;div id=&#34;on-your-own-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;On Your Own 1&lt;/h4&gt;
+&lt;p&gt;Try to figure this out by yourself using pipes and only the &lt;code&gt;filter&lt;/code&gt;, &lt;code&gt;mutate&lt;/code&gt;, and &lt;code&gt;select&lt;/code&gt; commands. Compare your syntax with the syntax below. Remember! There are multiple ways to go about finding the outcome.&lt;/p&gt;
+&lt;center&gt;
+&lt;em&gt;Calculate the population in thousands for all European countries in the year 2007 and add it as a new column.&lt;/em&gt;
+&lt;/center&gt;
+&lt;br&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Possible solution&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  filter(continent == &amp;quot;Europe&amp;quot;,
+         year == 2007) %&amp;gt;%
+  mutate(pop_thousands = pop/1000) %&amp;gt;%
+  select(country, year, pop_thousands) #this cleans up the dataframe but isn&amp;#39;t necessary&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 30 x 3
+##    country                 year pop_thousands
+##    &amp;lt;fct&amp;gt;                  &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;
+##  1 Albania                 2007         3601.
+##  2 Austria                 2007         8200.
+##  3 Belgium                 2007        10392.
+##  4 Bosnia and Herzegovina  2007         4552.
+##  5 Bulgaria                2007         7323.
+##  6 Croatia                 2007         4493.
+##  7 Czech Republic          2007        10229.
+##  8 Denmark                 2007         5468.
+##  9 Finland                 2007         5238.
+## 10 France                  2007        61084.
+## # … with 20 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;
+If you got it, that’s great! However, it’s absolutely fine if you did not. The best way to learn is to practice (and possibly yell at your computer a few times if that helps).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;group_by-operates-on-groups&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;group_by()&lt;/code&gt; operates on groups&lt;/h3&gt;
+&lt;p&gt;What if we wanted to know the total population on each continent in 2002? Answering this question requires a &lt;strong&gt;grouping variable&lt;/strong&gt;. By using &lt;code&gt;group_by()&lt;/code&gt; we can set our grouping variable to &lt;code&gt;continent&lt;/code&gt; and create a new column called &lt;code&gt;cont_pop&lt;/code&gt; that will add up all country populations by their associated continents.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  filter(year == 2002) %&amp;gt;%
+  group_by(continent) %&amp;gt;% 
+  mutate(cont_pop = sum(pop))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 142 x 7
+## # Groups:   continent [5]
+##    country     continent  year lifeExp       pop gdpPercap   cont_pop
+##    &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;     &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1 Afghanistan Asia       2002    42.1  25268405      727. 3601802203
+##  2 Albania     Europe     2002    75.7   3508512     4604.  578223869
+##  3 Algeria     Africa     2002    71.0  31287142     5288.  833723916
+##  4 Angola      Africa     2002    41.0  10866106     2773.  833723916
+##  5 Argentina   Americas   2002    74.3  38331121     8798.  849772762
+##  6 Australia   Oceania    2002    80.4  19546792    30688.   23454829
+##  7 Austria     Europe     2002    79.0   8148312    32418.  578223869
+##  8 Bahrain     Asia       2002    74.8    656397    23404. 3601802203
+##  9 Bangladesh  Asia       2002    62.0 135656790     1136. 3601802203
+## 10 Belgium     Europe     2002    78.3  10311970    30486.  578223869
+## # … with 132 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sure this great but what if we don’t care about the other columns and only want each continent and their population in 2002? That leads us to the next function:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summarize-with-group_by&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;summarize()&lt;/code&gt; with &lt;code&gt;group_by()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;We want to operate on a group, but actually collapse or distill the output from that group. The &lt;code&gt;summarize()&lt;/code&gt; function will do that for us.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  group_by(continent) %&amp;gt;%
+  summarize(cont_pop = sum(pop)) %&amp;gt;%
+  ungroup()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 5 x 2
+##   continent    cont_pop
+##   &amp;lt;fct&amp;gt;           &amp;lt;dbl&amp;gt;
+## 1 Africa     6187585961
+## 2 Americas   7351438499
+## 3 Asia      30507333901
+## 4 Europe     6181115304
+## 5 Oceania     212992136&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;summarize()&lt;/code&gt; will actually only keep the columns that are grouped_by or summarized. So if we wanted to keep other columns, we’d have to do have a few more steps. &lt;code&gt;ungroup()&lt;/code&gt; removes the grouping and it’s good to get in the habit of using it after a &lt;code&gt;group_by()&lt;/code&gt; because R remembers! We can use more than one grouping variable. Let’s get total populations by &lt;strong&gt;continent&lt;/strong&gt; and &lt;strong&gt;year&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  group_by(continent, year) %&amp;gt;%
+  summarize(cont_pop = sum(as.numeric(pop))) %&amp;gt;%
+  ungroup()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;continent&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 60 x 3
+##    continent  year  cont_pop
+##    &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 Africa     1952 237640501
+##  2 Africa     1957 264837738
+##  3 Africa     1962 296516865
+##  4 Africa     1967 335289489
+##  5 Africa     1972 379879541
+##  6 Africa     1977 433061021
+##  7 Africa     1982 499348587
+##  8 Africa     1987 574834110
+##  9 Africa     1992 659081517
+## 10 Africa     1997 743832984
+## # … with 50 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;arrange-orders-columns&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;arrange()&lt;/code&gt; orders columns&lt;/h3&gt;
+&lt;p&gt;This is ordered alphabetically, which is helpful in certain circumstances. But let’s say we wanted to order it in ascending order for &lt;code&gt;year&lt;/code&gt;. The dplyr function to do that is &lt;code&gt;arrange()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  group_by(continent, year) %&amp;gt;%
+  summarize(cont_pop = sum(as.numeric(pop))) %&amp;gt;%
+  arrange(year) %&amp;gt;%
+  ungroup()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;continent&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 60 x 3
+##    continent  year   cont_pop
+##    &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1 Africa     1952  237640501
+##  2 Americas   1952  345152446
+##  3 Asia       1952 1395357351
+##  4 Europe     1952  418120846
+##  5 Oceania    1952   10686006
+##  6 Africa     1957  264837738
+##  7 Americas   1957  386953916
+##  8 Asia       1957 1562780599
+##  9 Europe     1957  437890351
+## 10 Oceania    1957   11941976
+## # … with 50 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;on-your-own-2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;On Your Own 2&lt;/h4&gt;
+&lt;p&gt;Try to figure this out by yourself using pipes and some if not all of the commands introduced above. Compare your syntax with the script &lt;strong&gt;On Your Own (Pipes and the NFL) Syntax Set.R&lt;/strong&gt;. Remember! There are multiple ways to go about finding the outcome.&lt;/p&gt;
+&lt;center&gt;
+&lt;em&gt;Now what is the maximum GDP per continent across all years?&lt;/em&gt;
+&lt;/center&gt;
+&lt;br&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Possible solution&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gapminder %&amp;gt;%
+  mutate(gdp = pop * gdpPercap) %&amp;gt;%
+  group_by(continent) %&amp;gt;%
+  mutate(max_gdp = max(gdp)) %&amp;gt;%
+  filter(gdp == max_gdp) %&amp;gt;%
+  select(-country)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 5 x 7
+## # Groups:   continent [5]
+##   continent  year lifeExp        pop gdpPercap     gdp max_gdp
+##   &amp;lt;fct&amp;gt;     &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1 Oceania    2007    81.2   20434176    34435. 7.04e11 7.04e11
+## 2 Asia       2007    73.0 1318683096     4959. 6.54e12 6.54e12
+## 3 Africa     2007    71.3   80264543     5581. 4.48e11 4.48e11
+## 4 Europe     2007    79.4   82400996    32170. 2.65e12 2.65e12
+## 5 Americas   2007    78.2  301139947    42952. 1.29e13 1.29e13&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;nfl-data-set&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;NFL Data Set&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Grab the data set&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;:
+&lt;a href=&#34;/data/R/2014-average-ticket-price.csv&#34;&gt;&lt;code&gt;2014-average-ticket-price&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Save it in the same place as your script.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Load it up in R&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014 &amp;lt;- read_csv(&amp;quot;2014-average-ticket-price.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+## cols(
+##   Event = col_character(),
+##   Division = col_character(),
+##   `Avg TP, $` = col_double()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To make a good habit, let’s check the file’s characteristics. This is a good habit and can alleviate some pains down the line. It is recommended you run these simple checks on any data set.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Check that your set is in a data frame format and get information about your columns and their types (character, numeric, or factor) by running&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(nfl2014)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## tibble [108 × 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Event    : chr [1:108] &amp;quot;Baltimore Ravens at Pittsburgh Steelers Tickets on 02-Nov-2014 (9037819)&amp;quot; &amp;quot;Pittsburgh Steelers at Baltimore Ravens Tickets on 11-Sep-2014 (9037835)&amp;quot; &amp;quot;Cleveland Browns at Pittsburgh Steelers Tickets on 07-Sep-2014 (9037806)&amp;quot; &amp;quot;Cincinnati Bengals at Pittsburgh Steelers Tickets on 28-Dec-2014 (9037828)&amp;quot; ...
+##  $ Division : chr [1:108] &amp;quot;AFC North&amp;quot; &amp;quot;AFC North&amp;quot; &amp;quot;AFC North&amp;quot; &amp;quot;AFC North&amp;quot; ...
+##  $ Avg TP, $: num [1:108] 202 199 196 164 148 137 135 102 89 83 ...
+##  - attr(*, &amp;quot;spec&amp;quot;)=
+##   .. cols(
+##   ..   Event = col_character(),
+##   ..   Division = col_character(),
+##   ..   `Avg TP, $` = col_double()
+##   .. )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or you can do&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(nfl2014)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 108
+## Columns: 3
+## $ Event       &amp;lt;chr&amp;gt; &amp;quot;Baltimore Ravens at Pittsburgh Steelers Tickets on 02-No…
+## $ Division    &amp;lt;chr&amp;gt; &amp;quot;AFC North&amp;quot;, &amp;quot;AFC North&amp;quot;, &amp;quot;AFC North&amp;quot;, &amp;quot;AFC North&amp;quot;, &amp;quot;AFC …
+## $ `Avg TP, $` &amp;lt;dbl&amp;gt; 202, 199, 196, 164, 148, 137, 135, 102, 89, 83, 83, 81, 2…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So we do have a data frame with 108 rows and three columns as well as two columns that are made up of characters (i.e. letters) and one that is numeric, or made of numbers. These columns are actually called &lt;strong&gt;vectors&lt;/strong&gt;. Please keep this mind as we’ll be referring to the columns as vectors from now on.&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Check that its a tibble, which is essentially a data frame but tweaked to make it easier to wrangle.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;is_tibble(nfl2014)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The differences between the two are worth a brief discussion in a data science course, but not here. Some older functions don’t work with tibbles. If you encounter one of these functions, use the command &lt;code&gt;as.data.frame()&lt;/code&gt; to turn a tibble back to a data.frame like so:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014_dfonly &amp;lt;- as.data.frame(nfl2014)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anyway, if you test for both of those and they pass, you will be able to use all of the commands listed above.&lt;/p&gt;
+&lt;p&gt;We’ll tweak the second question on the task list a bit to say: “What was the highest and lowest average ticket price for all 2014-2015 NFL games by division?” For this session, we’ll disregard the histogram and answer the question that was asked for on the original.&lt;/p&gt;
+&lt;p&gt;To tackle this, let’s think about it logically. Originally you had to&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;inspect the data frame which I called &lt;code&gt;nfl2014&lt;/code&gt;,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;remove the columns with &lt;em&gt;NA&lt;/em&gt;,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;create eight different data frames, one for each division, and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;derive the mean for each.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;put the values in order.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That is a lot of steps! Let’s try using pipes to do this instead:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014 %&amp;gt;%
+  select(Division, `Avg TP, $`) %&amp;gt;%
+  group_by(Division) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  summarize(Mean_by_Division = mean(`Avg TP, $`, na.rm = TRUE)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  arrange(desc(Mean_by_Division))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 8 x 2
+##   Division  Mean_by_Division
+##   &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt;
+## 1 NFC North            179. 
+## 2 NFC East             173. 
+## 3 NFC West             165. 
+## 4 AFC North            135. 
+## 5 AFC East             127. 
+## 6 AFC West             125. 
+## 7 NFC South             95.4
+## 8 AFC South             83.3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well that was MUCH EASIER! Now what happened? Let’s go through it line by line:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;I called the data frame &lt;code&gt;nfl2014&lt;/code&gt;. This was the name given to the csv file when it was brought in.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I selected the two columns I want to know more about. In this case, I can’t compute anything by &lt;code&gt;Division&lt;/code&gt; if I don’t have the numerical data that explains ticket prices &lt;code&gt;Avg TP, $&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since I need the mean by each &lt;code&gt;Division&lt;/code&gt;, grouping by that vector will allow me to find perform any and all operations by each unique value. In this case we have eight divisions, so well have outcomes for each.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;NA&lt;/em&gt;s are a special type of value in R. New users tend to disregard them as blanks or sometimes zeros. However, the name itself &lt;em&gt;NA&lt;/em&gt; means not available aka a missing value. When you see this, it means that R has recognized that a value should be there but its not and depending on the command, it may bring up an error or worst case scenario, an analysis runs and your output is skewed. The command &lt;code&gt;na.omit()&lt;/code&gt; will remove &lt;strong&gt;any row where an&lt;/strong&gt; &lt;em&gt;NA&lt;/em&gt; &lt;strong&gt;is found&lt;/strong&gt;. Please note this differs from removing only rows with &lt;em&gt;NA&lt;/em&gt;s. The distinction, while minute, can have lasting ramifications.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;summarize&lt;/code&gt; tells R that I’m going to reduce the data set using some summary technique. In this case the mean is needed so I constructed a new column named &lt;code&gt;Mean_by_Division&lt;/code&gt; which took the &lt;code&gt;mean&lt;/code&gt; of `&lt;code&gt;Avg TP, $&lt;/code&gt;. Note that since we are using pipes, we do not have to tell R about the name of the data frame. It has been understood since step 1.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As a good rule of thumb, it is always good to &lt;code&gt;ungroup()&lt;/code&gt; your data because the grouping is information that R retains. R remembers!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arrange the &lt;code&gt;Mean_by_Division&lt;/code&gt; vector in decreasing order. The default is increasing.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;on-your-own-3&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;On Your Own 3&lt;/h4&gt;
+&lt;center&gt;
+&lt;em&gt;Now try doing the same as the above except only for AFC teams.&lt;/em&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+There are a lot of ways to accomplish this, but I would suggest filtering with a string. Take a look at the link and see if you can figure out the command to use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.exploratory.io/filter-with-text-data-952df792c2ba&#34;&gt;Filter with Text data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Of course, a solution is below. Again you are learning how to do this so take some time and for many of you, it may be oddly satisfying to find the output you want after being frustrated.
+&lt;br&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Possible solution&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014 %&amp;gt;%
+select(Division, `Avg TP, $`) %&amp;gt;%
+  filter(str_detect(Division, &amp;quot;AFC&amp;quot;)) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  summarize(AFC_mean = mean(`Avg TP, $`, na.rm = TRUE))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
+##   AFC_mean
+##      &amp;lt;dbl&amp;gt;
+## 1     117.&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;task&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Task&lt;/h2&gt;
+&lt;p&gt;For this task first download the &lt;a href=&#34;/data/R/drinks2010andBeyond.csv&#34;&gt;&lt;code&gt;drinks2010andBeyond&lt;/code&gt;&lt;/a&gt; data set&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the &lt;a href=&#34;https://apps.who.int/gho/data/node.main.GISAH?lang=en&#34;&gt;WHO GISAH site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In a typical submission&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, you must include&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Your name and task in the top of the script.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Separated solutions in proper numerical order.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An answer to the question.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Remember you can leave text that R will ignore by putting a hashtag # in front of it.&lt;/p&gt;
+&lt;p&gt;As an example, if I were to submit the altered item 2 from above, my script would read:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Abhik Roy
+# EDP 613
+# Drinks Task
+
+# 1 blah blah blah
+
+
+# 2
+nfl2014 %&amp;gt;%
+  select(Division, `Avg TP, $`) %&amp;gt;%
+  group_by(Division) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  summarize(Mean_by_Division = mean(`Avg TP, $`, na.rm = TRUE)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  arrange(desc(Mean_by_Division))
+
+# According to the output, the highest average price paid was $170.00 per ticket paid by
+# fans the NFC North whereas the lowest average price ticket was paid by attendees who  
+# went to games in the AFC South at $83.30.
+
+
+# 3 blah blah blah&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now please answer the following questions. Please note that all consumption measurements are in liters:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Which country or countries had the highest average consumption of wine and beer in each year?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which country or countries had the highest average consumption of spirits in each year?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which country had the highest average consumption of all alcohol across time?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since we measure beer in the United States in ounces (for some reason) rather than in liters, convert the 2016 measures into ounces using the conversion 1 Liter = 33.814022 oz.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can always contact me for help!&lt;/p&gt;
+
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-science&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Science&lt;/h2&gt;
+&lt;p&gt;Data science uses the statistics you will learn in this course and to some degree, in the follow-up course to tackle real life data. According to Glassdoor, the average salary for a data scientist is 113,436 USD (range: 95,000 USD - 250,000 USD; &lt;a href=&#34;https://www.burtchworks.com/wp-content/uploads/2018/05/Burtch-Works-Study_DS-2018.pdf&#34; target=&#34;_blank&#34;&gt;Burtch-Works, 2018&lt;/a&gt;). If you are interested in learning more about Data Science, a course is tentatively scheduled for the Fall 2021 term in addition to Data Visualization in Spring 2021. Both of these courses run very differently from the statistics courses and are focused on exploring data sets of interest to students. If interested, please let me know or stay tuned.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;A great deal of material presented here was adapted from two online texts: &lt;a href=&#34;%22https://ohi-science.org/data-science-training/&#34; target=&#34;_blank&#34;&gt;Introduction to Open Data Science&lt;/a&gt; and &lt;a href=&#34;%22https://r4ds.had.co.nz/%22&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;. If interested in how R is used in data science, try taking a look. Remember, you never need to memorize code so try not to get overwhelmed!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;From the FiveThirtyEight &lt;a href=&#34;https://github.com/fivethirtyeight/data/tree/master/nfl-ticket-prices&#34; target=&#34;_blank&#34;&gt;NFL Ticket Prices Github Page&lt;/a&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you are getting an error, remember to point R to the right location by &lt;code&gt;Session &amp;gt; Working Directory &amp;gt; To Source File Location&lt;/code&gt; in the menu.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;From the FiveThirtyEight &lt;a href=&#34;https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption&#34; target=&#34;_blank&#34;&gt;Alcohol Consumption Github Page&lt;/a&gt;&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;This is just for practice so you do not have to turn anything in!&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The Normal Distribution</title>
       <link>/assignment/05-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2295,6 +2880,152 @@ tr:nth-child(even) { background: #ffffff;
     
     <item>
       <title>The Normal Distribution</title>
+      <link>/due/05-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/05-due/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-5-after-class-ends&#34;&gt;What to do for Week 5 after class ends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-6-before-coming-to-class&#34;&gt;What to do for Week 6 before coming to class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;what-to-do-for-week-5-after-class-ends&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 5 after class ends&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Go through the NFL and Pipes R walkthrough
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Complete problems 1, 2, 5, 6, 7, 8, 11 and 12 in Chapter 5.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/assignment/05-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-to-do-for-week-6-before-coming-to-class&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 6 before coming to class&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Area
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Read chapter 6 in the text.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/readings/06-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 640 512&#34;&gt;
+&lt;path d=&#34;M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Look over the text PowerPoint and corresponding notes.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/06-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 352 512&#34;&gt;
+&lt;path d=&#34;M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/06-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For grading.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;For preparation.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Optional but recommended.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Normal Distribution</title>
       <link>/example/05-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/05-example/</guid>
@@ -2303,6 +3034,7 @@ tr:nth-child(even) { background: #ffffff;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pipes-and-the-nfl&#34;&gt;Pipes and the NFL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -2316,6 +3048,10 @@ tr:nth-child(even) { background: #ffffff;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Remember you can always access a Crash Course Statistics playlist using the following &lt;a href=&#34;https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pipes-and-the-nfl&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pipes and the NFL&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2356,15 +3092,15 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Posted after class&lt;/em&gt;&lt;/p&gt;
-&lt;!--
-- [PDF](/slides/Week 5/ICS_Ch5.pdf){target=&#34;_blank&#34;} and 
-- [Outline](/lecture_notes/Week5/ICN_Ch5.pdf){target=&#34;_blank&#34;}.
---&gt;
+&lt;p&gt;Download the class&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%205/ICS_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week5/ICN_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Posted after class&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;!--
 1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
 
@@ -2400,6 +3136,57 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read Chapter 5: &lt;em&gt;The Normal Distribution&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sampling and Sampling Distributions</title>
+      <link>/example/06-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/06-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;crash-course-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Crash Course Statistics&lt;/h3&gt;
+&lt;p&gt;This week we have two videos from Crash Course Statistics. The first is one on &lt;strong&gt;Experimental Designs&lt;/strong&gt; which may benefit many of you after the conclusion of this course.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/kkBDa-ICvyY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;The second is on &lt;strong&gt;Sampling&lt;/strong&gt; which focuses more on the chapter elements. Sampling is one of the most important aspects of any quantitative study. If you underestimate a sample (aka undersample), then a whole study can become useless. If you overestimate a sample (aka oversample), then you’ll be doing a bunch of extra work for no reason.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/ZwqOoD17_LU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sampling and Sampling Distributions</title>
+      <link>/readings/06-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/06-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read Chapter 6: &lt;em&gt;Sampling and Sampling Distributions&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -3715,6 +4502,24 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/05-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;October 7, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Sampling and Sampling Distributions&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/06-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/06-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/06-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/tbody&gt;
