@@ -20,7 +20,9 @@ editor_options:
 Using the typical approach of logging into Qualtrics, clicking through menu items and then downloading a data set is cumbersome. Moreover the output given by Qualtrics is rarely formatted in user friendly way. In this walkthrough, you'll figure out how to use the R to access the Qualtrics API. Once you see how easy it is to pull data directly from the source, you may never go back!
 
 #### What you need
-An open text file to copy and keep ID numbers securely.
+
+- The [Qualtrics_API.R](/files/Week 6/Qualtrics_API.R) script^[You may have to right click and download it depending on your browser settings.].
+- An open text file to copy and keep ID numbers securely.
 
 #### Walkthrough: Part I - Gathering IDs
 <center>
@@ -31,4 +33,7 @@ An open text file to copy and keep ID numbers securely.
 <center>
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
+<br>
+Link to [Qualtrics support](https://www.qualtrics.com/support/?utm_lp=contact){target="_blank"}.
+
 
