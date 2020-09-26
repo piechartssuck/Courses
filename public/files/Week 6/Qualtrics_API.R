@@ -19,7 +19,7 @@ labelAttr <- function(dta) {
 
 ## Put your Qualtrics API here ----
 qualtrics_api_credentials(api_key = "YOUR API KEY HERE", 
-                          base_url = "https://wvu.ca1.qualtrics.com", 
+                          base_url = "wvu.ca1.qualtrics.com", 
                           install = TRUE)
 
 ## Use this command your first time OR if you update the key ----
@@ -27,7 +27,7 @@ readRenviron("~/.Renviron")
 
 ## Get all of your surveys ----
 surveys <- all_surveys()
-
+t
 ## subset a particular survey ----
 id = "SV_eyqbBif5DiL0ROl"
 
