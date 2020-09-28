@@ -14,6 +14,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -52,6 +54,731 @@ tr:nth-child(even) { background: #ffffff;
 </div>
 <div id="solutions" class="section level4">
 <h4>Solutions</h4>
+<details>
+<summary>1</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>There are <span class="boxed">seven</span> response categories for political views.</p></li>
+<li><p>We can calculate the percentage square by</p>
+<center>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Political Views</p>
+</th>
+<th style="text-align:center;">
+<p>Percentage <span class="math inline">\(c\)</span></p>
+</th>
+<th style="text-align:center;">
+<p>Percentage Squared <span class="math inline">\(c^2\)</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Extremely liberal</p>
+</td>
+<td style="text-align:center;">
+<p>5.5</p>
+</td>
+<td style="text-align:center;">
+<p>30.25</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Liberal</p>
+</td>
+<td style="text-align:center;">
+<p>12.0</p>
+</td>
+<td style="text-align:center;">
+<p>144.00</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Slightly liberal</p>
+</td>
+<td style="text-align:center;">
+<p>12.3</p>
+</td>
+<td style="text-align:center;">
+<p>151.29</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Moderate</p>
+</td>
+<td style="text-align:center;">
+<p>37.8</p>
+</td>
+<td style="text-align:center;">
+<p>1428.84</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Slightly conservative</p>
+</td>
+<td style="text-align:center;">
+<p>13.2</p>
+</td>
+<td style="text-align:center;">
+<p>174.24</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Conservative</p>
+</td>
+<td style="text-align:center;">
+<p>15.0</p>
+</td>
+<td style="text-align:center;">
+<p>225.00</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Extremely conservative</p>
+</td>
+<td style="text-align:center;">
+<p>4.2</p>
+</td>
+<td style="text-align:center;">
+<p>17.64</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>Total</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>100.0</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>2171.26</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>yields <span class="boxed"><span class="math inline">\(\sum c^2 = 2171.26\)</span></span>.</p></li>
+<li><p>We can calculate the IQV by</p>
+<span class="math display">\[\begin{aligned}
+IQV&amp;= \dfrac{7\cdot(100^2-2171.26)}{100^2\cdot (7-1)}\\\\
+&amp;= \dfrac{54801.18}{60000}\\\\
+&amp;\approx 0.91
+\end{aligned}\]</span>
+<p>which is relatively close to 1 suggesting that <span class="boxed">Americans are fairly diverse in their political views</span>.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>2</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>For the female population where <span class="math inline">\(N = 629\)</span>, we have</p>
+<center>
+<p><span class="math inline">\(Q_1 = 629\cdot 0.25 = 157.25\)</span></p>
+</center>
+<center>
+<p><span class="math inline">\(Q_3 = 629 \cdot 0.75 = 471.75\)</span></p>
+</center>
+<p>or about the 158th and 472nd cases which are representative of cases where the degree are in the High school graduate and Bachelor’s degree categories, respectively. This yields <span class="math inline">\(IQR = 471.75-157.25=314.5\)</span> which includes those who have a highest attained degree of <span class="boxed">high school, junior college and bachelor’s </span>.<br><br>
+For the male population where <span class="math inline">\(N = 488\)</span>, we have</p>
+<center>
+<p><span class="math inline">\(Q_1 = 488 \cdot 0.25 = 122\)</span></p>
+</center>
+<center>
+<p><span class="math inline">\(Q_3 = 488 \cdot 0.75 = 366\)</span></p>
+</center>
+<p>or the 122nd and 366th cases which are representative of cases where the degree are in the High school graduate and Bachelor’s degree categories, respectively. This yields <span class="math inline">\(IQR = 366-122=244\)</span> that includes those who have a highest attained degree of <span class="boxed">high school, junior college and bachelor’s </span>.<br><br>
+So <span class="boxed">both IQRs provide the same groups of cases</span>.</p></li>
+<li><p>Based on the IQR calculation, we know that 50% of all cases for males and females lies between high school and bachelor’s degree, <span class="boxed">but that does not inform us about the variability of the distribution</span>. A better measure would be IQV and if interval-ratio measures were available, the variance and standard deviation would provide better information and estimates.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>3</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>The range of convictions in</li>
+</ol>
+<ul>
+<li>2010 is given by <span class="math inline">\(397 – 108 =\)</span> <span class="boxed"><span class="math inline">\(289\)</span></span>.</li>
+<li>2015 is given by <span class="math inline">\(402 – 97 =\)</span> <span class="boxed"><span class="math inline">\(305\)</span></span>.</li>
+</ul>
+<p>Therefore the range of conviction in <span class="boxed">2015 is larger</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>The mean number in <strong>2010</strong> across all levels of government was</p>
+<span class="math display">\[\begin{aligned}
+\overline{Y} &amp;= \dfrac{397+108+280}{3}\\\\
+&amp;\approx 261.67
+\end{aligned}\]</span>
+<p>or about an average of <span class="boxed">262 convictions</span>.<br><br> The mean number in <strong>2015</strong> across all levels of government was</p>
+<span class="math display">\[\begin{aligned}
+\overline{Y} &amp;= \dfrac{402+97+200}{3}\\\\
+&amp;= 233
+\end{aligned}\]</span>
+<p>or an average of <span class="boxed">233 convictions</span>.</p></li>
+<li><p>The sum of squares can be found by</p>
+<center>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Government Level</p>
+</th>
+<th style="text-align:center;">
+<p>Number of Convictions</p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\(Y-\overline{Y}\)</span></p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\((Y-\overline{Y})^2\)</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Federal</p>
+</td>
+<td style="text-align:center;">
+<p>397</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(397 - 261.1 = 135.33\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((135.33)^2 = 18314.21\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>State</p>
+</td>
+<td style="text-align:center;">
+<p>108</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(108 - 261.67 = -153.67\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((-153.67)^2 = 23614.47\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Local</p>
+</td>
+<td style="text-align:center;">
+<p>280</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(280 - 261.67 = 18.33\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((18.33)^2 = 335.99\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>Total</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>785</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>$ $</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>42264.67</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>implying that</p>
+<span class="math display">\[\begin{aligned}
+S &amp;= \sqrt{\dfrac{42264.67}{2}}\\\\
+&amp;\approx 145.37
+\end{aligned}\]</span>
+<p>So in <strong>2010</strong>, there was a standard deviation of about <span class="boxed">145.37</span>.<br><br>
+The sum of squares can be found by</p>
+<center>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>Government Level</p>
+</th>
+<th style="text-align:center;">
+<p>Number of Convictions</p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\(Y-\overline{Y}\)</span></p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\((Y-\overline{Y})^2\)</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Federal</p>
+</td>
+<td style="text-align:center;">
+<p>402</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(402 - 233 = 169\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((169)^2 = 28561\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>State</p>
+</td>
+<td style="text-align:center;">
+<p>97</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(97 - 233 = -136\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((-136)^2 = 18496\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Local</p>
+</td>
+<td style="text-align:center;">
+<p>200</p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\(200 - 233 = -33\)</span></p>
+</td>
+<td style="text-align:center;">
+<p><span class="math inline">\((-33)^2 = 1089\)</span></p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>Total</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>699</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>$ $</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>48146</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>implying that</p>
+<span class="math display">\[\begin{aligned}
+S &amp;= \sqrt{\dfrac{48146}{2}}\\\\
+&amp;\approx 155.15
+\end{aligned}\]</span>
+<p>So in <strong>2015</strong>, there was a standard deviation of about <span class="boxed">155.15</span>.</p></li>
+<li><p>The standard deviation is larger in the latter time period so <span class="boxed">there is more variability in number of convictions in 2015 than in 2010</span>. This <span class="boxed">supports the results of the range</span>.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>7</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The range can be found by <span class="math inline">\(4.50-2.20=\)</span> <span class="boxed"><span class="math inline">\(2.30\)</span></span>.<br><br>
+Meanwhile for <span class="math inline">\(n=10\)</span>, we have</p>
+<center>
+<p>25th percentile: <span class="math inline">\(10\cdot 0.25 = 2.5\)</span>th case so <span class="math inline">\(\dfrac{2.40+2.50}{2}=2.45\)</span></p>
+</center>
+<center>
+<p>75th percentile: <span class="math inline">\(10\cdot 0.75 = 7.5\)</span>th case so <span class="math inline">\(\dfrac{3.60+3.60}{2}=3.60\)</span></p>
+</center>
+<p>S. the IQR is <span class="math inline">\(3.60 – 2.45 =\)</span> <span class="boxed"><span class="math inline">\(1.15\)</span></span>. While both measures will work, the <span class="boxed">range is a bit more precise</span>, in that <span class="boxed">it provides a better picture of the variability of divorce rates for all states in the sample</span>.</p></li>
+<li><p>The sum of squares can be found by</p>
+<center>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+<p>State</p>
+</th>
+<th style="text-align:center;">
+<p>Divorce rate/thousand</p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\(Y-\overline{Y}\)</span></p>
+</th>
+<th style="text-align:center;">
+<p><span class="math inline">\((Y-\overline{Y})^2\)</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<p>Florida</p>
+</td>
+<td style="text-align:center;">
+<p>3.6</p>
+</td>
+<td style="text-align:center;">
+<p>3.5 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.210</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Idaho</p>
+</td>
+<td style="text-align:center;">
+<p>3.9</p>
+</td>
+<td style="text-align:center;">
+<p>3.9 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.460</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Maine</p>
+</td>
+<td style="text-align:center;">
+<p>3.2</p>
+</td>
+<td style="text-align:center;">
+<p>3.2 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.004</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Maryland</p>
+</td>
+<td style="text-align:center;">
+<p>2.5</p>
+</td>
+<td style="text-align:center;">
+<p>2.5 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.410</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Nevada</p>
+</td>
+<td style="text-align:center;">
+<p>4.5</p>
+</td>
+<td style="text-align:center;">
+<p>4.5 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>1.850</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>New Jersey</p>
+</td>
+<td style="text-align:center;">
+<p>2.6</p>
+</td>
+<td style="text-align:center;">
+<p>2.6 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.290</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Texas</p>
+</td>
+<td style="text-align:center;">
+<p>2.2</p>
+</td>
+<td style="text-align:center;">
+<p>2.2 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.880</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Vermont</p>
+</td>
+<td style="text-align:center;">
+<p>2.9</p>
+</td>
+<td style="text-align:center;">
+<p>2.9 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.058</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<p>Wisconsin</p>
+</td>
+<td style="text-align:center;">
+<p>2.4</p>
+</td>
+<td style="text-align:center;">
+<p>2.4 – 3.14</p>
+</td>
+<td style="text-align:center;">
+<p>0.550</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>Total</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>31.4</p>
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+</td>
+<td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;">
+<p>4.922</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>implying that</p>
+<span class="math display">\[\begin{aligned}
+\overline{Y} &amp;= \sqrt{\dfrac{3.6 + 3.6 + 3.9 + 3.2 + 2.5 + 4.5 + 2.6 + 2.2 + 2.9 + 2.4}{10}}\\\\
+&amp;\approx 3.14
+\end{aligned}\]</span>
+<p>and</p>
+<span class="math display">\[\begin{aligned}
+S &amp;= \sqrt{\dfrac{4.922}{9}}\\\\
+&amp;\approx 0.74
+\end{aligned}\]</span>
+<p>So between <strong>1997-2017</strong>, the average divorce rate per 1000 people was about <span class="math inline">\(3\)</span> with an approximated standard deviation of <span class="boxed">0.74</span>.</p></li>
+<li><p>Divorce rates may vary by state due to multiple factors which are not represented in the included data set such as variations in &gt;span class=“boxed”&gt;employment status</span>, <span class="boxed">policies and laws by region (i.e. states with no-fault divorce laws)</span>, <span class="boxed">religious beliefs</span>, etc.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>8</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p><code>DEGREE</code> is an <span class="boxed">ordinal measure</span> whereas <code>AGEKDBRN</code> is an <span class="boxed">interval measure</span>.</p></li>
+<li><p>As <code>DEGREE</code> increases, <code>AGEKDBRN</code> increases as well implying the likelihood of a positive relationship. The youngest first-time parents are those with less than a high school degree, while the oldest first-time parents are those with graduate degrees with difference <span class="math inline">\(28.59 – 21.33 = 7.26\)</span> years. The variability in age when first child was born is larger as educational attainment increases. The standard deviation for the high school degree group is largest at <span class="math inline">\(5.498\)</span> years, the smallest is for the some college group with <span class="math inline">\(4.581\)</span>.</p></li>
+</ol>
+</p>
+</details>
+<!--
+<details><summary>11</summary>
+<p>
+
+a. `Type of Work` is a nominal variable implying that the appropriate measure of variability as the <span class="boxed">index of qualitative variation (IQV)</span>.
+
+b. The pertage squared for both grades can be found by
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Type of Work </th>
+   <th style="text-align:center;"> Grade 8 Percentage $c$ </th>
+   <th style="text-align:center;"> Grade 8 Percentage Squared $c^2$ </th>
+   <th style="text-align:center;"> Grade 10 Percentage $c$ </th>
+   <th style="text-align:center;"> Grade 10 Percentage Squared $c^2$ </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Lawn work </td>
+   <td style="text-align:center;"> 28 </td>
+   <td style="text-align:center;"> $(28)^2 = 784$ </td>
+   <td style="text-align:center;"> 20 </td>
+   <td style="text-align:center;"> $(20)^2 = 400$ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Food service </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> $(3)^2 = 9$ </td>
+   <td style="text-align:center;"> 10 </td>
+   <td style="text-align:center;"> $(10)^2 = 100$ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Babysitting </td>
+   <td style="text-align:center;"> 37 </td>
+   <td style="text-align:center;"> $(37)^2 = 1369$ </td>
+   <td style="text-align:center;"> 28 </td>
+   <td style="text-align:center;"> $(28)^2 = 784$ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;"> Other </td>
+   <td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;"> 32 </td>
+   <td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;"> $(32)^2 = 1024$ </td>
+   <td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;"> 42 </td>
+   <td style="text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;"> $(42)^2 = 1764$ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Total </td>
+   <td style="text-align:center;"> 100 </td>
+   <td style="text-align:center;"> $3186$ </td>
+   <td style="text-align:center;"> 100 </td>
+   <td style="text-align:center;"> $2048$ </td>
+  </tr>
+</tbody>
+</table>
+So the IQV for both grades can be found by
+<center>
+Grade 8: $\dfrac{4\cdot(100^2-3186)}{100^2\cdot (4-1)} = \dfrac{27256}{30000} = 0.91$
+</center>
+<center>
+Grade 10: $\dfrac{4\cdot(100^2-3048)}{100^2\cdot (4-1)} = \dfrac{27808}{30000} = 0.93$
+</center>
+implying <span class="boxed">IQV(Grade 8) $=0.91$</span> and <span class="boxed">IQV(Grade 10) $=0.93$</span>.
+
+c. Though both IQVs are greater than $0.90$, there is <span class="boxed">slightly more variation among 10th graders than 8th graders<span class="boxed"> in the type of jobs they hold. The difference may be attributed to <span class="boxed">more employment options for older students</span> and <span class="boxed">limitations for younger students</span>xxxx leading to more informal jobs such as lawn work and babysitting. 
+
+</p>
+</details>
+-->
+<details>
+<summary>12</summary>
+<p>
+Using the summary statistics for life expectancy
+<center>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Measure
+</th>
+<th style="text-align:center;">
+Statistic for European Countries
+</th>
+<th style="text-align:center;">
+Statistic for Non-european Countries
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Median
+</td>
+<td style="text-align:center;">
+81.500
+</td>
+<td style="text-align:center;">
+82.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Variance
+</td>
+<td style="text-align:center;">
+7.985
+</td>
+<td style="text-align:center;">
+11.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Standard deviation
+</td>
+<td style="text-align:center;">
+2.830
+</td>
+<td style="text-align:center;">
+3.41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Minimum
+</td>
+<td style="text-align:center;">
+75.300
+</td>
+<td style="text-align:center;">
+76.30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Maximum
+</td>
+<td style="text-align:center;">
+82.000
+</td>
+<td style="text-align:center;">
+85.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Range
+</td>
+<td style="text-align:center;">
+6.700
+</td>
+<td style="text-align:center;">
+9.20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Interquartile range
+</td>
+<td style="text-align:center;">
+3.800
+</td>
+<td style="text-align:center;">
+4.95
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>we find that the variable is interval ratio implying that variance (or standard deviation), range, or IQR are possible and valid. Among these three measures, variance and/or standard deviation is preferred for precision. For just the average life expectancy for these 10 countries, we should rely on the mean.<br><br>
+On average, non-European countries have a slightly higher life expectancy at birth (<span class="math inline">\(82.00\)</span> vs. <span class="math inline">\(80.30\)</span>). Both the mean and median are higher for non-European countries than for European countries. Also, the distribution of non-European countries exhibits more variability; the standard deviation for European countries is <span class="math inline">\(3.41\)</span> years, while for non-European countries it is <span class="math inline">\(2.83\)</span> years.<br><br>
+These differences might be explained by access and availability of health care and/or diet. However, the difference might simply be random due to the small number of countries presented in this example. We are likely to find different results if more countries were incorporated into the analyses.</p>
+</p>
+</details>
+<details>
+<summary>13</summary>
+<p>
+<p>Overall, <span class="boxed">Clinton voters were younger</span>, <span class="boxed">more educated</span>, and <span class="boxed">attended religious services less</span> than Trump voters. The youngest voters were male Clinton voters at <span class="math inline">\(50.49\)</span> years (<span class="math inline">\(s = 18.84\)</span>), followed by female Clinton voters, <span class="math inline">\(51.93\)</span> years (<span class="math inline">\(s = 18.21\)</span>). For education, males who voted for Clinton had the highest mean of <span class="math inline">\(14.69\)</span> (<span class="math inline">\(s = 2.73\)</span>). Males who voted for Trump had <span class="math inline">\(13.80\)</span> years of education (<span class="math inline">\(s = 2.75\)</span>). Trump voters, both males and females, attended religious services more often than Clinton voters. Mean scores were <span class="math inline">\(3.72\)</span> for males (<span class="math inline">\(s = 2.93\)</span>) and <span class="math inline">\(3.82\)</span> for females (<span class="math inline">\(s = 2.75\)</span>), indicating church attendance about several times a year to once a month. The standard deviations indicate a consistency in the distributions of education, age, and religious service attendance across all four groups. The largest standard deviations are for age, ranging from <span class="math inline">\(15.94\)</span> to <span class="math inline">\(18.84\)</span> years. These wide standard deviations indicate more dispersion around the mean age scores.</p>
+</p>
+</details>
 <p>:::</p>
 </div>
 </div>

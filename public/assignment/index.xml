@@ -1117,6 +1117,8 @@ Since Clinton and Sanders’ middle-class income amount is higher than the U.S. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/04-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1155,6 +1157,731 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;details&gt;
+&lt;summary&gt;1&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;There are &lt;span class=&#34;boxed&#34;&gt;seven&lt;/span&gt; response categories for political views.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We can calculate the percentage square by&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Political Views&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Percentage &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Percentage Squared &lt;span class=&#34;math inline&#34;&gt;\(c^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Extremely liberal&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;5.5&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;30.25&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Liberal&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;12.0&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;144.00&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Slightly liberal&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;12.3&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;151.29&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Moderate&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;37.8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;1428.84&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Slightly conservative&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;13.2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;174.24&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Conservative&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;15.0&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;225.00&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Extremely conservative&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;4.2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;17.64&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;100.0&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;2171.26&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;yields &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\sum c^2 = 2171.26\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We can calculate the IQV by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+IQV&amp;amp;= \dfrac{7\cdot(100^2-2171.26)}{100^2\cdot (7-1)}\\\\
+&amp;amp;= \dfrac{54801.18}{60000}\\\\
+&amp;amp;\approx 0.91
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;which is relatively close to 1 suggesting that &lt;span class=&#34;boxed&#34;&gt;Americans are fairly diverse in their political views&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;2&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;For the female population where &lt;span class=&#34;math inline&#34;&gt;\(N = 629\)&lt;/span&gt;, we have&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Q_1 = 629\cdot 0.25 = 157.25\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Q_3 = 629 \cdot 0.75 = 471.75\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;p&gt;or about the 158th and 472nd cases which are representative of cases where the degree are in the High school graduate and Bachelor’s degree categories, respectively. This yields &lt;span class=&#34;math inline&#34;&gt;\(IQR = 471.75-157.25=314.5\)&lt;/span&gt; which includes those who have a highest attained degree of &lt;span class=&#34;boxed&#34;&gt;high school, junior college and bachelor’s &lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For the male population where &lt;span class=&#34;math inline&#34;&gt;\(N = 488\)&lt;/span&gt;, we have&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Q_1 = 488 \cdot 0.25 = 122\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Q_3 = 488 \cdot 0.75 = 366\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;p&gt;or the 122nd and 366th cases which are representative of cases where the degree are in the High school graduate and Bachelor’s degree categories, respectively. This yields &lt;span class=&#34;math inline&#34;&gt;\(IQR = 366-122=244\)&lt;/span&gt; that includes those who have a highest attained degree of &lt;span class=&#34;boxed&#34;&gt;high school, junior college and bachelor’s &lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So &lt;span class=&#34;boxed&#34;&gt;both IQRs provide the same groups of cases&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Based on the IQR calculation, we know that 50% of all cases for males and females lies between high school and bachelor’s degree, &lt;span class=&#34;boxed&#34;&gt;but that does not inform us about the variability of the distribution&lt;/span&gt;. A better measure would be IQV and if interval-ratio measures were available, the variance and standard deviation would provide better information and estimates.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;3&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The range of convictions in&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;2010 is given by &lt;span class=&#34;math inline&#34;&gt;\(397 – 108 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(289\)&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;2015 is given by &lt;span class=&#34;math inline&#34;&gt;\(402 – 97 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(305\)&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Therefore the range of conviction in &lt;span class=&#34;boxed&#34;&gt;2015 is larger&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;The mean number in &lt;strong&gt;2010&lt;/strong&gt; across all levels of government was&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\overline{Y} &amp;amp;= \dfrac{397+108+280}{3}\\\\
+&amp;amp;\approx 261.67
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or about an average of &lt;span class=&#34;boxed&#34;&gt;262 convictions&lt;/span&gt;.&lt;br&gt;&lt;br&gt; The mean number in &lt;strong&gt;2015&lt;/strong&gt; across all levels of government was&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\overline{Y} &amp;amp;= \dfrac{402+97+200}{3}\\\\
+&amp;amp;= 233
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or an average of &lt;span class=&#34;boxed&#34;&gt;233 convictions&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The sum of squares can be found by&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Government Level&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Number of Convictions&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y-\overline{Y}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((Y-\overline{Y})^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Federal&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;397&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(397 - 261.1 = 135.33\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((135.33)^2 = 18314.21\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;State&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;108&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(108 - 261.67 = -153.67\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((-153.67)^2 = 23614.47\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Local&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;280&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(280 - 261.67 = 18.33\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((18.33)^2 = 335.99\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;785&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;$ $&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;42264.67&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;implying that&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+S &amp;amp;= \sqrt{\dfrac{42264.67}{2}}\\\\
+&amp;amp;\approx 145.37
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So in &lt;strong&gt;2010&lt;/strong&gt;, there was a standard deviation of about &lt;span class=&#34;boxed&#34;&gt;145.37&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+The sum of squares can be found by&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Government Level&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Number of Convictions&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y-\overline{Y}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((Y-\overline{Y})^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Federal&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;402&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(402 - 233 = 169\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((169)^2 = 28561\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;State&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;97&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(97 - 233 = -136\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((-136)^2 = 18496\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Local&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;200&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(200 - 233 = -33\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((-33)^2 = 1089\)&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;699&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;$ $&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;48146&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;implying that&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+S &amp;amp;= \sqrt{\dfrac{48146}{2}}\\\\
+&amp;amp;\approx 155.15
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So in &lt;strong&gt;2015&lt;/strong&gt;, there was a standard deviation of about &lt;span class=&#34;boxed&#34;&gt;155.15&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The standard deviation is larger in the latter time period so &lt;span class=&#34;boxed&#34;&gt;there is more variability in number of convictions in 2015 than in 2010&lt;/span&gt;. This &lt;span class=&#34;boxed&#34;&gt;supports the results of the range&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;The range can be found by &lt;span class=&#34;math inline&#34;&gt;\(4.50-2.20=\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(2.30\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+Meanwhile for &lt;span class=&#34;math inline&#34;&gt;\(n=10\)&lt;/span&gt;, we have&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;25th percentile: &lt;span class=&#34;math inline&#34;&gt;\(10\cdot 0.25 = 2.5\)&lt;/span&gt;th case so &lt;span class=&#34;math inline&#34;&gt;\(\dfrac{2.40+2.50}{2}=2.45\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;p&gt;75th percentile: &lt;span class=&#34;math inline&#34;&gt;\(10\cdot 0.75 = 7.5\)&lt;/span&gt;th case so &lt;span class=&#34;math inline&#34;&gt;\(\dfrac{3.60+3.60}{2}=3.60\)&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;p&gt;S. the IQR is &lt;span class=&#34;math inline&#34;&gt;\(3.60 – 2.45 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(1.15\)&lt;/span&gt;&lt;/span&gt;. While both measures will work, the &lt;span class=&#34;boxed&#34;&gt;range is a bit more precise&lt;/span&gt;, in that &lt;span class=&#34;boxed&#34;&gt;it provides a better picture of the variability of divorce rates for all states in the sample&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The sum of squares can be found by&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;State&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Divorce rate/thousand&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y-\overline{Y}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\((Y-\overline{Y})^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Florida&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.6&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.5 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.210&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Idaho&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.9&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.9 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.460&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Maine&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3.2 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.004&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Maryland&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.5&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.5 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.410&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Nevada&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;4.5&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;4.5 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;1.850&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;New Jersey&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.6&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.6 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.290&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Texas&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.2 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.880&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Vermont&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.9&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.9 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.058&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Wisconsin&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.4&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2.4 – 3.14&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;0.550&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;31.4&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt;
+&lt;p&gt;4.922&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;implying that&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+\overline{Y} &amp;amp;= \sqrt{\dfrac{3.6 + 3.6 + 3.9 + 3.2 + 2.5 + 4.5 + 2.6 + 2.2 + 2.9 + 2.4}{10}}\\\\
+&amp;amp;\approx 3.14
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+S &amp;amp;= \sqrt{\dfrac{4.922}{9}}\\\\
+&amp;amp;\approx 0.74
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So between &lt;strong&gt;1997-2017&lt;/strong&gt;, the average divorce rate per 1000 people was about &lt;span class=&#34;math inline&#34;&gt;\(3\)&lt;/span&gt; with an approximated standard deviation of &lt;span class=&#34;boxed&#34;&gt;0.74&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Divorce rates may vary by state due to multiple factors which are not represented in the included data set such as variations in &amp;gt;span class=“boxed”&amp;gt;employment status&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;policies and laws by region (i.e. states with no-fault divorce laws)&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;religious beliefs&lt;/span&gt;, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;8&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;DEGREE&lt;/code&gt; is an &lt;span class=&#34;boxed&#34;&gt;ordinal measure&lt;/span&gt; whereas &lt;code&gt;AGEKDBRN&lt;/code&gt; is an &lt;span class=&#34;boxed&#34;&gt;interval measure&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As &lt;code&gt;DEGREE&lt;/code&gt; increases, &lt;code&gt;AGEKDBRN&lt;/code&gt; increases as well implying the likelihood of a positive relationship. The youngest first-time parents are those with less than a high school degree, while the oldest first-time parents are those with graduate degrees with difference &lt;span class=&#34;math inline&#34;&gt;\(28.59 – 21.33 = 7.26\)&lt;/span&gt; years. The variability in age when first child was born is larger as educational attainment increases. The standard deviation for the high school degree group is largest at &lt;span class=&#34;math inline&#34;&gt;\(5.498\)&lt;/span&gt; years, the smallest is for the some college group with &lt;span class=&#34;math inline&#34;&gt;\(4.581\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;!--
+&lt;details&gt;&lt;summary&gt;11&lt;/summary&gt;
+&lt;p&gt;
+
+a. `Type of Work` is a nominal variable implying that the appropriate measure of variability as the &lt;span class=&#34;boxed&#34;&gt;index of qualitative variation (IQV)&lt;/span&gt;.
+
+b. The pertage squared for both grades can be found by
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt; Type of Work &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Grade 8 Percentage $c$ &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Grade 8 Percentage Squared $c^2$ &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Grade 10 Percentage $c$ &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Grade 10 Percentage Squared $c^2$ &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Lawn work &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 28 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(28)^2 = 784$ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 20 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(20)^2 = 400$ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Food service &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 3 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(3)^2 = 9$ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 10 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(10)^2 = 100$ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Babysitting &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 37 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(37)^2 = 1369$ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 28 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $(28)^2 = 784$ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt; Other &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt; 32 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt; $(32)^2 = 1024$ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt; 42 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;font-weight: bold;color: white !important;background-color: #559e83 !important;&#34;&gt; $(42)^2 = 1764$ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Total &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 100 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $3186$ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 100 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; $2048$ &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+So the IQV for both grades can be found by
+&lt;center&gt;
+Grade 8: $\dfrac{4\cdot(100^2-3186)}{100^2\cdot (4-1)} = \dfrac{27256}{30000} = 0.91$
+&lt;/center&gt;
+&lt;center&gt;
+Grade 10: $\dfrac{4\cdot(100^2-3048)}{100^2\cdot (4-1)} = \dfrac{27808}{30000} = 0.93$
+&lt;/center&gt;
+implying &lt;span class=&#34;boxed&#34;&gt;IQV(Grade 8) $=0.91$&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;IQV(Grade 10) $=0.93$&lt;/span&gt;.
+
+c. Though both IQVs are greater than $0.90$, there is &lt;span class=&#34;boxed&#34;&gt;slightly more variation among 10th graders than 8th graders&lt;span class=&#34;boxed&#34;&gt; in the type of jobs they hold. The difference may be attributed to &lt;span class=&#34;boxed&#34;&gt;more employment options for older students&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;limitations for younger students&lt;/span&gt;xxxx leading to more informal jobs such as lawn work and babysitting. 
+
+&lt;/p&gt;
+&lt;/details&gt;
+--&gt;
+&lt;details&gt;
+&lt;summary&gt;12&lt;/summary&gt;
+&lt;p&gt;
+Using the summary statistics for life expectancy
+&lt;center&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Measure
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Statistic for European Countries
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Statistic for Non-european Countries
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Median
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+81.500
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+82.70
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Variance
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+7.985
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+11.65
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Standard deviation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2.830
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3.41
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Minimum
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+75.300
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+76.30
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Maximum
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+82.000
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+85.50
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Range
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+6.700
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+9.20
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Interquartile range
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3.800
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4.95
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;we find that the variable is interval ratio implying that variance (or standard deviation), range, or IQR are possible and valid. Among these three measures, variance and/or standard deviation is preferred for precision. For just the average life expectancy for these 10 countries, we should rely on the mean.&lt;br&gt;&lt;br&gt;
+On average, non-European countries have a slightly higher life expectancy at birth (&lt;span class=&#34;math inline&#34;&gt;\(82.00\)&lt;/span&gt; vs. &lt;span class=&#34;math inline&#34;&gt;\(80.30\)&lt;/span&gt;). Both the mean and median are higher for non-European countries than for European countries. Also, the distribution of non-European countries exhibits more variability; the standard deviation for European countries is &lt;span class=&#34;math inline&#34;&gt;\(3.41\)&lt;/span&gt; years, while for non-European countries it is &lt;span class=&#34;math inline&#34;&gt;\(2.83\)&lt;/span&gt; years.&lt;br&gt;&lt;br&gt;
+These differences might be explained by access and availability of health care and/or diet. However, the difference might simply be random due to the small number of countries presented in this example. We are likely to find different results if more countries were incorporated into the analyses.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;13&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Overall, &lt;span class=&#34;boxed&#34;&gt;Clinton voters were younger&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;more educated&lt;/span&gt;, and &lt;span class=&#34;boxed&#34;&gt;attended religious services less&lt;/span&gt; than Trump voters. The youngest voters were male Clinton voters at &lt;span class=&#34;math inline&#34;&gt;\(50.49\)&lt;/span&gt; years (&lt;span class=&#34;math inline&#34;&gt;\(s = 18.84\)&lt;/span&gt;), followed by female Clinton voters, &lt;span class=&#34;math inline&#34;&gt;\(51.93\)&lt;/span&gt; years (&lt;span class=&#34;math inline&#34;&gt;\(s = 18.21\)&lt;/span&gt;). For education, males who voted for Clinton had the highest mean of &lt;span class=&#34;math inline&#34;&gt;\(14.69\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(s = 2.73\)&lt;/span&gt;). Males who voted for Trump had &lt;span class=&#34;math inline&#34;&gt;\(13.80\)&lt;/span&gt; years of education (&lt;span class=&#34;math inline&#34;&gt;\(s = 2.75\)&lt;/span&gt;). Trump voters, both males and females, attended religious services more often than Clinton voters. Mean scores were &lt;span class=&#34;math inline&#34;&gt;\(3.72\)&lt;/span&gt; for males (&lt;span class=&#34;math inline&#34;&gt;\(s = 2.93\)&lt;/span&gt;) and &lt;span class=&#34;math inline&#34;&gt;\(3.82\)&lt;/span&gt; for females (&lt;span class=&#34;math inline&#34;&gt;\(s = 2.75\)&lt;/span&gt;), indicating church attendance about several times a year to once a month. The standard deviations indicate a consistency in the distributions of education, age, and religious service attendance across all four groups. The largest standard deviations are for age, ranging from &lt;span class=&#34;math inline&#34;&gt;\(15.94\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(18.84\)&lt;/span&gt; years. These wide standard deviations indicate more dispersion around the mean age scores.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1205,6 +1932,341 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;!--
+
+
+
+&lt;details&gt;&lt;summary&gt;1&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. We are looking the area under the curve greater than $8$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a person who watches more than 8 hr/day is given by
+\begin{aligned}
+z &amp;= \dfrac{8-2.97}{3.00}\\\\
+&amp;\approx 1.68
+\end{aligned}
+So &lt;span class=&#34;boxed&#34;&gt;$z \approx 1.68$&lt;/span&gt;.
+
+b. We are looking the area under the curve less than $5$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a person who watches less than 5 hr/day is given by
+\begin{aligned}
+z &amp;= \dfrac{5-2.97}{3.00}\\\\
+&amp;\approx 0.68
+\end{aligned}
+So &lt;span class=&#34;boxed&#34;&gt;$z \approx 0.68$&lt;/span&gt;. Since the area between $z=0.68$ and $z=0$ is $0.2517$, we have $0.5000+0.2517=0.7517$. This implies that $0.7517\cdot 1014 \approx$ &lt;span class=&#34;boxed&#34;&gt;$762$ or $763$ people watch television less than 5 hours/day&lt;/span&gt;.
+
+c. We have
+\begin{aligned}
+Y&amp;=2.97+1\cdot 3\\
+&amp;= 5.97
+\end{aligned}
+implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a $z$-score of $+1$.
+
+d. We are looking at the area between $1$ and $6$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a person who watches more than 1 hr/day is given by
+\begin{aligned}
+z &amp;= \dfrac{1-2.97}{3.00}\\\\
+&amp;\approx -0.66
+\end{aligned}
+with the area between the mean and $z=0.66$ found to be $0.2454$.
+&lt;br&gt;
+The $z$-score for a person who watches less than 6 hr/day is given by
+\begin{aligned}
+z &amp;= \dfrac{6-2.97}{3.00}\\\\
+&amp;\approx 1.01
+\end{aligned}
+with the area between the mean and $z=1.01$ found to be $0.3438$.&lt;br&gt;&lt;br&gt;
+So the percentage of people who watch between 1 hr/day and 6 hr/day of television can be found by $0.2454 + 0.3438 = 0.5892$, or about &lt;span class=&#34;boxed&#34;&gt;$59\%$&lt;/span&gt;.
+
+&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details&gt;&lt;summary&gt;2&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. The 95th percentile, or $0.9500$ is approximately equivalent to $z=1.65$. So the number of women needing shelter is
+\begin{aligned}
+Y&amp;= 250+1.65\cdot 75\\
+&amp;= 373.75
+\end{aligned}
+or about $374$ women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;$374$&lt;/span&gt; beds.
+
+b. We are looking the area under the curve greater than $220$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for exceeding the capacity is given by
+\begin{aligned}
+z &amp;= \dfrac{220-250}{75}\\\\
+&amp;\approx -0.40
+\end{aligned}
+The area below this value is $0.3446$, so the area exceeding this is $1 – 0.3446 = 0.6554$, or about &lt;span class=&#34;boxed&#34;&gt;$66\%$ of all nights&lt;/span&gt; the number of women seeking shelter will exceed the capacity of 220.  
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;5&lt;/summary&gt;
+&lt;p&gt;
+
+a. We are looking at the area between $12$ and $16$ for the Working class.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a person with more than 12 years of education is given by
+\begin{aligned}
+z &amp;= \dfrac{12-13.05}{2.77}\\\\
+&amp;\approx -0.38
+\end{aligned}
+with the area between the mean and $z=-0.38$ found to be $0.1480$.&lt;br&gt;&lt;br&gt;
+The $z$-score for a person who watches less than 16 years of education is given by
+\begin{aligned}
+z &amp;= \dfrac{16-13.05}{2.77}\\\\
+&amp;\approx 1.06
+\end{aligned}
+with the area between the mean and $z=1.06$ found to be $0.3554$.&lt;br&gt;&lt;br&gt; 
+So the proportion of **working-class respondents** with 12–16 years of education can be found by $0.1480 + 0.3554 =$ &lt;span class=&#34;boxed&#34;&gt;$0.5034$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+We are still looking at the area between $12$ and $16$ for the Upper class.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a person with more than 12 years of education is given by
+\begin{aligned}
+z &amp;= \dfrac{12-15.48}{2.76}\\\\
+&amp;\approx -1.26
+\end{aligned}
+with the area between the mean and $z=-1.26$ found to be $0.3962$.&lt;br&gt;&lt;br&gt;
+The $z$-score for a person who watches less than 16 years of education is given by
+\begin{aligned}
+z &amp;= \dfrac{16-15.48}{2.67}\\\\
+&amp;\approx 0.19
+\end{aligned}
+with the area between the mean and $z=0.19$ found to be $0.0753$.&lt;br&gt;&lt;br&gt;
+So the proportion of **upper-class respondents** with 12–16 years of education can be found by $0.3962 + 0.0753 =$ &lt;span class=&#34;boxed&#34;&gt;$0.4715$&lt;/span&gt;.
+
+b. We are looking the area under the curve greater than $16$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;40%&#34; /&gt;
+For working-class respondents, the $z$-score is given by
+\begin{aligned}
+z &amp;= \dfrac{16-12.05}{2.77}\\\\
+&amp;\approx 1.06
+\end{aligned}
+The area between $z=1.06$ and the tail is $0.1446$ thus implying the probability of a **working-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$14.46\%$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For middle-class respondents, the $z$-score is given by
+\begin{aligned}
+z &amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;\approx 0.49
+\end{aligned}
+The area between $z=0.49$ and the tail is $0.3121$ thus implying the probability of a **middle-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$31.21\%$&lt;/span&gt;.
+
+c. We are looking the area under the curve less than $10$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;40%&#34; /&gt;
+For middle-class respondents, the $z$-score is given by
+\begin{aligned}
+z &amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;\approx 0.49
+\end{aligned}
+The area beyond $z=0.63$ and the tail is $0.2643$ thus implying the probability of a **lower-class respondent** having more less 10 years of education is &lt;span class=&#34;boxed&#34;&gt;$26.43\%$&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;6&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. We are looking the area under the curve greater than $625$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;40%&#34; /&gt;
+For these high school graduates, the $z$-score is given by
+\begin{aligned}
+z &amp;= \dfrac{625-536}{102}\\\\
+&amp;\approx 0.87
+\end{aligned}
+The area beyond $z=0.87$ and the tail is $0.1992$ thus implying the probability that a **high school graduate** having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;$19.92\%$&lt;/span&gt;.
+
+b. We are looking the area under the curve between than $400$ and $625$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;40%&#34; /&gt;
+For these high school graduates, the $z$-score for 625 is given by
+\begin{aligned}
+z &amp;= \dfrac{625-536}{102}\\\\
+&amp;\approx 0.87
+\end{aligned}
+The area between the mean and $z=0.87$ is $0.3087$.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the $z$-score for 400 is given by
+\begin{aligned}
+z &amp;= \dfrac{400-536}{102}\\\\
+&amp;\approx -1.33
+\end{aligned}
+The area between$z=-1.33$ and the mean is $0.4082$.&lt;br&gt;&lt;br&gt;
+Summing these proportions yields $0.3087+0.4082=0.7168$, or &lt;span class=&#34;boxed&#34;&gt;$71.68\%$&lt;/span&gt; of the high school graduates earned a score between 400 and 625.
+
+c. The 20th percentile, or $0.2000$ is equivalent to $z=-0.84$. Thus the SAT ERW equivalency can be found by $536-0.84\cdot 102=450.32$, or a score of &lt;span class=&#34;boxed&#34;&gt;$450$&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;7&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. We have 
+\begin{aligned}
+z &amp;= \dfrac{150-100}{15}
+&amp;\approx 3.33
+\end{aligned}
+or &lt;span class=&#34;boxed&#34;&gt;$z\approx 3.33$&lt;/span&gt;.
+
+b. We are looking the area under the curve greater than $150$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;40%&#34; /&gt;
+The area beyond $z=3.33$ is $0.0004$ implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;$0.04\%$&lt;/span&gt;^[Which is the reason you don&#39;t notice any shading in the plot]. 
+
+c. We are looking at the area between $85$ and $150$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;40%&#34; /&gt;
+The $z$-score for a score of 85 is
+\begin{aligned}
+z &amp;= \dfrac{85-100}{15}\\\\
+&amp;\approx -1
+\end{aligned}
+with the area between $z=-1$ and the mean found to be $0.3413$.
+&lt;br&gt;
+The $z$-score for a score of 150 is
+\begin{aligned}
+z &amp;= \dfrac{150-100}{15}
+&amp;\approx 3.33
+\end{aligned}
+with the area between the mean and $z=3.33$ found to be $0.4996$.&lt;br&gt;&lt;br&gt;
+So the $0.3413 + 0.4996 = 0.8409$, or about &lt;span class=&#34;boxed&#34;&gt;$84\%$&lt;/span&gt; of scores fall between $85$ and $150$.
+
+d. Scoring in the 95th percentile means that 95% of the sample scored below this level. This outcome can be calculated by $100 + 1.65\cdot 15 = 124.75$. So the IQ score that is associated with the 95th percentile is &lt;span class=&#34;boxed&#34;&gt;$124.75$&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+
+&lt;details&gt;&lt;summary&gt;8&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. We are looking the area under the curve less than $400$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;40%&#34; /&gt;
+For these high school graduates, the $z$-score is given by
+\begin{aligned}
+z &amp;= \dfrac{400-531}{114}\\\\
+&amp;\approx -1.15
+\end{aligned}
+The area beyond $z=-1.15$ and the tail is $0.1251$ thus implying that about &lt;span class=&#34;boxed&#34;&gt;$12.51\%$&lt;/span&gt;of **high school graduates** hearned a score less than 400.
+
+b. We are looking the area under the curve between than $600$ and $700$.
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;40%&#34; /&gt;
+For these high school graduates, the $z$-score for 600 is given by
+\begin{aligned}
+z &amp;= \dfrac{600-531}{114}\\\\   
+&amp;\approx 0.61
+\end{aligned}
+The area between the mean and $z=0.61$ is $0.2291$.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the $z$-score for 700 is given by
+\begin{aligned}
+z &amp;= \dfrac{700-531}{114}\\\\
+&amp;\approx 1.48
+\end{aligned}
+The area between $z=1.48$ and the mean is $0.4306$.&lt;br&gt;&lt;br&gt;
+Subtracting these proportions yields $0.4306-0.2291=0.2015$, or &lt;span class=&#34;boxed&#34;&gt;$20.15\%$&lt;/span&gt; of the high school graduates earned a score between 600 and 700
+
+c. For an earned score of $725$ which is greater than the mean, we have
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{725-531}{114}\\\\   
+&amp;\approx 1.70
+\end{aligned}
+The area beyond $z=1.70$ is $0.0466$. So the percentile rank may be found by 
+$1.000-0.0466 = 0.9535$, or $95.35\%$ which implies the &lt;span class=&#34;boxed&#34;&gt;96th percentile&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;11&lt;/summary&gt;
+&lt;p&gt;
+
+
+
+
+
+a. For an earned score of $990$ which is greater than the mean, we have
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{990-981}{27.3}\\\\   
+&amp;\approx 0.33
+\end{aligned}
+The area beyond $z=0.33$ is $0.3707$. So the percentile rank may be found by 
+$1.000-0.3707 = 0.6293$, or $62.93\%$ which implies the 62nd percentile. So the team is &lt;span class=&#34;boxed&#34;&gt;not in the upper quartile&lt;/span&gt;.
+
+b. For the top 25%, or $0.0025$, the area beyond $z$ is approximated by $z = 0.67$. The cutoff score is then $981+0.67\cdot 27.3\approx$ &lt;span class=&#34;boxed&#34;&gt;$999.29$&lt;/span&gt;.
+
+c. As noted above, &lt;span class=&#34;boxed&#34;&gt;$z = 0.67$&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;12&lt;/summary&gt;
+&lt;p&gt;
+
+a. For **Team A** an ***eligibility criterion*** score of $971$ is given by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{971-983}{33}\\\\   
+&amp;\approx -0.36
+\end{aligned}
+For **Team A** a ***retention criterion*** score of $958$ is given by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{958-976}{34.9}\\\\   
+&amp;\approx -0.52
+\end{aligned}
+For **Team B** an ***eligibility criterion*** score of $987$ is given by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{987-983}{33}\\\\   
+&amp;\approx 0.12
+\end{aligned}
+For **Team B** a ***retention criterion*** score of $970$ is given by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;40%&#34; /&gt;
+From this we can calculate the $z$-score as 
+\begin{aligned}
+z &amp;= \dfrac{970-976}{34.9}\\\\   
+&amp;\approx -0.17
+\end{aligned}
+So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;. 
+
+b. For **Team B** a ***retention criterion*** score of $z=-0.17$ is below the mean and the corresponding proportion can be viewed by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;
+
+which is the area between $z$ and the tail, or &lt;span class=&#34;boxed&#34;&gt;$0.4325$&lt;/span&gt;.
+
+c. For **Team A** an ***eligibility criterion*** score of $z=-0.36$ is below the mean and the corresponding proportion can be viewed by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
+which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.
+
+&lt;/details&gt;
+&lt;/p&gt;
+--&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
