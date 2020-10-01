@@ -1,0 +1,58 @@
+---
+title: "Ordering Questions and Testing for Question Order Effects"
+linktitle: "Week 7: Ordering Questions and Testing for Question Order Effects"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"Qualtrics?" = c(unchecked),
+
+"eCampus?" = c(unchecked),
+
+Description = c("Watch a two-part walkthrough on how to use spacing and colors in Qualtrics."),
+
+Location = c("[Link](/example/07-example/#using-the-qualtrics-api-1)")
+)
+```
+
+### What's Due?
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'ccll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em")
+```
+
+### Things coming up
+
+- [Data Camp modules](/lesson/07-lesson/#data-camp-1) due in two weeks.
+- Take a look at the [Pilot Study Requirements](/assignment/07-assignment/#pilot-study-ledger-1) due in two weeks.
+
+

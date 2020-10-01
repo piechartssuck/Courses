@@ -1,6 +1,6 @@
 ---
-title: "Aural Versus Visual Design of Questions and Questionnaires"
-linktitle: "Week 6: Aural Versus Visual Design of Questions and Questionnaires"
+title: "Ordering Questions and Testing for Question Order Effects"
+linktitle: "Week 7: Ordering Questions and Testing for Question Order Effects"
 output:
   blogdown::html_page:
     toc: true

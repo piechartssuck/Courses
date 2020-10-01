@@ -51,15 +51,16 @@ Location = c("[Link](/assignment/05-assignment/#submit-1)",
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(wk_post, 
       escape = FALSE,
-      align = 'cll') %>%
+      align = 'ccll') %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
-  column_spec(2, width = "20em") %>%
-  column_spec(3, width = "20em")
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em")
 ```
 
 ### Things coming up
 
-- [Data Camp modules](/lesson/05-lesson/#data-camp-1) due in three weeks.
+- [Data Camp modules](/lesson/06-lesson/#data-camp-1) due in three weeks.
 
 

@@ -52,3 +52,12 @@ lessons:
     example: "06-example"
     assignment: "06-assignment"
     due: "06-due"
+
+  - title: 'Ordering Questions and Testing for Question Order Effects'
+    session: 7
+    date: "October 4, 2020"
+    readings: "07-readings"
+    lesson: "07-lesson"
+    example: "07-example"
+    assignment: "07-assignment"
+    due: "07-due"

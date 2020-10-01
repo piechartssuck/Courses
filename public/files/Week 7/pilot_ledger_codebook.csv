@@ -1,0 +1,32 @@
+﻿Variable,Category,Description
+ser,Service,The online survey service you are using.
+itext,Initial Text,"Initial text of questions descriptions, narratives, etc. of each individual item etc provided in order of appearance. Please note that this is not necessarily the order that respondents may see it."
+tnum,Tracking Number,Qualtrics QID number assoicted with the item*.
+iord,Item Order,Qualtrics Q number or text associated with your item*.
+pr1,Pilot Round 1,"A short synopsis of changes made. If no changes were made, simply write NA in the field."
+pr1_s,Status of Item ,"Indicate if the item stayed in place by S, was moved by M,  deleted by D, or other by O after the conclusion of Pilot Round 1*~."
+pr1_o,Other,Briefly describe what happened to the item~.
+pr1_c,Changes in Item Order,"If the Status of Item was noted as M, please note the new Qualtrics Q number or text associated with your item."
+pr2,Pilot Round 2,"A short synopsis of changes made. If no changes were made, simply write NA in the field."
+pr2_s,Status of Item,"Indicate if the item stayed in place by S, was moved by M, or deleted by D after the conclusion of Pilot Round 2*~."
+pr2_o,Other,Briefly describe what happened to the item~.
+pr2_c,Changes in Item Order,"If the Status of Item was noted as M, please note the new Qualtrics Q number or text associated with your item."
+ftext,Final Text,"Final text of questions descriptions, narratives, etc. of each individual item etc provided in order of appearance. Please note that this is not necessarily the order that respondents may see it."
+fblock,Final Block,"If using more than one block, note the block name or number."
+disp,Display logic?,"Indicate if the item conditionally displays another item based on a response by Forward, is conditionally displayed by a response from another item by Behind or both by Both. Otherwise leave blank."
+disp_inc,Incoming,A list of all items that use this item for conditional displaying.
+disp_out,Outgoing,A list of all items that this item is conditional for.
+skip,Skip Logic?,"Indicate if the item skips based on an response by Forward, recives a skip from a response on another item by Behind or both by Both. Otherwise leave blank."
+skip_inc,Incoming,A list of all items that use this item to skip to. 
+skip_out,Outgoing,A list of all items that this item skips to.
+cbra,Conditional Branching?,"Indicate if the block branches based on a condition by Forward, recives a branch from a condition on another item by Behind or both by Both. Otherwise leave blank."
+cbra_inc,Incoming,A list of all branches that uses this block to branch to. 
+cbra_out,Outgoing,A list of all branches that this block branches to.
+add,Additional,Any additional structural information that is not covered here.
+,,
+,,
+,,
+,,* or eqivalent if using another service.
+,,~ if applcable. Otherwise please leave blank.
+,,
+,,Please include additional Pilot Round data and pattern the variables accordingly if applicable.

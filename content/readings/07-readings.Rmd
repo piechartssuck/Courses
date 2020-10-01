@@ -1,0 +1,22 @@
+---
+title: "Ordering Questions and Testing for Question Order Effects"
+linktitle: "Week 7: Ordering Questions and Testing for Question Order Effects"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 2
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read *Chapter 7: Ordering Questions and Testing for Question Order Effects* in Dillman, Smyth, and Christian. 
+
+
+
+

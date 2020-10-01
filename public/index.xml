@@ -496,13 +496,13 @@ A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.
 &lt;th style=&#34;text-align:center;&#34;&gt;
 Qualtrics?
 &lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
 eCampus?
 &lt;/th&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
 Description
 &lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
 Location
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -514,15 +514,15 @@ Location
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
 &lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
 Submit a one paragraph narrative about your survey.
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/assignment/05-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -532,15 +532,15 @@ Submit a one paragraph narrative about your survey.
 &lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
 Submit a draft survey.
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/assignment/05-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -550,15 +550,15 @@ Submit a draft survey.
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
 Watch a two-part walkthrough on accessing the Qualtrics API visa R.
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/example/06-example/#using-the-qualtrics-api-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -568,7 +568,7 @@ Watch a two-part walkthrough on accessing the Qualtrics API visa R.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in three weeks.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/06-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in three weeks.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -613,8 +613,140 @@ Watch a two-part walkthrough on accessing the Qualtrics API visa R.
 &lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
-&lt;p&gt;&lt;br&gt;
-Link to &lt;a href=&#34;https://www.qualtrics.com/support/?utm_lp=contact&#34; target=&#34;_blank&#34;&gt;Qualtrics support&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;links&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Links&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.qualtrics.com/support/?utm_lp=contact&#34; target=&#34;_blank&#34;&gt;Qualtrics support&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You may have to right click and download it depending on your browser settings.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ordering Questions and Testing for Question Order Effects</title>
+      <link>/due/07-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/07-due/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#things-coming-up&#34;&gt;Things coming up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Qualtrics?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Watch a two-part walkthrough on how to use spacing and colors in Qualtrics.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/07-example/#using-the-qualtrics-api-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Things coming up&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/07-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt; due in two weeks.&lt;/li&gt;
+&lt;li&gt;Take a look at the &lt;a href=&#34;/assignment/07-assignment/#pilot-study-ledger-1&#34;&gt;Pilot Study Requirements&lt;/a&gt; due in two weeks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ordering Questions and Testing for Question Order Effects</title>
+      <link>/example/07-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/07-example/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visual-clues&#34;&gt;Visual Clues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;visual-clues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Visual Clues&lt;/h3&gt;
+&lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;Item development for any instrument is not an easy task. Furthermore you rarely have the chance of amending a question on surveys in particular after distribution so they require that items be &lt;em&gt;perfect&lt;/em&gt;. While pilot testing certainly helps with this process, using certain formatting techniques can yield gains in responses.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Please download the following files and save them in a single folder&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes_functions.R&#34;&gt;likert_colorpalettes_functions.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes.R&#34;&gt;likert_colorpalettes.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;text_box_size&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/vertical_mc_spacing.txt&#34;&gt;vertical_mc_spacing&lt;/a&gt; text file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;walkthrough-part-i---spacing&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Walkthrough: Part I - Spacing&lt;/h4&gt;
+&lt;center&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;walkthrough-part-ii---colors&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Walkthrough: Part II - Colors&lt;/h4&gt;
+&lt;center&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_colors/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;links&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Links&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;Color Hex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://uigradients.com/&#34; target=&#34;_blank&#34;&gt;uiGradients&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/resource/design/&#34; target=&#34;_blank&#34;&gt;EDP 693 Resources page for Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -1019,35 +1151,6 @@ From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, We
     </item>
     
     <item>
-      <title>Week 5: How to Write Open- and Closed-Ended Questions</title>
-      <link>/assignment/05-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/05-assignment/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#construction-designing-a-survey-draft&#34;&gt;Construction: Designing a Survey Draft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;construction-designing-a-survey-draft&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Construction: Designing a Survey Draft&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, &lt;strong&gt;create&lt;/strong&gt;, pilot, administer, and analyze a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
-&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Submit&lt;/h4&gt;
-&lt;p&gt;There are two different submissions for this task. Please be aware of what goes where and ask questions if needed.&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; and shared with me via the Collaborate feature on the site due on &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.
-:::&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>How to Write Open- and Closed-Ended Questions</title>
       <link>/lesson/05-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1132,9 +1235,38 @@ From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, We
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>/lesson/06-lesson/</link>
+      <link>/assignment/06-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/06-lesson/</guid>
+      <guid>/assignment/06-assignment/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#construction-designing-a-survey-draft&#34;&gt;Construction: Designing a Survey Draft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;construction-designing-a-survey-draft&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Construction: Designing a Survey Draft&lt;/h3&gt;
+&lt;p&gt;In this class, you will plan, &lt;strong&gt;create&lt;/strong&gt;, pilot, administer, and analyze a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
+&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Submit&lt;/h4&gt;
+&lt;p&gt;There are two different submissions for this task. Please be aware of what goes where and ask questions if needed.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; and shared with me via the Collaborate feature on the site due on &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.
+:::&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
+      <link>/lesson/07-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/07-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1209,6 +1341,122 @@ From a Randomized Experiment&lt;/strong&gt;&lt;/a&gt; by Coryn CLS, Becho LW, We
 &lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Stuff&lt;/h3&gt;
 &lt;p&gt;Read &lt;em&gt;Chapter 6: Aural Versus Visual Design of Questions and Questionnaires&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ordering Questions and Testing for Question Order Effects</title>
+      <link>/assignment/07-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/07-assignment/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pilot-study-ledger&#34;&gt;Pilot Study Ledger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;pilot-study-ledger&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pilot Study Ledger&lt;/h3&gt;
+&lt;p&gt;In this class, you will plan, create, &lt;strong&gt;pilot&lt;/strong&gt;, administer, and analyze a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
+&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Process&lt;/h4&gt;
+&lt;p&gt;You may begin the pilot process as soon as you read this. Please be aware that the minimum standard for a pilot study are two iterations. If you wish to do less, then a discussion is warranted and you must provide a sufficient case. Please schedule an appointment to be taken place no later than &lt;strong&gt;October 7&lt;/strong&gt; by &lt;strong&gt;5:00 PM&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Submit&lt;/h4&gt;
+&lt;p&gt;There is one submission for this task: A csv or excel document outlining the history of your changes and submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;October 11&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. You must account for every item within your survey in the order they appear in your online variant. This includes, but is not limited to the landing and gratitude pages. Please use the documents below to keep an accurate record as you will be using it to create a &lt;em&gt;skeleton&lt;/em&gt; of your survey.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger.csv&#34;&gt;pilot_ledger.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger.csv&#34;&gt;pilot_ledger_codebook.csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ordering Questions and Testing for Question Order Effects</title>
+      <link>/lesson/06-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/06-lesson/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The third exploration in R is a skill track consisting of multiple modules covering modeling and statistical analysis. These can be accessed at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular, they are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Communicating with Data in the Tidyverse&lt;/li&gt;
+&lt;li&gt;Categorical Data in the Tidyverse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Exploratory Data Analysis in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Exploring Categorical Data&lt;/li&gt;
+&lt;li&gt;Exploring Numerical Data&lt;/li&gt;
+&lt;li&gt;Numerical Summaries&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Modeling with Data in the Tidyverse&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to Modeling&lt;/li&gt;
+&lt;li&gt;Modeling with Basic Regression&lt;/li&gt;
+&lt;li&gt;Modeling with Multiple Regression&lt;/li&gt;
+&lt;li&gt;Modeling Assessment and Selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Dealing with Missing Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Why care about missing data?&lt;/li&gt;
+&lt;li&gt;Wrangling and tidying up missing values&lt;/li&gt;
+&lt;li&gt;Testing missing relationships&lt;/li&gt;
+&lt;li&gt;Connecting the dots (Imputation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inference for Categorical Data in R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Inference for a single parameter&lt;/li&gt;
+&lt;li&gt;Proportions: testing and power&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: independence&lt;/li&gt;
+&lt;li&gt;Comparing many parameters: goodness of fit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ordering Questions and Testing for Question Order Effects</title>
+      <link>/readings/07-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/07-readings/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;p&gt;Read &lt;em&gt;Chapter 7: Ordering Questions and Testing for Question Order Effects&lt;/em&gt; in Dillman, Smyth, and Christian.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2509,6 +2757,21 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/06-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/06-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;October 4, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Ordering Questions and Testing for Question Order Effects&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/07-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/07-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/07-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/07-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/07-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

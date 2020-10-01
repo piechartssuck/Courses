@@ -1,0 +1,47 @@
+---
+title: "Aural Versus Visual Design of Questions and Questionnaires"
+linktitle: "Week 6: Aural Versus Visual Design of Questions and Questionnaires"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The third exploration in R is a skill track consisting of multiple modules covering modeling and statistical analysis. These can be accessed at [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular, they are:
+
+1. Modeling with Data in the Tidyverse
+ - Communicating with Data in the Tidyverse
+ - Categorical Data in the Tidyverse
+ 
+ 2. Exploratory Data Analysis in R
+ - Exploring Categorical Data
+ - Exploring Numerical Data
+ - Numerical Summaries
+ - Case study
+ 
+ 3. Modeling with Data in the Tidyverse
+ - Introduction to Modeling
+ - Modeling with Basic Regression
+ - Modeling with Multiple Regression
+ - Modeling Assessment and Selection 
+ 
+ 4. Dealing with Missing Data in R
+ - Why care about missing data?
+ - Wrangling and tidying up missing values 
+ - Testing missing relationships 
+ - Connecting the dots (Imputation) 
+ 
+ 5. Inference for Categorical Data in R
+ - Inference for a single parameter 
+ - Proportions: testing and power
+ - Comparing many parameters: independence
+ - Comparing many parameters: goodness of fit
+
