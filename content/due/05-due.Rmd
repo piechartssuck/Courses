@@ -29,6 +29,8 @@ checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 wk_post <- tibble(
 "Qualtrics?" = c(checked),
 
+"eCampus?" = c(unchecked),
+
 Description = c("Participate in the **EDP 619 Survey About Nothing**^[We'll be using R to pull the results directly out of Qualtrics, namely out of something called the Qualtrics API.]."),
 
 Location = c("A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.")
@@ -41,11 +43,12 @@ Location = c("A unique Qualtrics link was sent to your WVU MIX email at 8am on S
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(wk_post, 
       escape = FALSE,
-      align = 'cll') %>%
+      align = 'ccll') %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
-  column_spec(2, width = "20em") %>%
-  column_spec(3, width = "20em")
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "20em")
 ```
 
 ### Things coming up
