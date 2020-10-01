@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="An Introduction to dplyr Purpose Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Data Science Acknowledgements    An Introduction to dplyr Purpose What are some common things you like to do with your data?">
+  <meta name="description" content="An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Data Science Acknowledgements    An Introduction to dplyr Purpose What are some common things you like to do with your data?">
 
   
   <link rel="alternate" hreflang="en-us" href="/walkthroughs/nfl/nflpipes/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Statistical Methods I">
   <meta property="og:url" content="/walkthroughs/nfl/nflpipes/">
   <meta property="og:title" content="Pipes and the NFL | Statistical Methods I">
-  <meta property="og:description" content="An Introduction to dplyr Purpose Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Data Science Acknowledgements    An Introduction to dplyr Purpose What are some common things you like to do with your data?"><meta property="og:image" content="/img/course_info.png">
+  <meta property="og:description" content="An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Data Science Acknowledgements    An Introduction to dplyr Purpose What are some common things you like to do with your data?"><meta property="og:image" content="/img/course_info.png">
   <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -733,18 +733,22 @@
 
                     <div class="article-style">
                         
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
-<li><a href="#an-introduction-to-dplyr">An Introduction to <code>dplyr</code></a><ul>
-<li><a href="#purpose">Purpose</a><ul>
+<li><a href="#an-introduction-to-dplyr">An Introduction to <code>dplyr</code></a>
+<ul>
+<li><a href="#purpose">Purpose</a>
+<ul>
 <li><a href="#objectives">Objectives</a></li>
 <li><a href="#packages">Packages</a></li>
 </ul></li>
 <li><a href="#the-tidyverse-package">The Tidyverse Package</a></li>
 <li><a href="#tidy-data">Tidy Data</a></li>
 <li><a href="#basics">Basics</a></li>
-<li><a href="#the-pipe-operator">The Pipe <code>%&gt;%</code> Operator</a><ul>
+<li><a href="#the-pipe-operator">The Pipe <code>%&gt;%</code> Operator</a>
+<ul>
 <li><a href="#gapminder">Gapminder</a></li>
 <li><a href="#mutate-adds-new-variables"><code>mutate()</code> adds new variables</a></li>
 <li><a href="#try-these-out">Try These Out</a></li>
@@ -780,12 +784,12 @@
 <h3>Packages</h3>
 <p>Please load up the following packages</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ───────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()</code></pre>
@@ -964,7 +968,6 @@ gapusa</code></pre>
 and then filter for the United States,
 and lastly drop the variables continent and lifeExp.”</p>
 </blockquote>
-
 </div>
 </div>
 <div id="mutate-adds-new-variables" class="section level3">
@@ -1288,7 +1291,6 @@ nfl2014 %&gt;%
 <li><p>Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.</p></li>
 </ol>
 <p>You can always contact me for help!</p>
-
 <div style="page-break-after: always;"></div>
 </div>
 <div id="data-science" class="section level2">

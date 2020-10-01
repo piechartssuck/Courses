@@ -18,6 +18,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/citations/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;You can &lt;a href=&#34;/bib/references.bib&#34; target=&#34;_blank&#34;&gt;download a BibTeX file&lt;/a&gt; of all the readings in the course:&lt;/p&gt;
@@ -35,6 +36,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/data/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;There are a ton of places to find data related to whatever you want. The ones below are some of the more larger repositories:&lt;/p&gt;
@@ -54,13 +56,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/design/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#accessibility&#34;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#colors&#34;&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#fonts&#34;&gt;Fonts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graphic-assets&#34;&gt;Graphic assets&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#graphic-assets&#34;&gt;Graphic assets&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#images&#34;&gt;Images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vectors&#34;&gt;Vectors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vectors-photos-videos-and-other-assets&#34;&gt;Vectors, photos, videos, and other assets&lt;/a&gt;&lt;/li&gt;
@@ -138,11 +142,13 @@
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/install/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#rstudio.cloud&#34;&gt;RStudio.cloud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rstudio-on-your-computer&#34;&gt;RStudio on your computer&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio-on-your-computer&#34;&gt;RStudio on your computer&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-r&#34;&gt;Install R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-rstudio&#34;&gt;Install RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-tidyverse&#34;&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -215,6 +221,7 @@
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/markdown/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -638,6 +645,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/r/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -704,6 +712,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/rmarkdown/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -825,11 +834,13 @@ output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/style/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#r-style-conventions&#34;&gt;R style conventions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#main-style-things-to-pay-attention-to-for-this-class&#34;&gt;Main style things to pay attention to for this class&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#main-style-things-to-pay-attention-to-for-this-class&#34;&gt;Main style things to pay attention to for this class&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#spacing&#34;&gt;Spacing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#long-lines&#34;&gt;Long lines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pipes-and-ggplot-layers&#34;&gt;Pipes (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) and ggplot layers (&lt;code&gt;+&lt;/code&gt;)&lt;/a&gt;&lt;/li&gt;
@@ -1013,6 +1024,7 @@ mpg %&amp;gt;%
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/visualization/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1082,6 +1094,7 @@ mpg %&amp;gt;%
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       <guid>/resource/unzipping/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Because RStudio projects typically consist of multiple files (R scripts, datasets, graphical output, etc.) the easiest way to distribute them to you for examples, assignments, and projects is to combine all the different files in to a single compressed collection called a &lt;strong&gt;zip file&lt;/strong&gt;. When you unzip a zipped file, your operating system extracts all the files that are contained inside into a new folder on your computer.&lt;/p&gt;

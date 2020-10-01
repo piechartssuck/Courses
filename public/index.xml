@@ -18,6 +18,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/citations/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;You can &lt;a href=&#34;/bib/references.bib&#34; target=&#34;_blank&#34;&gt;download a BibTeX file&lt;/a&gt; of all the readings in the course:&lt;/p&gt;
@@ -35,6 +36,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/01-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -203,6 +205,7 @@ Voted; Membership
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/01-due/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -349,6 +352,7 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/01-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -369,6 +373,7 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/01-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -416,6 +421,7 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/01-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -451,6 +457,7 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/02-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -663,10 +670,10 @@ Total
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The smallest perceived class group is the &lt;span class=&#34;boxed&#34;&gt;upper class&lt;/span&gt;, making up only 3.3% of the survey.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Together, the &lt;span class=&#34;boxed&#34;&gt;working&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;middle class&lt;/span&gt; make up 50% + 36.7% = 86.7% of the survey.&lt;/p&gt;
-&lt;/p&gt;
-&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Together, the &lt;span class=&#34;boxed&#34;&gt;working&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;middle class&lt;/span&gt; make up 50% + 36.7% = 86.7% of the survey.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;3&lt;/summary&gt;
 &lt;p&gt;
@@ -991,6 +998,7 @@ Cumulative Percent
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/02-due/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -1137,6 +1145,7 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/02-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1178,6 +1187,7 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/02-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1241,6 +1251,7 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/02-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1261,6 +1272,7 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/03-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -1414,10 +1426,10 @@ Most days
 &lt;/table&gt;
 &lt;/center&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Teens’ breakfast habits vary by race/ethnicity. Out of the three racial/ethnic groups, Black students were more likely to report seldom or sometimes eating breakfast. On the other hand, White and Hispanic students eat breakfast more frequently. The &lt;span class=&#34;boxed&#34;&gt;mode&lt;/span&gt; for White and Hispanic students is everyday.
-&lt;/p&gt;
-&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;Teens’ breakfast habits vary by race/ethnicity. Out of the three racial/ethnic groups, Black students were more likely to report seldom or sometimes eating breakfast. On the other hand, White and Hispanic students eat breakfast more frequently. The &lt;span class=&#34;boxed&#34;&gt;mode&lt;/span&gt; for White and Hispanic students is everyday.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
@@ -1652,6 +1664,7 @@ Since Clinton and Sanders’ middle-class income amount is higher than the U.S. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/03-due/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -1798,6 +1811,7 @@ Watch a video on the Measures of Variability.&lt;a href=&#34;#fn3&#34; class=&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/03-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1834,6 +1848,7 @@ The following video is a bit of a compilation of things that come up that are fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/03-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1906,6 +1921,7 @@ The following video is a bit of a compilation of things that come up that are fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/03-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1926,6 +1942,7 @@ The following video is a bit of a compilation of things that come up that are fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/04-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -2703,6 +2720,7 @@ These differences might be explained by access and availability of health care a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/04-due/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -2836,6 +2854,7 @@ Watch a video on The Normal Distribution.&lt;a href=&#34;#fn3&#34; class=&#34;fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/04-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2878,6 +2897,7 @@ The following video is a bit of a compilation of things that come up that are fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/04-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2950,6 +2970,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/04-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2976,18 +2997,22 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/walkthroughs/nfl/nflpipes/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#an-introduction-to-dplyr&#34;&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#an-introduction-to-dplyr&#34;&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#packages&#34;&gt;Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-tidyverse-package&#34;&gt;The Tidyverse Package&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tidy-data&#34;&gt;Tidy Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#basics&#34;&gt;Basics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-pipe-operator&#34;&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#the-pipe-operator&#34;&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gapminder&#34;&gt;Gapminder&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#mutate-adds-new-variables&#34;&gt;&lt;code&gt;mutate()&lt;/code&gt; adds new variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#try-these-out&#34;&gt;Try These Out&lt;/a&gt;&lt;/li&gt;
@@ -3023,12 +3048,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;h3&gt;Packages&lt;/h3&gt;
 &lt;p&gt;Please load up the following packages&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ───────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Conflicts ───────────────────────────────────────────────────────── tidyverse_conflicts() ──
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ──────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
@@ -3207,7 +3232,6 @@ gapusa&lt;/code&gt;&lt;/pre&gt;
 and then filter for the United States,
 and lastly drop the variables continent and lifeExp.”&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mutate-adds-new-variables&#34; class=&#34;section level3&#34;&gt;
@@ -3531,7 +3555,6 @@ nfl2014 %&amp;gt;%
 &lt;li&gt;&lt;p&gt;Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can always contact me for help!&lt;/p&gt;
-
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-science&#34; class=&#34;section level2&#34;&gt;
@@ -3561,6 +3584,7 @@ nfl2014 %&amp;gt;%
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/05-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -3946,6 +3970,7 @@ which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/05-due/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -4092,6 +4117,7 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/05-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4124,6 +4150,7 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/05-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4188,6 +4215,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/05-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4208,6 +4236,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/example/06-example/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4235,10 +4264,79 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     
     <item>
       <title>Sampling and Sampling Distributions</title>
+      <link>/lesson/06-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/06-lesson/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough-solutions&#34;&gt;R Walkthrough Solutions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The fifth &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due &lt;strong&gt;two Wednesdays&lt;/strong&gt; following the completion of the Week 5 class. The module covers types of data sampling, and experiments. In particular, the sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language of data&lt;/li&gt;
+&lt;li&gt;Study types and cautionary tales&lt;/li&gt;
+&lt;li&gt;Sampling strategies and experimental design&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch5.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the class&lt;/p&gt;
+&lt;p&gt;Slides: Remember to click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use this &lt;a href=&#34;/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough-solutions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough Solutions&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough solutions&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;!--
+1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+
+- [Week 3 Walkthrough Materials](/slides/Week 4/Week4data.zip){target=&#34;_blank&#34;}
+
+2. Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
+
+&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+
+You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
+--&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sampling and Sampling Distributions</title>
       <link>/readings/06-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/readings/06-readings/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4259,6 +4357,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/data/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;There are a ton of places to find data related to whatever you want. The ones below are some of the more larger repositories:&lt;/p&gt;
@@ -4278,6 +4377,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/datacamp-assignment/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
@@ -4293,13 +4393,15 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/design/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#accessibility&#34;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#colors&#34;&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#fonts&#34;&gt;Fonts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graphic-assets&#34;&gt;Graphic assets&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#graphic-assets&#34;&gt;Graphic assets&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#images&#34;&gt;Images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vectors&#34;&gt;Vectors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vectors-photos-videos-and-other-assets&#34;&gt;Vectors, photos, videos, and other assets&lt;/a&gt;&lt;/li&gt;
@@ -4377,11 +4479,13 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/install/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#rstudio.cloud&#34;&gt;RStudio.cloud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rstudio-on-your-computer&#34;&gt;RStudio on your computer&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rstudio-on-your-computer&#34;&gt;RStudio on your computer&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#install-r&#34;&gt;Install R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-rstudio&#34;&gt;Install RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#install-tidyverse&#34;&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4454,6 +4558,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/markdown/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4877,6 +4982,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/r/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4943,6 +5049,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>/resource/rmarkdown/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -5064,11 +5171,13 @@ output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/style/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#r-style-conventions&#34;&gt;R style conventions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#main-style-things-to-pay-attention-to-for-this-class&#34;&gt;Main style things to pay attention to for this class&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#main-style-things-to-pay-attention-to-for-this-class&#34;&gt;Main style things to pay attention to for this class&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#spacing&#34;&gt;Spacing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#long-lines&#34;&gt;Long lines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pipes-and-ggplot-layers&#34;&gt;Pipes (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) and ggplot layers (&lt;code&gt;+&lt;/code&gt;)&lt;/a&gt;&lt;/li&gt;
@@ -5252,6 +5361,7 @@ mpg %&amp;gt;%
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/resource/visualization/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -5321,6 +5431,7 @@ mpg %&amp;gt;%
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       <guid>/resource/unzipping/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Because RStudio projects typically consist of multiple files (R scripts, datasets, graphical output, etc.) the easiest way to distribute them to you for examples, assignments, and projects is to combine all the different files in to a single compressed collection called a &lt;strong&gt;zip file&lt;/strong&gt;. When you unzip a zipped file, your operating system extracts all the files that are contained inside into a new folder on your computer.&lt;/p&gt;
@@ -5354,6 +5465,7 @@ mpg %&amp;gt;%
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/professor/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -5452,6 +5564,7 @@ You can check out more about what I do here:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/schedule/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage.&lt;/p&gt;
@@ -5597,29 +5710,34 @@ You can check out more about what I do here:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/syllabus/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#course-objectives&#34;&gt;Course objectives&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#faq&#34;&gt;FAQ&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#faq&#34;&gt;FAQ&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#is-the-course-content-difficult&#34;&gt;Is the course content difficult?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#is-r-difficult&#34;&gt;Is R difficult?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-if-i-find-a-mistake&#34;&gt;What if I find a mistake?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#course-materials&#34;&gt;Course materials&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#course-materials&#34;&gt;Course materials&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#texts&#34;&gt;Texts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#note-online-help&#34;&gt;Note: Online help&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and Grades&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and Grades&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#your-hours&#34;&gt;Your hours&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#class-conduct-and-expectations&#34;&gt;Class conduct and expectations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#learning-and-knowledge-during-a-pandemic&#34;&gt;Learning and knowledge during a pandemic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#course-policies&#34;&gt;Course policies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#covid-19-statement&#34;&gt;COVID-19 Statement&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#covid-19-statement&#34;&gt;COVID-19 Statement&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#psychological-and-psychiatric-services&#34;&gt;Psychological and Psychiatric Services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#care-team&#34;&gt;CARE Team&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#laurens-promise&#34;&gt;Lauren’s Promise&lt;/a&gt;&lt;/li&gt;

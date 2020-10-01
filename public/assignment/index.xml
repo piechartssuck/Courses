@@ -18,6 +18,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/01-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -186,6 +187,7 @@ Voted; Membership
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/02-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -398,10 +400,10 @@ Total
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The smallest perceived class group is the &lt;span class=&#34;boxed&#34;&gt;upper class&lt;/span&gt;, making up only 3.3% of the survey.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Together, the &lt;span class=&#34;boxed&#34;&gt;working&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;middle class&lt;/span&gt; make up 50% + 36.7% = 86.7% of the survey.&lt;/p&gt;
-&lt;/p&gt;
-&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Together, the &lt;span class=&#34;boxed&#34;&gt;working&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;middle class&lt;/span&gt; make up 50% + 36.7% = 86.7% of the survey.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;3&lt;/summary&gt;
 &lt;p&gt;
@@ -726,6 +728,7 @@ Cumulative Percent
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/03-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -879,10 +882,10 @@ Most days
 &lt;/table&gt;
 &lt;/center&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Teens’ breakfast habits vary by race/ethnicity. Out of the three racial/ethnic groups, Black students were more likely to report seldom or sometimes eating breakfast. On the other hand, White and Hispanic students eat breakfast more frequently. The &lt;span class=&#34;boxed&#34;&gt;mode&lt;/span&gt; for White and Hispanic students is everyday.
-&lt;/p&gt;
-&lt;/details&gt;&lt;/li&gt;
+&lt;li&gt;Teens’ breakfast habits vary by race/ethnicity. Out of the three racial/ethnic groups, Black students were more likely to report seldom or sometimes eating breakfast. On the other hand, White and Hispanic students eat breakfast more frequently. The &lt;span class=&#34;boxed&#34;&gt;mode&lt;/span&gt; for White and Hispanic students is everyday.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
@@ -1117,6 +1120,7 @@ Since Clinton and Sanders’ middle-class income amount is higher than the U.S. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/04-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
@@ -1894,6 +1898,7 @@ These differences might be explained by access and availability of health care a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/05-homeworks/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2279,6 +2284,7 @@ which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/datacamp-assignment/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;

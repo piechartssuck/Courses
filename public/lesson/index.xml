@@ -18,6 +18,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/01-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -65,6 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/02-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -128,6 +130,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/03-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -200,6 +203,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/04-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -272,6 +276,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/lesson/05-lesson/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -311,6 +316,74 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
 &lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;!--
+1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+
+- [Week 3 Walkthrough Materials](/slides/Week 4/Week4data.zip){target=&#34;_blank&#34;}
+
+2. Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
+
+&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+
+You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
+--&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sampling and Sampling Distributions</title>
+      <link>/lesson/06-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/06-lesson/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough-solutions&#34;&gt;R Walkthrough Solutions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;/h3&gt;
+&lt;p&gt;The fifth &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; module is due &lt;strong&gt;two Wednesdays&lt;/strong&gt; following the completion of the Week 5 class. The module covers types of data sampling, and experiments. In particular, the sections are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language of data&lt;/li&gt;
+&lt;li&gt;Study types and cautionary tales&lt;/li&gt;
+&lt;li&gt;Sampling strategies and experimental design&lt;/li&gt;
+&lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch5.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the class&lt;/p&gt;
+&lt;p&gt;Slides: Remember to click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use this &lt;a href=&#34;/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough-solutions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough Solutions&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough solutions&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;!--
 1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
 
