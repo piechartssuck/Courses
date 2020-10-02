@@ -51,7 +51,7 @@ lessons:
     session: 6
     date: "October 7, 2020"
     readings: "06-readings"
-#    lesson: "06-lesson"
+    lesson: "06-lesson"
     example: "06-example"
     assignment: "06-assignment"
 #    due: "06-due"
