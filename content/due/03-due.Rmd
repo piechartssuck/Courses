@@ -31,7 +31,7 @@ wk_post <- tibble(
 "eCampus" = c(checked,
               unchecked),
 
-"Data Camp?" = c(unchecked,
+"Data Camp" = c(unchecked,
                  unchecked),
 
 "Qualtrics" = c(unchecked,

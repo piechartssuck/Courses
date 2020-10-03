@@ -31,7 +31,7 @@ wk_post <- tibble(
 "eCampus" = c(unchecked,
               unchecked),
 
-"Data Camp?" = c(unchecked,
+"Data Camp" = c(unchecked,
                  unchecked),
 
 "Qualtrics" = c(checked,
@@ -57,8 +57,8 @@ kable(wk_post,
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "10em") %>%
   column_spec(3, width = "10em") %>%
-  column_spec(4, width = "22em") %>%
-  column_spec(5, width = "10em")
+  column_spec(4, width = "18em") %>%
+  column_spec(5, width = "18em")
 ```
 </center>
 
