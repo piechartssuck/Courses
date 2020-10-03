@@ -17,8 +17,8 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(htmltools)
+library(knitr)
 library(kableExtra)
-options(knitr.table.format = "latex")
 ```
 
 
@@ -441,32 +441,288 @@ nfl2014 %>%
 # 3 blah blah blah
 ```
 
-
-
 Now please answer the following questions. Please note that all consumption measurements are in liters:
+
+<details><summary>First step</summary>
+<p>
+
+We have to bring in the data set:
+```{r echo = TRUE, eval = FALSE}
+drinks <- read_csv("drinks2010andBeyond.csv")
+```
+
+```{r echo = FALSE, eval = TRUE}
+drinks <- read_csv("data/drinks2010andBeyond.csv")
+```
+
+</p>
+</details>
+<br>
+OK now we can move on with the questions! <br>
 
 1. Which country or countries had the highest average consumption of wine and beer in each year?
 
+<details><summary>Possible solution</summary>
+<p>
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "Beer" | `Beverage Types` == "Wine") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+
+Breakdown line-by-line:
+
+1. We call the data frame `drinks`.
+
+2. We filter the column `Beverage Types` by "Beer" OR "Wine".^[Note that **OR** here means what is known as an **inclusive or**...aka *it this or that or both*. Using this idea, the second line search reads like `Beverage Types` for "Beer" OR "Wine" OR both. The other type of OR is called an **exclusive or** ..aka *it this or that but NOT both*. If you ever have to use it, it is given by the command `xor()`. Included on the [last page of this document](#exclusive) are some standard logical operators for your reference.]
+
+3. The `gather()` command is used to go from a wide data set to a long one while ignoring the application of the command on the columns `Country`, and `Beverage Types`. To see what occurs, first run the first two lines by highlighting them and ending before the `%>%` (pipe) on the second line:
+
+![Highlight of first two lines of the code.](graphics/partialpipes2lines.png)
+That simply runs through steps 1 and 2 above. Now run the first three lines in the same way ending prior to the `%>%` (pipe) in the third line
+
+![Highlight of first two lines of the code.](graphics/partialpipes3lines.png)
+You can find a multitude of resources for `gather()` and its complement `spread()` but my advice is simply to play around with  the `key`, `value`, and columns you don't want to make long. However if you like some reference material while you explore these commands, try [Data Science for R]("https://garrettgman.github.io/tidying/"). If the link is not work, the address is https://garrettgman.github.io/tidying/. 
+
+In our case all of the data is now in relation to the columns `Country` and `Beverage Types` which gives us the remaining columns (the `key`) as data points that have values (the `value`) which I have named `year` (via `key = "year"`) and `measure` (via `value = "measure"`). Those that do not have associated values become `NA`s (for example the country of `Afghanistan` did not have any values for `Beer` or `Wine` in `2016`). Please take some time to investigate the `gather()` command as R works will with long data sets and not so well with wide ones!
+
+4. `na.omit()` is a command you have seen before and it simply sees if there is an `NA` in a row and then deleted said row. It performs this recursively throughout your entire data frame.
+
+5. The `group_by()` command notifies R that all operations must be performed with respect to the columns indicated which in this case implies that \ldots
+
+6. \ldots the `summarize()` command used here to find the mean of the column `measure` is performed by `year` and `Country`. We assign the results to a new column `avg`.
+
+7. Finally the `top_n()` which gives us the top value of the average `avg` column.
+
+Again to see how this layering works, I suggest that you run this line by line to observe the results. This is the benefit of the `tidyverse` approach.
+
+</p>
+</details>
+<br>
+
 2. Which country or countries had the highest average consumption of spirits in each year?
+
+<details><summary>Possible solution</summary>
+<p>
+
+The process here is exactly the same as the one described in item 1 except the `Beverage Types` are `"Spirits"` rather than `"Beer"` or `"Wine"`.
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "Spirits") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+
+</p>
+</details>
+<br>
 
 3. Which country had the highest average consumption of all alcohol across time?
 
-4. Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?
+<details><summary>Possible solution</summary>
+<p>
+
+Again, the process here is exactly the same as the one described in items 1 and 2 except the `Beverage Types` are `"All types"` rather than any individual type.
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "All types")  %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+</p>
+</details>
+<br>
+
+4. Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?<br><br>
+This one was fairly difficult. A *deviation from the mean* essentially indicates how a single measure differs from an established value of a mean. In our case, how the mean of the United States differs from that of the mean derived from the rest of the countries. Your first thought may be to find the difference between both the means by subtracting them. This would be fine if both had the same standard deviation, but they do not.
+
+<details><summary>Possible solution</summary>
+<p>
+
+```{r}
+# USA only
+drinks %>%
+  filter(`Beverage Types` == "Beer" & Country == "United States of America") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  summarize(avg = mean(measure), stanDev = sd(measure)) 
+
+# Remaining countries
+drinks %>%
+  filter(`Beverage Types` == "Beer" & Country != "United States of America") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  summarize(avg = mean(measure), stanDev = sd(measure)) 
+```
+
+Note that our `filter()` command again uses an AND command rather than an OR and rather than filtering using one column, we use two (`Beverage Types` AND `Country`) but in the latter we we want to exclude the United States of America by using `Country != "United States of America"`. So interpreting this, we can say that we're looking for figures for all Beer consumption around the world except for the United States of America.
+
+So what can we do? At this point not much! In the future we should be able to address this issue by using a statistical test  known as a *t*-test but we need to satisfy some initial prerequisites first. We will explore this in R5 but for now, we'll leave it here. 
+
+On a side note, it is absolutely fine if you subtracted the means! That would be the most logical choice and you also did not have much of a choice at the current time. Consider that the issue of subtracting means with differing standard deviations is that the spread differs between each and while a mean is a mean, they're not measures of the mean on the same footing - ergo all things are not equal.
+</p>
+</details>
+<br>
 
 5. Since we measure beer in the United States in ounces (for some reason) rather than in liters, convert the 2016 measures into ounces using the conversion 1 Liter = 33.814022 oz.
 
+<details><summary>Possible solution</summary>
+<p>
+One of the nicer aspects of using `%>%` is in the fact you can selectively perform operations and general augmentations on the columns of your choice without ever having to worry about how any other columns are affected. This is actually accomplished using the command `mutate()` which in a nutshell allows for column wise operations. 
+
+In this task, we are informed that the column `2016` is given in liters. However since we and a handful of other countries have chosen to use a measurement that are nowadays based off the metric system (yes that's true..for example an inch is officially defined as 2.54 centimeters) and not the metric system itself (base 10 seems pretty easy but what do I know), we have to convert on order to report. In this case we are given the easy to remember 1 Liter = 33.814022 (fluid) ounces. To convert this, we use the `mutate()` command by
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+drinks %>%
+  mutate(`2016` = 33.814022 * `2016`) %>%
+  rename(`2016 (using garbage measurements)` = `2016`)
+```
+\vspace{0.1in}
+
+with the last line being dedicated to renaming the column that was just converted from `2016` to `2016 (using garbage measurements)`. Notice that the `rename()` command requires that the new name of a column precede the current name separated by and `=`. I realize this appears to be counterintuative and there is a reason for it, but unless you love discussing how R compiles code, I'll leave it be. 
+
+On a side note, we only converted the column `2016`. What if we wanted to convert every column? Well we'd be using a lot of `%>%` and wasted energy. This is one of many instances where `gather()` is a great command to know. Switching from a wide data frame to a long one allows you to convert all years at once. We can do this by
+
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+drinks %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  mutate(`measure` = 33.814022 * `measure`) %>%
+  rename(`Measures (in ounces because that's apparently easy)` = `measure`)
+```
+\vspace{0.1in}
+
+Unlike the piping we used earlier, we aren't filtering for anything (though we could if we wanted by putting the filters back in). The rest is pretty much a combination of previous column-wise wrangling. Try running the first three lines. You will once again notice that the `measure` column is the associated liter count by year. With that, we mainly need to use `mutate()` on the `measure` column to convert it.
+
+Learning both `gather()` and to some degree `spread()` which is not covered in this walk-through will save you a great deal of time. It is worth taking the time now to explore what you can do with it.
+
+</details>
+</p>
+
 6. Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.
 
-You can always contact me for help! 
+<details><summary>Possible solution</summary>
+<p>
+
+Of course answers will vary here but we can see the values for each country by year 
+
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+coalesce_by_column <- function(df) {
+  return(dplyr::coalesce(!!! as.list(df)))
+}
+
+drinks %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  rowid_to_column("Country ID") %>%
+  spread(`Beverage Types`, value = `measure`) %>%
+  select(-`Country ID`) %>%
+  group_by(Country, year) %>%
+  summarise_all(coalesce_by_column) %>%
+  na_if(0)
+```
+\vspace{0.1in}
+
+where `NA` represents values not reported. 
+
+On a side note, there is an easier way to run `spread()` and it is called [`pivot_wider()`](https://dcl-wrangle.stanford.edu/pivot_basic.html#wider){target="_blank"}.
+
+</p>
+</details>
 
 \vspace{0.1in}
 \begin{center}\noindent\rule{4cm}{0.4pt}\end{center}
 \vspace{0.1in}
 
-\newpage
+## Logical Operators {#excusive}
+
+```{r echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+
+logicals <- tibble(
+  
+`R syntax` = c("!", 
+              "&", 
+              "&&", 
+              "|", 
+              "||", 
+              "xor", 
+              "<", 
+              ">", 
+              "==", 
+              "<=", 
+              ">=", 
+              "!=", 
+              "%in%", 
+              "isTRUE"), 
+
+Idea = c("NOT", 
+         "vector-based AND (value-wise)", 
+         "value-based AND (single value)",
+         "vector-based inclusive OR (value-wise)", 
+         "value-based inclusive OR (single value)", 
+         "vector-based exclusive OR (value-wise)", 
+         "LESS than", 
+         "GREATER than", 
+         "exactly EQUALS", 
+         "LESS than or EQUAL to",
+         "GREATER than or EQUAL to",
+         "NOT EQUAL to",
+         "included in?",
+         "test if something is TRUE"),
+
+Logic = c("!a", 
+          "a & b", 
+          "a && b", 
+          "a | b", 
+          "a || b", 
+          "xor(a,b)", 
+          "a < b", 
+          "a > b", 
+          "a == b", 
+          "a <= b", 
+          "a >= b", 
+          "a != b", 
+          "a %in% b", 
+          "isTRUE(a)")
+
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(logicals, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+</center>
+
+The use of `%>%` will get easier. Some people think of what steps they use when using a spreadsheet software (e.g. Microsoft Excel &copy;) when learning the logic of R. In fact, many of the formulas and syntax used in spreadsheet softwares parallel those in R. If you are used to Excel for example, try checking out [R for Excel Users]("https://www.rforexcelusers.com/). If the link is broken for some reason, head over to https://www.rforexcelusers.com/. Please note that I do not receive any compensation in any form for recommending this site nor do I take responsibility for its content. For assistance regarding the site, please contact the authors
+
 ## Data Science
 Data science uses the statistics you will learn in this course and to some degree, in the follow-up course to tackle real life data. According to Glassdoor, the average salary for a data scientist is 113,436 USD (range: 95,000 USD - 250,000 USD; [Burtch-Works, 2018](https://www.burtchworks.com/wp-content/uploads/2018/05/Burtch-Works-Study_DS-2018.pdf){target="_blank"}). If you are interested in learning more about Data Science, a course is tentatively scheduled for the Fall 2021 term in addition to Data Visualization in Spring 2021. Both of these courses run very differently from the statistics courses and are focused on exploring data sets of interest to students. If interested, please let me know or stay tuned.
 
 ## Acknowledgements 
-A great deal of material presented here was adapted from two online texts: [Introduction to Open Data Science]("https://ohi-science.org/data-science-training/){target="_blank"} and [R for Data Science]("https://r4ds.had.co.nz/"){target="_blank"}. If interested in how R is used in data science, try taking a look. Remember, you never need to memorize code so try not to get overwhelmed!
+A great deal of material presented here was adapted from two online texts: [Introduction to Open Data Science]("https://ohi-science.org/data-science-training/){target="_blank"} and [R for Data Science]("https://r4ds.had.co.nz/"){target="_blank"}. If interested in how R is used in data science, try taking a look.
+
+## Don't Get Bogged Down!
+Just get a feel for the items above. There is a whole bunch of commands and ridiculous syntax above but that's not the point. Concentrate on knowing what to do (e.g. "Is this best represented by a bar plot?") rather than how to do it ("The `ggplot` command is..."). You can ALWAYS search for the syntax associated with whatever in R but if you don't how to conceptually solve a problem, software won't help. Remember computers are stupid!
 

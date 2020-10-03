@@ -1937,343 +1937,304 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
-&lt;!--
-
-
-
-&lt;details&gt;&lt;summary&gt;1&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;1&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve greater than $8$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(8\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches more than 8 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{8-2.97}{3.00}\\\\
-&amp;\approx 1.68
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;$z \approx 1.68$&lt;/span&gt;.
-
-b. We are looking the area under the curve less than $5$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 8 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{8-2.97}{3.00}\\\\
+&amp;amp;\approx 1.68
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z \approx 1.68\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches less than 5 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{5-2.97}{3.00}\\\\
-&amp;\approx 0.68
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;$z \approx 0.68$&lt;/span&gt;. Since the area between $z=0.68$ and $z=0$ is $0.2517$, we have $0.5000+0.2517=0.7517$. This implies that $0.7517\cdot 1014 \approx$ &lt;span class=&#34;boxed&#34;&gt;$762$ or $763$ people watch television less than 5 hours/day&lt;/span&gt;.
-
-c. We have
-\begin{aligned}
-Y&amp;=2.97+1\cdot 3\\
-&amp;= 5.97
-\end{aligned}
-implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a $z$-score of $+1$.
-
-d. We are looking at the area between $1$ and $6$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 5 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{5-2.97}{3.00}\\\\
+&amp;amp;\approx 0.68
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z \approx 0.68\)&lt;/span&gt;&lt;/span&gt;. Since the area between &lt;span class=&#34;math inline&#34;&gt;\(z=0.68\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(z=0\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.2517\)&lt;/span&gt;, we have &lt;span class=&#34;math inline&#34;&gt;\(0.5000+0.2517=0.7517\)&lt;/span&gt;. This implies that &lt;span class=&#34;math inline&#34;&gt;\(0.7517\cdot 1014 \approx\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(762\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(763\)&lt;/span&gt; people watch television less than 5 hours/day&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Y&amp;amp;=2.97+1\cdot 3\\
+&amp;amp;= 5.97
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score of &lt;span class=&#34;math inline&#34;&gt;\(+1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches more than 1 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{1-2.97}{3.00}\\\\
-&amp;\approx -0.66
-\end{aligned}
-with the area between the mean and $z=0.66$ found to be $0.2454$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 1 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{1-2.97}{3.00}\\\\
+&amp;amp;\approx -0.66
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.66\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.2454\)&lt;/span&gt;.
 &lt;br&gt;
-The $z$-score for a person who watches less than 6 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{6-2.97}{3.00}\\\\
-&amp;\approx 1.01
-\end{aligned}
-with the area between the mean and $z=1.01$ found to be $0.3438$.&lt;br&gt;&lt;br&gt;
-So the percentage of people who watch between 1 hr/day and 6 hr/day of television can be found by $0.2454 + 0.3438 = 0.5892$, or about &lt;span class=&#34;boxed&#34;&gt;$59\%$&lt;/span&gt;.
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 6 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{6-2.97}{3.00}\\\\
+&amp;amp;\approx 1.01
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=1.01\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3438\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the percentage of people who watch between 1 hr/day and 6 hr/day of television can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.2454 + 0.3438 = 0.5892\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(59\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
-
-&lt;details&gt;&lt;summary&gt;2&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;2&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. The 95th percentile, or $0.9500$ is approximately equivalent to $z=1.65$. So the number of women needing shelter is
-\begin{aligned}
-Y&amp;= 250+1.65\cdot 75\\
-&amp;= 373.75
-\end{aligned}
-or about $374$ women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;$374$&lt;/span&gt; beds.
-
-b. We are looking the area under the curve greater than $220$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;The 95th percentile, or &lt;span class=&#34;math inline&#34;&gt;\(0.9500\)&lt;/span&gt; is approximately equivalent to &lt;span class=&#34;math inline&#34;&gt;\(z=1.65\)&lt;/span&gt;. So the number of women needing shelter is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Y&amp;amp;= 250+1.65\cdot 75\\
+&amp;amp;= 373.75
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or about &lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt; women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt;&lt;/span&gt; beds.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(220\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for exceeding the capacity is given by
-\begin{aligned}
-z &amp;= \dfrac{220-250}{75}\\\\
-&amp;\approx -0.40
-\end{aligned}
-The area below this value is $0.3446$, so the area exceeding this is $1 – 0.3446 = 0.6554$, or about &lt;span class=&#34;boxed&#34;&gt;$66\%$ of all nights&lt;/span&gt; the number of women seeking shelter will exceed the capacity of 220.  
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for exceeding the capacity is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{220-250}{75}\\\\
+&amp;amp;\approx -0.40
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area below this value is &lt;span class=&#34;math inline&#34;&gt;\(0.3446\)&lt;/span&gt;, so the area exceeding this is &lt;span class=&#34;math inline&#34;&gt;\(1 – 0.3446 = 0.6554\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(66\%\)&lt;/span&gt; of all nights&lt;/span&gt; the number of women seeking shelter will exceed the capacity of 220.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;5&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;5&lt;/summary&gt;
 &lt;p&gt;
-
-a. We are looking at the area between $12$ and $16$ for the Working class.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Working class.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person with more than 12 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{12-13.05}{2.77}\\\\
-&amp;\approx -0.38
-\end{aligned}
-with the area between the mean and $z=-0.38$ found to be $0.1480$.&lt;br&gt;&lt;br&gt;
-The $z$-score for a person who watches less than 16 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{16-13.05}{2.77}\\\\
-&amp;\approx 1.06
-\end{aligned}
-with the area between the mean and $z=1.06$ found to be $0.3554$.&lt;br&gt;&lt;br&gt; 
-So the proportion of **working-class respondents** with 12–16 years of education can be found by $0.1480 + 0.3554 =$ &lt;span class=&#34;boxed&#34;&gt;$0.5034$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-We are still looking at the area between $12$ and $16$ for the Upper class.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{12-13.05}{2.77}\\\\
+&amp;amp;\approx -0.38
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=-0.38\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.1480\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 16 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-13.05}{2.77}\\\\
+&amp;amp;\approx 1.06
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=1.06\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3554\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the proportion of &lt;strong&gt;working-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.1480 + 0.3554 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.5034\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+We are still looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Upper class.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person with more than 12 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{12-15.48}{2.76}\\\\
-&amp;\approx -1.26
-\end{aligned}
-with the area between the mean and $z=-1.26$ found to be $0.3962$.&lt;br&gt;&lt;br&gt;
-The $z$-score for a person who watches less than 16 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{16-15.48}{2.67}\\\\
-&amp;\approx 0.19
-\end{aligned}
-with the area between the mean and $z=0.19$ found to be $0.0753$.&lt;br&gt;&lt;br&gt;
-So the proportion of **upper-class respondents** with 12–16 years of education can be found by $0.3962 + 0.0753 =$ &lt;span class=&#34;boxed&#34;&gt;$0.4715$&lt;/span&gt;.
-
-b. We are looking the area under the curve greater than $16$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{12-15.48}{2.76}\\\\
+&amp;amp;\approx -1.26
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=-1.26\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3962\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 16 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-15.48}{2.67}\\\\
+&amp;amp;\approx 0.19
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.19\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.0753\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the proportion of &lt;strong&gt;upper-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.3962 + 0.0753 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4715\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;40%&#34; /&gt;
-For working-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-12.05}{2.77}\\\\
-&amp;\approx 1.06
-\end{aligned}
-The area between $z=1.06$ and the tail is $0.1446$ thus implying the probability of a **working-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$14.46\%$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-For middle-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-14.56}{2.95}\\\\
-&amp;\approx 0.49
-\end{aligned}
-The area between $z=0.49$ and the tail is $0.3121$ thus implying the probability of a **middle-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$31.21\%$&lt;/span&gt;.
-
-c. We are looking the area under the curve less than $10$.
+For working-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-12.05}{2.77}\\\\
+&amp;amp;\approx 1.06
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=1.06\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1446\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;working-class respondent&lt;/strong&gt; having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(14.46\%\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For middle-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;amp;\approx 0.49
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=0.49\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.3121\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;middle-class respondent&lt;/strong&gt; having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(31.21\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;40%&#34; /&gt;
-For middle-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-14.56}{2.95}\\\\
-&amp;\approx 0.49
-\end{aligned}
-The area beyond $z=0.63$ and the tail is $0.2643$ thus implying the probability of a **lower-class respondent** having more less 10 years of education is &lt;span class=&#34;boxed&#34;&gt;$26.43\%$&lt;/span&gt;.
-
+For middle-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;amp;\approx 0.49
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.63\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.2643\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;lower-class respondent&lt;/strong&gt; having more less 10 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(26.43\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;6&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve greater than $625$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{625-536}{102}\\\\
-&amp;\approx 0.87
-\end{aligned}
-The area beyond $z=0.87$ and the tail is $0.1992$ thus implying the probability that a **high school graduate** having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;$19.92\%$&lt;/span&gt;.
-
-b. We are looking the area under the curve between than $400$ and $625$.
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{625-536}{102}\\\\
+&amp;amp;\approx 0.87
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.87\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1992\)&lt;/span&gt; thus implying the probability that a &lt;strong&gt;high school graduate&lt;/strong&gt; having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(19.92\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score for 625 is given by
-\begin{aligned}
-z &amp;= \dfrac{625-536}{102}\\\\
-&amp;\approx 0.87
-\end{aligned}
-The area between the mean and $z=0.87$ is $0.3087$.&lt;br&gt;&lt;br&gt;
-For these high school graduates, the $z$-score for 400 is given by
-\begin{aligned}
-z &amp;= \dfrac{400-536}{102}\\\\
-&amp;\approx -1.33
-\end{aligned}
-The area between$z=-1.33$ and the mean is $0.4082$.&lt;br&gt;&lt;br&gt;
-Summing these proportions yields $0.3087+0.4082=0.7168$, or &lt;span class=&#34;boxed&#34;&gt;$71.68\%$&lt;/span&gt; of the high school graduates earned a score between 400 and 625.
-
-c. The 20th percentile, or $0.2000$ is equivalent to $z=-0.84$. Thus the SAT ERW equivalency can be found by $536-0.84\cdot 102=450.32$, or a score of &lt;span class=&#34;boxed&#34;&gt;$450$&lt;/span&gt;.
-
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 625 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{625-536}{102}\\\\
+&amp;amp;\approx 0.87
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.87\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.3087\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 400 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{400-536}{102}\\\\
+&amp;amp;\approx -1.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between&lt;span class=&#34;math inline&#34;&gt;\(z=-1.33\)&lt;/span&gt; and the mean is &lt;span class=&#34;math inline&#34;&gt;\(0.4082\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+Summing these proportions yields &lt;span class=&#34;math inline&#34;&gt;\(0.3087+0.4082=0.7168\)&lt;/span&gt;, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(71.68\%\)&lt;/span&gt;&lt;/span&gt; of the high school graduates earned a score between 400 and 625.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The 20th percentile, or &lt;span class=&#34;math inline&#34;&gt;\(0.2000\)&lt;/span&gt; is equivalent to &lt;span class=&#34;math inline&#34;&gt;\(z=-0.84\)&lt;/span&gt;. Thus the SAT ERW equivalency can be found by &lt;span class=&#34;math inline&#34;&gt;\(536-0.84\cdot 102=450.32\)&lt;/span&gt;, or a score of &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(450\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;7&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We have 
-\begin{aligned}
-z &amp;= \dfrac{150-100}{15}
-&amp;\approx 3.33
-\end{aligned}
-or &lt;span class=&#34;boxed&#34;&gt;$z\approx 3.33$&lt;/span&gt;.
-
-b. We are looking the area under the curve greater than $150$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We have&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{150-100}{15}
+&amp;amp;\approx 3.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z\approx 3.33\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;40%&#34; /&gt;
-The area beyond $z=3.33$ is $0.0004$ implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;$0.04\%$&lt;/span&gt;^[Which is the reason you don&#39;t notice any shading in the plot]. 
-
-c. We are looking at the area between $85$ and $150$.
+The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=3.33\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.0004\)&lt;/span&gt; implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.04\%\)&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(85\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a score of 85 is
-\begin{aligned}
-z &amp;= \dfrac{85-100}{15}\\\\
-&amp;\approx -1
-\end{aligned}
-with the area between $z=-1$ and the mean found to be $0.3413$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a score of 85 is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{85-100}{15}\\\\
+&amp;amp;\approx -1
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between &lt;span class=&#34;math inline&#34;&gt;\(z=-1\)&lt;/span&gt; and the mean found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3413\)&lt;/span&gt;.
 &lt;br&gt;
-The $z$-score for a score of 150 is
-\begin{aligned}
-z &amp;= \dfrac{150-100}{15}
-&amp;\approx 3.33
-\end{aligned}
-with the area between the mean and $z=3.33$ found to be $0.4996$.&lt;br&gt;&lt;br&gt;
-So the $0.3413 + 0.4996 = 0.8409$, or about &lt;span class=&#34;boxed&#34;&gt;$84\%$&lt;/span&gt; of scores fall between $85$ and $150$.
-
-d. Scoring in the 95th percentile means that 95% of the sample scored below this level. This outcome can be calculated by $100 + 1.65\cdot 15 = 124.75$. So the IQ score that is associated with the 95th percentile is &lt;span class=&#34;boxed&#34;&gt;$124.75$&lt;/span&gt;.
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a score of 150 is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{150-100}{15}
+&amp;amp;\approx 3.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=3.33\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.4996\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the &lt;span class=&#34;math inline&#34;&gt;\(0.3413 + 0.4996 = 0.8409\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(84\%\)&lt;/span&gt;&lt;/span&gt; of scores fall between &lt;span class=&#34;math inline&#34;&gt;\(85\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scoring in the 95th percentile means that 95% of the sample scored below this level. This outcome can be calculated by &lt;span class=&#34;math inline&#34;&gt;\(100 + 1.65\cdot 15 = 124.75\)&lt;/span&gt;. So the IQ score that is associated with the 95th percentile is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(124.75\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-
-&lt;details&gt;&lt;summary&gt;8&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;8&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve less than $400$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{400-531}{114}\\\\
-&amp;\approx -1.15
-\end{aligned}
-The area beyond $z=-1.15$ and the tail is $0.1251$ thus implying that about &lt;span class=&#34;boxed&#34;&gt;$12.51\%$&lt;/span&gt;of **high school graduates** hearned a score less than 400.
-
-b. We are looking the area under the curve between than $600$ and $700$.
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{400-531}{114}\\\\
+&amp;amp;\approx -1.15
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=-1.15\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1251\)&lt;/span&gt; thus implying that about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(12.51\%\)&lt;/span&gt;&lt;/span&gt;of &lt;strong&gt;high school graduates&lt;/strong&gt; hearned a score less than 400.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(600\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(700\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score for 600 is given by
-\begin{aligned}
-z &amp;= \dfrac{600-531}{114}\\\\   
-&amp;\approx 0.61
-\end{aligned}
-The area between the mean and $z=0.61$ is $0.2291$.&lt;br&gt;&lt;br&gt;
-For these high school graduates, the $z$-score for 700 is given by
-\begin{aligned}
-z &amp;= \dfrac{700-531}{114}\\\\
-&amp;\approx 1.48
-\end{aligned}
-The area between $z=1.48$ and the mean is $0.4306$.&lt;br&gt;&lt;br&gt;
-Subtracting these proportions yields $0.4306-0.2291=0.2015$, or &lt;span class=&#34;boxed&#34;&gt;$20.15\%$&lt;/span&gt; of the high school graduates earned a score between 600 and 700
-
-c. For an earned score of $725$ which is greater than the mean, we have
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 600 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{600-531}{114}\\\\   
+&amp;amp;\approx 0.61
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.61\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.2291\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 700 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{700-531}{114}\\\\
+&amp;amp;\approx 1.48
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=1.48\)&lt;/span&gt; and the mean is &lt;span class=&#34;math inline&#34;&gt;\(0.4306\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+Subtracting these proportions yields &lt;span class=&#34;math inline&#34;&gt;\(0.4306-0.2291=0.2015\)&lt;/span&gt;, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(20.15\%\)&lt;/span&gt;&lt;/span&gt; of the high school graduates earned a score between 600 and 700&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(725\)&lt;/span&gt; which is greater than the mean, we have
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{725-531}{114}\\\\   
-&amp;\approx 1.70
-\end{aligned}
-The area beyond $z=1.70$ is $0.0466$. So the percentile rank may be found by 
-$1.000-0.0466 = 0.9535$, or $95.35\%$ which implies the &lt;span class=&#34;boxed&#34;&gt;96th percentile&lt;/span&gt;.
-
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{725-531}{114}\\\\   
+&amp;amp;\approx 1.70
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=1.70\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.0466\)&lt;/span&gt;. So the percentile rank may be found by
+&lt;span class=&#34;math inline&#34;&gt;\(1.000-0.0466 = 0.9535\)&lt;/span&gt;, or &lt;span class=&#34;math inline&#34;&gt;\(95.35\%\)&lt;/span&gt; which implies the &lt;span class=&#34;boxed&#34;&gt;96th percentile&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;11&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;11&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. For an earned score of $990$ which is greater than the mean, we have
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(990\)&lt;/span&gt; which is greater than the mean, we have
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{990-981}{27.3}\\\\   
-&amp;\approx 0.33
-\end{aligned}
-The area beyond $z=0.33$ is $0.3707$. So the percentile rank may be found by 
-$1.000-0.3707 = 0.6293$, or $62.93\%$ which implies the 62nd percentile. So the team is &lt;span class=&#34;boxed&#34;&gt;not in the upper quartile&lt;/span&gt;.
-
-b. For the top 25%, or $0.0025$, the area beyond $z$ is approximated by $z = 0.67$. The cutoff score is then $981+0.67\cdot 27.3\approx$ &lt;span class=&#34;boxed&#34;&gt;$999.29$&lt;/span&gt;.
-
-c. As noted above, &lt;span class=&#34;boxed&#34;&gt;$z = 0.67$&lt;/span&gt;.
-
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{990-981}{27.3}\\\\   
+&amp;amp;\approx 0.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.33\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.3707\)&lt;/span&gt;. So the percentile rank may be found by
+&lt;span class=&#34;math inline&#34;&gt;\(1.000-0.3707 = 0.6293\)&lt;/span&gt;, or &lt;span class=&#34;math inline&#34;&gt;\(62.93\%\)&lt;/span&gt; which implies the 62nd percentile. So the team is &lt;span class=&#34;boxed&#34;&gt;not in the upper quartile&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For the top 25%, or &lt;span class=&#34;math inline&#34;&gt;\(0.0025\)&lt;/span&gt;, the area beyond &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is approximated by &lt;span class=&#34;math inline&#34;&gt;\(z = 0.67\)&lt;/span&gt;. The cutoff score is then &lt;span class=&#34;math inline&#34;&gt;\(981+0.67\cdot 27.3\approx\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(999.29\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As noted above, &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z = 0.67\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;12&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;12&lt;/summary&gt;
 &lt;p&gt;
-
-a. For **Team A** an ***eligibility criterion*** score of $971$ is given by
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(971\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{971-983}{33}\\\\   
-&amp;\approx -0.36
-\end{aligned}
-For **Team A** a ***retention criterion*** score of $958$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{971-983}{33}\\\\   
+&amp;amp;\approx -0.36
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(958\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{958-976}{34.9}\\\\   
-&amp;\approx -0.52
-\end{aligned}
-For **Team B** an ***eligibility criterion*** score of $987$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{958-976}{34.9}\\\\   
+&amp;amp;\approx -0.52
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(987\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{987-983}{33}\\\\   
-&amp;\approx 0.12
-\end{aligned}
-For **Team B** a ***retention criterion*** score of $970$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{987-983}{33}\\\\   
+&amp;amp;\approx 0.12
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(970\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{970-976}{34.9}\\\\   
-&amp;\approx -0.17
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;. 
-
-b. For **Team B** a ***retention criterion*** score of $z=-0.17$ is below the mean and the corresponding proportion can be viewed by
-&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;
-
-which is the area between $z$ and the tail, or &lt;span class=&#34;boxed&#34;&gt;$0.4325$&lt;/span&gt;.
-
-c. For **Team A** an ***eligibility criterion*** score of $z=-0.36$ is below the mean and the corresponding proportion can be viewed by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{970-976}{34.9}\\\\   
+&amp;amp;\approx -0.17
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.17\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4325\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.36\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
-which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.
-
+which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;math inline&#34;&gt;\(0.3594\)&lt;/span&gt; implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
---&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Which is the reason you don’t notice any shading in the plot&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

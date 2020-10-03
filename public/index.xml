@@ -2998,6 +2998,8 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
       <guid>/walkthroughs/nfl/nflpipes/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -3022,8 +3024,10 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#nfl-data-set&#34;&gt;NFL Data Set&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#task&#34;&gt;Task&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#excusive&#34;&gt;Logical Operators&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-science&#34;&gt;Data Science&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dont-get-bogged-down&#34;&gt;Don’t Get Bogged Down!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -3048,12 +3052,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;h3&gt;Packages&lt;/h3&gt;
 &lt;p&gt;Please load up the following packages&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ──────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────── tidyverse_conflicts() ──
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ─────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
@@ -3546,16 +3550,431 @@ nfl2014 %&amp;gt;%
 
 # 3 blah blah blah&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now please answer the following questions. Please note that all consumption measurements are in liters:&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;First step&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;We have to bring in the data set:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks &amp;lt;- read_csv(&amp;quot;drinks2010andBeyond.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Parsed with column specification:
+## cols(
+##   Country = col_character(),
+##   `Beverage Types` = col_character(),
+##   `2016` = col_double(),
+##   `2015` = col_double(),
+##   `2014` = col_double(),
+##   `2013` = col_double(),
+##   `2012` = col_double(),
+##   `2011` = col_double(),
+##   `2010` = col_double()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;
+OK now we can move on with the questions! &lt;br&gt;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Which country or countries had the highest average consumption of wine and beer in each year?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Which country or countries had the highest average consumption of spirits in each year?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Which country had the highest average consumption of all alcohol across time?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Since we measure beer in the United States in ounces (for some reason) rather than in liters, convert the 2016 measures into ounces using the conversion 1 Liter = 33.814022 oz.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Which country or countries had the highest average consumption of wine and beer in each year?&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;You can always contact me for help!&lt;/p&gt;
-&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
+  filter(`Beverage Types` == &amp;quot;Beer&amp;quot; | `Beverage Types` == &amp;quot;Wine&amp;quot;) %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  group_by(year, Country) %&amp;gt;%
+  summarize(avg = mean(measure)) %&amp;gt;%
+  top_n(n=1, avg)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;year&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 3
+## # Groups:   year [7]
+##   year  Country             avg
+##   &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;
+## 1 2010  Portugal           5.42
+## 2 2011  Croatia            5.40
+## 3 2012  Equatorial Guinea  5.82
+## 4 2013  Equatorial Guinea  5.08
+## 5 2014  Austria            5.25
+## 6 2015  Slovenia           5.32
+## 7 2016  Czechia            4.84&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Breakdown line-by-line:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;We call the data frame &lt;code&gt;drinks&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We filter the column &lt;code&gt;Beverage Types&lt;/code&gt; by “Beer” OR “Wine”.&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;gather()&lt;/code&gt; command is used to go from a wide data set to a long one while ignoring the application of the command on the columns &lt;code&gt;Country&lt;/code&gt;, and &lt;code&gt;Beverage Types&lt;/code&gt;. To see what occurs, first run the first two lines by highlighting them and ending before the &lt;code&gt;%&amp;gt;%&lt;/code&gt; (pipe) on the second line:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;graphics/partialpipes2lines.png&#34; alt=&#34;Highlight of first two lines of the code.&#34; /&gt;
+That simply runs through steps 1 and 2 above. Now run the first three lines in the same way ending prior to the &lt;code&gt;%&amp;gt;%&lt;/code&gt; (pipe) in the third line&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;graphics/partialpipes3lines.png&#34; alt=&#34;Highlight of first two lines of the code.&#34; /&gt;
+You can find a multitude of resources for &lt;code&gt;gather()&lt;/code&gt; and its complement &lt;code&gt;spread()&lt;/code&gt; but my advice is simply to play around with the &lt;code&gt;key&lt;/code&gt;, &lt;code&gt;value&lt;/code&gt;, and columns you don’t want to make long. However if you like some reference material while you explore these commands, try &lt;a href=&#34;%22https://garrettgman.github.io/tidying/%22&#34;&gt;Data Science for R&lt;/a&gt;. If the link is not work, the address is &lt;a href=&#34;https://garrettgman.github.io/tidying/&#34; class=&#34;uri&#34;&gt;https://garrettgman.github.io/tidying/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In our case all of the data is now in relation to the columns &lt;code&gt;Country&lt;/code&gt; and &lt;code&gt;Beverage Types&lt;/code&gt; which gives us the remaining columns (the &lt;code&gt;key&lt;/code&gt;) as data points that have values (the &lt;code&gt;value&lt;/code&gt;) which I have named &lt;code&gt;year&lt;/code&gt; (via &lt;code&gt;key = &#34;year&#34;&lt;/code&gt;) and &lt;code&gt;measure&lt;/code&gt; (via &lt;code&gt;value = &#34;measure&#34;&lt;/code&gt;). Those that do not have associated values become &lt;code&gt;NA&lt;/code&gt;s (for example the country of &lt;code&gt;Afghanistan&lt;/code&gt; did not have any values for &lt;code&gt;Beer&lt;/code&gt; or &lt;code&gt;Wine&lt;/code&gt; in &lt;code&gt;2016&lt;/code&gt;). Please take some time to investigate the &lt;code&gt;gather()&lt;/code&gt; command as R works will with long data sets and not so well with wide ones!&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;na.omit()&lt;/code&gt; is a command you have seen before and it simply sees if there is an &lt;code&gt;NA&lt;/code&gt; in a row and then deleted said row. It performs this recursively throughout your entire data frame.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;group_by()&lt;/code&gt; command notifies R that all operations must be performed with respect to the columns indicated which in this case implies that &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the &lt;code&gt;summarize()&lt;/code&gt; command used here to find the mean of the column &lt;code&gt;measure&lt;/code&gt; is performed by &lt;code&gt;year&lt;/code&gt; and &lt;code&gt;Country&lt;/code&gt;. We assign the results to a new column &lt;code&gt;avg&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Finally the &lt;code&gt;top_n()&lt;/code&gt; which gives us the top value of the average &lt;code&gt;avg&lt;/code&gt; column.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Again to see how this layering works, I suggest that you run this line by line to observe the results. This is the benefit of the &lt;code&gt;tidyverse&lt;/code&gt; approach.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Which country or countries had the highest average consumption of spirits in each year?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;The process here is exactly the same as the one described in item 1 except the &lt;code&gt;Beverage Types&lt;/code&gt; are &lt;code&gt;&#34;Spirits&#34;&lt;/code&gt; rather than &lt;code&gt;&#34;Beer&#34;&lt;/code&gt; or &lt;code&gt;&#34;Wine&#34;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
+  filter(`Beverage Types` == &amp;quot;Spirits&amp;quot;) %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  group_by(year, Country) %&amp;gt;%
+  summarize(avg = mean(measure)) %&amp;gt;%
+  top_n(n=1, avg)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;year&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 3
+## # Groups:   year [7]
+##   year  Country   avg
+##   &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1 2010  Estonia  7.53
+## 2 2011  Estonia  8.18
+## 3 2012  Estonia  8.53
+## 4 2013  Estonia  8.93
+## 5 2014  Estonia  8.7 
+## 6 2015  Estonia  8.37
+## 7 2016  Estonia  7.72&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Which country had the highest average consumption of all alcohol across time?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Again, the process here is exactly the same as the one described in items 1 and 2 except the &lt;code&gt;Beverage Types&lt;/code&gt; are &lt;code&gt;&#34;All types&#34;&lt;/code&gt; rather than any individual type.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
+  filter(`Beverage Types` == &amp;quot;All types&amp;quot;)  %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  group_by(year, Country) %&amp;gt;%
+  summarize(avg = mean(measure)) %&amp;gt;%
+  top_n(n=1, avg)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;year&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 3
+## # Groups:   year [7]
+##   year  Country   avg
+##   &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1 2010  Estonia  15.0
+## 2 2011  Estonia  16.3
+## 3 2012  Estonia  17.0
+## 4 2013  Estonia  17.8
+## 5 2014  Estonia  17.3
+## 6 2015  Estonia  16.6
+## 7 2016  Estonia  15.4&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?&lt;br&gt;&lt;br&gt;
+This one was fairly difficult. A &lt;em&gt;deviation from the mean&lt;/em&gt; essentially indicates how a single measure differs from an established value of a mean. In our case, how the mean of the United States differs from that of the mean derived from the rest of the countries. Your first thought may be to find the difference between both the means by subtracting them. This would be fine if both had the same standard deviation, but they do not.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# USA only
+drinks %&amp;gt;%
+  filter(`Beverage Types` == &amp;quot;Beer&amp;quot; &amp;amp; Country == &amp;quot;United States of America&amp;quot;) %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  summarize(avg = mean(measure), stanDev = sd(measure)) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 2
+##     avg stanDev
+##   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1  4.22  0.0699&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Remaining countries
+drinks %&amp;gt;%
+  filter(`Beverage Types` == &amp;quot;Beer&amp;quot; &amp;amp; Country != &amp;quot;United States of America&amp;quot;) %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  summarize(avg = mean(measure), stanDev = sd(measure)) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 2
+##     avg stanDev
+##   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1  2.06    1.80&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that our &lt;code&gt;filter()&lt;/code&gt; command again uses an AND command rather than an OR and rather than filtering using one column, we use two (&lt;code&gt;Beverage Types&lt;/code&gt; AND &lt;code&gt;Country&lt;/code&gt;) but in the latter we we want to exclude the United States of America by using &lt;code&gt;Country != &#34;United States of America&#34;&lt;/code&gt;. So interpreting this, we can say that we’re looking for figures for all Beer consumption around the world except for the United States of America.&lt;/p&gt;
+&lt;p&gt;So what can we do? At this point not much! In the future we should be able to address this issue by using a statistical test known as a &lt;em&gt;t&lt;/em&gt;-test but we need to satisfy some initial prerequisites first. We will explore this in R5 but for now, we’ll leave it here.&lt;/p&gt;
+On a side note, it is absolutely fine if you subtracted the means! That would be the most logical choice and you also did not have much of a choice at the current time. Consider that the issue of subtracting means with differing standard deviations is that the spread differs between each and while a mean is a mean, they’re not measures of the mean on the same footing - ergo all things are not equal.
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Since we measure beer in the United States in ounces (for some reason) rather than in liters, convert the 2016 measures into ounces using the conversion 1 Liter = 33.814022 oz.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;One of the nicer aspects of using &lt;code&gt;%&amp;gt;%&lt;/code&gt; is in the fact you can selectively perform operations and general augmentations on the columns of your choice without ever having to worry about how any other columns are affected. This is actually accomplished using the command &lt;code&gt;mutate()&lt;/code&gt; which in a nutshell allows for column wise operations.&lt;/p&gt;
+&lt;p&gt;In this task, we are informed that the column &lt;code&gt;2016&lt;/code&gt; is given in liters. However since we and a handful of other countries have chosen to use a measurement that are nowadays based off the metric system (yes that’s true..for example an inch is officially defined as 2.54 centimeters) and not the metric system itself (base 10 seems pretty easy but what do I know), we have to convert on order to report. In this case we are given the easy to remember 1 Liter = 33.814022 (fluid) ounces. To convert this, we use the &lt;code&gt;mutate()&lt;/code&gt; command by
+&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
+  mutate(`2016` = 33.814022 * `2016`) %&amp;gt;%
+  rename(`2016 (using garbage measurements)` = `2016`)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 954 x 9
+##    Country `Beverage Types` `2016 (using ga… `2015` `2014` `2013` `2012` `2011`
+##    &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;                       &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1 Afghan… All types                   NA      0.02   0.03   0.03   0.04   0.04
+##  2 Afghan… Beer                        NA      0.01   0.01   0.01   0.01   0.01
+##  3 Afghan… Wine                        NA      0      0      0      0      0   
+##  4 Afghan… Spirits                     NA      0.02   0.02   0.02   0.03   0.03
+##  5 Afghan… Other alcoholic…            NA      0      0      0      0      0   
+##  6 Albania All types                  171.     4.77   4.81   5.06   5.43   5.65
+##  7 Albania Beer                        58.8    1.57   1.58   1.82   1.81   1.88
+##  8 Albania Wine                        45.3    1.17   1.12   1.06   1.3    1.27
+##  9 Albania Spirits                     64.2    1.94   2.02   2.09   2.22   2.4 
+## 10 Albania Other alcoholic…             3.04   0.08   0.09   0.09   0.1    0.1 
+## # … with 944 more rows, and 1 more variable: `2010` &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;with the last line being dedicated to renaming the column that was just converted from &lt;code&gt;2016&lt;/code&gt; to &lt;code&gt;2016 (using garbage measurements)&lt;/code&gt;. Notice that the &lt;code&gt;rename()&lt;/code&gt; command requires that the new name of a column precede the current name separated by and &lt;code&gt;=&lt;/code&gt;. I realize this appears to be counterintuative and there is a reason for it, but unless you love discussing how R compiles code, I’ll leave it be.&lt;/p&gt;
+&lt;p&gt;On a side note, we only converted the column &lt;code&gt;2016&lt;/code&gt;. What if we wanted to convert every column? Well we’d be using a lot of &lt;code&gt;%&amp;gt;%&lt;/code&gt; and wasted energy. This is one of many instances where &lt;code&gt;gather()&lt;/code&gt; is a great command to know. Switching from a wide data frame to a long one allows you to convert all years at once. We can do this by&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  mutate(`measure` = 33.814022 * `measure`) %&amp;gt;%
+  rename(`Measures (in ounces because that&amp;#39;s apparently easy)` = `measure`)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6,016 x 4
+##    Country `Beverage Types`       year  `Measures (in ounces because that&amp;#39;s app…
+##    &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;                  &amp;lt;chr&amp;gt;                                    &amp;lt;dbl&amp;gt;
+##  1 Albania All types              2016                                    171.  
+##  2 Albania Beer                   2016                                     58.8 
+##  3 Albania Wine                   2016                                     45.3 
+##  4 Albania Spirits                2016                                     64.2 
+##  5 Albania Other alcoholic bever… 2016                                      3.04
+##  6 Algeria All types              2016                                     18.9 
+##  7 Algeria Beer                   2016                                     10.8 
+##  8 Algeria Wine                   2016                                      4.73
+##  9 Algeria Spirits                2016                                      3.38
+## 10 Algeria Other alcoholic bever… 2016                                      0   
+## # … with 6,006 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unlike the piping we used earlier, we aren’t filtering for anything (though we could if we wanted by putting the filters back in). The rest is pretty much a combination of previous column-wise wrangling. Try running the first three lines. You will once again notice that the &lt;code&gt;measure&lt;/code&gt; column is the associated liter count by year. With that, we mainly need to use &lt;code&gt;mutate()&lt;/code&gt; on the &lt;code&gt;measure&lt;/code&gt; column to convert it.&lt;/p&gt;
+&lt;p&gt;Learning both &lt;code&gt;gather()&lt;/code&gt; and to some degree &lt;code&gt;spread()&lt;/code&gt; which is not covered in this walk-through will save you a great deal of time. It is worth taking the time now to explore what you can do with it.&lt;/p&gt;
+&lt;/details&gt;
+&lt;/p&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Possible solution&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Of course answers will vary here but we can see the values for each country by year&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coalesce_by_column &amp;lt;- function(df) {
+  return(dplyr::coalesce(!!! as.list(df)))
+}
+
+drinks %&amp;gt;%
+  gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
+  na.omit() %&amp;gt;%
+  rowid_to_column(&amp;quot;Country ID&amp;quot;) %&amp;gt;%
+  spread(`Beverage Types`, value = `measure`) %&amp;gt;%
+  select(-`Country ID`) %&amp;gt;%
+  group_by(Country, year) %&amp;gt;%
+  summarise_all(coalesce_by_column) %&amp;gt;%
+  na_if(0)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,202 x 7
+## # Groups:   Country [190]
+##    Country     year  `All types`  Beer `Other alcoholic beverages` Spirits  Wine
+##    &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;                       &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 Afghanistan 2010         0.03  0.01                       NA       0.02 NA   
+##  2 Afghanistan 2011         0.04  0.01                       NA       0.03 NA   
+##  3 Afghanistan 2012         0.04  0.01                       NA       0.03 NA   
+##  4 Afghanistan 2013         0.03  0.01                       NA       0.02 NA   
+##  5 Afghanistan 2014         0.03  0.01                       NA       0.02 NA   
+##  6 Afghanistan 2015         0.02  0.01                       NA       0.02 NA   
+##  7 Albania     2010         5.53  1.72                        0.12    2.39  1.3 
+##  8 Albania     2011         5.65  1.88                        0.1     2.4   1.27
+##  9 Albania     2012         5.43  1.81                        0.1     2.22  1.3 
+## 10 Albania     2013         5.06  1.82                        0.09    2.09  1.06
+## # … with 1,192 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;NA&lt;/code&gt; represents values not reported.&lt;/p&gt;
+&lt;p&gt;On a side note, there is an easier way to run &lt;code&gt;spread()&lt;/code&gt; and it is called &lt;a href=&#34;https://dcl-wrangle.stanford.edu/pivot_basic.html#wider&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;pivot_wider()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;div id=&#34;excusive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Logical Operators&lt;/h2&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+R syntax
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Idea
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Logic
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+!
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+NOT
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+!a
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;amp;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+vector-based AND (value-wise)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;amp; b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;amp;&amp;amp;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+value-based AND (single value)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;amp;&amp;amp; b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+|
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+vector-based inclusive OR (value-wise)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a | b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+||
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+value-based inclusive OR (single value)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a || b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+xor
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+vector-based exclusive OR (value-wise)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+xor(a,b)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;lt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+LESS than
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;lt; b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+GREATER than
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;gt; b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+==
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+exactly EQUALS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a == b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;lt;=
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+LESS than or EQUAL to
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;lt;= b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&amp;gt;=
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+GREATER than or EQUAL to
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a &amp;gt;= b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+!=
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+NOT EQUAL to
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a != b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+%in%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+included in?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+a %in% b
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+isTRUE
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+test if something is TRUE
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+isTRUE(a)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;The use of &lt;code&gt;%&amp;gt;%&lt;/code&gt; will get easier. Some people think of what steps they use when using a spreadsheet software (e.g. Microsoft Excel ©) when learning the logic of R. In fact, many of the formulas and syntax used in spreadsheet softwares parallel those in R. If you are used to Excel for example, try checking out &lt;a href=&#34;%22https://www.rforexcelusers.com/&#34;&gt;R for Excel Users&lt;/a&gt;. If the link is broken for some reason, head over to &lt;a href=&#34;https://www.rforexcelusers.com/&#34; class=&#34;uri&#34;&gt;https://www.rforexcelusers.com/&lt;/a&gt;. Please note that I do not receive any compensation in any form for recommending this site nor do I take responsibility for its content. For assistance regarding the site, please contact the authors&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-science&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Science&lt;/h2&gt;
@@ -3563,7 +3982,11 @@ nfl2014 %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Acknowledgements&lt;/h2&gt;
-&lt;p&gt;A great deal of material presented here was adapted from two online texts: &lt;a href=&#34;%22https://ohi-science.org/data-science-training/&#34; target=&#34;_blank&#34;&gt;Introduction to Open Data Science&lt;/a&gt; and &lt;a href=&#34;%22https://r4ds.had.co.nz/%22&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;. If interested in how R is used in data science, try taking a look. Remember, you never need to memorize code so try not to get overwhelmed!&lt;/p&gt;
+&lt;p&gt;A great deal of material presented here was adapted from two online texts: &lt;a href=&#34;%22https://ohi-science.org/data-science-training/&#34; target=&#34;_blank&#34;&gt;Introduction to Open Data Science&lt;/a&gt; and &lt;a href=&#34;%22https://r4ds.had.co.nz/%22&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;. If interested in how R is used in data science, try taking a look.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dont-get-bogged-down&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Don’t Get Bogged Down!&lt;/h2&gt;
+&lt;p&gt;Just get a feel for the items above. There is a whole bunch of commands and ridiculous syntax above but that’s not the point. Concentrate on knowing what to do (e.g. “Is this best represented by a bar plot?”) rather than how to do it (“The &lt;code&gt;ggplot&lt;/code&gt; command is…”). You can ALWAYS search for the syntax associated with whatever in R but if you don’t how to conceptually solve a problem, software won’t help. Remember computers are stupid!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -3573,6 +3996,7 @@ nfl2014 %&amp;gt;%
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;If you are getting an error, remember to point R to the right location by &lt;code&gt;Session &amp;gt; Working Directory &amp;gt; To Source File Location&lt;/code&gt; in the menu.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;From the FiveThirtyEight &lt;a href=&#34;https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption&#34; target=&#34;_blank&#34;&gt;Alcohol Consumption Github Page&lt;/a&gt;&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;This is just for practice so you do not have to turn anything in!&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Note that &lt;strong&gt;OR&lt;/strong&gt; here means what is known as an &lt;strong&gt;inclusive or&lt;/strong&gt;…aka &lt;em&gt;it this or that or both&lt;/em&gt;. Using this idea, the second line search reads like &lt;code&gt;Beverage Types&lt;/code&gt; for “Beer” OR “Wine” OR both. The other type of OR is called an &lt;strong&gt;exclusive or&lt;/strong&gt; ..aka &lt;em&gt;it this or that but NOT both&lt;/em&gt;. If you ever have to use it, it is given by the command &lt;code&gt;xor()&lt;/code&gt;. Included on the &lt;a href=&#34;#exclusive&#34;&gt;last page of this document&lt;/a&gt; are some standard logical operators for your reference.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -3623,343 +4047,304 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
-&lt;!--
-
-
-
-&lt;details&gt;&lt;summary&gt;1&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;1&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve greater than $8$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(8\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches more than 8 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{8-2.97}{3.00}\\\\
-&amp;\approx 1.68
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;$z \approx 1.68$&lt;/span&gt;.
-
-b. We are looking the area under the curve less than $5$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 8 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{8-2.97}{3.00}\\\\
+&amp;amp;\approx 1.68
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z \approx 1.68\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches less than 5 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{5-2.97}{3.00}\\\\
-&amp;\approx 0.68
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;$z \approx 0.68$&lt;/span&gt;. Since the area between $z=0.68$ and $z=0$ is $0.2517$, we have $0.5000+0.2517=0.7517$. This implies that $0.7517\cdot 1014 \approx$ &lt;span class=&#34;boxed&#34;&gt;$762$ or $763$ people watch television less than 5 hours/day&lt;/span&gt;.
-
-c. We have
-\begin{aligned}
-Y&amp;=2.97+1\cdot 3\\
-&amp;= 5.97
-\end{aligned}
-implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a $z$-score of $+1$.
-
-d. We are looking at the area between $1$ and $6$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 5 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{5-2.97}{3.00}\\\\
+&amp;amp;\approx 0.68
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z \approx 0.68\)&lt;/span&gt;&lt;/span&gt;. Since the area between &lt;span class=&#34;math inline&#34;&gt;\(z=0.68\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(z=0\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.2517\)&lt;/span&gt;, we have &lt;span class=&#34;math inline&#34;&gt;\(0.5000+0.2517=0.7517\)&lt;/span&gt;. This implies that &lt;span class=&#34;math inline&#34;&gt;\(0.7517\cdot 1014 \approx\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(762\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(763\)&lt;/span&gt; people watch television less than 5 hours/day&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Y&amp;amp;=2.97+1\cdot 3\\
+&amp;amp;= 5.97
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score of &lt;span class=&#34;math inline&#34;&gt;\(+1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person who watches more than 1 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{1-2.97}{3.00}\\\\
-&amp;\approx -0.66
-\end{aligned}
-with the area between the mean and $z=0.66$ found to be $0.2454$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 1 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{1-2.97}{3.00}\\\\
+&amp;amp;\approx -0.66
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.66\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.2454\)&lt;/span&gt;.
 &lt;br&gt;
-The $z$-score for a person who watches less than 6 hr/day is given by
-\begin{aligned}
-z &amp;= \dfrac{6-2.97}{3.00}\\\\
-&amp;\approx 1.01
-\end{aligned}
-with the area between the mean and $z=1.01$ found to be $0.3438$.&lt;br&gt;&lt;br&gt;
-So the percentage of people who watch between 1 hr/day and 6 hr/day of television can be found by $0.2454 + 0.3438 = 0.5892$, or about &lt;span class=&#34;boxed&#34;&gt;$59\%$&lt;/span&gt;.
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 6 hr/day is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{6-2.97}{3.00}\\\\
+&amp;amp;\approx 1.01
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=1.01\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3438\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the percentage of people who watch between 1 hr/day and 6 hr/day of television can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.2454 + 0.3438 = 0.5892\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(59\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
-
-&lt;details&gt;&lt;summary&gt;2&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;2&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. The 95th percentile, or $0.9500$ is approximately equivalent to $z=1.65$. So the number of women needing shelter is
-\begin{aligned}
-Y&amp;= 250+1.65\cdot 75\\
-&amp;= 373.75
-\end{aligned}
-or about $374$ women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;$374$&lt;/span&gt; beds.
-
-b. We are looking the area under the curve greater than $220$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;The 95th percentile, or &lt;span class=&#34;math inline&#34;&gt;\(0.9500\)&lt;/span&gt; is approximately equivalent to &lt;span class=&#34;math inline&#34;&gt;\(z=1.65\)&lt;/span&gt;. So the number of women needing shelter is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+Y&amp;amp;= 250+1.65\cdot 75\\
+&amp;amp;= 373.75
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or about &lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt; women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt;&lt;/span&gt; beds.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(220\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for exceeding the capacity is given by
-\begin{aligned}
-z &amp;= \dfrac{220-250}{75}\\\\
-&amp;\approx -0.40
-\end{aligned}
-The area below this value is $0.3446$, so the area exceeding this is $1 – 0.3446 = 0.6554$, or about &lt;span class=&#34;boxed&#34;&gt;$66\%$ of all nights&lt;/span&gt; the number of women seeking shelter will exceed the capacity of 220.  
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for exceeding the capacity is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{220-250}{75}\\\\
+&amp;amp;\approx -0.40
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area below this value is &lt;span class=&#34;math inline&#34;&gt;\(0.3446\)&lt;/span&gt;, so the area exceeding this is &lt;span class=&#34;math inline&#34;&gt;\(1 – 0.3446 = 0.6554\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(66\%\)&lt;/span&gt; of all nights&lt;/span&gt; the number of women seeking shelter will exceed the capacity of 220.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;5&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;5&lt;/summary&gt;
 &lt;p&gt;
-
-a. We are looking at the area between $12$ and $16$ for the Working class.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Working class.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person with more than 12 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{12-13.05}{2.77}\\\\
-&amp;\approx -0.38
-\end{aligned}
-with the area between the mean and $z=-0.38$ found to be $0.1480$.&lt;br&gt;&lt;br&gt;
-The $z$-score for a person who watches less than 16 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{16-13.05}{2.77}\\\\
-&amp;\approx 1.06
-\end{aligned}
-with the area between the mean and $z=1.06$ found to be $0.3554$.&lt;br&gt;&lt;br&gt; 
-So the proportion of **working-class respondents** with 12–16 years of education can be found by $0.1480 + 0.3554 =$ &lt;span class=&#34;boxed&#34;&gt;$0.5034$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-We are still looking at the area between $12$ and $16$ for the Upper class.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{12-13.05}{2.77}\\\\
+&amp;amp;\approx -0.38
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=-0.38\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.1480\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 16 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-13.05}{2.77}\\\\
+&amp;amp;\approx 1.06
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=1.06\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3554\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the proportion of &lt;strong&gt;working-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.1480 + 0.3554 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.5034\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+We are still looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Upper class.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a person with more than 12 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{12-15.48}{2.76}\\\\
-&amp;\approx -1.26
-\end{aligned}
-with the area between the mean and $z=-1.26$ found to be $0.3962$.&lt;br&gt;&lt;br&gt;
-The $z$-score for a person who watches less than 16 years of education is given by
-\begin{aligned}
-z &amp;= \dfrac{16-15.48}{2.67}\\\\
-&amp;\approx 0.19
-\end{aligned}
-with the area between the mean and $z=0.19$ found to be $0.0753$.&lt;br&gt;&lt;br&gt;
-So the proportion of **upper-class respondents** with 12–16 years of education can be found by $0.3962 + 0.0753 =$ &lt;span class=&#34;boxed&#34;&gt;$0.4715$&lt;/span&gt;.
-
-b. We are looking the area under the curve greater than $16$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{12-15.48}{2.76}\\\\
+&amp;amp;\approx -1.26
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=-1.26\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3962\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 16 years of education is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-15.48}{2.67}\\\\
+&amp;amp;\approx 0.19
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.19\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.0753\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the proportion of &lt;strong&gt;upper-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.3962 + 0.0753 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4715\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;40%&#34; /&gt;
-For working-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-12.05}{2.77}\\\\
-&amp;\approx 1.06
-\end{aligned}
-The area between $z=1.06$ and the tail is $0.1446$ thus implying the probability of a **working-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$14.46\%$&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-For middle-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-14.56}{2.95}\\\\
-&amp;\approx 0.49
-\end{aligned}
-The area between $z=0.49$ and the tail is $0.3121$ thus implying the probability of a **middle-class respondent** having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;$31.21\%$&lt;/span&gt;.
-
-c. We are looking the area under the curve less than $10$.
+For working-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-12.05}{2.77}\\\\
+&amp;amp;\approx 1.06
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=1.06\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1446\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;working-class respondent&lt;/strong&gt; having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(14.46\%\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For middle-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;amp;\approx 0.49
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=0.49\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.3121\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;middle-class respondent&lt;/strong&gt; having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(31.21\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;40%&#34; /&gt;
-For middle-class respondents, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{16-14.56}{2.95}\\\\
-&amp;\approx 0.49
-\end{aligned}
-The area beyond $z=0.63$ and the tail is $0.2643$ thus implying the probability of a **lower-class respondent** having more less 10 years of education is &lt;span class=&#34;boxed&#34;&gt;$26.43\%$&lt;/span&gt;.
-
+For middle-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
+&amp;amp;\approx 0.49
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.63\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.2643\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;lower-class respondent&lt;/strong&gt; having more less 10 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(26.43\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;6&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve greater than $625$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{625-536}{102}\\\\
-&amp;\approx 0.87
-\end{aligned}
-The area beyond $z=0.87$ and the tail is $0.1992$ thus implying the probability that a **high school graduate** having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;$19.92\%$&lt;/span&gt;.
-
-b. We are looking the area under the curve between than $400$ and $625$.
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{625-536}{102}\\\\
+&amp;amp;\approx 0.87
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.87\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1992\)&lt;/span&gt; thus implying the probability that a &lt;strong&gt;high school graduate&lt;/strong&gt; having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(19.92\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score for 625 is given by
-\begin{aligned}
-z &amp;= \dfrac{625-536}{102}\\\\
-&amp;\approx 0.87
-\end{aligned}
-The area between the mean and $z=0.87$ is $0.3087$.&lt;br&gt;&lt;br&gt;
-For these high school graduates, the $z$-score for 400 is given by
-\begin{aligned}
-z &amp;= \dfrac{400-536}{102}\\\\
-&amp;\approx -1.33
-\end{aligned}
-The area between$z=-1.33$ and the mean is $0.4082$.&lt;br&gt;&lt;br&gt;
-Summing these proportions yields $0.3087+0.4082=0.7168$, or &lt;span class=&#34;boxed&#34;&gt;$71.68\%$&lt;/span&gt; of the high school graduates earned a score between 400 and 625.
-
-c. The 20th percentile, or $0.2000$ is equivalent to $z=-0.84$. Thus the SAT ERW equivalency can be found by $536-0.84\cdot 102=450.32$, or a score of &lt;span class=&#34;boxed&#34;&gt;$450$&lt;/span&gt;.
-
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 625 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{625-536}{102}\\\\
+&amp;amp;\approx 0.87
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.87\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.3087\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 400 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{400-536}{102}\\\\
+&amp;amp;\approx -1.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between&lt;span class=&#34;math inline&#34;&gt;\(z=-1.33\)&lt;/span&gt; and the mean is &lt;span class=&#34;math inline&#34;&gt;\(0.4082\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+Summing these proportions yields &lt;span class=&#34;math inline&#34;&gt;\(0.3087+0.4082=0.7168\)&lt;/span&gt;, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(71.68\%\)&lt;/span&gt;&lt;/span&gt; of the high school graduates earned a score between 400 and 625.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The 20th percentile, or &lt;span class=&#34;math inline&#34;&gt;\(0.2000\)&lt;/span&gt; is equivalent to &lt;span class=&#34;math inline&#34;&gt;\(z=-0.84\)&lt;/span&gt;. Thus the SAT ERW equivalency can be found by &lt;span class=&#34;math inline&#34;&gt;\(536-0.84\cdot 102=450.32\)&lt;/span&gt;, or a score of &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(450\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;7&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We have 
-\begin{aligned}
-z &amp;= \dfrac{150-100}{15}
-&amp;\approx 3.33
-\end{aligned}
-or &lt;span class=&#34;boxed&#34;&gt;$z\approx 3.33$&lt;/span&gt;.
-
-b. We are looking the area under the curve greater than $150$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We have&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{150-100}{15}
+&amp;amp;\approx 3.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z\approx 3.33\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;40%&#34; /&gt;
-The area beyond $z=3.33$ is $0.0004$ implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;$0.04\%$&lt;/span&gt;^[Which is the reason you don&#39;t notice any shading in the plot]. 
-
-c. We are looking at the area between $85$ and $150$.
+The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=3.33\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.0004\)&lt;/span&gt; implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.04\%\)&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(85\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;40%&#34; /&gt;
-The $z$-score for a score of 85 is
-\begin{aligned}
-z &amp;= \dfrac{85-100}{15}\\\\
-&amp;\approx -1
-\end{aligned}
-with the area between $z=-1$ and the mean found to be $0.3413$.
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a score of 85 is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{85-100}{15}\\\\
+&amp;amp;\approx -1
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between &lt;span class=&#34;math inline&#34;&gt;\(z=-1\)&lt;/span&gt; and the mean found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3413\)&lt;/span&gt;.
 &lt;br&gt;
-The $z$-score for a score of 150 is
-\begin{aligned}
-z &amp;= \dfrac{150-100}{15}
-&amp;\approx 3.33
-\end{aligned}
-with the area between the mean and $z=3.33$ found to be $0.4996$.&lt;br&gt;&lt;br&gt;
-So the $0.3413 + 0.4996 = 0.8409$, or about &lt;span class=&#34;boxed&#34;&gt;$84\%$&lt;/span&gt; of scores fall between $85$ and $150$.
-
-d. Scoring in the 95th percentile means that 95% of the sample scored below this level. This outcome can be calculated by $100 + 1.65\cdot 15 = 124.75$. So the IQ score that is associated with the 95th percentile is &lt;span class=&#34;boxed&#34;&gt;$124.75$&lt;/span&gt;.
-
+The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a score of 150 is&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{150-100}{15}
+&amp;amp;\approx 3.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=3.33\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.4996\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+So the &lt;span class=&#34;math inline&#34;&gt;\(0.3413 + 0.4996 = 0.8409\)&lt;/span&gt;, or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(84\%\)&lt;/span&gt;&lt;/span&gt; of scores fall between &lt;span class=&#34;math inline&#34;&gt;\(85\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scoring in the 95th percentile means that 95% of the sample scored below this level. This outcome can be calculated by &lt;span class=&#34;math inline&#34;&gt;\(100 + 1.65\cdot 15 = 124.75\)&lt;/span&gt;. So the IQ score that is associated with the 95th percentile is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(124.75\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-
-&lt;details&gt;&lt;summary&gt;8&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;8&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. We are looking the area under the curve less than $400$.
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score is given by
-\begin{aligned}
-z &amp;= \dfrac{400-531}{114}\\\\
-&amp;\approx -1.15
-\end{aligned}
-The area beyond $z=-1.15$ and the tail is $0.1251$ thus implying that about &lt;span class=&#34;boxed&#34;&gt;$12.51\%$&lt;/span&gt;of **high school graduates** hearned a score less than 400.
-
-b. We are looking the area under the curve between than $600$ and $700$.
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{400-531}{114}\\\\
+&amp;amp;\approx -1.15
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=-1.15\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1251\)&lt;/span&gt; thus implying that about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(12.51\%\)&lt;/span&gt;&lt;/span&gt;of &lt;strong&gt;high school graduates&lt;/strong&gt; hearned a score less than 400.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(600\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(700\)&lt;/span&gt;.
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;40%&#34; /&gt;
-For these high school graduates, the $z$-score for 600 is given by
-\begin{aligned}
-z &amp;= \dfrac{600-531}{114}\\\\   
-&amp;\approx 0.61
-\end{aligned}
-The area between the mean and $z=0.61$ is $0.2291$.&lt;br&gt;&lt;br&gt;
-For these high school graduates, the $z$-score for 700 is given by
-\begin{aligned}
-z &amp;= \dfrac{700-531}{114}\\\\
-&amp;\approx 1.48
-\end{aligned}
-The area between $z=1.48$ and the mean is $0.4306$.&lt;br&gt;&lt;br&gt;
-Subtracting these proportions yields $0.4306-0.2291=0.2015$, or &lt;span class=&#34;boxed&#34;&gt;$20.15\%$&lt;/span&gt; of the high school graduates earned a score between 600 and 700
-
-c. For an earned score of $725$ which is greater than the mean, we have
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 600 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{600-531}{114}\\\\   
+&amp;amp;\approx 0.61
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.61\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.2291\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 700 is given by&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{700-531}{114}\\\\
+&amp;amp;\approx 1.48
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=1.48\)&lt;/span&gt; and the mean is &lt;span class=&#34;math inline&#34;&gt;\(0.4306\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+Subtracting these proportions yields &lt;span class=&#34;math inline&#34;&gt;\(0.4306-0.2291=0.2015\)&lt;/span&gt;, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(20.15\%\)&lt;/span&gt;&lt;/span&gt; of the high school graduates earned a score between 600 and 700&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(725\)&lt;/span&gt; which is greater than the mean, we have
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{725-531}{114}\\\\   
-&amp;\approx 1.70
-\end{aligned}
-The area beyond $z=1.70$ is $0.0466$. So the percentile rank may be found by 
-$1.000-0.0466 = 0.9535$, or $95.35\%$ which implies the &lt;span class=&#34;boxed&#34;&gt;96th percentile&lt;/span&gt;.
-
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{725-531}{114}\\\\   
+&amp;amp;\approx 1.70
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=1.70\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.0466\)&lt;/span&gt;. So the percentile rank may be found by
+&lt;span class=&#34;math inline&#34;&gt;\(1.000-0.0466 = 0.9535\)&lt;/span&gt;, or &lt;span class=&#34;math inline&#34;&gt;\(95.35\%\)&lt;/span&gt; which implies the &lt;span class=&#34;boxed&#34;&gt;96th percentile&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;11&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;11&lt;/summary&gt;
 &lt;p&gt;
-
-
-
-
-
-a. For an earned score of $990$ which is greater than the mean, we have
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(990\)&lt;/span&gt; which is greater than the mean, we have
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{990-981}{27.3}\\\\   
-&amp;\approx 0.33
-\end{aligned}
-The area beyond $z=0.33$ is $0.3707$. So the percentile rank may be found by 
-$1.000-0.3707 = 0.6293$, or $62.93\%$ which implies the 62nd percentile. So the team is &lt;span class=&#34;boxed&#34;&gt;not in the upper quartile&lt;/span&gt;.
-
-b. For the top 25%, or $0.0025$, the area beyond $z$ is approximated by $z = 0.67$. The cutoff score is then $981+0.67\cdot 27.3\approx$ &lt;span class=&#34;boxed&#34;&gt;$999.29$&lt;/span&gt;.
-
-c. As noted above, &lt;span class=&#34;boxed&#34;&gt;$z = 0.67$&lt;/span&gt;.
-
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{990-981}{27.3}\\\\   
+&amp;amp;\approx 0.33
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.33\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.3707\)&lt;/span&gt;. So the percentile rank may be found by
+&lt;span class=&#34;math inline&#34;&gt;\(1.000-0.3707 = 0.6293\)&lt;/span&gt;, or &lt;span class=&#34;math inline&#34;&gt;\(62.93\%\)&lt;/span&gt; which implies the 62nd percentile. So the team is &lt;span class=&#34;boxed&#34;&gt;not in the upper quartile&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For the top 25%, or &lt;span class=&#34;math inline&#34;&gt;\(0.0025\)&lt;/span&gt;, the area beyond &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is approximated by &lt;span class=&#34;math inline&#34;&gt;\(z = 0.67\)&lt;/span&gt;. The cutoff score is then &lt;span class=&#34;math inline&#34;&gt;\(981+0.67\cdot 27.3\approx\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(999.29\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As noted above, &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z = 0.67\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
-
-&lt;details&gt;&lt;summary&gt;12&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt;12&lt;/summary&gt;
 &lt;p&gt;
-
-a. For **Team A** an ***eligibility criterion*** score of $971$ is given by
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(971\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{971-983}{33}\\\\   
-&amp;\approx -0.36
-\end{aligned}
-For **Team A** a ***retention criterion*** score of $958$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{971-983}{33}\\\\   
+&amp;amp;\approx -0.36
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(958\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{958-976}{34.9}\\\\   
-&amp;\approx -0.52
-\end{aligned}
-For **Team B** an ***eligibility criterion*** score of $987$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{958-976}{34.9}\\\\   
+&amp;amp;\approx -0.52
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(987\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{987-983}{33}\\\\   
-&amp;\approx 0.12
-\end{aligned}
-For **Team B** a ***retention criterion*** score of $970$ is given by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{987-983}{33}\\\\   
+&amp;amp;\approx 0.12
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(970\)&lt;/span&gt; is given by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;40%&#34; /&gt;
-From this we can calculate the $z$-score as 
-\begin{aligned}
-z &amp;= \dfrac{970-976}{34.9}\\\\   
-&amp;\approx -0.17
-\end{aligned}
-So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;. 
-
-b. For **Team B** a ***retention criterion*** score of $z=-0.17$ is below the mean and the corresponding proportion can be viewed by
-&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;
-
-which is the area between $z$ and the tail, or &lt;span class=&#34;boxed&#34;&gt;$0.4325$&lt;/span&gt;.
-
-c. For **Team A** an ***eligibility criterion*** score of $z=-0.36$ is below the mean and the corresponding proportion can be viewed by
+From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
+&lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
+z &amp;amp;= \dfrac{970-976}{34.9}\\\\   
+&amp;amp;\approx -0.17
+\end{aligned}\]&lt;/span&gt;
+&lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.17\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4325\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.36\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
-which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.
-
+which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;math inline&#34;&gt;\(0.3594\)&lt;/span&gt; implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
---&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Which is the reason you don’t notice any shading in the plot&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -3969,6 +4354,153 @@ which is the area between $z$ and the tail, or $0.3594$ implying about the &lt;s
       <link>/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/05-due/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-5-after-class-ends&#34;&gt;What to do for Week 5 after class ends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-6-before-coming-to-class&#34;&gt;What to do for Week 6 before coming to class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;what-to-do-for-week-5-after-class-ends&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 5 after class ends&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Go through the NFL and Pipes R walkthrough
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Complete problems 1, 2, 5, 6, 7, 8, 11 and 12 in Chapter 5.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/assignment/05-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-to-do-for-week-6-before-coming-to-class&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 6 before coming to class&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Area
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Read chapter 6 in the text.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/readings/06-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 640 512&#34;&gt;
+&lt;path d=&#34;M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Look over the text PowerPoint and corresponding notes.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/06-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 352 512&#34;&gt;
+&lt;path d=&#34;M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/06-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For grading.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;For preparation.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Optional but recommended.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Normal Distribution</title>
+      <link>/due/07-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/07-due/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;

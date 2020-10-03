@@ -47,7 +47,7 @@ library(tidyverse)
 Chapter 5 Exercises: 1, 2, 5, 6, 7, 8, 11, 12. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
 
 #### Solutions
-<!--
+
 ```{r echo = FALSE}
 shading_geq <- function(x, lower_bound) {
   y = dnorm(x, mean = m, sd = stdev)
@@ -1105,6 +1105,6 @@ which is the area between $z$ and the tail, or $0.3594$ implying about the <span
 
 </details>
 </p>
--->
+
 :::
 
