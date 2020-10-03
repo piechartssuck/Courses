@@ -15,12 +15,55 @@ editor_options:
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
 library(fontawesome)
+library(knitr)
+library(kableExtra)
 ```
 
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
 
-Qualtrics? | Name | Description
-:---: | --- | --- |
-`r fa("square", fill = "steelblue")` | Complete a skill series in Data Camp.  |  [Link](/lesson/03-lesson/#data-camp-1)^[Due in two weeks. Please get started as there is a lot to cover!]
-`r fa("square", fill = "steelblue")` | Submit a course task: Selecting a Population.  |  [Link](/assignment/03-assignment/#planning-selecting-a-population-1)
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+  
+"eCampus" = c(checked,
+              unchecked),
+
+"Data Camp?" = c(unchecked,
+                 unchecked),
+
+"Qualtrics" = c(unchecked,
+                checked),
+
+Description = c("Submit a course task: Selecting a Population.",
+                "Watch a walkthrough on what you can do to never manually resize a textbox."),
+
+Location = c("[Link](/assignment/03-assignment/#planning-selecting-a-population-1)",
+             "[Link](/example/03-example/#javascript-in-qualtrics-textbox-width-1)")
+
+)
+
+```
+
+### What's Due?
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cccll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "22em") %>%
+  column_spec(5, width = "10em")
+```
+</center>
+
+### Things coming up
+
+- [Data Camp modules](/lesson/03-lesson/#data-camp-1).
 

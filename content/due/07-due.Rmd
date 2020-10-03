@@ -27,32 +27,38 @@ unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
 checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 
 wk_post <- tibble(
-"Qualtrics?" = c(unchecked),
+  
+"eCampus" = c(unchecked),
 
-"eCampus?" = c(unchecked),
+"Data Camp" = c(unchecked),
+  
+"Qualtrics" = c(checked),
 
 Description = c("Watch a two-part walkthrough on how to use spacing and colors in Qualtrics."),
 
-Location = c("[Link](/example/07-example/#using-the-qualtrics-api-1)")
+Location = c("[Link](/example/07-example/#visual-clues-1)")
+
 )
 ```
 
 ### What's Due?
-
+<center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(wk_post, 
       escape = FALSE,
-      align = 'ccll') %>%
+      align = 'cccll') %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "10em") %>%
-  column_spec(3, width = "30em") %>%
-  column_spec(4, width = "10em")
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "22em") %>%
+  column_spec(5, width = "10em")
 ```
+</center>
 
 ### Things coming up
 
-- [Data Camp modules](/lesson/07-lesson/#data-camp-1) due in two weeks.
-- Take a look at the [Pilot Study Requirements](/assignment/07-assignment/#pilot-study-ledger-1) due in a little over weeks.
+- [Data Camp modules](/lesson/07-lesson/#data-camp-1).
+- [Pilot Study](/assignment/07-assignment/#pilot-study-ledger-1).
 
 

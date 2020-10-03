@@ -14,31 +14,52 @@ editor_options:
   chunk_output_type: console
 ---
 
-### Data Camp
-The second exploration in R is a skill track consisting of four modules and is due on Sunday in two weeks. This covers using the tidyverse family in R on [Data Camp](https://www.datacamp.com/){target="_blank"}. It will cover:
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
 
-1. Introduction to the Tidyverse
-  - Data Wrangling
-  - Data visualization
-  - Grouping and summarizing
-  - Types of visualizations
+### Data Camp^[Accessible at [Data Camp](https://www.datacamp.com/){target="_blank"}.]
+The second exploration in R is a skill track consisting of four modules and covers a basic introduction to using the tidyverse family of packages in R. Please complete the following modules.
 
-2. Working with Data in the Tidyverse
-  - Explore your data
-  - Tame your data
-  - Tidy your data
-  - Transform your data
-  
-3. Project: Dr. Semmelweis and the Discovery of Handwashing
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
 
-4. Modeling with Data in the Tidyverse
-  - Introduction to Modeling
-  - Modeling with Basic Regression
-  - Modeling with Multiple Regression
-  - Model Assessment and Selection
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 
+
+dc_schedule <- read_csv("dc.csv") %>% 
+               filter(Group == "2") %>%
+                  as_tibble() %>%
+              mutate(Required = case_when(
+                Required == "checked" ~ as.character(fa("check-square", fill = "#242d34")),
+                Required == "unchecked" ~ as.character(fa("square", fill = "#242d34"))
+              )) %>%
+              select(-Group, -Chapters_wide, -`Due by_long`, -`Lesson Page`) %>%
+              rename(`Due by` = `Due by_short`) %>%
+              rename(`Chapters covered` = Chapters_long) %>%
+            filter_all(any_vars(!is.na(.))) %>%
+              replace(., is.na(.), "")
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      escape = FALSE,
+      align = 'cccll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "14em") %>%
+  column_spec(5, width = "16em") 
+```
+</center>
+<br>
 <div class="text-center">
-**Please get started asap. There is a lot to cover!**
+***Please get started asap. There is a lot to cover!***
 </div>
 
 ### Sampling

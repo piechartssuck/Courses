@@ -9,19 +9,62 @@ weight: 1
 shiny: true
 ---
 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Description
 Each class session has an interactive lesson that you will work through ***after*** doing the readings and watching a lecture (if applicable). These lessons are a central part of the class—they will teach you how to use R and other packages eventually leading to the **tidyverse** family.
 
 Interactive training sections are provided on [Data Camp](https://www.datacamp.com/){target="_blank"}^[Please note that if you have (1) used Data Camp before and (2) are logged in with the same username, then any module that was successfully completed will not have to be done again.]. 
 
-Here is some advice. Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
+### Advice
+Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
 
-Please note that the following modules are optional and will count either as extra credit or a replacement for another^[Please notify me by email if this is your intent by noting the module you (1) are taking and (2) replacing.]
+### Data Camp Schedule
+A full schedule is given below. The **Course** and **Chapter** names represent Data Camp titles:
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+
+dc_schedule <- read_csv("dc.csv") %>% 
+                  as_tibble() %>%
+              mutate(Required = case_when(
+                Required == "checked" ~ as.character(fa("check-square", fill = "#242d34")),
+                Required == "unchecked" ~ as.character(fa("square", fill = "#242d34"))
+              )) %>%
+              select(-Group, -Chapters_long, -`Due by_short`) %>%
+              rename(`Due by` = `Due by_long`) %>%
+              rename(`Chapters covered` = Chapters_wide) %>%
+            filter_all(any_vars(!is.na(.))) %>%
+              replace(., is.na(.), "")
+```
+
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      escape = FALSE,
+      align = 'clccll') %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover")) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "15em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "30em") %>%
+  column_spec(6, width = "50em") 
+```
+
+### Extra Credit or Replacement
+As noted above by EC1-EC4, the following modules are optional and will count either as extra credit or a replacement for another^[Please notify me by email if this is your intent by noting the module you (1) are taking and (2) replacing.]
 
 - Introduction to Data Visualization with ggplot2
 - Visualizing Geospatial Data in R
 - Spatial Analysis with sf and raster in R
 - Analyzing US Census Data in R
-
-
-
-
