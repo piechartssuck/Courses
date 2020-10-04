@@ -220,5 +220,187 @@ The following video is a bit of a compilation of things that come up that are fr
 </description>
     </item>
     
+    <item>
+      <title>Sampling and Sampling Distributions</title>
+      <link>/example/07-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/07-example/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#warning&#34;&gt;Warning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-line-is-drawn&#34;&gt;A Line is Drawn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#full-disclosure-on-my-unintended-bias&#34;&gt;Full Disclosure on My Unintended Bias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-mostly-non-stats-example&#34;&gt;A Mostly Non Stats Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-table-of-differences&#34;&gt;A Table of Differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#so-who-is-right&#34;&gt;So Who is Right?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;crash-course-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Crash Course Statistics&lt;/h3&gt;
+&lt;p&gt;This week we’re doing something a little different. We have two videos from Crash Course Statistics and another from a channel called Veritasium which all deal with the idea of probability. But you’ll soon see that there are two types of statisticians who fundamentally disagree on how probability explains the world around them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;warning&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Warning&lt;/h3&gt;
+&lt;p&gt;There’s going to be some philosophical ideas discussed here. Get through it and you may figure out what kind of statistics you would practice. Why does it matter? Oh only that it may define how you not only practice statistics, but also explain how you view and deal with daily problems. No big deal.&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&#34;/img/examples/statistician_deathmatch.png&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-line-is-drawn&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Line is Drawn&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Statisticians and those who practice statistics are at odds on how the world works. One group - the frequentists - think deductively and see probability as a means for finding a single defined outcome while another - the Bayesians - think inductively and use probability to describe the chance of many possible outcomes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-disclosure-on-my-unintended-bias&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Full Disclosure on My Unintended Bias&lt;/h3&gt;
+&lt;p&gt;I am a Bayesian statistician through and through so there is an inherent bias in this writing even though I did my best to stay neutral. Hopefully its small and not detectable. But now you have an inherent bias having read this. What if I had not written this disclosure?&lt;/p&gt;
+&lt;div id=&#34;frequentist-statisticians&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Frequentist Statisticians&lt;/h4&gt;
+&lt;p&gt;Statisticians who view &lt;strong&gt;&lt;em&gt;the world as deterministic, do not include subjectivity, and see probabilities as a way to explain how random events would look after a bunch of trials&lt;/em&gt;&lt;/strong&gt; are known as &lt;strong&gt;frequentist statisticians&lt;/strong&gt;. To show this through a statistical lens, let’s look at the traditional coin flipping example: As a frequentist statistician, we would&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;first suppress any prior ideas of how the outcome should look;&lt;/li&gt;
+&lt;li&gt;then flip a coin over and over and record the results; and&lt;/li&gt;
+&lt;li&gt;find that after enough flips that while we will likely never get 50-50 odds, the data shows that we’re heading that way so with the idea if we flipped that coin an infinite number of times, that’s the true outcome.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is the idea of something being deterministic where probabilities are used to describe a &lt;em&gt;fixed value&lt;/em&gt; which in this case is always going to be 50-50. For any social scientists, the epistemological perspective is that frequentist for the most part believe in a single truth.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bayesian-statisticians&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bayesian Statisticians&lt;/h4&gt;
+&lt;p&gt;Statisticians who view &lt;strong&gt;&lt;em&gt;the world as probabilistic, allow for prior beliefs about a phenomena, and update the probability of those beliefs with new evidence&lt;/em&gt;&lt;/strong&gt; are known as &lt;strong&gt;Bayesian statisticians&lt;/strong&gt;. To again show this through a statistical lens, let’s look at the traditional coin flipping example: As a Bayesian statistician, we would&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;first have a prior belief of what the probability of getting a heads or tails is say 50-50.&lt;/li&gt;
+&lt;li&gt;then flip a coin over and over and record the results; and&lt;/li&gt;
+&lt;li&gt;find that after enough flips that we will never get to the 50-50 odds implying that there are multiple possible outcomes, each with its own associated probability.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is the idea of something being deterministic where probabilities are used to describe &lt;em&gt;multiple values&lt;/em&gt; which in this case may be 50-50, but could also be 40-60, 60-40, 20 - 80 and so on, each associated with some chance of being true. For any social scientists, the epistemological perspective is that Bayesian for the most part believe in multiple truths with some more likely than others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-mostly-non-stats-example&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Mostly Non Stats Example&lt;/h3&gt;
+&lt;p&gt;Rather than provide an example that uses a bunch of statistics, let’s look at it practically.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Situation&lt;/em&gt;: You have misplaced your iPhone somewhere in your apartment or home. You can use the Find My app ® to find it and hear beeping.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Problem&lt;/em&gt;: Which room in your apartment or home should you search?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Approaches&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Frequentist: You hear the phone beeping and you have some approach using a mental model to help figure out what room the beeping is coming from. So you used &lt;strong&gt;&lt;em&gt;inferences from the beeps&lt;/em&gt;&lt;/strong&gt; to locate the room in your home you must search to find the phone.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bayesian: You hear the phone beeping and along with some approach using a mental model, you also know all of the rooms you have misplaced the phone before which combined help to figure out what room the beeping is coming from. So you used &lt;strong&gt;&lt;em&gt;inferences from the beeps&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;prior knowledge &lt;/em&gt;&lt;/strong&gt; to locate the room in your home you must search to find the phone.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-table-of-differences&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Table of Differences&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Type
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Information Used
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+What is Random?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Type of Reasoning
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Terminology
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Observed Data
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Frequentist statistician
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Outcomes derived strictly from experiments
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Observed data&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Deductive logic.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Common terms like &lt;em&gt;p&lt;/em&gt;-value, significant, null hypothesis, and confidence interval.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Unknown and comes only from experiments.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Bayesian statistician
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Prior beliefs about what the truth might be which are updated as experiments progress.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Population parameters&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Inductive logic.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Uncommon terms like prior probability, noninformative priors, and credible intervals.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Known since we already know what we know.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;so-who-is-right&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;So Who is Right?&lt;/h3&gt;
+&lt;p&gt;We honestly just don’t know right now. Similar to physics where there are two incompatible laws governing the universe - relativity for large and quantum for small objects, respectively - statistics has the same difficulty regarding inferences. The frequentist thinking is the dominant approach because they involve “simple” calculations and appear to explain the phenomena around us really well. We’ve been able to explain a lot of the world with this approach where there is a single defined outcome. However with the rise of machine learning and advancements in computing in general, complex calculations now allow us to consider the possibilities of multiple outcomes which appears to be opening doors into uncharted possibilities&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. In these cases, a Bayesian approach appears to be our best bet.&lt;/p&gt;
+&lt;p&gt;Looking ahead, the actual approach is likely a combination of both. With that said, both could also could be incorrect and there may be a third approach we have not considered yet or is beyond our current understanding. Just because both types of thinking can be used to explain a lot of phenomena doesn’t necessarily mean either are correct!&lt;/p&gt;
+&lt;div id=&#34;frequentist-statistics&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Frequentist Statistics&lt;/h4&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/OyddY7DlV58&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bayesian-statistics&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bayesian Statistics&lt;/h4&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/oZCskBpHWyk&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bayes-theorem&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bayes Theorem&lt;/h4&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/R13BD8qKeTg&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Note that what is described is an oversimplification and there are multiple differences between the two viewpoints.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Any data that has been collected from an experiment.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Any summary number, like an average or percentage, that describes the entire population.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;No pun intended.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

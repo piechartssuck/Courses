@@ -54,4 +54,10 @@ lessons:
     lesson: "06-lesson"
     example: "06-example"
     assignment: "06-assignment"
-#    due: "06-due"
+
+  - title: 'Sampling and Sampling Distributions'
+    session: 7
+    date: "October 14, 2020"
+    lesson: "07-lesson"
+    example: "07-example"
+    assignment: "07-assignment"

@@ -1,0 +1,134 @@
+---
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 7: Sampling and Sampling Distributions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Crash Course Statistics
+This week we're doing something a little different. We have two videos from Crash Course Statistics and another from a channel called Veritasium which all deal with the idea of probability. But you'll soon see that there are two types of statisticians who fundamentally disagree on how probability explains the world around them. 
+
+### Warning
+There's going to be some philosophical ideas discussed here. Get through it and you may figure out what kind of statistics you would practice. Why does it matter? Oh only that it may define how you not only practice statistics, but also explain how you view and deal with daily problems. No big deal.
+
+<center>
+![](/img/examples/statistician_deathmatch.png){width=50%}
+</center>
+
+### A Line is Drawn^[Note that what is described is an oversimplification and there are multiple differences between the two viewpoints.]
+Statisticians and those who practice statistics are at odds on how the world works. One group - the frequentists - think deductively and see probability as a means for finding a single defined outcome while another - the Bayesians - think inductively and use probability to describe the chance of many possible outcomes.
+
+### Full Disclosure on My Unintended Bias
+I am a Bayesian statistician through and through so there is an inherent bias in this writing even though I did my best to stay neutral. Hopefully its small and not detectable. But now you have an inherent bias having read this. What if I had not written this disclosure? 
+
+#### Frequentist Statisticians
+Statisticians who view ***the world as deterministic, do not include subjectivity, and see probabilities as a way to explain how random events would look after a bunch of trials*** are known as **frequentist statisticians**. To show this through a statistical lens, let's look at the traditional coin flipping example: As a frequentist statistician, we would
+
+1. first suppress any prior ideas of how the outcome should look;
+2. then flip a coin over and over and record the results; and
+3. find that after enough flips that while we will likely never get 50-50 odds, the data shows that we're heading that way so with the idea if we flipped that coin an infinite number of times, that's the true outcome.
+
+This is the idea of something being deterministic where probabilities are used to describe a *fixed value* which in this case is always going to be 50-50. For any social scientists, the epistemological perspective is that frequentist for the most part believe in a single truth.
+
+#### Bayesian Statisticians
+Statisticians who view ***the world as probabilistic, allow for prior beliefs about a phenomena, and update the probability of those beliefs with new evidence*** are known as **Bayesian statisticians**. To again show this through a statistical lens, let's look at the traditional coin flipping example: As a Bayesian statistician, we would
+
+1. first have a prior belief of what the probability of getting a heads or tails is say 50-50. 
+2. then flip a coin over and over and record the results; and
+3. find that after enough flips that we will never get to the 50-50 odds implying that there are multiple possible outcomes, each with its own associated probability.
+
+This is the idea of something being deterministic where probabilities are used to describe *multiple values* which in this case may be 50-50, but could also be 40-60, 60-40, 20 - 80 and so on, each associated with some chance of being true. For any social scientists, the epistemological perspective is that Bayesian for the most part believe in multiple truths with some more likely than others.
+
+### A Mostly Non Stats Example
+Rather than provide an example that uses a bunch of statistics, let's look at it practically. 
+
+*Situation*: You have misplaced your iPhone somewhere in your apartment or home. You can use the Find My app ® to find it and hear beeping.
+
+*Problem*: Which room in your apartment or home should you search?
+
+*Approaches*
+
+- Frequentist: You hear the phone beeping and you have some approach using a mental model to help figure out what room the beeping is coming from. So you used  ***inferences from the beeps*** to locate the room in your home you must search to find the phone.
+
+- Bayesian: You hear the phone beeping and along with some approach using a mental model, you also know all of the rooms you have misplaced the phone before which combined help to figure out what room the beeping is coming from. So you used ***inferences from the beeps*** and  ***prior knowledge *** to locate the room in your home you must search to find the phone.  
+
+### A Table of Differences
+
+```{r eval = TRUE, echo = FALSE}
+
+inferences <- tibble(
+  
+  Type = c("Frequentist statistician",
+                     "Bayesian statistician"),
+  
+ `Information Used` = c("Outcomes derived strictly from experiments",
+                       "Prior beliefs about what the truth might be which are updated as experiments progress."),
+ 
+ `What is Random?` = c("Observed data^[Any data that has been collected from an experiment.]",
+                       "Population parameters^[Any summary number, like an average or percentage, that describes the entire population.]"),
+  
+  `Type of Reasoning` = c("Deductive logic.",
+                "Inductive logic."),
+  
+  Terminology = c("Common terms like *p*-value, significant, null hypothesis, and confidence interval.",
+                  "Uncommon terms like prior probability, noninformative priors, and credible intervals."),
+  
+  `Observed Data` = c("Unknown and comes only from experiments.",
+                       "Known since we already know what we know.")
+  
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(inferences, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "30em") %>%
+  column_spec(6, width = "10em")
+
+```
+
+### So Who is Right?
+We honestly just don't know right now. Similar to physics where there are two incompatible laws governing the universe - relativity for large and quantum for small objects, respectively - statistics has the same difficulty regarding inferences. The frequentist thinking is the dominant approach because they involve "simple" calculations and appear to explain the phenomena around us really well. We've been able to explain a lot of the world with this approach where there is a single defined outcome. However with the rise of machine learning and advancements in computing in general, complex calculations now allow us to consider the possibilities of multiple outcomes which appears to be opening doors into uncharted possibilities^[No pun intended.]. In these cases, a Bayesian approach appears to be our best bet.
+
+Looking ahead, the actual approach is likely a combination of both. With that said, both could also could be incorrect and there may be a third approach we have not considered yet or is beyond our current understanding. Just because both types of thinking can be used to explain a lot of phenomena doesn't necessarily mean either are correct!
+
+#### Frequentist Statistics 
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OyddY7DlV58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+#### Bayesian Statistics
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oZCskBpHWyk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+#### Bayes Theorem
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R13BD8qKeTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>

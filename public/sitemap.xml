@@ -136,10 +136,6 @@
   </url>
   
   <url>
-    <loc>/assignment/07-homeworks/</loc>
-  </url>
-  
-  <url>
     <loc>/example/06-example/</loc>
   </url>
   
@@ -149,6 +145,14 @@
   
   <url>
     <loc>/readings/06-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/07-homeworks/</loc>
+  </url>
+  
+  <url>
+    <loc>/example/07-example/</loc>
   </url>
   
   <url>
