@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Lessons | Survey Research Methods</title>
-    <link>/lesson/</link>
-      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/lesson/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Lessons</title>
-      <link>/lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/lesson/01-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -29,20 +29,20 @@
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;/h3&gt;
 &lt;p&gt;The purpose of these modules is not have you become a programmer! Rather these lay a foundation for a common language and software we’ll be using. Some are better than others and some are more technical than others as well. Just remember, this is not a programming class! Falling behind on these can make some material we cover in the course inaccessible. If you get stuck, please ask me for help, search the Internet or move on!&lt;/p&gt;
-&lt;p&gt;If you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there and please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks.&lt;/p&gt;
+&lt;p&gt;If you are feeling ambitious, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there and please refer to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>/lesson/02-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/02-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/02-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -165,12 +165,12 @@ Lists
 &lt;/center&gt;
 &lt;br&gt;
 &lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class! Please ask questions!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class! Please ask questions!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;evaluation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Evaluation&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%202/Intro%20to%20PE.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%202/Intro%20to%20PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to learn about or review foundational concepts in evaluation.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
@@ -183,13 +183,13 @@ Lists
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>/lesson/03-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/03-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/03-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -419,7 +419,7 @@ Model Assessment and Selection
 &lt;/div&gt;
 &lt;div id=&#34;sampling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Sampling&lt;/h3&gt;
-&lt;p&gt;Download a slideshow both in &lt;a href=&#34;/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to review different sampling techniques.&lt;/p&gt;
+&lt;p&gt;Download a slideshow both in &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%203/Sampling.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; or &lt;a href=&#34;https://edp619.theoreticalphysed.com/slides/Week%203/Sampling.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; formats to review different sampling techniques.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
@@ -432,13 +432,13 @@ Model Assessment and Selection
     
     <item>
       <title>The Fundamentals of Writing Questions</title>
-      <link>/lesson/04-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/04-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/04-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/04-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -720,13 +720,13 @@ Connecting the dots (Imputation)
     
     <item>
       <title>How to Write Open- and Closed-Ended Questions</title>
-      <link>/lesson/05-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/05-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/05-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/05-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1000,13 +1000,13 @@ Connecting the dots (Imputation)
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>/lesson/06-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/06-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/06-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/06-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1280,13 +1280,13 @@ Connecting the dots (Imputation)
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>/lesson/07-lesson/</link>
+      <link>https://edp619.theoreticalphysed.com/lesson/07-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/07-lesson/</guid>
+      <guid>https://edp619.theoreticalphysed.com/lesson/07-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
