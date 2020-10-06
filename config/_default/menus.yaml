@@ -56,7 +56,7 @@ due:
 assignment:
   - name: Overview
     weight: 1
-  - name: Daily(ish) Tasks
+  - name: Weekly Tasks
     weight: 2
   - name: Data Camp
     weight: 3
@@ -66,13 +66,13 @@ assignment:
     weight: 5
   - name: Survey Draft
     weight: 6
-  - name: Pilot Study Review
+  - name: Pilot Study Ledger
     weight: 7
-  - name: Final Survey
+  - name: Final Survey and Skeleton
     weight: 8
-  - name: Report
+  - name: Survey Report
     weight: 9
-  - name: Presentation
+  - name: Presentation of Results
     weight: 10
 resource:
   - name: Resources

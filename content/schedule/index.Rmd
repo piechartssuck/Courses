@@ -21,7 +21,7 @@ Every class session may be comprised of four important sections with tasks denot
 <i class="fas fa-long-arrow-alt-right"></i>&nbsp;
 <i class="fas fa-lightbulb"></i>&nbsp;
 <i class="fas fa-plus"></i>&nbsp;
-<i class="fas fa-tasks"></i> 
+<i class="fas fa-tasks"></i>&nbsp;
 <i class="fas fa-long-arrow-alt-right"></i>&nbsp;
 <i class="fas fa-folder-open"></i>
 </div>

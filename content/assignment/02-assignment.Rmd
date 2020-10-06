@@ -6,7 +6,7 @@ output:
     toc: true
 menu:
   assignment:
-    parent: Daily(ish) Tasks
+    parent: Weekly Tasks
     weight: 3
 type: docs
 weight: 2

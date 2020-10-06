@@ -11,14 +11,17 @@ output:
     toc: true
 ---
 
-You will get the most of out this class if you:
+Foremost please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given within the description of each assignment.
 
-1. engage with the readings and materials,
-2. use R to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis,
-3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
-4. keep an open and honest line of communication with me and your peers if possible.
+## Keeping Up
 
-Each type of assignment in this class helps with at least one one of these criteria.
+There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
+
+1. Engaging with the readings and materials;
+2. Following all R related materials and using the software to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis;
+3. Putting in a good faithed effort but also asking for help when needed; 
+4. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+
 
 ## Lessons
 
@@ -51,11 +54,7 @@ Otherwise *0 points (0%) in gradebook*.
 
 ## Final Task
 
-At the end of the course, you will demonstrate your data visualization skills by completing a final task.
-
-Complete details for this will be posted here soon. To preview, you will need to design, pilot, and administer a survey to a identify a group, organization, etc. to survey, 
-
-**This project serves as your final exam.**
+At the end of the course, you will demonstrate your survey skills by completing a final report and presentation. Complete details for this will be posted here soon. To preview, you will need to document the processes reralted to survey planning, design, piloting, distribution, data collection, analysis, and reporting.
 
 The project will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and other course items throughout the course, you should do just fine with the course task.
 

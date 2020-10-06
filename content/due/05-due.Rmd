@@ -38,7 +38,7 @@ wk_post <- tibble(
                 checked),
 
 Description = c("Participate in the **EDP 619 Survey About Nothing**^[We'll be using R to pull the results directly out of Qualtrics, namely out of something called the Qualtrics API.].",
-                "Watch a walkthrough on getting rid of the Quakltrics logo in your survey."),
+                "Watch a walkthrough on getting rid of the Qualtrics logo in your survey."),
 
 Location = c("A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.",
              "[Link](/example/05-example/#javascript-in-qualtrics-the-plug-1)")

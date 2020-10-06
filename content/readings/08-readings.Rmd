@@ -1,0 +1,22 @@
+---
+title: "Web Questionnaires and Implementation"
+linktitle: "Week 8: Web Questionnaires and Implementation"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 2
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read *Chapter 9: Web Questionnaires and Implementation* in Dillman, Smyth, and Christian^[We are skipping Chapter 8: Telephone Questionnaires and Implementation since as of this writing, a [study](https://www.cdc.gov/nchs/data/nhis/earlyrelease/wireless202009-508.pdf){target="_blank"} by the CDC using second half 2019 data found that of U.S. households, 61.3% report having only wireless phones, 2.4% were landline only, and 1.0% were without either. With that said, it may be in your interest to read Chapter 8 since the same study also found that 37.2% of households have both, though this estimate has been declining rapidly over the past four years. Regardless while the ability to reach a large audience will likely become diminish soon, currently plenty of people can still be reached using this traditional mode.] 
+
+
+
+
