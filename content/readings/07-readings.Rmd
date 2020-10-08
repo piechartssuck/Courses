@@ -1,0 +1,21 @@
+---
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 7: Sampling and Sampling Distributions"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read Chapter 6: *Sampling and Sampling Distributions*
+
+
+
