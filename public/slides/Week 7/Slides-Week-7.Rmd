@@ -363,5 +363,33 @@ pnorm(16.77) - pnorm(8.38)
 R tells us that this is $0.8994$. So there is nearly a 0% chance that a random household has between 2.5 and 3 TVs in 2020.
 
 ---
+ 
+    ```{r echo = FALSE, eval= TRUE, warning = FALSE, out.width = '40%'}
+minimum = 2.5
+maximum = 3
+m = 2.00
+stdev = 0.8
+
+ggplot(data.frame(x = c(lb, ub)), aes(x = x)) + 
+  stat_function(fun = dnorm, args = list(mean = m, sd = stdev)) + 
+  stat_function(fun = shading_beq, args = list(lower_bound = minimum,
+                                               upper_bound = maximum), 
+                geom = "area", fill = "#3d8ba9", alpha = 0.6) +
+  scale_x_continuous(breaks = seq(ll, ul, stdev),
+                     limits = c(1, 4)) + 
+  geom_vline(xintercept = m, color = "#65737e") +
+  theme_minimal(base_size = 22) +
+  theme(panel.border = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.title=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank()
+        )
+```
+ 
+ 
+
+---
 
 ## That's it for sampling today! Let's take a break before R.
