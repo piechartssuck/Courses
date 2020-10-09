@@ -344,11 +344,11 @@ ggplot(data.frame(x = c(lb, ub)), aes(x = x)) +
 <br>
 <li>We have z-scores 
 \begin{eqnarray*}
-z&=&\dfrac{3-2.00}{0.130158}\\
+z&=&\dfrac{3-2.00}{0.059628}\\
 &\approx&16.77
 \end{eqnarray*}
 \begin{eqnarray*}
-z&=&\dfrac{2.5-2.00}{0.130158}\\
+z&=&\dfrac{2.5-2.00}{0.059628}\\
 &\approx&8.38
 \end{eqnarray*}
 </li>
@@ -360,7 +360,7 @@ z&=&\dfrac{2.5-2.00}{0.130158}\\
 pnorm(16.77) - pnorm(8.38)
 ```
 
-R tells us that this is $0.8994$. So there is nearly a 0% chance that a random household has between 2.5 and 3 TVs in 2020.
+R tells us that this is $0$. So there is nearly a 0% chance that a random household has between 2.5 and 3 TVs in 2020.
 
 ---
  
@@ -392,4 +392,4 @@ ggplot(data.frame(x = c(lb, ub)), aes(x = x)) +
 
 ---
 
-## That's it for sampling today! Let's take a break before R.
+## That's it for sampling today!
