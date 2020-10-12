@@ -3052,12 +3052,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;h3&gt;Packages&lt;/h3&gt;
 &lt;p&gt;Please load up the following packages&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ───────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ──────────────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.4.0     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Conflicts ──────────────────────────────────── tidyverse_conflicts() ──
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ─────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
@@ -3416,7 +3416,7 @@ If you got it, that’s great! However, it’s absolutely fine if you did not. T
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014 &amp;lt;- read_csv(&amp;quot;2014-average-ticket-price.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## ── Column specification ──────────────────────────────────────────────────
+## ── Column specification ─────────────────────────────────────────────────────────────────────────────
 ## cols(
 ##   Event = col_character(),
 ##   Division = col_character(),
@@ -3557,7 +3557,7 @@ nfl2014 %&amp;gt;%
 &lt;p&gt;We have to bring in the data set:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks &amp;lt;- read_csv(&amp;quot;drinks2010andBeyond.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## ── Column specification ──────────────────────────────────────────────────
+## ── Column specification ─────────────────────────────────────────────────────────────────────────────
 ## cols(
 ##   Country = col_character(),
 ##   `Beverage Types` = col_character(),
@@ -5079,7 +5079,7 @@ Known since we already know what we know.
 &lt;/div&gt;
 &lt;div id=&#34;so-who-is-right&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;So Who is Right?&lt;/h3&gt;
-&lt;p&gt;We honestly just don’t know right now. Similar to physics where there are two incompatible laws governing the universe - relativity for large and quantum for small objects, respectively - statistics has the same difficulty regarding inferences. The frequentist thinking is the dominant approach because they involve “simple” calculations and appear to explain the phenomena around us really well. We’ve been able to explain a lot of the world with this approach where there is a single defined outcome. However with the rise of machine learning and advancements in computing in general, complex calculations now allow us to consider the possibilities of multiple outcomes which appears to be opening doors into uncharted possibilities&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. In these cases, a Bayesian approach appears to be our best bet.&lt;/p&gt;
+&lt;p&gt;We honestly just don’t know right now. Similar to physics where there are two incompatible laws governing the universe - &lt;em&gt;relativity&lt;/em&gt; for large and &lt;em&gt;quantum&lt;/em&gt; for small objects, respectively - statistics has the same difficulty regarding inferences. The frequentist thinking is by far the dominant approach because it involves fairly “simple” and concrete calculations that can be tested and verified when explaining the phenomena around us. In fact, the approach aligns with the certainty that humans like and need to make sense of the world. However, humans also live with and through uncertainty everyday - every time we do anything, there are a range of outcomes that could occur all with their own associated likelihoods. However until recently testing these ideas were difficult. However with the rise of machine learning and advancements in computing&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, complex calculations allow us to consider the possibilities of multiple outcomes for a given problem which necessitates the need for a Bayesian point of view. The fact you are able to read this right now is .&lt;/p&gt;
 &lt;p&gt;Looking ahead, the actual approach is likely a combination of both. With that said, both could also could be incorrect and there may be a third approach we have not considered yet or is beyond our current understanding. Just because both types of thinking can be used to explain a lot of phenomena doesn’t necessarily mean either are correct!&lt;/p&gt;
 &lt;div id=&#34;frequentist-statistics&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Frequentist Statistics&lt;/h4&gt;
@@ -5112,7 +5112,7 @@ Known since we already know what we know.
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Note that what is described is an oversimplification and there are multiple differences between the two viewpoints.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Any data that has been collected from an experiment.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Any summary number, like an average or percentage, that describes the entire population.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;No pun intended.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Fun fact: The fact you are able to view this exact page right now is based on &lt;a href=&#34;https://www.americanscientist.org/article/programs-and-probability&#34; target=&#34;_blank&#34;&gt;based on probability&lt;/a&gt;&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
