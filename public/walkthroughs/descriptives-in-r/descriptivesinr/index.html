@@ -30,10 +30,11 @@
   
     
   
-  <meta name="description" content="A foundational course with a sprinkling of Bayesian Statistics.">
+  <meta name="description" content="   Data Set We’ll use a made up data set for the examples:
+fake_data &lt;- c(1,1,2,3,5,8,13,21) Thats it!   ">
 
   
-  <link rel="alternate" hreflang="en-us" href="/walkthroughs/">
+  <link rel="alternate" hreflang="en-us" href="https://edp613.theoreticalphysed.com/walkthroughs/descriptives-in-r/descriptivesinr/">
 
   
 
@@ -216,14 +217,12 @@
   
 
   
-  <link rel="alternate" href="/walkthroughs/index.xml" type="application/rss+xml" title="Statistical Methods I">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/walkthroughs/">
+  <link rel="canonical" href="https://edp613.theoreticalphysed.com/walkthroughs/descriptives-in-r/descriptivesinr/">
 
   
   
@@ -241,11 +240,13 @@
   <meta property="twitter:creator" content="@piechartssuck">
   
   <meta property="og:site_name" content="Statistical Methods I">
-  <meta property="og:url" content="/walkthroughs/">
-  <meta property="og:title" content="Walkthroughs | Statistical Methods I">
-  <meta property="og:description" content="A foundational course with a sprinkling of Bayesian Statistics."><meta property="og:image" content="/img/course_info.png">
-  <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://edp613.theoreticalphysed.com/walkthroughs/descriptives-in-r/descriptivesinr/">
+  <meta property="og:title" content="An Incomplete Review of Descriptive Statistics Commands in R | Statistical Methods I">
+  <meta property="og:description" content="   Data Set We’ll use a made up data set for the examples:
+fake_data &lt;- c(1,1,2,3,5,8,13,21) Thats it!   "><meta property="og:image" content="https://edp613.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp613.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
+    
     
   
 
@@ -253,27 +254,29 @@
 
 
 
+  
+
 
   
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
 
-<link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+<link rel="shortcut icon" href="https://edp613.theoreticalphysed.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
   <meta name="application-name" content="EDP 613: Statistical Methods I" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="https://edp613.theoreticalphysed.com/img/mstile-144x144.png" />
 
 
-  <title>Walkthroughs | Statistical Methods I</title>
+  <title>An Incomplete Review of Descriptive Statistics Commands in R | Statistical Methods I</title>
 
 </head>
 
@@ -618,6 +621,65 @@
 </nav>
 
 
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>An Incomplete Review of Descriptive Statistics Commands in R</h1>
+
+  
+  <p class="page-subtitle">EDP 613</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    January 1, 0001
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
     
 
 
@@ -631,44 +693,182 @@
 
 
 
-  
 
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Walkthroughs</h1>
-
-  
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
+
+    <div class="article-style">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<link href="/rmarkdown-libs/tile-view/tile-view.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/tile-view/tile-view.js"></script>
+<link href="/rmarkdown-libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/tachyons/tachyons.min.css" rel="stylesheet" />
+
+
+<div id="data-set" class="section level1">
+<h1>Data Set</h1>
+<p>We’ll use a made up data set for the examples:</p>
+<pre class="r"><code>fake_data  &lt;- c(1,1,2,3,5,8,13,21)</code></pre>
+<hr />
+<div id="thats-it" class="section level2">
+<h2>Thats it!</h2>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
+
+
+
+
+
+  
     
     
     
-    <div>
-      <h2><a href="/walkthroughs/nfl/nflpipes/" >Pipes and the NFL</a></h2>
-      <div class="article-style">
-        
-          An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Logical Operators Data Science Acknowledgements Don’t Get Bogged Down!
-        
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/author/dr.-abhik-roy/">Dr. Abhik Roy</a></h5>
+        <h6 class="card-subtitle">Professor of Educational Psychology</h6>
+        <p class="card-text">I teach evaluation and data things.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/DrTheoreticalPE" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-7085-8964" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Abhik_Roy2" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/piechartssuck" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
       </div>
     </div>
   
 
-  
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
 
         
 

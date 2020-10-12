@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Data Camp Class Notes   Data Camp The fifth Data Camp module is due. The module covers types of data sampling, and experiments. In particular, the sections are:">
+  <meta name="description" content="Data Camp Class Notes R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R   Data Camp The fifth Data Camp module is due. The module covers types of data sampling, and experiments.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/lesson/07-lesson/">
+  <link rel="alternate" hreflang="en-us" href="https://edp613.theoreticalphysed.com/lesson/07-lesson/">
 
   
 
@@ -221,7 +221,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/lesson/07-lesson/">
+  <link rel="canonical" href="https://edp613.theoreticalphysed.com/lesson/07-lesson/">
 
   
   
@@ -239,10 +239,10 @@
   <meta property="twitter:creator" content="@piechartssuck">
   
   <meta property="og:site_name" content="Statistical Methods I">
-  <meta property="og:url" content="/lesson/07-lesson/">
+  <meta property="og:url" content="https://edp613.theoreticalphysed.com/lesson/07-lesson/">
   <meta property="og:title" content="Sampling and Sampling Distributions | Statistical Methods I">
-  <meta property="og:description" content="Data Camp Class Notes   Data Camp The fifth Data Camp module is due. The module covers types of data sampling, and experiments. In particular, the sections are:"><meta property="og:image" content="/img/course_info.png">
-  <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Data Camp Class Notes R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R   Data Camp The fifth Data Camp module is due. The module covers types of data sampling, and experiments."><meta property="og:image" content="https://edp613.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp613.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
     
@@ -260,18 +260,18 @@
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
 
-<link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+<link rel="shortcut icon" href="https://edp613.theoreticalphysed.com/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
   <meta name="application-name" content="EDP 613: Statistical Methods I" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="https://edp613.theoreticalphysed.com/img/mstile-144x144.png" />
 
 
   <title>Sampling and Sampling Distributions | Statistical Methods I</title>
@@ -730,6 +730,7 @@
 <ul>
 <li><a href="#data-camp">Data Camp</a></li>
 <li><a href="#class-notes">Class Notes</a></li>
+<li><a href="#r-walkthrough-an-incomplete-review-of-descriptive-statistics-commands-in-r">R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R</a></li>
 </ul>
 </div>
 
@@ -755,24 +756,20 @@
 </ul>
 <iframe src="/slides/Week 7/Slides-Week-7.html" width="672" height="400px">
 </iframe>
-<p>You can download a <a href="/slides/Week%207/Slides-Week-7.pdf" target="_blank">PDF</a> of the presentation above.
-<!--
-### R Walkthrough: NFL Ticket Prices
-
-1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
-
-- [Week 6 Walkthrough Data Set](/slides/Week 6/2014-average-ticket-price.csv){target="_blank"}
-
-2. Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 6/Slides-Week-6.html){target="_blank"} to view a larger version of slideshow in a new window.
-
-<iframe src="/slides/Week 6/Slides-Week-6R.html" width="672" height="400px"></iframe>
-
-You can download a [PDF](/slides/Week 6/Slides-Week-6R.pdf){target="_blank"} of the presentation above. 
---></p>
+<p>You can download a <a href="/slides/Week%207/Slides-Week-7.pdf" target="_blank">PDF</a> of the presentation above.</p>
+</div>
+<div id="r-walkthrough-an-incomplete-review-of-descriptive-statistics-commands-in-r" class="section level3">
+<h3>R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R</h3>
+<p>Click on the presentation itself and then you may</p>
+<ul>
+<li>Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.</li>
+<li>Press the letter <strong>O</strong> at any point to see see a tile view of the slideshow.</li>
+<li>Use this <a href="/slides/Week%206/Slides-Week-6.html" target="_blank">link</a> to view a larger version of slideshow in a new window.</li>
+</ul>
+<iframe src="/slides/Week 7/Slides-Week-7R.html" width="672" height="400px">
+</iframe>
+<p>You can download a <a href="/slides/Week%207/Slides-Week-7R.pdf" target="_blank">PDF</a> of the presentation above.
+–&gt;</p>
 </div>
 
                     </div>

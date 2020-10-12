@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Exploring NFL Ticket Prices in R</title>
+    <title>An Incomplete Review of Descriptive Statistics Commands in R</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Week 6" />
+    <meta name="author" content="Week 7" />
     <script src="Slides-Week-7R_files/header-attrs-2.4/header-attrs.js"></script>
     <link href="Slides-Week-7R_files/tile-view-0.2.3/tile-view.css" rel="stylesheet" />
     <script src="Slides-Week-7R_files/tile-view-0.2.3/tile-view.js"></script>
     <link href="Slides-Week-7R_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
     <link href="Slides-Week-7R_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-7R_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-7R_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Exploring NFL Ticket Prices in R
+# An Incomplete Review of Descriptive Statistics Commands in R
 ## EDP 613
-### Week 6
+### Week 7
 
 ---
 
@@ -26,402 +28,1088 @@ class: center, middle, inverse, title-slide
 
 
 
+# Packages needed and a Note about Icons
 
-
-# Bring in the data set
-
-
-```r
-prices &lt;- read_csv("2014-average-ticket-price.csv", 
-                   na = "NA")
-```
-
-```
-## 
-## ── Column specification ──────────────────────────────────────
-## cols(
-##   Event = col_character(),
-##   Division = col_character(),
-##   `Avg TP, $` = col_double()
-## )
-```
----
-
-# Take a look at the entire frame...
-
+Please load up the `tidyverse` package
 
 ```r
-prices
+library(tidyverse)
 ```
+&lt;br&gt;
+&lt;br&gt;
+You may come across the following icons. The table below lists what each means.
 
-```
-## # A tibble: 108 x 3
-##    Event                                                    Division `Avg TP, $`
-##    &lt;chr&gt;                                                    &lt;chr&gt;          &lt;dbl&gt;
-##  1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-N… AFC Nor…         202
-##  2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-S… AFC Nor…         199
-##  3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-S… AFC Nor…         196
-##  4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28… AFC Nor…         164
-##  5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-O… AFC Nor…         148
-##  6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-… AFC Nor…         137
-##  7 Cincinnati Bengals at Baltimore Ravens Tickets on 07-Se… AFC Nor…         135
-##  8 Cleveland Browns at Cincinnati Bengals Tickets on 06-No… AFC Nor…         102
-##  9 Pittsburgh Steelers at Cincinnati Bengals Tickets on 07… AFC Nor…          89
-## 10 Baltimore Ravens at Cleveland Browns Tickets on 21-Sep-… AFC Nor…          83
-## # … with 98 more rows
-```
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #181818 !important;"&gt; Icon &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #181818 !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:
+#4682b4;" viewbox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that an example continues on the following slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewbox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that a section using common syntax has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewbox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that there is an active hyperlink on the slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewbox="0 0 384 512"&gt;&lt;path d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that a section covering a concept has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
-# ...or just the first six rows
+# Descriptives
+
+We're going to use the Star Wars data set that's included in `dplyr`
 
 
 ```r
-head(prices)
+data(starwars)
 ```
-
-```
-## # A tibble: 6 x 3
-##   Event                                                     Division `Avg TP, $`
-##   &lt;chr&gt;                                                     &lt;chr&gt;          &lt;dbl&gt;
-## 1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-No… AFC Nor…         202
-## 2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-Se… AFC Nor…         199
-## 3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-Se… AFC Nor…         196
-## 4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28-… AFC Nor…         164
-## 5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-Oc… AFC Nor…         148
-## 6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-2… AFC Nor…         137
-```
----
-
-## 1. What was the average ticket price for all 2014-2015 NFL games?
-
-
+ 
 
 ```r
-hist(prices$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-6-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## 2. What was the average ticket price for all 2014-2015 NFL games by division? Provide counts and a histogram.
-
-
-```r
-unique(prices$Division)
+starwars
 ```
 
 ```
-## [1] "AFC North" "AFC East"  "AFC West"  "AFC South" "NFC North" "NFC East" 
-## [7] "NFC West"  "NFC South" ""
+## # A tibble: 87 x 14
+##    name  height  mass hair_color skin_color eye_color birth_year
+##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;
+##  1 Luke…    172    77 blond      fair       blue            19  
+##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112  
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33  
+##  4 Dart…    202   136 none       white      yellow          41.9
+##  5 Leia…    150    49 brown      light      brown           19  
+##  6 Owen…    178   120 brown, gr… light      blue            52  
+##  7 Beru…    165    75 brown      light      blue            47  
+##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA  
+##  9 Bigg…    183    84 black      light      brown           24  
+## 10 Obi-…    182    77 auburn, w… fair       blue-gray       57  
+## # … with 77 more rows, and 7 more variables: sex &lt;chr&gt;,
+## #   gender &lt;chr&gt;, homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+## #   vehicles &lt;list&gt;, starships &lt;list&gt;
 ```
 
 ---
 
-### Cases
+##  View a Portion of the Data Set
 
 
 ```r
-afc_north &lt;- filter(prices, Division == "AFC North")
-afc_east &lt;- filter(prices, Division == "AFC East")
-afc_west &lt;- filter(prices, Division == "AFC West")
-afc_south &lt;- filter(prices, Division == "AFC South")
-nfc_north &lt;- filter(prices, Division == "NFC North")
-nfc_east &lt;- filter(prices, Division == "NFC East")
-nfc_west &lt;- filter(prices, Division == "NFC West")
-nfc_south &lt;- filter(prices, Division == "NFC South")
+head(starwars)
+```
+
+```
+## # A tibble: 6 x 14
+##   name  height  mass hair_color skin_color eye_color birth_year
+##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;
+## 1 Luke…    172    77 blond      fair       blue            19  
+## 2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112  
+## 3 R2-D2     96    32 &lt;NA&gt;       white, bl… red             33  
+## 4 Dart…    202   136 none       white      yellow          41.9
+## 5 Leia…    150    49 brown      light      brown           19  
+## 6 Owen…    178   120 brown, gr… light      blue            52  
+## # … with 7 more variables: sex &lt;chr&gt;, gender &lt;chr&gt;,
+## #   homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+## #   starships &lt;list&gt;
 ```
 
 ---
 
-## Check
+## Counts
+
+**Total number of names**
+
+Tidy approach &lt;br&gt;
+
+```r
+nrow(starwars %&gt;%
+       select(name))
+```
+
+```
+## [1] 87
+```
+
+Base R approach &lt;br&gt;
+
+```r
+length(starwars$name)
+```
+
+```
+## [1] 87
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+
+---
+
+## Column Types
+
+Using `str`
+
+```r
+str(starwars)
+```
+
+```
+## tibble [87 × 14] (S3: tbl_df/tbl/data.frame)
+##  $ name      : chr [1:87] "Luke Skywalker" "C-3PO" "R2-D2" "Darth Vader" ...
+##  $ height    : int [1:87] 172 167 96 202 150 178 165 97 183 182 ...
+##  $ mass      : num [1:87] 77 75 32 136 49 120 75 32 84 77 ...
+##  $ hair_color: chr [1:87] "blond" NA NA "none" ...
+##  $ skin_color: chr [1:87] "fair" "gold" "white, blue" "white" ...
+##  $ eye_color : chr [1:87] "blue" "yellow" "red" "yellow" ...
+##  $ birth_year: num [1:87] 19 112 33 41.9 19 52 47 NA 24 57 ...
+##  $ sex       : chr [1:87] "male" "none" "none" "male" ...
+##  $ gender    : chr [1:87] "masculine" "masculine" "masculine" "masculine" ...
+##  $ homeworld : chr [1:87] "Tatooine" "Tatooine" "Naboo" "Tatooine" ...
+##  $ species   : chr [1:87] "Human" "Droid" "Droid" "Human" ...
+##  $ films     :List of 87
+##   ..$ : chr [1:5] "The Empire Strikes Back" "Revenge of the Sith" "Return of the Jedi" "A New Hope" ...
+##   ..$ : chr [1:6] "The Empire Strikes Back" "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith" ...
+##   ..$ : chr [1:7] "The Empire Strikes Back" "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith" ...
+##   ..$ : chr [1:4] "The Empire Strikes Back" "Revenge of the Sith" "Return of the Jedi" "A New Hope"
+##   ..$ : chr [1:5] "The Empire Strikes Back" "Revenge of the Sith" "Return of the Jedi" "A New Hope" ...
+##   ..$ : chr [1:3] "Attack of the Clones" "Revenge of the Sith" "A New Hope"
+##   ..$ : chr [1:3] "Attack of the Clones" "Revenge of the Sith" "A New Hope"
+##   ..$ : chr "A New Hope"
+##   ..$ : chr "A New Hope"
+##   ..$ : chr [1:6] "The Empire Strikes Back" "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith" ...
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:2] "Revenge of the Sith" "A New Hope"
+##   ..$ : chr [1:5] "The Empire Strikes Back" "Revenge of the Sith" "Return of the Jedi" "A New Hope" ...
+##   ..$ : chr [1:4] "The Empire Strikes Back" "Return of the Jedi" "A New Hope" "The Force Awakens"
+##   ..$ : chr "A New Hope"
+##   ..$ : chr [1:3] "The Phantom Menace" "Return of the Jedi" "A New Hope"
+##   ..$ : chr [1:3] "The Empire Strikes Back" "Return of the Jedi" "A New Hope"
+##   ..$ : chr "A New Hope"
+##   ..$ : chr [1:5] "The Empire Strikes Back" "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith" ...
+##   ..$ : chr [1:5] "The Empire Strikes Back" "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith" ...
+##   ..$ : chr [1:3] "The Empire Strikes Back" "Attack of the Clones" "Return of the Jedi"
+##   ..$ : chr "The Empire Strikes Back"
+##   ..$ : chr "The Empire Strikes Back"
+##   ..$ : chr [1:2] "The Empire Strikes Back" "Return of the Jedi"
+##   ..$ : chr "The Empire Strikes Back"
+##   ..$ : chr [1:2] "Return of the Jedi" "The Force Awakens"
+##   ..$ : chr "Return of the Jedi"
+##   ..$ : chr "Return of the Jedi"
+##   ..$ : chr "Return of the Jedi"
+##   ..$ : chr "Return of the Jedi"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:2] "Attack of the Clones" "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:2] "Attack of the Clones" "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:2] "Attack of the Clones" "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "Return of the Jedi"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:2] "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:2] "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:2] "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##   ..$ : chr [1:2] "Attack of the Clones" "The Phantom Menace"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "The Phantom Menace"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr "Attack of the Clones"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr "Revenge of the Sith"
+##   ..$ : chr "Revenge of the Sith"
+##   ..$ : chr [1:2] "Revenge of the Sith" "A New Hope"
+##   ..$ : chr [1:2] "Attack of the Clones" "Revenge of the Sith"
+##   ..$ : chr "Revenge of the Sith"
+##   ..$ : chr "The Force Awakens"
+##   ..$ : chr "The Force Awakens"
+##   ..$ : chr "The Force Awakens"
+##   ..$ : chr "The Force Awakens"
+##   ..$ : chr "The Force Awakens"
+##   ..$ : chr [1:3] "Attack of the Clones" "The Phantom Menace" "Revenge of the Sith"
+##  $ vehicles  :List of 87
+##   ..$ : chr [1:2] "Snowspeeder" "Imperial Speeder Bike"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Imperial Speeder Bike"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Tribubble bongo"
+##   ..$ : chr [1:2] "Zephyr-G swoop bike" "XJ-6 airspeeder"
+##   ..$ : chr(0) 
+##   ..$ : chr "AT-ST"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Snowspeeder"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Tribubble bongo"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Sith speeder"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Flitknot speeder"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Koro-2 Exodrive airspeeder"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Tsmeu-6 personal wheel bike"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##  $ starships :List of 87
+##   ..$ : chr [1:2] "X-wing" "Imperial shuttle"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "TIE Advanced x1"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "X-wing"
+##   ..$ : chr [1:5] "Jedi starfighter" "Trade Federation cruiser" "Naboo star skiff" "Jedi Interceptor" ...
+##   ..$ : chr [1:3] "Trade Federation cruiser" "Jedi Interceptor" "Naboo fighter"
+##   ..$ : chr(0) 
+##   ..$ : chr [1:2] "Millennium Falcon" "Imperial shuttle"
+##   ..$ : chr [1:2] "Millennium Falcon" "Imperial shuttle"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "X-wing"
+##   ..$ : chr "X-wing"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Slave 1"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Millennium Falcon"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "A-wing"
+##   ..$ : chr(0) 
+##   ..$ : chr "Millennium Falcon"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Naboo Royal Starship"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Scimitar"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Jedi starfighter"
+##   ..$ : chr(0) 
+##   ..$ : chr "Naboo fighter"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "Belbullab-22 starfighter"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr "T-70 X-wing fighter"
+##   ..$ : chr(0) 
+##   ..$ : chr(0) 
+##   ..$ : chr [1:3] "H-type Nubian yacht" "Naboo star skiff" "Naboo fighter"
+```
+
+or....
+
+---
+
+Using `glimpse`
+
+```r
+glimpse(starwars)
+```
+
+```
+## Rows: 87
+## Columns: 14
+## $ name       &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vad…
+## $ height     &lt;int&gt; 172, 167, 96, 202, 150, 178, 165, 97, 183, 182…
+## $ mass       &lt;dbl&gt; 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32…
+## $ hair_color &lt;chr&gt; "blond", NA, NA, "none", "brown", "brown, grey…
+## $ skin_color &lt;chr&gt; "fair", "gold", "white, blue", "white", "light…
+## $ eye_color  &lt;chr&gt; "blue", "yellow", "red", "yellow", "brown", "b…
+## $ birth_year &lt;dbl&gt; 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA,…
+## $ sex        &lt;chr&gt; "male", "none", "none", "male", "female", "mal…
+## $ gender     &lt;chr&gt; "masculine", "masculine", "masculine", "mascul…
+## $ homeworld  &lt;chr&gt; "Tatooine", "Tatooine", "Naboo", "Tatooine", "…
+## $ species    &lt;chr&gt; "Human", "Droid", "Droid", "Human", "Human", "…
+## $ films      &lt;list&gt; [&lt;"The Empire Strikes Back", "Revenge of the …
+## $ vehicles   &lt;list&gt; [&lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;…
+## $ starships  &lt;list&gt; [&lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE…
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+---
+
+## Frequencies
 
 
 ```r
-afc_north 
+starwars %&gt;%
+  count(sex)
 ```
 
 ```
-## # A tibble: 12 x 3
-##    Event                                                    Division `Avg TP, $`
-##    &lt;chr&gt;                                                    &lt;chr&gt;          &lt;dbl&gt;
-##  1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-N… AFC Nor…         202
-##  2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-S… AFC Nor…         199
-##  3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-S… AFC Nor…         196
-##  4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28… AFC Nor…         164
-##  5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-O… AFC Nor…         148
-##  6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-… AFC Nor…         137
-##  7 Cincinnati Bengals at Baltimore Ravens Tickets on 07-Se… AFC Nor…         135
-##  8 Cleveland Browns at Cincinnati Bengals Tickets on 06-No… AFC Nor…         102
-##  9 Pittsburgh Steelers at Cincinnati Bengals Tickets on 07… AFC Nor…          89
-## 10 Baltimore Ravens at Cleveland Browns Tickets on 21-Sep-… AFC Nor…          83
-## 11 Baltimore Ravens at Cincinnati Bengals Tickets on 26-Oc… AFC Nor…          83
-## 12 Cincinnati Bengals at Cleveland Browns Tickets on 14-De… AFC Nor…          81
+## # A tibble: 5 x 2
+##   sex                n
+##   &lt;chr&gt;          &lt;int&gt;
+## 1 female            16
+## 2 hermaphroditic     1
+## 3 male              60
+## 4 none               6
+## 5 &lt;NA&gt;               4
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+---
+
+## Measures of Central Tendency
+**Mean**
+
+```r
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(mean(birth_year)) %&gt;%
+  rename(`mean age by species` = `mean(birth_year)`) %&gt;%
+  ungroup()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 11 x 2
+##    species      `mean age by species`
+##    &lt;chr&gt;                        &lt;dbl&gt;
+##  1 Cerean                        92  
+##  2 Ewok                           8  
+##  3 Gungan                        52  
+##  4 Human                         45.5
+##  5 Kel Dor                       22  
+##  6 Mirialan                      49  
+##  7 Mon Calamari                  41  
+##  8 Trandoshan                    53  
+##  9 Twi'lek                       48  
+## 10 Wookiee                      200  
+## 11 Zabrak                        54
 ```
 
 ---
 
-## AFC North
+### Side Note: Using Base R vs. Tidy
+
+Either is fine but think about the outcome and what you're going to do with it. Let's take the `mean` again with a fake data set from taste test ratings using two varieties of bananas: cavendish and ice cream.
 
 
 ```r
-hist(afc_north$`Avg TP, $`)
+banana_data &lt;- tibble(
+  id = c(1,2,3,4,5),
+  cav_cat = c("Excellent", "Above Average", "Very Poor", "Average", 
+              "Excellent"),
+  cav_code = c(5,4,1,3,5),
+  ic_cat = c("Excellent", "Excellent", "Above Average", "Excellent", 
+             "Excellent"), 
+  ic_code = c(5,5,4,5,5)
+)
 ```
 
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-10-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+.pull-right[.footnote[If you are wondering, the blue java - aka the [ice cream banana](https://www.abc15.com/news/state/planet-arizona-blue-bananas-exist-and-they-taste-like-vanilla-ice-cream) is real.]]
 
 ---
 
-## AFC East: 
-
-
 ```r
-hist(afc_east$`Avg TP, $`)
+banana_data
 ```
 
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-11-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+```
+## # A tibble: 5 x 5
+##      id cav_cat       cav_code ic_cat        ic_code
+##   &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
+## 1     1 Excellent            5 Excellent           5
+## 2     2 Above Average        4 Excellent           5
+## 3     3 Very Poor            1 Above Average       4
+## 4     4 Average              3 Excellent           5
+## 5     5 Excellent            5 Excellent           5
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
 
 ---
 
-## AFC West: 
-
-
-```r
-hist(afc_west$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-12-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## AFC South: 
-
-
+If we just wanted to find the means, then the Base R method is likely simpler
 
 ```r
-hist(afc_south$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-13-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## NFC North: 
-
-
-
-```r
-hist(nfc_north$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-14-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## NFC East: 
-
-&lt;center&gt;
-
-```r
-hist(nfc_east$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-15-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## NFC West: 
-
-&lt;center&gt;
-
-```r
-hist(nfc_west$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-16-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## NFC South: 
-
-
-```r
-hist(nfc_south$`Avg TP, $`)
-```
-
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-17-1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-
-## AFC: 
-
-
-```r
-median(afc_north$`Avg TP, $`, na.rm = TRUE)
+mean(banana_data$cav_code)
 ```
 
 ```
-## [1] 136
+## [1] 3.6
 ```
 
 
 ```r
-median(afc_east$`Avg TP, $`, na.rm = TRUE)
+mean(banana_data$ic_code)
 ```
 
 ```
-## [1] 115
+## [1] 4.8
 ```
 
-
-```r
-median(afc_west$`Avg TP, $`, na.rm = TRUE)
-```
-
-```
-## [1] 105.5
-```
-
+but if we wanted to pass that output along say to find the range of the means, the Tidy way is a simpler and more efficient approach
 
 ```r
-median(afc_south$`Avg TP, $`, na.rm = TRUE)
+banana_data %&gt;%
+  summarise(mean_cav = mean(cav_code), 
+            mean_ic = mean(ic_code)) %&gt;%
+  mutate(range_means = mean_ic - mean_cav)
 ```
 
 ```
-## [1] 70
+## # A tibble: 1 x 3
+##   mean_cav mean_ic range_means
+##      &lt;dbl&gt;   &lt;dbl&gt;       &lt;dbl&gt;
+## 1      3.6     4.8        1.20
 ```
 
 ---
 
-## NFC
-
-
-```r
-median(nfc_north$`Avg TP, $`, na.rm = TRUE)
-```
-
-```
-## [1] 164.5
-```
-
+**Median**
 
 ```r
-median(nfc_east$`Avg TP, $`, na.rm = TRUE)
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(median(birth_year)) %&gt;%
+  rename(`median age by species` = `median(birth_year)`) %&gt;%
+  ungroup()
 ```
 
 ```
-## [1] 172.5
-```
-
-
-```r
-median(nfc_west$`Avg TP, $`, na.rm = TRUE)
+## `summarise()` ungrouping output (override with `.groups` argument)
 ```
 
 ```
-## [1] 185.5
-```
-
-
-```r
-median(nfc_south$`Avg TP, $`, na.rm = TRUE)
-```
-
-```
-## [1] 78.5
+## # A tibble: 11 x 2
+##    species      `median age by species`
+##    &lt;chr&gt;                          &lt;dbl&gt;
+##  1 Cerean                          92  
+##  2 Ewok                             8  
+##  3 Gungan                          52  
+##  4 Human                           41.9
+##  5 Kel Dor                         22  
+##  6 Mirialan                        49  
+##  7 Mon Calamari                    41  
+##  8 Trandoshan                      53  
+##  9 Twi'lek                         48  
+## 10 Wookiee                        200  
+## 11 Zabrak                          54
 ```
 
 ---
 
-## 3. How likely was it be for a fan of an AFC North team to play $100 for a ticket during the 2014-2015 NFL season?
-
-
-```r
-x = 100
-mu_afc_north = mean(afc_north$`Avg TP, $`)
-sigma_afc_north = sd(afc_north$`Avg TP, $`)
-```
-
+**Mode** &lt;br&gt;&lt;br&gt;
+Remember that `mode` means something else in R. Instead first run the chunk below
 
 ```r
-z_score_afc_north = (x - mu_afc_north)/sigma_afc_north
-z_score_afc_north
+Mode &lt;- function(x) {
+  ux &lt;- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
 ```
 
-```
-## [1] -0.7346414
-```
-
-```r
-pnorm(z_score_afc_north)
-```
-
-```
-## [1] 0.231279
-```
-
-
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
 ---
 
-
-
-```r
-mu_afc_north
-```
-
-```
-## [1] 134.9167
-```
+Then you can find the `Mode`
 
 ```r
-pnorm(x, mu_afc_north, sigma_afc_north)
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(Mode(birth_year)) %&gt;%
+  rename(`mode age by species` = `Mode(birth_year)`) %&gt;%
+  ungroup()
 ```
 
 ```
-## [1] 0.231279
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 11 x 2
+##    species      `mode age by species`
+##    &lt;chr&gt;                        &lt;dbl&gt;
+##  1 Cerean                          92
+##  2 Ewok                             8
+##  3 Gungan                          52
+##  4 Human                           19
+##  5 Kel Dor                         22
+##  6 Mirialan                        58
+##  7 Mon Calamari                    41
+##  8 Trandoshan                      53
+##  9 Twi'lek                         48
+## 10 Wookiee                        200
+## 11 Zabrak                          54
 ```
 
 ---
 
+**Mean by Value**
+Sometimes you need to find a measure for a particular subgroup. In this example, we only want to find the birth year for the female classification of each species. One way to accomplish this is to use the `filter` command to get what we want. 
 
 ```r
-pnormGC(x, 
-        region = "below",
-        mean = mu_afc_north,
-        sd = sigma_afc_north,
-        graph = TRUE)
+starwars %&gt;%
+  filter(gender == "feminine") %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(mean(birth_year)) %&gt;%
+  rename(`female mean age by species` = `mean(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit()
 ```
 
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-29-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
 
 ```
-## [1] 0.231279
+## # A tibble: 3 x 2
+##   species  `female mean age by species`
+##   &lt;chr&gt;                           &lt;dbl&gt;
+## 1 Human                            37.3
+## 2 Mirialan                         49  
+## 3 Twi'lek                          48
 ```
 
 ---
 
+## Measures of Spread
+**Sample Standard Deviation**
 
 ```r
-ggplot(afc_north, aes(x = str_wrap(Event, 30), y = `Avg TP, $`, fill = `Avg TP, $`)) +
-  geom_col(show.legend = FALSE) +
-  geom_hline(aes(yintercept = median(`Avg TP, $`)), color = "#ee4035", size = 2, alpha = 0.5) +
-  geom_hline(aes(yintercept = mean(`Avg TP, $`)), color = "#0392cf", size = 2, alpha = 0.5) +
-  scale_fill_gradient(low = "#e5c3c6", high ="#bcd2d0") +
-  ggtitle("Histogram of Average AFC North Ticket Prices by Event") +
-  xlab("Event") +
-  ylab("Price") +
-  theme_minimal()  +
-  theme(axis.text.x = element_text(angle = 90),
-        panel.grid.major.x = element_blank(),
-        panel.grid.minor = element_blank())
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(sd(birth_year)) %&gt;%
+  rename(`age standard deviation by species` = `sd(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit()
 ```
 
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-30-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 2 x 2
+##   species  `age standard deviation by species`
+##   &lt;chr&gt;                                  &lt;dbl&gt;
+## 1 Human                                   23.1
+## 2 Mirialan                                12.7
+```
 
 ---
 
-&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-31-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+**Population Standard Deviation**&lt;br&gt;&lt;br&gt;
+Reflecting common assumptions and practice, most descriptive statistics in R do not assume that you have an entire population. So you should ***always assume that you have a sample unless the description explicitly says otherwise***. When you do come across with a population, run the following first
+
+```r
+pop_sd &lt;- function(x) sd(x) * (length(x)-1) / length(x)
+```
+
+and then calculate the population standard deviation
+
+```r
+starwars %&gt;%
+ group_by(species) %&gt;%
+ na.omit() %&gt;%
+ summarise(pop_sd(birth_year)) %&gt;%
+ rename(`age standard deviation by species` = `pop_sd(birth_year)`) %&gt;%
+ ungroup() %&gt;%
+ na.omit()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 2 x 2
+##   species  `age standard deviation by species`
+##   &lt;chr&gt;                                  &lt;dbl&gt;
+## 1 Human                                  21.8 
+## 2 Mirialan                                6.36
+```
+
+---
+
+**Sample Variance**
+
+```r
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(var(birth_year)) %&gt;%
+  rename(`age variance by species` = `var(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 2 x 2
+##   species  `age variance by species`
+##   &lt;chr&gt;                        &lt;dbl&gt;
+## 1 Human                         533.
+## 2 Mirialan                      162
+```
+&lt;br&gt;
+.pull-right[.footnote[You can find a list of commands that may be used with `summarise` [here](https://www.guru99.com/r-aggregate-function.html)]]
+
+---
+
+**Population Variance**&lt;br&gt;&lt;br&gt;
+Paralleling the arguement given about the population standard deviation, when you have a known population and want to find the varaince, first run
+
+```r
+pop_var &lt;- function(x) var(x) * (length(x)-1) / length(x)
+```
+
+and then you can calculate the population variance
+
+```r
+starwars %&gt;%
+ group_by(species) %&gt;%
+ na.omit() %&gt;%
+ summarise(pop_var(birth_year)) %&gt;%
+ rename(`age variance by species` = `pop_var(birth_year)`) %&gt;%
+ ungroup() %&gt;%
+ na.omit()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 2 x 2
+##   species  `age variance by species`
+##   &lt;chr&gt;                        &lt;dbl&gt;
+## 1 Human                         504.
+## 2 Mirialan                       81
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+
+---
+
+### Side Note: More about Summarise
+
+You can find a list of commands that may be used with `summarise` [here](https://www.guru99.com/r-aggregate-function.html)
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;]
+
+---
+
+# Range
+**Maximum**
+
+```r
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(max(birth_year)) %&gt;%
+  rename(`maximum age by species` = `max(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 11 x 2
+##    species      `maximum age by species`
+##    &lt;chr&gt;                           &lt;dbl&gt;
+##  1 Cerean                             92
+##  2 Ewok                                8
+##  3 Gungan                             52
+##  4 Human                             102
+##  5 Kel Dor                            22
+##  6 Mirialan                           58
+##  7 Mon Calamari                       41
+##  8 Trandoshan                         53
+##  9 Twi'lek                            48
+## 10 Wookiee                           200
+## 11 Zabrak                             54
+```
+
+---
+
+**Minimum**
+
+```r
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(min(birth_year)) %&gt;%
+  rename(`minimum age by species` = `min(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit()
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 11 x 2
+##    species      `minimum age by species`
+##    &lt;chr&gt;                           &lt;dbl&gt;
+##  1 Cerean                             92
+##  2 Ewok                                8
+##  3 Gungan                             52
+##  4 Human                              19
+##  5 Kel Dor                            22
+##  6 Mirialan                           40
+##  7 Mon Calamari                       41
+##  8 Trandoshan                         53
+##  9 Twi'lek                            48
+## 10 Wookiee                           200
+## 11 Zabrak                             54
+```
+
+---
+
+**Range**
+
+```r
+starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(max(birth_year), min(birth_year)) %&gt;%
+  rename(`max` = `max(birth_year)`) %&gt;%
+  rename(`min` = `min(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  na.omit() %&gt;%
+  mutate(`age range by species` = max - min) 
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+```
+## # A tibble: 11 x 4
+##    species        max   min `age range by species`
+##    &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                  &lt;dbl&gt;
+##  1 Cerean          92    92                      0
+##  2 Ewok             8     8                      0
+##  3 Gungan          52    52                      0
+##  4 Human          102    19                     83
+##  5 Kel Dor         22    22                      0
+##  6 Mirialan        58    40                     18
+##  7 Mon Calamari    41    41                      0
+##  8 Trandoshan      53    53                      0
+##  9 Twi'lek         48    48                      0
+## 10 Wookiee        200   200                      0
+## 11 Zabrak          54    54                      0
+```
+.rleft[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5bc0de;" viewBox="0 0 384 512"&gt;&lt;path d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"/&gt;&lt;/svg&gt;]
+
+---
+
+# Plots
+
+We'll use the sample mean age for all of the species
+
+```r
+starwars_by_species &lt;- starwars %&gt;%
+  group_by(species) %&gt;%
+  na.omit() %&gt;%
+  summarise(mean(birth_year)) %&gt;%
+  rename(`mean age by species` = `mean(birth_year)`) %&gt;%
+  ungroup() %&gt;%
+  arrange(`mean age by species`)
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+---
+
+### Side Note: R Graph Gallery 
+
+Want some inspiration or just want to copy code? Good! Head over to [The R Graph Gallery](https://www.r-graph-gallery.com/) to see some examples of basic visualizations and plots you can do in R right now.
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;]
+
+---
+
+## Bar Plot
+
+```r
+ggplot(starwars_by_species, aes(x = species, 
+                                y = `mean age by species`, 
+                                fill = `mean age by species`)) +
+  geom_bar(stat='identity') +
+  scale_fill_gradient(low = "tomato", 
+                      high = "steelblue") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-33-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Ordered Bar Plot 
+Use `reorder` to order the bars from least to greatest. 
+
+```r
+ggplot(starwars_by_species, aes(x = reorder(species, 
+                                            `mean age by species`), 
+                                y = `mean age by species`, 
+                                fill = `mean age by species`)) +
+       geom_bar(stat='identity') +
+       scale_fill_gradient(low = "tomato", 
+                           high = "steelblue") +
+       theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-34-1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Side Note: The Other Direction
+Want greatest to least? Stick a `-` in front of `mean age by species` within `reorder()`.
+
+```r
+ggplot(starwars_by_species, aes(x = reorder(species, 
+                                            -`mean age by species`), 
+                                y = `mean age by species`, 
+                                fill = `mean age by species`)) +
+       geom_bar(stat='identity') +
+       scale_fill_gradient(low = "tomato", 
+                           high = "steelblue") +
+       theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-35-1.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+
+---
+
+### Side Note: Using Hex Color Codes
+
+You could have used the hex color codes `#ff6347` for `tomato` and `#4682b4` for `steelblue`. 
+
+You can find more about hex colors using a web search for "hex color codes". For example, here is a [site](https://www.color-hex.com/) I use.
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;]
+
+---
+
+## Line Plot
+
+```r
+ggplot(starwars_by_species, aes(x = reorder(species, 
+                                            `mean age by species`),
+                                y = `mean age by species`,
+                                group = 1,
+                                fill = `mean age by species`)) +
+ geom_line(size = 1.5)+
+  geom_point(size = 4) +
+  scale_fill_gradient(low = "tomato", 
+                      high = "steelblue") +
+  theme_minimal()
+```
+
+&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-36-1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Pie Chart
+
+```r
+starwars_by_species_pc &lt;- starwars_by_species %&gt;%
+  arrange(desc(`mean age by species`)) %&gt;%
+  mutate(prop = `mean age by species` / 
+           sum(starwars_by_species$`mean age by species`) *100) %&gt;%
+  mutate(ypos = cumsum(prop)- 0.5*prop )
+```
+
+
+```r
+ ggplot(starwars_by_species_pc, aes(x = "", 
+                                   y = prop, 
+                                   fill = `mean age by species`)) +
+  geom_bar(stat="identity", 
+           width=1, 
+           color="white")  +
+  coord_polar("y", start = 0) +
+  geom_label(aes(y = ypos, 
+                 label = `species`), 
+             color = "white", 
+             size=6) +
+  scale_fill_gradient(low = "tomato", 
+                      high = "steelblue") +
+  theme_void()
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+&lt;img src="Slides-Week-7R_files/figure-html/unnamed-chunk-39-1.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
 

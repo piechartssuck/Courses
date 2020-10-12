@@ -38,7 +38,7 @@ Description = c("Take a look at the coding chunks page that may help you on the 
                "Is reality probabilistic or deterministic? Figure out what kind of statistical thinking you have."
                ),
 
-Location = c("[Link](/walkthroughs/chunks-1)",
+Location = c("[Link](/lesson/07-lesson/#r-walkthrough-an-incomplete-review-of-descriptive-statistics-com)",
              "[Link](/assignment/07-homeworks/#weekly-task-1)",
              "[Link](/example/07-example/)"
              )
