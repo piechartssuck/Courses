@@ -735,7 +735,7 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
     </item>
     
     <item>
-      <title>The Normal Distribution</title>
+      <title>Sampling and Sampling Distributions</title>
       <link>/due/07-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/07-due/</guid>
@@ -746,13 +746,13 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-5-after-class-ends&#34;&gt;What to do for Week 5 after class ends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-7-after-class-ends&#34;&gt;What to do for Week 7 after class ends&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-6-before-coming-to-class&#34;&gt;What to do for Week 6 before coming to class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-to-do-for-week-5-after-class-ends&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What to do for Week 5 after class ends&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div id=&#34;what-to-do-for-week-7-after-class-ends&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 7 after class ends&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -775,23 +775,10 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
+Take a look at the coding chunks page that may help you on the upcoming exam.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Go through the NFL and Pipes R walkthrough
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/walkthroughs/chunks-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -801,10 +788,23 @@ Go through the NFL and Pipes R walkthrough
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Complete problems 1, 2, 5, 6, 7, 8, 11 and 12 in Chapter 5.
+Complete problems 1, 2, 3, 4, 5, 6, 7, 8, and 9 in Chapter 6.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/05-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/07-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Is reality probabilistic or deterministic? Figure out what kind of statistical thinking you have.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/07-example/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -830,28 +830,15 @@ Location
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z&#34;&gt;&lt;/path&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 384 512&#34;&gt;
+&lt;path d=&#34;M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Read chapter 6 in the text.
+Being reviewing Chapters 1-6 and material on Data Camp/Walkthroughs for the exam.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/06-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 640 512&#34;&gt;
-&lt;path d=&#34;M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Look over the text PowerPoint and corresponding notes.
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/06-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+Everywhere
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -861,10 +848,10 @@ Look over the text PowerPoint and corresponding notes.
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+Watch videos on the differences between Bayesian and Frequentist Statistics.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/06-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

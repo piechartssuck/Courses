@@ -1,6 +1,6 @@
 ---
-title: "The Normal Distribution"
-linktitle: "Week 5: The Normal Distribution"
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 7: Sampling and Sampling Distributions"
 output:
   blogdown::html_page:
     toc: true
@@ -21,7 +21,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-### What to do for Week 5 after class ends^[For grading.]
+### What to do for Week 7 after class ends^[For grading.]
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
@@ -30,17 +30,17 @@ checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 
 wk_post <- tibble(
 "eCampus?" = c(unchecked, 
-               unchecked,
-               checked),
+               checked,
+               unchecked),
 
-Description = c("Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.",
-              "Go through the NFL and Pipes R walkthrough",
-               "Complete problems 1, 2, 5, 6, 7, 8, 11 and 12 in Chapter 5."
+Description = c("Take a look at the coding chunks page that may help you on the upcoming exam.",
+               "Complete problems 1, 2, 3, 4, 5, 6, 7, 8, and 9 in Chapter 6.",
+               "Is reality probabilistic or deterministic? Figure out what kind of statistical thinking you have."
                ),
 
-Location = c("[Link](/lesson/05-lesson/#data-camp-1)", 
-             "[Link](/walkthroughs/nfl/nflpipes/)",
-             "[Link](/assignment/05-homeworks/#weekly-task-1)"
+Location = c("[Link](/walkthroughs/chunks-1)",
+             "[Link](/assignment/07-homeworks/#weekly-task-1)",
+             "[Link](/example/07-example/)"
              )
 
 )
@@ -61,24 +61,19 @@ kable(wk_post,
 ### What to do for Week 6 before coming to class^[For preparation.]
 
 ```{r eval = TRUE, echo = FALSE}
-book <- as.character(fontawesome::fa("book", fill = "steelblue"))
-
-chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+test <- as.character(fontawesome::fa("file-alt", fill = "steelblue"))
 
 lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
 
 wk_pre <- tibble(
-Area = c(book, 
-         chalkboard, 
+Area = c(test, 
          lightbulb),
 
-Description = c("Read chapter 6 in the text.",
-               "Look over the text PowerPoint and corresponding notes.",
-               "Watch videos on Experimental Designs and Sampling Methods.^[Optional but recommended.]"),
+Description = c("Being reviewing Chapters 1-6 and material on Data Camp/Walkthroughs for the exam.",
+               "Watch videos on the differences between Bayesian and Frequentist Statistics.^[Optional but recommended.]"),
 
-Location = c("[Link](/readings/06-readings/#book-stuff-1)", 
-             "[Link](/lesson/06-lesson/#book-materials-1)",
-             "[Link](/example/06-example/#crash-course-statistics-1)")
+Location = c("Everywhere", 
+             "[Link](/example/07-example/#crash-course-statistics-1)")
 
 )
 
