@@ -33,7 +33,7 @@
   <meta name="description" content="An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Logical Operators Data Science Acknowledgements Don’t Get Bogged Down!">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/">
+  <link rel="alternate" hreflang="en-us" href="/walkthroughs/nfl/nflpipes/">
 
   
 
@@ -221,7 +221,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huabb7f9a97b9bb4abf1475269d849d021_32197_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/">
+  <link rel="canonical" href="/walkthroughs/nfl/nflpipes/">
 
   
   
@@ -239,10 +239,10 @@
   <meta property="twitter:creator" content="@piechartssuck">
   
   <meta property="og:site_name" content="Statistical Methods I">
-  <meta property="og:url" content="https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/">
+  <meta property="og:url" content="/walkthroughs/nfl/nflpipes/">
   <meta property="og:title" content="Pipes and the NFL | Statistical Methods I">
-  <meta property="og:description" content="An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Logical Operators Data Science Acknowledgements Don’t Get Bogged Down!"><meta property="og:image" content="https://edp613.theoreticalphysed.com/img/course_info.png">
-  <meta property="twitter:image" content="https://edp613.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="An Introduction to dplyr  Purpose  Objectives Packages  The Tidyverse Package Tidy Data Basics The Pipe %&gt;% Operator  Gapminder mutate() adds new variables Try These Out group_by() operates on groups summarize() with group_by() arrange() orders columns  NFL Data Set Task Logical Operators Data Science Acknowledgements Don’t Get Bogged Down!"><meta property="og:image" content="/img/course_info.png">
+  <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
     
@@ -260,18 +260,18 @@
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
 
-<link rel="shortcut icon" href="https://edp613.theoreticalphysed.com/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://edp613.theoreticalphysed.com/img/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="https://edp613.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
   <meta name="application-name" content="EDP 613: Statistical Methods I" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="https://edp613.theoreticalphysed.com/img/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
 
 
   <title>Pipes and the NFL | Statistical Methods I</title>
@@ -792,12 +792,12 @@
 <h3>Packages</h3>
 <p>Please load up the following packages</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
 ## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ───────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()</code></pre>
@@ -1156,7 +1156,7 @@ If you got it, that’s great! However, it’s absolutely fine if you did not. T
 </ol>
 <pre class="r"><code>nfl2014 &lt;- read_csv(&quot;2014-average-ticket-price.csv&quot;)</code></pre>
 <pre><code>## 
-## ── Column specification ───────────────────────────────────────────────
+## ── Column specification ──────────────────────────────────────────────────
 ## cols(
 ##   Event = col_character(),
 ##   Division = col_character(),
@@ -1297,7 +1297,7 @@ nfl2014 %&gt;%
 <p>We have to bring in the data set:</p>
 <pre class="r"><code>drinks &lt;- read_csv(&quot;drinks2010andBeyond.csv&quot;)</code></pre>
 <pre><code>## 
-## ── Column specification ───────────────────────────────────────────────
+## ── Column specification ──────────────────────────────────────────────────
 ## cols(
 ##   Country = col_character(),
 ##   `Beverage Types` = col_character(),

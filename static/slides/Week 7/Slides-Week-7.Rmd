@@ -259,7 +259,18 @@ According to the Nielsen Company, the mean number of TV sets in a U.S. household
 minimum = 2.5
 maximum = 3
 m = 2.83
+n = 85
 stdev = 1.2
+
+f <- function(x) n*x*pnorm(x)^(n-1)*dnorm(x) 
+num <- integrate(f,-Inf,Inf) 
+ci <- 2 * num$value
+
+lb <- m - ci
+ub <- m + ci
+
+ll <- round(lb)
+ul <- round(ub)
 
 ggplot(data.frame(x = c(lb, ub)), aes(x = x)) + 
   stat_function(fun = dnorm, args = list(mean = m, sd = stdev)) + 
@@ -327,7 +338,18 @@ It is estimated that the mean number of TV sets in a U.S. household in 2020 is 2
 minimum = 2.5
 maximum = 3
 m = 2.00
+n = 180
 stdev = 0.8
+
+f <- function(x) n*x*pnorm(x)^(n-1)*dnorm(x) 
+num <- integrate(f,-Inf,Inf) 
+ci <- 2 * num$value
+
+lb <- m - ci
+ub <- m + ci
+
+ll <- round(lb)
+ul <- round(ub)
 
 ggplot(data.frame(x = c(lb, ub)), aes(x = x)) + 
   stat_function(fun = dnorm, args = list(mean = m, sd = stdev)) + 

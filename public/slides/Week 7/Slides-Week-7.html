@@ -30,6 +30,12 @@ class: center, middle, inverse, title-slide
 
 
 
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
 # A Note About Probability
 
 We're going to touch on this now but come back to more of it later in the term when talking about Bayesian Statistics.
@@ -81,7 +87,7 @@ We're going to touch on this now but come back to more of it later in the term w
 
 &gt;- Assuming all outcomes are likely, the probability `\(P\)` of an event `\(E\)` can be found
 
-`$$P(E) = \frac{\mathrm{Number\,\,of\,\,times\,\,an\,\,event\,\,will\,\,happen}}{\mathrm{Total\,\, number of\,\,events}}$$`
+`$$P(E) = \frac{\mathrm{Number\,\,of\,\,times\,\,an\,\,event\,\,will\,\,happen}}{\mathrm{Total\,\,number\,\,of\,\,events}}$$`
 ---
 
 ## Example
@@ -90,7 +96,7 @@ We're going to touch on this now but come back to more of it later in the term w
 
 --
 
-&gt;- (a) The sample space of event $E = $ six sided dice is rolled is `\(P(E)=\{1,2,3,4,5,6\}\)`
+&gt;- (a) The sample space of event `\(E=\)` six sided dice is rolled is `\(P(E)=\{1,2,3,4,5,6\}\)`
 
 --
 
@@ -121,7 +127,7 @@ P(&lt;3)&amp;=P(1)+P(2)\\\\
 
 ### Note: Reducing Fractions
 
-&gt;- Rule: *Always reduce your fractions*
+&gt;- The Annoying Rule: *Always reduce your fractions*
 
 --
 
@@ -276,11 +282,10 @@ It is estimated that the mean number of TV sets in a U.S. household in 2020 is 2
 &lt;br&gt;
 &lt;li&gt;We have z-scores 
 `\begin{eqnarray*}
-z&amp;=&amp;\dfrac{3-2.00}{0.130158}\\
+z&amp;=&amp;\dfrac{3-2.00}{0.059628}\\
 &amp;\approx&amp;16.77
 \end{eqnarray*}`
-`\begin{eqnarray*}
-z&amp;=&amp;\dfrac{2.5-2.00}{0.130158}\\
+z&amp;=&amp;\dfrac{2.5-2.00}{0.059628}\\
 &amp;\approx&amp;8.38
 \end{eqnarray*}`
 &lt;/li&gt;
@@ -297,17 +302,12 @@ pnorm(16.77) - pnorm(8.38)
 ## [1] 0
 ```
 
-R tells us that this is `\(0.8994\)`. So there is nearly a 0% chance that a random household has between 2.5 and 3 TVs in 2020.
+R tells us that this is `\(0\)`. So there is nearly a 0% chance that a random household has between 2.5 and 3 TVs in 2020.
 
----
- 
-    &lt;img src="Slides-Week-7_files/figure-html/unnamed-chunk-7-1.png" width="40%" /&gt;
- 
- 
 
 ---
 
-## That's it for sampling today! Let's take a break before R.
+## That's it for sampling today!
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
