@@ -1,0 +1,27 @@
+---
+title: "Getting to Know the Complex Sample Design"
+linktitle: "Week 9: Getting to Know the Complex Sample Design"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 2
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+You may recall a prerequisite for this course was one semester of graduate statistics. Since many of you used SPSS or some other GUI based statistical software, the documents below were purposely chosen to help in a review process. The skills outlined below reflect much of what is taught in a traditional introductory statistics course and are necessary to understand the remaining content. Starting next week, we begin learning additional approaches that are used in survey analysis. 
+
+- Read/review [Chapter 6: Univariate Statistics](/chapters/QMSS6.pdf){target="_blank"} in Stockemer
+- Read/review [Chapter 7: Bivariate Statistics with Categorical Variables](/chapters/QMSS7.pdf){target="_blank"} in Stockemer
+- Read/review [Chapter 8: Bivariate Relationships Featuring Two
+Continuous Variables](/chapters/QMSS8.pdf){target="_blank"} in Stockemer
+
+
+
+

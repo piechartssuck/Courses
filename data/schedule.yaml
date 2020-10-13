@@ -60,3 +60,19 @@ lessons:
     lesson: "07-lesson"
     example: "07-example"
     due: "07-due"
+
+  - title: 'Ordering Questions and Testing for Question Order Effects'
+    session: 8
+    date: "October 11, 2020"
+    readings: "08-readings"
+    lesson: "08-lesson"
+    due: "08-due"
+
+  - title: 'Getting to Know the Complex Sample Design'
+    session: 9
+    date: "October 18, 2020"
+    readings: "09-readings"
+    lesson: "09-lesson"
+    example: "09-example"
+    assignment: "09-assignment"
+    due: "09-due"

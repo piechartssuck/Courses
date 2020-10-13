@@ -64,6 +64,6 @@ kable(wk_post,
 
 ### Things coming up
 
-- [Data Camp modules](/lesson/08-lesson/#data-camp-1).
+- [Data Camp modules](/lesson/08-lesson/#data-camp-1){target="_blank"}.
 
 

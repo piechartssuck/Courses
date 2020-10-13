@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Examples | Survey Research Methods</title>
-    <link>/example/</link>
-      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/example/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Examples</title>
-      <link>/example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/example/01-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/01-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/01-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -35,11 +35,11 @@
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>/example/03-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/03-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/03-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/03-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -55,7 +55,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;try-it-out&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Try it out&lt;/h4&gt;
@@ -64,7 +64,7 @@
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;p&gt;&lt;em&gt;Note: If the link for Atom is not working, please use this &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -81,11 +81,11 @@
     
     <item>
       <title>How to Write Open- and Closed-Ended Questions</title>
-      <link>/example/05-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/05-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/05-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/05-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -101,12 +101,12 @@
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;/snippets/qualtrics_plug.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/qualtrics_plug.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -122,11 +122,11 @@
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>/example/06-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/06-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/06-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/06-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -143,21 +143,21 @@
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;/files/Week%206/Qualtrics_API.R&#34;&gt;Qualtrics_API.R&lt;/a&gt; script&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%206/Qualtrics_API.R&#34;&gt;Qualtrics_API.R&lt;/a&gt; script&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;An open text file to copy and keep ID numbers securely.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-i---gathering-ids&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part I - Gathering IDs&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/QualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/QualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-ii---using-r-to-access-qualtrics&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part II - Using R to Access Qualtrics&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -179,11 +179,11 @@
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>/example/07-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/07-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/07-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/07-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -201,23 +201,23 @@
 &lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Please download the following files and save them in a single folder&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes_functions.R&#34;&gt;likert_colorpalettes_functions.R&lt;/a&gt; script.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes.R&#34;&gt;likert_colorpalettes.R&lt;/a&gt; script.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;text_box_size&lt;/a&gt; text file.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/snippets/vertical_mc_spacing.txt&#34;&gt;vertical_mc_spacing&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/exscripts/likert_colorpalettes_functions.R&#34;&gt;likert_colorpalettes_functions.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/exscripts/likert_colorpalettes.R&#34;&gt;likert_colorpalettes.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;text_box_size&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/vertical_mc_spacing.txt&#34;&gt;vertical_mc_spacing&lt;/a&gt; text file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-i---spacing&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part I - Spacing&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-ii---colors&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part II - Colors&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_colors/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_colors/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -226,7 +226,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;Color Hex&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://uigradients.com/&#34; target=&#34;_blank&#34;&gt;uiGradients&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/resource/design/&#34; target=&#34;_blank&#34;&gt;EDP 693 Resources page for Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/resource/design/&#34; target=&#34;_blank&#34;&gt;EDP 693 Resources page for Design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -241,11 +241,11 @@
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>/example/08-example/</link>
+      <link>https://edp619.theoreticalphysed.com/example/08-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/08-example/</guid>
+      <guid>https://edp619.theoreticalphysed.com/example/08-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -263,7 +263,7 @@
 &lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Please download the following files and unzip them for reference&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthroughs&#34; class=&#34;section level4&#34;&gt;
@@ -271,7 +271,7 @@
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Posting by Wednesday&lt;/em&gt;&lt;/strong&gt;
 &lt;!--
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
 &lt;/center&gt;
 --&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -280,6 +280,152 @@
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You may have to right click and download it depending on your browser settings.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting to Know the Complex Sample Design</title>
+      <link>https://edp619.theoreticalphysed.com/example/09-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp619.theoreticalphysed.com/example/09-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#administering-your-survey&#34;&gt;Administering Your Survey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#an-overlooked-yet-extremely-important-option&#34;&gt;An Overlooked Yet Extremely Important Option&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;administering-your-survey&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Administering Your Survey&lt;/h3&gt;
+&lt;div id=&#34;synopsis&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Synopsis&lt;/h4&gt;
+&lt;p&gt;The choices given in Qualtrics can seem daunting in one instance but limited in another. Even when intending to administer a final survey, the options can be overwhelming. This week we look less at tweaking the survey platform to learn more about the delivery process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;read&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Read&lt;/h4&gt;
+&lt;p&gt;Familiarize yourself with the Qualtrics &lt;a href=&#34;https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/&#34; target=&#34;_blank&#34;&gt;Distributions&lt;/a&gt; options.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Please download the following example files and unzip them. They are optional templates for the solicitations and gratitude sections outlined below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;planning&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Planning&lt;/h4&gt;
+&lt;p&gt;The typical open period of a survey lasts &lt;strong&gt;two weeks&lt;/strong&gt; with each of the following processes automated:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Opening day/time: &lt;strong&gt;8am&lt;/strong&gt; on a &lt;strong&gt;Tuesday&lt;/strong&gt;. If you have respondents scattered across time zones, then this should align with the &lt;strong&gt;&lt;em&gt;latest&lt;/em&gt;&lt;/strong&gt; 8am. For example, a survey initiated from the Central time zone across the US would technically begin at 7am CST to account for the Eastern Time Zone.&lt;/li&gt;
+&lt;li&gt;Initial solicitation: Sent on the same &lt;strong&gt;Tuesday&lt;/strong&gt; within 15-30 minutes of the opening time. This is purely intended to give you a cushion for last last minute fixes and changes. Those unfamiliar with Qualtrics will benefit from having the maximum of extra time simply due to the complexity associated with the software.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Opening day/time: &lt;strong&gt;11:59pm&lt;/strong&gt; on the second &lt;strong&gt;Tuesday&lt;/strong&gt;. Again, if you have respondents scattered across time zones, then this should align with the &lt;strong&gt;&lt;em&gt;earliest&lt;/em&gt;&lt;/strong&gt; 8am. For example, a survey initiated from the Central time zone across the US would technically end at 8am HAST to account for the Hawaii-Aleutian Standard Time Zone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The process below is recommended and tends to &lt;em&gt;walk the line&lt;/em&gt; between a lack of and too many reminders. However please use your best judgment.&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Days
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Reasoning
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+-7 to -3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Typically administered three to seven days prior to the initial solicitation, groups that may not be aware of a forthcoming survey are sent a priori information.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Suprising potential respondents can reduce response rates. If you feel that members of your sample could benefit from a &lt;em&gt;heads up&lt;/em&gt;, then please generate a &lt;strong&gt;simple one paragraph&lt;/strong&gt; description informing them of (1) the upcoming online opportunity, (2) the purpose of the survey, and (3) when they will be recieving it.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Initial solicitation adminsitered.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Respondents tend to avoid optional tasks on Mondays and are traditionally less likely to participate after noon on Wednesdays. This leaves only Tuesday as the optial day per week to send a survey.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+First follow-up reminder administered
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+A majority of your respondents will typically participate within the first six days. Providing a reminder on the seventh day often yields an additional responses from those who initially wanted to participate, but simply forgot.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Second follow-up reminder administered
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Known as &lt;em&gt;the small bump&lt;/em&gt;, this follow up solicitation is primarily intended for those individuals who may be undecided about participating. You may or may not observe any additional responses and even if you do, they will likely be minimal.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+14
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Final follow-up reminder administered
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Assuming a closing time of 11:59PM, this final notice is administered at the earliest 8am to allow for responses from those in your sample who tend to complete tasks at the last minute. You may or may not observe any additional responses and the frequency is often dependent on the characteristics of your sampling frame.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
++1 to +3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Typically administered one to three days after the closing of a survey, those who participated are sent a letter of gratitude.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+In most cases respondents are participating without any amenities - ergo they are doing you a favor. Even if you never intend to survey any of these indivdiuals again, ending a data collection period with a simple gratitude can and often does have lasting ramifications. You simply never know when individuals in your sample could be helpful in the future. The term &lt;em&gt;never burn your bridges&lt;/em&gt; is synonymous with this task.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;an-overlooked-yet-extremely-important-option&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;An Overlooked Yet Extremely Important Option&lt;/h3&gt;
+Please make sure that you also look over the Survey Options tab before distribution! It is considered to be the heart of your instrument that allows different parts of Qualtrics to interact with each other.
+&lt;center&gt;
+&lt;img src=&#34;https://edp619.theoreticalphysed.com/img/examples/SurveyOptions.png&#34; title=&#34;fig:&#34; style=&#34;width:70.0%&#34; alt=&#34;Survey Options&#34; /&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You may have to right click and download it depending on your browser settings.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Remember once your survey has populated, that’s it! Tweaking it afterwards can lead to measurement errors or even a collapse of instrumentation. If you absolutely must amend an item and need advice, please contact me.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

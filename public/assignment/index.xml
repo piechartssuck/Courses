@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Assignments | Survey Research Methods</title>
-    <link>/assignment/</link>
-      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp619.theoreticalphysed.com/assignment/</link>
+      <atom:link href="https://edp619.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>/assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/</link>
     </image>
     
     <item>
       <title>What is a Data Camp?</title>
-      <link>/assignment/datacamp-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/datacamp-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/datacamp-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/datacamp-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
+&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
 &lt;center&gt;
-&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp619.theoreticalphysed.com/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 </description>
     </item>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/assignment/01-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/01-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/01-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -60,10 +60,10 @@
 &lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
 This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
 &lt;center&gt;
-&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
+&lt;img src=&#34;https://edp619.theoreticalphysed.com/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
 &lt;/center&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Now download the &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
@@ -84,11 +84,11 @@ This week you have nothing to turn in but there is still something to do! First 
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>/assignment/02-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/02-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/02-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -99,7 +99,7 @@ This week you have nothing to turn in but there is still something to do! First 
 
 &lt;div id=&#34;mulling-bad-survey-questions-solutions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Mulling Bad Survey Questions Solutions&lt;/h3&gt;
-&lt;p&gt;To follow up from last week, look over the possible solutions to the &lt;a href=&#34;/files/Week%202/Bad_Questions_Solutions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions document&lt;/a&gt;. If you found something that you disagree with or believe you’ve found a more egregious error, drop me a line.&lt;/p&gt;
+&lt;p&gt;To follow up from last week, look over the possible solutions to the &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%202/Bad_Questions_Solutions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions document&lt;/a&gt;. If you found something that you disagree with or believe you’ve found a more egregious error, drop me a line.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;qualtrics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Qualtrics&lt;/h3&gt;
@@ -107,14 +107,14 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;li&gt;Download the following:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/An_Introduction_to_Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/Exploratory_Survey_Design_Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%202/An_Introduction_to_Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%202/Exploratory_Survey_Design_Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Head over to &lt;a href=&#34;https://basecamp.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics XM basecamp&lt;/a&gt; and follow the directions in the walkthrough below to navigate to find some needed training videos
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;source src=&#34;https://edp619.theoreticalphysed.com/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;&lt;/li&gt;
 &lt;li&gt;Think about an ideal group you would like to survey and what you would survey them about. I don’t care if they are real or imaginary - it doesn’t really matter.&lt;/li&gt;
@@ -122,7 +122,7 @@ This week you have nothing to turn in but there is still something to do! First 
 &lt;li&gt;Follow the steps below to share your draft with me by typing in &lt;code&gt;aroy3#wvu&lt;/code&gt; in the appropriate field in lieu of the name shown in the video. Finally please select all of the items in the Collaboration menu.
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;source src=&#34;https://edp619.theoreticalphysed.com/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;
 After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.&lt;br&gt;
@@ -134,11 +134,11 @@ After you have determined a sample and what you would like to assess, think abou
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>/assignment/03-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/03-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/03-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/03-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -183,11 +183,11 @@ After you have determined a sample and what you would like to assess, think abou
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>/assignment/06-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/06-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/06-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/06-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -203,7 +203,7 @@ After you have determined a sample and what you would like to assess, think abou
 &lt;p&gt;There are two different submissions for this task. Please be aware of what goes where and ask questions if needed.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; and shared with me via the Collaborate feature on the site due on &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.
+&lt;li&gt;&lt;p&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; and shared with me via the Collaborate feature on the site due on &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.
 :::&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -213,11 +213,11 @@ After you have determined a sample and what you would like to assess, think abou
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>/assignment/07-assignment/</link>
+      <link>https://edp619.theoreticalphysed.com/assignment/07-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/07-assignment/</guid>
+      <guid>https://edp619.theoreticalphysed.com/assignment/07-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -240,11 +240,50 @@ After you have determined a sample and what you would like to assess, think abou
 &lt;h4&gt;Submit&lt;/h4&gt;
 &lt;p&gt;There is one submission for this task: A csv or excel document outlining the history of your changes and submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;October 11&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. You must account for every item within your survey in the order they appear in your online variant. This includes, but is not limited to the landing and gratitude pages. Please use the documents below to keep an accurate record as you will be using it to create a &lt;em&gt;skeleton&lt;/em&gt; of your survey.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger.csv&#34;&gt;pilot_ledger.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger_codebook.csv&#34;&gt;pilot_ledger_codebook.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%207/pilot_ledger.csv&#34;&gt;pilot_ledger.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%207/pilot_ledger_codebook.csv&#34;&gt;pilot_ledger_codebook.csv&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting to Know the Complex Sample Design</title>
+      <link>https://edp619.theoreticalphysed.com/assignment/09-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp619.theoreticalphysed.com/assignment/09-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#final-survey-and-skeleton&#34;&gt;Final Survey and Skeleton&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;final-survey-and-skeleton&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Final Survey and Skeleton&lt;/h3&gt;
+&lt;p&gt;In this class, you will plan, design, pilot, &lt;strong&gt;distribute&lt;/strong&gt;, analyze and report on a survey from start to finish.&lt;/p&gt;
+&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Process&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Take this week to set up your survey for distribution and to check it thoroughly. If you would like me to look at it, simply send a request over Slack or email and I will be happy to do so.&lt;/li&gt;
+&lt;li&gt;Pick a &lt;a href=&#34;https://edp619.theoreticalphysed.com/example/09-example.knit/#planning&#34;&gt;day and time&lt;/a&gt; for distribution.&lt;/li&gt;
+&lt;li&gt;Check the &lt;a href=&#34;https://edp619.theoreticalphysed.com/example/09-example/#an-overlooked-yet-extremely-important-option-1&#34;&gt;Survey Options&lt;/a&gt; panel.&lt;/li&gt;
+&lt;li&gt;Choose a &lt;a href=&#34;https://edp619.theoreticalphysed.com/example/09-example.knit/#read&#34;&gt;distribution method&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Set up your &lt;a href=&#34;https://edp619.theoreticalphysed.com/example/09-example.knit/#what-you-needyou-may-have-to-right-click-and-download-it-depending-on-your-browser-settings&#34;&gt;communications&lt;/a&gt; which consist of notifications (if applicable), solicitations and gratitude In the meantime, you will also receive feedback on your pilot ledger. Once approved, you may go ahead and administer it&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;(Optional) Set up a &lt;a href=&#34;https://calendly.com/nopiecharts/short30&#34;&gt;meeting&lt;/a&gt; if you would like assistance for a final check.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This process does not apply for those who have been granted an exception typically due to some external academic factor.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
