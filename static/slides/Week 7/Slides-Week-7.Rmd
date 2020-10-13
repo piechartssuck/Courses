@@ -7,13 +7,13 @@ output:
    css: xaringan-themer.css
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, purl=FALSE}
 library(knitr)
 library(here)
 library(clt)
 ```
 
-```{r echo = FALSE}
+```{r echo = FALSE, purl=FALSE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
   secondary_color = "#bff4ee",

@@ -7,14 +7,14 @@ output:
    css: xaringan-themer.css
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, purl=FALSE}
 library(tidyverse)
 library(fontawesome)
 library(knitr)
 library(kableExtra)
 ```
 
-```{r echo = FALSE}
+```{r echo = FALSE, purl=FALSE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
   secondary_color = "#fcbb86",
@@ -36,7 +36,7 @@ library(tidyverse)
 <br>
 <br>
 You may come across the following icons. The table below lists what each means.
-```{r eval = TRUE, echo = FALSE}
+```{r eval = TRUE, echo = FALSE, purl=FALSE}
 forward <- as.character(fontawesome::fa("forward", fill = "
 #4682b4"))
 
@@ -62,7 +62,7 @@ icon_desc <- tibble(
 )
 ```
 
-```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
 kable(icon_desc, 
       escape = FALSE,
       align = 'cl') %>%

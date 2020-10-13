@@ -37,7 +37,8 @@ prices &lt;- read_csv("2014-average-ticket-price.csv",
 ```
 
 ```
-## Parsed with column specification:
+## 
+## ── Column specification ────────────────────────────────────────────────────────────────────────────────
 ## cols(
 ##   Event = col_character(),
 ##   Division = col_character(),
@@ -55,18 +56,18 @@ prices
 
 ```
 ## # A tibble: 108 x 3
-##    Event                           Division `Avg TP, $`
-##    &lt;chr&gt;                           &lt;chr&gt;          &lt;dbl&gt;
-##  1 Baltimore Ravens at Pittsburgh… AFC Nor…         202
-##  2 Pittsburgh Steelers at Baltimo… AFC Nor…         199
-##  3 Cleveland Browns at Pittsburgh… AFC Nor…         196
-##  4 Cincinnati Bengals at Pittsbur… AFC Nor…         164
-##  5 Pittsburgh Steelers at Clevela… AFC Nor…         148
-##  6 Cleveland Browns at Baltimore … AFC Nor…         137
-##  7 Cincinnati Bengals at Baltimor… AFC Nor…         135
-##  8 Cleveland Browns at Cincinnati… AFC Nor…         102
-##  9 Pittsburgh Steelers at Cincinn… AFC Nor…          89
-## 10 Baltimore Ravens at Cleveland … AFC Nor…          83
+##    Event                                                    Division `Avg TP, $`
+##    &lt;chr&gt;                                                    &lt;chr&gt;          &lt;dbl&gt;
+##  1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-N… AFC Nor…         202
+##  2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-S… AFC Nor…         199
+##  3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-S… AFC Nor…         196
+##  4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28… AFC Nor…         164
+##  5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-O… AFC Nor…         148
+##  6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-… AFC Nor…         137
+##  7 Cincinnati Bengals at Baltimore Ravens Tickets on 07-Se… AFC Nor…         135
+##  8 Cleveland Browns at Cincinnati Bengals Tickets on 06-No… AFC Nor…         102
+##  9 Pittsburgh Steelers at Cincinnati Bengals Tickets on 07… AFC Nor…          89
+## 10 Baltimore Ravens at Cleveland Browns Tickets on 21-Sep-… AFC Nor…          83
 ## # … with 98 more rows
 ```
 
@@ -81,14 +82,14 @@ head(prices)
 
 ```
 ## # A tibble: 6 x 3
-##   Event                            Division `Avg TP, $`
-##   &lt;chr&gt;                            &lt;chr&gt;          &lt;dbl&gt;
-## 1 Baltimore Ravens at Pittsburgh … AFC Nor…         202
-## 2 Pittsburgh Steelers at Baltimor… AFC Nor…         199
-## 3 Cleveland Browns at Pittsburgh … AFC Nor…         196
-## 4 Cincinnati Bengals at Pittsburg… AFC Nor…         164
-## 5 Pittsburgh Steelers at Clevelan… AFC Nor…         148
-## 6 Cleveland Browns at Baltimore R… AFC Nor…         137
+##   Event                                                     Division `Avg TP, $`
+##   &lt;chr&gt;                                                     &lt;chr&gt;          &lt;dbl&gt;
+## 1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-No… AFC Nor…         202
+## 2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-Se… AFC Nor…         199
+## 3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-Se… AFC Nor…         196
+## 4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28-… AFC Nor…         164
+## 5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-Oc… AFC Nor…         148
+## 6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-2… AFC Nor…         137
 ```
 ---
 
@@ -112,9 +113,8 @@ unique(prices$Division)
 ```
 
 ```
-## [1] "AFC North" "AFC East"  "AFC West"  "AFC South"
-## [5] "NFC North" "NFC East"  "NFC West"  "NFC South"
-## [9] ""
+## [1] "AFC North" "AFC East"  "AFC West"  "AFC South" "NFC North" "NFC East" 
+## [7] "NFC West"  "NFC South" ""
 ```
 
 ---
@@ -144,20 +144,20 @@ afc_north
 
 ```
 ## # A tibble: 12 x 3
-##    Event                           Division `Avg TP, $`
-##    &lt;chr&gt;                           &lt;chr&gt;          &lt;dbl&gt;
-##  1 Baltimore Ravens at Pittsburgh… AFC Nor…         202
-##  2 Pittsburgh Steelers at Baltimo… AFC Nor…         199
-##  3 Cleveland Browns at Pittsburgh… AFC Nor…         196
-##  4 Cincinnati Bengals at Pittsbur… AFC Nor…         164
-##  5 Pittsburgh Steelers at Clevela… AFC Nor…         148
-##  6 Cleveland Browns at Baltimore … AFC Nor…         137
-##  7 Cincinnati Bengals at Baltimor… AFC Nor…         135
-##  8 Cleveland Browns at Cincinnati… AFC Nor…         102
-##  9 Pittsburgh Steelers at Cincinn… AFC Nor…          89
-## 10 Baltimore Ravens at Cleveland … AFC Nor…          83
-## 11 Baltimore Ravens at Cincinnati… AFC Nor…          83
-## 12 Cincinnati Bengals at Clevelan… AFC Nor…          81
+##    Event                                                    Division `Avg TP, $`
+##    &lt;chr&gt;                                                    &lt;chr&gt;          &lt;dbl&gt;
+##  1 Baltimore Ravens at Pittsburgh Steelers Tickets on 02-N… AFC Nor…         202
+##  2 Pittsburgh Steelers at Baltimore Ravens Tickets on 11-S… AFC Nor…         199
+##  3 Cleveland Browns at Pittsburgh Steelers Tickets on 07-S… AFC Nor…         196
+##  4 Cincinnati Bengals at Pittsburgh Steelers Tickets on 28… AFC Nor…         164
+##  5 Pittsburgh Steelers at Cleveland Browns Tickets on 12-O… AFC Nor…         148
+##  6 Cleveland Browns at Baltimore Ravens Tickets on 28-Dec-… AFC Nor…         137
+##  7 Cincinnati Bengals at Baltimore Ravens Tickets on 07-Se… AFC Nor…         135
+##  8 Cleveland Browns at Cincinnati Bengals Tickets on 06-No… AFC Nor…         102
+##  9 Pittsburgh Steelers at Cincinnati Bengals Tickets on 07… AFC Nor…          89
+## 10 Baltimore Ravens at Cleveland Browns Tickets on 21-Sep-… AFC Nor…          83
+## 11 Baltimore Ravens at Cincinnati Bengals Tickets on 26-Oc… AFC Nor…          83
+## 12 Cincinnati Bengals at Cleveland Browns Tickets on 14-De… AFC Nor…          81
 ```
 
 ---

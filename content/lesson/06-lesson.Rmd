@@ -40,9 +40,10 @@ Download the textbook
 knitr::include_url("/slides/Week 6/Slides-Week-6.html")
 ```
 
-You can download a [PDF](/slides/Week 6/Slides-Week-6.pdf){target="_blank"} of the presentation above. 
+You can download 
 
-- [Outline](/lecture_notes/Week6/ICN_Ch6.pdf){target="_blank"}.
+- a [PDF](/slides/Week 6/Slides-Week-6R.pdf){target="_blank"} of the presentation above. 
+- an [Outline](/lecture_notes/Week6/ICN_Ch6.pdf){target="_blank"}.
 
 ### R Walkthrough: NFL Ticket Prices
 
@@ -60,4 +61,9 @@ You can download a [PDF](/slides/Week 6/Slides-Week-6.pdf){target="_blank"} of t
 knitr::include_url("/slides/Week 6/Slides-Week-6R.html")
 ```
 
-You can download a [PDF](/slides/Week 6/Slides-Week-6R.pdf){target="_blank"} of the presentation above. 
+You can download 
+
+- a [PDF](/slides/Week 6/Slides-Week-6R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 6/Slides-Week-6R.R){target="_blank"} file of just the R chunks used in the presentation.
+
+

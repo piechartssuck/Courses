@@ -34,7 +34,10 @@ The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due.
 knitr::include_url("/slides/Week 7/Slides-Week-7.html")
 ```
 
-You can download a [PDF](/slides/Week 7/Slides-Week-7.pdf){target="_blank"} of the presentation above. 
+You can download 
+
+- a [PDF](/slides/Week 7/Slides-Week-7.pdf){target="_blank"} of the presentation. 
+- a [script](/slides/Week 7/Slides-Week-7.R){target="_blank"} file of just the R chunks used in the presentation.
 
 ### R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R
 
@@ -48,4 +51,7 @@ Click on the presentation itself and then you may
 knitr::include_url("/slides/Week 7/Slides-Week-7R.html")
 ```
 
-You can download a [PDF](/slides/Week 7/Slides-Week-7R.pdf){target="_blank"} of the presentation above. 
+You can download 
+
+- a [PDF](/slides/Week 7/Slides-Week-7R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 7/Slides-Week-7R.R){target="_blank"} file of just the R chunks used in the presentation.

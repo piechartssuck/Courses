@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(htmltools)
 library(knitr)
@@ -24,6 +24,9 @@ library(kableExtra)
 
 # An Introduction to `dplyr`
 
+## Preparation
+
+Download a [script](/walkthroughs/NFLpipes.R){target="_blank"} file of just the R chunks used in this walkthrough.
 
 ## Purpose
 
@@ -127,7 +130,7 @@ Should you memorize these? NO! NEVER! DON'T DO IT! That's what the internet is f
 
 Pipes are a logical operator from the `magrittr` package that allows you to pass logic down a chain. Find that confusing? Let's try to explain it another way:
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, purl=FALSE}
 I %>% 
   woke up %>%
   showered %>%
@@ -264,7 +267,7 @@ gapminder %>%
 ### `arrange()` orders columns
 
 This is ordered alphabetically, which is helpful in certain circumstances. But let's say we wanted to order it in ascending order for `year`. The dplyr function to do that is `arrange()`. 
-```{r, eval=TRUE, warning=FALSE }
+```{r, eval=TRUE, warning=FALSE}
 gapminder %>%
   group_by(continent, year) %>%
   summarize(cont_pop = sum(as.numeric(pop))) %>%
@@ -304,7 +307,7 @@ gapminder %>%
 nfl2014 <- read_csv("2014-average-ticket-price.csv")
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, purl=FALSE}
 nfl2014 <- read_csv("data/2014-average-ticket-price.csv")
 ```
 
@@ -416,7 +419,7 @@ Remember you can leave text that R will ignore by putting a hashtag # in front o
 
 As an example, if I were to submit the altered item 2 from above, my script would read:
 
-```{r, eval=FALSE, warning=FALSE }
+```{r, eval=FALSE, warning=FALSE, purl=FALSE}
 # Abhik Roy
 # EDP 613
 # Drinks Task
@@ -451,7 +454,7 @@ We have to bring in the data set:
 drinks <- read_csv("drinks2010andBeyond.csv")
 ```
 
-```{r echo = FALSE, eval = TRUE}
+```{r echo = FALSE, eval = TRUE, purl=FALSE}
 drinks <- read_csv("data/drinks2010andBeyond.csv")
 ```
 
@@ -651,7 +654,7 @@ On a side note, there is an easier way to run `spread()` and it is called [`pivo
 
 ## Logical Operators {#excusive}
 
-```{r echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+```{r echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE, purl=FALSE}
 
 logicals <- tibble(
   
@@ -704,7 +707,7 @@ Logic = c("!a",
 ```
 
 <center>
-```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
 kable(logicals, 
       escape = FALSE,
       align = 'clc') %>%
@@ -725,4 +728,5 @@ A great deal of material presented here was adapted from two online texts: [Intr
 
 ## Don't Get Bogged Down!
 Just get a feel for the items above. There is a whole bunch of commands and ridiculous syntax above but that's not the point. Concentrate on knowing what to do (e.g. "Is this best represented by a bar plot?") rather than how to do it ("The `ggplot` command is..."). You can ALWAYS search for the syntax associated with whatever in R but if you don't how to conceptually solve a problem, software won't help. Remember computers are stupid!
+
 
