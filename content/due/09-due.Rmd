@@ -45,7 +45,7 @@ Description = c("Complete multiple skill series.",
                 "Read and review materials on univariate and bivariate statistics."),
 
 Location = c("[Link](/lesson/09-lesson/#data-camp1)",
-             "[Link](/example/09-example.knit/)",
+             "[Link](/example/09-example)",
              "[Link](/readings/09-readings/#book-stuff-1)")
 
 )
