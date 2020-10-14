@@ -67,8 +67,5 @@ kable(wk_post,
 ```
 </center>
 
-### Things coming up
-
-- [Data Camp modules](/lesson/08-lesson/#data-camp-1).
 
 
