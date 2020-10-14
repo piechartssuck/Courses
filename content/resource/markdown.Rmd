@@ -60,7 +60,9 @@ output:
 
 ## Math
 
-Markdown uses LaTeX to create fancy mathematical equations. There are like a billion little options and features available for math equations—you can find [helpful examples of the the most common basic commands here](http://www.malinc.se/math/latex/basiccodeen.php).
+Markdown uses a language called $\LaTeX$ to create fancy mathematical equations. Be forewarned, this is syntax heavy so please do not get bogged down in it. That's not to say its not extremely useful - $\LaTeX$ takes the need to format anything mathematics out of the equation^[No pun intended but if you've ever tried to use the Equation Editor in Microsoft Word, the formatting is a nightmare.] which makes life much simpler but the language hasn't been updated since 1994 which makes it older than some or many of you. The current version of the language $\LaTeX2e$ is both archaic and extremely dependent on external packages which can make both a complex and messy script. While the next generation of $\LaTeX$ is in the works^[Codenamed [$\LaTeX3$](https://www.latex-project.org/latex3/){target="_blank"}. Mathematicians are generally not very good at naming things.], there is a long way to go. With that said, this is worth reviewing if for no other reason than general curiosity and possibly to see how some of the course material is created.
+
+There are like a billion little options and features available for math equations—you can find [helpful examples of the the most common basic commands here](http://www.malinc.se/math/latex/basiccodeen.php).
 
 You can use math in two different ways: inline or in a display block. To use math inline, wrap it in single dollar signs, like `$y = mx + b$`:
 
@@ -269,12 +271,11 @@ One of the most powerful features of Markdown + pandoc is the ability to automat
 
     Some of the most common CSLs are:
     
-    - [Chicago author-date](https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date.csl){target="_blank"}
-    - [Chicago note-bibliography](https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-note-bibliography.csl){target="_blank"}
-    - [Chicago full note-bibliography](https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-fullnote-bibliography.csl) (no shortened notes or ibids){target="_blank"}
+    - [Chicago Manual of Style 27th edition (author-date)](https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date.csl){target="_blank"}
     - [APA 7th edition](https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl){target="_blank"}
     - [MLA 8th edition](https://raw.githubusercontent.com/citation-style-language/styles/master/modern-language-association.csl){target="_blank"}
-
+<br>
+<br>
 3. Cite things in your document. [Check the documentation for full details of how to do this](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html). Essentially, you use `@citationkey` inside square brackets (`[]`):
 
     |                                               Type…                                                |                                          …to get…                                           |
@@ -286,9 +287,9 @@ One of the most powerful features of Markdown + pandoc is the ability to automat
 
     After compiling, you should have a perfectly formatted bibliography added to the end of your document too:
     
-    > Angrist, Joshua D., and Jörn-Steffen Pischke. 2015. *Mastering ’Metrics: The Path from Cause to Effect.* Princeton, NJ: Princeton University Press.
+    > Angrist, J.D. & Pischke, J (2015). *Mastering ’Metrics: The Path from Cause to Effect.* Princeton University Press.
     > 
-    > Rohrer, Julia M. 2018. “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.” *Advances in Methods and Practices in Psychological Science* 1 (1): 27–42. https://doi.org/10.1177/2515245917745629.
+    > Rohrer, J.M. (2018). “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.” *Advances in Methods and Practices in Psychological Science* 1 (1): 27–42. https://doi.org/10.1177/2515245917745629.
 
 
 ## Other references

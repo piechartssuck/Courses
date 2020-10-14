@@ -382,9 +382,10 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;/ul&gt;
 &lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 6/Slides-Week-6.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;p&gt;You can download a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
+&lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;an &lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-nfl-ticket-prices&#34; class=&#34;section level3&#34;&gt;
@@ -405,7 +406,11 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;/ul&gt;
 &lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 6/Slides-Week-6R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;p&gt;You can download a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;

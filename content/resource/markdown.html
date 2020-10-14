@@ -12,7 +12,6 @@ output:
       fig_caption: yes
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
@@ -152,7 +151,8 @@ Heading 3
 </div>
 <div id="math" class="section level2">
 <h2>Math</h2>
-<p>Markdown uses LaTeX to create fancy mathematical equations. There are like a billion little options and features available for math equations—you can find <a href="http://www.malinc.se/math/latex/basiccodeen.php">helpful examples of the the most common basic commands here</a>.</p>
+<p>Markdown uses a language called <span class="math inline">\(\LaTeX\)</span> to create fancy mathematical equations. Be forewarned, this is syntax heavy so please do not get bogged down in it. That’s not to say its not extremely useful - <span class="math inline">\(\LaTeX\)</span> takes the need to format anything mathematics out of the equation<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> which makes life much simpler but the language hasn’t been updated since 1994 which makes it older than some or many of you. The current version of the language <span class="math inline">\(\LaTeX2e\)</span> is both archaic and extremely dependent on external packages which can make both a complex and messy script. While the next generation of <span class="math inline">\(\LaTeX\)</span> is in the works<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, there is a long way to go. With that said, this is worth reviewing if for no other reason than general curiosity and possibly to see how some of the course material is created.</p>
+<p>There are like a billion little options and features available for math equations—you can find <a href="http://www.malinc.se/math/latex/basiccodeen.php">helpful examples of the the most common basic commands here</a>.</p>
 <p>You can use math in two different ways: inline or in a display block. To use math inline, wrap it in single dollar signs, like <code>$y = mx + b$</code>:</p>
 <table>
 <colgroup>
@@ -373,11 +373,11 @@ csl: &quot;https://raw.githubusercontent.com/citation-style-language/styles/mast
 ---</code></pre>
 <p>Some of the most common CSLs are:</p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date.csl" target="_blank">Chicago author-date</a></li>
-<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-note-bibliography.csl" target="_blank">Chicago note-bibliography</a></li>
-<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-fullnote-bibliography.csl">Chicago full note-bibliography</a> (no shortened notes or ibids){target="_blank"}</li>
+<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date.csl" target="_blank">Chicago Manual of Style 27th edition (author-date)</a></li>
 <li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl" target="_blank">APA 7th edition</a></li>
-<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/modern-language-association.csl" target="_blank">MLA 8th edition</a></li>
+<li><a href="https://raw.githubusercontent.com/citation-style-language/styles/master/modern-language-association.csl" target="_blank">MLA 8th edition</a>
+<br>
+<br></li>
 </ul></li>
 <li><p>Cite things in your document. <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">Check the documentation for full details of how to do this</a>. Essentially, you use <code>@citationkey</code> inside square brackets (<code>[]</code>):</p>
 <table>
@@ -412,8 +412,8 @@ csl: &quot;https://raw.githubusercontent.com/citation-style-language/styles/mast
 </table>
 <p>After compiling, you should have a perfectly formatted bibliography added to the end of your document too:</p>
 <blockquote>
-<p>Angrist, Joshua D., and Jörn-Steffen Pischke. 2015. <em>Mastering ’Metrics: The Path from Cause to Effect.</em> Princeton, NJ: Princeton University Press.</p>
-<p>Rohrer, Julia M. 2018. “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.” <em>Advances in Methods and Practices in Psychological Science</em> 1 (1): 27–42. <a href="https://doi.org/10.1177/2515245917745629" class="uri">https://doi.org/10.1177/2515245917745629</a>.</p>
+<p>Angrist, J.D. &amp; Pischke, J (2015). <em>Mastering ’Metrics: The Path from Cause to Effect.</em> Princeton University Press.</p>
+<p>Rohrer, J.M. (2018). “Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data.” <em>Advances in Methods and Practices in Psychological Science</em> 1 (1): 27–42. <a href="https://doi.org/10.1177/2515245917745629" class="uri">https://doi.org/10.1177/2515245917745629</a>.</p>
 </blockquote></li>
 </ol>
 </div>
@@ -426,4 +426,11 @@ csl: &quot;https://raw.githubusercontent.com/citation-style-language/styles/mast
 <li><a href="http://packetlife.net/media/library/16/Markdown.pdf" target="_blank"><strong>Markdown cheatsheet</strong></a>: Useful one-page reminder of Markdown syntax.</li>
 <li><a href="http://plain-text.co/" target="_blank"><strong>The Plain Person’s Guide to Plain Text Social Science</strong></a>: A comprehensive explanation and tutorial about why you should write data-based reports in Markdown.</li>
 </ul>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>No pun intended but if you’ve ever tried to use the Equation Editor in Microsoft Word, the formatting is a nightmare.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Codenamed <a href="https://www.latex-project.org/latex3/" target="_blank"><span class="math inline">\(\LaTeX3\)</span></a>. Mathematicians are generally not very good at naming things.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>

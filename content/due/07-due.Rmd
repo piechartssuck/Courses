@@ -24,9 +24,11 @@ library(kableExtra)
 ### What to do for Week 7 after class ends^[For grading.]
 
 ```{r eval = TRUE, echo = FALSE}
-unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+unchecked <- as.character(fontawesome::fa("square", fill = "
+#4682b4"))
 
-checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+checked <- as.character(fontawesome::fa("check-square", fill = "
+#4682b4"))
 
 wk_post <- tibble(
 "eCampus?" = c(unchecked, 
@@ -58,15 +60,18 @@ kable(wk_post,
 
 <br />
 
-### What to do for Week 6 before coming to class^[For preparation.]
+### What to do for Week 8 before coming to class^[For preparation.]
 
 ```{r eval = TRUE, echo = FALSE}
-test <- as.character(fontawesome::fa("file-alt", fill = "steelblue"))
+test <- as.character(fontawesome::fa("file-alt", fill = "
+#4682b4"))
 
-lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "
+#4682b4"))
 
 wk_pre <- tibble(
-Area = c(test, 
+
+  Area = c(test, 
          lightbulb),
 
 Description = c("Being reviewing Chapters 1-6 and material on Data Camp/Walkthroughs for the exam.",
@@ -76,7 +81,6 @@ Location = c("Everywhere",
              "[Link](/example/07-example/#crash-course-statistics-1)")
 
 )
-
 ```
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
@@ -89,3 +93,30 @@ kable(wk_pre,
   column_spec(3, width = "10em")
 ```
 
+### Extra Credit
+
+```{r eval = TRUE, echo = FALSE}
+ec <- as.character(fontawesome::fa("credit-card", fill = "
+#4682b4"))
+
+wk_ec <- tibble(
+  
+Area = c(ec),
+
+Description = c("An extra credit task on using Rmarkdown for reporting purposes has posted."),
+
+Location = c("[Link](https://www.datacamp.com/){target='_blank'}")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_ec, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```

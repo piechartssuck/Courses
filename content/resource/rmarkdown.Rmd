@@ -12,13 +12,29 @@ output:
       fig_caption: yes
 ---
 
-[R Markdown](https://rmarkdown.rstudio.com/){target="_blank"} is [regular Markdown](/reference/markdown/) with R code and output sprinkled in. You can do everything you can with [regular Markdown](/reference/markdown/), but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even [interactive dashboards](https://rmarkdown.rstudio.com/flexdashboard/index.html){target="_blank"} with R Markdown. This whole course website is created with R Markdown (and [a package named **blogdown**](https://bookdown.org/yihui/blogdown/){target="_blank"}).
+You may have guessed that [R Markdown](https://rmarkdown.rstudio.com/){target="_blank"} is [regular Markdown](/reference/markdown/) with R code and output sprinkled in. Simply put, its
 
-The [documentation for R Markdown](https://rmarkdown.rstudio.com/){target="_blank"} is extremely comprehensive, and their [tutorials](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} and [cheatsheets](https://rmarkdown.rstudio.com/lesson-15.html){target="_blank"} are excellent—rely on those.
+<center>
+**R + Markdown = R Markdown** 
+</center>
+<br>
+You can do everything you can with [regular Markdown](/reference/markdown/), but you can also incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even [interactive dashboards](https://rmarkdown.rstudio.com/flexdashboard/index.html){target="_blank"} with R Markdown. The website for this course was created with R Markdown (and [a package named **blogdown**](https://bookdown.org/yihui/blogdown/){target="_blank"}) and is updated using the same platform.
 
-Here are the most important things you'll need to know about R Markdown in this class:
+## Learning R Markdown
 
-## Key terms
+- [Data Camp](https://learn.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} has a good module on learning how to create R Markdown documents.
+- [Getting started in R and RStudio](http://milton-the-cat.rocks/learnr/r/r_getting_started/){target="_blank"} is created by Andy Fields and is a great step-by-step introduction to both R and R Markdown and you can skip around using a Table of Contents.
+- [R Markdown Basics](https://stats.idre.ucla.edu/stat/data/rmarkdown/rmarkdown_seminar_flat.html){target="_blank"} is a very comprehensive primer solely focused on R Markdown. Andy Lin, the author of the walkthrough assumes that you have some working knowledge of R, namely RStudio. 
+
+## Source Materials
+
+The [documentation for R Markdown](https://rmarkdown.rstudio.com/){target="_blank"} is extremely comprehensive, and their [tutorials](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} and [cheatsheets](https://rmarkdown.rstudio.com/lesson-15.html){target="_blank"} are excellent. Use them as resources.
+
+Here are the most important things about R markdown that will likely be beneficial:
+
+## Overview of Sorts
+
+### Key Terms
 
 - **Document**: A Markdown file where you type stuff
 
@@ -41,7 +57,7 @@ knitr::include_graphics("/img/assignments/knit-button.png", error = FALSE)
 ```
 
 
-## Add chunks
+### Adding Chunks
 
 There are three ways to insert chunks:
 
@@ -56,7 +72,7 @@ knitr::include_graphics("/img/reference/insert-chunk.png", error = FALSE)
 - Manually type all the backticks and curly braces (don't do this)
 
 
-## Chunk names
+### Naming Chunks
 
 You can add names to chunks to make it easier to navigate your document. If you click on the little dropdown menu at the bottom of your editor in RStudio, you can see a table of contents that shows all the headings and chunks. If you name chunks, they'll appear in the list. If you don't include a name, the chunk will still show up, but you won't know what it does.
 
@@ -73,7 +89,7 @@ To add a name, include it immediately after the `{r` in the first line of the ch
 ````
 
 
-## Chunk options
+### Chunk options
 
 There are a bunch of different options you can set for each chunk. You can see a complete list in the [RMarkdown Reference Guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf){target="_blank"} or at [**knitr**'s website](https://yihui.org/knitr/options/){target="_blank"}.
 
@@ -99,7 +115,7 @@ You can also set chunk options by clicking on the little gear icon in the top ri
 knitr::include_graphics("/img/reference/chunk-options.png", error = FALSE)
 ```
 
-## Inline chunks
+### Tackling Inline Chunks
 
 You can also include R output directly in your text, which is really helpful if you want to report numbers from your analysis. To do this, use `` `r "\u0060r r_code_here\u0060"` ``.
 
