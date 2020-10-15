@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Examples | Statistical Methods I</title>
-    <link>https://edp613.theoreticalphysed.com/example/</link>
-      <atom:link href="https://edp613.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>/example/</link>
+      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Examples</title>
-      <link>https://edp613.theoreticalphysed.com/example/</link>
+      <link>/example/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>https://edp613.theoreticalphysed.com/example/01-example/</link>
+      <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/01-example/</guid>
+      <guid>/example/01-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -35,11 +36,12 @@
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>https://edp613.theoreticalphysed.com/example/02-example/</link>
+      <link>/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/02-example/</guid>
+      <guid>/example/02-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -62,7 +64,7 @@
 &lt;p&gt;&lt;a href=&#34;https://www.socialexplorer.com&#34; target=&#34;_blank&#34;&gt;Social Explorer&lt;/a&gt; is a paid site that allows people to visualize public data sets pretty easily and without the need for coding anything. Luckily WVU has a site license for the site but it can be a bit difficult to locate. Follow the video below to get an idea of Social Explorer and the WVU Database.&lt;/p&gt;
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;https://edp613.theoreticalphysed.com/videos/Social_Explorer.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;source src=&#34;/videos/Social_Explorer.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -77,11 +79,12 @@
     
     <item>
       <title>Measures of Central Tendency</title>
-      <link>https://edp613.theoreticalphysed.com/example/03-example/</link>
+      <link>/example/03-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/03-example/</guid>
+      <guid>/example/03-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -104,7 +107,7 @@ The following video is a bit of a compilation of things that come up that are fr
 
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-  &lt;source src=&#34;https://edp613.theoreticalphysed.com/videos/R_nuances.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;/videos/R_nuances.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;
 --&gt;
@@ -114,11 +117,12 @@ The following video is a bit of a compilation of things that come up that are fr
     
     <item>
       <title>Measures of Variability</title>
-      <link>https://edp613.theoreticalphysed.com/example/04-example/</link>
+      <link>/example/04-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/04-example/</guid>
+      <guid>/example/04-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -147,7 +151,7 @@ The following video is a bit of a compilation of things that come up that are fr
 
 &lt;center&gt;
 &lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-  &lt;source src=&#34;https://edp613.theoreticalphysed.com/videos/R_nuances.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;source src=&#34;/videos/R_nuances.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/center&gt;
 --&gt;
@@ -157,11 +161,12 @@ The following video is a bit of a compilation of things that come up that are fr
     
     <item>
       <title>The Normal Distribution</title>
-      <link>https://edp613.theoreticalphysed.com/example/05-example/</link>
+      <link>/example/05-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/05-example/</guid>
+      <guid>/example/05-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -183,18 +188,19 @@ The following video is a bit of a compilation of things that come up that are fr
 &lt;/div&gt;
 &lt;div id=&#34;pipes-and-the-nfl&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Pipes and the NFL&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>https://edp613.theoreticalphysed.com/example/06-example/</link>
+      <link>/example/06-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/06-example/</guid>
+      <guid>/example/06-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -222,13 +228,14 @@ The following video is a bit of a compilation of things that come up that are fr
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>https://edp613.theoreticalphysed.com/example/07-example/</link>
+      <link>/example/07-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/example/07-example/</guid>
+      <guid>/example/07-example/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -250,7 +257,7 @@ The following video is a bit of a compilation of things that come up that are fr
 &lt;h3&gt;Warning&lt;/h3&gt;
 &lt;p&gt;There’s going to be some philosophical ideas discussed here. Get through it and you may figure out what kind of statistics you would practice. Why does it matter? Oh only that it may define how you not only practice statistics, but also explain how you view and deal with daily problems. No big deal.&lt;/p&gt;
 &lt;center&gt;
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/examples/statistician_deathmatch.png&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;/img/examples/statistician_deathmatch.png&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;a-line-is-drawn&#34; class=&#34;section level3&#34;&gt;

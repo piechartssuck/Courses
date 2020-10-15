@@ -2,40 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Walkthroughs | Statistical Methods I</title>
-    <link>https://edp613.theoreticalphysed.com/walkthroughs/</link>
-      <atom:link href="https://edp613.theoreticalphysed.com/walkthroughs/index.xml" rel="self" type="application/rss+xml" />
+    <link>/walkthroughs/</link>
+      <atom:link href="/walkthroughs/index.xml" rel="self" type="application/rss+xml" />
     <description>Walkthroughs</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>Walkthroughs</title>
-      <link>https://edp613.theoreticalphysed.com/walkthroughs/</link>
+      <link>/walkthroughs/</link>
     </image>
     
     <item>
       <title>Pipes and the NFL</title>
-      <link>https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/</link>
+      <link>/walkthroughs/nfl/nflpipes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/</guid>
+      <guid>/walkthroughs/nfl/nflpipes/</guid>
       <description>
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#an-introduction-to-dplyr&#34;&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#an-introduction-to-dplyr&#34;&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preparation&#34;&gt;Preparation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#packages&#34;&gt;Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-tidyverse-package&#34;&gt;The Tidyverse Package&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tidy-data&#34;&gt;Tidy Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#basics&#34;&gt;Basics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-pipe-operator&#34;&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/a&gt;
-&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#the-pipe-operator&#34;&gt;The Pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; Operator&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gapminder&#34;&gt;Gapminder&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#mutate-adds-new-variables&#34;&gt;&lt;code&gt;mutate()&lt;/code&gt; adds new variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#try-these-out&#34;&gt;Try These Out&lt;/a&gt;&lt;/li&gt;
@@ -55,6 +54,10 @@
 
 &lt;div id=&#34;an-introduction-to-dplyr&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
+&lt;div id=&#34;preparation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preparation&lt;/h2&gt;
+&lt;p&gt;Download a &lt;a href=&#34;/walkthroughs/NFLpipes.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in this walkthrough.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Purpose&lt;/h2&gt;
 &lt;p&gt;What are some common things you like to do with your data? Maybe remove rows or columns, do calculations and maybe add new columns? This is called &lt;strong&gt;data wrangling&lt;/strong&gt;. It’s not data management or data manipulation: you &lt;strong&gt;keep the raw data raw&lt;/strong&gt; and do these things programatically in R with the &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
@@ -73,12 +76,12 @@
 &lt;h3&gt;Packages&lt;/h3&gt;
 &lt;p&gt;Please load up the following packages&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Attaching packages ──────────────────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
 ## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
 ## ✓ readr   1.4.0     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## ── Conflicts ─────────────────────────────────────────────────────── tidyverse_conflicts() ──
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::group_rows() masks kableExtra::group_rows()
 ## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
@@ -91,13 +94,13 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;the-tidyverse-package&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Tidyverse Package&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;tidyverse&lt;/code&gt; package is actually a family of packages that have been constructed to take all kinds of data sets in multiple formats and to &lt;strong&gt;tidy&lt;/strong&gt; them. Before we get into that concept, the typical path that we take when working with real world data sets is relatively simple…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R3.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;…yet the process can be extremely complex and time consuming as described below:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information &lt;a href=&#34;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&#34;&gt;(NYTimes, 2014)&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;tidyverse&lt;/code&gt; provides packages - given in &lt;span style=&#34; font-weight: bold;    color: #28453B !important;&#34;&gt;green&lt;/span&gt; - that address all of these notions, but we won’t even be able to scratch the surface of most of them.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R4.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In this walk through, we’ll be concentrating on the use of pipes using the &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -110,7 +113,7 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Each observation must have its own row.&lt;/li&gt;
 &lt;li&gt;Each value must have its own cell.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R2.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We are going to wrangle - yup that is a real term for messing with the structure of data - a tidy-ish data set (the &lt;strong&gt;Mutate&lt;/strong&gt; part of the cycle), and then come back to tidying messy data using &lt;code&gt;tidyr&lt;/code&gt; once we’ve gotten it into proper form.&lt;/p&gt;
 &lt;p&gt;Conceptually, making data tidy first is really critical. Instead of building your analyses around whatever format your data are in, we’ll take deliberate steps to make your data tidy. When your data are in this format, you can use a growing assortment of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data. This will save you time since you aren’t reinventing the wheel, and will make your work more clear and understandable to your collaborators. Additionally after struggling with Base R and its arduous process, pipes will probably be something you welcome!&lt;/p&gt;
 &lt;/div&gt;
@@ -120,26 +123,26 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick observations by their values.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R5.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R5.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;select()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick variables by their names.&lt;br /&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R6.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R6.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/strong&gt; command which let’s you create new variables with functions of existing variables.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R7.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R7.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;summarise()&lt;/code&gt;&lt;/strong&gt; command which let’s you collapse multiple values to a single summary.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R8.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R8.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;group_by()&lt;/code&gt;&lt;/strong&gt; command which let’s you perform operations with respect to a variable.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R9.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/R/R9.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/strong&gt; command which let’s you reorder the rows of a data frame.&lt;/li&gt;
 &lt;/ul&gt;
@@ -164,7 +167,7 @@ Should you memorize these? NO! NEVER! DON’T DO IT! That’s what the internet 
 &lt;div id=&#34;gapminder&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Gapminder&lt;/h3&gt;
 &lt;p&gt;In this walk through, we’ll be using &lt;a href=&#34;http://www.gapminder.org/world&#34;&gt;Gapminder data&lt;/a&gt;, which represents the health and wealth of nations. It was pioneered by &lt;a href=&#34;https://www.ted.com/speakers/hans_rosling&#34;&gt;Hans Rosling&lt;/a&gt;, who is famous for describing the prosperity of nations over time through famines, wars and other historic events with an interactive data visualization in his &lt;a href=&#34;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34;&gt;2006 TED Talk: The best stats you’ve ever seen&lt;/a&gt; which you can access by selecting the image on the next page.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.gapminder.org/world&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R1.png&#34; alt=&#34;Gapminder Motion Chart&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.gapminder.org/world&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/R/R1.png&#34; alt=&#34;Gapminder Motion Chart&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let’s take a look at the gapminder data set.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(gapminder)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
@@ -257,6 +260,7 @@ gapusa&lt;/code&gt;&lt;/pre&gt;
 and then filter for the United States,
 and lastly drop the variables continent and lifeExp.”&lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mutate-adds-new-variables&#34; class=&#34;section level3&#34;&gt;
@@ -431,13 +435,13 @@ If you got it, that’s great! However, it’s absolutely fine if you did not. T
 &lt;h2&gt;NFL Data Set&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Grab the data set&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;:
-&lt;a href=&#34;https://edp613.theoreticalphysed.com/data/R/2014-average-ticket-price.csv&#34;&gt;&lt;code&gt;2014-average-ticket-price&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;a href=&#34;/data/R/2014-average-ticket-price.csv&#34;&gt;&lt;code&gt;2014-average-ticket-price&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Save it in the same place as your script.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Load it up in R&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nfl2014 &amp;lt;- read_csv(&amp;quot;2014-average-ticket-price.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## ── Column specification ─────────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   Event = col_character(),
 ##   Division = col_character(),
@@ -539,7 +543,7 @@ select(Division, `Avg TP, $`) %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;task&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task&lt;/h2&gt;
-&lt;p&gt;For this task first download the &lt;a href=&#34;https://edp613.theoreticalphysed.com/data/R/drinks2010andBeyond.csv&#34;&gt;&lt;code&gt;drinks2010andBeyond&lt;/code&gt;&lt;/a&gt; data set&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the &lt;a href=&#34;https://apps.who.int/gho/data/node.main.GISAH?lang=en&#34;&gt;WHO GISAH site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For this task first download the &lt;a href=&#34;/data/R/drinks2010andBeyond.csv&#34;&gt;&lt;code&gt;drinks2010andBeyond&lt;/code&gt;&lt;/a&gt; data set&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the &lt;a href=&#34;https://apps.who.int/gho/data/node.main.GISAH?lang=en&#34;&gt;WHO GISAH site&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In a typical submission&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, you must include&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Your name and task in the top of the script.&lt;/p&gt;&lt;/li&gt;
@@ -578,7 +582,7 @@ nfl2014 %&amp;gt;%
 &lt;p&gt;We have to bring in the data set:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks &amp;lt;- read_csv(&amp;quot;drinks2010andBeyond.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## ── Column specification ─────────────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   Country = col_character(),
 ##   `Beverage Types` = col_character(),
@@ -757,8 +761,10 @@ On a side note, it is absolutely fine if you subtracted the means! That would be
 ##  9 Albania Spirits                     64.2    1.94   2.02   2.09   2.22   2.4 
 ## 10 Albania Other alcoholic…             3.04   0.08   0.09   0.09   0.1    0.1 
 ## # … with 944 more rows, and 1 more variable: `2010` &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;with the last line being dedicated to renaming the column that was just converted from &lt;code&gt;2016&lt;/code&gt; to &lt;code&gt;2016 (using garbage measurements)&lt;/code&gt;. Notice that the &lt;code&gt;rename()&lt;/code&gt; command requires that the new name of a column precede the current name separated by and &lt;code&gt;=&lt;/code&gt;. I realize this appears to be counterintuative and there is a reason for it, but unless you love discussing how R compiles code, I’ll leave it be.&lt;/p&gt;
 &lt;p&gt;On a side note, we only converted the column &lt;code&gt;2016&lt;/code&gt;. What if we wanted to convert every column? Well we’d be using a lot of &lt;code&gt;%&amp;gt;%&lt;/code&gt; and wasted energy. This is one of many instances where &lt;code&gt;gather()&lt;/code&gt; is a great command to know. Switching from a wide data frame to a long one allows you to convert all years at once. We can do this by&lt;/p&gt;
+
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drinks %&amp;gt;%
   gather(key = &amp;quot;year&amp;quot;, value = &amp;quot;measure&amp;quot;, -Country, -`Beverage Types`) %&amp;gt;%
   na.omit() %&amp;gt;%
@@ -778,6 +784,7 @@ On a side note, it is absolutely fine if you subtracted the means! That would be
 ##  9 Algeria Spirits                2016                                      3.38
 ## 10 Algeria Other alcoholic bever… 2016                                      0   
 ## # … with 6,006 more rows&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Unlike the piping we used earlier, we aren’t filtering for anything (though we could if we wanted by putting the filters back in). The rest is pretty much a combination of previous column-wise wrangling. Try running the first three lines. You will once again notice that the &lt;code&gt;measure&lt;/code&gt; column is the associated liter count by year. With that, we mainly need to use &lt;code&gt;mutate()&lt;/code&gt; on the &lt;code&gt;measure&lt;/code&gt; column to convert it.&lt;/p&gt;
 &lt;p&gt;Learning both &lt;code&gt;gather()&lt;/code&gt; and to some degree &lt;code&gt;spread()&lt;/code&gt; which is not covered in this walk-through will save you a great deal of time. It is worth taking the time now to explore what you can do with it.&lt;/p&gt;
 &lt;/details&gt;
@@ -789,6 +796,7 @@ On a side note, it is absolutely fine if you subtracted the means! That would be
 &lt;summary&gt;Possible solution&lt;/summary&gt;
 &lt;p&gt;
 &lt;p&gt;Of course answers will vary here but we can see the values for each country by year&lt;/p&gt;
+
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coalesce_by_column &amp;lt;- function(df) {
   return(dplyr::coalesce(!!! as.list(df)))
 }
@@ -817,10 +825,12 @@ drinks %&amp;gt;%
 ##  9 Albania     2012         5.43  1.81                        0.1     2.22  1.3 
 ## 10 Albania     2013         5.06  1.82                        0.09    2.09  1.06
 ## # … with 1,192 more rows&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;where &lt;code&gt;NA&lt;/code&gt; represents values not reported.&lt;/p&gt;
 &lt;p&gt;On a side note, there is an easier way to run &lt;code&gt;spread()&lt;/code&gt; and it is called &lt;a href=&#34;https://dcl-wrangle.stanford.edu/pivot_basic.html#wider&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;pivot_wider()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/p&gt;
 &lt;/details&gt;
+
 &lt;/div&gt;
 &lt;div id=&#34;excusive&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Logical Operators&lt;/h2&gt;
