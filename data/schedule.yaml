@@ -61,3 +61,12 @@ lessons:
     lesson: "07-lesson"
     example: "07-example"
     assignment: "07-assignment"
+
+  - title: 'Estimations'
+    session: 8
+    date: "October 28, 2020"
+    readings: "09-readings"
+    lesson: "09-lesson"
+    example: "09-example"
+    assignment: "09-assignment"
+    due: "09-due"
