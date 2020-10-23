@@ -8,7 +8,7 @@ lessons:
     readings: "01-readings"
     lesson: "01-lesson"
     example: "01-example"
-    assignment: "01-assignment"
+    assignment: "01-homeworks"
     due: "01-due"
 
   - title: 'The Organization and Graphic Presentation of Data'
@@ -17,7 +17,7 @@ lessons:
     readings: "02-readings"
     lesson: "02-lesson"
     example: "02-example"
-    assignment: "02-assignment"
+    assignment: "02-homeworks"
     due: "02-due"
 
   - title: 'Measures of Central Tendency'
@@ -26,7 +26,7 @@ lessons:
     readings: "03-readings"
     lesson: "03-lesson"
     example: "03-example"
-    assignment: "03-assignment"
+    assignment: "03-homeworks"
     due: "03-due"
 
   - title: 'Measures of Variability'
@@ -35,7 +35,7 @@ lessons:
     readings: "04-readings"
     lesson: "04-lesson"
     example: "04-example"
-    assignment: "04-assignment"
+    assignment: "04-homeworks"
     due: "04-due"
 
   - title: 'The Normal Distribution'
@@ -44,29 +44,34 @@ lessons:
     readings: "05-readings"
     lesson: "05-lesson"
     example: "05-example"
-    assignment: "05-assignment"
+    assignment: "05-homeworks"
     due: "05-due"
 
-  - title: 'Sampling and Sampling Distributions'
+  - title: 'Sampling and Sampling Distributions Part I'
     session: 6
     date: "October 7, 2020"
     readings: "06-readings"
     lesson: "06-lesson"
     example: "06-example"
-    assignment: "06-assignment"
+    assignment: "06-homeworks"
 
-  - title: 'Sampling and Sampling Distributions'
+  - title: 'Sampling and Sampling Distributions Part II'
     session: 7
     date: "October 14, 2020"
     lesson: "07-lesson"
     example: "07-example"
-    assignment: "07-assignment"
+    assignment: "07-homeworks"
+
+  - title: 'Exam I'
+    session: 8
+    date: "October 21, 2020"
+    assignment: "08-homeworks"
 
   - title: 'Estimations'
-    session: 8
+    session: 9
     date: "October 28, 2020"
     readings: "09-readings"
     lesson: "09-lesson"
     example: "09-example"
-    assignment: "09-assignment"
+    assignment: "09-homeworks"
     due: "09-due"

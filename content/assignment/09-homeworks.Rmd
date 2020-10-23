@@ -47,7 +47,10 @@ library(kableExtra)
 ### Week 9 Problem Set
 
 #### Assignment
-Chapter 8 Exercises: 1, 2, 3, 4, 5, and 10. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+- Chapter 7 Exercises: 1, 2, 3, 4, 5, 10.
+- Chapter 8 Exercises: 1, 2, 3, 4, 5.
+
+Please turn both in as one task within the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM in two Wednesdays.<br>
 
 #### Solutions
 

@@ -409,5 +409,47 @@ Known since we already know what we know.
 </description>
     </item>
     
+    <item>
+      <title>Estimations</title>
+      <link>/example/09-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/09-example/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#power-and-significance&#34;&gt;Power and Significance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#election-season-and-statistics&#34;&gt;Election Season and Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;crash-course-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Crash Course Statistics&lt;/h3&gt;
+&lt;p&gt;This week we have another brief introduction from Crash Course Statistics on &lt;strong&gt;Confidence Intervals&lt;/strong&gt; and a great introduction to the &lt;em&gt;p&lt;/em&gt;-value.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/yDEvXB6ApWc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/bf3egy7TQ2Q&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;Remember you can always access a Crash Course Statistics playlist using the following &lt;a href=&#34;https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;power-and-significance&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Power and Significance&lt;/h3&gt;
+&lt;p&gt;If you like interactive things and want to see how Type I &amp;amp; Type II errors, &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;, &lt;em&gt;p&lt;/em&gt;-values, power and effect sizes all play together, try Kristoffer Magnusson’s wonderful page &lt;a href=&#34;https://rpsychologist.com/d3/nhst/&#34; target=&#34;_blank&#34;&gt;Understanding Statistical Power and Significance Testing: an interactive visualization&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;election-season-and-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Election Season and Statistics&lt;/h3&gt;
+&lt;p&gt;If you want to see inferential statistics in action, give a look at &lt;a href=&#34;https://projects.fivethirtyeight.com/2020-election-forecast/&#34; target=&#34;_blank&#34;&gt;FiveThirtyEight 2020&lt;/a&gt; where researchers use polling and regional data to forecast the upcoming elections.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

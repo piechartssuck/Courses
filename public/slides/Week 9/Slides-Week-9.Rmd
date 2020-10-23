@@ -1,0 +1,484 @@
+---
+title: "Estimations"
+subtitle: "EDP 613"
+author: "Week 9"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(clt)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+```{r echo = FALSE}
+shading_geq <- function(x, lower_bound) {
+  y = dnorm(x, mean = m, sd = stdev)
+  y[x < lower_bound] <- NA
+  return(y)
+}
+
+shading_leq <- function(x, upper_bound) {
+  y = dnorm(x, mean = m, sd = stdev)
+  y[x > upper_bound] <- NA
+  return(y)
+}
+
+shading_beq <- function(x, lower_bound, upper_bound) {
+  y = dnorm(x, mean = m, sd = stdev)
+  y[x < lower_bound | x > upper_bound] <- NA
+  return(y)
+}
+
+shading_neq <- function(x, lower_bound, upper_bound) {
+  y = dnorm(x, mean = m, sd = stdev)
+  y[x > lower_bound | x < upper_bound] <- NA
+  return(y)
+}
+```
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# A Note About Probability
+
+We're going to introduce some concepts from Chapter 8 here.
+
+---
+
+# Time to Transition!
+
+--
+
+**Descriptive Statistics** - Mathematical techniques for organizing and summarizing a set of numerical data
+
+--
+
+to 
+
+--
+
+**Inferential Statistics** - Generalizing from a sample to a population
+
+--
+
+>- **Statistic** - Mathematical expression that describes some aspects of a set of scores for a sample
+
+--
+
+>- **Parameter** - Describes some aspect of a set of scores for a population
+
+
+---
+
+# First a Brief Intro to Hypothesis Testing 
+
+--
+
+>- Formally - Testing an assumption about a population parameter
+
+--
+
+>- In Better Terms - An assumption about a particular situation of the world that is testable
+
+
+---
+
+# The Null Hypothesis
+
+
+>- Represented as $H_0$
+
+--
+
+>- is basically what you expect to happen before you run an experiment
+
+--
+
+>- *You have to know this!*
+
+---
+
+# The Alternative Hypothesis
+
+>- Represented as $H_1$ (or $H_A$)
+
+--
+
+>- is basically what else could happen if what you expect doesn't occur
+
+--
+
+>- *You don't have to know this!*
+
+---
+
+# Tests of Statistical Significance
+
+
+>- Formally - Done to determine whether $H_0$ (or $H_A$) can be rejected
+
+--
+
+>- In Better Terms - Test to figure out whether you can reasonably say if your initial assumption won't happen
+
+--
+
+>- Basically if the results of a study don't reject the null hypothesis, then you aren't finding anything new or surprising
+
+
+---
+
+# Statistical Error Types
+
+A **(statistical) estimation ** is a sample statistic is used to estimate the value of an unknown population parameter.
+
+```{r eval = TRUE, echo = FALSE}
+errors <- tibble(
+Decision = c("Reject Null",
+             "Fail to Reject Null"),
+
+`Null is True` = c("Type I Error<br>(aka False Positive)",
+                   "Correct Outcome<br>(aka True Negative)"),
+
+`Null is False` = c("Correct Outcome<br>(aka True Positive)",
+                    "Type II Error<br>(aka False Negative)")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(errors, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+```
+
+---
+
+# Alpha
+
+>- Formally 
+  - rejecting $H_0$ when it is true
+  - the probability of making a **Type I error**
+
+--
+
+>- In Better Terms - the chance of making the wrong decision when what was initially expected to happen actually occurs. 
+
+--
+
+>- Given by $\alpha$
+
+>- Ranges from 0-1 like all other probabilities
+
+- Default $\alpha = 0.05$
+
+- But its context dependent!
+
+---
+
+
+# Example
+
+- If you’re **analyzing airplane engine failures for**, you may want to lower the probability of making a wrong decision and use a **smaller** $\alpha$
+
+--
+
+- If you're **analyzing paper airplanes for failures**, you might be willing accept the higher risk of making the wrong decision and use a **larger** $\alpha$
+
+---
+
+# Beta
+
+>- Formally 
+  -  not rejecting the $H_0$ when $H_1$ is true
+  -  the probability of making a **Type II error**
+
+--
+
+>- In Better Terms - the chance of making the wrong decision when an alternative actually occurs. 
+
+--
+
+>- Given by $\beta$
+
+>- Ranges from 0-1 like all other probabilities
+
+---
+
+# Power
+
+- $1-\beta$ is called **statistical power**
+  - extremely important!
+  - Formally - the probability of NOT making a Type II error
+  - In Better Terms - the chance that you can separate if an outcome is a result of something occurring vs.  pure luck!
+
+---
+  
+# Decision Making
+
+```{r eval = TRUE, echo = FALSE}
+decision_gen <- tibble(
+`Reality` = c("Null is True",
+             "Null is False"),
+
+`Did Not Reject Null` = c("Correct decision<br><br>1-α<br><br>Level of Confidence",
+                   "Type II Error<br><br>β<br><br>Underpower"),
+
+`Rejected Null` = c("Type I Error<br><br>α<br><br>Level of Significance",
+                    "Correct Decision<br><br>1-β<br><br>Statistical Power!")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(decision_gen, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+```
+
+---
+
+# Decision Making
+
+<center>
+Null = "Forecast says its NOT going to rain"
+Alternative = "Something else will happen"
+</center>
+<br>
+```{r eval = TRUE, echo = FALSE}
+example_gen <- tibble(
+Reality = c("Forecast was right",
+             "Forecast was wrong"),
+
+`Did not reject the forecast` = c("Did not take an umbrella and you're dry",
+             "Did not take an umbrella AND you're wet"),
+
+`Rejected forecast` = c("Took an umbrella AND you're dry but may look silly (or fancy)",
+                    "Took an umbrella AND you're dry")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(example_gen, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+```
+
+--
+
+- You could have gotten wet from snow, a flood, etc.
+
+--
+
+- Important: **The alternative hypothesis does not mean the opposite!**
+
+---
+
+# Estimation
+
+- **(Statistical) Estimation** - a sample statistic is used to estimate the value of an unknown population parameter
+
+--
+
+  - **Point estimation** - use of sample data to calculate a single value
+
+  - **Interval estimation** - use of sample data to calculate a possible range of values
+  
+--
+
+<center>
+Process: We are selecting a sample mean (Process)
+<center>
+<br>
+
+```{r eval = TRUE, echo = FALSE}
+sig_est <- tibble(
+Classification = c("Process",
+             "Outcomes"),
+
+`Hypothesis Testing` = c("Determine the probability of getting that mean if the Null is true",
+             "Gain information about the population mean"),
+
+`Rejected forecast` = c("Estimate the value of a population mean",
+                    "Gain information about the population mean")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(sig_est, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+```
+
+---
+
+# Updating Estimation for Sample Means
+
+- **Point estimation** - use of sample data to calculate a single **mean** value
+
+  - Benefit - the sample mean will equal the population mean on average
+  - Drawback - unable to figure out if a sample mean actually equals the population mean
+  
+
+- **Interval estimation** - use of sample data to calculate a possible range of **mean** values
+
+---
+
+# The Characteristic of Hypothesis Testing and Estimation
+
+```{r eval = TRUE, echo = FALSE}
+hyp_est <- tibble(
+Question = c("Do we know the population mean?",
+             "What is the process use dto determine?",
+             "What is learned?",
+             "What is our decision?"),
+
+`Hypothesis Testing` = c("Yes its the Null hypothesis",
+             "The chance of obtaining a sample mean", 
+             "Whether the population mean is likely correct",
+             "To retain or reject the null hypothesis"),
+
+`Point/Interval Estimation` = c("No we're trying to estimate it",
+                    "The value of a population mean",
+                    "The range of values within which the population mean is probably contained",
+                    "No actual decison")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(hyp_est, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") %>%
+  row_spec(4, background = "#212121")
+```
+
+---
+
+# Confidence
+
+- **Confidence Interval** - an interval that contains an unknown parameter (e.g. $\mu$) with certain degree of confidence
+
+- **Level of Confidence** - probability or likelihood that an interval estimate will contain an unknown population parameter
+
+---
+
+# Determining the Confidence Interval
+
+1. Calculate the standard error of the mean $$\sigma_{\overline{Y}} =\dfrac{\sigma}{\sqrt{N}}$$
+
+--
+
+2. Decide on a level of confidence
+
+```{r eval = TRUE, echo = FALSE}
+conf <- tibble(
+Probability = c("0.90",
+                "0.95",
+                "0.99"),
+
+`z-score` = c("1.645",
+                "1.96", 
+                "2.576")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(conf, 
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+```
+
+Typical to have a 95% level of confidence ($\alpha = 0.05$).
+
+---
+
+# Determining the Confidence Interval (continued)
+
+<ol start=3>
+<li> $CI = \overline{Y} \pm z(\sigma_{\overline{Y}})$
+</ol>
+
+--
+
+<ol start=4>
+<li> Interpret the results.
+</ol>
+
+---
+
+# Example
+
+IQ scores in the general healthy population are approximately normally distributed with $100 ± 15 (μ ± σ)$. In a sample of 100 students a sample mean IQ of 103 was recorded ($\overline{Y} = 103$).
+
+--
+
+1. $$\sigma_{\overline{Y}} =\dfrac{15}{\sqrt{100}} = 1.50$$
+
+--
+
+2. Want to find 90% confidence interval, so choose a 90% level of confidence.
+
+$$z(\sigma{\overline{Y}}) = 1.645\cdot 1.50 = 2.47$$
+--
+
+3. $$90\%\, CI = 103\pm2.47 = (105.47, 100.53)$$
+
+4. We are 90% confident that the overall mean IQ is between 100.53 and 105.47.
+
+---
+
+## That's it. Take a break before our R session!

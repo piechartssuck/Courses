@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Estimations</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 9" />
+    <link href="Slides-Week-9_files/tile-view-0.2.3.9000/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-9_files/tile-view-0.2.3.9000/tile-view.js"></script>
+    <link href="Slides-Week-9_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-9_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-9_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-9_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Estimations
+## EDP 613
+### Week 9
+
+---
+
+
+
+
+
+
+
+
+
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# A Note About Probability
+
+We're going to introduce some concepts from Chapter 8 here.
+
+---
+
+# Time to Transition!
+
+--
+
+**Descriptive Statistics** - Mathematical techniques for organizing and summarizing a set of numerical data
+
+--
+
+to 
+
+--
+
+**Inferential Statistics** - Generalizing from a sample to a population
+
+--
+
+&gt;- **Statistic** - Mathematical expression that describes some aspects of a set of scores for a sample
+
+--
+
+&gt;- **Parameter** - Describes some aspect of a set of scores for a population
+
+
+---
+
+# First a Brief Intro to Hypothesis Testing 
+
+--
+
+&gt;- Formally - Testing an assumption about a population parameter
+
+--
+
+&gt;- In Better Terms - An assumption about a particular situation of the world that is testable
+
+
+---
+
+# The Null Hypothesis
+
+
+&gt;- Represented as `\(H_0\)`
+
+--
+
+&gt;- is basically what you expect to happen before you run an experiment
+
+--
+
+&gt;- *You have to know this!*
+
+---
+
+# The Alternative Hypothesis
+
+&gt;- Represented as `\(H_1\)` (or `\(H_A\)`)
+
+--
+
+&gt;- is basically what else could happen if what you expect doesn't occur
+
+--
+
+&gt;- *You don't have to know this!*
+
+---
+
+# Tests of Statistical Significance
+
+
+&gt;- Formally - Done to determine whether `\(H_0\)` (or `\(H_A\)`) can be rejected
+
+--
+
+&gt;- In Better Terms - Test to figure out whether you can reasonably say if your initial assumption won't happen
+
+--
+
+&gt;- Basically if the results of a study don't reject the null hypothesis, then you aren't finding anything new or surprising
+
+
+---
+
+# Statistical Error Types
+
+A **(statistical) estimation ** is a sample statistic is used to estimate the value of an unknown population parameter.
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Decision &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Null is True &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Null is False &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Reject Null &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Type I Error&lt;br&gt;(aka False Positive) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Correct Outcome&lt;br&gt;(aka True Positive) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Fail to Reject Null &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Correct Outcome&lt;br&gt;(aka True Negative) &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Type II Error&lt;br&gt;(aka False Negative) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Alpha
+
+&gt;- Formally 
+  - rejecting `\(H_0\)` when it is true
+  - the probability of making a **Type I error**
+
+--
+
+&gt;- In Better Terms - the chance of making the wrong decision when what was initially expected to happen actually occurs. 
+
+--
+
+&gt;- Given by `\(\alpha\)`
+
+&gt;- Ranges from 0-1 like all other probabilities
+
+- Default `\(\alpha = 0.05\)`
+
+- But its context dependent!
+
+---
+
+
+# Example
+
+- If you’re **analyzing airplane engine failures for**, you may want to lower the probability of making a wrong decision and use a **smaller** `\(\alpha\)`
+
+--
+
+- If you're **analyzing paper airplanes for failures**, you might be willing accept the higher risk of making the wrong decision and use a **larger** `\(\alpha\)`
+
+---
+
+# Beta
+
+&gt;- Formally 
+  -  not rejecting the `\(H_0\)` when `\(H_1\)` is true
+  -  the probability of making a **Type II error**
+
+--
+
+&gt;- In Better Terms - the chance of making the wrong decision when an alternative actually occurs. 
+
+--
+
+&gt;- Given by `\(\beta\)`
+
+&gt;- Ranges from 0-1 like all other probabilities
+
+---
+
+# Power
+
+- `\(1-\beta\)` is called **statistical power**
+  - extremely important!
+  - Formally - the probability of NOT making a Type II error
+  - In Better Terms - the chance that you can separate if an outcome is a result of something occurring vs.  pure luck!
+
+---
+  
+# Decision Making
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Reality &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Did Not Reject Null &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Rejected Null &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Null is True &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Correct decision&lt;br&gt;&lt;br&gt;1-α&lt;br&gt;&lt;br&gt;Level of Confidence &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Type I Error&lt;br&gt;&lt;br&gt;α&lt;br&gt;&lt;br&gt;Level of Significance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Null is False &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Type II Error&lt;br&gt;&lt;br&gt;β&lt;br&gt;&lt;br&gt;Underpower &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Correct Decision&lt;br&gt;&lt;br&gt;1-β&lt;br&gt;&lt;br&gt;Statistical Power! &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Decision Making
+
+&lt;center&gt;
+Null = "Forecast says its NOT going to rain"
+Alternative = "Something else will happen"
+&lt;/center&gt;
+&lt;br&gt;
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Reality &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Did not reject the forecast &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Rejected forecast &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Forecast was right &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Did not take an umbrella and you're dry &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Took an umbrella AND you're dry but may look silly (or fancy) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Forecast was wrong &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Did not take an umbrella AND you're wet &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Took an umbrella AND you're dry &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+- You could have gotten wet from snow, a flood, etc.
+
+--
+
+- Important: **The alternative hypothesis does not mean the opposite!**
+
+---
+
+# Estimation
+
+- **(Statistical) Estimation** - a sample statistic is used to estimate the value of an unknown population parameter
+
+--
+
+  - **Point estimation** - use of sample data to calculate a single value
+
+  - **Interval estimation** - use of sample data to calculate a possible range of values
+  
+--
+
+&lt;center&gt;
+Process: We are selecting a sample mean (Process)
+&lt;center&gt;
+&lt;br&gt;
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Classification &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Hypothesis Testing &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Rejected forecast &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Process &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Determine the probability of getting that mean if the Null is true &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Estimate the value of a population mean &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Outcomes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Gain information about the population mean &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; Gain information about the population mean &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Updating Estimation for Sample Means
+
+- **Point estimation** - use of sample data to calculate a single **mean** value
+
+  - Benefit - the sample mean will equal the population mean on average
+  - Drawback - unable to figure out if a sample mean actually equals the population mean
+  
+
+- **Interval estimation** - use of sample data to calculate a possible range of **mean** values
+
+---
+
+# The Characteristic of Hypothesis Testing and Estimation
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Question &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Hypothesis Testing &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Point/Interval Estimation &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Do we know the population mean? &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Yes its the Null hypothesis &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; No we're trying to estimate it &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; What is the process use dto determine? &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; The chance of obtaining a sample mean &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; The value of a population mean &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; What is learned? &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Whether the population mean is likely correct &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; The range of values within which the population mean is probably contained &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; What is our decision? &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; To retain or reject the null hypothesis &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;"&gt; No actual decison &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Confidence
+
+- **Confidence Interval** - an interval that contains an unknown parameter (e.g. `\(\mu\)`) with certain degree of confidence
+
+- **Level of Confidence** - probability or likelihood that an interval estimate will contain an unknown population parameter
+
+---
+
+# Determining the Confidence Interval
+
+1. Calculate the standard error of the mean `$$\sigma_{\overline{Y}} =\dfrac{\sigma}{\sqrt{N}}$$`
+
+--
+
+2. Decide on a level of confidence
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Probability &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; z-score &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0.90 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1.645 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;background-color: #212121 !important;"&gt; 0.95 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #212121 !important;"&gt; 1.96 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0.99 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2.576 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Typical to have a 95% level of confidence ($\alpha = 0.05$).
+
+---
+
+# Determining the Confidence Interval (continued)
+
+&lt;ol start=3&gt;
+&lt;li&gt; `\(CI = \overline{Y} \pm z(\sigma_{\overline{Y}})\)`
+&lt;/ol&gt;
+
+--
+
+&lt;ol start=4&gt;
+&lt;li&gt; Interpret the results.
+&lt;/ol&gt;
+
+---
+
+# Example
+
+IQ scores in the general healthy population are approximately normally distributed with `\(100 ± 15 (μ ± σ)\)`. In a sample of 100 students a sample mean IQ of 103 was recorded ($\overline{Y} = 103$).
+
+--
+
+1. `$$\sigma_{\overline{Y}} =\dfrac{15}{\sqrt{100}} = 1.50$$`
+
+--
+
+2. Want to find 90% confidence interval, so choose a 90% level of confidence.
+
+`$$z(\sigma{\overline{Y}}) = 1.645\cdot 1.50 = 2.47$$`
+--
+
+3. `$$90\%\, CI = 103\pm2.47 = (105.47, 100.53)$$`
+
+4. We are 90% confident that the overall mean IQ is between 100.53 and 105.47.
+
+---
+
+## That's it. Take a break before our R session!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
