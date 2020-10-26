@@ -721,10 +721,11 @@ Let's see what this looks like
 
 
 ```r
-ggplot(data = movies_sample, aes(x = rating,
-                                 fill = n)) +
-  geom_histogram(color = "white", bins = 20, show.legend = FALSE) +
-  theme_minimal()
+ggplot(movies_sample, aes(x = rating, fill = -..count..)) +
+       geom_histogram(color = "white", 
+                      bins = 20,
+                      show.legend = FALSE) +
+       theme_minimal()
 ```
 
 &lt;img src="Slides-Week-9R_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
@@ -816,7 +817,7 @@ not_lame &lt;- do(10000) * summarize(resample(movies_sample),
 ```r
 samp &lt;- ggplot(data = not_lame , 
        mapping = aes(x = mean,
-                     fill = n)) +
+                     fill = -..count..)) +
   geom_histogram(bins = 30, 
                  color = "white",
                  show.legend = FALSE) +

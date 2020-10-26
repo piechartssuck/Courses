@@ -541,10 +541,11 @@ movies_sample <- movies %>%
 Let's see what this looks like
 
 ```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 3, , fig.align='center'}
-ggplot(data = movies_sample, aes(x = rating,
-                                 fill = n)) +
-  geom_histogram(color = "white", bins = 20, show.legend = FALSE) +
-  theme_minimal()
+ggplot(movies_sample, aes(x = rating, fill = -..count..)) +
+       geom_histogram(color = "white", 
+                      bins = 20,
+                      show.legend = FALSE) +
+       theme_minimal()
 ```
 
 ---
@@ -601,7 +602,7 @@ not_lame <- do(10000) * summarize(resample(movies_sample),
 ```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5, , fig.align='center'}
 samp <- ggplot(data = not_lame , 
        mapping = aes(x = mean,
-                     fill = n)) +
+                     fill = -..count..)) +
   geom_histogram(bins = 30, 
                  color = "white",
                  show.legend = FALSE) +
