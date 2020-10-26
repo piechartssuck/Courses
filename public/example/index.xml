@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Examples | Survey Research Methods</title>
-    <link>https://edp619.theoreticalphysed.com/example/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>/example/</link>
+      <atom:link href="/example/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Examples</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Examples</title>
-      <link>https://edp619.theoreticalphysed.com/example/</link>
+      <link>/example/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/example/01-example/</link>
+      <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/01-example/</guid>
+      <guid>/example/01-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -35,11 +36,12 @@
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>https://edp619.theoreticalphysed.com/example/03-example/</link>
+      <link>/example/03-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/03-example/</guid>
+      <guid>/example/03-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -55,7 +57,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;try-it-out&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Try it out&lt;/h4&gt;
@@ -64,7 +66,7 @@
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;p&gt;&lt;em&gt;Note: If the link for Atom is not working, please use this &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
@@ -81,11 +83,12 @@
     
     <item>
       <title>How to Write Open- and Closed-Ended Questions</title>
-      <link>https://edp619.theoreticalphysed.com/example/05-example/</link>
+      <link>/example/05-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/05-example/</guid>
+      <guid>/example/05-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -101,12 +104,12 @@
 &lt;/div&gt;
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
-&lt;p&gt;Here is a &lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/qualtrics_plug.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&#34;/snippets/qualtrics_plug.txt&#34;&gt;snippet&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. You’ll need it for the walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -122,11 +125,12 @@
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>https://edp619.theoreticalphysed.com/example/06-example/</link>
+      <link>/example/06-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/06-example/</guid>
+      <guid>/example/06-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -143,21 +147,21 @@
 &lt;div id=&#34;what-you-need&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What you need&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;https://edp619.theoreticalphysed.com/files/Week%206/Qualtrics_API.R&#34;&gt;Qualtrics_API.R&lt;/a&gt; script&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;/files/Week%206/Qualtrics_API.R&#34;&gt;Qualtrics_API.R&lt;/a&gt; script&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;An open text file to copy and keep ID numbers securely.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-i---gathering-ids&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part I - Gathering IDs&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/QualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/QualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-ii---using-r-to-access-qualtrics&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part II - Using R to Access Qualtrics&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/UsingRwithQualtricsAPI/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -179,11 +183,12 @@
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>https://edp619.theoreticalphysed.com/example/07-example/</link>
+      <link>/example/07-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/07-example/</guid>
+      <guid>/example/07-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -201,23 +206,23 @@
 &lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Please download the following files and save them in a single folder&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/exscripts/likert_colorpalettes_functions.R&#34;&gt;likert_colorpalettes_functions.R&lt;/a&gt; script.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/exscripts/likert_colorpalettes.R&#34;&gt;likert_colorpalettes.R&lt;/a&gt; script.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;text_box_size&lt;/a&gt; text file.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/vertical_mc_spacing.txt&#34;&gt;vertical_mc_spacing&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes_functions.R&#34;&gt;likert_colorpalettes_functions.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/exscripts/likert_colorpalettes.R&#34;&gt;likert_colorpalettes.R&lt;/a&gt; script.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;text_box_size&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/vertical_mc_spacing.txt&#34;&gt;vertical_mc_spacing&lt;/a&gt; text file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-i---spacing&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part I - Spacing&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthrough-part-ii---colors&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Walkthrough: Part II - Colors&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_colors/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_colors/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -226,7 +231,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;Color Hex&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://uigradients.com/&#34; target=&#34;_blank&#34;&gt;uiGradients&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/resource/design/&#34; target=&#34;_blank&#34;&gt;EDP 693 Resources page for Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/resource/design/&#34; target=&#34;_blank&#34;&gt;EDP 693 Resources page for Design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -241,11 +246,11 @@
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>https://edp619.theoreticalphysed.com/example/08-example/</link>
+      <link>/example/08-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/08-example/</guid>
+      <guid>/example/08-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -263,7 +268,7 @@
 &lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Please download the following files and unzip them for reference&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;walkthroughs&#34; class=&#34;section level4&#34;&gt;
@@ -271,7 +276,7 @@
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Posting by Wednesday&lt;/em&gt;&lt;/strong&gt;
 &lt;!--
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp619.theoreticalphysed.com/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;/videos/Element_spacing/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;  frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
 &lt;/center&gt;
 --&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -287,13 +292,14 @@
     
     <item>
       <title>Getting to Know the Complex Sample Design</title>
-      <link>https://edp619.theoreticalphysed.com/example/09-example/</link>
+      <link>/example/09-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/example/09-example/</guid>
+      <guid>/example/09-example/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -316,7 +322,7 @@
 &lt;h4&gt;What you need&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Please download the following example files and unzip them. They are optional templates for the solicitations and gratitude sections outlined below.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/snippets/text_box_size.txt&#34;&gt;solicitations.zip&lt;/a&gt; text file.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;planning&#34; class=&#34;section level4&#34;&gt;
@@ -418,7 +424,7 @@ In most cases respondents are participating without any amenities - ergo they ar
 &lt;h3&gt;An Overlooked Yet Extremely Important Option&lt;/h3&gt;
 Please make sure that you also look over the Survey Options tab before distribution! It is considered to be the heart of your instrument that allows different parts of Qualtrics to interact with each other.
 &lt;center&gt;
-&lt;img src=&#34;https://edp619.theoreticalphysed.com/img/examples/SurveyOptions.png&#34; title=&#34;fig:&#34; style=&#34;width:70.0%&#34; alt=&#34;Survey Options&#34; /&gt;
+&lt;img src=&#34;/img/examples/SurveyOptions.png&#34; title=&#34;fig:&#34; style=&#34;width:70.0%&#34; alt=&#34;Survey Options&#34; /&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -427,6 +433,615 @@ Please make sure that you also look over the Survey Options tab before distribut
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You may have to right click and download it depending on your browser settings.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Remember once your survey has populated, that’s it! Tweaking it afterwards can lead to measurement errors or even a collapse of instrumentation. If you absolutely must amend an item and need advice, please contact me.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coding and Recoding Scaled Items</title>
+      <link>/example/11-exercise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/11-exercise/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#take-this&#34;&gt;Take This&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#read-up&#34;&gt;Read Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-files&#34;&gt;Data Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-files-1&#34;&gt;Data Files&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#side-note&#34;&gt;Side Note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-a-local-data-set&#34;&gt;Loading a Local Data Set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reverse-coding&#34;&gt;Reverse Coding&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#example&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#computing-the-internal-consistency&#34;&gt;Computing the Internal Consistency&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#composite-reliability&#34;&gt;Composite Reliability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cronbachs-alpha&#34;&gt;Cronbach’s alpha&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inter-item-correlation&#34;&gt;Inter-item Correlation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#item-total-correlation&#34;&gt;Item-total Correlation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;//yihui.org/js/math-code.js&#34;&gt;&lt;/script&gt;
+&lt;!-- Just one possible MathJax CDN below. You may use others. --&gt;
+&lt;script async
+  src=&#34;//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML&#34;&gt;
+&lt;/script&gt;
+&lt;div id=&#34;take-this&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Take This&lt;/h2&gt;
+&lt;p&gt;First things first, please go and take the &lt;a href=&#34;https://openpsychometrics.org/tests/IPIP-BFFM/&#34; target=&#34;_blank&#34;&gt;Big Five Personality Test&lt;/a&gt;. What do you think?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;read-up&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read Up&lt;/h2&gt;
+&lt;p&gt;Now go and read this short synopsis on the test from &lt;a href=&#34;https://projects.fivethirtyeight.com/personality-quiz/&#34; target=&#34;_blank&#34;&gt;FiveThirtyEight&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-files&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Files&lt;/h2&gt;
+&lt;p&gt;Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/data/Big5data.csv&#34;&gt;&lt;code&gt;Big5data.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/data/Big5codebook.csv&#34;&gt;&lt;code&gt;Big5codebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/data/Big5measures.csv&#34;&gt;&lt;code&gt;Big5measures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prerequisites&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;Open up R and create a new script by going to &lt;strong&gt;File &amp;gt; New File &amp;gt; R Script&lt;/strong&gt;. Save this in an easily accessible folder. Now take the files &lt;code&gt;Big5data.csv&lt;/code&gt;, &lt;code&gt;Big5codebook.csv&lt;/code&gt; and &lt;code&gt;Big5measures.csv&lt;/code&gt; and drop them all in the same folder as your new script. Until you get use to directories and file paths, consider keeping both your R script and data sets in the same folder. It just makes life easier.&lt;/p&gt;
+&lt;p&gt;Before we load the libraries, we’re going to grab a package called &lt;code&gt;surveytools2&lt;/code&gt; that is not on CRAN (the main R repository of packages). In fact, many packages aren’t on CRAN since the process to get accepted is relatively hectic! In any case, there is a command within the &lt;code&gt;surveytools2&lt;/code&gt; package that will make our lives easier which we’ll go over shortly. To install, please run the following commands&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;remotes&amp;quot;)
+
+remotes::install_github(&amp;quot;peterhurford/surveytools2&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now go ahead and load up the following libraries or download and load up if needed&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;quot;tidyverse&amp;quot;)
+library(&amp;quot;psych&amp;quot;)
+library(&amp;quot;corrr&amp;quot;)
+library(&amp;quot;surveytools2&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;surveytools2&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:base&amp;#39;:
+## 
+##     replace&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then set the working directory to the location of the script by running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;setwd(dirname(rstudioapi::getActiveDocumentContext()$path))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or by selecting &lt;strong&gt;Session &amp;gt; Set Working Directory &amp;gt; To Source File Location&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-files-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Files&lt;/h2&gt;
+&lt;p&gt;We’ll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it &lt;a href=&#34;https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip&#34;&gt;here&lt;/a&gt; but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file.&lt;/p&gt;
+&lt;div id=&#34;side-note&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Side Note&lt;/h3&gt;
+&lt;p&gt;I am not certain how to load it in Excel but in R you can use&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;toobig_five_data &amp;lt;- read_delim(&amp;quot;data-final.csv&amp;quot;, delim=&amp;quot;\t&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to save it to the &lt;code&gt;big_five_data&lt;/code&gt; variable which you can access by running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;toobig_five_data&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this point you probably want to just open up the csv files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that’s the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent.&lt;/p&gt;
+&lt;p&gt;In any case, we will be working with data strictly in R but never feel bad about opening a data set using another application like Excel. For all of my snarkiness towards anything Office, Excel has some nice qualities.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;loading-a-local-data-set&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Loading a Local Data Set&lt;/h2&gt;
+&lt;p&gt;Let’s load the data set, codebook, and measures&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data &amp;lt;- read_csv(&amp;quot;Big5data.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   .default = col_double()
+## )
+## ℹ Use `spec()` for the full column specifications.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_codebook &amp;lt;- read_csv(&amp;quot;Big5codebook.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   ID = col_character(),
+##   Item = col_character()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_measures &amp;lt;- read_csv(&amp;quot;Big5measures.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Measure = col_double(),
+##   Description = col_character()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and take a look at each&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data %&amp;gt;%
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 50
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10  EST1  EST2  EST3
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     3     2     3     4     4     2     3     3     4     2     4     3     5
+## 2     1     5     1     5     1     4     1     5     4     5     4     2     4
+## 3     2     5     4     3     1     5     1     3     4     5     2     5     5
+## 4     2     3     3     3     3     2     2     4     2     3     5     1     5
+## 5     3     4     3     3     3     3     3     2     3     4     3     5     3
+## 6     3     1     5     1     4     1     5     4     4     2     5     2     5
+## # … with 37 more variables: EST4 &amp;lt;dbl&amp;gt;, EST5 &amp;lt;dbl&amp;gt;, EST6 &amp;lt;dbl&amp;gt;, EST7 &amp;lt;dbl&amp;gt;,
+## #   EST8 &amp;lt;dbl&amp;gt;, EST9 &amp;lt;dbl&amp;gt;, EST10 &amp;lt;dbl&amp;gt;, AGR1 &amp;lt;dbl&amp;gt;, AGR2 &amp;lt;dbl&amp;gt;, AGR3 &amp;lt;dbl&amp;gt;,
+## #   AGR4 &amp;lt;dbl&amp;gt;, AGR5 &amp;lt;dbl&amp;gt;, AGR6 &amp;lt;dbl&amp;gt;, AGR7 &amp;lt;dbl&amp;gt;, AGR8 &amp;lt;dbl&amp;gt;, AGR9 &amp;lt;dbl&amp;gt;,
+## #   AGR10 &amp;lt;dbl&amp;gt;, CSN1 &amp;lt;dbl&amp;gt;, CSN2 &amp;lt;dbl&amp;gt;, CSN3 &amp;lt;dbl&amp;gt;, CSN4 &amp;lt;dbl&amp;gt;, CSN5 &amp;lt;dbl&amp;gt;,
+## #   CSN6 &amp;lt;dbl&amp;gt;, CSN7 &amp;lt;dbl&amp;gt;, CSN8 &amp;lt;dbl&amp;gt;, CSN9 &amp;lt;dbl&amp;gt;, CSN10 &amp;lt;dbl&amp;gt;, OPN1 &amp;lt;dbl&amp;gt;,
+## #   OPN2 &amp;lt;dbl&amp;gt;, OPN3 &amp;lt;dbl&amp;gt;, OPN4 &amp;lt;dbl&amp;gt;, OPN5 &amp;lt;dbl&amp;gt;, OPN6 &amp;lt;dbl&amp;gt;, OPN7 &amp;lt;dbl&amp;gt;,
+## #   OPN8 &amp;lt;dbl&amp;gt;, OPN9 &amp;lt;dbl&amp;gt;, OPN10 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;with respondents self-report under the five factors Extroversion (&lt;code&gt;EXT&lt;/code&gt;), Agreeableness (&lt;code&gt;AGR&lt;/code&gt;), Conscientiousness (&lt;code&gt;CSN&lt;/code&gt;), Emotional Stability (&lt;code&gt;EST&lt;/code&gt;), and Intellect/Imagination (&lt;code&gt;OPN&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_codebook&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 50 x 2
+##    ID    Item                                           
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&amp;#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&amp;#39;t like to draw attention to myself.      
+##  9 EXT9  I don&amp;#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.                   
+## # … with 40 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_measures&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 5 x 2
+##   Measure Description      
+##     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            
+## 1       5 Agree            
+## 2       4 Somewhat Agree   
+## 3       3 Neutral          
+## 4       2 Somewhat Disagree
+## 5       1 Disagree&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For this walkthrough, let’s just concentrate on the Extroversion items which are given by &lt;code&gt;EXT.&lt;/code&gt; That means we should probably pair down both the data set and codebook. For data sets with multiple columns, we can use the &lt;code&gt;select()&lt;/code&gt; syntax. Moreover since we are looking at all of the columns that have &lt;code&gt;EXT&lt;/code&gt;, we can pull only those using the &lt;code&gt;starts_with()&lt;/code&gt; command. For more examples of options that can be used with &lt;code&gt;select()&lt;/code&gt;, take a look &lt;a href=&#34;https://dplyr.tidyverse.org/reference/select.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data_EXT &amp;lt;- big_five_data %&amp;gt;%
+                      select(starts_with(&amp;quot;EXT&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then we’ll do something similar to the codebook. While we can’t simply select columns because all of the variables are in a single column. Much like in Excel, we can filter rows. To do this in R, we use the &lt;code&gt;filter()&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_codebook_EXT &amp;lt;- big_five_codebook %&amp;gt;%
+                          filter(str_detect(ID, &amp;quot;EXT&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data_EXT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1     3     2     3     4     4     2     3     3     4     2
+##  2     1     5     1     5     1     4     1     5     4     5
+##  3     2     5     4     3     1     5     1     3     4     5
+##  4     2     3     3     3     3     2     2     4     2     3
+##  5     3     4     3     3     3     3     3     2     3     4
+##  6     3     1     5     1     4     1     5     4     4     2
+##  7     3     3     4     2     5     2     5     2     4     3
+##  8     3     4     1     3     0     4     1     4     2     5
+##  9     2     4     2     4     4     1     3     1     2     5
+## 10     3     4     4     2     3     2     3     5     1     4
+## # … with 90 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_codebook_EXT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&amp;#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&amp;#39;t like to draw attention to myself.      
+##  9 EXT9  I don&amp;#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reverse-coding&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reverse Coding&lt;/h2&gt;
+&lt;p&gt;Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction.&lt;/p&gt;
+&lt;div id=&#34;example&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;p&gt;For example both these questions might be used to measure the same underlying construct or idea.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;I really like being alone&lt;/li&gt;
+&lt;li&gt;I really &lt;em&gt;don’t&lt;/em&gt; enjoy large gatherings&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this situation, if we used the same response scale for each participants’ responses they would simply cancel out.&lt;/p&gt;
+&lt;p&gt;When aligning the direction, we typically reverse code the one that has a negative, aka the negatively-keyed item. In this case is the second example since it includes the word &lt;em&gt;don’t&lt;/em&gt;. There are exceptions to this rule, but they are narrowly defined. For example, someone who states that they “really &lt;em&gt;don’t&lt;/em&gt; enjoy large gatherings” doesn’t automatically imply they like being alone. In fact, there are arguably an infinite number of possibilities of things they do like! The only time you can be code all items in either direction are in circumstances where there is a binary choice (e.g. Yes/No questions).&lt;/p&gt;
+&lt;p&gt;But wait…there’s more! You also have to consider the intent of the questions and the participants. This second and final check is crucial to reporting reliable and consistent results.&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;p&gt;Getting back to the main data set, let’s again look at the codebook.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_codebook_EXT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&amp;#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&amp;#39;t like to draw attention to myself.      
+##  9 EXT9  I don&amp;#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well it certainly looks like &lt;code&gt;EXT2&lt;/code&gt;, &lt;code&gt;EXT4&lt;/code&gt;, &lt;code&gt;EXT6&lt;/code&gt;, &lt;code&gt;EXT8&lt;/code&gt; and &lt;code&gt;EXT10&lt;/code&gt; are all negative in the context of of assessing extroversion. Furthermore while &lt;code&gt;EXT9&lt;/code&gt; includes the term &lt;em&gt;don’t&lt;/em&gt;, it doesn’t orient the statement in a negative way so it stays the way it is.&lt;/p&gt;
+&lt;p&gt;Remember that command we needed from the &lt;code&gt;surveytools2&lt;/code&gt; package? Well it was to reverse code in a tidy way&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data_EXT_rev &amp;lt;- big_five_data_EXT %&amp;gt;%
+                        mutate(EXT2 = reverse_code(EXT2),
+                               EXT4 = reverse_code(EXT4),
+                               EXT6 = reverse_code(EXT6),
+                               EXT8 = reverse_code(EXT8),
+                               EXT10 = reverse_code(EXT10))
+
+big_five_data_EXT_rev&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1     3     4     3     1     4     3     3     2     4     3
+##  2     1     1     1     0     1     1     1     0     4     0
+##  3     2     1     4     2     1     0     1     2     4     0
+##  4     2     3     3     2     3     3     2     1     2     2
+##  5     3     2     3     2     3     2     3     3     3     1
+##  6     3     5     5     4     4     4     5     1     4     3
+##  7     3     3     4     3     5     3     5     3     4     2
+##  8     3     2     1     2     0     1     1     1     2     0
+##  9     2     2     2     1     4     4     3     4     2     0
+## 10     3     2     4     3     3     3     3     0     1     1
+## # … with 90 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s take a look at a sample of the first six rows between the two tables to see if the columns were indeed reverse coded.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 10
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     3     2     3     4     4     2     3     3     4     2
+## 2     1     5     1     5     1     4     1     5     4     5
+## 3     2     5     4     3     1     5     1     3     4     5
+## 4     2     3     3     3     3     2     2     4     2     3
+## 5     3     4     3     3     3     3     3     2     3     4
+## 6     3     1     5     1     4     1     5     4     4     2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 10
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1     3     4     3     1     4     3     3     2     4     3
+## 2     1     1     1     0     1     1     1     0     4     0
+## 3     2     1     4     2     1     0     1     2     4     0
+## 4     2     3     3     2     3     3     2     1     2     2
+## 5     3     2     3     2     3     2     3     3     3     1
+## 6     3     5     5     4     4     4     5     1     4     3&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;That looks correct! Notice that in the &lt;a style=&#34;color: #FFFFFF; background-color: #419873&#34;&gt;green&lt;/a&gt; columns, the numbers flip along the neutral measure (3), or maybe a better observation is that the numerical complement is correct if adding two corresponding cells equals 5. If you have had any upper level mathematics courses, you may notice these as a modulo or mod 5 system.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;computing-the-internal-consistency&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Computing the Internal Consistency&lt;/h2&gt;
+&lt;p&gt;There are many approaches when assessing reliability, namely those associated with interviews, experiments, surveys, trials, etc. Internal consistency is foremost one of many existing methods used to measure reliability, and it is typically useful in assessing items (e.g from a protocol, questionnaire, test, etc). It essentially &lt;strong&gt;estimates to what degree total scores on an instrument would change or vary if different items were used&lt;/strong&gt;. Here are four but really three approaches used by a majority of practitioners:&lt;/p&gt;
+&lt;div id=&#34;composite-reliability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Composite Reliability&lt;/h3&gt;
+&lt;p&gt;Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). We’ll cover this when we address CFAs soon!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cronbachs-alpha&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Cronbach’s alpha&lt;/h3&gt;
+&lt;p&gt;By far the most utilized approach, it is also very procedural which is typically viewed as beneficial by many evaluators. There are many ways to tell R to compute alpha &lt;span class=&#34;math inline&#34;&gt;\(\left(\alpha\right)\)&lt;/span&gt; but by far the simplest may be to use the &lt;code&gt;psych&lt;/code&gt; package&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;psych::alpha(big_five_data_EXT_rev)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Reliability analysis   
+## Call: psych::alpha(x = big_five_data_EXT_rev)
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
+##        0.9       0.9    0.91      0.48 9.1 0.015  2.7 0.95     0.49
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.87 0.9 0.93 
+## 
+##  Reliability if an item is dropped:
+##       raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
+## EXT1       0.89      0.90    0.91      0.49 8.5    0.016 0.0123  0.50
+## EXT2       0.89      0.89    0.90      0.47 8.1    0.017 0.0115  0.49
+## EXT3       0.89      0.89    0.90      0.47 8.0    0.017 0.0111  0.49
+## EXT4       0.89      0.89    0.90      0.46 7.7    0.017 0.0126  0.45
+## EXT5       0.89      0.89    0.89      0.46 7.8    0.017 0.0098  0.46
+## EXT6       0.89      0.89    0.90      0.48 8.4    0.016 0.0104  0.49
+## EXT7       0.89      0.89    0.90      0.47 7.9    0.017 0.0119  0.46
+## EXT8       0.90      0.90    0.91      0.50 9.1    0.015 0.0092  0.50
+## EXT9       0.89      0.89    0.90      0.48 8.3    0.016 0.0128  0.50
+## EXT10      0.89      0.89    0.90      0.47 7.8    0.017 0.0120  0.47
+## 
+##  Item statistics 
+##         n raw.r std.r r.cor r.drop mean  sd
+## EXT1  100  0.67  0.67  0.61   0.59  2.8 1.2
+## EXT2  100  0.73  0.74  0.71   0.66  3.4 1.2
+## EXT3  100  0.75  0.75  0.72   0.68  3.2 1.3
+## EXT4  100  0.79  0.79  0.78   0.73  2.0 1.2
+## EXT5  100  0.79  0.79  0.78   0.73  3.3 1.3
+## EXT6  100  0.68  0.68  0.65   0.60  2.7 1.3
+## EXT7  100  0.78  0.77  0.74   0.70  2.9 1.5
+## EXT8  100  0.59  0.59  0.53   0.49  1.8 1.3
+## EXT9  100  0.71  0.71  0.67   0.63  3.3 1.3
+## EXT10 100  0.78  0.78  0.75   0.71  1.4 1.3
+## 
+## Non missing response frequency for each item
+##          0    1    2    3    4    5 miss
+## EXT1  0.01 0.18 0.19 0.34 0.21 0.07    0
+## EXT2  0.00 0.09 0.13 0.30 0.26 0.22    0
+## EXT3  0.00 0.14 0.17 0.17 0.34 0.18    0
+## EXT4  0.12 0.24 0.24 0.28 0.11 0.01    0
+## EXT5  0.02 0.11 0.13 0.20 0.38 0.16    0
+## EXT6  0.08 0.14 0.13 0.35 0.29 0.01    0
+## EXT7  0.01 0.24 0.13 0.27 0.16 0.19    0
+## EXT8  0.24 0.21 0.21 0.24 0.09 0.01    0
+## EXT9  0.01 0.11 0.20 0.15 0.33 0.20    0
+## EXT10 0.33 0.23 0.21 0.15 0.07 0.01    0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is a lot there and most of those outcomes are useful, but for reliability we really care about the &lt;code&gt;raw_alpha&lt;/code&gt;, or the &lt;em&gt;the standardized alpha based upon the correlations&lt;/em&gt;. For a raw &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; score, the following breakdown is widely accepted but not without controversy.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Cronbach’s Alpha&lt;/th&gt;
+&lt;th&gt;Measure of Internal Consistency&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha \geq 0.90\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.70 &amp;gt;\alpha\geq0.90\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;Good&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.80 &amp;gt;\alpha\geq0.70\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;Acceptable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.70 &amp;gt;\alpha\geq0.60\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;Poor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;&lt;span class=&#34;math inline&#34;&gt;\(\alpha &amp;lt; 0.50\)&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;Unacceptable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that the thresholds themselves do not have any logical grounding, rather what is an acceptable threshold may be situation dependent.&lt;/p&gt;
+&lt;p&gt;If you’d like to access the alpha value easily, implement this&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;psych::alpha(big_five_data_EXT_rev)$total$raw_alpha&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.9002546&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which for a &lt;strong&gt;quick and dirty&lt;/strong&gt; measure of reliability seems to be pretty Good!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inter-item-correlation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Inter-item Correlation&lt;/h3&gt;
+&lt;p&gt;This is foremost an &lt;strong&gt;average&lt;/strong&gt; which uses correlations.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_data_EXT_rev %&amp;gt;%
+  correlate()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Correlation method: &amp;#39;pearson&amp;#39;
+## Missing treated using: &amp;#39;pairwise.complete.obs&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 11
+##    rowname   EXT1   EXT2   EXT3   EXT4   EXT5   EXT6   EXT7   EXT8   EXT9  EXT10
+##    &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1 EXT1    NA      0.363  0.443  0.494  0.454  0.289  0.546  0.363  0.478  0.435
+##  2 EXT2     0.363 NA      0.415  0.500  0.644  0.628  0.506  0.315  0.438  0.543
+##  3 EXT3     0.443  0.415 NA      0.577  0.631  0.379  0.566  0.295  0.496  0.629
+##  4 EXT4     0.494  0.500  0.577 NA      0.471  0.595  0.540  0.501  0.452  0.636
+##  5 EXT5     0.454  0.644  0.631  0.471 NA      0.495  0.649  0.246  0.582  0.551
+##  6 EXT6     0.289  0.628  0.379  0.595  0.495 NA      0.356  0.373  0.315  0.544
+##  7 EXT7     0.546  0.506  0.566  0.540  0.649  0.356 NA      0.359  0.559  0.509
+##  8 EXT8     0.363  0.315  0.295  0.501  0.246  0.373  0.359 NA      0.450  0.396
+##  9 EXT9     0.478  0.438  0.496  0.452  0.582  0.315  0.559  0.450 NA      0.391
+## 10 EXT10    0.435  0.543  0.629  0.636  0.551  0.544  0.509  0.396  0.391 NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The package gives an &lt;code&gt;NA&lt;/code&gt; for variables that try to correlate with themselves. By default each variable should be perfectly correlated with itself but who cares? With the diagonal owned by &lt;code&gt;NA&lt;/code&gt;s, we can obtain the average correlation of each item with all others by computing the means for each column &lt;code&gt;EXT1&lt;/code&gt; - &lt;code&gt;EXT10&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;inter_measure  &amp;lt;- big_five_data_EXT_rev %&amp;gt;% 
+                    correlate() %&amp;gt;% 
+                    select(-rowname) %&amp;gt;% 
+                    colMeans(na.rm = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Correlation method: &amp;#39;pearson&amp;#39;
+## Missing treated using: &amp;#39;pairwise.complete.obs&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;inter_measure &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      EXT1      EXT2      EXT3      EXT4      EXT5      EXT6      EXT7      EXT8 
+## 0.4295075 0.4834744 0.4922734 0.5295312 0.5249037 0.4414833 0.5100294 0.3665847 
+##      EXT9     EXT10 
+## 0.4623084 0.5150927&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can check the variables that are more strongly correlated with the other items in the &lt;code&gt;EXT&lt;/code&gt; group. The same information is presented by arranging categories and descending internal consistency measures, respectively.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_correlations_cat &amp;lt;- data.frame(inter_measure) %&amp;gt;%
+                               rownames_to_column() %&amp;gt;%
+                               as_tibble() %&amp;gt;%
+                               arrange(desc(inter_measure)) 
+
+big_five_correlations_num &amp;lt;- big_five_correlations_cat %&amp;gt;%
+                               left_join(big_five_codebook, c(&amp;quot;rowname&amp;quot; = &amp;quot;ID&amp;quot;))
+
+big_five_correlations_cat&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    rowname inter_measure
+##    &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt;
+##  1 EXT4            0.530
+##  2 EXT5            0.525
+##  3 EXT10           0.515
+##  4 EXT7            0.510
+##  5 EXT3            0.492
+##  6 EXT2            0.483
+##  7 EXT9            0.462
+##  8 EXT6            0.441
+##  9 EXT1            0.430
+## 10 EXT8            0.367&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;big_five_correlations_num &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 3
+##    rowname inter_measure Item                                           
+##    &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                                          
+##  1 EXT4            0.530 I keep in the background.                      
+##  2 EXT5            0.525 I start conversations.                         
+##  3 EXT10           0.515 I am quiet around strangers.                   
+##  4 EXT7            0.510 I talk to a lot of different people at parties.
+##  5 EXT3            0.492 I feel comfortable around people.              
+##  6 EXT2            0.483 I don&amp;#39;t talk a lot.                            
+##  7 EXT9            0.462 I don&amp;#39;t mind being the center of attention.    
+##  8 EXT6            0.441 I have little to say.                          
+##  9 EXT1            0.430 I am the life of the party.                    
+## 10 EXT8            0.367 I don&amp;#39;t like to draw attention to myself.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note we’ll talk about a &lt;code&gt;left_join()&lt;/code&gt; and other types of &lt;code&gt;joins&lt;/code&gt; next week but for now if you can’t wrap your head around what happened in that step, that’s fine! If you want to get a head start on &lt;code&gt;joins&lt;/code&gt;, go over to &lt;a href=&#34;https://stat545.com/join-cheatsheet.html&#34;&gt;STAT545&lt;/a&gt; and as usual, peers, the Internet and I are available to help.&lt;/p&gt;
+&lt;p&gt;In any case, it looks like &lt;code&gt;EXT4&lt;/code&gt;, &lt;code&gt;EXT5&lt;/code&gt;, &lt;code&gt;EXT10&lt;/code&gt;, and &lt;code&gt;EXT7&lt;/code&gt; have the strongest correlation. The list below has been arranged to represent the data in descending order of measure.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Internal Consistency Measure
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Item
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #5AA85C !important;&#34;&gt;
+EXT4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #5AA85C !important;&#34;&gt;
+0.5295312
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #5AA85C !important;&#34;&gt;
+I keep in the background.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #599D68 !important;&#34;&gt;
+EXT5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #599D68 !important;&#34;&gt;
+0.5249037
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #599D68 !important;&#34;&gt;
+I start conversations.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #56916F !important;&#34;&gt;
+EXT10
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #56916F !important;&#34;&gt;
+0.5150927
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #56916F !important;&#34;&gt;
+I am quiet around strangers.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #538572 !important;&#34;&gt;
+EXT7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #538572 !important;&#34;&gt;
+0.5100294
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #538572 !important;&#34;&gt;
+I talk to a lot of different people at parties.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4F7972 !important;&#34;&gt;
+EXT3
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4F7972 !important;&#34;&gt;
+0.4922734
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4F7972 !important;&#34;&gt;
+I feel comfortable around people.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4B6C6D !important;&#34;&gt;
+EXT2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4B6C6D !important;&#34;&gt;
+0.4834744
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #4B6C6D !important;&#34;&gt;
+I don’t talk a lot.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #465B61 !important;&#34;&gt;
+EXT9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #465B61 !important;&#34;&gt;
+0.4623084
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #465B61 !important;&#34;&gt;
+I don’t mind being the center of attention.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #404C55 !important;&#34;&gt;
+EXT6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #404C55 !important;&#34;&gt;
+0.4414833
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #404C55 !important;&#34;&gt;
+I have little to say.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #393F49 !important;&#34;&gt;
+EXT1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #393F49 !important;&#34;&gt;
+0.4295075
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #393F49 !important;&#34;&gt;
+I am the life of the party.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #32333E !important;&#34;&gt;
+EXT8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #32333E !important;&#34;&gt;
+0.3665847
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;color: white !important;background-color: #32333E !important;&#34;&gt;
+I don’t like to draw attention to myself.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;and the overall average inter-item correlation can be found by&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(inter_measure)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.4755189&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;item-total-correlation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Item-total Correlation&lt;/h3&gt;
+&lt;p&gt;The item-total correlation is similar to the correlation described previously. We are calculating the average but this time, we’re doing it by row rather than by column. To do that we sum&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;agg_scores &amp;lt;- big_five_data_EXT_rev %&amp;gt;% 
+  mutate(score = rowMeans(select(.,1:10))) %&amp;gt;% 
+  correlate() %&amp;gt;% 
+  focus(score) %&amp;gt;%
+  arrange(desc(score))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Correlation method: &amp;#39;pearson&amp;#39;
+## Missing treated using: &amp;#39;pairwise.complete.obs&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;agg_scores&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    rowname score
+##    &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1 EXT4    0.791
+##  2 EXT5    0.789
+##  3 EXT7    0.776
+##  4 EXT10   0.775
+##  5 EXT3    0.749
+##  6 EXT2    0.732
+##  7 EXT9    0.714
+##  8 EXT6    0.680
+##  9 EXT1    0.666
+## 10 EXT8    0.594&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well that is quite enough for now. There are other ways to assess reliability. As you move to the deliverable for this week, keep in mind that none of these could yield good measures for internal consistency. You may have to look around the internet for other R commands and packages that may be a better fit. As usual, you always have your peers and me in times of frustration with R.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

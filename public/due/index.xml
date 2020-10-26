@@ -2,25 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>So What&#39;s Due? | Survey Research Methods</title>
-    <link>https://edp619.theoreticalphysed.com/due/</link>
-      <atom:link href="https://edp619.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
+    <link>/due/</link>
+      <atom:link href="/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp619.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>So What&#39;s Due?</title>
-      <link>https://edp619.theoreticalphysed.com/due/</link>
+      <link>/due/</link>
     </image>
     
     <item>
-      <title>Getting Familiar with the Course</title>
-      <link>https://edp619.theoreticalphysed.com/due/01-due/</link>
+      <title>Coding and Recoding Scaled Items</title>
+      <link>/due/11-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/01-due/</guid>
+      <guid>/due/11-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Data Camp
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Qualtrics
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
+Prepare your Likert items for analysis by assessing coding and recoding
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/11-example&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
+Read and review materials on survey items and Item Response Theory (IRT).
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;/readings/11-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Familiar with the Course</title>
+      <link>/due/01-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/01-due/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -73,7 +168,7 @@ Location
 Introduce yourself in Slack.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -83,8 +178,8 @@ Introduce yourself in Slack.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/02-assignment/#qualtrics-1&#34;&gt;Test survey&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/02-assignment/#qualtrics-1&#34;&gt;Test survey&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -92,13 +187,14 @@ Introduce yourself in Slack.
     
     <item>
       <title>An Introduction to Surveys</title>
-      <link>https://edp619.theoreticalphysed.com/due/02-due/</link>
+      <link>/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/02-due/</guid>
+      <guid>/due/02-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -150,7 +246,7 @@ Location
 Complete a module.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -173,7 +269,7 @@ Complete a module.
 Submit a very early test survey.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/02-assignment/#qualtrics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -185,13 +281,14 @@ Submit a very early test survey.
     
     <item>
       <title>Covering the Population and Selecting Who to Survey</title>
-      <link>https://edp619.theoreticalphysed.com/due/03-due/</link>
+      <link>/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/03-due/</guid>
+      <guid>/due/03-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -244,7 +341,7 @@ Location
 Submit a course task: Selecting a Population.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/03-assignment/#planning-selecting-a-population-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/03-assignment/#planning-selecting-a-population-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -267,7 +364,7 @@ Submit a course task: Selecting a Population.
 Watch a walkthrough on what you can do to never manually resize a textbox.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/03-example/#javascript-in-qualtrics-textbox-width-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/03-example/#javascript-in-qualtrics-textbox-width-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -277,7 +374,7 @@ Watch a walkthrough on what you can do to never manually resize a textbox.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/03-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -285,13 +382,14 @@ Watch a walkthrough on what you can do to never manually resize a textbox.
     
     <item>
       <title>The Fundamentals of Writing Questions</title>
-      <link>https://edp619.theoreticalphysed.com/due/04-due/</link>
+      <link>/due/04-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/04-due/</guid>
+      <guid>/due/04-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -343,7 +441,7 @@ Location
 Complete a skill series.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -355,13 +453,14 @@ Complete a skill series.
     
     <item>
       <title>How to Write Open- and Closed-Ended Questions</title>
-      <link>https://edp619.theoreticalphysed.com/due/05-due/</link>
+      <link>/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/05-due/</guid>
+      <guid>/due/05-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -437,7 +536,7 @@ A unique Qualtrics link was sent to your WVU MIX email at 8am on September 15.
 Watch a walkthrough on getting rid of the Qualtrics logo in your survey.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 18em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/05-example/#javascript-in-qualtrics-the-plug-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/05-example/#javascript-in-qualtrics-the-plug-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -447,8 +546,8 @@ Watch a walkthrough on getting rid of the Qualtrics logo in your survey.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/05-assignment/&#34;&gt;Survey Draft&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/05-assignment/&#34;&gt;Survey Draft&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -462,13 +561,14 @@ Watch a walkthrough on getting rid of the Qualtrics logo in your survey.
     
     <item>
       <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>https://edp619.theoreticalphysed.com/due/06-due/</link>
+      <link>/due/06-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/06-due/</guid>
+      <guid>/due/06-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -521,7 +621,7 @@ Location
 Submit a one paragraph narrative about your survey.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/06-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/06-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -544,7 +644,7 @@ Submit a one paragraph narrative about your survey.
 Submit a draft survey.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/06-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/06-assignment/#submit-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -567,7 +667,7 @@ Submit a draft survey.
 Watch a two-part walkthrough on accessing the Qualtrics API via R.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/06-example/#using-the-qualtrics-api-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/06-example/#using-the-qualtrics-api-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -577,7 +677,7 @@ Watch a two-part walkthrough on accessing the Qualtrics API via R.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/06-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/06-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -585,13 +685,14 @@ Watch a two-part walkthrough on accessing the Qualtrics API via R.
     
     <item>
       <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>https://edp619.theoreticalphysed.com/due/07-due/</link>
+      <link>/due/07-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/07-due/</guid>
+      <guid>/due/07-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -644,7 +745,7 @@ Location
 Watch a two-part walkthrough on how to use spacing and colors in Qualtrics.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/07-example/#visual-clues-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/07-example/#visual-clues-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -654,8 +755,8 @@ Watch a two-part walkthrough on how to use spacing and colors in Qualtrics.
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/07-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/07-assignment/#pilot-study-ledger-1&#34;&gt;Pilot Study&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/07-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/assignment/07-assignment/#pilot-study-ledger-1&#34;&gt;Pilot Study&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -663,13 +764,14 @@ Watch a two-part walkthrough on how to use spacing and colors in Qualtrics.
     
     <item>
       <title>Web Questionnaires and Implementation</title>
-      <link>https://edp619.theoreticalphysed.com/due/08-due/</link>
+      <link>/due/08-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/08-due/</guid>
+      <guid>/due/08-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -722,7 +824,7 @@ Location
 Submit a course task: Pilot Study Ledger
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/assignment/07-assignment/#pilot-study-ledger-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/07-assignment/#pilot-study-ledger-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -745,7 +847,7 @@ Submit a course task: Pilot Study Ledger
 Watch short walkthroughs on some of the functionalities of Qualtrics that are either needed, may help to raise your response rates or both.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/07-example/#qualtrics-functionalities&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/07-example/#qualtrics-functionalities&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -755,7 +857,7 @@ Watch short walkthroughs on some of the functionalities of Qualtrics that are ei
 &lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things coming up&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/08-lesson/#data-camp-1&#34; target=&#34;_blank&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lesson/08-lesson/#data-camp-1&#34; target=&#34;_blank&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -763,18 +865,18 @@ Watch short walkthroughs on some of the functionalities of Qualtrics that are ei
     
     <item>
       <title>Getting to Know the Complex Sample Design</title>
-      <link>https://edp619.theoreticalphysed.com/due/09-due/</link>
+      <link>/due/09-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp619.theoreticalphysed.com/due/09-due/</guid>
+      <guid>/due/09-due/</guid>
       <description>
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp619.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#things-coming-up&#34;&gt;Things coming up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -822,7 +924,7 @@ Location
 Complete multiple skill series.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/09-lesson/#data-camp1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/lesson/09-lesson/#data-camp1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -845,7 +947,7 @@ Complete multiple skill series.
 Prepare your survey for distribution.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/example/09-example.knit/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/example/09-example&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -868,18 +970,12 @@ Prepare your survey for distribution.
 Read and review materials on univariate and bivariate statistics.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp619.theoreticalphysed.com/readings/09-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/readings/09-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/center&gt;
-&lt;/div&gt;
-&lt;div id=&#34;things-coming-up&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Things coming up&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp619.theoreticalphysed.com/lesson/08-lesson/#data-camp-1&#34;&gt;Data Camp modules&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>

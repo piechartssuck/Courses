@@ -1,0 +1,616 @@
+---
+title: "Coding and Recoding Scaled Items"
+linktitle: "Week 11: Coding and Recoding Scaled Items"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 3
+type: docs
+weight: 3
+editor_options: 
+  chunk_output_type: console
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#take-this">Take This</a></li>
+<li><a href="#read-up">Read Up</a></li>
+<li><a href="#data-files">Data Files</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#data-files-1">Data Files</a><ul>
+<li><a href="#side-note">Side Note</a></li>
+</ul></li>
+<li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
+<li><a href="#reverse-coding">Reverse Coding</a><ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+<li><a href="#computing-the-internal-consistency">Computing the Internal Consistency</a><ul>
+<li><a href="#composite-reliability">Composite Reliability</a></li>
+<li><a href="#cronbachs-alpha">Cronbach’s alpha</a></li>
+<li><a href="#inter-item-correlation">Inter-item Correlation</a></li>
+<li><a href="#item-total-correlation">Item-total Correlation</a></li>
+</ul></li>
+</ul>
+</div>
+
+<script src="//yihui.org/js/math-code.js"></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<div id="take-this" class="section level2">
+<h2>Take This</h2>
+<p>First things first, please go and take the <a href="https://openpsychometrics.org/tests/IPIP-BFFM/" target="_blank">Big Five Personality Test</a>. What do you think?</p>
+</div>
+<div id="read-up" class="section level2">
+<h2>Read Up</h2>
+<p>Now go and read this short synopsis on the test from <a href="https://projects.fivethirtyeight.com/personality-quiz/" target="_blank">FiveThirtyEight</a>.</p>
+</div>
+<div id="data-files" class="section level2">
+<h2>Data Files</h2>
+<p>Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:</p>
+<ul>
+<li><a href="/data/Big5data.csv"><code>Big5data.csv</code></a></li>
+<li><a href="/data/Big5codebook.csv"><code>Big5codebook.csv</code></a></li>
+<li><a href="/data/Big5measures.csv"><code>Big5measures.csv</code></a></li>
+</ul>
+</div>
+<div id="prerequisites" class="section level2 unnumbered">
+<h2>Prerequisites</h2>
+<p>Open up R and create a new script by going to <strong>File &gt; New File &gt; R Script</strong>. Save this in an easily accessible folder. Now take the files <code>Big5data.csv</code>, <code>Big5codebook.csv</code> and <code>Big5measures.csv</code> and drop them all in the same folder as your new script. Until you get use to directories and file paths, consider keeping both your R script and data sets in the same folder. It just makes life easier.</p>
+<p>Before we load the libraries, we’re going to grab a package called <code>surveytools2</code> that is not on CRAN (the main R repository of packages). In fact, many packages aren’t on CRAN since the process to get accepted is relatively hectic! In any case, there is a command within the <code>surveytools2</code> package that will make our lives easier which we’ll go over shortly. To install, please run the following commands</p>
+<pre class="r"><code>install.packages(&quot;remotes&quot;)
+
+remotes::install_github(&quot;peterhurford/surveytools2&quot;)</code></pre>
+<p>Now go ahead and load up the following libraries or download and load up if needed</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)
+library(&quot;psych&quot;)
+library(&quot;corrr&quot;)
+library(&quot;surveytools2&quot;)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;surveytools2&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     replace</code></pre>
+<p>and then set the working directory to the location of the script by running</p>
+<pre class="r"><code>setwd(dirname(rstudioapi::getActiveDocumentContext()$path))</code></pre>
+<p>or by selecting <strong>Session &gt; Set Working Directory &gt; To Source File Location</strong>.</p>
+</div>
+<div id="data-files-1" class="section level2">
+<h2>Data Files</h2>
+<p>We’ll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it <a href="https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip">here</a> but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file.</p>
+<div id="side-note" class="section level3">
+<h3>Side Note</h3>
+<p>I am not certain how to load it in Excel but in R you can use</p>
+<pre class="r"><code>toobig_five_data &lt;- read_delim(&quot;data-final.csv&quot;, delim=&quot;\t&quot;) </code></pre>
+<p>to save it to the <code>big_five_data</code> variable which you can access by running</p>
+<pre class="r"><code>toobig_five_data</code></pre>
+<p>At this point you probably want to just open up the csv files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that’s the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent.</p>
+<p>In any case, we will be working with data strictly in R but never feel bad about opening a data set using another application like Excel. For all of my snarkiness towards anything Office, Excel has some nice qualities.</p>
+</div>
+</div>
+<div id="loading-a-local-data-set" class="section level2">
+<h2>Loading a Local Data Set</h2>
+<p>Let’s load the data set, codebook, and measures</p>
+<pre class="r"><code>big_five_data &lt;- read_csv(&quot;Big5data.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   .default = col_double()
+## )
+## ℹ Use `spec()` for the full column specifications.</code></pre>
+<pre class="r"><code>big_five_codebook &lt;- read_csv(&quot;Big5codebook.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   ID = col_character(),
+##   Item = col_character()
+## )</code></pre>
+<pre class="r"><code>big_five_measures &lt;- read_csv(&quot;Big5measures.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Measure = col_double(),
+##   Description = col_character()
+## )</code></pre>
+<p>and take a look at each</p>
+<pre class="r"><code>big_five_data %&gt;%
+  head()</code></pre>
+<pre><code>## # A tibble: 6 x 50
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10  EST1  EST2  EST3
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     3     2     3     4     4     2     3     3     4     2     4     3     5
+## 2     1     5     1     5     1     4     1     5     4     5     4     2     4
+## 3     2     5     4     3     1     5     1     3     4     5     2     5     5
+## 4     2     3     3     3     3     2     2     4     2     3     5     1     5
+## 5     3     4     3     3     3     3     3     2     3     4     3     5     3
+## 6     3     1     5     1     4     1     5     4     4     2     5     2     5
+## # … with 37 more variables: EST4 &lt;dbl&gt;, EST5 &lt;dbl&gt;, EST6 &lt;dbl&gt;, EST7 &lt;dbl&gt;,
+## #   EST8 &lt;dbl&gt;, EST9 &lt;dbl&gt;, EST10 &lt;dbl&gt;, AGR1 &lt;dbl&gt;, AGR2 &lt;dbl&gt;, AGR3 &lt;dbl&gt;,
+## #   AGR4 &lt;dbl&gt;, AGR5 &lt;dbl&gt;, AGR6 &lt;dbl&gt;, AGR7 &lt;dbl&gt;, AGR8 &lt;dbl&gt;, AGR9 &lt;dbl&gt;,
+## #   AGR10 &lt;dbl&gt;, CSN1 &lt;dbl&gt;, CSN2 &lt;dbl&gt;, CSN3 &lt;dbl&gt;, CSN4 &lt;dbl&gt;, CSN5 &lt;dbl&gt;,
+## #   CSN6 &lt;dbl&gt;, CSN7 &lt;dbl&gt;, CSN8 &lt;dbl&gt;, CSN9 &lt;dbl&gt;, CSN10 &lt;dbl&gt;, OPN1 &lt;dbl&gt;,
+## #   OPN2 &lt;dbl&gt;, OPN3 &lt;dbl&gt;, OPN4 &lt;dbl&gt;, OPN5 &lt;dbl&gt;, OPN6 &lt;dbl&gt;, OPN7 &lt;dbl&gt;,
+## #   OPN8 &lt;dbl&gt;, OPN9 &lt;dbl&gt;, OPN10 &lt;dbl&gt;</code></pre>
+<p>with respondents self-report under the five factors Extroversion (<code>EXT</code>), Agreeableness (<code>AGR</code>), Conscientiousness (<code>CSN</code>), Emotional Stability (<code>EST</code>), and Intellect/Imagination (<code>OPN</code>).</p>
+<pre class="r"><code>big_five_codebook</code></pre>
+<pre><code>## # A tibble: 50 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.                   
+## # … with 40 more rows</code></pre>
+<pre class="r"><code>big_five_measures</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   Measure Description      
+##     &lt;dbl&gt; &lt;chr&gt;            
+## 1       5 Agree            
+## 2       4 Somewhat Agree   
+## 3       3 Neutral          
+## 4       2 Somewhat Disagree
+## 5       1 Disagree</code></pre>
+<p>For this walkthrough, let’s just concentrate on the Extroversion items which are given by <code>EXT.</code> That means we should probably pair down both the data set and codebook. For data sets with multiple columns, we can use the <code>select()</code> syntax. Moreover since we are looking at all of the columns that have <code>EXT</code>, we can pull only those using the <code>starts_with()</code> command. For more examples of options that can be used with <code>select()</code>, take a look <a href="https://dplyr.tidyverse.org/reference/select.html" target="_blank">here</a>.</p>
+<pre class="r"><code>big_five_data_EXT &lt;- big_five_data %&gt;%
+                      select(starts_with(&quot;EXT&quot;))</code></pre>
+<p>and then we’ll do something similar to the codebook. While we can’t simply select columns because all of the variables are in a single column. Much like in Excel, we can filter rows. To do this in R, we use the <code>filter()</code> command.</p>
+<pre class="r"><code>big_five_codebook_EXT &lt;- big_five_codebook %&gt;%
+                          filter(str_detect(ID, &quot;EXT&quot;))</code></pre>
+<pre class="r"><code>big_five_data_EXT</code></pre>
+<pre><code>## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     3     2     3     4     4     2     3     3     4     2
+##  2     1     5     1     5     1     4     1     5     4     5
+##  3     2     5     4     3     1     5     1     3     4     5
+##  4     2     3     3     3     3     2     2     4     2     3
+##  5     3     4     3     3     3     3     3     2     3     4
+##  6     3     1     5     1     4     1     5     4     4     2
+##  7     3     3     4     2     5     2     5     2     4     3
+##  8     3     4     1     3     0     4     1     4     2     5
+##  9     2     4     2     4     4     1     3     1     2     5
+## 10     3     4     4     2     3     2     3     5     1     4
+## # … with 90 more rows</code></pre>
+<pre class="r"><code>big_five_codebook_EXT</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.</code></pre>
+</div>
+<div id="reverse-coding" class="section level2">
+<h2>Reverse Coding</h2>
+<p>Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction.</p>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<p>For example both these questions might be used to measure the same underlying construct or idea.</p>
+<ol style="list-style-type: decimal">
+<li>I really like being alone</li>
+<li>I really <em>don’t</em> enjoy large gatherings</li>
+</ol>
+<p>In this situation, if we used the same response scale for each participants’ responses they would simply cancel out.</p>
+<p>When aligning the direction, we typically reverse code the one that has a negative, aka the negatively-keyed item. In this case is the second example since it includes the word <em>don’t</em>. There are exceptions to this rule, but they are narrowly defined. For example, someone who states that they “really <em>don’t</em> enjoy large gatherings” doesn’t automatically imply they like being alone. In fact, there are arguably an infinite number of possibilities of things they do like! The only time you can be code all items in either direction are in circumstances where there is a binary choice (e.g. Yes/No questions).</p>
+<p>But wait…there’s more! You also have to consider the intent of the questions and the participants. This second and final check is crucial to reporting reliable and consistent results.<br />
+:::</p>
+<p>Getting back to the main data set, let’s again look at the codebook.</p>
+<pre class="r"><code>big_five_codebook_EXT</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.</code></pre>
+<p>Well it certainly looks like <code>EXT2</code>, <code>EXT4</code>, <code>EXT6</code>, <code>EXT8</code> and <code>EXT10</code> are all negative in the context of of assessing extroversion. Furthermore while <code>EXT9</code> includes the term <em>don’t</em>, it doesn’t orient the statement in a negative way so it stays the way it is.</p>
+<p>Remember that command we needed from the <code>surveytools2</code> package? Well it was to reverse code in a tidy way</p>
+<pre class="r"><code>big_five_data_EXT_rev &lt;- big_five_data_EXT %&gt;%
+                        mutate(EXT2 = reverse_code(EXT2),
+                               EXT4 = reverse_code(EXT4),
+                               EXT6 = reverse_code(EXT6),
+                               EXT8 = reverse_code(EXT8),
+                               EXT10 = reverse_code(EXT10))
+
+big_five_data_EXT_rev</code></pre>
+<pre><code>## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     3     4     3     1     4     3     3     2     4     3
+##  2     1     1     1     0     1     1     1     0     4     0
+##  3     2     1     4     2     1     0     1     2     4     0
+##  4     2     3     3     2     3     3     2     1     2     2
+##  5     3     2     3     2     3     2     3     3     3     1
+##  6     3     5     5     4     4     4     5     1     4     3
+##  7     3     3     4     3     5     3     5     3     4     2
+##  8     3     2     1     2     0     1     1     1     2     0
+##  9     2     2     2     1     4     4     3     4     2     0
+## 10     3     2     4     3     3     3     3     0     1     1
+## # … with 90 more rows</code></pre>
+<p>Let’s take a look at a sample of the first six rows between the two tables to see if the columns were indeed reverse coded.</p>
+<div align="center">
+<pre><code>## # A tibble: 6 x 10
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     3     2     3     4     4     2     3     3     4     2
+## 2     1     5     1     5     1     4     1     5     4     5
+## 3     2     5     4     3     1     5     1     3     4     5
+## 4     2     3     3     3     3     2     2     4     2     3
+## 5     3     4     3     3     3     3     3     2     3     4
+## 6     3     1     5     1     4     1     5     4     4     2</code></pre>
+<pre><code>## # A tibble: 6 x 10
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     3     4     3     1     4     3     3     2     4     3
+## 2     1     1     1     0     1     1     1     0     4     0
+## 3     2     1     4     2     1     0     1     2     4     0
+## 4     2     3     3     2     3     3     2     1     2     2
+## 5     3     2     3     2     3     2     3     3     3     1
+## 6     3     5     5     4     4     4     5     1     4     3</code></pre>
+</div>
+<p>That looks correct! Notice that in the <a style="color: #FFFFFF; background-color: #419873">green</a> columns, the numbers flip along the neutral measure (3), or maybe a better observation is that the numerical complement is correct if adding two corresponding cells equals 5. If you have had any upper level mathematics courses, you may notice these as a modulo or mod 5 system.</p>
+</div>
+</div>
+<div id="computing-the-internal-consistency" class="section level2">
+<h2>Computing the Internal Consistency</h2>
+<p>There are many approaches when assessing reliability, namely those associated with interviews, experiments, surveys, trials, etc. Internal consistency is foremost one of many existing methods used to measure reliability, and it is typically useful in assessing items (e.g from a protocol, questionnaire, test, etc). It essentially <strong>estimates to what degree total scores on an instrument would change or vary if different items were used</strong>. Here are four but really three approaches used by a majority of practitioners:</p>
+<div id="composite-reliability" class="section level3">
+<h3>Composite Reliability</h3>
+<p>Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). We’ll cover this when we address CFAs soon!</p>
+</div>
+<div id="cronbachs-alpha" class="section level3">
+<h3>Cronbach’s alpha</h3>
+<p>By far the most utilized approach, it is also very procedural which is typically viewed as beneficial by many evaluators. There are many ways to tell R to compute alpha <span class="math inline">\(\left(\alpha\right)\)</span> but by far the simplest may be to use the <code>psych</code> package</p>
+<pre class="r"><code>psych::alpha(big_five_data_EXT_rev)</code></pre>
+<pre><code>## 
+## Reliability analysis   
+## Call: psych::alpha(x = big_five_data_EXT_rev)
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
+##        0.9       0.9    0.91      0.48 9.1 0.015  2.7 0.95     0.49
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.87 0.9 0.93 
+## 
+##  Reliability if an item is dropped:
+##       raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
+## EXT1       0.89      0.90    0.91      0.49 8.5    0.016 0.0123  0.50
+## EXT2       0.89      0.89    0.90      0.47 8.1    0.017 0.0115  0.49
+## EXT3       0.89      0.89    0.90      0.47 8.0    0.017 0.0111  0.49
+## EXT4       0.89      0.89    0.90      0.46 7.7    0.017 0.0126  0.45
+## EXT5       0.89      0.89    0.89      0.46 7.8    0.017 0.0098  0.46
+## EXT6       0.89      0.89    0.90      0.48 8.4    0.016 0.0104  0.49
+## EXT7       0.89      0.89    0.90      0.47 7.9    0.017 0.0119  0.46
+## EXT8       0.90      0.90    0.91      0.50 9.1    0.015 0.0092  0.50
+## EXT9       0.89      0.89    0.90      0.48 8.3    0.016 0.0128  0.50
+## EXT10      0.89      0.89    0.90      0.47 7.8    0.017 0.0120  0.47
+## 
+##  Item statistics 
+##         n raw.r std.r r.cor r.drop mean  sd
+## EXT1  100  0.67  0.67  0.61   0.59  2.8 1.2
+## EXT2  100  0.73  0.74  0.71   0.66  3.4 1.2
+## EXT3  100  0.75  0.75  0.72   0.68  3.2 1.3
+## EXT4  100  0.79  0.79  0.78   0.73  2.0 1.2
+## EXT5  100  0.79  0.79  0.78   0.73  3.3 1.3
+## EXT6  100  0.68  0.68  0.65   0.60  2.7 1.3
+## EXT7  100  0.78  0.77  0.74   0.70  2.9 1.5
+## EXT8  100  0.59  0.59  0.53   0.49  1.8 1.3
+## EXT9  100  0.71  0.71  0.67   0.63  3.3 1.3
+## EXT10 100  0.78  0.78  0.75   0.71  1.4 1.3
+## 
+## Non missing response frequency for each item
+##          0    1    2    3    4    5 miss
+## EXT1  0.01 0.18 0.19 0.34 0.21 0.07    0
+## EXT2  0.00 0.09 0.13 0.30 0.26 0.22    0
+## EXT3  0.00 0.14 0.17 0.17 0.34 0.18    0
+## EXT4  0.12 0.24 0.24 0.28 0.11 0.01    0
+## EXT5  0.02 0.11 0.13 0.20 0.38 0.16    0
+## EXT6  0.08 0.14 0.13 0.35 0.29 0.01    0
+## EXT7  0.01 0.24 0.13 0.27 0.16 0.19    0
+## EXT8  0.24 0.21 0.21 0.24 0.09 0.01    0
+## EXT9  0.01 0.11 0.20 0.15 0.33 0.20    0
+## EXT10 0.33 0.23 0.21 0.15 0.07 0.01    0</code></pre>
+<p>There is a lot there and most of those outcomes are useful, but for reliability we really care about the <code>raw_alpha</code>, or the <em>the standardized alpha based upon the correlations</em>. For a raw <span class="math inline">\(\alpha\)</span> score, the following breakdown is widely accepted but not without controversy.</p>
+<div align="center">
+<table>
+<thead>
+<tr class="header">
+<th>Cronbach’s Alpha</th>
+<th>Measure of Internal Consistency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\alpha \geq 0.90\)</span></td>
+<td>Excellent</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0.70 &gt;\alpha\geq0.90\)</span></td>
+<td>Good</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(0.80 &gt;\alpha\geq0.70\)</span></td>
+<td>Acceptable</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0.70 &gt;\alpha\geq0.60\)</span></td>
+<td>Poor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha &lt; 0.50\)</span></td>
+<td>Unacceptable</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that the thresholds themselves do not have any logical grounding, rather what is an acceptable threshold may be situation dependent.</p>
+<p>If you’d like to access the alpha value easily, implement this</p>
+<pre class="r"><code>psych::alpha(big_five_data_EXT_rev)$total$raw_alpha</code></pre>
+<pre><code>## [1] 0.9002546</code></pre>
+<p>which for a <strong>quick and dirty</strong> measure of reliability seems to be pretty Good!</p>
+</div>
+<div id="inter-item-correlation" class="section level3">
+<h3>Inter-item Correlation</h3>
+<p>This is foremost an <strong>average</strong> which uses correlations.</p>
+<pre class="r"><code>big_five_data_EXT_rev %&gt;%
+  correlate()</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre><code>## # A tibble: 10 x 11
+##    rowname   EXT1   EXT2   EXT3   EXT4   EXT5   EXT6   EXT7   EXT8   EXT9  EXT10
+##    &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1 EXT1    NA      0.363  0.443  0.494  0.454  0.289  0.546  0.363  0.478  0.435
+##  2 EXT2     0.363 NA      0.415  0.500  0.644  0.628  0.506  0.315  0.438  0.543
+##  3 EXT3     0.443  0.415 NA      0.577  0.631  0.379  0.566  0.295  0.496  0.629
+##  4 EXT4     0.494  0.500  0.577 NA      0.471  0.595  0.540  0.501  0.452  0.636
+##  5 EXT5     0.454  0.644  0.631  0.471 NA      0.495  0.649  0.246  0.582  0.551
+##  6 EXT6     0.289  0.628  0.379  0.595  0.495 NA      0.356  0.373  0.315  0.544
+##  7 EXT7     0.546  0.506  0.566  0.540  0.649  0.356 NA      0.359  0.559  0.509
+##  8 EXT8     0.363  0.315  0.295  0.501  0.246  0.373  0.359 NA      0.450  0.396
+##  9 EXT9     0.478  0.438  0.496  0.452  0.582  0.315  0.559  0.450 NA      0.391
+## 10 EXT10    0.435  0.543  0.629  0.636  0.551  0.544  0.509  0.396  0.391 NA</code></pre>
+<p>The package gives an <code>NA</code> for variables that try to correlate with themselves. By default each variable should be perfectly correlated with itself but who cares? With the diagonal owned by <code>NA</code>s, we can obtain the average correlation of each item with all others by computing the means for each column <code>EXT1</code> - <code>EXT10</code>.</p>
+<pre class="r"><code>inter_measure  &lt;- big_five_data_EXT_rev %&gt;% 
+                    correlate() %&gt;% 
+                    select(-rowname) %&gt;% 
+                    colMeans(na.rm = TRUE)</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>inter_measure </code></pre>
+<pre><code>##      EXT1      EXT2      EXT3      EXT4      EXT5      EXT6      EXT7      EXT8 
+## 0.4295075 0.4834744 0.4922734 0.5295312 0.5249037 0.4414833 0.5100294 0.3665847 
+##      EXT9     EXT10 
+## 0.4623084 0.5150927</code></pre>
+<p>We can check the variables that are more strongly correlated with the other items in the <code>EXT</code> group. The same information is presented by arranging categories and descending internal consistency measures, respectively.</p>
+<pre class="r"><code>big_five_correlations_cat &lt;- data.frame(inter_measure) %&gt;%
+                               rownames_to_column() %&gt;%
+                               as_tibble() %&gt;%
+                               arrange(desc(inter_measure)) 
+
+big_five_correlations_num &lt;- big_five_correlations_cat %&gt;%
+                               left_join(big_five_codebook, c(&quot;rowname&quot; = &quot;ID&quot;))
+
+big_five_correlations_cat</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    rowname inter_measure
+##    &lt;chr&gt;           &lt;dbl&gt;
+##  1 EXT4            0.530
+##  2 EXT5            0.525
+##  3 EXT10           0.515
+##  4 EXT7            0.510
+##  5 EXT3            0.492
+##  6 EXT2            0.483
+##  7 EXT9            0.462
+##  8 EXT6            0.441
+##  9 EXT1            0.430
+## 10 EXT8            0.367</code></pre>
+<pre class="r"><code>big_five_correlations_num </code></pre>
+<pre><code>## # A tibble: 10 x 3
+##    rowname inter_measure Item                                           
+##    &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;                                          
+##  1 EXT4            0.530 I keep in the background.                      
+##  2 EXT5            0.525 I start conversations.                         
+##  3 EXT10           0.515 I am quiet around strangers.                   
+##  4 EXT7            0.510 I talk to a lot of different people at parties.
+##  5 EXT3            0.492 I feel comfortable around people.              
+##  6 EXT2            0.483 I don&#39;t talk a lot.                            
+##  7 EXT9            0.462 I don&#39;t mind being the center of attention.    
+##  8 EXT6            0.441 I have little to say.                          
+##  9 EXT1            0.430 I am the life of the party.                    
+## 10 EXT8            0.367 I don&#39;t like to draw attention to myself.</code></pre>
+<p>Note we’ll talk about a <code>left_join()</code> and other types of <code>joins</code> next week but for now if you can’t wrap your head around what happened in that step, that’s fine! If you want to get a head start on <code>joins</code>, go over to <a href="https://stat545.com/join-cheatsheet.html">STAT545</a> and as usual, peers, the Internet and I are available to help.</p>
+<p>In any case, it looks like <code>EXT4</code>, <code>EXT5</code>, <code>EXT10</code>, and <code>EXT7</code> have the strongest correlation. The list below has been arranged to represent the data in descending order of measure.</p>
+<div align="center">
+<table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Variable
+</th>
+<th style="text-align:center;">
+Internal Consistency Measure
+</th>
+<th style="text-align:center;">
+Item
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+EXT4
+</td>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+0.5295312
+</td>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+I keep in the background.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+EXT5
+</td>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+0.5249037
+</td>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+I start conversations.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+EXT10
+</td>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+0.5150927
+</td>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+I am quiet around strangers.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+EXT7
+</td>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+0.5100294
+</td>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+I talk to a lot of different people at parties.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+EXT3
+</td>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+0.4922734
+</td>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+I feel comfortable around people.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+EXT2
+</td>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+0.4834744
+</td>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+I don’t talk a lot.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+EXT9
+</td>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+0.4623084
+</td>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+I don’t mind being the center of attention.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+EXT6
+</td>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+0.4414833
+</td>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+I have little to say.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+EXT1
+</td>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+0.4295075
+</td>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+I am the life of the party.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+EXT8
+</td>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+0.3665847
+</td>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+I don’t like to draw attention to myself.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>and the overall average inter-item correlation can be found by</p>
+<pre class="r"><code>mean(inter_measure)</code></pre>
+<pre><code>## [1] 0.4755189</code></pre>
+</div>
+<div id="item-total-correlation" class="section level3">
+<h3>Item-total Correlation</h3>
+<p>The item-total correlation is similar to the correlation described previously. We are calculating the average but this time, we’re doing it by row rather than by column. To do that we sum</p>
+<pre class="r"><code>agg_scores &lt;- big_five_data_EXT_rev %&gt;% 
+  mutate(score = rowMeans(select(.,1:10))) %&gt;% 
+  correlate() %&gt;% 
+  focus(score) %&gt;%
+  arrange(desc(score))</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>agg_scores</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    rowname score
+##    &lt;chr&gt;   &lt;dbl&gt;
+##  1 EXT4    0.791
+##  2 EXT5    0.789
+##  3 EXT7    0.776
+##  4 EXT10   0.775
+##  5 EXT3    0.749
+##  6 EXT2    0.732
+##  7 EXT9    0.714
+##  8 EXT6    0.680
+##  9 EXT1    0.666
+## 10 EXT8    0.594</code></pre>
+<p>Well that is quite enough for now. There are other ways to assess reliability. As you move to the deliverable for this week, keep in mind that none of these could yield good measures for internal consistency. You may have to look around the internet for other R commands and packages that may be a better fit. As usual, you always have your peers and me in times of frustration with R.</p>
+</div>
+</div>

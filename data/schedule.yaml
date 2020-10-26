@@ -76,3 +76,12 @@ lessons:
     example: "09-example"
     assignment: "09-assignment"
     due: "09-due"
+
+  - title: 'Coding and Recoding Scaled Items'
+    session: 11
+    date: "November 1, 2020"
+    readings: "11-readings"
+    lesson: "11-lesson"
+    example: "11-example"
+    assignment: "11-assignment"
+    due: "11-due"
