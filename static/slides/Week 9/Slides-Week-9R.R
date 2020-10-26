@@ -3,22 +3,14 @@ library(tidyverse)
 library(mosaic)
 library(ggplot2movies)
 
-
-
-
-
-
 # ----
 head(movies)
-
 
 # ----
 dim(movies)
 
-
 # ----
 names(movies)
-
 
 # ----
 select_movies <- movies %>%
@@ -30,18 +22,7 @@ select_movies <- movies %>%
 
 select_movies
 
-
-## ---- echo = FALSE, out.height="30%", fig.height=1, out.width="30%", fig.align='center'----
-knitr::include_graphics("img/tidyr_spread_gather.png")
-
-
-## ---- echo = FALSE, out.height="80%", fig.height=1, out.width="80%", fig.align='center'----
-knitr::include_graphics("img/pl2.png")
-
-
-## ----echo = TRUE, eval = FALSE---------------------------------------------
-## ?pivot_longer
-
+# ?pivot_longer
 
 # ----
 juniors_multiple <- tribble(
@@ -68,18 +49,12 @@ juniors_multiple %>%
 ## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
 knitr::include_graphics("img/pl3.png")
 
-
 # ----
 juniors_multiple %>% 
   knitr::kable() %>%
   kableExtra::row_spec(0, background = "#212121") %>%
   kableExtra::row_spec(2, background = "#212121") %>%
   kableExtra::row_spec(4, background = "#212121") 
-
-
-## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
-knitr::include_graphics("img/pl4.png")
-
 
 # ----
 juniors_multiple %>% 
@@ -95,10 +70,8 @@ juniors_multiple %>%
                 names_sep = '_',
                 values_to = 'correct')
 
-
 # ----
 glimpse(juniors_multiple)
-
 
 # ----
 juniors_multiple_full <- tribble(
@@ -156,7 +129,6 @@ pop <- movies %>%
 
 pop
 
-
 # ----
 set.seed(999) # Random number generator
 movies_sample <- movies %>% 
@@ -208,5 +180,3 @@ samp
 (ci95_mean <- confint(not_lame, 
                       level = 0.95, 
                       method = "stderr"))
-
-
