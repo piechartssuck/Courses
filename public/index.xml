@@ -5028,25 +5028,25 @@ sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &amp;lt;dbl&amp;gt;
-##  1        616594 
-##  2        623473.
-##  3        579970.
-##  4        774962 
-##  5        727564.
-##  6        350372.
-##  7        770056.
-##  8        530907.
-##  9        695483 
-## 10        545835.&lt;/code&gt;&lt;/pre&gt;
+##  1        248431.
+##  2        392324 
+##  3        449050.
+##  4        347550.
+##  5        722012 
+##  6        670838.
+##  7        239015.
+##  8        502331.
+##  9        124718.
+## 10        385012.&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 621521.6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 408128&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 d. The standard deviation of these 10 means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 129759.5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 187665.7&lt;/code&gt;&lt;/pre&gt;
 or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 &lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
@@ -5525,6 +5525,167 @@ Known since we already know what we know.
     </item>
     
     <item>
+      <title>Exam I</title>
+      <link>/due/08-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/08-due/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-7-after-class-ends&#34;&gt;What to do for Week 7 after class ends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-to-do-for-week-8-before-coming-to-class&#34;&gt;What to do for Week 8 before coming to class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extra-credit&#34;&gt;Extra Credit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;what-to-do-for-week-7-after-class-ends&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 7 after class ends&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus?
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:
+#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Submit the Data portion of the first exam.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:
+#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Submit the Paper portion of the first exam.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-to-do-for-week-8-before-coming-to-class&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What to do for Week 8 before coming to class&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Area
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:
+#4682b4;&#34; viewbox=&#34;0 0 384 512&#34;&gt;
+&lt;path d=&#34;M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Being reviewing Chapters 1-6 and material on Data Camp/Walkthroughs for the exam.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+Everywhere
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:
+#4682b4;&#34; viewbox=&#34;0 0 352 512&#34;&gt;
+&lt;path d=&#34;M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Watch videos on the differences between Bayesian and Frequentist Statistics.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-credit&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Extra Credit&lt;/h3&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Area
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:
+#4682b4;&#34; viewbox=&#34;0 0 576 512&#34;&gt;
+&lt;path d=&#34;M0 432c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V256H0v176zm192-68c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-40zm-128 0c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM576 80v48H0V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+An extra credit task on using Rmarkdown for reporting purposes has posted.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For grading.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;For preparation.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Optional but recommended.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Estimations</title>
       <link>/assignment/09-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -5853,22 +6014,19 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-confidence-intervals&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough: Confidence Intervals&lt;/h3&gt;
-&lt;!--
-
-Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 9/Slides-Week-9.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
-
-
-&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
-
-You can download 
-
-- a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target=&#34;_blank&#34;} of the presentation above. 
-- a [script](/slides/Week 9/Slides-Week-9R.R){target=&#34;_blank&#34;} file of just the R chunks used in the presentation.
---&gt;
+&lt;p&gt;Click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%209/Slides-Week-9.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -6563,6 +6721,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R for Data Science&lt;/strong&gt;&lt;/a&gt;: A free online book for learning the basics of R and the tidyverse.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/resources/cheatsheets/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;R and RStudio cheat sheets&lt;/strong&gt;&lt;/a&gt;: A large collection of simple cheat sheets for RStudio, &lt;strong&gt;ggplot2&lt;/strong&gt;, and other R-related things.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;/handouts/RStudioConf_2019Cheatsheets.pdf&#34;&gt;&lt;strong&gt;RStudio Conference cheat sheets&lt;/strong&gt;&lt;/a&gt;: A comprehensive collection of all recognized RStudio cheat sheets from &lt;a href=&#34;https://rstudio.com/resources/rstudioconf-2019/&#34;&gt;rstudio::conf 2019&lt;/a&gt;. In fact if you are interested in R, check out the &lt;a href=&#34;https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/&#34;&gt;conference workshop materials&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://education.rstudio.com/&#34;&gt;&lt;strong&gt;Rstudio Education&lt;/strong&gt;&lt;/a&gt;: A fantastic beginner’s site for those of you who want to learn, teach, or wish to become a certified trainer.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stat545.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stat 545&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/JennyBryan&#34;&gt;Dr. Jenny Bryan&lt;/a&gt; at RStudio has an entire introductory course in R, visualization, and data analysis online.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www2.stat.duke.edu/courses/Fall17/sta112.01/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;STA 112FS: Data Science&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/minebocek&#34; target=&#34;_blank&#34;&gt;Dr. Mine Çetinkaya-Rundel&lt;/a&gt; at the University of Edinburgh / Duke University has an entire introductory course in R, visualization, and data science online.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/allisonhorst/stats-illustrations&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Stats Illustrations&lt;/strong&gt;&lt;/a&gt;: &lt;a href=&#34;https://twitter.com/allison_horst&#34; target=&#34;_blank&#34;&gt;Dr. Allison Horst&lt;/a&gt; created and continues to build beautiful illustrations of many R commands you will probably use.&lt;/li&gt;

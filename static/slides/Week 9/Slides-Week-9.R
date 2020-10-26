@@ -1,8 +1,8 @@
-# ----
+## ----echo = FALSE, eval = TRUE, message=FALSE------------------------------
 library(tidyverse)
 
 
-# ----
+## ----echo = FALSE----------------------------------------------------------
 shading_geq <- function(x, lower_bound) {
   y = dnorm(x, mean = m, sd = stdev)
   y[x < lower_bound] <- NA
@@ -28,76 +28,155 @@ shading_neq <- function(x, lower_bound, upper_bound) {
 }
 
 
-# ----
-minimum = 2.5
-maximum = 3
-m = 2.83
-n = 85
-stdev = 1.2
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+errors <- tibble(
+Decision = c("Reject Null",
+             "Fail to Reject Null"),
 
-f <- function(x) n*x*pnorm(x)^(n-1)*dnorm(x) 
-num <- integrate(f,-Inf,Inf) 
-ci <- 2 * num$value
+`Null is True` = c("Type I Error<br>(aka False Positive)",
+                   "Correct Outcome<br>(aka True Negative)"),
 
-lb <- m - ci
-ub <- m + ci
-
-ll <- round(lb)
-ul <- round(ub)
-
-ggplot(data.frame(x = c(lb, ub)), aes(x = x)) + 
-  stat_function(fun = dnorm, args = list(mean = m, sd = stdev)) + 
-  stat_function(fun = shading_beq, args = list(lower_bound = minimum,
-                                           upper_bound = maximum), 
-            geom = "area", fill = "#3d8ba9", alpha = 0.6) +
-  scale_x_continuous(breaks = seq(ll, ul, stdev),
-                 limits = c(2, 3.5)) + 
-  geom_vline(xintercept = m, color = "#65737e") +
-  theme_minimal(base_size = 22) +
-  theme(panel.border = element_blank(), 
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    axis.title=element_blank(),
-    axis.text.y=element_blank(),
-    axis.ticks.y=element_blank()
-    )
+`Null is False` = c("Correct Outcome<br>(aka True Positive)",
+                    "Type II Error<br>(aka False Negative)")
+)
 
 
-# ----
-minimum = 2.5
-maximum = 3
-m = 2.00
-n = 180
-stdev = 0.8
-
-f <- function(x) n*x*pnorm(x)^(n-1)*dnorm(x) 
-num <- integrate(f,-Inf,Inf) 
-ci <- 2 * num$value
-
-lb <- m - ci
-ub <- m + ci
-
-ll <- round(lb)
-ul <- round(ub)
-
-ggplot(data.frame(x = c(lb, ub)), aes(x = x)) + 
-  stat_function(fun = dnorm, args = list(mean = m, sd = stdev)) + 
-  stat_function(fun = shading_beq, args = list(lower_bound = minimum,
-                                           upper_bound = maximum), 
-            geom = "area", fill = "#3d8ba9", alpha = 0.6) +
-  scale_x_continuous(breaks = seq(ll, ul, stdev),
-                 limits = c(2, 3.5)) + 
-  geom_vline(xintercept = m, color = "#65737e") +
-  theme_minimal(base_size = 22) +
-  theme(panel.border = element_blank(), 
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    axis.title=element_blank(),
-    axis.text.y=element_blank(),
-    axis.ticks.y=element_blank()
-    )
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(errors, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
 
 
-# ----
-pnorm(16.77) - pnorm(8.38)
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+decision_gen <- tibble(
+`Reality` = c("Null is True",
+             "Null is False"),
+
+`Did Not Reject Null` = c("Correct decision<br><br>1-α<br><br>Level of Confidence",
+                   "Type II Error<br><br>β<br><br>Underpower"),
+
+`Rejected Null` = c("Type I Error<br><br>α<br><br>Level of Significance",
+                    "Correct Decision<br><br>1-β<br><br>Statistical Power!")
+)
+
+
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(decision_gen, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+
+
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+example_gen <- tibble(
+Reality = c("Forecast was right",
+             "Forecast was wrong"),
+
+`Did not reject the forecast` = c("Did not take an umbrella and you're dry",
+             "Did not take an umbrella AND you're wet"),
+
+`Rejected forecast` = c("Took an umbrella AND you're dry but may look silly (or fancy)",
+                    "Took an umbrella AND you're dry")
+)
+
+
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(example_gen, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+
+
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+sig_est <- tibble(
+Classification = c("Process",
+             "Outcomes"),
+
+`Hypothesis Testing` = c("Determine the probability of getting that mean if the Null is true",
+             "Gain information about the population mean"),
+
+`Rejected forecast` = c("Estimate the value of a population mean",
+                    "Gain information about the population mean")
+)
+
+
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(sig_est, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
+
+
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+hyp_est <- tibble(
+Question = c("Do we know the population mean?",
+             "What is the process use dto determine?",
+             "What is learned?",
+             "What is our decision?"),
+
+`Hypothesis Testing` = c("Yes its the Null hypothesis",
+             "The chance of obtaining a sample mean", 
+             "Whether the population mean is likely correct",
+             "To retain or reject the null hypothesis"),
+
+`Point/Interval Estimation` = c("No we're trying to estimate it",
+                    "The value of a population mean",
+                    "The range of values within which the population mean is probably contained",
+                    "No actual decison")
+)
+
+
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(hyp_est, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") %>%
+  row_spec(4, background = "#212121")
+
+
+## ----eval = TRUE, echo = FALSE---------------------------------------------
+conf <- tibble(
+Probability = c("0.90",
+                "0.95",
+                "0.99"),
+
+`z-score` = c("1.645",
+                "1.96", 
+                "2.576")
+)
+
+
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE---------------
+kable(conf, 
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121")
 

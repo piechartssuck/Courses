@@ -1,297 +1,311 @@
-# ----
+## ----echo = FALSE, eval = TRUE, message=FALSE------------------------------
 library(tidyverse)
+library(mosaic)
+library(ggplot2movies)
 
 
-# ----
-data(starwars)
+## ----echo = FALSE, eval = TRUE, message=FALSE------------------------------
+suppressMessages(library(tidyverse))
+suppressMessages(library(mosaic))
+suppressMessages(library(ggplot2movies))
 
 
-# ----
-starwars
 
 
-# ----
-head(starwars)
 
 
-# ----
-nrow(starwars %>%
-       select(name))
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+head(movies)
 
 
-# ----
-length(starwars$name)
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+dim(movies)
 
 
-# ----
-str(starwars)
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+names(movies)
 
 
-# ----
-glimpse(starwars)
+## ----echo = TRUE, eval = FALSE---------------------------------------------
+## movies %>%
+##   select(Action, Animation, Comedy,
+##          Drama, Documentary, Romance, Short) %>%
+##   pivot_longer(
+##     everything(),
+##     names_to = "genre"
+##   )
 
 
-# ----
-starwars %>%
-  count(sex)
+## ----echo = FALSE, eval = TRUE---------------------------------------------
+movies %>%
+  select(Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%
+  pivot_longer(
+    everything(),
+    names_to = "genre"
+  )
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(mean(birth_year)) %>%
-  rename(`mean age by species` = `mean(birth_year)`) %>%
-  ungroup()
+## ---- echo = FALSE, out.height="30%", fig.height=1, out.width="30%", fig.align='center'----
+knitr::include_graphics("img/tidyr_spread_gather.png")
 
 
-# ----
-banana_data <- tibble(
-  id = c(1,2,3,4,5),
-  cav_cat = c("Excellent", "Above Average", "Very Poor", "Average", 
-              "Excellent"),
-  cav_code = c(5,4,1,3,5),
-  ic_cat = c("Excellent", "Excellent", "Above Average", "Excellent", 
-             "Excellent"), 
-  ic_code = c(5,5,4,5,5)
+## ---- echo = FALSE, out.height="80%", fig.height=1, out.width="80%", fig.align='center'----
+knitr::include_graphics("img/pl2.png")
+
+
+## ----echo = TRUE, eval = FALSE---------------------------------------------
+## ?pivot_longer
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple <- tribble(
+  ~ "baker", ~"cinnamon_1", ~"cardamom_2", ~"nutmeg_3",
+  "Emma", 1L,   0L, 1L,
+  "Harry", 1L,   1L, 1L, 
+  "Ruby", 1L,   0L, 1L, 
+  "Zainab", 0L, NA, 0L
 )
 
 
-# ----
-banana_data
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple
 
 
-# ----
-mean(banana_data$cav_code)
+## ----echo = FALSE, eval = TRUE---------------------------------------------
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
 
 
-# ----
-mean(banana_data$ic_code)
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl3.png")
 
 
-# ----
-banana_data %>%
-  summarise(mean_cav = mean(cav_code), 
-            mean_ic = mean(ic_code)) %>%
-  mutate(range_means = mean_ic - mean_cav)
+## ----echo = FALSE, eval = TRUE---------------------------------------------
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(median(birth_year)) %>%
-  rename(`median age by species` = `median(birth_year)`) %>%
-  ungroup()
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl4.png")
 
 
-# ----
-Mode <- function(x) {
-  ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
-}
+## ----echo = FALSE, eval = TRUE---------------------------------------------
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(Mode(birth_year)) %>%
-  rename(`mode age by species` = `Mode(birth_year)`) %>%
-  ungroup()
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl5.png")
 
 
-# ----
-starwars %>%
-  filter(gender == "feminine") %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(mean(birth_year)) %>%
-  rename(`female mean age by species` = `mean(birth_year)`) %>%
-  ungroup() %>%
-  na.omit()
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl6.png")
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(sd(birth_year)) %>%
-  rename(`age standard deviation by species` = `sd(birth_year)`) %>%
-  ungroup() %>%
-  na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl7.png")
 
 
-# ----
-pop_sd <- function(x) sd(x) * (length(x)-1) / length(x)
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl8.png")
 
 
-# ----
-starwars %>%
- group_by(species) %>%
- na.omit() %>%
- summarise(pop_sd(birth_year)) %>%
- rename(`age standard deviation by species` = `pop_sd(birth_year)`) %>%
- ungroup() %>%
- na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl9.png")
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(var(birth_year)) %>%
-  rename(`age variance by species` = `var(birth_year)`) %>%
-  ungroup() %>%
-  na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl10.png")
 
 
-# ----
-pop_var <- function(x) var(x) * (length(x)-1) / length(x)
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl11.png")
 
 
-# ----
-starwars %>%
- group_by(species) %>%
- na.omit() %>%
- summarise(pop_var(birth_year)) %>%
- rename(`age variance by species` = `pop_var(birth_year)`) %>%
- ungroup() %>%
- na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl12.png")
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(max(birth_year)) %>%
-  rename(`maximum age by species` = `max(birth_year)`) %>%
-  ungroup() %>%
-  na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl13.png")
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(min(birth_year)) %>%
-  rename(`minimum age by species` = `min(birth_year)`) %>%
-  ungroup() %>%
-  na.omit()
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl14.png")
 
 
-# ----
-starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(max(birth_year), min(birth_year)) %>%
-  rename(`max` = `max(birth_year)`) %>%
-  rename(`min` = `min(birth_year)`) %>%
-  ungroup() %>%
-  na.omit() %>%
-  mutate(`age range by species` = max - min) 
+## ---- echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'----
+knitr::include_graphics("img/pl15.png")
 
 
-# ----
-starwars_by_species <- starwars %>%
-  group_by(species) %>%
-  na.omit() %>%
-  summarise(mean(birth_year)) %>%
-  rename(`mean age by species` = `mean(birth_year)`) %>%
-  ungroup() %>%
-  arrange(`mean age by species`)
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl16.png")
 
 
-# ----
-ggplot(starwars_by_species, aes(x = species, 
-                                y = `mean age by species`, 
-                                fill = `mean age by species`)) +
-  geom_bar(stat='identity') +
-  scale_fill_gradient(low = "tomato", 
-                      high = "steelblue") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45))
+## ---- echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'----
+knitr::include_graphics("img/pl17.png")
 
 
-# ----
-ggplot(starwars_by_species, aes(x = reorder(species, 
-                                            `mean age by species`), 
-                                y = `mean age by species`, 
-                                fill = `mean age by species`)) +
-       geom_bar(stat='identity') +
-       scale_fill_gradient(low = "tomato", 
-                           high = "steelblue") +
-       theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45))
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple %>%
+  pivot_longer(-baker,
+                names_to = c('spice', 'order'),
+                names_sep = '_',
+                values_to = 'correct')
 
 
- # ----echo = TRUE, eval = TRUE, fig.align='center', out.width = "25%"# ----
-ggplot(starwars_by_species, aes(x = reorder(species, 
-                                            -`mean age by species`), 
-                                y = `mean age by species`, 
-                                fill = `mean age by species`)) +
-       geom_bar(stat='identity') +
-       scale_fill_gradient(low = "tomato", 
-                           high = "steelblue") +
-       theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45))
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+glimpse(juniors_multiple)
 
 
-# ----
-ggplot(starwars_by_species, aes(x = reorder(species, 
-                                            `mean age by species`),
-                                y = `mean age by species`,
-                                group = 1,
-                                fill = `mean age by species`)) +
- geom_line(size = 1.5)+
-  geom_point(size = 4) +
-  scale_fill_gradient(low = "tomato", 
-                      high = "steelblue") +
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple_full <- tribble(
+  ~ "baker", ~"score_1", ~"score_2", ~"score_3", 
+  ~ "guess_1", ~"guess_2", ~"guess_3",
+    "Emma", 1L,   0L, 1L, "cinnamon", "cloves", "nutmeg",
+    "Harry", 1L,   1L, 1L, "cinnamon", "cardamom", "nutmeg",
+    "Ruby", 1L,   0L, 1L, "cinnamon", "cumin", "nutmeg",
+    "Zainab", 0L, NA, 0L, "cardamom", NA_character_, "cinnamon"
+  )
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple_full
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+glimpse(juniors_multiple_full)
+
+
+## ----echo = TRUE, eval = FALSE---------------------------------------------
+## juniors_multiple_full %>%
+##   pivot_longer(score_1:guess_3,
+##                names_to = c('score', 'guess'),
+##                names_sep = "_",
+##                values_to = 'correct')
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+juniors_multiple_full %>% 
+  # Don't do anything with the baker column
+    pivot_longer(-baker, 
+                 # Treat all columns the same and order them
+                 names_to = c(".value", "order"), 
+                 # Control how the column names are broken up
+                 names_sep = "_")
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+movies_by_genre <- movies %>%
+            select(Action, Animation, Comedy,
+                   Drama, Documentary, Romance, Short) %>%
+            pivot_longer(everything(),
+                         names_to = "genre") %>%
+            group_by(genre) %>%
+            dplyr::tally(value)
+
+movies_by_genre
+
+
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 6----------------
+ggplot(movies_by_genre,
+       aes(x = genre, 
+           y = n, 
+           fill = -n)) +
+  geom_bar(stat='identity', 
+           show.legend = FALSE) +
+  labs(title = "Count of Genre", x = "Genre", y = "Count") +
   theme_minimal()
 
-# ----
- starwars_by_species_pc <- starwars_by_species %>%
-   arrange(desc(`mean age by species`)) %>%
-   mutate(prop = `mean age by species` /
-            sum(starwars_by_species$`mean age by species`) *100) %>%
-   mutate(ypos = cumsum(prop)- 0.5*prop )
+
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5----------------
+pop <- movies %>% 
+  ggplot(aes(x = rating,
+             fill = n)) +
+  geom_histogram(color = "white", 
+                 bins = 20,
+                 show.legend = FALSE) +
+  theme_minimal()
+
+pop
 
 
-# ----
-  ggplot(starwars_by_species_pc, aes(x = "",
-                                    y = prop,
-                                    fill = `mean age by species`)) +
-   geom_bar(stat="identity",
-            width=1,
-            color="white")  +
-   coord_polar("y", start = 0) +
-   geom_label(aes(y = ypos,
-                  label = `species`),
-              color = "white",
-              size=6) +
-   scale_fill_gradient(low = "tomato",
-                       high = "steelblue") +
-   theme_void()
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+set.seed(999) # Random number generator
+movies_sample <- movies %>% 
+  sample_n(70)
 
 
-# ----
-starwars_by_species_pc <- starwars_by_species %>%
-  arrange(desc(`mean age by species`)) %>%
-  mutate(prop = `mean age by species` / sum(starwars_by_species$`mean age by species`) * 100) %>%
-  mutate(ypos = cumsum(prop)- 0.5*prop )
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 3----------------
+ggplot(data = movies_sample, aes(x = rating,
+                                 fill = n)) +
+  geom_histogram(color = "white", bins = 20, show.legend = FALSE) +
+  theme_minimal()
 
- ggplot(starwars_by_species_pc, aes(x = "", 
-                                   y = prop, 
-                                   fill = `mean age by species`)) +
-  geom_bar(stat="identity", 
-           width=1, 
-           color="white")  +
-  coord_polar("y", start = 0) +
-  geom_label(aes(y = ypos, 
-                 label = `species`), 
-             color = "white", 
-             size=6) +
-  scale_fill_gradient(low = "tomato", 
-                      high = "steelblue") +
-  theme_void()
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+(movies_sample_mean <- movies_sample %>% 
+   summarize(mean = mean(rating)))
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+resample(movies_sample) %>%
+  arrange(orig.id) %>% 
+  summarize(mean = mean(rating))
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+do(10) * 
+  (resample(movies_sample) %>% 
+     summarize(mean = mean(rating)))
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+not_lame <- do(10000) * summarize(resample(movies_sample), 
+                                  mean = mean(rating))
+
+
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5----------------
+samp <- ggplot(data = not_lame , 
+       mapping = aes(x = mean,
+                     fill = n)) +
+  geom_histogram(bins = 30, 
+                 color = "white",
+                 show.legend = FALSE) +
+  theme_minimal()
+
+samp
+
+
+## ----echo = FALSE, eval = TRUE, fig.asp = 0.4, fig.width = 8.8-------------
+
+samp + pop
+
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+(ci95_mean <- confint(not_lame, 
+                      level = 0.95, 
+                      method = "quantile"))
+
+
+## ----echo = TRUE, eval = TRUE----------------------------------------------
+(ci95_mean <- confint(not_lame, 
+                      level = 0.95, 
+                      method = "stderr"))
+
+
+## ----tweet, echo = FALSE, eval = TRUE, out.height="40%", out.width="40%"----
+tweet_embed("https://twitter.com/allison_horst/status/1190001300622036992",
+            maxwidth = 100,
+            theme = "dark")
 

@@ -40,8 +40,6 @@ Download the textbook
 
 ### R Walkthrough: Confidence Intervals
 
-<!--
-
 Click on the presentation itself and then you may
 
 - Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
@@ -57,4 +55,3 @@ You can download
 
 - a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target="_blank"} of the presentation above. 
 - a [script](/slides/Week 9/Slides-Week-9R.R){target="_blank"} file of just the R chunks used in the presentation.
--->

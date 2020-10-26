@@ -12,6 +12,8 @@ library(tidyverse)
 library(fontawesome)
 library(knitr)
 library(kableExtra)
+library(patchwork)
+library(tweetrmd)
 ```
 
 ```{r echo = FALSE, purl=FALSE}
@@ -98,11 +100,11 @@ The most common confidence levels include 90%, 95%, and 99%.
 
 # Problems with how confidence intervals are taught
 
-Not to trash your professor, but you were taught about the confidence interval in a bad way! Traditionally, the way to find confidence intervals for some mean is to first assume a normal curve for a population and then magic. Sure its easy enough to follow procedurally, but the process is nether intuitive nor is it fantastic for people whose strong suit isn't mathematics.
+Not to trash your professor, but you were taught about the confidence interval in an bad way! Traditionally, the approach to finding confidence intervals for some mean is to first assume a normal curve for a population and then magic. Sure its easy enough to follow procedurally, but the process is nether intuitive nor is it fantastic for people whose strong suit isn't mathematics.
 
 ---
 
-# Enter a fancy term called bootstrapping (that you've already done)
+# Enter a fancy term called bootstrapping (that you've already been doing)
 
 In most studies, we simply want to if our null or alternative hypothesis is correct. More than that, the overall purpose of a hypothesis test is to answer this for an entire population,using the data we have - ergo to generalize.
 
@@ -117,4 +119,545 @@ That is what is known as **bootstrapping**
 
 ---
 
+# ggplot2movies
+
+We'll look at CIs, but first let's look at the `ggplot2movies` data set...
+
+```{r echo = TRUE, eval = TRUE}
+head(movies)
+```
+
+---
+
+...its size...
+
+```{r echo = TRUE, eval = TRUE}
+dim(movies)
+```
+
+That's 58,788 rows by 24 columns!
+
+---
+
+... and the names of its columns.
+
+```{r echo = TRUE, eval = TRUE}
+names(movies)
+```
+
+You can see more about the functionality by looking at its [documentation](https://cran.r-project.org/web/packages/ggplot2movies/ggplot2movies.pdf). For now, here's what the variables mean:
+
+- **title**. Title of the movie.
+- **year**. Year of release.
+- **budget**. Total budget (if known) in US dollars
+- **length**. Length in minutes.
+- **rating**. Average IMDB user rating.
+- **votes**. Number of IMDB users who rated this movie.
+- **r1-10**. Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 1.
+- **mpaa**. [MPAA rating](https://www.motionpictures.org/film-ratings/).
+- **Action**, **Animation**, **Comedy**, **Drama**, **Documentary**, **Romance**, **Short**. Binary variables representing if movie was classified as belonging to that genre.
+
+.right[`r fa("link", fill = "#5cb85c")`]
+
+---
+
+# Descriptives 
+
+Let's take a look at a bar chart of the genres. But wait, those are in a bunch of columns and R likes its data in long form! To get the data set to this form, let's first select the columns we need and then use a command called `pivot_longer` which emulates a pivot table in Excel. 
+
+```{r echo = TRUE, eval = FALSE}
+movies %>%
+  select(Action, Animation, Comedy,
+         Drama, Documentary, Romance, Short) %>%
+  pivot_longer(
+    everything(),
+    names_to = "genre"
+  )
+```
+
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+```{r echo = FALSE, eval = TRUE}
+movies %>%
+  select(Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%
+  pivot_longer(
+    everything(),
+    names_to = "genre"
+  )
+```
+
+In instances where we have to go from a long to wide data set, we'd use a command called `pivot_wider`.
+
+---
+
+# What Just Happened?
+
+The previous iteration of `pivot_wider` and `pivot_longer` were given by the commands `gather` and `spread`. To see what these did, let's start out with a cartoon by the talented [Allison Horst](https://github.com/allisonhorst/stats-illustrations) out of UC Santa Barbara. 
+
+```{r, echo = FALSE, out.height="30%", fig.height=1, out.width="30%", fig.align='center'}
+knitr::include_graphics("img/tidyr_spread_gather.png")
+```
+
+So the commands basically took data frames from wide to long with `gather` and back again with `spread`. The `pivot_` commands do much the same but with much more flexibility. However they can be equally as confusing so we'll go over a few basics here. If you're interested in more, take a look at this fantastic overview courtesy of [R-Ladies Sydney](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-4/). For an advanced walkthrough, the [Data Wrangling](https://dcl-wrangle.stanford.edu/pivot_basic.html) site over at Stanford is a great resource. 
+.right[`r fa("link", fill = "#5cb85c")`]
+
+---
+
+# pivot_longer
+
+It is pretty rare that at this stage in your academic development that you need to go from long to wide so we'll be concentrating on the converse with `pivot_longer`. First note that the original graphics in this part of the walkthrough were not created by me, but by RStudio's [Allison Hill](https://alison.rbind.io/). I did however amend them for aesthetic purposes.
+
+Ok let's begin!
+
+.right[`r fa("link", fill = "#5cb85c")`] 
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+# An overview of pivot_longer 
+
+We'll concentrate one two options in `pivot_longer`: `names_to` and `values_to`. 
+
+```{r, echo = FALSE, out.height="80%", fig.height=1, out.width="80%", fig.align='center'}
+knitr::include_graphics("img/pl2.png")
+```
+
+Remember you can always run `?` in front of any command in the Console to get more information about it. For `pivot_longer`, we would simply type in
+
+```{r echo = TRUE, eval = FALSE}
+?pivot_longer
+```
+
+to see other options. 
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+If you want to follow along with the fake data set we'll be using, run the following command to build the tibble
+
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple <- tribble(
+  ~ "baker", ~"cinnamon_1", ~"cardamom_2", ~"nutmeg_3",
+  "Emma", 1L,   0L, 1L,
+  "Harry", 1L,   1L, 1L, 
+  "Ruby", 1L,   0L, 1L, 
+  "Zainab", 0L, NA, 0L
+)
+```
+
+and check it just to make sure
+
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple
+```
+
+Looks good! Let's convert this!
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+To remind you of what the `juniors_multiple` data frame looks like, we have
+
+```{r echo = FALSE, eval = TRUE}
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
+```
+
+We can assign names to the eventual columns using `names_to` and `values_to`.
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl3.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+```{r echo = FALSE, eval = TRUE}
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
+```
+
+We can assign names to the eventual columns using `names_to` and `values_to`.
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl4.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+```{r echo = FALSE, eval = TRUE}
+juniors_multiple %>% 
+  knitr::kable() %>%
+  kableExtra::row_spec(0, background = "#212121") %>%
+  kableExtra::row_spec(2, background = "#212121") %>%
+  kableExtra::row_spec(4, background = "#212121") 
+```
+
+Here you can see the first column `cinnamon_1` and its value `1` associated with the first row `Emma` becomes our first two values under the two columns `spice` and `correct` for our pivoted data frame.
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl5.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+This pattern continues until a whole row is used up.
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl6.png")
+```
+
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+Then it repeats for the next row of values...
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl7.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl8.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl9.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+...and so forth...
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl10.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl11.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl12.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+...until we run out of rows...
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl13.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl14.png")
+```
+
+```{r, echo = FALSE, out.height="35%", fig.height=1, out.width="35%", fig.align='center'}
+knitr::include_graphics("img/pl15.png")
+```
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+...and get the final table of pivoted values.
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl16.png")
+```
+
+.right[`r fa("forward", fill = "#4682b4")`]
+
+---
+
+We can even amend the current command to include things like `order`!
+
+```{r, echo = FALSE, out.height="75%", fig.height=1, out.width="75%", fig.align='center'}
+knitr::include_graphics("img/pl17.png")
+```
+
+.right[`r fa("stop", fill = "#ff6347")`]
+
+---
+
+# Shortcut
+
+Rather than accounting for every column, you can just tell R not to account for columns
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple %>%
+  pivot_longer(-baker,
+                names_to = c('spice', 'order'),
+                names_sep = '_',
+                values_to = 'correct')
+```
+
+---
+
+# Single column types
+
+`pivot_wider` is great for columns of the same type. For example, if we run 
+
+```{r echo = TRUE, eval = TRUE}
+glimpse(juniors_multiple)
+```
+
+all we have are integers... 
+
+---
+
+# Multiple column types
+
+... but for the following
+
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple_full <- tribble(
+  ~ "baker", ~"score_1", ~"score_2", ~"score_3", 
+  ~ "guess_1", ~"guess_2", ~"guess_3",
+    "Emma", 1L,   0L, 1L, "cinnamon", "cloves", "nutmeg",
+    "Harry", 1L,   1L, 1L, "cinnamon", "cardamom", "nutmeg",
+    "Ruby", 1L,   0L, 1L, "cinnamon", "cumin", "nutmeg",
+    "Zainab", 0L, NA, 0L, "cardamom", NA_character_, "cinnamon"
+  )
+```
+
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple_full
+```
+
+.right[`r fa("forward", fill = "#4682b4")`]
+---
+
+```{r echo = TRUE, eval = TRUE}
+glimpse(juniors_multiple_full)
+```
+
+...we have both character and numeric vectors.
+
+---
+
+Try running the following
+
+```{r echo = TRUE, eval = FALSE}
+juniors_multiple_full %>% 
+  pivot_longer(score_1:guess_3,
+               names_to = c('score', 'guess'),
+               names_sep = "_",
+               values_to = 'correct')
+```
+
+Do you get `Error: Can't combine score_1 <integer> and guess_1 <character>.`? So what can you do?
+
+Well since computers are stupid, you have to tell R what to look for.
+
+---
+
+# Generalizing
+
+We can actually just tell R to treat all values the same.
+```{r echo = TRUE, eval = TRUE}
+juniors_multiple_full %>% 
+  # Don't do anything with the baker column
+    pivot_longer(-baker, 
+                 # Treat all columns the same and order them
+                 names_to = c(".value", "order"), 
+                 # Control how the column names are broken up
+                 names_sep = "_")
+```
+
+---
+
+# Back to the bar chart
+
+Now that we know how to pivot, we can just `group_by` genre type and then `tally`
+```{r echo = TRUE, eval = TRUE}
+movies_by_genre <- movies %>%
+            select(Action, Animation, Comedy,
+                   Drama, Documentary, Romance, Short) %>%
+            pivot_longer(everything(),
+                         names_to = "genre") %>%
+            group_by(genre) %>%
+            dplyr::tally(value)
+
+movies_by_genre
+```
+.right[`r fa("stop", fill = "#ff6347")`]
+
+---
+
+```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 6}
+ggplot(movies_by_genre,
+       aes(x = genre, 
+           y = n, 
+           fill = -n)) +
+  geom_bar(stat='identity', 
+           show.legend = FALSE) +
+  labs(title = "Count of Genre", x = "Genre", y = "Count") +
+  theme_minimal()
+```
+
+---
+
+# Back to the movies
+
+Let's take a look at the ratings
+
+```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5}
+pop <- movies %>% 
+  ggplot(aes(x = rating,
+             fill = n)) +
+  geom_histogram(color = "white", 
+                 bins = 20,
+                 show.legend = FALSE) +
+  theme_minimal()
+
+pop
+```
+
+---
+
+# Purpose
+
+We would like to produce a confidence interval for the population mean rating. Let's first pretend we had to take a sample of $n=70$ from the $N= 58788$ movies. To do this, we'll use the `sample_n` command from the `dplyr` package.
+
+```{r echo = TRUE, eval = TRUE}
+set.seed(999) # Random number generator
+movies_sample <- movies %>% 
+  sample_n(70)
+```
+
+Let's see what this looks like
+
+```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 3}
+ggplot(data = movies_sample, aes(x = rating,
+                                 fill = n)) +
+  geom_histogram(color = "white", bins = 20, show.legend = FALSE) +
+  theme_minimal()
+```
+
+---
+
+# Population Estimation
+
+We can think of the histogram as an estimate of our population distribution histogram that we plotted earlier so a population mean rating will provide a good estimate. To estimate a plausible range of values, we can start by using the mean of the sample. A good way to to this is to add parentheses around a variable declaration like so
+
+```{r echo = TRUE, eval = TRUE}
+(movies_sample_mean <- movies_sample %>% 
+   summarize(mean = mean(rating)))
+```
+
+This values is only a single estimation. What you did earlier was top keep sampling from the population, or what is known as **sampling with replacement**. 
+
+.right[`r fa("forward", fill = "#4682b4")`]
+---
+
+# Sampling with Replacement
+
+To do this, we can use the `resample` command from the `mosaic` package. Let's see one instance of this.
+
+```{r echo = TRUE, eval = TRUE}
+resample(movies_sample) %>%
+  arrange(orig.id) %>% 
+  summarize(mean = mean(rating))
+```
+
+But again, this is only one sample mean. 
+
+---
+
+To do a whole bunch we can run a `do` command with parentheses like so
+
+```{r echo = TRUE, eval = TRUE}
+do(10) * 
+  (resample(movies_sample) %>% 
+     summarize(mean = mean(rating)))
+```
+
+.right[`r fa("forward", fill = "#4682b4")`]
+
+But a sample of 10 is so lame. Let's think big and try 10000!
+
+```{r echo = TRUE, eval = TRUE}
+not_lame <- do(10000) * summarize(resample(movies_sample), 
+                                  mean = mean(rating))
+```
+
+---
+
+# Estimating the population
+
+```{r echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5}
+samp <- ggplot(data = not_lame , 
+       mapping = aes(x = mean,
+                     fill = n)) +
+  geom_histogram(bins = 30, 
+                 color = "white",
+                 show.legend = FALSE) +
+  theme_minimal()
+
+samp
+```
+
+---
+
+# Comparison
+
+On the left is our sample distribution while on the right is the original population distribution.
+
+```{r echo = FALSE, eval = TRUE, fig.asp = 0.4, fig.width = 8.8}
+
+samp + pop
+
+```
+
+I'd say that the distribution of the sample means estimates the population pretty well!
+
+---
+
+# Confidence using quantiles
+
+We can now calculate a confidence interval using many options. Let's first isolate the middle 95% of values which corresponds to a 95% confidence interval for the population mean rating.
+
+```{r echo = TRUE, eval = TRUE}
+(ci95_mean <- confint(not_lame, 
+                      level = 0.95, 
+                      method = "quantile"))
+```
+
+Based on the sample data and bootstrapping techniques, we can be 95% confident that the true mean rating of ALL IMDB ratings is between 5.49 and about 6.13.
+
+---
+
+# Confidence using the standard error
+
+Recall that the **standard error** is the standard deviation of the sampling distribution and is approximated by the bootstrap distribution or the null distribution depending on the context. To do this we can use the same function as before but only by changing the method
+
+```{r echo = TRUE, eval = TRUE}
+(ci95_mean <- confint(not_lame, 
+                      level = 0.95, 
+                      method = "stderr"))
+```
+
+The interpretation is virtually the same here.
+---
+
 ## Thats it!
+
+<center>
+```{r tweet, echo = FALSE, eval = TRUE, out.height="40%", out.width="40%"}
+tweet_embed("https://twitter.com/allison_horst/status/1190001300622036992",
+            maxwidth = 100,
+            theme = "dark")
+```
+</center>

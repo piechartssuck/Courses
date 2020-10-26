@@ -549,22 +549,19 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-confidence-intervals&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough: Confidence Intervals&lt;/h3&gt;
-&lt;!--
-
-Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 9/Slides-Week-9.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
-
-
-&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
-
-You can download 
-
-- a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target=&#34;_blank&#34;} of the presentation above. 
-- a [script](/slides/Week 9/Slides-Week-9R.R){target=&#34;_blank&#34;} file of just the R chunks used in the presentation.
---&gt;
+&lt;p&gt;Click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%209/Slides-Week-9.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
