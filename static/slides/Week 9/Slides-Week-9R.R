@@ -37,12 +37,14 @@ names(movies)
 
 
 ## ----echo = FALSE, eval = TRUE---------------------------------------------
-movies %>%
+select_movies <- movies %>%
   select(Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%
   pivot_longer(
     everything(),
     names_to = "genre"
   )
+
+select_movies
 
 
 ## ---- echo = FALSE, out.height="30%", fig.height=1, out.width="30%", fig.align='center'----
@@ -216,7 +218,7 @@ movies_by_genre <- movies %>%
 movies_by_genre
 
 
-## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 6----------------
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 6, , fig.align='center'----
 ggplot(movies_by_genre,
        aes(x = genre, 
            y = n, 
@@ -227,10 +229,9 @@ ggplot(movies_by_genre,
   theme_minimal()
 
 
-## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5----------------
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.75, fig.width = 5, fig.align="center"----
 pop <- movies %>% 
-  ggplot(aes(x = rating,
-             fill = n)) +
+  ggplot(aes(x = rating, fill = -..count..)) +
   geom_histogram(color = "white", 
                  bins = 20,
                  show.legend = FALSE) +
@@ -245,7 +246,7 @@ movies_sample <- movies %>%
   sample_n(70)
 
 
-## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 3----------------
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 3, , fig.align='center'----
 ggplot(data = movies_sample, aes(x = rating,
                                  fill = n)) +
   geom_histogram(color = "white", bins = 20, show.legend = FALSE) +
@@ -274,7 +275,7 @@ not_lame <- do(10000) * summarize(resample(movies_sample),
                                   mean = mean(rating))
 
 
-## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5----------------
+## ----echo = TRUE, eval = TRUE, fig.asp = 0.8, fig.width = 5, , fig.align='center'----
 samp <- ggplot(data = not_lame , 
        mapping = aes(x = mean,
                      fill = n)) +

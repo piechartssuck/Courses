@@ -44,7 +44,7 @@ Click on the presentation itself and then you may
 
 - Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
 - Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 9/Slides-Week-9.html){target="_blank"} to view a larger version of slideshow in a new window.
+- Use this [link](/slides/Week 9/Slides-Week-9R.html){target="_blank"} to view a larger version of slideshow in a new window.
 
 
 ```{r echo = FALSE}

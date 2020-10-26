@@ -650,6 +650,7 @@ Recall that the **standard error** is the standard deviation of the sampling dis
 ```
 
 The interpretation is virtually the same here.
+
 ---
 
 ## Thats it!

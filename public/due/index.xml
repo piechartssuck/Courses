@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>So What&#39;s Due? | Statistical Methods I</title>
-    <link>/due/</link>
-      <atom:link href="/due/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp613.theoreticalphysed.com/due/</link>
+      <atom:link href="https://edp613.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
       <title>So What&#39;s Due?</title>
-      <link>/due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>/due/01-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/01-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/01-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -57,7 +57,7 @@ Location
 Start a module in Data Camp that addresses the basic elements of R
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -70,7 +70,7 @@ Start a module in Data Camp that addresses the basic elements of R
 Complete problems 3, 4, 6, 7, and 8 in Chapter 1.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/01-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/01-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -104,7 +104,7 @@ Location
 Read chapter 2 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/02-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/02-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -117,7 +117,7 @@ Read chapter 2 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/02-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/02-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -130,7 +130,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch a video on Social Explorer and the WVU Libraries Database.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/02-example/#social-explorer-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/02-example/#social-explorer-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -143,7 +143,7 @@ Watch a video on Social Explorer and the WVU Libraries Database.
 Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/02-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/02-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -162,14 +162,14 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>/due/02-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/02-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/02-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -205,7 +205,7 @@ Location
 Start a module in Data Camp that addresses some essential &lt;code&gt;tidyverse&lt;/code&gt; commands.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -218,7 +218,7 @@ Start a module in Data Camp that addresses some essential &lt;code&gt;tidyverse&
 Review the R Walkthrough on the importance of data frames.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/02-lesson/#r-walkthrough-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/02-lesson/#r-walkthrough-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -231,7 +231,7 @@ Review the R Walkthrough on the importance of data frames.
 Complete problems 1, 2, 3, 4, 5, 6 and 7 in Chapter 2.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/02-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/02-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -265,7 +265,7 @@ Location
 Read chapter 3 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/03-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/03-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -278,7 +278,7 @@ Read chapter 3 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/03-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/03-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -291,7 +291,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/03-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/03-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -310,14 +310,14 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
     
     <item>
       <title>Measures of Central Tendency</title>
-      <link>/due/03-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/03-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/03-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -353,7 +353,7 @@ Location
 Complete a module in Data Camp focused on arguably the most important &lt;code&gt;tidyverse&lt;/code&gt; package: &lt;code&gt;dplyr&lt;/code&gt;.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -366,7 +366,7 @@ Complete a module in Data Camp focused on arguably the most important &lt;code&g
 Go over an R Walkthrough on distributions and measures of central tendency.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/03-lesson/#r-walkthrough-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/03-lesson/#r-walkthrough-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -379,7 +379,7 @@ Go over an R Walkthrough on distributions and measures of central tendency.
 Complete problems 1, 2, 3, 4, 5, 6, 10, and 11 in Chapter 3.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/03-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/03-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -413,7 +413,7 @@ Location
 Read chapter 4 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/04-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/04-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -426,7 +426,7 @@ Read chapter 4 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/04-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/04-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -439,7 +439,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch a video on the Measures of Variability.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/04-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/04-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -458,14 +458,14 @@ Watch a video on the Measures of Variability.&lt;a href=&#34;#fn3&#34; class=&#3
     
     <item>
       <title>Measures of Variability</title>
-      <link>/due/04-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/04-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/04-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/04-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -501,7 +501,7 @@ Location
 Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -514,7 +514,7 @@ Complete a module in Data Camp focused on basic descriptive statistics and an in
 Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/04-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/04-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -548,7 +548,7 @@ Location
 Read chapter 5 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/05-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/05-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -561,7 +561,7 @@ Read chapter 5 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/05-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/05-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -574,7 +574,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch a video on The Normal Distribution.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/05-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/05-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -593,14 +593,14 @@ Watch a video on The Normal Distribution.&lt;a href=&#34;#fn3&#34; class=&#34;fo
     
     <item>
       <title>The Normal Distribution</title>
-      <link>/due/05-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/05-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/05-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -636,7 +636,7 @@ Location
 Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -649,7 +649,7 @@ Complete a module in Data Camp focused on basic descriptive statistics and an in
 Go through the NFL and Pipes R walkthrough
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -662,7 +662,7 @@ Go through the NFL and Pipes R walkthrough
 Complete problems 1, 2, 5, 6, 7, 8, 11 and 12 in Chapter 5.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/05-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -696,7 +696,7 @@ Location
 Read chapter 6 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/06-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/06-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -709,7 +709,7 @@ Read chapter 6 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/06-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/06-lesson/#book-materials-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -722,7 +722,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/06-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/06-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -741,14 +741,14 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>/due/07-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/07-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/07-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/07-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -786,7 +786,7 @@ Location
 Take a look at the coding chunks page that may help you on the upcoming exam.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/07-lesson/#r-walkthrough-an-incomplete-review-of-descriptive-statistics-com&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/07-lesson/#r-walkthrough-an-incomplete-review-of-descriptive-statistics-com&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -800,7 +800,7 @@ Take a look at the coding chunks page that may help you on the upcoming exam.
 Complete problems 1, 2, 3, 4, 5, 6, 7, 8, and 9 in Chapter 6.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/07-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/07-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -814,7 +814,7 @@ Complete problems 1, 2, 3, 4, 5, 6, 7, 8, and 9 in Chapter 6.
 Is reality probabilistic or deterministic? Figure out what kind of statistical thinking you have.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/07-example/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/07-example/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -863,7 +863,7 @@ Everywhere
 Watch videos on the differences between Bayesian and Frequentist Statistics.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -916,14 +916,14 @@ An extra credit task on using Rmarkdown for reporting purposes has posted.
     
     <item>
       <title>Exam I</title>
-      <link>/due/08-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/08-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/08-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/08-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1024,7 +1024,7 @@ Everywhere
 Watch videos on the differences between Bayesian and Frequentist Statistics.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/07-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1077,14 +1077,14 @@ An extra credit task on using Rmarkdown for reporting purposes has posted.
     
     <item>
       <title>Estimations</title>
-      <link>/due/09-due/</link>
+      <link>https://edp613.theoreticalphysed.com/due/09-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/09-due/</guid>
+      <guid>https://edp613.theoreticalphysed.com/due/09-due/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1122,7 +1122,7 @@ Location
 Complete problems 1, 2, 3, 4, 5, and 10 in Chapter 7.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/09-homeworks/#assignment-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/09-homeworks/#assignment-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1136,7 +1136,7 @@ Complete problems 1, 2, 3, 4, 5, and 10 in Chapter 7.
 Complete problems 1, 2, 3, 4, and 5 in Chapter 8.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/09-homeworks/#assignment-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/assignment/09-homeworks/#assignment-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1150,7 +1150,7 @@ Complete problems 1, 2, 3, 4, and 5 in Chapter 8.
 Take a look at the R Walkthrough on Confidence Intervals.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/09-lesson/#r-walkthrough-confidence-intervals-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/09-lesson/#r-walkthrough-confidence-intervals-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1184,7 +1184,7 @@ Location
 Read chapter 7 and 8 in the text.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/09-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/readings/09-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1197,7 +1197,7 @@ Read chapter 7 and 8 in the text.
 Look over the text PowerPoint and corresponding notes.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/09-lesson/#textbook-class-notes-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/09-lesson/#textbook-class-notes-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1210,7 +1210,7 @@ Look over the text PowerPoint and corresponding notes.
 Watch videos on Hypothesis Testing and Confidence Intervals.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/09-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/example/09-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

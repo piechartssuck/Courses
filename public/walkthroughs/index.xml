@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Walkthroughs | Statistical Methods I</title>
-    <link>/walkthroughs/</link>
-      <atom:link href="/walkthroughs/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp613.theoreticalphysed.com/walkthroughs/</link>
+      <atom:link href="https://edp613.theoreticalphysed.com/walkthroughs/index.xml" rel="self" type="application/rss+xml" />
     <description>Walkthroughs</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
       <title>Walkthroughs</title>
-      <link>/walkthroughs/</link>
+      <link>https://edp613.theoreticalphysed.com/walkthroughs/</link>
     </image>
     
     <item>
       <title>Pipes and the NFL</title>
-      <link>/walkthroughs/nfl/nflpipes/</link>
+      <link>https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/walkthroughs/nfl/nflpipes/</guid>
+      <guid>https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -56,7 +56,7 @@
 &lt;h1&gt;An Introduction to &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
 &lt;div id=&#34;preparation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Preparation&lt;/h2&gt;
-&lt;p&gt;Download a &lt;a href=&#34;/walkthroughs/NFLpipes.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in this walkthrough.&lt;/p&gt;
+&lt;p&gt;Download a &lt;a href=&#34;https://edp613.theoreticalphysed.com/walkthroughs/NFLpipes.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in this walkthrough.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Purpose&lt;/h2&gt;
@@ -94,13 +94,13 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;the-tidyverse-package&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Tidyverse Package&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;tidyverse&lt;/code&gt; package is actually a family of packages that have been constructed to take all kinds of data sets in multiple formats and to &lt;strong&gt;tidy&lt;/strong&gt; them. Before we get into that concept, the typical path that we take when working with real world data sets is relatively simple…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R3.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R3.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;…yet the process can be extremely complex and time consuming as described below:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information &lt;a href=&#34;http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html&#34;&gt;(NYTimes, 2014)&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;tidyverse&lt;/code&gt; provides packages - given in &lt;span style=&#34; font-weight: bold;    color: #28453B !important;&#34;&gt;green&lt;/span&gt; - that address all of these notions, but we won’t even be able to scratch the surface of most of them.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R4.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In this walk through, we’ll be concentrating on the use of pipes using the &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -113,7 +113,7 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Each observation must have its own row.&lt;/li&gt;
 &lt;li&gt;Each value must have its own cell.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R2.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We are going to wrangle - yup that is a real term for messing with the structure of data - a tidy-ish data set (the &lt;strong&gt;Mutate&lt;/strong&gt; part of the cycle), and then come back to tidying messy data using &lt;code&gt;tidyr&lt;/code&gt; once we’ve gotten it into proper form.&lt;/p&gt;
 &lt;p&gt;Conceptually, making data tidy first is really critical. Instead of building your analyses around whatever format your data are in, we’ll take deliberate steps to make your data tidy. When your data are in this format, you can use a growing assortment of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data. This will save you time since you aren’t reinventing the wheel, and will make your work more clear and understandable to your collaborators. Additionally after struggling with Base R and its arduous process, pipes will probably be something you welcome!&lt;/p&gt;
 &lt;/div&gt;
@@ -123,26 +123,26 @@ install.packages(&amp;quot;gapminder&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick observations by their values.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R5.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R5.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;select()&lt;/code&gt;&lt;/strong&gt; command which let’s you pick variables by their names.&lt;br /&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R6.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R6.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/strong&gt; command which let’s you create new variables with functions of existing variables.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R7.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R7.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;summarise()&lt;/code&gt;&lt;/strong&gt; command which let’s you collapse multiple values to a single summary.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R8.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R8.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;group_by()&lt;/code&gt;&lt;/strong&gt; command which let’s you perform operations with respect to a variable.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/R/R9.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R9.png&#34; style=&#34;width:75.0%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the &lt;strong&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/strong&gt; command which let’s you reorder the rows of a data frame.&lt;/li&gt;
 &lt;/ul&gt;
@@ -167,7 +167,7 @@ Should you memorize these? NO! NEVER! DON’T DO IT! That’s what the internet 
 &lt;div id=&#34;gapminder&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Gapminder&lt;/h3&gt;
 &lt;p&gt;In this walk through, we’ll be using &lt;a href=&#34;http://www.gapminder.org/world&#34;&gt;Gapminder data&lt;/a&gt;, which represents the health and wealth of nations. It was pioneered by &lt;a href=&#34;https://www.ted.com/speakers/hans_rosling&#34;&gt;Hans Rosling&lt;/a&gt;, who is famous for describing the prosperity of nations over time through famines, wars and other historic events with an interactive data visualization in his &lt;a href=&#34;https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34;&gt;2006 TED Talk: The best stats you’ve ever seen&lt;/a&gt; which you can access by selecting the image on the next page.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.gapminder.org/world&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/R/R1.png&#34; alt=&#34;Gapminder Motion Chart&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.gapminder.org/world&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/img/R/R1.png&#34; alt=&#34;Gapminder Motion Chart&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let’s take a look at the gapminder data set.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(gapminder)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
@@ -435,7 +435,7 @@ If you got it, that’s great! However, it’s absolutely fine if you did not. T
 &lt;h2&gt;NFL Data Set&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Grab the data set&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;:
-&lt;a href=&#34;/data/R/2014-average-ticket-price.csv&#34;&gt;&lt;code&gt;2014-average-ticket-price&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;a href=&#34;https://edp613.theoreticalphysed.com/data/R/2014-average-ticket-price.csv&#34;&gt;&lt;code&gt;2014-average-ticket-price&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Save it in the same place as your script.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Load it up in R&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -543,7 +543,7 @@ select(Division, `Avg TP, $`) %&amp;gt;%
 &lt;/div&gt;
 &lt;div id=&#34;task&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Task&lt;/h2&gt;
-&lt;p&gt;For this task first download the &lt;a href=&#34;/data/R/drinks2010andBeyond.csv&#34;&gt;&lt;code&gt;drinks2010andBeyond&lt;/code&gt;&lt;/a&gt; data set&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the &lt;a href=&#34;https://apps.who.int/gho/data/node.main.GISAH?lang=en&#34;&gt;WHO GISAH site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For this task first download the &lt;a href=&#34;https://edp613.theoreticalphysed.com/data/R/drinks2010andBeyond.csv&#34;&gt;&lt;code&gt;drinks2010andBeyond&lt;/code&gt;&lt;/a&gt; data set&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the &lt;a href=&#34;https://apps.who.int/gho/data/node.main.GISAH?lang=en&#34;&gt;WHO GISAH site&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In a typical submission&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, you must include&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Your name and task in the top of the script.&lt;/p&gt;&lt;/li&gt;

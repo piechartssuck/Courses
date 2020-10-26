@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Lessons | Statistical Methods I</title>
-    <link>/lesson/</link>
-      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp613.theoreticalphysed.com/lesson/</link>
+      <atom:link href="https://edp613.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Lessons</title>
-      <link>/lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/</link>
     </image>
     
     <item>
       <title>The What and Why of Statistics</title>
-      <link>/lesson/01-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -40,22 +40,22 @@
 &lt;li&gt;Data frames&lt;/li&gt;
 &lt;li&gt;Lists&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
+&lt;p&gt;As noted last week, there is a lot on there but please refer to the &lt;a href=&#34;https://edp613.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks. Just remember, this is not a programming class!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the in-class slides via&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%201/ICS_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/ICN_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%201/ICS_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%201/ICN_Ch1.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
@@ -63,12 +63,12 @@
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>/lesson/02-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/02-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/02-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -93,16 +93,16 @@
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%202/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%202/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%202/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the in-class slides via&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%202/ICS_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/ICN_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%202/ICS_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%202/ICN_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
@@ -111,11 +111,11 @@
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%202/Slides-Week-2.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%202/Slides-Week-2.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 2/Slides-Week-2.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 2/Slides-Week-2.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;p&gt;You can download a &lt;a href=&#34;/slides/Week%202/Slides-Week-2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
+&lt;p&gt;You can download a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%202/Slides-Week-2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
@@ -128,12 +128,12 @@
     
     <item>
       <title>Measures of Central Tendency</title>
-      <link>/lesson/03-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/03-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/03-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -159,16 +159,16 @@
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%203/SSDS_Ch3.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%203/SSDS_Ch3.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%203/SSDS_Ch3.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%203/SSDS_Ch3.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the class&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%203/ICS_Ch3.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%203/ICN_Ch3.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%203/ICS_Ch3.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%203/ICN_Ch3.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
@@ -177,7 +177,7 @@
 &lt;li&gt;Download the data sets&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%203/Week3data.zip&#34; target=&#34;_blank&#34;&gt;Week 3 Walkthrough Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%203/Week3data.zip&#34; target=&#34;_blank&#34;&gt;Week 3 Walkthrough Materials&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Click on the presentation itself and then you may&lt;/li&gt;
@@ -185,16 +185,16 @@
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%203/Slides-Week-3.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%203/Slides-Week-3.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 3/Slides-Week-3.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 3/Slides-Week-3.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
-&lt;p&gt;You can download a &lt;a href=&#34;/slides/Week%203/Slides-Week-3.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
+&lt;p&gt;You can download a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%203/Slides-Week-3.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You will have to unzip this file. If you are unfamilair with this process, please check the &lt;a href=&#34;/resource/unzipping/&#34;&gt;Unzipping files&lt;/a&gt; section under Resources for assistance.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You will have to unzip this file. If you are unfamilair with this process, please check the &lt;a href=&#34;https://edp613.theoreticalphysed.com/resource/unzipping/&#34;&gt;Unzipping files&lt;/a&gt; section under Resources for assistance.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -202,12 +202,12 @@
     
     <item>
       <title>Measures of Variability</title>
-      <link>/lesson/04-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/04-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/04-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/04-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -234,16 +234,16 @@
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%204/SSDS_Ch4.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%204/SSDS_Ch4.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%204/SSDS_Ch4.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%204/SSDS_Ch4.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Posted after class&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%204/ICS_Ch4.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%204/ICN_Ch4.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%204/ICS_Ch4.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%204/ICN_Ch4.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough---doing-the-class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -260,7 +260,7 @@
 - Press the letter **O** at any point to see see a tile view of the slideshow.
 - Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
 
-&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
 
 You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
 --&gt;
@@ -276,12 +276,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     
     <item>
       <title>The Normal Distribution</title>
-      <link>/lesson/05-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/05-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/05-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/05-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -306,21 +306,21 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%205/SSDS_Ch5.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch5.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%205/SSDS_Ch5.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%205/SSDS_Ch5.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the class&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%205/ICS_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week5/ICN_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%205/ICS_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week5/ICN_Ch5.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;https://edp613.theoreticalphysed.com/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;!--
 1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
 
@@ -332,7 +332,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 - Press the letter **O** at any point to see see a tile view of the slideshow.
 - Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
 
-&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
 
 You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
 --&gt;
@@ -342,12 +342,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>/lesson/06-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/06-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/06-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/06-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -372,8 +372,8 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch6.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/SSDS_Ch6.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -383,15 +383,15 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 6/Slides-Week-6.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 6/Slides-Week-6.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
-&lt;li&gt;an &lt;a href=&#34;/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;an &lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week6/ICN_Ch6.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-nfl-ticket-prices&#34; class=&#34;section level3&#34;&gt;
@@ -400,7 +400,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;li&gt;Download the data sets&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%206/2014-average-ticket-price.csv&#34; target=&#34;_blank&#34;&gt;Week 6 Walkthrough Data Set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/2014-average-ticket-price.csv&#34; target=&#34;_blank&#34;&gt;Week 6 Walkthrough Data Set&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Click on the presentation itself and then you may&lt;/li&gt;
@@ -408,20 +408,20 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 6/Slides-Week-6R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 6/Slides-Week-6R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%206/Slides-Week-6R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%206/Slides-Week-6R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You will have to unzip this file. If you are unfamilair with this process, please check the &lt;a href=&#34;/resource/unzipping/&#34;&gt;Unzipping files&lt;/a&gt; section under Resources for assistance.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You will have to unzip this file. If you are unfamilair with this process, please check the &lt;a href=&#34;https://edp613.theoreticalphysed.com/resource/unzipping/&#34;&gt;Unzipping files&lt;/a&gt; section under Resources for assistance.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -429,12 +429,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>/lesson/07-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/07-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/07-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/07-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -462,15 +462,15 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%207/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 7/Slides-Week-7.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 7/Slides-Week-7.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%207/Slides-Week-7.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%207/Slides-Week-7.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-an-incomplete-review-of-descriptive-statistics-commands-in-r&#34; class=&#34;section level3&#34;&gt;
@@ -479,14 +479,14 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%207/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 7/Slides-Week-7R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 7/Slides-Week-7R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%207/Slides-Week-7R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%207/Slides-Week-7R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%207/Slides-Week-7R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;kaggle&#34; class=&#34;section level3&#34;&gt;
@@ -505,12 +505,12 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     
     <item>
       <title>Estimations</title>
-      <link>/lesson/09-lesson/</link>
+      <link>https://edp613.theoreticalphysed.com/lesson/09-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/09-lesson/</guid>
+      <guid>https://edp613.theoreticalphysed.com/lesson/09-lesson/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -527,24 +527,24 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%209/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/Slides-Week-7.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 9/Slides-Week-9.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/Slides-Week-9.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;textbook-class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 Outline&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 PDF&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week9/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 PDF&lt;/a&gt;, and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp613.theoreticalphysed.com/lecture_notes/Week9/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 Outline&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-confidence-intervals&#34; class=&#34;section level3&#34;&gt;
@@ -553,14 +553,14 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%209/Slides-Week-9.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/Slides-Week-9R.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp613.theoreticalphysed.com/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/Slides-Week-9R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp613.theoreticalphysed.com/slides/Week%209/Slides-Week-9R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
