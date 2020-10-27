@@ -77,6 +77,12 @@ lessons:
     assignment: "09-assignment"
     due: "09-due"
 
+  - title: 'A Bit of Categorical Data'
+    session: 10
+    date: "October 25, 2020"
+    lesson: "10-lesson"
+    due: "10-due"
+
   - title: 'Coding and Recoding Scaled Items'
     session: 11
     date: "November 1, 2020"

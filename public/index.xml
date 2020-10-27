@@ -49,10 +49,10 @@
     </item>
     
     <item>
-      <title>Coding and Recoding Scaled Items</title>
-      <link>/due/11-due/</link>
+      <title>A Bit More on Categorical Data</title>
+      <link>/due/10-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/11-due/</guid>
+      <guid>/due/10-due/</guid>
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
@@ -97,6 +97,78 @@ Location
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
+Complete a module on categorical data.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/10-lesson/#data-camp1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coding and Recoding Scaled Items</title>
+      <link>/due/11-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/due/11-due/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#things-to-consider&#34;&gt;Things to Consider&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+eCampus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Data Camp
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Qualtrics
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
@@ -106,10 +178,33 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
-Prepare your Likert items for analysis by assessing coding and recoding
+If you have Likert scale items and even if you do not use R, you must consider recoding depending on direction.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/example/11-example&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#4682b4;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
+Complete another module on categorical data.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/11-lesson/#data-camp1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -129,7 +224,7 @@ Prepare your Likert items for analysis by assessing coding and recoding
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
-Read and review materials on survey items and Item Response Theory (IRT).
+Review some materials on survey items and get an overview of one of the most important types of analyses: Item Response Theory (IRT). We’ll learn more about IRT and cover exploratory factor analysis (EFA) next week!
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/readings/11-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
@@ -138,6 +233,10 @@ Read and review materials on survey items and Item Response Theory (IRT).
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;things-to-consider&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Things to Consider&lt;/h3&gt;
+&lt;p&gt;While there is nothing to turn in this week, please think about your &lt;a href=&#34;/assignment/11-assignment/#plan-of-analysis-1&#34;&gt;plan of analysis&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1578,10 +1677,123 @@ Please make sure that you also look over the Survey Options tab before distribut
     </item>
     
     <item>
-      <title>Coding and Recoding Scaled Items</title>
-      <link>/assignment/011-assignment/</link>
+      <title>A Bit More on Categorical Data</title>
+      <link>/lesson/10-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/011-assignment/</guid>
+      <guid>/lesson/10-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The fourth exploration in R is on looking at the &lt;strong&gt;Inference for Categorical Data in R &lt;/strong&gt;.&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Exploration
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Due by
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Required
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Course or Project Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Chapters covered
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+10/25/20
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
+Inference for Categorical Data in R
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
+Inference for a single parameter
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
+Proportions: testing and power
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
+Comparing many parameters: independence
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
+Comparing many parameters: goodness of fit
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Accessible at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coding and Recoding Scaled Items</title>
+      <link>/assignment/11-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/11-assignment/</guid>
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
@@ -1599,9 +1811,9 @@ Please make sure that you also look over the Survey Options tab before distribut
 &lt;h4&gt;Process&lt;/h4&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Take this week to think and finalize a plan for analysis. Remember that different types if questions require different types of analyses If you would like to discuss, simply send a request over Slack or email and I will be happy to meet.&lt;/li&gt;
-&lt;li&gt;Keep a detailed record of the types of analyses. These will be important in your report and to some degree, your presentation as well.&lt;/li&gt;
+&lt;li&gt;Keep a detailed record of the types of analyses.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Please note you do not have to turn this in as a separate task.&lt;/em&gt;
+&lt;p&gt;&lt;em&gt;Please note you DO NOT have to turn this in as a separate task. However it will need to be integrated into your final report and presentation as well.&lt;/em&gt;
 :::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1627,7 +1839,7 @@ Please make sure that you also look over the Survey Options tab before distribut
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The third exploration in R called is a skill track &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The fifth exploration in R is on looking at &lt;strong&gt;Categorical Data in the Tidyverse&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
@@ -1652,66 +1864,10 @@ Chapters covered
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-3
+5
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-10/18/20
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Introduction to Data in R
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Language of data
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Study types and cautionary tales
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Sampling strategies and experimental design
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Case Study
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+11/1/20
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
@@ -1719,10 +1875,10 @@ Case Study
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Exploratory Data Analysis in R
+Categorical Data in the Tidyverse
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Exploring Categorical Data
+Introduction to Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1735,7 +1891,7 @@ Exploring Categorical Data
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Exploring Numerical Data
+Manipulating Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1748,7 +1904,7 @@ Exploring Numerical Data
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Numerical Summaries
+Creating Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1761,119 +1917,7 @@ Numerical Summaries
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Case study
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Modeling with Data in the Tidyverse
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Introduction to Modeling
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling with Basic Regression
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling with Multiple Regression
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling Assessment and Selection
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Dealing with Missing Data in R
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Why care about missing data?
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Wrangling and tidying up missing values
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Testing missing relationships
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Connecting the dots (Imputation)
+Case Study on Flight Etiquette
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1909,10 +1953,12 @@ Connecting the dots (Imputation)
 &lt;p&gt;You may recall a prerequisite for this course was one semester of graduate statistics. Since many of you used SPSS or some other GUI based statistical software, the documents below were purposely chosen to help in a review process. The skills outlined below reflect much of what is taught in a traditional introductory statistics course and are necessary to understand the remaining content. Starting next week, we begin learning additional approaches that are used in survey analysis.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Read/review a part of &lt;a href=&#34;/chapters/QMSS4.pdf&#34; target=&#34;_blank&#34;&gt;Chapter 4: Constructing a Survey&lt;/a&gt; in Stockemer&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Review this Prezi presentation on Item Response Theory (IRT). We will cover both exploratory factor analysis and IRT next week.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;Review this Prezi presentation on Item Response Theory (IRT). We will cover both exploratory factor analysis (EFA) and IRT next week.&lt;br&gt;&lt;/p&gt;
+&lt;center&gt;
 &lt;iframe src=&#34;https://prezi.com/embed/rzwf4bgvhn0q/&#34; id=&#34;iframe_container&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen allow=&#34;autoplay; fullscreen&#34; height=&#34;315&#34; width=&#34;560&#34;&gt;
 &lt;/iframe&gt;
+&lt;/center&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -4136,7 +4182,7 @@ Connecting the dots (Imputation)
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The third exploration in R called is a skill track &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The third exploration in R is a skill track called &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
@@ -6402,6 +6448,27 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/09-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/09-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;October 25, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;A Bit of Categorical Data&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/10-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/10-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

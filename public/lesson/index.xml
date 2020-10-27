@@ -36,10 +36,10 @@
     </item>
     
     <item>
-      <title>Coding and Recoding Scaled Items</title>
-      <link>/lesson/11-lesson/</link>
+      <title>A Bit More on Categorical Data</title>
+      <link>/lesson/10-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/11-lesson/</guid>
+      <guid>/lesson/10-lesson/</guid>
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
@@ -54,7 +54,7 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The third exploration in R called is a skill track &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The fourth exploration in R is on looking at the &lt;strong&gt;Inference for Categorical Data in R &lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
@@ -79,66 +79,10 @@ Chapters covered
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-3
+4
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-10/18/20
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Introduction to Data in R
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Language of data
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Study types and cautionary tales
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Sampling strategies and experimental design
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Case Study
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+10/25/20
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
@@ -146,10 +90,10 @@ Case Study
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Exploratory Data Analysis in R
+Inference for Categorical Data in R
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Exploring Categorical Data
+Inference for a single parameter
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -162,7 +106,7 @@ Exploring Categorical Data
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Exploring Numerical Data
+Proportions: testing and power
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -175,7 +119,7 @@ Exploring Numerical Data
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Numerical Summaries
+Comparing many parameters: independence
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -188,13 +132,70 @@ Numerical Summaries
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Case study
+Comparing many parameters: goodness of fit
 &lt;/td&gt;
 &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Accessible at &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Coding and Recoding Scaled Items</title>
+      <link>/lesson/11-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/11-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The fifth exploration in R is on looking at &lt;strong&gt;Categorical Data in the Tidyverse&lt;/strong&gt;.&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Exploration
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Due by
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Required
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Course or Project Name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Chapters covered
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+5
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
+11/1/20
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
@@ -202,10 +203,10 @@ Case study
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Modeling with Data in the Tidyverse
+Categorical Data in the Tidyverse
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Introduction to Modeling
+Introduction to Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -218,7 +219,7 @@ Introduction to Modeling
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling with Basic Regression
+Manipulating Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -231,7 +232,7 @@ Modeling with Basic Regression
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling with Multiple Regression
+Creating Factor Variables
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -244,63 +245,7 @@ Modeling with Multiple Regression
 &lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Modeling Assessment and Selection
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:#242d34;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-Dealing with Missing Data in R
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Why care about missing data?
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Wrangling and tidying up missing values
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Testing missing relationships
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 13em; &#34;&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 16em; &#34;&gt;
-Connecting the dots (Imputation)
+Case Study on Flight Etiquette
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -2146,7 +2091,7 @@ Connecting the dots (Imputation)
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Camp&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The third exploration in R called is a skill track &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The third exploration in R is a skill track called &lt;strong&gt;Statistician with R&lt;/strong&gt; consisting of fourteen modules covering modeling and statistical analysis. However &lt;strong&gt;&lt;em&gt;you are only required to go through the ones listed below&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;

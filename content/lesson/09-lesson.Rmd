@@ -22,7 +22,7 @@ library(kableExtra)
 ```
 
 ### Data Camp^[Accessible at [Data Camp](https://www.datacamp.com/){target="_blank"}.]
-The third exploration in R called is a skill track **Statistician with R**  consisting of fourteen modules covering modeling and statistical analysis. However ***you are only required to go through the ones listed below***. 
+The third exploration in R is a skill track called **Statistician with R** consisting of fourteen modules covering modeling and statistical analysis. However ***you are only required to go through the ones listed below***. 
 
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))

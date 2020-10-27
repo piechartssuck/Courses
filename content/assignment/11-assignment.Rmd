@@ -6,8 +6,8 @@ output:
     toc: true
 menu:
   assignment:
-    parent: 
-    weight: 3
+    parent: Survey Report
+    weight: 10
 type: docs
 weight: 2
 editor_options: 
@@ -19,7 +19,7 @@ In this class, you will plan, design, pilot, distribute, **analyze** and report 
 
 #### Process
 1. Take this week to think and finalize a plan for analysis. Remember that different types if questions require different types of analyses If you would like to discuss, simply send a request over Slack or email and I will be happy to meet.
-2. Keep a detailed record of the types of analyses. These will be important in your report and to some degree, your presentation as well.
+2. Keep a detailed record of the types of analyses.
 
-*Please note you do not have to turn this in as a separate task.*
+*Please note you DO NOT have to turn this in as a separate task. However it will need to be integrated into your final report and presentation as well.*
 :::

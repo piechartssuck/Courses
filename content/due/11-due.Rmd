@@ -7,7 +7,7 @@ output:
 menu:
   due:
     parent: Due?
-    weight: 3
+    weight: 10
 type: docs
 weight: 1
 editor_options: 
@@ -29,18 +29,23 @@ checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
 wk_post <- tibble(
   
 "eCampus" = c(unchecked,
+              unchecked,
               unchecked),
 
 "Data Camp" = c(unchecked,
+                checked,
                 unchecked),
 
 "Qualtrics" = c(unchecked,
+                unchecked,
                 unchecked),
 
-Description = c("Prepare your Likert items for analysis by assessing coding and recoding",
-                "Read and review materials on survey items and Item Response Theory (IRT)."),
+Description = c("If you have Likert scale items and even if you do not use R, you must consider recoding depending on direction.",
+                "Complete another module on categorical data.",
+                "Review some materials on survey items and get an overview of one of the most important types of analyses: Item Response Theory (IRT). We'll learn more about IRT and cover exploratory factor analysis (EFA) next week!"),
 
 Location = c("[Link](/example/11-example)",
+             "[Link](/lesson/11-lesson/#data-camp1)",
              "[Link](/readings/11-readings/#book-stuff-1)")
 
 )
@@ -62,5 +67,6 @@ kable(wk_post,
 ```
 </center>
 
-
+### Things to Consider 
+While there is nothing to turn in this week, please think about your [plan of analysis](/assignment/11-assignment/#plan-of-analysis-1). 
 
