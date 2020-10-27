@@ -40,9 +40,9 @@ wk_post <- tibble(
                 unchecked,
                 unchecked),
 
-Description = c("If you have Likert scale items and even if you do not use R, you must consider recoding depending on direction.",
+Description = c("If you have Likert scale items and even if you do not use R, you must consider **recoding** items which may be in the opposite direction of your other items. Called an effect of polarity, your conclusions are inherently dependent on your scales pointed in the same direction.",
                 "Complete another module on categorical data.",
-                "Review some materials on survey items and get an overview of one of the most important types of analyses: Item Response Theory (IRT). We'll learn more about IRT and cover exploratory factor analysis (EFA) next week!"),
+                "Review some materials on survey items and get an overview of one of the most important types of analyses: **Item Response Theory** (IRT). We'll learn more about IRT and cover **exploratory factor analysis** (EFA) next week!"),
 
 Location = c("[Link](/example/11-example)",
              "[Link](/lesson/11-lesson/#data-camp1)",
@@ -68,5 +68,5 @@ kable(wk_post,
 </center>
 
 ### Things to Consider 
-While there is nothing to turn in this week, please think about your [plan of analysis](/assignment/11-assignment/#plan-of-analysis-1). 
+While there is nothing to turn in this week, please think about your [plan of analysis](/assignment/11-assignment/#plan-of-analysis-1) ahead of time. 
 

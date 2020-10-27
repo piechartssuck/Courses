@@ -142,7 +142,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
-If you have Likert scale items and even if you do not use R, you must consider recoding depending on direction.
+If you have Likert scale items and even if you do not use R, you must consider &lt;strong&gt;recoding&lt;/strong&gt; items which may be in the opposite direction of your other items. Called an effect of polarity, your conclusions are inherently dependent on your scales pointed in the same direction.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/example/11-example&#34;&gt;Link&lt;/a&gt;
@@ -188,7 +188,7 @@ Complete another module on categorical data.
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 22em; &#34;&gt;
-Review some materials on survey items and get an overview of one of the most important types of analyses: Item Response Theory (IRT). We’ll learn more about IRT and cover exploratory factor analysis (EFA) next week!
+Review some materials on survey items and get an overview of one of the most important types of analyses: &lt;strong&gt;Item Response Theory&lt;/strong&gt; (IRT). We’ll learn more about IRT and cover &lt;strong&gt;exploratory factor analysis&lt;/strong&gt; (EFA) next week!
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;a href=&#34;/readings/11-readings/#book-stuff-1&#34;&gt;Link&lt;/a&gt;
@@ -200,7 +200,7 @@ Review some materials on survey items and get an overview of one of the most imp
 &lt;/div&gt;
 &lt;div id=&#34;things-to-consider&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Things to Consider&lt;/h3&gt;
-&lt;p&gt;While there is nothing to turn in this week, please think about your &lt;a href=&#34;/assignment/11-assignment/#plan-of-analysis-1&#34;&gt;plan of analysis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While there is nothing to turn in this week, please think about your &lt;a href=&#34;/assignment/11-assignment/#plan-of-analysis-1&#34;&gt;plan of analysis&lt;/a&gt; ahead of time.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
