@@ -42,7 +42,7 @@ Now go and read this short synopsis on the test from [FiveThirtyEight](https://p
 
 ## Data Files
 
-Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:
+Please download the files below. Note you may have to right click and download each file if your browser renders `.csv` files automatically:
 
 - [`Big5data.csv`](/data/Big5data.csv)
 - [`Big5codebook.csv`](/data/Big5codebook.csv)
@@ -79,8 +79,8 @@ or by selecting **Session > Set Working Directory > To Source File Location**.
 
 ## Data Files
 
-We'll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it [here](
-https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip) but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file. 
+We'll be looking at a very truncated data set from the **2018 BigFive Personality Test**. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it [here](
+https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip) but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated `.csv` file. 
 
 ### Side Note
 
@@ -96,7 +96,7 @@ to save it to the `big_five_data` variable which you can access by running
 toobig_five_data
 ```
 
-At this point you probably want to just open up the csv files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that's the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent. 
+At this point you probably want to just open up the `.csv` files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that's the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent. 
 
 In any case, we will be working with data strictly in R but never feel bad about opening a data set using another application like Excel. For all of my snarkiness towards anything Office, Excel has some nice qualities.
 
@@ -169,6 +169,10 @@ big_five_codebook_EXT
 
 Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction. 
 
+### Why Does This Matter?
+
+From a methodological perspective, if all of your scales are not pointed the right direction you will likely get confusing or conflicting figures, or even worse report false outcomes resulting in Type I and Type II errors! Of course you may also just get lucky and your findings will be spot on. However, if you don't really want to leave it up to chance to give you the actual outcomes of your survey, then **reverse coding** is something you should consider before performing any analysis. And yes this absolutely still applies if you are certain that everything was perfect before your survey was administered.
+
 ### Example
 
 For example both these questions might be used to measure the same underlying construct or idea.
@@ -226,7 +230,7 @@ There are many approaches when assessing reliability, namely those associated wi
 
 ### Composite Reliability
 
-Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). We'll cover this when we address CFAs soon!
+Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). While we do cover exploratory factor analysis (EFA) in this course, we simply don't have bandwidth time to address CFAs as well. Please consider learning about them as they are used to test how well the measured variables represent the number of constructs within an or across instrument(s).
 
 ### Cronbach’s alpha
 

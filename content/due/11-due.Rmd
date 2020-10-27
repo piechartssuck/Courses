@@ -40,7 +40,7 @@ wk_post <- tibble(
                 unchecked,
                 unchecked),
 
-Description = c("If you have Likert scale items and even if you do not use R, you must consider **recoding** items which may be in the opposite direction of your other items. Called an effect of polarity, your conclusions are inherently dependent on your scales pointed in the same direction.",
+Description = c("If you have Likert scale items and even if you do not use R, you must consider **reverse coding** scales which may be in the opposite direction of your other items. Called an effect of polarity, your conclusions are inherently dependent on your scales pointed in the same direction.",
                 "Complete another module on categorical data.",
                 "Review some materials on survey items and get an overview of one of the most important types of analyses: **Item Response Theory** (IRT). We'll learn more about IRT and cover **exploratory factor analysis** (EFA) next week!"),
 

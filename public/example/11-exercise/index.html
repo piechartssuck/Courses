@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Take This Read Up Data Files Prerequisites Data Files Side Note  Loading a Local Data Set Reverse Coding Example  Computing the Internal Consistency Composite Reliability Cronbach’s alpha Inter-item Correlation Item-total Correlation      Take This First things first, please go and take the Big Five Personality Test.">
+  <meta name="description" content="Take This Read Up Data Files Prerequisites Data Files Side Note  Loading a Local Data Set Reverse Coding Why Does This Matter? Example  Computing the Internal Consistency Composite Reliability Cronbach’s alpha Inter-item Correlation Item-total Correlation      Take This First things first, please go and take the Big Five Personality Test.">
 
   
   <link rel="alternate" hreflang="en-us" href="/example/11-exercise/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Survey Research Methods">
   <meta property="og:url" content="/example/11-exercise/">
   <meta property="og:title" content="Coding and Recoding Scaled Items | Survey Research Methods">
-  <meta property="og:description" content="Take This Read Up Data Files Prerequisites Data Files Side Note  Loading a Local Data Set Reverse Coding Example  Computing the Internal Consistency Composite Reliability Cronbach’s alpha Inter-item Correlation Item-total Correlation      Take This First things first, please go and take the Big Five Personality Test."><meta property="og:image" content="/img/course_info.png">
+  <meta property="og:description" content="Take This Read Up Data Files Prerequisites Data Files Side Note  Loading a Local Data Set Reverse Coding Why Does This Matter? Example  Computing the Internal Consistency Composite Reliability Cronbach’s alpha Inter-item Correlation Item-total Correlation      Take This First things first, please go and take the Big Five Personality Test."><meta property="og:image" content="/img/course_info.png">
   <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -752,6 +752,7 @@
 </ul></li>
 <li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
 <li><a href="#reverse-coding">Reverse Coding</a><ul>
+<li><a href="#why-does-this-matter">Why Does This Matter?</a></li>
 <li><a href="#example">Example</a></li>
 </ul></li>
 <li><a href="#computing-the-internal-consistency">Computing the Internal Consistency</a><ul>
@@ -778,7 +779,7 @@
 </div>
 <div id="data-files" class="section level2">
 <h2>Data Files</h2>
-<p>Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:</p>
+<p>Please download the files below. Note you may have to right click and download each file if your browser renders <code>.csv</code> files automatically:</p>
 <ul>
 <li><a href="/data/Big5data.csv"><code>Big5data.csv</code></a></li>
 <li><a href="/data/Big5codebook.csv"><code>Big5codebook.csv</code></a></li>
@@ -808,14 +809,14 @@ library(&quot;surveytools2&quot;)</code></pre>
 </div>
 <div id="data-files-1" class="section level2">
 <h2>Data Files</h2>
-<p>We’ll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it <a href="https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip">here</a> but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file.</p>
+<p>We’ll be looking at a very truncated data set from the <strong>2018 BigFive Personality Test</strong>. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it <a href="https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip">here</a> but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated <code>.csv</code> file.</p>
 <div id="side-note" class="section level3">
 <h3>Side Note</h3>
 <p>I am not certain how to load it in Excel but in R you can use</p>
 <pre class="r"><code>toobig_five_data &lt;- read_delim(&quot;data-final.csv&quot;, delim=&quot;\t&quot;) </code></pre>
 <p>to save it to the <code>big_five_data</code> variable which you can access by running</p>
 <pre class="r"><code>toobig_five_data</code></pre>
-<p>At this point you probably want to just open up the csv files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that’s the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent.</p>
+<p>At this point you probably want to just open up the <code>.csv</code> files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up both into its program and to show it to you. Its really that second part that’s the killer! With R you avoid the latter step which means your data set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent.</p>
 <p>In any case, we will be working with data strictly in R but never feel bad about opening a data set using another application like Excel. For all of my snarkiness towards anything Office, Excel has some nice qualities.</p>
 </div>
 </div>
@@ -926,6 +927,10 @@ library(&quot;surveytools2&quot;)</code></pre>
 <div id="reverse-coding" class="section level2">
 <h2>Reverse Coding</h2>
 <p>Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction.</p>
+<div id="why-does-this-matter" class="section level3">
+<h3>Why Does This Matter?</h3>
+<p>From a methodological perspective, if all of your scales are not pointed the right direction you will likely get confusing or conflicting figures, or even worse report false outcomes resulting in Type I and Type II errors! Of course you may also just get lucky and your findings will be spot on. However, if you don’t really want to leave it up to chance to give you the actual outcomes of your survey, then <strong>reverse coding</strong> is something you should consider before performing any analysis. And yes this absolutely still applies if you are certain that everything was perfect before your survey was administered.</p>
+</div>
 <div id="example" class="section level3">
 <h3>Example</h3>
 <p>For example both these questions might be used to measure the same underlying construct or idea.</p>
@@ -1005,7 +1010,7 @@ big_five_data_EXT_rev</code></pre>
 <p>There are many approaches when assessing reliability, namely those associated with interviews, experiments, surveys, trials, etc. Internal consistency is foremost one of many existing methods used to measure reliability, and it is typically useful in assessing items (e.g from a protocol, questionnaire, test, etc). It essentially <strong>estimates to what degree total scores on an instrument would change or vary if different items were used</strong>. Here are four but really three approaches used by a majority of practitioners:</p>
 <div id="composite-reliability" class="section level3">
 <h3>Composite Reliability</h3>
-<p>Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). We’ll cover this when we address CFAs soon!</p>
+<p>Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). While we do cover exploratory factor analysis (EFA) in this course, we simply don’t have bandwidth time to address CFAs as well. Please consider learning about them as they are used to test how well the measured variables represent the number of constructs within an or across instrument(s).</p>
 </div>
 <div id="cronbachs-alpha" class="section level3">
 <h3>Cronbach’s alpha</h3>
