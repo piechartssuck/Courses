@@ -44,7 +44,7 @@ Description = c("If you have Likert scale items and even if you do not use R, yo
                 "Complete another module on categorical data.",
                 "Review some materials on survey items and get an overview of one of the most important types of analyses: **Item Response Theory** (IRT). We'll learn more about IRT and cover **exploratory factor analysis** (EFA) next week!"),
 
-Location = c("[Link](/example/11-example)",
+Location = c("[Link](/example/11-exercise/#take-this-1)",
              "[Link](/lesson/11-lesson/#data-camp1)",
              "[Link](/readings/11-readings/#book-stuff-1)")
 
