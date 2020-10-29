@@ -3,5 +3,5 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 library(knitr)
 
-purl("Slides-Week-7.Rmd")
-purl("Slides-Week-7R.Rmd")
+purl("Slides-Week-9.Rmd")
+purl("Slides-Week-9R.Rmd")

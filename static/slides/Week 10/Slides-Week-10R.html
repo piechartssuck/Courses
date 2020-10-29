@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Testing Hypothesis and Measuring Confidence</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 9" />
+    <link href="Slides-Week-10R_files/tile-view-0.2.3.9000/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-10R_files/tile-view-0.2.3.9000/tile-view.js"></script>
+    <link href="Slides-Week-10R_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-10R_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-10R_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-10R_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="Slides-Week-10R_files/twitter-widget-0.0.1/widgets.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Testing Hypothesis and Measuring Confidence
+### Week 9
+
+---
+
+
+
+
+
+
+# Packages needed and a Note about Icons
+
+Please load up the following packages. Remember to first install the ones you don't have.
+
+
+
+&lt;br&gt;
+&lt;br&gt;
+You may come across the following icons. The table below lists what each means.
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #181818 !important;"&gt; Icon &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #181818 !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:
+#4682b4;" viewbox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that an example continues on the following slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewbox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that a section using common syntax has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewbox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that there is an active hyperlink on the slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #181818 !important;"&gt; &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewbox="0 0 384 512"&gt;&lt;path d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; background-color: #181818 !important;"&gt; Indicates that a section covering a concept has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# What is a confidence interval?
+
+A *confidence interval* (CI) gives a range of possible values for a parameter.  It depends on a specified _confidence level_ with 
+- higher confidence levels corresponding to wider confidence intervals and 
+- lower confidence levels corresponding to narrower confidence intervals.  
+
+The most common confidence levels include 90%, 95%, and 99%.
+
+---
+
+# Problems with how confidence intervals are taught
+
+Not to trash your professor, but you were taught about the confidence interval in an bad way! Traditionally, the approach to finding confidence intervals for some mean is to first assume a normal curve for a population and then magic. Sure its easy enough to follow procedurally, but the process is nether intuitive nor is it fantastic for people whose strong suit isn't mathematics.
+
+---
+
+# Enter a fancy term called bootstrapping (that you've already been doing)
+
+In most studies, we simply want to if our null or alternative hypothesis is correct. More than that, the overall purpose of a hypothesis test is to answer this for an entire population,using the data we have - ergo to generalize.
+
+We typically only have a sample of the population’s data to work with^[If we had the population, there's not much of a purpose to generalize]. So working with what we have in the most efficient and useful way is essential. Recently you 
+
+1. took repeated samples from a sample data of size whatever,
+2. calculate the mean for each of these samples,  
+3. created a new distribution of these means, and
+4. hopefully recognized with enough of these sample means, you can actually estimate the population distribution.
+
+That is what is known as **bootstrapping**
+
+---
+
+# ggplot2movies
+
+We'll look at CIs, but first let's look at the `ggplot2movies` data set...
+
+
+```r
+head(movies)
+```
+
+```
+## # A tibble: 6 x 24
+##   title  year length budget rating votes    r1    r2    r3    r4    r5    r6
+##   &lt;chr&gt; &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 $      1971    121     NA    6.4   348   4.5   4.5   4.5   4.5  14.5  24.5
+## 2 $100…  1939     71     NA    6      20   0    14.5   4.5  24.5  14.5  14.5
+## 3 $21 …  1941      7     NA    8.2     5   0     0     0     0     0    24.5
+## 4 $40,…  1996     70     NA    8.2     6  14.5   0     0     0     0     0  
+## 5 $50,…  1975     71     NA    3.4    17  24.5   4.5   0    14.5  14.5   4.5
+## 6 $pent  2000     91     NA    4.3    45   4.5   4.5   4.5  14.5  14.5  14.5
+## # … with 12 more variables: r7 &lt;dbl&gt;, r8 &lt;dbl&gt;, r9 &lt;dbl&gt;, r10 &lt;dbl&gt;,
+## #   mpaa &lt;chr&gt;, Action &lt;int&gt;, Animation &lt;int&gt;, Comedy &lt;int&gt;, Drama &lt;int&gt;,
+## #   Documentary &lt;int&gt;, Romance &lt;int&gt;, Short &lt;int&gt;
+```
+
+---
+
+...its size...
+
+
+```r
+dim(movies)
+```
+
+```
+## [1] 58788    24
+```
+
+That's 58,788 rows by 24 columns!
+
+---
+
+... and the names of its columns.
+
+
+```r
+names(movies)
+```
+
+```
+##  [1] "title"       "year"        "length"      "budget"      "rating"     
+##  [6] "votes"       "r1"          "r2"          "r3"          "r4"         
+## [11] "r5"          "r6"          "r7"          "r8"          "r9"         
+## [16] "r10"         "mpaa"        "Action"      "Animation"   "Comedy"     
+## [21] "Drama"       "Documentary" "Romance"     "Short"
+```
+
+You can see more about the functionality by looking at its [documentation](https://cran.r-project.org/web/packages/ggplot2movies/ggplot2movies.pdf). For now, here's what the variables mean:
+
+- **title**. Title of the movie.
+- **year**. Year of release.
+- **budget**. Total budget (if known) in US dollars
+- **length**. Length in minutes.
+- **rating**. Average IMDB user rating.
+- **votes**. Number of IMDB users who rated this movie.
+- **r1-10**. Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 1.
+- **mpaa**. [MPAA rating](https://www.motionpictures.org/film-ratings/).
+- **Action**, **Animation**, **Comedy**, **Drama**, **Documentary**, **Romance**, **Short**. Binary variables representing if movie was classified as belonging to that genre.
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;]
+
+---
+
+# Descriptives 
+
+Let's take a look at a bar chart of the genres. But wait, those are in a bunch of columns and R likes its data in long form! To get the data set to this form, let's first select the columns we need and then use a command called `pivot_longer` which emulates a pivot table in Excel. 
+
+
+```r
+movies %&gt;%
+  select(Action, Animation, Comedy,
+         Drama, Documentary, Romance, Short) %&gt;%
+  pivot_longer(
+    everything(),
+    names_to = "genre"
+  )
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+
+```
+## # A tibble: 411,516 x 2
+##    genre       value
+##    &lt;chr&gt;       &lt;int&gt;
+##  1 Action          0
+##  2 Animation       0
+##  3 Comedy          1
+##  4 Drama           1
+##  5 Documentary     0
+##  6 Romance         0
+##  7 Short           0
+##  8 Action          0
+##  9 Animation       0
+## 10 Comedy          1
+## # … with 411,506 more rows
+```
+
+In instances where we have to go from a long to wide data set, we'd use a command called `pivot_wider`.
+
+---
+
+# What Just Happened?
+
+The previous iteration of `pivot_wider` and `pivot_longer` were given by the commands `gather` and `spread`. To see what these did, let's start out with a cartoon by the talented [Allison Horst](https://github.com/allisonhorst/stats-illustrations) out of UC Santa Barbara. 
+
+&lt;img src="img/tidyr_spread_gather.png" width="30%" height="30%" style="display: block; margin: auto;" /&gt;
+
+So the commands basically took data frames from wide to long with `gather` and back again with `spread`. The `pivot_` commands do much the same but with much more flexibility. However they can be equally as confusing so we'll go over a few basics here. If you're interested in more, take a look at this fantastic overview courtesy of [R-Ladies Sydney](https://rladiessydney.org/courses/ryouwithme/02-cleanitup-4/). For an advanced walkthrough, the [Data Wrangling](https://dcl-wrangle.stanford.edu/pivot_basic.html) site over at Stanford is a great resource. 
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;]
+
+---
+
+# pivot_longer
+
+It is pretty rare that at this stage in your academic development that you need to go from long to wide so we'll be concentrating on the converse with `pivot_longer`. First note that the original graphics in this part of the walkthrough were not created by me, but by RStudio's [Allison Hill](https://alison.rbind.io/). I did however amend them for aesthetic purposes.
+
+Ok let's begin!
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#5cb85c;" viewBox="0 0 512 512"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/&gt;&lt;/svg&gt;] 
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+# An overview of pivot_longer 
+
+We'll concentrate one two options in `pivot_longer`: `names_to` and `values_to`. 
+
+&lt;img src="img/pl2.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
+
+Remember you can always run `?` in front of any command in the Console to get more information about it. For `pivot_longer`, we would simply type in
+
+
+```r
+?pivot_longer
+```
+
+to see other options. 
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+If you want to follow along with the fake data set we'll be using, run the following command to build the tibble
+
+
+```r
+juniors_multiple &lt;- tribble(
+  ~ "baker", ~"cinnamon_1", ~"cardamom_2", ~"nutmeg_3",
+  "Emma", 1L,   0L, 1L,
+  "Harry", 1L,   1L, 1L, 
+  "Ruby", 1L,   0L, 1L, 
+  "Zainab", 0L, NA, 0L
+)
+```
+
+and check it just to make sure
+
+
+```r
+juniors_multiple
+```
+
+```
+## # A tibble: 4 x 4
+##   baker  cinnamon_1 cardamom_2 nutmeg_3
+##   &lt;chr&gt;       &lt;int&gt;      &lt;int&gt;    &lt;int&gt;
+## 1 Emma            1          0        1
+## 2 Harry           1          1        1
+## 3 Ruby            1          0        1
+## 4 Zainab          0         NA        0
+```
+
+Looks good! Let's convert this!
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+To remind you of what the `juniors_multiple` data frame looks like, we have
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; baker &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cinnamon_1 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cardamom_2 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; nutmeg_3 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Emma &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Harry &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ruby &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Zainab &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+We can assign names to the eventual columns using `names_to` and `values_to`.
+
+&lt;img src="img/pl3.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; baker &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cinnamon_1 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cardamom_2 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; nutmeg_3 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Emma &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Harry &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ruby &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Zainab &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+We can assign names to the eventual columns using `names_to` and `values_to`.
+
+&lt;img src="img/pl4.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; baker &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cinnamon_1 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; cardamom_2 &lt;/th&gt;
+   &lt;th style="text-align:right;background-color: #212121 !important;"&gt; nutmeg_3 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Emma &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Harry &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Ruby &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;background-color: #212121 !important;"&gt; Zainab &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Here you can see the first column `cinnamon_1` and its value `1` associated with the first row `Emma` becomes our first two values under the two columns `spice` and `correct` for our pivoted data frame.
+
+&lt;img src="img/pl5.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+This pattern continues until a whole row is used up.
+
+&lt;img src="img/pl6.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+Then it repeats for the next row of values...
+
+&lt;img src="img/pl7.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl8.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl9.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+...and so forth...
+
+&lt;img src="img/pl10.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl11.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl12.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+...until we run out of rows...
+
+&lt;img src="img/pl13.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl14.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/pl15.png" width="35%" height="35%" style="display: block; margin: auto;" /&gt;
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+...and get the final table of pivoted values.
+
+&lt;img src="img/pl16.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+---
+
+We can even amend the current command to include things like `order`!
+
+&lt;img src="img/pl17.png" width="75%" height="75%" style="display: block; margin: auto;" /&gt;
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+
+---
+
+# Shortcut
+
+Rather than accounting for every column, you can just tell R not to account for columns
+
+```r
+juniors_multiple %&gt;%
+  pivot_longer(-baker,
+                names_to = c('spice', 'order'),
+                names_sep = '_',
+                values_to = 'correct')
+```
+
+```
+## # A tibble: 12 x 4
+##    baker  spice    order correct
+##    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;   &lt;int&gt;
+##  1 Emma   cinnamon 1           1
+##  2 Emma   cardamom 2           0
+##  3 Emma   nutmeg   3           1
+##  4 Harry  cinnamon 1           1
+##  5 Harry  cardamom 2           1
+##  6 Harry  nutmeg   3           1
+##  7 Ruby   cinnamon 1           1
+##  8 Ruby   cardamom 2           0
+##  9 Ruby   nutmeg   3           1
+## 10 Zainab cinnamon 1           0
+## 11 Zainab cardamom 2          NA
+## 12 Zainab nutmeg   3           0
+```
+
+---
+
+# Single column types
+
+`pivot_wider` is great for columns of the same type. For example, if we run 
+
+
+```r
+glimpse(juniors_multiple)
+```
+
+```
+## Rows: 4
+## Columns: 4
+## $ baker      &lt;chr&gt; "Emma", "Harry", "Ruby", "Zainab"
+## $ cinnamon_1 &lt;int&gt; 1, 1, 1, 0
+## $ cardamom_2 &lt;int&gt; 0, 1, 0, NA
+## $ nutmeg_3   &lt;int&gt; 1, 1, 1, 0
+```
+
+all we have are integers... 
+
+---
+
+# Multiple column types
+
+... but for the following
+
+
+```r
+juniors_multiple_full &lt;- tribble(
+  ~ "baker", ~"score_1", ~"score_2", ~"score_3", 
+  ~ "guess_1", ~"guess_2", ~"guess_3",
+    "Emma", 1L,   0L, 1L, "cinnamon", "cloves", "nutmeg",
+    "Harry", 1L,   1L, 1L, "cinnamon", "cardamom", "nutmeg",
+    "Ruby", 1L,   0L, 1L, "cinnamon", "cumin", "nutmeg",
+    "Zainab", 0L, NA, 0L, "cardamom", NA_character_, "cinnamon"
+  )
+```
+
+
+```r
+juniors_multiple_full
+```
+
+```
+## # A tibble: 4 x 7
+##   baker  score_1 score_2 score_3 guess_1  guess_2  guess_3 
+##   &lt;chr&gt;    &lt;int&gt;   &lt;int&gt;   &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;   
+## 1 Emma         1       0       1 cinnamon cloves   nutmeg  
+## 2 Harry        1       1       1 cinnamon cardamom nutmeg  
+## 3 Ruby         1       0       1 cinnamon cumin    nutmeg  
+## 4 Zainab       0      NA       0 cardamom &lt;NA&gt;     cinnamon
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+---
+
+
+```r
+glimpse(juniors_multiple_full)
+```
+
+```
+## Rows: 4
+## Columns: 7
+## $ baker   &lt;chr&gt; "Emma", "Harry", "Ruby", "Zainab"
+## $ score_1 &lt;int&gt; 1, 1, 1, 0
+## $ score_2 &lt;int&gt; 0, 1, 0, NA
+## $ score_3 &lt;int&gt; 1, 1, 1, 0
+## $ guess_1 &lt;chr&gt; "cinnamon", "cinnamon", "cinnamon", "cardamom"
+## $ guess_2 &lt;chr&gt; "cloves", "cardamom", "cumin", NA
+## $ guess_3 &lt;chr&gt; "nutmeg", "nutmeg", "nutmeg", "cinnamon"
+```
+
+...we have both character and numeric vectors.
+
+---
+
+Try running the following
+
+
+```r
+juniors_multiple_full %&gt;% 
+  pivot_longer(score_1:guess_3,
+               names_to = c('score', 'guess'),
+               names_sep = "_",
+               values_to = 'correct')
+```
+
+Do you get `Error: Can't combine score_1 &lt;integer&gt; and guess_1 &lt;character&gt;.`? So what can you do?
+
+Well since computers are stupid, you have to tell R what to look for.
+
+---
+
+# Generalizing
+
+We can actually just tell R to treat all values the same.
+
+```r
+juniors_multiple_full %&gt;% 
+  # Don't do anything with the baker column
+    pivot_longer(-baker, 
+                 # Treat all columns the same and order them
+                 names_to = c(".value", "order"), 
+                 # Control how the column names are broken up
+                 names_sep = "_")
+```
+
+```
+## # A tibble: 12 x 4
+##    baker  order score guess   
+##    &lt;chr&gt;  &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   
+##  1 Emma   1         1 cinnamon
+##  2 Emma   2         0 cloves  
+##  3 Emma   3         1 nutmeg  
+##  4 Harry  1         1 cinnamon
+##  5 Harry  2         1 cardamom
+##  6 Harry  3         1 nutmeg  
+##  7 Ruby   1         1 cinnamon
+##  8 Ruby   2         0 cumin   
+##  9 Ruby   3         1 nutmeg  
+## 10 Zainab 1         0 cardamom
+## 11 Zainab 2        NA &lt;NA&gt;    
+## 12 Zainab 3         0 cinnamon
+```
+
+---
+
+# Back to the bar chart
+
+Now that we know how to pivot, we can just `group_by` genre type and then `tally`
+
+```r
+movies_by_genre &lt;- movies %&gt;%
+            select(Action, Animation, Comedy,
+                   Drama, Documentary, Romance, Short) %&gt;%
+            pivot_longer(everything(),
+                         names_to = "genre") %&gt;%
+            group_by(genre) %&gt;%
+            dplyr::tally(value)
+
+movies_by_genre
+```
+
+```
+## # A tibble: 7 x 2
+##   genre           n
+##   &lt;chr&gt;       &lt;int&gt;
+## 1 Action       4688
+## 2 Animation    3690
+## 3 Comedy      17271
+## 4 Documentary  3472
+## 5 Drama       21811
+## 6 Romance      4744
+## 7 Short        9458
+```
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#ff6347;" viewBox="0 0 448 512"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/&gt;&lt;/svg&gt;]
+
+---
+
+
+```r
+ggplot(movies_by_genre,
+       aes(x = genre, 
+           y = n, 
+           fill = -n)) +
+  geom_bar(stat='identity', 
+           show.legend = FALSE) +
+  labs(title = "Count of Genre", x = "Genre", y = "Count") +
+  theme_minimal()
+```
+
+&lt;img src="Slides-Week-10R_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Back to the movies
+
+Let's take a look at the ratings
+
+
+```r
+pop &lt;- movies %&gt;% 
+  ggplot(aes(x = rating, fill = -..count..)) +
+  geom_histogram(color = "white", 
+                 bins = 20,
+                 show.legend = FALSE) +
+  theme_minimal()
+
+pop
+```
+
+&lt;img src="Slides-Week-10R_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Purpose
+
+We would like to produce a confidence interval for the population mean rating. Let's first pretend we had to take a sample of `\(n=70\)` from the `\(N= 58788\)` movies. To do this, we'll use the `sample_n` command from the `dplyr` package.
+
+
+```r
+set.seed(999) # Random number generator
+movies_sample &lt;- movies %&gt;% 
+  sample_n(70)
+```
+
+Let's see what this looks like
+
+
+```r
+ggplot(movies_sample, aes(x = rating, fill = -..count..)) +
+       geom_histogram(color = "white", 
+                      bins = 20,
+                      show.legend = FALSE) +
+       theme_minimal()
+```
+
+&lt;img src="Slides-Week-10R_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Population Estimation
+
+We can think of the histogram as an estimate of our population distribution histogram that we plotted earlier so a population mean rating will provide a good estimate. To estimate a plausible range of values, we can start by using the mean of the sample. A good way to to this is to add parentheses around a variable declaration like so
+
+
+```r
+(movies_sample_mean &lt;- movies_sample %&gt;% 
+   summarize(mean = mean(rating)))
+```
+
+```
+## # A tibble: 1 x 1
+##    mean
+##   &lt;dbl&gt;
+## 1  5.81
+```
+
+This values is only a single estimation. What you did earlier was top keep sampling from the population, or what is known as **sampling with replacement**. 
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+---
+
+# Sampling with Replacement
+
+To do this, we can use the `resample` command from the `mosaic` package. Let's see one instance of this.
+
+
+```r
+resample(movies_sample) %&gt;%
+  arrange(orig.id) %&gt;% 
+  summarize(mean = mean(rating))
+```
+
+```
+## # A tibble: 1 x 1
+##    mean
+##   &lt;dbl&gt;
+## 1  5.75
+```
+
+But again, this is only one sample mean. 
+
+---
+
+To do a whole bunch we can run a `do` command with parentheses like so
+
+
+```r
+do(10) * 
+  (resample(movies_sample) %&gt;% 
+     summarize(mean = mean(rating)))
+```
+
+```
+##        mean
+## 1  5.842857
+## 2  6.090000
+## 3  5.572857
+## 4  5.777143
+## 5  5.408571
+## 6  5.815714
+## 7  6.010000
+## 8  5.738571
+## 9  5.547143
+## 10 5.640000
+```
+
+.right[&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#4682b4;" viewBox="0 0 512 512"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"/&gt;&lt;/svg&gt;]
+
+But a sample of 10 is so lame. Let's think big and try 10000!
+
+
+```r
+not_lame &lt;- do(10000) * summarize(resample(movies_sample), 
+                                  mean = mean(rating))
+```
+
+---
+
+# Estimating the population
+
+
+```r
+samp &lt;- ggplot(data = not_lame , 
+       mapping = aes(x = mean,
+                     fill = -..count..)) +
+  geom_histogram(bins = 30, 
+                 color = "white",
+                 show.legend = FALSE) +
+  theme_minimal()
+
+samp
+```
+
+&lt;img src="Slides-Week-10R_files/figure-html/unnamed-chunk-50-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Comparison
+
+On the left is our sample distribution while on the right is the original population distribution.
+
+![](Slides-Week-10R_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+
+I'd say that the distribution of the sample means estimates the population pretty well!
+
+---
+
+# Confidence using quantiles
+
+We can now calculate a confidence interval using many options. Let's first isolate the middle 95% of values which corresponds to a 95% confidence interval for the population mean rating.
+
+
+```r
+(ci95_mean &lt;- confint(not_lame, 
+                      level = 0.95, 
+                      method = "quantile"))
+```
+
+```
+##   name lower    upper level     method estimate
+## 1 mean  5.49 6.134286  0.95 percentile 5.814286
+```
+
+Based on the sample data and bootstrapping techniques, we can be 95% confident that the true mean rating of ALL IMDB ratings is between 5.49 and about 6.13.
+
+---
+
+# Confidence using the standard error
+
+Recall that the **standard error** is the standard deviation of the sampling distribution and is approximated by the bootstrap distribution or the null distribution depending on the context. To do this we can use the same function as before but only by changing the method
+
+
+```r
+(ci95_mean &lt;- confint(not_lame, 
+                      level = 0.95, 
+                      method = "stderr"))
+```
+
+```
+## Warning: confint: Using df = Inf.
+```
+
+```
+##   name    lower    upper level method estimate margin.of.error
+## 1 mean 5.488224 6.139428  0.95 stderr 5.814286       0.3256022
+```
+
+The interpretation is virtually the same here.
+
+---
+
+## Thats it!
+
+&lt;center&gt;
+<blockquote class="twitter-tweet" data-width="220" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Yeah I just taught pivot_longer() in a class of 100 and the reaction was just a collective &quot;OK cool whatever&quot; while I&#39;m up there like <a href="https://t.co/gLuOuzoCmf">pic.twitter.com/gLuOuzoCmf</a></p>&mdash; Allison Horst (@allison_horst) <a href="https://twitter.com/allison_horst/status/1190001300622036992?ref_src=twsrc%5Etfw">October 31, 2019</a></blockquote>
+
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

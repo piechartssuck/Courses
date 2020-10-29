@@ -20,7 +20,7 @@ editor_options:
 
   + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
   + Press the letter **O** at any point to see see a tile view of the slideshow.
-  + Use this [link](/slides/Week 9/Slides-Week-7.html){target="_blank"} to view a larger version of slideshow in a new window.
+  + Use this [link](/slides/Week 9/Slides-Week-9.html){target="_blank"} to view a larger version of slideshow in a new window.
         
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 9/Slides-Week-9.html")
@@ -35,8 +35,8 @@ Download the textbook
 
 - [Ch 7 PDF](/slides/Week 9/SSDS_Ch7.pdf){target="_blank"}, 
 - [Ch 7 Outline](/lecture_notes/Week9/SSDS_Ch7.pdf){target="_blank"},
-- [Ch 8 PDF](/slides/Week 9/SSDS_Ch8.pdf){target="_blank"}, and
-- [Ch 8 Outline](/lecture_notes/Week9/SSDS_Ch8.pdf){target="_blank"}.
+- [Ch 8 PDF](/slides/Week 10/SSDS_Ch8.pdf){target="_blank"}, and
+- [Ch 8 Outline](/lecture_notes/Week10/SSDS_Ch8.pdf){target="_blank"}.
 
 ### R Walkthrough: Confidence Intervals
 

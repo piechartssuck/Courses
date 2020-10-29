@@ -2,26 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Assignments | Statistical Methods I</title>
-    <link>https://edp613.theoreticalphysed.com/assignment/</link>
-      <atom:link href="https://edp613.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>/assignment/</link>
+      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
+      <url>/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/</link>
+      <link>/assignment/</link>
     </image>
     
     <item>
-      <title>The What and Why of Statistics</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/01-homeworks/</link>
+      <title>Testing Hypotheses</title>
+      <link>/assignment/10-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/01-homeworks/</guid>
+      <guid>/assignment/10-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#week-10-problem-set&#34;&gt;Week 10 Problem Set&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+&lt;/style&gt;
+&lt;div id=&#34;week-10-problem-set&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Week 10 Problem Set&lt;/h3&gt;
+&lt;div id=&#34;assignment&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Assignment&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapter 7 Exercises: 1, 2, 3, 4, 5, 10.&lt;/li&gt;
+&lt;li&gt;Chapter 8 Exercises: 1, 2, 3, 4, 5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please turn both in as one task within the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The What and Why of Statistics</title>
+      <link>/assignment/01-homeworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/01-homeworks/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -184,14 +240,14 @@ Voted; Membership
     
     <item>
       <title>The Organization and Graphic Presentation of Data</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/02-homeworks/</link>
+      <link>/assignment/02-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/02-homeworks/</guid>
+      <guid>/assignment/02-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -469,7 +525,7 @@ Total
 &lt;summary&gt;4&lt;/summary&gt;
 &lt;p&gt;
 &lt;p&gt;Unfortunately since other visualizations have not been introduced, pie charts are likely the best method approach to present these data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/02-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/assignment/02-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
@@ -726,14 +782,14 @@ Cumulative Percent
     
     <item>
       <title>Measures of Central Tendency</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/03-homeworks/</link>
+      <link>/assignment/03-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/03-homeworks/</guid>
+      <guid>/assignment/03-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1119,14 +1175,14 @@ Since Clinton and Sanders’ middle-class income amount is higher than the U.S. 
     
     <item>
       <title>Measures of Variability</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/04-homeworks/</link>
+      <link>/assignment/04-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/04-homeworks/</guid>
+      <guid>/assignment/04-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1898,12 +1954,12 @@ These differences might be explained by access and availability of health care a
     
     <item>
       <title>The Normal Distribution</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/05-homeworks/</link>
+      <link>/assignment/05-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/05-homeworks/</guid>
+      <guid>/assignment/05-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1947,7 +2003,7 @@ tr:nth-child(even) { background: #ffffff;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(8\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 8 hr/day is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{8-2.97}{3.00}\\\\
@@ -1955,7 +2011,7 @@ z &amp;amp;= \dfrac{8-2.97}{3.00}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z \approx 1.68\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches less than 5 hr/day is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{5-2.97}{3.00}\\\\
@@ -1969,7 +2025,7 @@ Y&amp;amp;=2.97+1\cdot 3\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;implying that &lt;span class=&#34;boxed&#34;&gt;5.97&lt;/span&gt; television hr/day corresponds to a &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score of &lt;span class=&#34;math inline&#34;&gt;\(+1\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person who watches more than 1 hr/day is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{1-2.97}{3.00}\\\\
@@ -1998,7 +2054,7 @@ Y&amp;amp;= 250+1.65\cdot 75\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;or about &lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt; women. Since this figure exceeds the total capacity of 350, there will &lt;span class=&#34;boxed&#34;&gt;not be enough space for all abused women on 95% of all nights&lt;/span&gt;. at minimum, the city needs &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(374\)&lt;/span&gt;&lt;/span&gt; beds.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(220\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for exceeding the capacity is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{220-250}{75}\\\\
@@ -2013,7 +2069,7 @@ z &amp;amp;= \dfrac{220-250}{75}\\\\
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Working class.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{12-13.05}{2.77}\\\\
@@ -2028,7 +2084,7 @@ z &amp;amp;= \dfrac{16-13.05}{2.77}\\\\
 &lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=1.06\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.3554\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 So the proportion of &lt;strong&gt;working-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.1480 + 0.3554 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.5034\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 We are still looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(12\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt; for the Upper class.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a person with more than 12 years of education is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{12-15.48}{2.76}\\\\
@@ -2043,7 +2099,7 @@ z &amp;amp;= \dfrac{16-15.48}{2.67}\\\\
 &lt;p&gt;with the area between the mean and &lt;span class=&#34;math inline&#34;&gt;\(z=0.19\)&lt;/span&gt; found to be &lt;span class=&#34;math inline&#34;&gt;\(0.0753\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 So the proportion of &lt;strong&gt;upper-class respondents&lt;/strong&gt; with 12–16 years of education can be found by &lt;span class=&#34;math inline&#34;&gt;\(0.3962 + 0.0753 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4715\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;40%&#34; /&gt;
 For working-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{16-12.05}{2.77}\\\\
@@ -2057,7 +2113,7 @@ z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=0.49\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.3121\)&lt;/span&gt; thus implying the probability of a &lt;strong&gt;middle-class respondent&lt;/strong&gt; having more than 16 years of education is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(31.21\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(10\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;40%&#34; /&gt;
 For middle-class respondents, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
@@ -2072,7 +2128,7 @@ z &amp;amp;= \dfrac{16-14.56}{2.95}\\\\
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;40%&#34; /&gt;
 For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{625-536}{102}\\\\
@@ -2080,7 +2136,7 @@ z &amp;amp;= \dfrac{625-536}{102}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=0.87\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1992\)&lt;/span&gt; thus implying the probability that a &lt;strong&gt;high school graduate&lt;/strong&gt; having earning a score of more than 625 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(19.92\%\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(625\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;40%&#34; /&gt;
 For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 625 is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{625-536}{102}\\\\
@@ -2109,10 +2165,10 @@ z &amp;amp;= \dfrac{150-100}{15}
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z\approx 3.33\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve greater than &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;40%&#34; /&gt;
 The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=3.33\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(0.0004\)&lt;/span&gt; implying that the percentage of scores above 150 is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.04\%\)&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking at the area between &lt;span class=&#34;math inline&#34;&gt;\(85\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(150\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;40%&#34; /&gt;
 The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for a score of 85 is&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{85-100}{15}\\\\
@@ -2136,7 +2192,7 @@ So the &lt;span class=&#34;math inline&#34;&gt;\(0.3413 + 0.4996 = 0.8409\)&lt;/
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve less than &lt;span class=&#34;math inline&#34;&gt;\(400\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;40%&#34; /&gt;
 For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{400-531}{114}\\\\
@@ -2144,7 +2200,7 @@ z &amp;amp;= \dfrac{400-531}{114}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;The area beyond &lt;span class=&#34;math inline&#34;&gt;\(z=-1.15\)&lt;/span&gt; and the tail is &lt;span class=&#34;math inline&#34;&gt;\(0.1251\)&lt;/span&gt; thus implying that about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(12.51\%\)&lt;/span&gt;&lt;/span&gt;of &lt;strong&gt;high school graduates&lt;/strong&gt; hearned a score less than 400.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We are looking the area under the curve between than &lt;span class=&#34;math inline&#34;&gt;\(600\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(700\)&lt;/span&gt;.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;40%&#34; /&gt;
 For these high school graduates, the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score for 600 is given by&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{600-531}{114}\\\\   
@@ -2159,7 +2215,7 @@ z &amp;amp;= \dfrac{700-531}{114}\\\\
 &lt;p&gt;The area between &lt;span class=&#34;math inline&#34;&gt;\(z=1.48\)&lt;/span&gt; and the mean is &lt;span class=&#34;math inline&#34;&gt;\(0.4306\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 Subtracting these proportions yields &lt;span class=&#34;math inline&#34;&gt;\(0.4306-0.2291=0.2015\)&lt;/span&gt;, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(20.15\%\)&lt;/span&gt;&lt;/span&gt; of the high school graduates earned a score between 600 and 700&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(725\)&lt;/span&gt; which is greater than the mean, we have
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{725-531}{114}\\\\   
@@ -2175,7 +2231,7 @@ z &amp;amp;= \dfrac{725-531}{114}\\\\
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;For an earned score of &lt;span class=&#34;math inline&#34;&gt;\(990\)&lt;/span&gt; which is greater than the mean, we have
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{990-981}{27.3}\\\\   
@@ -2193,28 +2249,28 @@ z &amp;amp;= \dfrac{990-981}{27.3}\\\\
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(971\)&lt;/span&gt; is given by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{971-983}{33}\\\\   
 &amp;amp;\approx -0.36
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(958\)&lt;/span&gt; is given by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{958-976}{34.9}\\\\   
 &amp;amp;\approx -0.52
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(987\)&lt;/span&gt; is given by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{987-983}{33}\\\\   
 &amp;amp;\approx 0.12
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(970\)&lt;/span&gt; is given by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;40%&#34; /&gt;
 From this we can calculate the &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt;-score as&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
 z &amp;amp;= \dfrac{970-976}{34.9}\\\\   
@@ -2222,12 +2278,12 @@ z &amp;amp;= \dfrac{970-976}{34.9}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.17\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4325\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.36\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
 which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;math inline&#34;&gt;\(0.3594\)&lt;/span&gt; implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/details&gt;
@@ -2246,14 +2302,14 @@ which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span
     
     <item>
       <title>Sampling and Sampling Distributions</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/07-homeworks/</link>
+      <link>/assignment/07-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/07-homeworks/</guid>
+      <guid>/assignment/07-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2477,28 +2533,28 @@ sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &amp;lt;dbl&amp;gt;
-##  1        444228.
-##  2        325595 
-##  3        706253 
-##  4        142103.
-##  5        309125.
-##  6        242537.
-##  7        439750 
-##  8        370429.
-##  9        709905.
-## 10        472700.&lt;/code&gt;&lt;/pre&gt;
+##  1        364809.
+##  2        958988 
+##  3        752105 
+##  4        639228.
+##  5        510657.
+##  6        770343.
+##  7        662882.
+##  8        707746 
+##  9        648676.
+## 10        554515&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 416262.7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 656994.8&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 d. The standard deviation of these 10 means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 183176.6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 161030.9&lt;/code&gt;&lt;/pre&gt;
 or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
-&lt;img src=&#34;https://edp613.theoreticalphysed.com/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
@@ -2519,12 +2575,12 @@ e. The population distribution is positively skewed and not close to normal. Sin
     
     <item>
       <title>Estimations</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/09-homeworks/</link>
+      <link>/assignment/09-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/09-homeworks/</guid>
+      <guid>/assignment/09-homeworks/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2575,17 +2631,17 @@ tr:nth-child(even) { background: #ffffff;
     
     <item>
       <title>What is a Data Camp?</title>
-      <link>https://edp613.theoreticalphysed.com/assignment/datacamp-assignment/</link>
+      <link>/assignment/datacamp-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp613.theoreticalphysed.com/assignment/datacamp-assignment/</guid>
+      <guid>/assignment/datacamp-assignment/</guid>
       <description>
-&lt;link href=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://edp613.theoreticalphysed.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;https://edp613.theoreticalphysed.com/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
+&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
 &lt;center&gt;
-&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp613.theoreticalphysed.com/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 </description>
     </item>

@@ -1,0 +1,59 @@
+---
+title: "Testing Hypotheses"
+linktitle: "Week 10: Testing Hypotheses"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### In Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 10/Slides-Week-10.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 10/Slides-Week-10.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 10/Slides-Week-10.pdf){target="_blank"} of the presentation. 
+
+### Textbook Class Notes
+Download the textbook
+
+- [Ch 7 PDF](/slides/Week 9/SSDS_Ch7.pdf){target="_blank"}, 
+- [Ch 7 Outline](/lecture_notes/Week9/SSDS_Ch7.pdf){target="_blank"},
+- [Ch 8 PDF](/slides/Week 10/SSDS_Ch8.pdf){target="_blank"}, and
+- [Ch 8 Outline](/lecture_notes/Week10/SSDS_Ch8.pdf){target="_blank"}.
+
+### R Walkthrough: Testing
+
+<!--
+Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 9/Slides-Week-9R.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 9/Slides-Week-9R.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 9/Slides-Week-9R.R){target="_blank"} file of just the R chunks used in the presentation.
+-->

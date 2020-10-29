@@ -1,0 +1,21 @@
+.right[`r fa("link", fill = "#5cb85c")`]
+
+.right[`r fa("stop", fill = "#ff6347")`]
+
+.right[`r fa("forward", fill = "#4682b4")`]
+
+.rleft[`r fa("bookmark", fill = "#5bc0de")`]
+
+1880.00 px
+1063.50 px
+
+3760.00 px
+2127.00 px
+
+----
+
+1845.50px
+1046.50 px
+
+3457.00 px
+1955.00 px

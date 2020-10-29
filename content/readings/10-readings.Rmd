@@ -1,0 +1,24 @@
+---
+title: "Testing Hypotheses"
+linktitle: "Week 10: Testing Hypotheses"
+menu:
+  content:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+
+- Read Chapter 7: *Estimation*
+- Read Chapter 8: *Testing Hypothesis*
+
+
+
+

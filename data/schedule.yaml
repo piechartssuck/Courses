@@ -75,3 +75,12 @@ lessons:
     example: "09-example"
     assignment: "09-homeworks"
     due: "09-due"
+
+  - title: 'Testing Hypotheses'
+    session: 10
+    date: "November 4, 2020"
+    readings: "10-readings"
+    lesson: "10-lesson"
+    example: "10-example"
+    assignment: "10-homeworks"
+    due: "10-due"

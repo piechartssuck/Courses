@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Testing Hypotheses</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 10" />
+    <link href="Slides-Week-10_files/tile-view-0.2.3.9000/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-10_files/tile-view-0.2.3.9000/tile-view.js"></script>
+    <link href="Slides-Week-10_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-10_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-10_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-10_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Testing Hypotheses
+## EDP 613
+### Week 10
+
+---
+
+
+
+
+
+
+
+
+
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# A Note About Previous Items
+
+We're going to use some introduce some concepts from Chapter 7 here as well.
+
+---
+
+# Thin Margins
+
+The **margin of error** (MoE) is 
+
+--
+
+&gt;- Formally - the range of values above and below a sample statistic within a confidence interval. 
+
+--
+
+&gt;- In Better Terms - how many percentage points your results will differ from the real population value.
+
+
+Note: We're NOT talking about the confidence interval!
+
+---
+
+# Interpretation 
+
+- Result: A 95% confidence interval with a 3% margin of error.
+
+--
+
+- What it means: Your statistic will be within **3 percentage points** of the real population value *95%* of the time.
+
+--
+
+The MoE is a probability!
+---
+
+# Back to Hypothesis Testing
+
+Recall:
+
+The **null hypothesis** states 
+
+--
+
+&gt;- Formally - that a parameter is equal to a specific value
+
+--
+
+&gt;- Informally - nothing probably happened
+
+--
+
+The **alternative hypothesis** states 
+
+--
+
+&gt;- Formally - that a parameter differs from the value specified by the null hypothesis
+
+--
+
+&gt;- Informally - something probably happened
+
+---
+
+# More about Hypothesis Testing
+
+Say a null hypothesis is `\(H_0\colon\mu=50\)`. Then three things can occur from a frequentist perspective
+
+--
+
+- `\(H_1 &lt; 50\)`: alternative hypothesis states that the parameter is *less* than the value of the null.
+
+&gt;- You know to test for everything to the *left* of `\(H_1 = 50\)`.
+&gt;- Called a **left-tailed test**
+
+--
+
+- `\(H_1 &gt; 50\)`: alternative hypothesis states that the parameter is *more* than the value of the null.
+
+&gt;- You know to test for everything to the *right* of `\(H_1 = 50\)`.
+&gt;- Called a **left-tailed test**
+
+--
+
+- `\(H_1 \neq 50\)`: alternative hypothesis states that the parameter is *note* the value of the null.
+
+&gt;- You know to test for everything to the *left* and *right* of `\(H_1 = 50\)`.
+&gt;- Called a **two-tailed test**
+
+---
+
+# Visual Hypothesis Testing
+
+.pull-left[
+&lt;br&gt;
+- `\(H_1 &lt; H_0\)`:
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+- `\(H_1 &gt; H_0\)`:
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+- `\(H_1 \neq H_0\)`:
+]
+
+.pull-right[
+&lt;img src="Slides-Week-10_files/figure-html/unnamed-chunk-4-1.png" width="30%" /&gt;
+
+&lt;img src="Slides-Week-10_files/figure-html/unnamed-chunk-5-1.png" width="30%" /&gt;
+
+&lt;img src="Slides-Week-10_files/figure-html/unnamed-chunk-6-1.png" width="30%" /&gt;
+]
+
+---
+
+# Testing Methods
+
+- Critical Value (CV)
+- `\(p\)`-value
+
+---
+
+# Critical Value
+
+- Uses a **test statistic** - determines how strong the disagreement between a sample mean and a null hypothesis. 
+
+- Idea: We should reject `\(H_0\)` if the value of  the test statistic is unusual when we assume `\(H_0\)` to be true.
+
+- Process
+    - We choose a CV which forms a boundary between values that are considered unusual and values that are not.
+    - The region containing the unusual values is called the **critical region**.
+    - f the value of the test statistic is in the critical regions, we *reject* `\(H_0\)`.
+
+---
+
+# Transitioning (Again!)
+
+&gt;- Going from a `\(z\)`-distribution (known population variance using `\(z\)`-scores) to a `\(t\)`-distribution (known sample variance using `\(t\)`-tests)
+
+---
+
+&gt;- We assume that for a large enough sample size, the `\(t\)`-distribution will closely match, or estimate, the a `\(z\)`-distribution 
+
+
+---
+
+# Things to note
+
+- `\(t\)`-distribution table can be located in Appendix C.
+
+- Assumptions
+    - *Normality* - Samples are drawn from a population that fits a bell curve 
+
+    - *Independence* - Samples do not share values
+
+    - *Random Sampling* - Samples are randomized
+  
+    - ***Homogeneity*** (for more than one sample) - Samples have a similar makeup
+
+---
+
+# One-sample `\(t\)`-test
+
+- allows us to determine whether the mean of a sample data set is different than a known value
+    - used when the population variance is not known
+    - can be used when the sample size is small.
+    Uses `\(n\)`-1 **degrees of freedom** (*df*).
+
+---
+
+# What the heck is a degree of freedom?
+
+1. Forget statistics
+
+--
+
+2. Say you only own seven hats and want to wear a different one each day of the week.
+
+--
+
+3. Process
+  - Day 1: Choose from 7
+  - Day 2: Choose from 6
+  - Day 3: ...
+
+--
+
+  - Day 6: ... from 2
+  - Day 7: Only one choice left!
+
+--
+
+4. You had `\(7-1=6\)` days of hat freedom! 
+
+--
+
+This is basically what a *df* is.
+
+---
+
+# Formula
+
+- `\(t = \dfrac{\overline{Y}-\mu}{s/\sqrt{N}}\)`
+
+- `\(df = N-1\)`
+
+---
+
+# Example
+
+We want to determine if the mean per capita income of West Virginia counties is different than the national average, and we suspect based on *a priori* (fancy term for *before*) knowledge that it is lower.
+
+- `\(H_0\)`: The per capita income of West Virginia counties is not significantly less than the national average.
+- `\(H_1\)`: The per capita income of West Virginia counties is significantly less than the national average.
+
+---
+
+# Step 1
+
+Determine if West Virginia county per capita income is normally distributed.
+- If *yes*, proceed with a one-sample `\(t\)`-test
+- If *no*, you may still be able to use a *t&amp;-test but it requires additional assumptions
+
+NOTE: We do not need to know the normality of US per capita income. All we need to know is the mean.
+
+---
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Region &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Per Capita Income &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Median Household Income &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Median Family Income &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Population &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Households &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; United States &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; $27,334 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; $51,914 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; $62,982 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 308,745,538 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 116,716,292 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; West Virginia &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; $19,443 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; $38,380 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; $48,896 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 1,852,994 &lt;/td&gt;
+   &lt;td style="text-align:center;background-color: #212121 !important;"&gt; 763,831 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+- From `Per Capita Income`, we suspect WV is lower but is the difference significant enough?
+
+--
+
+- Remember that `\(H_0\)` is based on what we see in the data.
+
+---
+
+# Assumptions
+
+- Population mean is $27,334
+
+- Take a sample of 61 people with standard deviation \$3075.28 and mean \$19253.2
+
+- *df*: `\(61-1 = 60\)`
+
+- CV: `\(\pm 2\)`
+
+---
+
+# Calulations
+
+`\begin{aligned}
+t &amp;= \dfrac{19253.2-27334.0}{3075.28/\sqrt{50}} \\
+ &amp;\approx -18.58
+\end{aligned}`
+
+So we reject `\(H_0\)`. 
+
+Interpretation: The per capita income is significantly less than the national average!
+ 
+
+---
+
+# Two-sample `\(t\)`-test
+
+Used to compare one sample mean to another.
+
+- We use two different test: 
+  - Equal variances
+  - Unequal variances (assumed)
+
+- **Homoscedasticity** – the assumption of equal variances.
+
+---
+
+# Formulas
+
+- `\(S_{\overline{Y_1}-\overline{Y_1}} = \sqrt{\dfrac{(N_1-1)\cdot s_1^2+(N_2-1)\cdot s_2^2}{(N_1+N_2)-2}}\cdot\sqrt{\dfrac{N_1+N_2}{N_1\cdot N_2}}\)`
+
+- `\(t = \dfrac{\overline{Y_1}-\overline{Y_2}}{S_{\overline{Y_1}-\overline{Y_1}}}\)`
+
+- `\(df = (N_1+N_2)-2\)`
+
+---
+
+# Example
+
+At the Olympic level of competition, even the smallest factors can make the difference between winning and losing. 
+
+Pelton (1983) has shown that Olympic marksmen shoot much better if they fire between heartbeats, rather than squeezing the trigger during a heartbeat.
+
+The small vibration caused by a heartbeat appears to be sufficient to affect the marksman’s aim.
+
+---
+
+# Samples
+
+A sample of six (6) Olympic marksmen fires a series of rounds while a researcher records heartbeats.  For each marksman, an accuracy score (out of 100) is recorded for shots fired during heartbeats and for shots fired between heartbeats.  Do the data indicate a significant difference? 
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; During Heartbeats &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Between Heartbeats &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 93 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 98 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 90 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 94 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 95 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 96 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 92 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 91 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 95 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 97 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 91 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 97 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Setup
+
+- Research question: Is better accuracy achieved by marksmen when firing the trigger between heartbeats than during a heartbeat?
+
+- Hypothesis: 
+  - `\(H_0: \mu \geq 0\)` – The average accuracy score is equal to or better when measured between heartbeats than during heartbeats.
+  - `\(H_1: \mu &lt; 0\)`  – The average accuracy score is worse when measures between heartbeats than during heartbeats.
+
+- Alpha: 𝛼= 0.05
+
+---
+
+Appendix C: 
+
+- `\(df = 6-1 = 5\)`
+
+- `\(t_{critical} = -2.015\)` 
+
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; During Heartbeats &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Between Heartbeats &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Difference &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Variance of Difference &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 93 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 98 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -5 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 25 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 90 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 94 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; -4 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 16 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 95 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -1 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 92 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 91 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 95 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 97 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -2 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 91 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 97 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -6 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 36 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -17 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 83 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+
+
+
+## That's it. Take a break before our R session!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
