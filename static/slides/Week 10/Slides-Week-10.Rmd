@@ -503,7 +503,46 @@ kable(heart_diff ,
   row_spec(0, background = "#212121") %>%
   row_spec(2, background = "#212121")
 ```
+
 ---
+
+# Descriptives
+
+- Mean: $\dfrac{-17}{6}\approx -2.83$
+
+--
+
+- SS: $83-\dfrac{(-17)^2}{6} \approx 34.83$
+
+--
+
+- Variance: $\dfrac{34.83}{6-1} \approx 6.97$
+
+--
+
+- Standard Deviation: $\sqrt{6.97} \approx 2.64$
+
+---
+
+# Calculations
+
+- Standard Error: $\dfrac{2.64}{\sqrt{6}}\approx 1.08$
+
+- Test Statistic: $\dfrac{-2.83-0}{1.08}\approx -2.62$
+
+---
+
+# Decision
+
+Since $-2.62<-2.015$, we reject $H_0$.
+
+--
+
+Interpretation: Marksmen are significantly more accurate when they pull the trigger between heartbeats than during a heartbeat.
+
+---
+
+## That's it. Take a break before our R session!
 
 
 
