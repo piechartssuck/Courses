@@ -7,7 +7,7 @@ output:
 menu:
   lesson:
     parent: Lessons
-    weight: 2
+    weight: 9
 type: docs
 weight: 1
 editor_options: 
@@ -40,20 +40,4 @@ Download the textbook
 
 ### R Walkthrough: Testing
 
-<!--
-Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 9/Slides-Week-9R.html){target="_blank"} to view a larger version of slideshow in a new window.
-
-
-```{r echo = FALSE}
-knitr::include_url("/slides/Week 9/Slides-Week-9R.html")
-```
-
-You can download 
-
-- a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target="_blank"} of the presentation above. 
-- a [script](/slides/Week 9/Slides-Week-9R.R){target="_blank"} file of just the R chunks used in the presentation.
--->
+Take a look at a [walkthrough](/walkthroughs/hypotheses/hypotheses/) about *t*-tests.

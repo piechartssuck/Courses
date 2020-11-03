@@ -4,7 +4,7 @@ linktitle: "Week 1: The What and Why of Statistics"
 menu:
   content:
     parent: Readings
-    weight: 2
+    weight: 1
 type: docs
 weight: 1
 bibliography: "../../static/bib/references.bib"

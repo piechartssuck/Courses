@@ -13,6 +13,422 @@
     </image>
     
     <item>
+      <title>Testing Hypotheses</title>
+      <link>/walkthroughs/hypotheses/hypotheses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/walkthroughs/hypotheses/hypotheses/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preparation&#34;&gt;Preparation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packages&#34;&gt;Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-t.test-command&#34;&gt;The &lt;code&gt;t.test()&lt;/code&gt; Command&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#its-all-about-the-assumptions&#34;&gt;It’s All About the Assumptions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example&#34;&gt;Example&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#midwest-data-set-from-ggplot2&#34;&gt;Midwest Data Set from ggplot2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#one-sample-t-test&#34;&gt;One-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#two-sample-t-test&#34;&gt;Two-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-paired-t-test&#34;&gt;The Paired &lt;em&gt;t&lt;/em&gt;-test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;preparation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preparation&lt;/h2&gt;
+&lt;p&gt;Download a &lt;a href=&#34;/walkthroughs/Hypotheses.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in this walkthrough.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Purpose&lt;/h2&gt;
+&lt;p&gt;One of the most common tests in statistics, the &lt;em&gt;t&lt;/em&gt;-test, is used to determine whether the means of two groups are equal to each other. The assumption for the test is that both groups are sampled from normal distributions with equal variances. The null hypothesis is that the two means are equal, and the alternative is that they are not. It is known that under the null hypothesis, we can calculate a &lt;em&gt;t&lt;/em&gt;-statistic that will follow a &lt;em&gt;t&lt;/em&gt;-distribution with &lt;span class=&#34;math inline&#34;&gt;\(n_1+n_2 - 2\)&lt;/span&gt; degrees of freedom. There is also a widely used modification of the &lt;em&gt;t&lt;/em&gt;-test, known as Welch’s &lt;em&gt;t&lt;/em&gt;-test that adjusts the number of degrees of freedom when the variances are thought not to be equal to each other. This tutorial covers the basics of performing &lt;em&gt;t&lt;/em&gt;-tests in &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Objectives&lt;/h3&gt;
+&lt;p&gt;This guide serves as an introduction to performing &lt;em&gt;t&lt;/em&gt;-tests to compare two groups. Here’s what we’ll&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;introduce the &lt;code&gt;midwest&lt;/code&gt; example data set&lt;/li&gt;
+&lt;li&gt;use the &lt;code&gt;patchwork&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;associate the &lt;em&gt;t&lt;/em&gt;-test in R by using the overarching command &lt;code&gt;t.test()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;provide some familiarity with the variants of the &lt;em&gt;t&lt;/em&gt;-test:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;One-sample &lt;em&gt;t&lt;/em&gt;-tests&lt;/strong&gt;: Compare the sample mean with a known value, when the variance of the population is unknown&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two-sample &lt;em&gt;t&lt;/em&gt;-tests&lt;/strong&gt;: Compare the means of two groups under the assumption that both samples are random, independent, and normally distributed with unknown but equal variances&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paired &lt;em&gt;t&lt;/em&gt;-tests&lt;/strong&gt;: Compare the means of two sets of paired samples, taken from two populations with unknown variance&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Packages&lt;/h3&gt;
+&lt;p&gt;There is one package we’ll be using that you probably do not have: the &lt;code&gt;patchwork&lt;/code&gt; package which is a tidy update to the base R &lt;code&gt;grid&lt;/code&gt; and &lt;code&gt;gridExtra&lt;/code&gt; packages. If you do not have it yet, make sure to install it first using&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;#39;patchwork&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now please load up the following packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter()     masks stats::filter()
+## x dplyr::group_rows() masks kableExtra::group_rows()
+## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(patchwork)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-t.test-command&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The &lt;code&gt;t.test()&lt;/code&gt; Command&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;t.test()&lt;/code&gt; function can be used to perform both one and two sample &lt;em&gt;t&lt;/em&gt;-tests on vectors of data. The function contains a variety of arguments and is called as follows:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(x, y = NULL, alternative = c(&amp;quot;two.sided&amp;quot;, &amp;quot;less&amp;quot;, &amp;quot;greater&amp;quot;), mu = 0, 
+       paired = FALSE, var.equal = FALSE, conf.level = 0.95)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each of the letters - aka arguments - inside of the command are specifically defined:&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Options that you can use in t.test()
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+What it is…
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;x&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+a &lt;em&gt;numeric vector&lt;/em&gt; from a data set
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;y&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+an optional &lt;em&gt;numeric vector&lt;/em&gt; from a data set
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;mu&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+a number indicating the true value of the mean
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;alternative&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+preference on type of test you wish to run
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;paired&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+preference on whether you wish to perform a paired &lt;em&gt;t&lt;/em&gt;-test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;var.equa&lt;/code&gt;l
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+indicates whether or not to assume equal variances when performing a two-sample &lt;em&gt;t&lt;/em&gt;-test
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;code&gt;conf.level&lt;/code&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+the confidence level of the reported confidence interval
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;Below are a few things to note about the &lt;code&gt;t.test()&lt;/code&gt; command before we move on that can drastically affect your outcomes if you are not aware of them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the variable &lt;code&gt;y&lt;/code&gt; is
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;excluded&lt;/em&gt;, &lt;code&gt;t.test()&lt;/code&gt; will run as a &lt;strong&gt;one-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;included&lt;/em&gt;, &lt;code&gt;t.test()&lt;/code&gt; will run as a &lt;strong&gt;two-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The default &lt;code&gt;t.test()&lt;/code&gt; command will run as a two-sided &lt;em&gt;t&lt;/em&gt;-test. However you can perform an alternative hypothesis by changing the &lt;code&gt;alternative&lt;/code&gt; argument to:
+&lt;ul&gt;
+&lt;li&gt;“&lt;code&gt;greater&lt;/code&gt;”, or&lt;/li&gt;
+&lt;li&gt;“&lt;code&gt;less&lt;/code&gt;”.
+For example&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt; t.test(x, alternative = &amp;quot;greater&amp;quot;, mu = 47)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;performs a one-sample &lt;em&gt;t&lt;/em&gt;-test on the data contained in x where the
+- null hypothesis is &lt;span class=&#34;math inline&#34;&gt;\(\mu = 47\)&lt;/span&gt;, and the
+- alternative hypothesis is &lt;span class=&#34;math inline&#34;&gt;\(\mu &amp;gt; 47\)&lt;/span&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;paired&lt;/code&gt; argument has a default setting of &lt;code&gt;FALSE&lt;/code&gt; indicating that a paired &lt;em&gt;t&lt;/em&gt;-test should not be run. If you wish to run a paired &lt;em&gt;t&lt;/em&gt;-test, this can be done by changing the setting to &lt;code&gt;TRUE&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;var.equals&lt;/code&gt; argument has a default setting of &lt;code&gt;FALSE&lt;/code&gt; indicating unequal variances ans applies the Welsch approximation to the degrees of freedom. If you wish to have equal variances, this can be done by changing the setting to &lt;code&gt;TRUE&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;conf.level&lt;/code&gt; argument is set to 95%, or where &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.05\)&lt;/span&gt;. The confidence interval is determined by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; for the one-sample &lt;em&gt;t&lt;/em&gt;-test, and&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\mu_1-\mu_2\)&lt;/span&gt; for the one-sample &lt;em&gt;t&lt;/em&gt;-test.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a final note, the &lt;code&gt;wilcox.test()&lt;/code&gt; option provides the same basic functionality and arguments, but with the idea that we &lt;strong&gt;do not want to assume the data to follow a normal distribution&lt;/strong&gt;. This is often the case for samples but at this time, we will assume that the data that is normally distributed. Understanding the &lt;code&gt;wilcox.test()&lt;/code&gt; function is beyond the scope of this course.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;its-all-about-the-assumptions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;It’s All About the Assumptions&lt;/h2&gt;
+&lt;p&gt;Before we can move forward in the exploration of the &lt;em&gt;t&lt;/em&gt;-test, we must first make sure that any data that we use adheres to the test assumptions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Assumption #1: Random sampling&lt;/strong&gt;: Data is derived from random sampling.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Assumption #2: Independent observations&lt;/strong&gt;: Observations are independent from one another.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Assumption #3: Normality&lt;/strong&gt;: Observations are from a normally distributed population.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Assumption #4: Homogeneity&lt;/strong&gt;: If more than one population is sampled from, then the populations have equal variances (also known as &lt;strong&gt;&lt;em&gt;homogeneity of variances&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;div id=&#34;midwest-data-set-from-ggplot2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Midwest Data Set from ggplot2&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;ggplot2&lt;/code&gt; package has some test data built in, though you may not find them that exciting which is the reason we tend to use real-world data that is more connected to the social sciences and education. However, in this walkthrough, we will be using one of the &lt;code&gt;ggplot2&lt;/code&gt; data sets named &lt;code&gt;midwest&lt;/code&gt;. This data set contains contains county-level data for 5 states: IL, IN, MI, OH, &amp;amp; WI derived from the 2010 U.S. Census. I’ll leave the level of excitement up to you. When you lead up &lt;code&gt;tidyverse&lt;/code&gt;, or more specifically &lt;code&gt;ggplot2&lt;/code&gt;, the &lt;code&gt;midwest&lt;/code&gt; data sets is also loaded automatically. Let’s take a look at it:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(midwest)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 28
+##     PID county state  area poptotal popdensity popwhite popblack popamerindian
+##   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;int&amp;gt;    &amp;lt;int&amp;gt;         &amp;lt;int&amp;gt;
+## 1   561 ADAMS  IL    0.052    66090      1271.    63917     1702            98
+## 2   562 ALEXA… IL    0.014    10626       759      7054     3496            19
+## 3   563 BOND   IL    0.022    14991       681.    14477      429            35
+## 4   564 BOONE  IL    0.017    30806      1812.    29344      127            46
+## 5   565 BROWN  IL    0.018     5836       324.     5264      547            14
+## 6   566 BUREAU IL    0.05     35688       714.    35157       50            65
+## # … with 19 more variables: popasian &amp;lt;int&amp;gt;, popother &amp;lt;int&amp;gt;, percwhite &amp;lt;dbl&amp;gt;,
+## #   percblack &amp;lt;dbl&amp;gt;, percamerindan &amp;lt;dbl&amp;gt;, percasian &amp;lt;dbl&amp;gt;, percother &amp;lt;dbl&amp;gt;,
+## #   popadults &amp;lt;int&amp;gt;, perchsd &amp;lt;dbl&amp;gt;, percollege &amp;lt;dbl&amp;gt;, percprof &amp;lt;dbl&amp;gt;,
+## #   poppovertyknown &amp;lt;int&amp;gt;, percpovertyknown &amp;lt;dbl&amp;gt;, percbelowpoverty &amp;lt;dbl&amp;gt;,
+## #   percchildbelowpovert &amp;lt;dbl&amp;gt;, percadultpoverty &amp;lt;dbl&amp;gt;,
+## #   percelderlypoverty &amp;lt;dbl&amp;gt;, inmetro &amp;lt;int&amp;gt;, category &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;one-sample-t-test&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;One-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/h3&gt;
+&lt;p&gt;The one-sample &lt;em&gt;t&lt;/em&gt;-test compares a sample’s mean with a known value, when the variance of the population is unknown. Consider we want to assess the percent of college educated adults in the midwest and compare it to a certain value. For example, let’s assume the nation-wide average of college educated adults is approximately &lt;a href=&#34;%22https://www.census.gov/data/tables/2018/demo/education-attainment/cps-detailed-tables.html%22&#34;&gt;37% (Bachelor’s degree or higher)&lt;/a&gt; and we want to see if the midwest mean is significantly different than the national average; in particular we want to test if the midwest average is less than the national average.&lt;/p&gt;
+&lt;p&gt;Let’s first take a look at how the data looks (important!) and some descriptive statistics:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(midwest$percollege, 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 19.63139 11.24331 17.03382 17.27895 14.47600 18.90462 11.91739 16.19712
+##  [9] 14.10765 41.29581&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(midwest$percollege)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   7.336  14.114  16.798  18.273  20.550  48.079&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then plot it to see the distribution:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(midwest, aes(x = percollege)) + 
+        geom_histogram(aes(fill = ..count..), color = &amp;quot;#ccccaa&amp;quot;) +
+        scale_fill_gradient(&amp;quot;Frequency&amp;quot;, low = &amp;quot;#5cb85c&amp;quot;, high = &amp;quot;#428bca&amp;quot;) +
+        theme_minimal() +
+        theme(legend.position = &amp;quot;bottom&amp;quot;,
+              legend.direction = &amp;quot;horizontal&amp;quot;)
+
+
+
+p2 &amp;lt;- ggplot(midwest, aes(x = percollege)) + 
+        geom_histogram(aes(fill = ..count..), color = &amp;quot;#ccccaa&amp;quot;) +
+        scale_fill_gradient(&amp;quot;Frequency&amp;quot;, low = &amp;quot;#5cb85c&amp;quot;, high = &amp;quot;#428bca&amp;quot;) +
+        scale_x_log10() +
+        theme_minimal() +
+        theme(legend.position = &amp;quot;bottom&amp;quot;,
+              legend.direction = &amp;quot;horizontal&amp;quot;)
+
+
+p1 + p2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/walkthroughs/Hypotheses/Hypotheses_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To test if the midwest average is less than the national average, we’ll perform three tests. First we test with a normal &lt;em&gt;t&lt;/em&gt;-test without any distribution transformations. The results below show a &lt;em&gt;p&lt;/em&gt;-value &amp;lt; .001 supporting the alternative hypothesis that “the true mean is less than 37%.”&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(midwest$percollege, mu = 37, alternative = &amp;quot;less&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  One Sample t-test
+## 
+## data:  midwest$percollege
+## t = -62.518, df = 436, p-value &amp;lt; 2.2e-16
+## alternative hypothesis: true mean is less than 37
+## 95 percent confidence interval:
+##     -Inf 18.7665
+## sample estimates:
+## mean of x 
+##  18.27274&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternatively, due to the non-normality concerns we can perform this test in another way to ensure our results are not being biased due to assumption violations. We can perform the &lt;em&gt;t&lt;/em&gt;-test and transform our data. The results support our initial conclusion that the percent of college educated adults in the midwest is statistically less than the nationwide average.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(log(midwest$percollege), mu = log(37), alternative = &amp;quot;less&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  One Sample t-test
+## 
+## data:  log(midwest$percollege)
+## t = -51.37, df = 436, p-value &amp;lt; 2.2e-16
+## alternative hypothesis: true mean is less than 3.610918
+## 95 percent confidence interval:
+##      -Inf 2.879812
+## sample estimates:
+## mean of x 
+##  2.855574&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;two-sample-t-test&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Two-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/h3&gt;
+&lt;p&gt;Now let’s say we want to compare the differences between the average percent of college educated adults in Ohio versus Michigan. Here, we want to perform a two-sample &lt;em&gt;t&lt;/em&gt;-test. So let’s first do some data wrangling…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ohio_mi &amp;lt;- midwest %&amp;gt;%
+        filter(state == &amp;quot;OH&amp;quot; | state == &amp;quot;MI&amp;quot;) %&amp;gt;%
+        select(state, percollege)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and find some descriptive statistics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First for Ohio:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Ohio summary stats
+summary(ohio_mi %&amp;gt;% 
+          filter(state == &amp;quot;OH&amp;quot;) %&amp;gt;% 
+          .$percollege)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   7.913  13.089  15.462  16.890  18.995  32.205&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;and then for Michigan:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Ohio summary stats
+summary(ohio_mi %&amp;gt;% 
+          filter(state == &amp;quot;MI&amp;quot;) %&amp;gt;% 
+          .$percollege)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   11.31   14.61   17.43   19.42   21.31   48.08&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see Ohio appears to have slightly less college educated adults than Michigan but the graphic doesn’t tell us if it is statistically significant or not.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(ohio_mi, aes(x = state, y = percollege, fill = state)) +
+        geom_boxplot(alpha = 0.5) +
+        scale_fill_manual(values = c(&amp;quot;#00274C&amp;quot;, &amp;quot;#BB0000&amp;quot;)) +
+        theme_minimal() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/walkthroughs/Hypotheses/Hypotheses_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also once again see similar skewness within the sample distributions by running the following.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p3 &amp;lt;- ggplot(ohio_mi, aes(x = percollege)) +
+        geom_histogram(aes(fill = ..count..), color = &amp;quot;#ccccaa&amp;quot;) +
+        scale_fill_gradient(&amp;quot;Frequency&amp;quot;, low = &amp;quot;#5cb85c&amp;quot;, high = &amp;quot;#428bca&amp;quot;) +
+        facet_wrap(~ state) +
+        theme_minimal() +
+        theme(legend.position = &amp;quot;bottom&amp;quot;,
+              legend.direction = &amp;quot;horizontal&amp;quot;)
+    
+
+p4 &amp;lt;- ggplot(ohio_mi, aes(x = percollege)) +
+        geom_histogram(aes(fill = ..count..), color = &amp;quot;#ccccaa&amp;quot;) +
+        scale_fill_gradient(&amp;quot;Frequency&amp;quot;, low = &amp;quot;#5cb85c&amp;quot;, high = &amp;quot;#428bca&amp;quot;) +
+        facet_wrap(~ state) + 
+        scale_x_log10() +
+        theme_minimal() +
+        theme(legend.position = &amp;quot;bottom&amp;quot;,
+              legend.direction = &amp;quot;horizontal&amp;quot;)
+
+p3 + p4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/walkthroughs/Hypotheses/Hypotheses_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Similar to the plots in the one-sample example, to test if the Ohio and Michigan averages differ we’ll perform two tests. Also, note that we am searching for any differences between the means rather than if one is specifically less than or greater than the other. First we test with a normal &lt;em&gt;t&lt;/em&gt;-test without any distribution transformations. The results below show a &lt;em&gt;p&lt;/em&gt;-value &amp;lt; 0.01 supporting the alternative hypothesis that “true difference in means is not equal to 0”; essentially it states there is a statistical difference between the two means.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(percollege ~ state, data = ohio_mi)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Welch Two Sample t-test
+## 
+## data:  percollege by state
+## t = 2.5953, df = 161.27, p-value = 0.01032
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  0.6051571 4.4568579
+## sample estimates:
+## mean in group MI mean in group OH 
+##         19.42146         16.89045&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again as an alternative, due to the non-normality concerns we can perform this test in another way to ensure our results are not being biased due to assumption violations. We can perform the &lt;em&gt;t&lt;/em&gt;-test and transform our data. The results support our initial conclusion that the percent of college educated adults in Ohio is statistically different than the percent in Michigan.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(log(percollege) ~ state, data = ohio_mi)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Welch Two Sample t-test
+## 
+## data:  log(percollege) by state
+## t = 2.9556, df = 168.98, p-value = 0.003567
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  0.04724892 0.23732151
+## sample estimates:
+## mean in group MI mean in group OH 
+##         2.915873         2.773587&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-paired-t-test&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The Paired &lt;em&gt;t&lt;/em&gt;-test&lt;/h3&gt;
+&lt;p&gt;To illustrate the paired &lt;em&gt;t&lt;/em&gt;-test we’ll use the built-in &lt;code&gt;sleep&lt;/code&gt; data set.&lt;/p&gt;
+&lt;p&gt;Please load up the following packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sleep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    extra group ID
+## 1    0.7     1  1
+## 2   -1.6     1  2
+## 3   -0.2     1  3
+## 4   -1.2     1  4
+## 5   -0.1     1  5
+## 6    3.4     1  6
+## 7    3.7     1  7
+## 8    0.8     1  8
+## 9    0.0     1  9
+## 10   2.0     1 10
+## 11   1.9     2  1
+## 12   0.8     2  2
+## 13   1.1     2  3
+## 14   0.1     2  4
+## 15  -0.1     2  5
+## 16   4.4     2  6
+## 17   5.5     2  7
+## 18   1.6     2  8
+## 19   4.6     2  9
+## 20   3.4     2 10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(sleep, aes(group, extra, fill = group)) +
+        geom_boxplot(alpha = 0.5) +
+        scale_fill_manual(values = c(&amp;quot;#00274C&amp;quot;, &amp;quot;#BB0000&amp;quot;)) +
+        theme_minimal() &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/walkthroughs/Hypotheses/Hypotheses_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In this case we are assessing if there is a statistically significant effect of a particular drug on sleep (increase in hours of sleep compared to control) for 10 patients. Please see &lt;code&gt;?sleep&lt;/code&gt; for more details on the variables.&lt;/p&gt;
+&lt;p&gt;We want to see if the mean values for the extra variable differs between group 1 and group 2. Here, we perform the &lt;code&gt;t.test&lt;/code&gt; as in the previous sections but just add the &lt;code&gt;paired = TRUE&lt;/code&gt; argument:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(extra ~ group, data = sleep, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Paired t-test
+## 
+## data:  extra by group
+## t = -4.0621, df = 9, p-value = 0.002833
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -2.4598858 -0.7001142
+## sample estimates:
+## mean of the differences 
+##                   -1.58&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this example it appears that the drug does have an effect as the &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value = 0.0028 suggesting that the drug increases sleep on average by 1.58 hours.&lt;/p&gt;
+&lt;p&gt;The above looks at exact matching. If you are getting an error, try running which will only run on values that can be matched. To use the command below, make sure both comparison variables are numeric.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sleep &amp;lt;- sleep %&amp;gt;%
+  mutate(group = as.numeric(group))
+
+t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Paired t-test
+## 
+## data:  sleep$extra and sleep$group
+## t = 0.095569, df = 19, p-value = 0.9249
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.8360223  0.9160223
+## sample estimates:
+## mean of the differences 
+##                    0.04&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Pipes and the NFL</title>
       <link>/walkthroughs/nfl/nflpipes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

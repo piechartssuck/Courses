@@ -4,7 +4,7 @@ linktitle: "Week 7: Sampling and Sampling Distributions"
 menu:
   content:
     parent: Readings
-    weight: 3
+    weight: 7
 type: docs
 weight: 1
 bibliography: "../../static/bib/references.bib"

@@ -58,21 +58,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-testing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough: Testing&lt;/h3&gt;
-&lt;!--
-Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 9/Slides-Week-9R.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
-
-
-&lt;iframe src=&#34;/slides/Week 9/Slides-Week-9R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
-
-You can download 
-
-- a [PDF](/slides/Week 9/Slides-Week-9R.pdf){target=&#34;_blank&#34;} of the presentation above. 
-- a [script](/slides/Week 9/Slides-Week-9R.R){target=&#34;_blank&#34;} file of just the R chunks used in the presentation.
---&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/hypotheses/hypotheses/&#34;&gt;walkthrough&lt;/a&gt; about &lt;em&gt;t&lt;/em&gt;-tests.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -386,21 +372,6 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
 &lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
-&lt;!--
-1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
-
-- [Week 3 Walkthrough Materials](/slides/Week 4/Week4data.zip){target=&#34;_blank&#34;}
-
-2. Click on the presentation itself and then you may
-
-- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-- Press the letter **O** at any point to see see a tile view of the slideshow.
-- Use this [link](/slides/Week 4/Slides-Week-4.html){target=&#34;_blank&#34;} to view a larger version of slideshow in a new window.
-
-&lt;iframe src=&#34;/slides/Week 4/Slides-Week-4.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
-
-You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#34;} of the presentation above. 
---&gt;
 &lt;/div&gt;
 </description>
     </item>

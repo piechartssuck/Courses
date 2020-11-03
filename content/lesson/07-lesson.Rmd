@@ -7,7 +7,7 @@ output:
 menu:
   lesson:
     parent: Lessons
-    weight: 2
+    weight: 7
 type: docs
 weight: 1
 editor_options: 
