@@ -220,14 +220,6 @@
   </url>
   
   <url>
-    <loc>/walkthroughs/hypotheses/hypotheses/</loc>
-  </url>
-  
-  <url>
-    <loc>/walkthroughs/nfl/nflpipes/</loc>
-  </url>
-  
-  <url>
     <loc>/resource/install/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
@@ -298,10 +290,6 @@
   
   <url>
     <loc>/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>/walkthroughs/</loc>
   </url>
   
 </urlset>
