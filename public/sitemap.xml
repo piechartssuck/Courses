@@ -52,6 +52,10 @@
   </url>
   
   <url>
+    <loc>/lesson/hypotheses/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/01-homeworks/</loc>
   </url>
   
@@ -217,6 +221,10 @@
   
   <url>
     <loc>/resource/design/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/nflpipes/</loc>
   </url>
   
   <url>

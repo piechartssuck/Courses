@@ -1,0 +1,729 @@
+---
+title: "Dplyr, Pipes, and the NFL"
+linktitle: "Week 5: Dplyr, Pipes, and the NFL"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Walkthroughs
+    weight: 1
+type: docs
+weight: 3
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(htmltools)
+library(knitr)
+library(kableExtra)
+```
+
+## Preparation
+
+Download a [script](/scripts/NFLpipes.R){target="_blank"} file of just the R chunks used in this walkthrough.
+
+## Purpose
+
+What are some common things you like to do with your data? Maybe remove rows or columns, do calculations and maybe add new columns? This is called **data wrangling**. It's not data management or data manipulation: you **keep the raw data raw** and do these things programatically in R with the `tidyverse`.
+
+You are going to be introduced to data wrangling in R without using the base package, or "Base R." The `tidyverse` is a suite of packages that match a philosophy of data science developed by Hadley Wickham and the RStudio team. It is a more straight-forward way to learn R. I encourage you to take a look around the `tidyverse` web page just to see everything it can do. You can fine it here: [https://www.tidyverse.org/](https://www.tidyverse.org/)
+
+Now that you have had two weeks of utter frustration with "Base R", which means, in R without using any additional packages (though we have used a bit of tidyverse), I will show you by comparison what code will look like in "Base R". For some things, base-R is more straightforward and where tat is apparent, I will note it. Whenever we use a function that is from the `tidyverse`, we will prefix it so you'll know for sure. 
+
+### Objectives
+
+- discuss tidying data
+- read data from a `csv` file into R
+- explore `gapminder` data with base-R functions
+- wrangle `gapminder` data with `dplyr` from the `tidyverse` family of functions
+
+### Packages
+
+Please load up the following packages
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+Remember to download them if you receive an error:
+```{r, eval=FALSE}
+install.packages("tidyverse")
+install.packages("gapminder")
+```
+
+## The Tidyverse Package
+
+The `tidyverse` package is actually a family of packages that have been constructed to take all kinds of data sets in multiple formats and to **tidy** them. Before we get into that concept, the typical path that we take when working with real world data sets is relatively simple...
+
+![](/img/R/R3.png)
+
+...yet the process can be extremely complex and time consuming as described below:
+
+> Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in the mundane labor of collecting and preparing data, before it can be explored for useful information [(NYTimes, 2014)](http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html).
+
+`tidyverse` provides packages - given in `r kableExtra::text_spec("green", color = "#28453B", bold = TRUE)` - that address all of these notions, but we won't even be able to scratch the surface of most of them. 
+
+![](/img/R/R4.png)
+
+In this walk through, we'll be concentrating on the use of pipes using the `dplyr`.
+
+\newpage
+## Tidy Data
+
+Let's start off discussing **tidy data** which has simple convention: put variables in the columns and observations in the rows - amazing right?
+
+There are three interrelated rules which make a data set tidy:
+
+1.  Each variable must have its own column.
+2.  Each observation must have its own row.
+3.  Each value must have its own cell.
+
+![](/img/R/R2.png)
+
+
+We are going to wrangle - yup that is a real term for messing with the structure of data - a tidy-ish data set (the **Mutate** part of the cycle), and then come back to tidying messy data using `tidyr` once we've gotten it into proper form. 
+
+Conceptually, making data tidy first is really critical. Instead of building your analyses around whatever format your data are in, we'll take deliberate steps to make your data tidy. When your data are in this format, you can use a growing assortment of powerful analytical and visualization tools instead of inventing home-grown ways to accommodate your data. This will save you time since you aren't reinventing the wheel, and will make your work more clear and understandable to your collaborators. Additionally after struggling with Base R and its arduous process, pipes will probably be something you welcome!
+
+
+## Basics
+
+There are six functions in `dplyr` that you will primarily use to wrangle data. Remember that variables are the column names while observations are the values within a column.
+
+- the **`filter()`** command which let's you pick observations by their values. 
+
+![](/img/R/R5.png){width=75%}
+
+\newpage
+- the **`select()`** command which let's you pick variables by their names.\
+
+![](/img/R/R6.png){width=75%}
+
+
+- the **`mutate()`** command which let's you create new variables with functions of existing variables.
+
+![](/img/R/R7.png){width=75%}
+
+- the **`summarise()`** command which let's you collapse multiple values to a single summary.
+
+![](/img/R/R8.png){width=75%}
+
+\newpage
+- the **`group_by()`** command which let's you perform operations with respect to a variable.
+
+![](/img/R/R9.png){width=75%}
+
+- the **`arrange()`** command which let's you reorder the rows of a data frame.
+
+(nope there isn't a picture for this)
+<br>
+Should you memorize these? NO! NEVER! DON'T DO IT! That's what the internet is for! As with any data set, the main objective is to logically think about what you can do to achieve a goal. The commands are simply paths you could take to get there. 
+
+## The Pipe `%>%` Operator
+
+Pipes are a logical operator from the `magrittr` package that allows you to pass logic down a chain. Find that confusing? Let's try to explain it another way:
+
+```{r, eval=FALSE, purl=FALSE}
+I %>% 
+  woke up %>%
+  showered %>%
+  got dressed %>%
+  ate breakfast %>%
+  showed up for work
+```
+
+Here every act is dependent on all of the previous acts. This essentially signifies what pipes do, in that you can fit multiple commands in a row without having to do them one by one as in Base R. Pipes are given by the `%>%` symbol. In RStudio, the keyboard shortcut for a pipe is
+
+* Cmd + Shift + M (Mac  or Linux) 
+
+* Ctrl + Shift + M (Windows) 
+
+### Gapminder
+
+In this walk through, we'll be using [Gapminder data](http://www.gapminder.org/world), which represents the health and wealth of nations. It was pioneered by [Hans Rosling](https://www.ted.com/speakers/hans_rosling), who is famous for describing the prosperity of nations over time through famines, wars and other historic events with an interactive data visualization in his [2006 TED Talk: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen) which you can access by selecting the image on the next page.
+
+[![Gapminder Motion Chart](/img/R/R1.png)](http://www.gapminder.org/world){target="_blank"}
+
+Let's take a look at the gapminder data set. 
+
+```{r, eval=TRUE}
+head(gapminder)
+```
+
+Now using pipes, we could have done
+
+```{r, eval=TRUE}
+gapminder %>% 
+  head()
+```
+
+Here are some others using the `filter` and `select` commands with multiple steps:
+
+\newpage
+#### No Pipes
+
+```{r, eval=TRUE}
+gapusa_filter <- filter(gapminder, country == "United States")
+
+gapusa_filter
+```
+
+```{r, eval=TRUE}
+gapusa_select <- select(gapusa_filter, -continent, -lifeExp)
+
+gapusa_select
+```
+
+#### With Pipes
+
+```{r, eval=TRUE}
+gapusa <- gapminder %>% 
+  filter(country == "United States") %>%
+  select(-continent, -lifeExp) 
+
+gapusa
+```
+
+By using multiple lines you can actually read this like a story and there aren't temporary variables that get confusing. This reads like:
+
+>"start with the `gapminder` data, 
+and then filter for the United States, 
+and lastly drop the variables continent and lifeExp."
+
+\vspace{0.1in}
+
+### `mutate()` adds new variables
+
+Let's say we needed to add an index column so we know which order these data came in. Let's not make a new variable, let's add a column to our gapminder data frame. How do we do that? With the `mutate()` function. 
+
+Imagine we want to know each country's annual GDP. We can multiply `pop` by `gdpPercap` to create a new column named `gdp`.
+
+```{r, eval=TRUE}
+gapminder %>%
+  mutate(gdp = pop * gdpPercap)
+```
+
+### Try These Out
+
+#### On Your Own 1
+
+Try to figure this out by yourself using pipes and only the `filter`, `mutate`, and `select` commands. Compare your syntax with the syntax below. Remember! There are multiple ways to go about finding the outcome.
+
+<center>*Calculate the population in thousands for all European countries in the year 2007 and add it as a new column.*
+</center>
+<br>
+<details><summary>Possible solution</summary>
+```{r, eval=TRUE}
+gapminder %>%
+  filter(continent == "Europe",
+         year == 2007) %>%
+  mutate(pop_thousands = pop/1000) %>%
+  select(country, year, pop_thousands) #this cleans up the dataframe but isn't necessary
+```
+</details>
+<br>
+If you got it, that's great! However, it's absolutely fine if you did not. The best way to learn is to practice (and possibly yell at your computer a few times if that helps).
+
+### `group_by()` operates on groups
+What if we wanted to know the total population on each continent in 2002? Answering this question requires a **grouping variable**. By using `group_by()` we can set our grouping variable to `continent` and create a new column called `cont_pop` that will add up all country populations by their associated continents.
+
+```{r, eval=TRUE}
+gapminder %>%
+  filter(year == 2002) %>%
+  group_by(continent) %>% 
+  mutate(cont_pop = sum(pop))
+```
+
+Sure this great but what if we don't care about the other columns and  only want each continent and their population in 2002? That leads us to the next function: 
+
+### `summarize()` with `group_by()`
+
+We want to operate on a group, but actually collapse or distill the output from that group. The `summarize()` function will do that for us.
+
+
+```{r, eval=TRUE, warning=FALSE}
+gapminder %>%
+  group_by(continent) %>%
+  summarize(cont_pop = sum(pop)) %>%
+  ungroup()
+```
+
+`summarize()` will actually only keep the columns that are grouped_by or summarized. So if we wanted to keep other columns, we'd have to do have a few more steps. `ungroup()` removes the grouping and it's good to get in the habit of using it after a `group_by()` because R remembers! We can use more than one grouping variable. Let's get total populations by **continent** and **year**.
+
+```{r, eval = TRUE, warning=FALSE}
+gapminder %>%
+  group_by(continent, year) %>%
+  summarize(cont_pop = sum(as.numeric(pop))) %>%
+  ungroup()
+```
+
+### `arrange()` orders columns
+
+This is ordered alphabetically, which is helpful in certain circumstances. But let's say we wanted to order it in ascending order for `year`. The dplyr function to do that is `arrange()`. 
+```{r, eval=TRUE, warning=FALSE}
+gapminder %>%
+  group_by(continent, year) %>%
+  summarize(cont_pop = sum(as.numeric(pop))) %>%
+  arrange(year) %>%
+  ungroup()
+```
+
+
+#### On Your Own 2
+
+Try to figure this out by yourself using pipes and some if not all of the commands introduced above. Compare your syntax with the script **On Your Own (Pipes and the NFL) Syntax Set.R**. Remember! There are multiple ways to go about finding the outcome.
+
+<center>
+*Now what is the maximum GDP per continent across all years?*
+</center>
+<br>
+<details><summary>Possible solution</summary>
+```{r, eval=TRUE}
+gapminder %>%
+  mutate(gdp = pop * gdpPercap) %>%
+  group_by(continent) %>%
+  mutate(max_gdp = max(gdp)) %>%
+  filter(gdp == max_gdp) %>%
+  select(-country)
+```
+</details>
+
+## NFL Data Set
+
+1. Grab the data set^[From the FiveThirtyEight [NFL Ticket Prices Github Page](https://github.com/fivethirtyeight/data/tree/master/nfl-ticket-prices){target="_blank"}]: 
+[`2014-average-ticket-price`](/data/R/2014-average-ticket-price.csv)
+
+2. Save it in the same place as your script.
+
+3. Load it up in R^[If you are getting an error, remember to point R to the right location by `Session > Working Directory > To Source File Location` in the menu.]:
+```{r eval=FALSE}
+nfl2014 <- read_csv("2014-average-ticket-price.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+nfl2014 <- read_csv("data/2014-average-ticket-price.csv")
+```
+
+To make a good habit, let's check the file's characteristics. This is a good habit and can alleviate some pains down the line. It is recommended you run these simple checks on any data set.
+
+1. Check that your set is in a data frame format and get information about your columns and their types (character, numeric, or factor) by running
+```{r, eval=TRUE, warning=FALSE }
+str(nfl2014)
+```
+
+or you can do 
+```{r, eval=TRUE, warning=FALSE }
+glimpse(nfl2014)
+```
+
+So we do have a data frame with 108 rows and three columns as well as two columns that are made up of characters (i.e. letters) and one that is numeric, or made of numbers. These columns are actually called **vectors**. Please keep this mind as we'll be referring to the columns as vectors from now on.
+
+2. Check that its a tibble, which is essentially a data frame but tweaked to make it easier to wrangle. 
+```{r, eval=FALSE}
+is_tibble(nfl2014)
+```
+
+The differences between the two are worth a brief discussion in a data science course, but not here. Some older functions don’t work with tibbles. If you encounter one of these functions, use the command `as.data.frame()` to turn a tibble back to a data.frame like so:
+```{r, eval=FALSE}
+nfl2014_dfonly <- as.data.frame(nfl2014)
+```
+
+Anyway, if you test for both of those and they pass, you will be able to use all of the commands listed above. 
+
+We'll tweak the second question on the task list a bit to say: "What was the highest and lowest average ticket price for all 2014-2015 NFL games by division? " For this session, we'll disregard the histogram and answer the question that was asked for on the original.
+
+To tackle this, let's think about it logically. Originally you had to 
+
+1. inspect the data frame which I called `nfl2014`,
+
+2. remove the columns with *NA*,
+
+3. create eight different data frames, one for each division, and
+
+4. derive the mean for each.
+
+5. put the values in order.
+
+That is a lot of steps! Let's try using pipes to do this instead: 
+```{r, eval=TRUE, warning=FALSE }
+nfl2014 %>%
+  select(Division, `Avg TP, $`) %>%
+  group_by(Division) %>%
+  na.omit() %>%
+  summarize(Mean_by_Division = mean(`Avg TP, $`, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(Mean_by_Division))
+```
+
+Well that was MUCH EASIER! Now what happened? Let's go through it line by line:
+
+1. I called the data frame `nfl2014`. This was the name given to the csv file when it was brought in.
+
+2. I selected the two columns I want to know more about. In this case, I can't compute anything by  `Division` if I don't have the numerical data that explains ticket prices `Avg TP, $`. 
+
+3. Since I need the mean by each `Division`, grouping by that vector will allow me to find perform any and all operations by each unique value. In this case we have eight divisions, so well have outcomes for each. 
+
+4. *NA*s are a special type of value in R. New users tend to disregard them as blanks or sometimes zeros. However, the name itself *NA* means not available aka a missing value. When you see this, it means that R has recognized that a value should be there but its not and depending on the command, it may bring up an error or worst case scenario, an analysis runs and your output is skewed. The command `na.omit()` will remove **any row where an** *NA* **is found**. Please note this differs from removing only rows with *NA*s. The distinction, while minute, can have lasting ramifications.
+
+5. `summarize` tells R that I'm going to reduce the data set using some summary technique. In this case the mean is needed so I constructed a new column named `Mean_by_Division` which took the `mean` of ``Avg TP, $`. Note that since we are using pipes, we do not have to tell R about the name of the data frame. It has been understood since step 1.
+
+6. As a good rule of thumb, it is always good to `ungroup()` your data because the grouping is information that R retains. R remembers!
+
+7. Arrange the `Mean_by_Division` vector in decreasing order. The default is increasing.
+
+#### On Your Own 3
+
+<center>
+*Now try doing the same as the above except only for AFC teams.* 
+</center>
+<br>
+<br>
+There are a lot of ways to accomplish this, but I would suggest filtering with a string. Take a look at the link and see if you can figure out the command to use. 
+
+[Filter with Text data](https://blog.exploratory.io/filter-with-text-data-952df792c2ba)
+
+Of course, a solution is below. Again you are learning how to do this so take some time and for many of you, it may be oddly satisfying to find the output you want after being frustrated. 
+<br>
+
+<details><summary>Possible solution</summary>
+```{r, eval=TRUE}
+nfl2014 %>%
+select(Division, `Avg TP, $`) %>%
+  filter(str_detect(Division, "AFC")) %>%
+  na.omit() %>%
+  summarize(AFC_mean = mean(`Avg TP, $`, na.rm = TRUE))
+```
+</details>
+
+## Task
+For this task first download the [`drinks2010andBeyond`](/data/R/drinks2010andBeyond.csv) data set^[From the FiveThirtyEight [Alcohol Consumption Github Page](https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption){target="_blank"}]. This is an amended version of the average serving sizes per person by country as reported by the World Health Organization (WHO), Global Information System on Alcohol and Health (GISAH) since 2010. If you are interested, please visit the [WHO GISAH site](https://apps.who.int/gho/data/node.main.GISAH?lang=en).
+
+In a typical submission^[This is just for practice so you do not have to turn anything in!], you must include 
+
+1. Your name and task in the top of the script.
+
+2. Separated solutions in proper numerical order.
+
+3. Your code.
+
+4. An answer to the question.
+
+Remember you can leave text that R will ignore by putting a hashtag # in front of it.
+
+As an example, if I were to submit the altered item 2 from above, my script would read:
+
+```{r, eval=FALSE, warning=FALSE, purl=FALSE}
+# Abhik Roy
+# EDP 613
+# Drinks Task
+
+# 1 blah blah blah
+
+
+# 2
+nfl2014 %>%
+  select(Division, `Avg TP, $`) %>%
+  group_by(Division) %>%
+  na.omit() %>%
+  summarize(Mean_by_Division = mean(`Avg TP, $`, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(desc(Mean_by_Division))
+
+# According to the output, the highest average price paid was $170.00 per ticket paid by
+# fans the NFC North whereas the lowest average price ticket was paid by attendees who  
+# went to games in the AFC South at $83.30.
+
+
+# 3 blah blah blah
+```
+
+Now please answer the following questions. Please note that all consumption measurements are in liters:
+
+<details><summary>First step</summary>
+<p>
+
+We have to bring in the data set:
+```{r echo = TRUE, eval = FALSE}
+drinks <- read_csv("drinks2010andBeyond.csv")
+```
+
+```{r echo = FALSE, eval = TRUE, purl=FALSE}
+drinks <- read_csv("data/drinks2010andBeyond.csv")
+```
+
+</p>
+</details>
+<br>
+OK now we can move on with the questions! <br>
+
+1. Which country or countries had the highest average consumption of wine and beer in each year?
+
+<details><summary>Possible solution</summary>
+<p>
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "Beer" | `Beverage Types` == "Wine") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+
+Breakdown line-by-line:
+
+1. We call the data frame `drinks`.
+
+2. We filter the column `Beverage Types` by "Beer" OR "Wine".^[Note that **OR** here means what is known as an **inclusive or**...aka *it this or that or both*. Using this idea, the second line search reads like `Beverage Types` for "Beer" OR "Wine" OR both. The other type of OR is called an **exclusive or** ..aka *it this or that but NOT both*. If you ever have to use it, it is given by the command `xor()`. Included on the [last page of this document](#exclusive) are some standard logical operators for your reference.]
+
+3. The `gather()` command is used to go from a wide data set to a long one while ignoring the application of the command on the columns `Country`, and `Beverage Types`. To see what occurs, first run the first two lines by highlighting them and ending before the `%>%` (pipe) on the second line:
+
+![Highlight of first two lines of the code.](graphics/partialpipes2lines.png)
+That simply runs through steps 1 and 2 above. Now run the first three lines in the same way ending prior to the `%>%` (pipe) in the third line
+
+![Highlight of first two lines of the code.](graphics/partialpipes3lines.png)
+You can find a multitude of resources for `gather()` and its complement `spread()` but my advice is simply to play around with  the `key`, `value`, and columns you don't want to make long. However if you like some reference material while you explore these commands, try [Data Science for R]("https://garrettgman.github.io/tidying/"). If the link is not work, the address is https://garrettgman.github.io/tidying/. 
+
+In our case all of the data is now in relation to the columns `Country` and `Beverage Types` which gives us the remaining columns (the `key`) as data points that have values (the `value`) which I have named `year` (via `key = "year"`) and `measure` (via `value = "measure"`). Those that do not have associated values become `NA`s (for example the country of `Afghanistan` did not have any values for `Beer` or `Wine` in `2016`). Please take some time to investigate the `gather()` command as R works will with long data sets and not so well with wide ones!
+
+4. `na.omit()` is a command you have seen before and it simply sees if there is an `NA` in a row and then deleted said row. It performs this recursively throughout your entire data frame.
+
+5. The `group_by()` command notifies R that all operations must be performed with respect to the columns indicated which in this case implies that \ldots
+
+6. \ldots the `summarize()` command used here to find the mean of the column `measure` is performed by `year` and `Country`. We assign the results to a new column `avg`.
+
+7. Finally the `top_n()` which gives us the top value of the average `avg` column.
+
+Again to see how this layering works, I suggest that you run this line by line to observe the results. This is the benefit of the `tidyverse` approach.
+
+</p>
+</details>
+<br>
+
+2. Which country or countries had the highest average consumption of spirits in each year?
+
+<details><summary>Possible solution</summary>
+<p>
+
+The process here is exactly the same as the one described in item 1 except the `Beverage Types` are `"Spirits"` rather than `"Beer"` or `"Wine"`.
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "Spirits") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+
+</p>
+</details>
+<br>
+
+3. Which country had the highest average consumption of all alcohol across time?
+
+<details><summary>Possible solution</summary>
+<p>
+
+Again, the process here is exactly the same as the one described in items 1 and 2 except the `Beverage Types` are `"All types"` rather than any individual type.
+
+```{r}
+drinks %>%
+  filter(`Beverage Types` == "All types")  %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  group_by(year, Country) %>%
+  summarize(avg = mean(measure)) %>%
+  top_n(n=1, avg)
+```
+</p>
+</details>
+<br>
+
+4. Based on each years average consumption of beer across all counties, how far does the United States deviate from the mean, if at all? Is the mean an appropriate measure of the average here? Why or why not?<br><br>
+This one was fairly difficult. A *deviation from the mean* essentially indicates how a single measure differs from an established value of a mean. In our case, how the mean of the United States differs from that of the mean derived from the rest of the countries. Your first thought may be to find the difference between both the means by subtracting them. This would be fine if both had the same standard deviation, but they do not.
+
+<details><summary>Possible solution</summary>
+<p>
+
+```{r}
+# USA only
+drinks %>%
+  filter(`Beverage Types` == "Beer" & Country == "United States of America") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  summarize(avg = mean(measure), stanDev = sd(measure)) 
+
+# Remaining countries
+drinks %>%
+  filter(`Beverage Types` == "Beer" & Country != "United States of America") %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  summarize(avg = mean(measure), stanDev = sd(measure)) 
+```
+
+Note that our `filter()` command again uses an AND command rather than an OR and rather than filtering using one column, we use two (`Beverage Types` AND `Country`) but in the latter we we want to exclude the United States of America by using `Country != "United States of America"`. So interpreting this, we can say that we're looking for figures for all Beer consumption around the world except for the United States of America.
+
+So what can we do? At this point not much! In the future we should be able to address this issue by using a statistical test  known as a *t*-test but we need to satisfy some initial prerequisites first. We will explore this in R5 but for now, we'll leave it here. 
+
+On a side note, it is absolutely fine if you subtracted the means! That would be the most logical choice and you also did not have much of a choice at the current time. Consider that the issue of subtracting means with differing standard deviations is that the spread differs between each and while a mean is a mean, they're not measures of the mean on the same footing - ergo all things are not equal.
+</p>
+</details>
+<br>
+
+5. Since we measure beer in the United States in ounces (for some reason) rather than in liters, convert the 2016 measures into ounces using the conversion 1 Liter = 33.814022 oz.
+
+<details><summary>Possible solution</summary>
+<p>
+One of the nicer aspects of using `%>%` is in the fact you can selectively perform operations and general augmentations on the columns of your choice without ever having to worry about how any other columns are affected. This is actually accomplished using the command `mutate()` which in a nutshell allows for column wise operations. 
+
+In this task, we are informed that the column `2016` is given in liters. However since we and a handful of other countries have chosen to use a measurement that are nowadays based off the metric system (yes that's true..for example an inch is officially defined as 2.54 centimeters) and not the metric system itself (base 10 seems pretty easy but what do I know), we have to convert on order to report. In this case we are given the easy to remember 1 Liter = 33.814022 (fluid) ounces. To convert this, we use the `mutate()` command by
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+drinks %>%
+  mutate(`2016` = 33.814022 * `2016`) %>%
+  rename(`2016 (using garbage measurements)` = `2016`)
+```
+\vspace{0.1in}
+
+with the last line being dedicated to renaming the column that was just converted from `2016` to `2016 (using garbage measurements)`. Notice that the `rename()` command requires that the new name of a column precede the current name separated by and `=`. I realize this appears to be counterintuative and there is a reason for it, but unless you love discussing how R compiles code, I'll leave it be. 
+
+On a side note, we only converted the column `2016`. What if we wanted to convert every column? Well we'd be using a lot of `%>%` and wasted energy. This is one of many instances where `gather()` is a great command to know. Switching from a wide data frame to a long one allows you to convert all years at once. We can do this by
+
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+drinks %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  mutate(`measure` = 33.814022 * `measure`) %>%
+  rename(`Measures (in ounces because that's apparently easy)` = `measure`)
+```
+\vspace{0.1in}
+
+Unlike the piping we used earlier, we aren't filtering for anything (though we could if we wanted by putting the filters back in). The rest is pretty much a combination of previous column-wise wrangling. Try running the first three lines. You will once again notice that the `measure` column is the associated liter count by year. With that, we mainly need to use `mutate()` on the `measure` column to convert it.
+
+Learning both `gather()` and to some degree `spread()` which is not covered in this walk-through will save you a great deal of time. It is worth taking the time now to explore what you can do with it.
+
+</details>
+</p>
+
+6. Explore the data set a bit and play around with pipes. Provide one outcome you derived not already asked about that you (hopefully) found interesting.
+
+<details><summary>Possible solution</summary>
+<p>
+
+Of course answers will vary here but we can see the values for each country by year 
+
+\vspace{0.1in}
+```{r echo = TRUE, eval = TRUE}
+coalesce_by_column <- function(df) {
+  return(dplyr::coalesce(!!! as.list(df)))
+}
+
+drinks %>%
+  gather(key = "year", value = "measure", -Country, -`Beverage Types`) %>%
+  na.omit() %>%
+  rowid_to_column("Country ID") %>%
+  spread(`Beverage Types`, value = `measure`) %>%
+  select(-`Country ID`) %>%
+  group_by(Country, year) %>%
+  summarise_all(coalesce_by_column) %>%
+  na_if(0)
+```
+\vspace{0.1in}
+
+where `NA` represents values not reported. 
+
+On a side note, there is an easier way to run `spread()` and it is called [`pivot_wider()`](https://dcl-wrangle.stanford.edu/pivot_basic.html#wider){target="_blank"}.
+
+</p>
+</details>
+
+\vspace{0.1in}
+\begin{center}\noindent\rule{4cm}{0.4pt}\end{center}
+\vspace{0.1in}
+
+## Logical Operators {#excusive}
+
+```{r echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE, purl=FALSE}
+
+logicals <- tibble(
+  
+`R syntax` = c("!", 
+              "&", 
+              "&&", 
+              "|", 
+              "||", 
+              "xor", 
+              "<", 
+              ">", 
+              "==", 
+              "<=", 
+              ">=", 
+              "!=", 
+              "%in%", 
+              "isTRUE"), 
+
+Idea = c("NOT", 
+         "vector-based AND (value-wise)", 
+         "value-based AND (single value)",
+         "vector-based inclusive OR (value-wise)", 
+         "value-based inclusive OR (single value)", 
+         "vector-based exclusive OR (value-wise)", 
+         "LESS than", 
+         "GREATER than", 
+         "exactly EQUALS", 
+         "LESS than or EQUAL to",
+         "GREATER than or EQUAL to",
+         "NOT EQUAL to",
+         "included in?",
+         "test if something is TRUE"),
+
+Logic = c("!a", 
+          "a & b", 
+          "a && b", 
+          "a | b", 
+          "a || b", 
+          "xor(a,b)", 
+          "a < b", 
+          "a > b", 
+          "a == b", 
+          "a <= b", 
+          "a >= b", 
+          "a != b", 
+          "a %in% b", 
+          "isTRUE(a)")
+
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+kable(logicals, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+</center>
+
+The use of `%>%` will get easier. Some people think of what steps they use when using a spreadsheet software (e.g. Microsoft Excel &copy;) when learning the logic of R. In fact, many of the formulas and syntax used in spreadsheet softwares parallel those in R. If you are used to Excel for example, try checking out [R for Excel Users]("https://www.rforexcelusers.com/). If the link is broken for some reason, head over to https://www.rforexcelusers.com/. Please note that I do not receive any compensation in any form for recommending this site nor do I take responsibility for its content. For assistance regarding the site, please contact the authors
+
+## Data Science
+Data science uses the statistics you will learn in this course and to some degree, in the follow-up course to tackle real life data. According to Glassdoor, the average salary for a data scientist is 113,436 USD (range: 95,000 USD - 250,000 USD; [Burtch-Works, 2018](https://www.burtchworks.com/wp-content/uploads/2018/05/Burtch-Works-Study_DS-2018.pdf){target="_blank"}). If you are interested in learning more about Data Science, a course is tentatively scheduled for the Fall 2021 term in addition to Data Visualization in Spring 2021. Both of these courses run very differently from the statistics courses and are focused on exploring data sets of interest to students. If interested, please let me know or stay tuned.
+
+## Acknowledgements 
+A great deal of material presented here was adapted from two online texts: [Introduction to Open Data Science]("https://ohi-science.org/data-science-training/){target="_blank"} and [R for Data Science]("https://r4ds.had.co.nz/"){target="_blank"}. If interested in how R is used in data science, try taking a look.
+
+## Don't Get Bogged Down!
+Just get a feel for the items above. There is a whole bunch of commands and ridiculous syntax above but that's not the point. Concentrate on knowing what to do (e.g. "Is this best represented by a bar plot?") rather than how to do it ("The `ggplot` command is..."). You can ALWAYS search for the syntax associated with whatever in R but if you don't how to conceptually solve a problem, software won't help. Remember computers are stupid!
+
+
