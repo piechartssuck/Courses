@@ -1,5 +1,5 @@
 ---
-title: "Measures of Variability"
+title: "Measures of Variability & Quiz 1"
 linktitle: "Week 4: Measures of Variability"
 output:
   blogdown::html_page:
@@ -29,14 +29,17 @@ unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
 checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 
 wk_post <- tibble(
-"eCampus?" = c(unchecked, 
+"eCampus?" = c(checked,
+               unchecked, 
                checked),
 
-Description = c("Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.",
+Description = c("Submit the first quiz.^[Note: Due this Friday]",
+  "Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.",
                "Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4."),
 
 Location = c("[Link](/lesson/04-lesson/#data-camp-1)", 
-             "[Link](/assignment/04-homeworks/#weekly-task-1)")
+             "[Link](/assignment/04-homeworks/#weekly-task-1)",
+             "[Link](https://ecampus.wvu.edu/){target='_blank'}")
 
 )
 ```

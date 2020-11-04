@@ -238,6 +238,14 @@
   </url>
   
   <url>
+    <loc>/assignment/quiz1/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/exams1/</loc>
+  </url>
+  
+  <url>
     <loc>/resource/r/</loc>
   </url>
   
@@ -251,17 +259,22 @@
   </url>
   
   <url>
-    <loc>/resource/visualization/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+    <loc>/resource/templates/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/resource/unzipping/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resource/visualization/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>

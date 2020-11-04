@@ -1,0 +1,60 @@
+---
+title: "Exam 1"
+linktitle: "Week 8: Exam 1"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Exams
+    weight: 1
+type: docs
+weight: 5
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+```
+
+### Exam 1
+
+#### Assignment
+Exam 1 
+- data portion covering descriptive statistics.
+- paper portion covering Chapters 1-6. 
+
+Please turn both to the Submission Portal as separate tasks on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+#### Solutions
+Posted on ecampus after the submission deadline.
+
+:::
+

@@ -1,0 +1,20 @@
+---
+title: R Templates
+date: "2020-07-15"
+menu:
+  resource:
+    parent: Resources
+type: docs
+weight: 9
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Templates
+
+Here are a few R templates you can use for submissions^[You may have to righ click and download each depending on your browser settings.]. If you do not know how to use Rmarkdown, please use the script for submissions where R may be utilized or is required.
+
+- [Example Script](/scripts/exam_script_template.R){target="_blank"}
+- [Example RMarkdown](/scripts/exam_Rmarkdown_template.Rmd){target="_blank"}

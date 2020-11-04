@@ -3497,7 +3497,7 @@ These differences might be explained by access and availability of health care a
     </item>
     
     <item>
-      <title>Measures of Variability</title>
+      <title>Measures of Variability &amp; Quiz 1</title>
       <link>/due/04-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/due/04-due/</guid>
@@ -3534,6 +3534,19 @@ Location
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Submit the first quiz.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
@@ -3541,7 +3554,7 @@ Location
 Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;/assignment/04-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3554,7 +3567,7 @@ Complete a module in Data Camp focused on basic descriptive statistics and an in
 Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/04-homeworks/#weekly-task-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -3562,7 +3575,7 @@ Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4.
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-to-do-for-week-5-before-coming-to-class&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What to do for Week 5 before coming to class&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;What to do for Week 5 before coming to class&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3611,7 +3624,7 @@ Look over the text PowerPoint and corresponding notes.
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Watch a video on The Normal Distribution.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+Watch a video on The Normal Distribution.&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;a href=&#34;/example/05-example/#crash-course-statistics-1&#34;&gt;Link&lt;/a&gt;
@@ -3624,8 +3637,9 @@ Watch a video on The Normal Distribution.&lt;a href=&#34;#fn3&#34; class=&#34;fo
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For grading.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;For preparation.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Optional but recommended.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Note: Due this Friday&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;For preparation.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Optional but recommended.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -4750,25 +4764,25 @@ sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &amp;lt;dbl&amp;gt;
-##  1        417255.
-##  2        920938.
-##  3        528164 
-##  4        425387 
-##  5        420958.
-##  6        645783.
-##  7        357902 
-##  8        946021.
-##  9        309063.
-## 10        551776&lt;/code&gt;&lt;/pre&gt;
+##  1        555882.
+##  2        395276.
+##  3        606086.
+##  4        715478 
+##  5        616356.
+##  6        302106.
+##  7        717094.
+##  8        342844 
+##  9        220683.
+## 10        594662.&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 552324.8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 506646.8&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 d. The standard deviation of these 10 means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 223304&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 177275.9&lt;/code&gt;&lt;/pre&gt;
 or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 &lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
@@ -7433,6 +7447,115 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     </item>
     
     <item>
+      <title>Quiz 1</title>
+      <link>/assignment/quiz1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/quiz1/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#quiz-1&#34;&gt;Quiz 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+&lt;/style&gt;
+&lt;div id=&#34;quiz-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Quiz 1&lt;/h3&gt;
+&lt;div id=&#34;assignment&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Assignment&lt;/h4&gt;
+&lt;p&gt;Quiz 1 covering Chapters 1-3. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next this Friday&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;p&gt;Posted on ecampus after the submission deadline.&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exam 1</title>
+      <link>/assignment/exams1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/assignment/exams1/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#exam-1&#34;&gt;Exam 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+&lt;/style&gt;
+&lt;div id=&#34;exam-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exam 1&lt;/h3&gt;
+&lt;div id=&#34;assignment&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Assignment&lt;/h4&gt;
+&lt;p&gt;Exam 1
+- data portion covering descriptive statistics.
+- paper portion covering Chapters 1-6.&lt;/p&gt;
+&lt;p&gt;Please turn both to the Submission Portal as separate tasks on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM next Wednesday.&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;p&gt;Posted on ecampus after the submission deadline.&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/resource/r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -7838,6 +7961,68 @@ mpg %&amp;gt;%
     </item>
     
     <item>
+      <title>R Templates</title>
+      <link>/resource/templates/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/resource/templates/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;r-templates&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R Templates&lt;/h2&gt;
+&lt;p&gt;Here are a few R templates you can use for submissions&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. If you do not know how to use Rmarkdown, please use the script for submissions where R may be utilized or is required.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/scripts/exam_script_template.R&#34; target=&#34;_blank&#34;&gt;Example Script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/scripts/exam_Rmarkdown_template.Rmd&#34; target=&#34;_blank&#34;&gt;Example RMarkdown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You may have to righ click and download each depending on your browser settings.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Unzipping files</title>
+      <link>/resource/unzipping/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>/resource/unzipping/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Because RStudio projects typically consist of multiple files (R scripts, datasets, graphical output, etc.) the easiest way to distribute them to you for examples, assignments, and projects is to combine all the different files in to a single compressed collection called a &lt;strong&gt;zip file&lt;/strong&gt;. When you unzip a zipped file, your operating system extracts all the files that are contained inside into a new folder on your computer.&lt;/p&gt;
+&lt;p&gt;Unzipping files on macOS is trivial, but unzipping files on Windows can mess you up if you don’t pay careful attention. Here’s a helpful guide to unzipping files on both macOS and Windows.&lt;/p&gt;
+&lt;div id=&#34;unzipping-files-on-macos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Unzipping files on macOS&lt;/h2&gt;
+&lt;p&gt;Double click on the downloaded &lt;code&gt;.zip&lt;/code&gt; file. macOS will automatically create a new folder with the same name as the &lt;code&gt;.zip&lt;/code&gt; file, and all the file’s contents will be inside. Double click on the RStudio Project file (&lt;code&gt;.Rproj&lt;/code&gt;) to get started.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/unzip-mac.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;unzipping-files-on-windows&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Unzipping files on Windows&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: Right click on the &lt;code&gt;.zip&lt;/code&gt; file, select “Extract All…”, and work with the resulting unzipped folder.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Unlike macOS, Windows does &lt;em&gt;not&lt;/em&gt; automatically unzip things for you. If you double click on the &lt;code&gt;.zip&lt;/code&gt; file, Windows will show you what’s inside, but it will do so without actually extracting anything. This &lt;del&gt;can be&lt;/del&gt; is incredibly confusing! Here’s what it looks like—the only clues that this folder is really a &lt;code&gt;.zip&lt;/code&gt; file are that there’s a “Compressed Folder Tools” tab at the top, and there’s a “Ratio” column that shows how much each file is compressed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/inside-zip-windows.png&#34; width=&#34;80%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;It is very tempting to try to open files from this view. However, if you do, things will break and you won’t be able to correctly work with any of the files in the zipped folder. If you open the R Project file, for instance, RStudio will point to a bizarre working directory buried deep in some temporary folder:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/temp-wd-windows.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You most likely won’t be able to open any data files or save anything, which will be frustrating.&lt;/p&gt;
+&lt;p&gt;Instead, you need to right click on the &lt;code&gt;.zip&lt;/code&gt; file and select “Extract All…”:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-1.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then choose where you want to unzip all the files and click on “Extract”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-2.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You should then finally have a real folder with all the contents of the zipped file. Open the R Project file and RStudio will point to the correct working directory and everything will work.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-3.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Visualization</title>
       <link>/resource/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -7904,41 +8089,6 @@ mpg %&amp;gt;%
 &lt;div id=&#34;visualization-in-tableau&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Visualization in Tableau&lt;/h2&gt;
 &lt;p&gt;Because it is focused entirely on visualization (and because it’s a well-supported commercial product), Tableau has a &lt;a href=&#34;https://www.tableau.com/learn/training&#34; target=&#34;_blank&#34;&gt;phenomenal library of tutorials and training videos&lt;/a&gt;. There’s &lt;a href=&#34;https://www.quora.com/What-are-some-good-video-tutorials-for-learning-Tableau&#34; target=&#34;_blank&#34;&gt;a helpful collections of videos here&lt;/a&gt;, as well.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Unzipping files</title>
-      <link>/resource/unzipping/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      <guid>/resource/unzipping/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;Because RStudio projects typically consist of multiple files (R scripts, datasets, graphical output, etc.) the easiest way to distribute them to you for examples, assignments, and projects is to combine all the different files in to a single compressed collection called a &lt;strong&gt;zip file&lt;/strong&gt;. When you unzip a zipped file, your operating system extracts all the files that are contained inside into a new folder on your computer.&lt;/p&gt;
-&lt;p&gt;Unzipping files on macOS is trivial, but unzipping files on Windows can mess you up if you don’t pay careful attention. Here’s a helpful guide to unzipping files on both macOS and Windows.&lt;/p&gt;
-&lt;div id=&#34;unzipping-files-on-macos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Unzipping files on macOS&lt;/h2&gt;
-&lt;p&gt;Double click on the downloaded &lt;code&gt;.zip&lt;/code&gt; file. macOS will automatically create a new folder with the same name as the &lt;code&gt;.zip&lt;/code&gt; file, and all the file’s contents will be inside. Double click on the RStudio Project file (&lt;code&gt;.Rproj&lt;/code&gt;) to get started.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/unzip-mac.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;unzipping-files-on-windows&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Unzipping files on Windows&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: Right click on the &lt;code&gt;.zip&lt;/code&gt; file, select “Extract All…”, and work with the resulting unzipped folder.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Unlike macOS, Windows does &lt;em&gt;not&lt;/em&gt; automatically unzip things for you. If you double click on the &lt;code&gt;.zip&lt;/code&gt; file, Windows will show you what’s inside, but it will do so without actually extracting anything. This &lt;del&gt;can be&lt;/del&gt; is incredibly confusing! Here’s what it looks like—the only clues that this folder is really a &lt;code&gt;.zip&lt;/code&gt; file are that there’s a “Compressed Folder Tools” tab at the top, and there’s a “Ratio” column that shows how much each file is compressed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/inside-zip-windows.png&#34; width=&#34;80%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;It is very tempting to try to open files from this view. However, if you do, things will break and you won’t be able to correctly work with any of the files in the zipped folder. If you open the R Project file, for instance, RStudio will point to a bizarre working directory buried deep in some temporary folder:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/temp-wd-windows.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;You most likely won’t be able to open any data files or save anything, which will be frustrating.&lt;/p&gt;
-&lt;p&gt;Instead, you need to right click on the &lt;code&gt;.zip&lt;/code&gt; file and select “Extract All…”:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-1.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Then choose where you want to unzip all the files and click on “Extract”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-2.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;You should then finally have a real folder with all the contents of the zipped file. Open the R Project file and RStudio will point to the correct working directory and everything will work.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-3.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

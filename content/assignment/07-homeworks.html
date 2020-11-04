@@ -241,25 +241,25 @@ sample_means &lt;- do.call(rbind, thing) %&gt;%
 <pre><code>## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &lt;dbl&gt;
-##  1        417255.
-##  2        920938.
-##  3        528164 
-##  4        425387 
-##  5        420958.
-##  6        645783.
-##  7        357902 
-##  8        946021.
-##  9        309063.
-## 10        551776</code></pre>
+##  1        555882.
+##  2        395276.
+##  3        606086.
+##  4        715478 
+##  5        616356.
+##  6        302106.
+##  7        717094.
+##  8        342844 
+##  9        220683.
+## 10        594662.</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>The mean of these 10 means is</li>
 </ol>
 <pre class="r"><code>mean(sample_means$`Sample Means`)</code></pre>
-<pre><code>## [1] 552324.8</code></pre>
+<pre><code>## [1] 506646.8</code></pre>
 <p>We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that <span class="math inline">\(\mu_Y = \mu_{\overline{Y}}\)</span>.<br><br>
 d. The standard deviation of these 10 means is</p>
 <pre class="r"><code>sd(sample_means$`Sample Means`)</code></pre>
-<pre><code>## [1] 223304</code></pre>
+<pre><code>## [1] 177275.9</code></pre>
 or about <span class="boxed">230195</span>.<br><br>
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 <img src="/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png" width="672" />
