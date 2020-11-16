@@ -84,3 +84,20 @@ lessons:
     example: "10-example"
     assignment: "10-homeworks"
     due: "10-due"
+
+  - title: 'Bivariate Tables'
+    session: 11
+    date: "November 11, 2020"
+    readings: "11-readings"
+    lesson: "11-lesson"
+    assignment: "11-homeworks"
+    due: "11-due"
+
+  - title: 'The Chi-Square Test and Measures of Association'
+    session: 12
+    date: "November 18, 2020"
+    readings: "12-readings"
+    lesson: "12-lesson"
+    example: "12-example"
+    assignment: "12-homeworks"
+    due: "12-due"

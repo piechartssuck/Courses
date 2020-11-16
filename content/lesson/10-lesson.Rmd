@@ -40,4 +40,4 @@ Download the textbook
 
 ### R Walkthrough: Testing
 
-Take a look at a [walkthrough](/walkthroughs/hypotheses/hypotheses/) about *t*-tests.
+Take a look at a [walkthrough](/lesson/hypotheses/) about *t*-tests.

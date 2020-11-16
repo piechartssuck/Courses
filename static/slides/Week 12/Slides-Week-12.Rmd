@@ -1,0 +1,290 @@
+---
+title: "Chi Square"
+subtitle: "EDP 613"
+author: "Week 12"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(clt)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# Independence
+
+Two variables that have no association with each other are **statistically independent**.
+
+---
+
+# Frequencies
+
+--
+
+- **expected frequencies**
+  - written $f_e$
+  - is what you would *expect* in a bivariate table if two variables were statistically independent. 
+  - calculated by assuming the null hypothesis is true.
+  
+--
+
+- **observed frequencies**
+  - written $f_o$
+  - is what you would *observe* in a bivariate table given what you have. 
+  - you know this already.
+
+
+---
+
+# Chi-Square Test
+
+>- Written $\chi^2$.
+
+>- Is an inferential test to find significant relationships between two variables.
+
+--
+
+>- Calculated by $$\chi^2 =\sum\dfrac{(f_o-f_e)^2}{f_e}$$
+
+--
+
+>- with $$df = (r-1)(c-1)$$
+
+---
+
+# Assumptions
+
+Only that the data is derived from *random sampling*.
+
+---
+
+
+
+# Example
+
+Fake scenario: From 2 political parties and 1 other group (Democrats, Republicans, and Independent), you take a poll from a sample of US citizens asking which category they support (i.e., their likely vote). You might wonder whether the people’s likely votes are equally distributed between the 3 political parties (your $H_0$).
+
+--
+
+Samples
+- Democrats: 587
+- Republicans: 552
+- Independents: 480
+
+--
+
+Total<br><br>
+$587+552+480=1619$.
+
+--
+
+Proportions
+- Democrats: $587/1619\approx 0.3626$ 
+- Republicans: $552/1619\approx 0.3410$ 
+- Independents: $480/1619\approx 0.2965$
+
+---
+
+Expected Frequencies
+>- We have three categories
+
+--
+
+>- $H_0:$ voters are equally distributed across the categories
+
+--
+
+>- Expected value is found by dividing the total by $1/3 \approx 0.3333$. So <br><br> $1619\cdot 0.3333 \approx 539.7$
+
+--
+
+```{r eval = TRUE, echo = FALSE}
+
+pols <- tibble(
+  
+Type = c("",
+         "Observed",
+         "Expected"),
+  
+Democrats = c("",
+              "587",
+              "539.67"),
+
+Republicans = c("",
+                "552",
+                "539.67"),
+
+Independents = c("",
+                 "480",
+                 "539.67")
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(pols, 
+      escape = FALSE,
+      align = 'cccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") 
+
+```
+
+---
+
+So 
+
+\begin{aligned}
+\chi^2 &= \dfrac{(587−539.67)^2}{539.67} + \dfrac{(552−539.67)^2}{539.67} + \dfrac{(480−539.67)^2}{539.67} \\\\
+ &\approx 11.03
+\end{aligned}
+
+with 
+
+\begin{aligned}
+df &= (2-1)\cdot(3-1)\\
+&=2
+\end{aligned}
+
+---
+
+# Now let's try this in R!
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+votes = c(D=587, R=552, I=480); votes
+
+```
+
+---
+
+# Calculate observed proportions
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+N = sum(votes); N
+```
+
+--
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+votes_freq = votes/N
+
+votes_freq
+```
+
+---
+
+
+# Determine expected frequencies
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+prop = 1/3; prop
+
+```
+
+--
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+f_e = N * prop; f_e
+
+```
+
+---
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(pols, 
+      escape = FALSE,
+      align = 'cccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") 
+
+```
+
+--
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+chisq_rs = (587 - 539.67)^2/539.67 + (552-539.67)^2/539.67 + (480 - 539.67)^2/539.67
+
+chisq_rs
+
+
+```
+
+with
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+df = (2-1)*(3-1)
+
+df
+
+```
+
+---
+
+# Significance
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+p_val = pchisq(chisq_rs, df = 2, lower.tail = FALSE)
+
+p_val
+
+```
+
+---
+
+# I lied. This is not the easiest way!
+
+You can actually do this in one line.
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = TRUE}
+
+not_a_lie = chisq.test(votes); not_a_lie
+
+```
+
+---
+
+## That's it. Take a break before our real R session!

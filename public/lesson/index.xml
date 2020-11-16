@@ -58,7 +58,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-testing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough: Testing&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/hypotheses/hypotheses/&#34;&gt;walkthrough&lt;/a&gt; about &lt;em&gt;t&lt;/em&gt;-tests.&lt;/p&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/hypotheses/&#34;&gt;walkthrough&lt;/a&gt; about &lt;em&gt;t&lt;/em&gt;-tests.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -273,7 +273,7 @@ For example&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;one-sample-t-test&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;One-sample &lt;em&gt;t&lt;/em&gt;-test&lt;/h3&gt;
-&lt;p&gt;The one-sample &lt;em&gt;t&lt;/em&gt;-test compares a sample’s mean with a known value, when the variance of the population is unknown. Consider we want to assess the percent of college educated adults in the midwest and compare it to a certain value. For example, let’s assume the nation-wide average of college educated adults is approximately &lt;a href=&#34;%22https://www.census.gov/data/tables/2018/demo/education-attainment/cps-detailed-tables.html%22&#34;&gt;37% (Bachelor’s degree or higher)&lt;/a&gt; and we want to see if the midwest mean is significantly different than the national average; in particular we want to test if the midwest average is less than the national average.&lt;/p&gt;
+&lt;p&gt;The one-sample &lt;em&gt;t&lt;/em&gt;-test compares a sample’s mean with a known value, when the variance of the population is unknown. Consider we want to assess the percent of college educated adults in the midwest and compare it to a certain value. For example, let’s assume the nation-wide average of college educated adults is approximately &lt;a href=&#34;%22https://www.census.gov/data/tables/2018/demo/education-attainment/cps-detailed-tables.html%22&#34; target=&#34;_blank&#34;&gt;37% (Bachelor’s degree or higher)&lt;/a&gt; and we want to see if the midwest mean is significantly different than the national average; in particular we want to test if the midwest average is less than the national average.&lt;/p&gt;
 &lt;p&gt;Let’s first take a look at how the data looks (important!) and some descriptive statistics:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(midwest$percollege, 10)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 19.63139 11.24331 17.03382 17.27895 14.47600 18.90462 11.91739 16.19712
@@ -475,6 +475,540 @@ t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
 ## mean of the differences 
 ##                    0.04&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bivariate Tables</title>
+      <link>/lesson/11-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/11-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-notes&#34;&gt;In Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#textbook-class-notes&#34;&gt;Textbook Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough-comparing-groups&#34;&gt;R Walkthrough: Comparing Groups&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;In Class Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download the class slides: Remember to click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2011/Slides-Week-10.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 11/Slides-Week-10.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-10.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;textbook-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2011/SSDS_Ch9.pdf&#34; target=&#34;_blank&#34;&gt;Ch 9 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week11/SSDS_Ch9.pdf&#34; target=&#34;_blank&#34;&gt;Ch 9 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough-comparing-groups&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough: Comparing Groups&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/comparinggroups/&#34;&gt;walkthrough&lt;/a&gt; about comparing groups.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Chi-Square Test and Measures of Association</title>
+      <link>/lesson/12-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/12-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-notes&#34;&gt;In Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#textbook-class-notes&#34;&gt;Textbook Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough-chi-square&#34;&gt;R Walkthrough: Chi Square&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;In Class Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download the class slides: Remember to click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2011/Slides-Week-11.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 12/Slides-Week-12.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2012/Slides-Week-12.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;textbook-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2012/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week12/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough-chi-square&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough: Chi Square&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/chisquare/&#34;&gt;walkthrough&lt;/a&gt; about the &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt; statistic.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Week 12: Tidying Up the Chi Square Statistics</title>
+      <link>/lesson/chisquare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/chisquare/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose&#34;&gt;Purpose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packages&#34;&gt;Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#its-all-about-the-assumptions&#34;&gt;It’s All About the Assumptions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example&#34;&gt;Example&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#the-general-social-survey-gss&#34;&gt;The General Social Survey (GSS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-some-of-the-gss-data-set&#34;&gt;Getting (Some of) the GSS Data Set:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#purpose-1&#34;&gt;Purpose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-wrangling&#34;&gt;Data Wrangling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#setting-up&#34;&gt;Setting Up&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#hypothesis&#34;&gt;Hypothesis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assumptions&#34;&gt;Assumptions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analysis&#34;&gt;Analysis&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#analytically&#34;&gt;Analytically&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#programatically&#34;&gt;Programatically&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#interpretation-and-conclusion&#34;&gt;Interpretation and Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#your-turn&#34;&gt;Your turn!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Purpose&lt;/h2&gt;
+&lt;p&gt;While we can certainly perform statistical analysis in Base R, it is far more dynamic when we use the &lt;code&gt;tidyverse&lt;/code&gt; package. In this walk through, we’ll explore chi-square statistics using the &lt;code&gt;infer&lt;/code&gt; package which conducts statistical inference and plays well with &lt;code&gt;tidyverse&lt;/code&gt; design framework.&lt;/p&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Objectives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;introduce the &lt;code&gt;infer&lt;/code&gt; and &lt;code&gt;patchwork&lt;/code&gt; packages&lt;/li&gt;
+&lt;li&gt;apply the Chi square statistic&lt;/li&gt;
+&lt;li&gt;provide some familiarity with the General Social Survey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Packages&lt;/h3&gt;
+&lt;p&gt;Please load up the following packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter()     masks stats::filter()
+## x dplyr::group_rows() masks kableExtra::group_rows()
+## x dplyr::lag()        masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(infer)
+library(patchwork)
+library(viridis)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Remember to download them if you receive an error:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;infer&amp;quot;)
+install.packages(&amp;quot;patchwork&amp;quot;)
+install.packages(&amp;quot;viridis&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;its-all-about-the-assumptions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;It’s All About the Assumptions&lt;/h2&gt;
+&lt;p&gt;Before we can move forward in the exploration of the &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt; statistic, we must first make sure that any data that we use adheres to the following checklist, which are formally known as , or just .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;: The variables are categorical and can be categorized in to one of the three standard types:
+&lt;ul&gt;
+&lt;li&gt;Dichotomous: Two (2) groups (e.g. Male and Female).&lt;/li&gt;
+&lt;li&gt;Nominal: Three (3) or more categorical groups (e.g. undergraduate, graduate student, postdoctoral scholar, professor).&lt;/li&gt;
+&lt;li&gt;Ordinal: ordered groups (e.g. Pain Level 1, Pain Level 2, Pain Level 3, …).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;: Observations are independent of one another (e.g. no relationship between any of the cases).&lt;/li&gt;
+&lt;li&gt;: Categorical variable groupings must be mutually exclusive (e.g. a participant cannot be both a Democrat and Republican).&lt;/li&gt;
+&lt;li&gt;: There must be at minimum five (5) expected frequencies in each group of your categorical variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NOTE: If you do not meet ALL of the assumptions for any statistical test, this violation changes the conclusion of the research and interpretation of the results of any analysis which is be misleading or complete nonsense, or analytical garbage. So please please please make sure you account for all assumptions! Generally, most tests that are used the same four assumptions about the data set being analyzed (see ). The four may not be the only ones, but they are typically observed in many commonly used approaches.&lt;/p&gt;
+&lt;center&gt;
+
+&lt;/center&gt;
+&lt;p&gt;OK you have that in mind? Now let’s go exploring!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;div id=&#34;the-general-social-survey-gss&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The General Social Survey (GSS)&lt;/h3&gt;
+&lt;p&gt;Funded by the &lt;a href=&#34;https://www.nsf.gov/pubs/2008/nsf08506/nsf08506.htm&#34; target=&#34;_blank&#34;&gt;National Science Foundation (NSF)&lt;/a&gt;, the General Social Survey (GSS) is a social science oriented opinion based survey that has been regularly administered since 1972 by the &lt;a href=&#34;https://www.norc.org&#34; target=&#34;_blank&#34;&gt;National Opinion Research Center (NORC)&lt;/a&gt; at the University of Chicago.&lt;/p&gt;
+&lt;p&gt;The GSS provides two pieces of key information about the American society at a given point in time:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It gathers data on our contemporary society to assess and describe trends and constants in key areas related to people’s attitudes, behaviors, and attributes.&lt;/li&gt;
+&lt;li&gt;It contains a core of demographic, behavioral, attitudinal questions, and those deemed important at the time. Topics that describe the latter include civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events.
+&lt;a href=&#34;https://gss.norc.org/About-The-GSS&#34; target=&#34;_blank&#34;&gt;(NORC at the University of Chicago, 2016)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The de-identified variant, or the public data set is free to use by anyone. As far as “big data” that is also longitudinal, the GSS is a fantastic source of information about how the views of those in the United States has or has not shifted since 1972.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-some-of-the-gss-data-set&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting (Some of) the GSS Data Set:&lt;/h3&gt;
+&lt;p&gt;We are only using a select portion of the GSS because the data set is humongous! &lt;code&gt;R&lt;/code&gt; is really good at getting analyses performed in a logical and comprehensive way but what it has in processing power, it lacks in handling “big data” sets. For the processing of very large data sets, you really need a software like &lt;code&gt;Python&lt;/code&gt;. With that said, &lt;code&gt;R&lt;/code&gt; can still handle a lot. It is rare to come across a data set that &lt;code&gt;R&lt;/code&gt; cannot handle well, but the entire GSS is one of the few. Of course other criteria such as a computer’s memory, disk space, internet speed, etc. also limit &lt;code&gt;R&lt;/code&gt; or any other software package from loading and analyzing any data set.&lt;/p&gt;
+&lt;p&gt;Rather than having you load an external file into R Studio, we’ll do it via the web. Run the following command that uses the &lt;code&gt;read_csv()&lt;/code&gt; command to grab and load external data sets from an external website. In this case it is a site called &lt;a href=&#34;%22https://github.com/%22&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;, namely from a repository from my public site (which doesn’t actually have much of anything publicly available).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_nasa &amp;lt;- &amp;quot;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/gss_nasa.csv&amp;quot; %&amp;gt;%
+  read_csv()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   .default = col_character(),
+##   id = col_double(),
+##   year = col_double(),
+##   age = col_double(),
+##   consci = col_double(),
+##   oversamp = col_double()
+## )
+## ℹ Use `spec()` for the full column specifications.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;purpose-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Purpose&lt;/h3&gt;
+&lt;p&gt;In this walk through, we’ll be assessing if funding for space exploration is a partisan oriented issue. Many data sets include more information than you need to answer your questions, some of which have nothing to do with your goals. Let’s see what this data set has:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(gss_nasa)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;id&amp;quot;       &amp;quot;year&amp;quot;     &amp;quot;age&amp;quot;      &amp;quot;class&amp;quot;    &amp;quot;degree&amp;quot;   &amp;quot;sex&amp;quot;     
+##  [7] &amp;quot;marital&amp;quot;  &amp;quot;race&amp;quot;     &amp;quot;region&amp;quot;   &amp;quot;partyid&amp;quot;  &amp;quot;happy&amp;quot;    &amp;quot;relig&amp;quot;   
+## [13] &amp;quot;cappun&amp;quot;   &amp;quot;finalter&amp;quot; &amp;quot;natspac&amp;quot;  &amp;quot;natarms&amp;quot;  &amp;quot;conclerg&amp;quot; &amp;quot;confed&amp;quot;  
+## [19] &amp;quot;conpress&amp;quot; &amp;quot;conjudge&amp;quot; &amp;quot;consci&amp;quot;   &amp;quot;conlegis&amp;quot; &amp;quot;zodiac&amp;quot;   &amp;quot;oversamp&amp;quot;
+## [25] &amp;quot;postlife&amp;quot; &amp;quot;party&amp;quot;    &amp;quot;space&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Wrangling&lt;/h3&gt;
+&lt;p&gt;You should never assess a data set without a codebook. The one for the GSS is pretty large and can be found &lt;a href=&#34;%22https://gss.norc.org/documents/codebook/gss_codebook.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;, but for the purposes of this walk through, we’ll be looking at the fields &lt;code&gt;party&lt;/code&gt; and &lt;code&gt;space&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_select &amp;lt;- gss_nasa %&amp;gt;%
+  select(party, space)
+
+gss_select %&amp;gt;%
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 2
+##   party space      
+##   &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;      
+## 1 Ind   TOO LITTLE 
+## 2 Ind   ABOUT RIGHT
+## 3 Dem   ABOUT RIGHT
+## 4 Ind   TOO LITTLE 
+## 5 Ind   TOO MUCH   
+## 6 Ind   TOO LITTLE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;OK great but what about the choices? How would we know what factors make up each vector? Well we can do this using the command &lt;code&gt;unique()&lt;/code&gt; by&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_select %&amp;gt;%
+  select(party) %&amp;gt;%
+  unique()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 1
+##   party
+##   &amp;lt;chr&amp;gt;
+## 1 Ind  
+## 2 Dem  
+## 3 Rep&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_select %&amp;gt;%
+  select(space) %&amp;gt;%
+  unique()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 1
+##   space      
+##   &amp;lt;chr&amp;gt;      
+## 1 TOO LITTLE 
+## 2 ABOUT RIGHT
+## 3 TOO MUCH&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see that people identified themselves as either Democrat (&lt;code&gt;Dem&lt;/code&gt;), Independent (&lt;code&gt;Ind&lt;/code&gt;), or Republican (&lt;code&gt;Rep&lt;/code&gt;) and they could decide if the funding for space exploration was &lt;code&gt;TOO LITTLE&lt;/code&gt;, &lt;code&gt;ABOUT RIGHT&lt;/code&gt;, or &lt;code&gt;TOO MUCH&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now is probably a good time to visualize the data so that we can simply get an idea of any disparity between the views of those within each political organization, if it exists.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_select %&amp;gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:figurename1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/lesson/chiSquare_files/figure-html/figurename1-1.png&#34; alt=&#34;Bar plot by frequencies.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Bar plot by frequencies.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Well that is nice but the legend is out of order. Let’s fix that!&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Let’s first get information about the format of each vector.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(gss_select)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## tibble [149 × 2] (S3: tbl_df/tbl/data.frame)
+##  $ party: chr [1:149] &amp;quot;Ind&amp;quot; &amp;quot;Ind&amp;quot; &amp;quot;Dem&amp;quot; &amp;quot;Ind&amp;quot; ...
+##  $ space: chr [1:149] &amp;quot;TOO LITTLE&amp;quot; &amp;quot;ABOUT RIGHT&amp;quot; &amp;quot;ABOUT RIGHT&amp;quot; &amp;quot;TOO LITTLE&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well it looks like we have two character vectors. We can’t do much with the order of those types of variables. This is where the variable type &lt;strong&gt;factor&lt;/strong&gt; comes in handy. So what are they? It is how we store truly categorical information in R. In general, the levels are friendly human-readable character strings, like “male/female/transgender/other”, “control/treatment”, etc. The values a factor can take on are called the &lt;strong&gt;levels&lt;/strong&gt;. For example, in the Gapminder data set, the levels of the factor &lt;code&gt;continent&lt;/code&gt; were &lt;code&gt;Africa&lt;/code&gt;, &lt;code&gt;Americas&lt;/code&gt;, &lt;code&gt;Asia&lt;/code&gt;, &lt;code&gt;Europe&lt;/code&gt;, and &lt;code&gt;Oceania&lt;/code&gt;. To verify, simply load the &lt;code&gt;gapminder&lt;/code&gt; package and run the command &lt;code&gt;levels()&lt;/code&gt; on the &lt;code&gt;continent&lt;/code&gt; vector.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(gapminder)
+
+levels(gapminder$continent)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Africa&amp;quot;   &amp;quot;Americas&amp;quot; &amp;quot;Asia&amp;quot;     &amp;quot;Europe&amp;quot;   &amp;quot;Oceania&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Converts any vector we want to reorder into factors:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_factors &amp;lt;- gss_select %&amp;gt;%
+  mutate(party = as.factor(party)) %&amp;gt;%
+  mutate(space = as.factor(space))&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Check the current factor orders.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_factors %&amp;gt;%
+  pull(party) %&amp;gt;% 
+  levels()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Dem&amp;quot; &amp;quot;Ind&amp;quot; &amp;quot;Rep&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_factors %&amp;gt;%
+  pull(space) %&amp;gt;% 
+  levels()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;ABOUT RIGHT&amp;quot; &amp;quot;TOO LITTLE&amp;quot;  &amp;quot;TOO MUCH&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note in the above two commands that the &lt;code&gt;pull()&lt;/code&gt; command is used because &lt;code&gt;levels()&lt;/code&gt; expects a vector. Using &lt;code&gt;select()&lt;/code&gt; would have kept the &lt;code&gt;space&lt;/code&gt; column as a data frame. An alternative approach would be to use Base R&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;levels(gss_factors$party)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Dem&amp;quot; &amp;quot;Ind&amp;quot; &amp;quot;Rep&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;levels(gss_factors$space)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;ABOUT RIGHT&amp;quot; &amp;quot;TOO LITTLE&amp;quot;  &amp;quot;TOO MUCH&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You may have noticed by now that the default factor order is in its natural positioning, which in this case is in alphabetical order. While this appears fine for some items, its probably better to report items in the order they normally are. In the case of party affiliation, we should have Democrats (&lt;code&gt;Dem&lt;/code&gt;), Republicans (&lt;code&gt;Rep&lt;/code&gt;), and then Independents(&lt;code&gt;Ind&lt;/code&gt;) and their possible choices of &lt;code&gt;TOO MUCH&lt;/code&gt;,&lt;code&gt;ABOUT RIGHT&lt;/code&gt;, and &lt;code&gt;TOO LITTLE&lt;/code&gt;. Of course how you order factors is absolutely dependent on each situation. Sometimes its for reporting but other times its simply for aesthetic reasons.&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Reorder the factor levels&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels &amp;lt;- gss_factors %&amp;gt;%
+  mutate(party = factor(party, levels = c(&amp;quot;Dem&amp;quot;, &amp;quot;Rep&amp;quot;, &amp;quot;Ind&amp;quot;))) %&amp;gt;%
+  mutate(space = factor(space, levels = c(&amp;quot;TOO MUCH&amp;quot;, &amp;quot;ABOUT RIGHT&amp;quot;, &amp;quot;TOO LITTLE&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We use &lt;code&gt;factor()&lt;/code&gt; on the columns &lt;code&gt;party&lt;/code&gt; and &lt;code&gt;space&lt;/code&gt; and then define the order we want by setting &lt;code&gt;levels =&lt;/code&gt;. Let’s check them:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;%
+  pull(space) %&amp;gt;%
+  levels()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;TOO MUCH&amp;quot;    &amp;quot;ABOUT RIGHT&amp;quot; &amp;quot;TOO LITTLE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;%
+  pull(party) %&amp;gt;%
+  levels()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Dem&amp;quot; &amp;quot;Rep&amp;quot; &amp;quot;Ind&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That looks right!&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Plot with the new factor levels&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:figurename2&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/lesson/chiSquare_files/figure-html/figurename2-1.png&#34; alt=&#34;Ordered bar plot by frequencies.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Ordered bar plot by frequencies.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;OK now it plots in the correctly in the order we want. However, the problem now lies in the fact that its hard to compare the three bar plots since they aren’t on equal footing. This is the problem with frequency data, in that it can be misleading when we’re looking for trends between categorical variables within groups. To counteract this, let’s normalize them by looking at each chunk of each bar as a percent using the command &lt;code&gt;position = fill&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar(position = &amp;quot;fill&amp;quot;) +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal() + 
+  ylab(&amp;quot;within group percentage&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:figurename3&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/lesson/chiSquare_files/figure-html/figurename3-1.png&#34; alt=&#34;Ordered bar plot by percent total.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Ordered bar plot by percent total.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That is so much nicer! However, it doesn’t really look like there is much of a difference in how Democrats, Republicans, and Independents support space exploration/ Remember that the bar plot represents descriptive statistics but to infer any differences, we must use the aptly named inferential statistics.&lt;/p&gt;
+&lt;p&gt;Let’s drill down into this with some hypothesis testing, comparing Base R and the &lt;code&gt;infer&lt;/code&gt; package. What we essentially have is a contingency table of party affiliation and attitude towards space exploration, and we want to see if there’s a relationship between these variables. The Chi Squared Test of independence is used to determine if a significant relationship exists between two categorical variables, so we will use this test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;setting-up&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Setting Up&lt;/h2&gt;
+&lt;div id=&#34;hypothesis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hypothesis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Null hypothesis: There is no relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).&lt;/li&gt;
+&lt;li&gt;Alternative hypothesis: There is a relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OK first, do we meet the assumptions?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assumptions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assumptions&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Clearly both &lt;code&gt;party&lt;/code&gt; and &lt;code&gt;space&lt;/code&gt; are categorical.&lt;/li&gt;
+&lt;li&gt;Observations are clearly independent in that &lt;code&gt;party&lt;/code&gt; and &lt;code&gt;space&lt;/code&gt; are measure two very different concepts.&lt;/li&gt;
+&lt;li&gt;Respondents had to choose between being Democrats, Republicans, or Independents and their corresponding viewpoints were delineated between too little, about right, or too much. These are mutually exclusive “events” or values.&lt;/li&gt;
+&lt;li&gt;We have more than five cases for each. In fact, we have&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;%
+   count()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
+##       n
+##   &amp;lt;int&amp;gt;
+## 1   149&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or if you want to get counts of each value, run&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;%
+  summary()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  party            space   
+##  Dem:43   TOO MUCH   :43  
+##  Rep:34   ABOUT RIGHT:76  
+##  Ind:72   TOO LITTLE :30&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In any case, we more than meet the minimum threshold.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Analysis&lt;/h2&gt;
+&lt;p&gt;There are two main ways to solve this problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Analytically&lt;/li&gt;
+&lt;li&gt;Programatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;analytically&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Analytically&lt;/h3&gt;
+&lt;p&gt;We assume the expected values follow a Chi-squared distribution, with a probability density function that depends on the degrees of freedom. Looking at the plot below, observe how the distribution varies with the degrees of freedom (&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;) on the &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;-axis is the Chi-squared statistic, which we can calculate in R.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename4&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/lesson/chiSquare_files/figure-html/figurename4-1.png&#34; alt=&#34;Chi-squre distribution constructed in R (code availible upon request).&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: Chi-squre distribution constructed in R (code availible upon request).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We could then see where it falls in the distribution, and observe the probability of arriving at that combination of variables, or a more extreme example. As our Chi-squared test statistic increases, we move further along the &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;-axis to the right. There is less area under the curve to the right, and our &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value (the area under the curve to the right of the observed statistic) decreases.&lt;/p&gt;
+&lt;p&gt;Generally speaking, a larger Chi-squared statistic suggests stronger evidence for rejecting our null hypothesis. If we observe a &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value &lt;span class=&#34;math inline&#34;&gt;\(\leq 0.05\)&lt;/span&gt;, we would reject our null hypothesis.&lt;/p&gt;
+&lt;p&gt;What would it mean to accept our alternative hypothesis?&lt;/p&gt;
+&lt;p&gt;In the case of our example, if we we lived in a completely random universe, less than 5% of the time we would arrive at the particular combination of &lt;code&gt;party&lt;/code&gt; and attitude towards &lt;code&gt;space&lt;/code&gt; exploration we observe in our data. In other words, the relationship between party and attitude towards space exploration we see in our data is .&lt;/p&gt;
+&lt;p&gt;But we don’t live in a completely random universe - think about getting randomly married to someone else - so the real question still remains:  Well we can use Base R’s Chi-squared test to find out:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;chisq.test(gss_newlevels$party, gss_newlevels$space)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Pearson&amp;#39;s Chi-squared test
+## 
+## data:  gss_newlevels$party and gss_newlevels$space
+## X-squared = 1.3261, df = 4, p-value = 0.8569&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s save this observed Chi statistic for later use.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;observed_stat &amp;lt;- chisq.test(gss_newlevels$party, gss_newlevels$space)$stat&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We might be tempted to look at this and say, there’s a high &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value. No significant relationship exists. So we’re done! This is what we expected looking at the bar plots earlier! Well not so fast? Let’s look at it programatically.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;programatically&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Programatically&lt;/h3&gt;
+&lt;p&gt;Another way to test if there is a significant relationship in our data is to take a programmatic approach. Basically the idea here is if we live in world where variables are totally unrelated, they might as well have been randomly put together. Basically in the real world, yes of course things (variables) are related! Someone’s party affiliation is predicated on their history and maturation and that then most likely informs their views on funding, especially for an area of the sciences like space exploration. So does the data we have look more like random or normal world?&lt;/p&gt;
+&lt;p&gt;Let’s explore this by taking one of the columns of our data frame and scrambling it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;%
+  mutate(random_1 = sample(space),
+         random_2 = sample(space))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 4
+##    party space       random_1    random_2   
+##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
+##  1 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  2 Ind   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
+##  3 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  4 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+##  5 Ind   TOO MUCH    TOO MUCH    ABOUT RIGHT
+##  6 Ind   TOO LITTLE  TOO MUCH    TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  8 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
+##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+## 10 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;graphics/infer.png&#34; alt=&#34;Inferential testing laid out in the infer package.&#34; width=&#34;80%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: Inferential testing laid out in the infer package.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-definitions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Some definitions&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;specify()&lt;/code&gt; is like &lt;code&gt;dplyr::select()&lt;/code&gt;: choose the variables from your data frame to test&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hypothesize()&lt;/code&gt; is where we select the null hypothesis&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;generate()&lt;/code&gt; creates randomized values form a predefined set of values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;calculate()&lt;/code&gt; lets you choose what test statistic to calculate&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;visualize()&lt;/code&gt; automatically plots permuted with ggplot, making it easy to edit as needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;benefits&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Benefits&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;inputs and outputs are both data frames&lt;/li&gt;
+&lt;li&gt;composing tests with pipes&lt;/li&gt;
+&lt;li&gt;reading an inferential chain describes an inferential procedure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;% 
+  specify(space ~ party)  %&amp;gt;% 
+  hypothesize(null = &amp;quot;independence&amp;quot;) %&amp;gt;% 
+  generate(reps = 1000, type = &amp;quot;permute&amp;quot;) %&amp;gt;% 
+  calculate(stat = &amp;quot;Chisq&amp;quot;) %&amp;gt;% 
+  visualize() +
+  geom_vline(aes(xintercept = observed_stat), color = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:figurename6&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/lesson/chiSquare_files/figure-html/figurename6-1.png&#34; alt=&#34;Visualization of the gss_newlevels data set using infer.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: Visualization of the gss_newlevels data set using infer.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If we wanted to get a &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value from this programmatic approach, we can calculate the area under the curve to the right of the observed statistic:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gss_newlevels %&amp;gt;% 
+  specify(space ~ party)  %&amp;gt;% 
+  hypothesize(null = &amp;quot;independence&amp;quot;) %&amp;gt;% 
+  generate(reps = 1000, type = &amp;quot;permute&amp;quot;) %&amp;gt;% 
+  calculate(stat = &amp;quot;Chisq&amp;quot;) %&amp;gt;% 
+  summarise(p_val = mean(stat &amp;gt; observed_stat))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
+##   p_val
+##   &amp;lt;dbl&amp;gt;
+## 1 0.867&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Interpretation and Conclusion&lt;/h3&gt;
+&lt;p&gt;So when we compare the &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value of this simulated data set with that of our real-world one, it sure looks like they are nearly identical. So It looks like a significant relationship does not exist so there isn’t a measurable difference between one’s party affiliation and their attitude towards space exploration funding.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;your-turn&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Your turn!&lt;/h2&gt;
+&lt;p&gt;You may do this independently or in groups of two.&lt;/p&gt;
+&lt;p&gt;Download both of the following items:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;code&gt;GSS Extract Data Set.csv&lt;/code&gt; data set and&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GSS Extract Codebook.csv&lt;/code&gt; code book&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;from my Github site using the following site addresses&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Data%20Set.csv&#34; class=&#34;uri&#34;&gt;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Data%20Set.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Codebook.csv&#34; class=&#34;uri&#34;&gt;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Codebook.csv&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You are tasked to find if there is a relationship between a respondent and their views on science. This is exploratory, so it is incumbent on you to&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;define the input and output variables.&lt;/li&gt;
+&lt;li&gt;make a clear justification of why both are reasonable measures in the real world.&lt;/li&gt;
+&lt;li&gt;create a null and alternative hypothesis&lt;/li&gt;
+&lt;li&gt;perform a chi-squared test&lt;/li&gt;
+&lt;li&gt;interpret the results&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is how real world data explorations work! There is no expectation that you will find anything at all or that you are expected to discover some grand connection. The points of this exploration are: Can you&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;identify important variables in a real-world data set?&lt;/li&gt;
+&lt;li&gt;formulate a question about them off based of a vague request?&lt;/li&gt;
+&lt;li&gt;analyze the data in an appropriate manner?&lt;/li&gt;
+&lt;li&gt;draw conclusions and report them?&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

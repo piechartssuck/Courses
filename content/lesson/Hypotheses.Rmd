@@ -153,7 +153,7 @@ head(midwest)
 
 ### One-sample *t*-test
 
-The one-sample *t*-test compares a sample’s mean with a known value, when the variance of the population is unknown. Consider we want to assess the percent of college educated adults in the midwest and compare it to a certain value. For example, let’s assume the nation-wide average of college educated adults is approximately [37% (Bachelor’s degree or higher)]("https://www.census.gov/data/tables/2018/demo/education-attainment/cps-detailed-tables.html") and we want to see if the midwest mean is significantly different than the national average; in particular we want to test if the midwest average is less than the national average.
+The one-sample *t*-test compares a sample’s mean with a known value, when the variance of the population is unknown. Consider we want to assess the percent of college educated adults in the midwest and compare it to a certain value. For example, let’s assume the nation-wide average of college educated adults is approximately [37% (Bachelor’s degree or higher)]("https://www.census.gov/data/tables/2018/demo/education-attainment/cps-detailed-tables.html"){target="_blank"} and we want to see if the midwest mean is significantly different than the national average; in particular we want to test if the midwest average is less than the national average.
 
 Let's first take a look at how the data looks (important!) and some descriptive statistics:
 

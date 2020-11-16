@@ -1,0 +1,110 @@
+---
+title: "Comparing Groups"
+linktitle: "Week 11: Bivariate Tables"
+author: "Week 11"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(patchwork)
+library(compareGroups)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#fcbb86",
+  text_bold_color = "#fc868c",
+   code_inline_color = "#86c7fc",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+# Packages needed and a Note about Icons
+
+Please load up the following packages. Remember to first install the ones you don't have.
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+library(compareGroups)
+``` 
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+suppressMessages(library(tidyverse))
+suppressMessages(library(compareGroups))
+``` 
+<br>
+<br>
+You may come across the following icons. The table below lists what each means.
+```{r eval = TRUE, echo = FALSE, purl=FALSE}
+forward <- as.character(fontawesome::fa("forward", fill = "
+#4682b4"))
+
+stop <- as.character(fontawesome::fa("stop", fill = "#ff6347"))
+
+link <- as.character(fontawesome::fa("link", fill = "#5cb85c"))
+
+bookmark <- as.character(fontawesome::fa("bookmark", fill = "#5cb85c"))
+
+
+icon_desc <- tibble(
+  
+  Icon = c(forward,
+           stop, 
+           link,
+           bookmark),
+  
+  Description = c("Indicates that an example continues on the following slide.",
+                  "Indicates that a section using common syntax has ended.",
+                  "Indicates that there is an active hyperlink on the slide.",
+                  "Indicates that a section covering a concept has ended.")
+  
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+kable(icon_desc, 
+      escape = FALSE,
+      align = 'cl') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "40em") %>%
+  row_spec(0, background = "#181818") %>%
+  row_spec(1, background = "#181818") %>%
+  row_spec(2, background = "#181818") %>%
+  row_spec(3, background = "#181818") %>%
+  row_spec(4, background = "#181818") 
+```
+
+---
+
+# The `compareGroups` package
+
+- Originally designed to read, interpret, summarize, display and analyze epidemiological data. 
+
+--
+
+- Allows you to create everything from data summaries for quality control.
+
+---
+
+# Starting up
+
+Let's use one of the preloaded data sets: `PREDIMED`.
+
+>- longitudinal study containing several baseline characteristics of the participants as well as events occurred during the 7 years follow-up period given by variables `event` and `toevent`.
+
+>-Each individual has been assigned to a three intervention diet randomly given by the variable `group`.
+
+---
+
+
+## Thats it!

@@ -1,0 +1,443 @@
+---
+title: "Week 12: Tidying Up the Chi Square Statistics"
+subtitle: "EDP 613"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Walkthroughs
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#purpose">Purpose</a><ul>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#packages">Packages</a></li>
+</ul></li>
+<li><a href="#its-all-about-the-assumptions">It’s All About the Assumptions</a></li>
+<li><a href="#example">Example</a><ul>
+<li><a href="#the-general-social-survey-gss">The General Social Survey (GSS)</a></li>
+<li><a href="#getting-some-of-the-gss-data-set">Getting (Some of) the GSS Data Set:</a></li>
+<li><a href="#purpose-1">Purpose</a></li>
+<li><a href="#data-wrangling">Data Wrangling</a></li>
+</ul></li>
+<li><a href="#setting-up">Setting Up</a><ul>
+<li><a href="#hypothesis">Hypothesis</a></li>
+<li><a href="#assumptions">Assumptions</a></li>
+</ul></li>
+<li><a href="#analysis">Analysis</a><ul>
+<li><a href="#analytically">Analytically</a></li>
+<li><a href="#programatically">Programatically</a></li>
+<li><a href="#interpretation-and-conclusion">Interpretation and Conclusion</a></li>
+</ul></li>
+<li><a href="#your-turn">Your turn!</a></li>
+</ul>
+</div>
+
+<div id="purpose" class="section level2">
+<h2>Purpose</h2>
+<p>While we can certainly perform statistical analysis in Base R, it is far more dynamic when we use the <code>tidyverse</code> package. In this walk through, we’ll explore chi-square statistics using the <code>infer</code> package which conducts statistical inference and plays well with <code>tidyverse</code> design framework.</p>
+<div id="objectives" class="section level3">
+<h3>Objectives</h3>
+<ul>
+<li>introduce the <code>infer</code> and <code>patchwork</code> packages</li>
+<li>apply the Chi square statistic</li>
+<li>provide some familiarity with the General Social Survey</li>
+</ul>
+</div>
+<div id="packages" class="section level3">
+<h3>Packages</h3>
+<p>Please load up the following packages</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter()     masks stats::filter()
+## x dplyr::group_rows() masks kableExtra::group_rows()
+## x dplyr::lag()        masks stats::lag()</code></pre>
+<pre class="r"><code>library(infer)
+library(patchwork)
+library(viridis)</code></pre>
+<p>Remember to download them if you receive an error:</p>
+<pre class="r"><code>install.packages(&quot;infer&quot;)
+install.packages(&quot;patchwork&quot;)
+install.packages(&quot;viridis&quot;)</code></pre>
+</div>
+</div>
+<div id="its-all-about-the-assumptions" class="section level2">
+<h2>It’s All About the Assumptions</h2>
+<p>Before we can move forward in the exploration of the <span class="math inline">\(\chi^2\)</span> statistic, we must first make sure that any data that we use adheres to the following checklist, which are formally known as , or just .</p>
+<ul>
+<li>: The variables are categorical and can be categorized in to one of the three standard types:
+<ul>
+<li>Dichotomous: Two (2) groups (e.g. Male and Female).</li>
+<li>Nominal: Three (3) or more categorical groups (e.g. undergraduate, graduate student, postdoctoral scholar, professor).</li>
+<li>Ordinal: ordered groups (e.g. Pain Level 1, Pain Level 2, Pain Level 3, …).</li>
+</ul></li>
+<li>: Observations are independent of one another (e.g. no relationship between any of the cases).</li>
+<li>: Categorical variable groupings must be mutually exclusive (e.g. a participant cannot be both a Democrat and Republican).</li>
+<li>: There must be at minimum five (5) expected frequencies in each group of your categorical variable.</li>
+</ul>
+<p>NOTE: If you do not meet ALL of the assumptions for any statistical test, this violation changes the conclusion of the research and interpretation of the results of any analysis which is be misleading or complete nonsense, or analytical garbage. So please please please make sure you account for all assumptions! Generally, most tests that are used the same four assumptions about the data set being analyzed (see ). The four may not be the only ones, but they are typically observed in many commonly used approaches.</p>
+<center>
+
+</center>
+<p>OK you have that in mind? Now let’s go exploring!</p>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<div id="the-general-social-survey-gss" class="section level3">
+<h3>The General Social Survey (GSS)</h3>
+<p>Funded by the <a href="https://www.nsf.gov/pubs/2008/nsf08506/nsf08506.htm" target="_blank">National Science Foundation (NSF)</a>, the General Social Survey (GSS) is a social science oriented opinion based survey that has been regularly administered since 1972 by the <a href="https://www.norc.org" target="_blank">National Opinion Research Center (NORC)</a> at the University of Chicago.</p>
+<p>The GSS provides two pieces of key information about the American society at a given point in time:</p>
+<ul>
+<li>It gathers data on our contemporary society to assess and describe trends and constants in key areas related to people’s attitudes, behaviors, and attributes.</li>
+<li>It contains a core of demographic, behavioral, attitudinal questions, and those deemed important at the time. Topics that describe the latter include civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events.
+<a href="https://gss.norc.org/About-The-GSS" target="_blank">(NORC at the University of Chicago, 2016)</a></li>
+</ul>
+<p>The de-identified variant, or the public data set is free to use by anyone. As far as “big data” that is also longitudinal, the GSS is a fantastic source of information about how the views of those in the United States has or has not shifted since 1972.</p>
+</div>
+<div id="getting-some-of-the-gss-data-set" class="section level3">
+<h3>Getting (Some of) the GSS Data Set:</h3>
+<p>We are only using a select portion of the GSS because the data set is humongous! <code>R</code> is really good at getting analyses performed in a logical and comprehensive way but what it has in processing power, it lacks in handling “big data” sets. For the processing of very large data sets, you really need a software like <code>Python</code>. With that said, <code>R</code> can still handle a lot. It is rare to come across a data set that <code>R</code> cannot handle well, but the entire GSS is one of the few. Of course other criteria such as a computer’s memory, disk space, internet speed, etc. also limit <code>R</code> or any other software package from loading and analyzing any data set.</p>
+<p>Rather than having you load an external file into R Studio, we’ll do it via the web. Run the following command that uses the <code>read_csv()</code> command to grab and load external data sets from an external website. In this case it is a site called <a href="%22https://github.com/%22" target="_blank">Github</a>, namely from a repository from my public site (which doesn’t actually have much of anything publicly available).</p>
+<pre class="r"><code>gss_nasa &lt;- &quot;https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/gss_nasa.csv&quot; %&gt;%
+  read_csv()</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   .default = col_character(),
+##   id = col_double(),
+##   year = col_double(),
+##   age = col_double(),
+##   consci = col_double(),
+##   oversamp = col_double()
+## )
+## ℹ Use `spec()` for the full column specifications.</code></pre>
+</div>
+<div id="purpose-1" class="section level3">
+<h3>Purpose</h3>
+<p>In this walk through, we’ll be assessing if funding for space exploration is a partisan oriented issue. Many data sets include more information than you need to answer your questions, some of which have nothing to do with your goals. Let’s see what this data set has:</p>
+<pre class="r"><code>names(gss_nasa)</code></pre>
+<pre><code>##  [1] &quot;id&quot;       &quot;year&quot;     &quot;age&quot;      &quot;class&quot;    &quot;degree&quot;   &quot;sex&quot;     
+##  [7] &quot;marital&quot;  &quot;race&quot;     &quot;region&quot;   &quot;partyid&quot;  &quot;happy&quot;    &quot;relig&quot;   
+## [13] &quot;cappun&quot;   &quot;finalter&quot; &quot;natspac&quot;  &quot;natarms&quot;  &quot;conclerg&quot; &quot;confed&quot;  
+## [19] &quot;conpress&quot; &quot;conjudge&quot; &quot;consci&quot;   &quot;conlegis&quot; &quot;zodiac&quot;   &quot;oversamp&quot;
+## [25] &quot;postlife&quot; &quot;party&quot;    &quot;space&quot;</code></pre>
+</div>
+<div id="data-wrangling" class="section level3">
+<h3>Data Wrangling</h3>
+<p>You should never assess a data set without a codebook. The one for the GSS is pretty large and can be found <a href="%22https://gss.norc.org/documents/codebook/gss_codebook.pdf" target="_blank">here</a>, but for the purposes of this walk through, we’ll be looking at the fields <code>party</code> and <code>space</code>.</p>
+<pre class="r"><code>gss_select &lt;- gss_nasa %&gt;%
+  select(party, space)
+
+gss_select %&gt;%
+  head()</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##   party space      
+##   &lt;chr&gt; &lt;chr&gt;      
+## 1 Ind   TOO LITTLE 
+## 2 Ind   ABOUT RIGHT
+## 3 Dem   ABOUT RIGHT
+## 4 Ind   TOO LITTLE 
+## 5 Ind   TOO MUCH   
+## 6 Ind   TOO LITTLE</code></pre>
+<p>OK great but what about the choices? How would we know what factors make up each vector? Well we can do this using the command <code>unique()</code> by</p>
+<pre class="r"><code>gss_select %&gt;%
+  select(party) %&gt;%
+  unique()</code></pre>
+<pre><code>## # A tibble: 3 x 1
+##   party
+##   &lt;chr&gt;
+## 1 Ind  
+## 2 Dem  
+## 3 Rep</code></pre>
+<pre class="r"><code>gss_select %&gt;%
+  select(space) %&gt;%
+  unique()</code></pre>
+<pre><code>## # A tibble: 3 x 1
+##   space      
+##   &lt;chr&gt;      
+## 1 TOO LITTLE 
+## 2 ABOUT RIGHT
+## 3 TOO MUCH</code></pre>
+<p>We can see that people identified themselves as either Democrat (<code>Dem</code>), Independent (<code>Ind</code>), or Republican (<code>Rep</code>) and they could decide if the funding for space exploration was <code>TOO LITTLE</code>, <code>ABOUT RIGHT</code>, or <code>TOO MUCH</code>.</p>
+<p>Now is probably a good time to visualize the data so that we can simply get an idea of any disparity between the views of those within each political organization, if it exists.</p>
+<pre class="r"><code>gss_select %&gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()</code></pre>
+<div class="figure"><span id="fig:figurename1"></span>
+<img src="/lesson/chiSquare_files/figure-html/figurename1-1.png" alt="Bar plot by frequencies." width="672" />
+<p class="caption">
+Figure 1: Bar plot by frequencies.
+</p>
+</div>
+<p>Well that is nice but the legend is out of order. Let’s fix that!</p>
+<ol style="list-style-type: decimal">
+<li>Let’s first get information about the format of each vector.</li>
+</ol>
+<pre class="r"><code>str(gss_select)</code></pre>
+<pre><code>## tibble [149 × 2] (S3: tbl_df/tbl/data.frame)
+##  $ party: chr [1:149] &quot;Ind&quot; &quot;Ind&quot; &quot;Dem&quot; &quot;Ind&quot; ...
+##  $ space: chr [1:149] &quot;TOO LITTLE&quot; &quot;ABOUT RIGHT&quot; &quot;ABOUT RIGHT&quot; &quot;TOO LITTLE&quot; ...</code></pre>
+<p>Well it looks like we have two character vectors. We can’t do much with the order of those types of variables. This is where the variable type <strong>factor</strong> comes in handy. So what are they? It is how we store truly categorical information in R. In general, the levels are friendly human-readable character strings, like “male/female/transgender/other”, “control/treatment”, etc. The values a factor can take on are called the <strong>levels</strong>. For example, in the Gapminder data set, the levels of the factor <code>continent</code> were <code>Africa</code>, <code>Americas</code>, <code>Asia</code>, <code>Europe</code>, and <code>Oceania</code>. To verify, simply load the <code>gapminder</code> package and run the command <code>levels()</code> on the <code>continent</code> vector.</p>
+<pre class="r"><code>library(gapminder)
+
+levels(gapminder$continent)</code></pre>
+<pre><code>## [1] &quot;Africa&quot;   &quot;Americas&quot; &quot;Asia&quot;     &quot;Europe&quot;   &quot;Oceania&quot;</code></pre>
+
+<ol start="2" style="list-style-type: decimal">
+<li>Converts any vector we want to reorder into factors:</li>
+</ol>
+<pre class="r"><code>gss_factors &lt;- gss_select %&gt;%
+  mutate(party = as.factor(party)) %&gt;%
+  mutate(space = as.factor(space))</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Check the current factor orders.</li>
+</ol>
+<pre class="r"><code>gss_factors %&gt;%
+  pull(party) %&gt;% 
+  levels()</code></pre>
+<pre><code>## [1] &quot;Dem&quot; &quot;Ind&quot; &quot;Rep&quot;</code></pre>
+<pre class="r"><code>gss_factors %&gt;%
+  pull(space) %&gt;% 
+  levels()</code></pre>
+<pre><code>## [1] &quot;ABOUT RIGHT&quot; &quot;TOO LITTLE&quot;  &quot;TOO MUCH&quot;</code></pre>
+<p>Note in the above two commands that the <code>pull()</code> command is used because <code>levels()</code> expects a vector. Using <code>select()</code> would have kept the <code>space</code> column as a data frame. An alternative approach would be to use Base R</p>
+<pre class="r"><code>levels(gss_factors$party)</code></pre>
+<pre><code>## [1] &quot;Dem&quot; &quot;Ind&quot; &quot;Rep&quot;</code></pre>
+<pre class="r"><code>levels(gss_factors$space)</code></pre>
+<pre><code>## [1] &quot;ABOUT RIGHT&quot; &quot;TOO LITTLE&quot;  &quot;TOO MUCH&quot;</code></pre>
+<p>You may have noticed by now that the default factor order is in its natural positioning, which in this case is in alphabetical order. While this appears fine for some items, its probably better to report items in the order they normally are. In the case of party affiliation, we should have Democrats (<code>Dem</code>), Republicans (<code>Rep</code>), and then Independents(<code>Ind</code>) and their possible choices of <code>TOO MUCH</code>,<code>ABOUT RIGHT</code>, and <code>TOO LITTLE</code>. Of course how you order factors is absolutely dependent on each situation. Sometimes its for reporting but other times its simply for aesthetic reasons.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Reorder the factor levels</li>
+</ol>
+<pre class="r"><code>gss_newlevels &lt;- gss_factors %&gt;%
+  mutate(party = factor(party, levels = c(&quot;Dem&quot;, &quot;Rep&quot;, &quot;Ind&quot;))) %&gt;%
+  mutate(space = factor(space, levels = c(&quot;TOO MUCH&quot;, &quot;ABOUT RIGHT&quot;, &quot;TOO LITTLE&quot;)))</code></pre>
+<p>We use <code>factor()</code> on the columns <code>party</code> and <code>space</code> and then define the order we want by setting <code>levels =</code>. Let’s check them:</p>
+<pre class="r"><code>gss_newlevels %&gt;%
+  pull(space) %&gt;%
+  levels()</code></pre>
+<pre><code>## [1] &quot;TOO MUCH&quot;    &quot;ABOUT RIGHT&quot; &quot;TOO LITTLE&quot;</code></pre>
+<pre class="r"><code>gss_newlevels %&gt;%
+  pull(party) %&gt;%
+  levels()</code></pre>
+<pre><code>## [1] &quot;Dem&quot; &quot;Rep&quot; &quot;Ind&quot;</code></pre>
+<p>That looks right!</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Plot with the new factor levels</li>
+</ol>
+<pre class="r"><code>gss_newlevels %&gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()</code></pre>
+<div class="figure"><span id="fig:figurename2"></span>
+<img src="/lesson/chiSquare_files/figure-html/figurename2-1.png" alt="Ordered bar plot by frequencies." width="672" />
+<p class="caption">
+Figure 2: Ordered bar plot by frequencies.
+</p>
+</div>
+<p>OK now it plots in the correctly in the order we want. However, the problem now lies in the fact that its hard to compare the three bar plots since they aren’t on equal footing. This is the problem with frequency data, in that it can be misleading when we’re looking for trends between categorical variables within groups. To counteract this, let’s normalize them by looking at each chunk of each bar as a percent using the command <code>position = fill</code>.</p>
+<pre class="r"><code>gss_newlevels %&gt;% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar(position = &quot;fill&quot;) +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal() + 
+  ylab(&quot;within group percentage&quot;)</code></pre>
+<div class="figure"><span id="fig:figurename3"></span>
+<img src="/lesson/chiSquare_files/figure-html/figurename3-1.png" alt="Ordered bar plot by percent total." width="672" />
+<p class="caption">
+Figure 3: Ordered bar plot by percent total.
+</p>
+</div>
+<p>That is so much nicer! However, it doesn’t really look like there is much of a difference in how Democrats, Republicans, and Independents support space exploration/ Remember that the bar plot represents descriptive statistics but to infer any differences, we must use the aptly named inferential statistics.</p>
+<p>Let’s drill down into this with some hypothesis testing, comparing Base R and the <code>infer</code> package. What we essentially have is a contingency table of party affiliation and attitude towards space exploration, and we want to see if there’s a relationship between these variables. The Chi Squared Test of independence is used to determine if a significant relationship exists between two categorical variables, so we will use this test.</p>
+</div>
+</div>
+<div id="setting-up" class="section level2">
+<h2>Setting Up</h2>
+<div id="hypothesis" class="section level3">
+<h3>Hypothesis</h3>
+<ul>
+<li>Null hypothesis: There is no relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).</li>
+<li>Alternative hypothesis: There is a relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).</li>
+</ul>
+<p>OK first, do we meet the assumptions?</p>
+</div>
+<div id="assumptions" class="section level3">
+<h3>Assumptions</h3>
+<ol style="list-style-type: decimal">
+<li>Clearly both <code>party</code> and <code>space</code> are categorical.</li>
+<li>Observations are clearly independent in that <code>party</code> and <code>space</code> are measure two very different concepts.</li>
+<li>Respondents had to choose between being Democrats, Republicans, or Independents and their corresponding viewpoints were delineated between too little, about right, or too much. These are mutually exclusive “events” or values.</li>
+<li>We have more than five cases for each. In fact, we have</li>
+</ol>
+<pre class="r"><code>gss_newlevels %&gt;%
+   count()</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##       n
+##   &lt;int&gt;
+## 1   149</code></pre>
+<p>or if you want to get counts of each value, run</p>
+<pre class="r"><code>gss_newlevels %&gt;%
+  summary()</code></pre>
+<pre><code>##  party            space   
+##  Dem:43   TOO MUCH   :43  
+##  Rep:34   ABOUT RIGHT:76  
+##  Ind:72   TOO LITTLE :30</code></pre>
+<p>In any case, we more than meet the minimum threshold.</p>
+</div>
+</div>
+<div id="analysis" class="section level2">
+<h2>Analysis</h2>
+<p>There are two main ways to solve this problem:</p>
+<ul>
+<li>Analytically</li>
+<li>Programatically</li>
+</ul>
+<div id="analytically" class="section level3">
+<h3>Analytically</h3>
+<p>We assume the expected values follow a Chi-squared distribution, with a probability density function that depends on the degrees of freedom. Looking at the plot below, observe how the distribution varies with the degrees of freedom (<span class="math inline">\(k\)</span>) on the <span class="math inline">\(x\)</span>-axis is the Chi-squared statistic, which we can calculate in R.</p>
+<div class="figure" style="text-align: center"><span id="fig:figurename4"></span>
+<img src="/lesson/chiSquare_files/figure-html/figurename4-1.png" alt="Chi-squre distribution constructed in R (code availible upon request)." width="80%" />
+<p class="caption">
+Figure 4: Chi-squre distribution constructed in R (code availible upon request).
+</p>
+</div>
+<p>We could then see where it falls in the distribution, and observe the probability of arriving at that combination of variables, or a more extreme example. As our Chi-squared test statistic increases, we move further along the <span class="math inline">\(x\)</span>-axis to the right. There is less area under the curve to the right, and our <span class="math inline">\(p\)</span>-value (the area under the curve to the right of the observed statistic) decreases.</p>
+<p>Generally speaking, a larger Chi-squared statistic suggests stronger evidence for rejecting our null hypothesis. If we observe a <span class="math inline">\(p\)</span>-value <span class="math inline">\(\leq 0.05\)</span>, we would reject our null hypothesis.</p>
+<p>What would it mean to accept our alternative hypothesis?</p>
+<p>In the case of our example, if we we lived in a completely random universe, less than 5% of the time we would arrive at the particular combination of <code>party</code> and attitude towards <code>space</code> exploration we observe in our data. In other words, the relationship between party and attitude towards space exploration we see in our data is .</p>
+<p>But we don’t live in a completely random universe - think about getting randomly married to someone else - so the real question still remains:  Well we can use Base R’s Chi-squared test to find out:</p>
+<pre class="r"><code>chisq.test(gss_newlevels$party, gss_newlevels$space)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  gss_newlevels$party and gss_newlevels$space
+## X-squared = 1.3261, df = 4, p-value = 0.8569</code></pre>
+<p>Let’s save this observed Chi statistic for later use.</p>
+<pre class="r"><code>observed_stat &lt;- chisq.test(gss_newlevels$party, gss_newlevels$space)$stat</code></pre>
+<p>We might be tempted to look at this and say, there’s a high <span class="math inline">\(p\)</span>-value. No significant relationship exists. So we’re done! This is what we expected looking at the bar plots earlier! Well not so fast? Let’s look at it programatically.</p>
+</div>
+<div id="programatically" class="section level3">
+<h3>Programatically</h3>
+<p>Another way to test if there is a significant relationship in our data is to take a programmatic approach. Basically the idea here is if we live in world where variables are totally unrelated, they might as well have been randomly put together. Basically in the real world, yes of course things (variables) are related! Someone’s party affiliation is predicated on their history and maturation and that then most likely informs their views on funding, especially for an area of the sciences like space exploration. So does the data we have look more like random or normal world?</p>
+<p>Let’s explore this by taking one of the columns of our data frame and scrambling it.</p>
+<pre class="r"><code>gss_newlevels %&gt;%
+  mutate(random_1 = sample(space),
+         random_2 = sample(space))</code></pre>
+<pre><code>## # A tibble: 149 x 4
+##    party space       random_1    random_2   
+##    &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt;       &lt;fct&gt;      
+##  1 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  2 Ind   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
+##  3 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  4 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+##  5 Ind   TOO MUCH    TOO MUCH    ABOUT RIGHT
+##  6 Ind   TOO LITTLE  TOO MUCH    TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  8 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
+##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+## 10 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+## # … with 139 more rows</code></pre>
+<p>The last two columns are distributions of random samples from the available choices within <code>space</code> and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.</p>
+<div class="figure" style="text-align: center"><span id="fig:figurename5"></span>
+<img src="graphics/infer.png" alt="Inferential testing laid out in the infer package." width="80%" />
+<p class="caption">
+Figure 5: Inferential testing laid out in the infer package.
+</p>
+</div>
+<div id="some-definitions" class="section level4">
+<h4>Some definitions</h4>
+<ul>
+<li><code>specify()</code> is like <code>dplyr::select()</code>: choose the variables from your data frame to test</li>
+<li><code>hypothesize()</code> is where we select the null hypothesis</li>
+<li><code>generate()</code> creates randomized values form a predefined set of values</li>
+<li><code>calculate()</code> lets you choose what test statistic to calculate</li>
+<li><code>visualize()</code> automatically plots permuted with ggplot, making it easy to edit as needed</li>
+</ul>
+</div>
+<div id="benefits" class="section level4">
+<h4>Benefits</h4>
+<ul>
+<li>inputs and outputs are both data frames</li>
+<li>composing tests with pipes</li>
+<li>reading an inferential chain describes an inferential procedure</li>
+</ul>
+<pre class="r"><code>gss_newlevels %&gt;% 
+  specify(space ~ party)  %&gt;% 
+  hypothesize(null = &quot;independence&quot;) %&gt;% 
+  generate(reps = 1000, type = &quot;permute&quot;) %&gt;% 
+  calculate(stat = &quot;Chisq&quot;) %&gt;% 
+  visualize() +
+  geom_vline(aes(xintercept = observed_stat), color = &quot;red&quot;)</code></pre>
+<div class="figure"><span id="fig:figurename6"></span>
+<img src="/lesson/chiSquare_files/figure-html/figurename6-1.png" alt="Visualization of the gss_newlevels data set using infer." width="672" />
+<p class="caption">
+Figure 6: Visualization of the gss_newlevels data set using infer.
+</p>
+</div>
+<p>If we wanted to get a <span class="math inline">\(p\)</span>-value from this programmatic approach, we can calculate the area under the curve to the right of the observed statistic:</p>
+<pre class="r"><code>gss_newlevels %&gt;% 
+  specify(space ~ party)  %&gt;% 
+  hypothesize(null = &quot;independence&quot;) %&gt;% 
+  generate(reps = 1000, type = &quot;permute&quot;) %&gt;% 
+  calculate(stat = &quot;Chisq&quot;) %&gt;% 
+  summarise(p_val = mean(stat &gt; observed_stat))</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##   p_val
+##   &lt;dbl&gt;
+## 1 0.867</code></pre>
+</div>
+</div>
+<div id="interpretation-and-conclusion" class="section level3">
+<h3>Interpretation and Conclusion</h3>
+<p>So when we compare the <span class="math inline">\(p\)</span>-value of this simulated data set with that of our real-world one, it sure looks like they are nearly identical. So It looks like a significant relationship does not exist so there isn’t a measurable difference between one’s party affiliation and their attitude towards space exploration funding.</p>
+
+</div>
+</div>
+<div id="your-turn" class="section level2">
+<h2>Your turn!</h2>
+<p>You may do this independently or in groups of two.</p>
+<p>Download both of the following items:</p>
+<ol style="list-style-type: decimal">
+<li><code>GSS Extract Data Set.csv</code> data set and</li>
+<li><code>GSS Extract Codebook.csv</code> code book</li>
+</ol>
+<p>from my Github site using the following site addresses</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Data%20Set.csv" class="uri">https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Data%20Set.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Codebook.csv" class="uri">https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Codebook.csv</a></li>
+</ol>
+<p>You are tasked to find if there is a relationship between a respondent and their views on science. This is exploratory, so it is incumbent on you to</p>
+<ol style="list-style-type: decimal">
+<li>define the input and output variables.</li>
+<li>make a clear justification of why both are reasonable measures in the real world.</li>
+<li>create a null and alternative hypothesis</li>
+<li>perform a chi-squared test</li>
+<li>interpret the results</li>
+</ol>
+<p>This is how real world data explorations work! There is no expectation that you will find anything at all or that you are expected to discover some grand connection. The points of this exploration are: Can you</p>
+<ol style="list-style-type: decimal">
+<li>identify important variables in a real-world data set?</li>
+<li>formulate a question about them off based of a vague request?</li>
+<li>analyze the data in an appropriate manner?</li>
+<li>draw conclusions and report them?</li>
+</ol>
+</div>

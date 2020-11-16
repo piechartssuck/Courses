@@ -1,0 +1,494 @@
+---
+title: "Bivariate Tables"
+subtitle: "EDP 613"
+author: "Week 11"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(clt)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# What is Bivariate?
+
+It just means doing things with two variables.
+
+--
+
+>- **bivariate analysis** - A statistical method to detect and describe the relationship between two nominal or ordinal variables (typically independent and dependent variables). 
+
+--
+
+>- **cross-tabulation** - A tool for analyzing the relationship between two or more nominal or ordinal variables. This is a good approach when we want to establish *control* variables.
+
+---
+
+# Constructing a Bivariate Table 
+
+There are three things to consider:
+
+--
+
+>- **columns** - Typically the dependent variables. 
+
+--
+
+>- **rows** - Typically the independent variables. 
+
+--
+
+>- **marginals** - The totals of the row and columns.
+
+---
+
+# Creating a Cross-Tabulation Using Raw Data
+
+--
+
+>-Column totals: Add across columns
+
+--
+
+>-Row totals: Add across rows
+
+---
+
+# Example of Cross-Tabulation Using Raw Data
+
+```{r eval = TRUE, echo = FALSE}
+
+movies <- tibble(
+  
+Decision = c("Yes",
+             "No",
+             ""),
+  
+Delicious = c("4",
+              "6",
+              "10"),
+
+Disgusting = c("7",
+               "9",
+               "16"),
+
+Totals = c("11",
+           "15",
+           "26")
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(movies, 
+      escape = FALSE,
+      align = 'cccc',
+      col.names = c("", "Delicious", "Disgusting", ""),
+      caption = "<b>Views on Candy Corn</b>") %>%
+  add_header_above(c("Sentiment" = 4), background = "#212121") %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") 
+
+```
+---
+
+# Creating a Cross-Tabulation Using Percents
+
+--
+
+>-Column percentages: Use column totals as a denominator of the row values.
+
+--
+
+>-Row percentages: Use column totals as a denominator of the row values. (not a typo!)
+
+-- 
+
+Percentages are typically given for the independent variable.
+
+---
+
+
+# Example of Cross-Tabulation Using Percents
+
+```{r eval = TRUE, echo = FALSE}
+
+movies <- tibble(
+  
+Decision = c("Yes",
+             "No",
+             "<i>N</i>"),
+  
+Delicious = c("40.00% (4)",
+              "60.00% (6)",
+              "(10)"),
+
+Disgusting = c("43.75% (7)",
+               "56.25% (9)",
+               "(16)"),
+
+Totals = c("42.30% (11)",
+           "57.69% (15)",
+           "(26)")
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(movies, 
+      escape = FALSE,
+      align = 'cccc',
+      col.names = c("", "Delicious", "Disgusting", ""),
+      caption = "<b>Views on Candy Corn</b>") %>%
+  add_header_above(c("Sentiment" = 4), background = "#212121") %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") 
+
+```
+
+---
+
+# Side Note: Contingency Tables
+
+- The examples are known as **contingency tables** 
+
+--
+
+- Specifically they are **2 x 2 contingency tables**.
+
+---
+
+# Why Do We Care?
+
+Well we use them if we want to
+--
+
+- *partition* the dependent and independent variables 
+
+--
+
+- detect if a relationship *exists* between the dependent and independent variables 
+
+--
+
+- measure how *strong* a relationship may be (known as a *measure of association*)
+
+--
+
+- determine the *direction* of a relationship 
+
+---
+
+# This Way or That Way
+
+The direction of a relationship can be
+
+--
+
+- **positive** if the dependent and independent both go in the same direction up or down.
+  
+- **negative** if the dependent and independent go in opposite directions.
+
+---
+
+# Example of a Positive Relationship
+
+```{r eval = TRUE, echo = FALSE}
+
+movies <- tibble(
+  
+Health = c("Poor",
+           "Fair",
+           "Good",
+           "<i>N</i>"),
+  
+Low = c("39% (15)",
+        "36% (14)",
+        "25% (10)",
+        "(39)"),
+
+Middle = c("12% (32)",
+           "45% (114)",
+           "43% (109)",
+           "(254)"),
+
+High = c("9% (18)",
+         "28% (57)",
+         "63% (127)",
+          "(202)")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(movies, 
+      escape = FALSE,
+      align = 'cccc',
+      col.names = c("", "Low", "Middle", "High"),
+      caption = "<b>Health Condition by SES</b>") %>%
+  add_header_above(c("Sentiment" = 4), background = "#212121") %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0:4, background = "#212121") 
+
+```
+
+*Source: General Social Survey: 1987-1992*
+
+---
+
+# Example of a Negative Relationship
+
+```{r eval = TRUE, echo = FALSE}
+
+movies <- tibble(
+  
+Health = c("Poor",
+           "Fair",
+           "Good",
+           "<i>N</i>"),
+  
+Low = c("31% (15)",
+        "22% (10)",
+        "47% (23)",
+        "(48)"),
+
+Middle = c("41% (90)",
+           "42% (92)",
+           "17% (38)",
+           "(220)"),
+
+High = c("48% (86)",
+         "20% (36)",
+         "32% (58)",
+          "(180)")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(movies, 
+      escape = FALSE,
+      align = 'cccc',
+      col.names = c("", "Low", "Middle", "High"),
+      caption = "<b>Frequency of Trauma by SES</b>") %>%
+  add_header_above(c("Sentiment" = 4), background = "#212121") %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0:4, background = "#212121") 
+
+```
+
+*Source: General Social Survey: 1987-1992*
+
+---
+
+# Other Possible Scenarios
+
+- Hours studying and grades
+
+- Partying and assessments
+
+- Sleep and performance
+
+- Color of your car and how well you do in EDP 613
+
+---
+
+# Elaborate 
+
+--
+
+- A **control variable** is a special type of variable that doesn't change. We can use it to compare the possible effects of a treatment.
+
+--
+
+- **Elaboration** is a specific type of bivariate relationship where control variables are introduced.
+
+---
+
+# Testing
+
+Elaboration tests include
+
+- Spurious relationships
+- Intervening relationships
+- Conditional Relationships
+
+---
+
+#  Testing for an intervening relationship
+
+- **Intervening variable** - A control variable that follows an independent variable but precedes the dependent variable in a causal sequence
+
+--
+
+- **Intervening relationships** - The control variable intervenes between the independent and dependent variables
+
+---
+
+# Example: Examining two variables before considering a third one
+
+- Independent variable: Attending weekday parties
+
+--
+
+- Dependent variable: Grades
+
+--
+
+- Possible Intervening variable between the others: Hours studying
+
+
+---
+
+# Example
+
+- Independent variable: Sale of ice cream
+
+--
+
+- Dependent variable: Number of outdoor crimes
+
+--
+
+- Possible Cause Prior to the Control variable: Outdoor temperature
+
+---
+
+###   Testing for a spurious relationship
+
+- **Spurious relationships** - Both the independent variable and the dependent variable are 
+  - not causally linked
+  - influenced by some third variable 
+  - explained by a control variable
+
+--
+
+- **Nonspurious relationships** - Both the independent variable and the dependent variable
+  - cannot by explained by a control variable
+
+---
+
+# Example
+
+- Independent variable: Number of firefighters at the scene of a crime
+
+--
+
+- Dependent variable: Property damage
+
+--
+
+- Possible Cause Prior to the Control variable: Size of the fire 
+
+
+---
+
+---
+
+# Elaborate 
+
+--
+
+- A **control variable** is a special type of variable that doesn't change. We can use it to compare the possible effects of a treatment.
+
+--
+
+- **Elaboration** is a specific type of bivariate relationship where control variables are introduced.
+
+---
+
+# Testing
+
+Elaboration tests include
+
+- Spurious relationships
+- Intervening relationships
+- Conditional Relationships
+
+---
+
+#  Testing for a control relationship
+
+- **Control relationship** - An independent variable’s effect on the dependent variable depends on, or is conditioned by, a category of a control variable.
+
+--
+
+- The relationship between the independent and dependent variables will change according to the different conditions (or categories) of the control variable
+
+---
+
+# Example: Examining two variables before considering a control 
+
+- Independent variable: Number of toys owned
+
+--
+
+- Dependent variable: Hours spent playing with toys
+
+--
+
+- Possible Conditional Variables: SES
+
+---
+
+# Goals of Elaboration
+
+1. Elaboration allows us to test for spurious relationships
+
+2. Elaboration clarifies the causal sequence of bivariate relationships by introducing variables hypothesized to intervene between the independent and depependent variables
+
+3. Elaboration specifies the different conditions under which the original bivariate relationship might hold.
+
+---
+
+## That's it. Take a break before our R session!

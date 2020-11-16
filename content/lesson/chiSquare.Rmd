@@ -1,0 +1,445 @@
+---
+title: "Week 12: Tidying Up the Chi Square Statistics"
+subtitle: "EDP 613"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Walkthroughs
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(tidy=FALSE, echo = TRUE, fig.pos = 'H')
+library(htmltools)
+library(kableExtra)
+library(viridis)
+options(knitr.table.format = "latex")
+```
+
+
+## Purpose
+
+While we can certainly perform statistical analysis in Base R, it is far more dynamic when we use the `tidyverse` package. In this walk through, we'll explore chi-square statistics using the `infer` package which conducts statistical inference and plays well with `tidyverse` design framework.
+
+### Objectives
+
+- introduce the `infer` and `patchwork` packages
+- apply the Chi square statistic
+- provide some familiarity with the General Social Survey
+
+### Packages
+
+Please load up the following packages
+
+```{r}
+library(tidyverse)
+library(infer)
+library(patchwork)
+library(viridis)
+```
+
+Remember to download them if you receive an error:
+```{r, eval=FALSE}
+install.packages("infer")
+install.packages("patchwork")
+install.packages("viridis")
+```
+
+
+## It's All About the Assumptions
+
+Before we can move forward in the exploration of the $\chi^2$ statistic, we must first make sure that any data that we use adheres to the following checklist, which are formally known as \textit{statistical assumptions}, or just \textit{assumptions}.
+
+* \textbf{Assumption \#1}: The variables are categorical and can be categorized in to one of the three standard types:
+  + Dichotomous: Two (2) groups (e.g. Male and Female).
+  + Nominal: Three (3) or more categorical groups (e.g. undergraduate, graduate student, postdoctoral scholar, professor).
+  + Ordinal: ordered groups (e.g. Pain Level 1, Pain Level 2, Pain Level 3, ...). 
+* \textbf{Assumption \#2}: Observations are independent of one another (e.g. no relationship between any of the cases).
+* \textbf{Assumption \#3}: Categorical variable groupings must be mutually exclusive (e.g. a participant cannot be both a Democrat and Republican).
+* \textbf{Assumption \#4}: There must be at minimum five (5) expected frequencies in each group of your categorical variable.
+
+NOTE: If you do not meet ALL of the assumptions for any statistical test, this violation changes the conclusion of the research and interpretation of the results of any analysis which is be misleading or complete nonsense, or analytical garbage. So please please please make sure you account for all assumptions! Generally, most tests that are used the same four assumptions about the data set being analyzed (see \cref{table1}). The four may not be the only ones, but they are typically observed in many commonly used approaches.
+
+```{r echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE, purl=FALSE}
+
+assump <- tibble(
+  
+  `The data ...` = c("... are from multiple groups have the same variance.",
+                     "... that are compared and/or used must be independent of each other.",
+                     "have a linear relationship when compared.",
+                     "exhibit a normal, near-normal, or sometimes symmetric distribution."
+                    ), 
+  
+  `Formal name` = c("Homogeneity of variances*",
+                    "Independence",
+                    "Linearity",
+                    "Normality"
+                     )
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+kable(assump, 
+      escape = FALSE,
+      align = 'cl') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "20em") %>%
+  column_spec(2, width = "30em") 
+```
+</center>
+
+OK you have that in mind? Now let's go exploring! 
+
+## Example
+
+### The General Social Survey (GSS)
+
+Funded by the [National Science Foundation (NSF)](https://www.nsf.gov/pubs/2008/nsf08506/nsf08506.htm){target="_blank"}, the General Social Survey (GSS) is a social science oriented opinion based survey that has been regularly administered since 1972 by the [National Opinion Research Center (NORC)](https://www.norc.org){target="_blank"} at the University of Chicago. 
+
+The GSS provides two pieces of key information about the American society at a given point in time:
+
+* It gathers data on our contemporary society to assess and describe trends and constants in key areas related to people's attitudes, behaviors, and attributes.
+* It contains a core of demographic, behavioral, attitudinal questions, and those deemed important at the time. Topics that describe the latter include civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events.
+[(NORC at the University of Chicago, 2016)](https://gss.norc.org/About-The-GSS){target="_blank"}
+
+The de-identified variant, or the public data set is free to use by anyone. As far as "big data" that is also longitudinal, the GSS is a fantastic source of information about how the views of those in the United States has or has not shifted since 1972.  
+
+
+### Getting (Some of) the GSS Data Set:
+
+We are only using a select portion of the GSS because the data set is humongous! `R` is really good at getting analyses performed in a logical and comprehensive way but what it has in processing power, it lacks in handling "big data" sets. For the processing of very large data sets, you really need a software like `Python`. With that said, `R` can still handle a lot. It is rare to come across a data set that `R` cannot handle well, but the entire GSS is one of the few. Of course other criteria such as a computer's memory, disk space, internet speed, etc. also limit `R` or any other software package from loading and analyzing any data set.
+
+Rather than having you load an external file into R Studio, we'll do it via the web. Run the following command that uses the `read_csv()` command to grab and load external data sets from an external website. In this case it is a site called [Github]("https://github.com/"){target="_blank"}, namely from a repository from my public site (which doesn't actually have much of anything publicly available). 
+
+```{r}
+gss_nasa <- "https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/gss_nasa.csv" %>%
+  read_csv()
+```
+
+### Purpose
+
+In this walk through, we'll be assessing if funding for space exploration is a partisan oriented issue. Many data sets include more information than you need to answer your questions, some of which have nothing to do with your goals. Let's see what this data set has:
+
+```{r}
+names(gss_nasa)
+```
+
+
+### Data Wrangling
+
+You should never assess a data set without a codebook. The one for the GSS is pretty large and can be found [here]("https://gss.norc.org/documents/codebook/gss_codebook.pdf){target="_blank"}, but for the purposes of this walk through, we'll be looking at the fields `party` and `space`.
+
+
+```{r}
+gss_select <- gss_nasa %>%
+  select(party, space)
+
+gss_select %>%
+  head()
+```
+
+OK great but what about the choices? How would we know what factors make up each vector? Well we can do this using the command `unique()` by
+
+```{r}
+gss_select %>%
+  select(party) %>%
+  unique()
+
+gss_select %>%
+  select(space) %>%
+  unique()
+```
+
+We can see that people identified themselves as either Democrat (`Dem`), Independent (`Ind`), or Republican (`Rep`) and they could decide if the funding for space exploration was `TOO LITTLE`, `ABOUT RIGHT`, or `TOO MUCH`. 
+
+Now is probably a good time to visualize the data so that we can simply get an idea of any disparity between the views of those within each political organization, if it exists.
+
+```{r figurename1, fig.cap="Bar plot by frequencies."}
+gss_select %>% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()
+```
+
+Well that is nice but the legend is out of order. Let's fix that!
+
+1. Let's first get information about the format of each vector.
+```{r}
+str(gss_select)
+```
+
+Well it looks like we have two character vectors. We can't do much with the order of those types of variables. This is where the variable type **factor** comes in handy. So what are they? It is how we store truly categorical information in R. In general, the levels are friendly human-readable character strings, like "male/female/transgender/other", "control/treatment", etc. The values a factor can take on are called the **levels**. For example, in the Gapminder data set, the levels of the factor `continent` were `Africa`, `Americas`, `Asia`, `Europe`, and `Oceania`. To verify, simply load the `gapminder` package and run the command `levels()` on the `continent` vector.
+
+```{r}
+library(gapminder)
+
+levels(gapminder$continent)
+```
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+A note about factors:\\
+
+While factors appear to be nice, R users love to hate it! Why? Never *ever ever ever* forget that under the hood, R is really storing integer codes 1, 2, 3, etc. This Janus-like nature of factors means they are rich with booby traps for the unsuspecting but they are a necessary evil.  Arguably the worst kind of factor is called a *stealth factor*, or one you think is a character.
+
+You may have noticed by now that if you come across a mistake, its typically not a result of a gap in logic, rather it is often something that is overlooked, appears benign,  or is deemed innocuous. Please save yourself hours of turmoil and headaches by ALWAYS CHECKING YOUR VARIABLE TYPES!
+}}
+
+2. Converts any vector we want to reorder into factors:
+
+```{r}
+gss_factors <- gss_select %>%
+  mutate(party = as.factor(party)) %>%
+  mutate(space = as.factor(space))
+```
+
+3. Check the current factor orders.
+```{r}
+gss_factors %>%
+  pull(party) %>% 
+  levels()
+```
+
+```{r}
+gss_factors %>%
+  pull(space) %>% 
+  levels()
+```
+
+Note in the above two commands that the `pull()` command is used because `levels()` expects a vector. Using `select()` would have kept the `space` column as a data frame. An alternative approach would be to use Base R 
+
+```{r}
+levels(gss_factors$party)
+levels(gss_factors$space)
+```
+
+You may have noticed by now that the default factor order is in its natural positioning, which in this case is in alphabetical order. While this appears fine for some items, its probably better to report items in the order they normally are. In the case of party affiliation, we should have Democrats (`Dem`), Republicans (`Rep`), and then Independents(`Ind`) and their possible choices of `TOO MUCH`,`ABOUT RIGHT`, and `TOO LITTLE`. Of course how you order factors is absolutely dependent on each situation. Sometimes its for reporting but other times its simply for aesthetic reasons.
+
+4. Reorder the factor levels
+```{r}
+gss_newlevels <- gss_factors %>%
+  mutate(party = factor(party, levels = c("Dem", "Rep", "Ind"))) %>%
+  mutate(space = factor(space, levels = c("TOO MUCH", "ABOUT RIGHT", "TOO LITTLE")))
+```
+
+We use `factor()` on the columns `party` and `space` and then define the order we want by setting `levels =`. Let's check them:
+
+```{r}
+gss_newlevels %>%
+  pull(space) %>%
+  levels()
+
+gss_newlevels %>%
+  pull(party) %>%
+  levels()
+```
+
+That looks right!
+
+5. Plot with the new factor levels
+```{r figurename2, fig.cap="Ordered bar plot by frequencies."}
+gss_newlevels %>% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar() +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal()
+```
+
+OK now it plots in the correctly in the order we want. However, the problem now lies in the fact that its hard to compare the three bar plots since they aren't on equal footing. This is the problem with frequency data, in that it can be misleading when we’re looking for trends between categorical variables within groups. To counteract this, let’s normalize them by looking at each chunk of each bar as a percent using the command `position = fill`. 
+
+```{r figurename3, fig.cap="Ordered bar plot by percent total."}
+gss_newlevels %>% 
+  ggplot(aes(x=party, fill = space)) + 
+  geom_bar(position = "fill") +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_minimal() + 
+  ylab("within group percentage")
+```
+
+That is so much nicer! However, it doesn’t really look like there is much of a difference in how Democrats, Republicans, and Independents support space exploration/ Remember that the bar plot represents descriptive statistics but to infer any differences, we must use the aptly named inferential statistics.
+
+Let's drill down into this with some hypothesis testing, comparing Base R and the  `infer` package. What we essentially have is a contingency table of party affiliation and attitude towards space exploration, and we want to see if there’s a relationship between these variables. The Chi Squared Test of independence is used to determine if a significant relationship exists between two categorical variables, so we will use this test.
+
+## Setting Up
+
+### Hypothesis
+
+* Null hypothesis: There is no relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).
+* Alternative hypothesis: There is a relationship between party (Democrat, Republican, Independent) and attitude towards space exploration (too little, about right, too much).
+
+OK first, do we meet the assumptions?
+
+### Assumptions
+
+1. Clearly both `party` and `space` are categorical.
+2. Observations are clearly independent in that `party` and `space` are measure two very different concepts.
+3. Respondents had to choose between being Democrats, Republicans, or Independents and their corresponding viewpoints were delineated between too little, about right, or too much. These are mutually exclusive "events" or values.
+4. We have more than five cases for each. In fact, we have
+
+```{r}
+gss_newlevels %>%
+   count()
+```
+
+or if you want to get counts of each value, run
+```{r}
+gss_newlevels %>%
+  summary()
+```
+
+In any case, we more than meet the minimum threshold. 
+
+## Analysis
+
+There are two main ways to solve this problem:
+
+* Analytically
+* Programatically
+
+### Analytically
+
+We assume the expected values follow a Chi-squared distribution, with a probability density function that depends on the degrees of freedom. Looking at the plot below, observe how the distribution varies with the degrees of freedom ($k$) on the $x$-axis is the Chi-squared statistic, which we can calculate in R.
+
+```{r figurename4, eval=TRUE, echo=FALSE, out.width = '80%', fig.align="center", fig.cap="Chi-squre distribution constructed in R (code availible upon request)."}
+legend_order <- c("k = 5", "k = 15",  "k = 30", "k = 60", "k = 90")
+
+data.frame(chisq = 0:7000 / 100) %>% 
+  mutate("k = 5" = dchisq(x = chisq, df = 5),
+         "k = 15"  = dchisq(x = chisq, df = 15),
+         "k = 30"  = dchisq(x = chisq, df = 30),
+         "k = 60"  = dchisq(x = chisq, df = 60),
+         "k = 90"  = dchisq(x = chisq, df = 90)
+         ) %>%
+  gather(key = "df", value = "density", -chisq) %>%
+  mutate(df = factor(df, levels = legend_order)) %>%
+  ggplot() +
+  geom_line(aes(x = chisq, y = density, color = df), size = 1.2) +
+  labs(title = "Chi-Square at Various Degrees of Freedom",
+       x = "Chi-square",
+       y = "Density") +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "#85929E"))
+```
+
+We could then see where it falls in the distribution, and observe the probability of arriving at that combination of variables, or a more extreme example. As our Chi-squared test statistic increases, we move further along the $x$-axis to the right. There is less area under the curve to the right, and our $p$-value (the area under the curve to the right of the observed statistic) decreases.
+
+Generally speaking, a larger Chi-squared statistic suggests stronger evidence for rejecting our null hypothesis. If we observe a $p$-value $\leq 0.05$, we would reject our null hypothesis.
+
+What would it mean to accept our alternative hypothesis?
+
+In the case of our example, if we we lived in a completely random universe, less than 5% of the time we would arrive at the particular combination of `party` and attitude towards `space` exploration we observe in our data. In other words, the relationship between party and attitude towards space exploration we see in our data is \textit{"significant"}.
+
+But we don't live in a completely random universe - think about getting randomly married to someone else - so the real question still remains: \textbf{is there actually a significant relationship between these variables?} Well we can use Base R's Chi-squared test to find out:
+
+```{r}
+chisq.test(gss_newlevels$party, gss_newlevels$space)
+```
+
+Let’s save this observed Chi statistic for later use.
+
+```{r}
+observed_stat <- chisq.test(gss_newlevels$party, gss_newlevels$space)$stat
+```
+
+We might be tempted to look at this and say, there’s a high $p$-value. No significant relationship exists. So we're done! This is what we expected looking at the bar plots earlier! Well not so fast? Let's look at it programatically. 
+
+### Programatically
+
+Another way to test if there is a significant relationship in our data is to take a programmatic approach. Basically the idea here is if we live in world where variables are totally unrelated, they might as well have been randomly put together. Basically in the real world, yes of course things (variables) are related! Someone's party affiliation is predicated on their history and maturation and that then most likely informs their views on funding, especially for an area of the sciences like space exploration. So does the data we have look more like random or normal world?
+
+Let's explore this by taking one of the columns of our data frame and scrambling it.
+
+```{r}
+gss_newlevels %>%
+  mutate(random_1 = sample(space),
+         random_2 = sample(space))
+```
+
+The last two columns are distributions of random samples from the available choices within `space` and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.
+
+```{r figurename5, echo=FALSE, out.width = '80%', fig.align="center", fig.cap="Inferential testing laid out in the infer package."}
+knitr::include_graphics("graphics/infer.png")
+```
+
+#### Some definitions
+
+* `specify()` is like `dplyr::select()`: choose the variables from your data frame to test
+* `hypothesize()` is where we select the null hypothesis
+* `generate()` creates randomized values form a  predefined set of values
+* `calculate()` lets you choose what test statistic to calculate
+* `visualize()` automatically plots permuted with ggplot, making it easy to edit as needed
+
+#### Benefits
+
+* inputs and outputs are both data frames
+* composing tests with pipes
+* reading an inferential chain describes an inferential procedure
+
+```{r figurename6, fig.cap="Visualization of the gss_newlevels data set using infer."}
+gss_newlevels %>% 
+  specify(space ~ party)  %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 1000, type = "permute") %>% 
+  calculate(stat = "Chisq") %>% 
+  visualize() +
+  geom_vline(aes(xintercept = observed_stat), color = "red")
+```
+
+If we wanted to get a $p$-value from this programmatic approach, we can calculate the area under the curve to the right of the observed statistic:
+```{r}
+gss_newlevels %>% 
+  specify(space ~ party)  %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps = 1000, type = "permute") %>% 
+  calculate(stat = "Chisq") %>% 
+  summarise(p_val = mean(stat > observed_stat))
+```
+
+
+### Interpretation and Conclusion
+So when we compare the $p$-value of this simulated data set with that of our real-world one, it sure looks like they are nearly identical. So It looks like a significant relationship does not exist so there isn't a measurable difference between one's party affiliation and their attitude towards space exploration funding.
+
+
+\vspace{0.1in}
+\begin{center}\noindent\rule{4cm}{0.4pt}\end{center}
+\vspace{0.1in}
+
+
+## Your turn! 
+You may do this independently or in groups of two.
+
+Download both of the following items:
+
+1. `GSS Extract Data Set.csv` data set and 
+2. `GSS Extract Codebook.csv` code book
+
+from my Github site using the following site addresses
+
+1. https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Data%20Set.csv
+2. https://raw.githubusercontent.com/piechartssuck/RWDataSets/master/GSS%20Extract%20Codebook.csv
+
+You are tasked to find if there is a relationship between a respondent and their views on science. This is exploratory, so it is incumbent on you to 
+
+1. define the input and output variables.
+2. make a clear justification of why both are reasonable measures in the real world.
+3. create a null and alternative hypothesis
+4. perform a chi-squared test
+5. interpret the results
+
+This is how real world data explorations work! There is no expectation that you will find anything at all or that you are expected to discover some grand connection. The points of this exploration are: Can you
+
+1. identify important variables in a real-world data set?
+2. formulate a question about them off based of a vague request?
+3. analyze the data in an appropriate manner?
+4. draw conclusions and report them?
