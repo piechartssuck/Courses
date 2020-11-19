@@ -47,7 +47,7 @@ library(kableExtra)
 ### Week 12 Problem Set
 
 #### Assignment
-Chapter 10 Exercises: 1, 2, 3, 5, 7, 13. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+Chapter 10 Exercises: 1, 2, 3, 5, 7, 13. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM two Wednesdays from now.<br>
 
 #### Solutions
 
