@@ -1,0 +1,51 @@
+---
+title: "Chi-Square and ANOVAs"
+linktitle: "Week 13: Chi-Square and ANOVAs"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 11
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Crash Course Statistics
+This week we are looking at understanding a bit about regression and ANOVAs. Your text switches these ideas around and while I understand why, having regression first is generally a more natural sequence. 
+
+#### Regression
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WWqE7YHR4Jc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+  
+  #### ANOVAs
+  <p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/oOuu8IBd-yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+  
+  <p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wo1xlefg5KI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+  
+  ### The Difference is a More than the Letter C but not by Much!
+  If you want to take a look at ANOVA+^[A term I totally made up], try giving this video a go. It discusses an idea called *covariance* which takes ANOVAS to AN**C**OVAS.
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QdmG6uUtB4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+  
+  There are also more complex models called MANOVA, MANCOVAS, and so forth. Always keep in mind that as the complexity of a statistical model goes up, the ability to apply it generally goes down! If you want a rundown of the differing types, take a look at this page over at [Stats Make Me Cry Consulting]("http://www.statsmakemecry.com/smmctheblog/stats-soup-anova-ancova-manova-mancova"){target="_blank"}^[I also just love the name!].
+
+In a nutshell, most problems that require inferences can be solved using a *t*-test or $\chi^2$. Keep it simple and accessible!
+  
+  Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+

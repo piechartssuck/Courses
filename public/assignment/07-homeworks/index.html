@@ -709,6 +709,10 @@
         <a href="/assignment/12-homeworks/">Week 12: The Chi-Square Test and Measures of Association</a>
       </li>
       
+      <li >
+        <a href="/assignment/13-homeworks/">Week 13: Chi-Square and ANOVAs</a>
+      </li>
+      
     </ul>
     
 
@@ -728,7 +732,15 @@
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" >Data Explorations</a>
+    <a class="docs-toc-link" href="/assignment/de1/">Data Explorations</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/de1/">Week 13: Data Exploration</a>
+      </li>
+      
+    </ul>
+    
 
   </div>
   
@@ -737,7 +749,7 @@
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/assignment/quiz1/">Week 4: Quiz 1</a>
+        <a href="/assignment/quiz1/">Week 4: Quiz</a>
       </li>
       
     </ul>
@@ -1007,25 +1019,25 @@ sample_means &lt;- do.call(rbind, thing) %&gt;%
 <pre><code>## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &lt;dbl&gt;
-##  1        625882 
-##  2        613521.
-##  3        411276 
-##  4        349471 
-##  5        625522.
-##  6        739233.
-##  7        472133.
-##  8        720197.
-##  9        474469.
-## 10        146464</code></pre>
+##  1        433250.
+##  2        723570.
+##  3        754089 
+##  4        617099 
+##  5        235438.
+##  6        390313 
+##  7        465453 
+##  8        501247.
+##  9        465441.
+## 10        592194.</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>The mean of these 10 means is</li>
 </ol>
 <pre class="r"><code>mean(sample_means$`Sample Means`)</code></pre>
-<pre><code>## [1] 517816.9</code></pre>
+<pre><code>## [1] 517809.4</code></pre>
 <p>We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that <span class="math inline">\(\mu_Y = \mu_{\overline{Y}}\)</span>.<br><br>
 d. The standard deviation of these 10 means is</p>
 <pre class="r"><code>sd(sample_means$`Sample Means`)</code></pre>
-<pre><code>## [1] 183781.7</code></pre>
+<pre><code>## [1] 157216.8</code></pre>
 or about <span class="boxed">230195</span>.<br><br>
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 <img src="/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png" width="672" />

@@ -72,6 +72,65 @@
     </item>
     
     <item>
+      <title>Chi-Square and ANOVAs</title>
+      <link>/example/13-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/example/13-example/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#crash-course-statistics&#34;&gt;Crash Course Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-difference-is-a-more-than-the-letter-c-but-not-by-much&#34;&gt;The Difference is a More than the Letter C but not by Much!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;crash-course-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Crash Course Statistics&lt;/h3&gt;
+&lt;p&gt;This week we are looking at understanding a bit about regression and ANOVAs. Your text switches these ideas around and while I understand why, having regression first is generally a more natural sequence.&lt;/p&gt;
+&lt;div id=&#34;regression&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Regression&lt;/h4&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/WWqE7YHR4Jc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anovas&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;ANOVAs&lt;/h4&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/oOuu8IBd-yo&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wo1xlefg5KI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-difference-is-a-more-than-the-letter-c-but-not-by-much&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The Difference is a More than the Letter C but not by Much!&lt;/h3&gt;
+If you want to take a look at ANOVA+&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, try giving this video a go. It discusses an idea called &lt;em&gt;covariance&lt;/em&gt; which takes ANOVAS to AN&lt;strong&gt;C&lt;/strong&gt;OVAS.
+&lt;p align=&#34;center&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QdmG6uUtB4o&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/p&gt;
+&lt;p&gt;There are also more complex models called MANOVA, MANCOVAS, and so forth. Always keep in mind that as the complexity of a statistical model goes up, the ability to apply it generally goes down! If you want a rundown of the differing types, take a look at this page over at &lt;a href=&#34;%22http://www.statsmakemecry.com/smmctheblog/stats-soup-anova-ancova-manova-mancova%22&#34; target=&#34;_blank&#34;&gt;Stats Make Me Cry Consulting&lt;/a&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In a nutshell, most problems that require inferences can be solved using a &lt;em&gt;t&lt;/em&gt;-test or &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt;. Keep it simple and accessible!&lt;/p&gt;
+&lt;p&gt;Remember you can always access a Crash Course Statistics playlist using the following &lt;a href=&#34;https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;A term I totally made up&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;I also just love the name!&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The What and Why of Statistics</title>
       <link>/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

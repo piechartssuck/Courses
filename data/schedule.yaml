@@ -101,3 +101,12 @@ lessons:
     example: "12-example"
     assignment: "12-homeworks"
     due: "12-due"
+
+  - title: 'Chi-Square and ANOVAs'
+    session: 13
+    date: "November 18, 2020"
+    readings: "13-readings"
+    lesson: "13-lesson"
+    example: "13-example"
+    assignment: "13-homeworks"
+    due: "13-due"

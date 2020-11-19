@@ -914,16 +914,16 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 &lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 4
 ##    party space       random_1    random_2   
 ##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
-##  1 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
-##  2 Ind   ABOUT RIGHT TOO LITTLE  TOO MUCH   
-##  3 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
-##  4 Ind   TOO LITTLE  ABOUT RIGHT TOO LITTLE 
-##  5 Ind   TOO MUCH    TOO LITTLE  ABOUT RIGHT
-##  6 Ind   TOO LITTLE  ABOUT RIGHT TOO LITTLE 
-##  7 Ind   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
-##  8 Dem   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
-##  9 Dem   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
-## 10 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  1 Ind   TOO LITTLE  TOO LITTLE  TOO MUCH   
+##  2 Ind   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
+##  3 Dem   ABOUT RIGHT TOO LITTLE  TOO MUCH   
+##  4 Ind   TOO LITTLE  TOO LITTLE  TOO MUCH   
+##  5 Ind   TOO MUCH    ABOUT RIGHT TOO MUCH   
+##  6 Ind   TOO LITTLE  TOO LITTLE  TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  8 Dem   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
+##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+## 10 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
 ## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
@@ -972,7 +972,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
 ##   p_val
 ##   &amp;lt;dbl&amp;gt;
-## 1 0.857&lt;/code&gt;&lt;/pre&gt;
+## 1 0.886&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
@@ -1009,6 +1009,55 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;li&gt;analyze the data in an appropriate manner?&lt;/li&gt;
 &lt;li&gt;draw conclusions and report them?&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chi-Square and ANOVAs</title>
+      <link>/lesson/13-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/13-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in-class-notes&#34;&gt;In Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#textbook-class-notes&#34;&gt;Textbook Class Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough-chi-square&#34;&gt;R Walkthrough: Chi Square&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;in-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;In Class Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download the class slides: Remember to click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2013/Slides-Week-13.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 13/Slides-Week-13.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2013/Slides-Week-13.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;textbook-class-notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2013/SSDS_Ch11.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week13/SSDS_Ch11.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-walkthrough-chi-square&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough: Chi Square&lt;/h3&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/moreaboutchisquare/&#34;&gt;walkthrough&lt;/a&gt; more about the &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt; statistic.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

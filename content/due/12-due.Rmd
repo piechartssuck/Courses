@@ -37,7 +37,7 @@ wk_post <- tibble(
 Description = c("Begin problems 1, 2, 3, 5, 7, and 13 in Chapter 10.",
                "Take a look at the R Walkthrough on the Chi Square Distribution."),
 
-Location = c("[Link](/assignment/10-homeworks/#assignment-1)",
+Location = c("[Link](/assignment/12-homeworks/#assignment-1)",
              "[Link](/lesson/chisquare/)")
 )
 ```
@@ -69,13 +69,13 @@ wk_pre <- tibble(
            chalkboard,
            lightbulb),
 
-Description = c("Review chapter 10 in the text.",
+Description = c("Review chapter 11 in the text.",
                "Look over the text PowerPoint and corresponding notes.",
                "Watch videos on ANOVAs^[We will cover this in one week]."),
 
-Location = c("[Link](/readings/11-readings/#book-stuff-1)",
-             "[Link](/lesson/11-lesson/#textbook-class-notes-1)", 
-             "[Link](/example/11-example/#crash-course-statistics-1)")
+Location = c("[Link](/readings/13-readings/#book-stuff-1)",
+             "[Link](/lesson/13-lesson/#textbook-class-notes-1)", 
+             "[Link](/example/13-example/#crash-course-statistics-1)")
 
 )
 ```

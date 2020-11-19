@@ -1,0 +1,27 @@
+---
+title: "Chi-Square and ANOVAs"
+linktitle: "Week 13: Chi-Square and ANOVAs"
+menu:
+  content:
+    parent: Readings
+    weight: 12
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+
+- Read Chapter 11: *Analysis of Variance*
+
+- Read over [*A Gentle Introduction to Bayesian Analysis: Applications to
+Developmental Research*]("/papers/A Gentle Introduction to Bayesian Analysis.pdf")^[You certainly do not have to understand this. It is a different way of thinking. If you can just get the idea of how Bayesian thinking works, that is win!]
+
+
+
+
+

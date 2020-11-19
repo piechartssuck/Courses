@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Chi-Square and ANOVAs</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 13" />
+    <link href="Slides-Week-13_files/tile-view-0.2.3.9000/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-13_files/tile-view-0.2.3.9000/tile-view.js"></script>
+    <link href="Slides-Week-13_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-13_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-13_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-13_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Chi-Square and ANOVAs
+## EDP 613
+### Week 13
+
+---
+
+
+
+
+
+
+
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+## Bivariate Tables: Reducing Errors
+
+A **proportional reduction of error** (PRE)  
+
+--
+
+- is a general term for statistical measures that tells us how much we can improve predictive the vale of a dependent variable based on available information on the independent variable.
+
+--
+ 
+- includes variables 
+  - `\(E_1\)`: errors of predictions made when the independent variable is *ignored*
+  - `\(E_2\)`: errors of predictions made when the independent variable is *included*
+
+--
+
+- is found by `$$PRE = \dfrac{E_1-E_2}{E_1}$$`
+
+--
+
+- takes on values between (0,1) with
+  - 0: no reduction in error
+  - 1: perfect prediction—the error is completely eliminated.
+
+---
+
+## Very General Rule of Thumb
+
+--
+
+- 0 - 0.1: weak
+- 0.1 - 0.4: moderate
+- 0.4 - 1: is strong
+
+---
+
+## *PRE*: Lambda `\(\lambda\)`
+
+--
+
+- `\(\lambda\)` is used to determine the strength of the relationship between two nominal variables.
+
+--
+
+- Process
+
+&gt;- Find `\(E_1\)`
+
+--
+
+&gt;- Find `\(E_2\)`
+
+--
+
+&gt;- Calculate `\(PRE\)` which is given by `\(\lambda\)` in these cases
+
+---
+
+## Gamma `\(\gamma\)` and Kendall's Tau `\(\tau\)`-B
+
+- `\(\gamma\)` and `\(\tau\)`-B are used to determine the strength of the relationship between two ordinal variables.
+
+---
+
+# ANOVAS
+
+--
+
+- An *analysis of variance* (ANOVA) is a test to find a significant relationship between two variables in two or more groups or samples.
+
+--
+
+  - *one-way ANOVA*:Used to determine whether there are any statistically significant differences between the means of two or more independent (unrelated) groups.
+  
+--
+
+  - *two-way ANOVA*: Used to compare the mean differences between groups that have been split on two independent variables (called *factors*)
+ 
+---
+
+## Assumptions 1/2: one-way ANOVA
+
+&gt;- Assumption 1: Dependent variable should be measured at the interval or ratio level (i.e., they are continuous)
+&gt;- Examples: time (measured in hours), intelligence (measured using IQ score), exam performance (measured from 0 to 100), weight (measured in kg)
+
+--
+
+&lt;br&gt;
+&gt;- Assumption 2: Independent variable should consist of two or more categorical, independent groups
+&gt;- Examples: ethnicity (e.g., 3 groups: Caucasian, African American and Hispanic), physical activity level (e.g., 4 groups: sedentary, low, moderate and high), profession (e.g., 5 groups: surgeon, doctor, nurse, dentist, therapist)
+
+--
+
+&lt;br&gt;
+&gt;- Assumption 3: *Independence of observations*, which means that there is no relationship between the observations in each group or between the groups themselves
+
+
+---
+
+## Assumptions 2/2: one-way ANOVA
+
+&gt;- Assumption 4: No significant outliers.
+&gt;- Example: in a study of 100 students' IQ scores, where the mean score was 108 with only a small variation between students, one student had a score of 156, which places that individual in top 1% of IQ scores globally
+
+--
+
+&lt;br&gt;
+&gt;- Assumption 5: Dependent variable should be approximately normally distributed for each category of the independent variable. 
+
+--
+
+&lt;br&gt;
+&gt;- Assumption 6: **Homogeneity of variances** where all groups have the same or similar variance.
+
+---
+
+## Formulas to know 1/3
+
+**between-group sum of squares** (SSB) given by `$$\sum n_k\cdot(\overline{Y}_k-\overline{Y})^2$$` where
+
+  - `\(k\)`: number of different samples
+  - `\(n_k\)`: the number of cases in a sample `\(k\)`
+  - `\(\overline{Y}_k\)`: the mean of a sample `\(k\)`
+  - `\(\overline{Y}\)`: the overall mean
+  
+---
+
+## Formulas to know 2/3
+
+**within-group sum of squares** (SSW) given by `$$\sum (Y_i-\overline{Y}_k)^2$$` where
+
+  - `\(k\)`: number of different samples
+  - `\(\overline{Y}_k\)`: the mean of a sample `\(k\)`
+  - `\(Y_i\)`: each individual score in a sample
+
+
+---
+
+## Formulas to know 3/3
+
+**F ratio obtained** or **F statistic** ($F$) given by `$$\dfrac{SSB/df_b}{SSW/df_w}$$` where
+
+  - the numerator is called the **mean square between**
+  - the denominator is called the **mean square within**
+  - `\(df_b = k-1\)`
+  - `\(df_w = N-k\)`
+  - `\(N\)`: total number of cases
+  
+---
+
+## Example
+
+&gt;- A clinical trial is run to compare three (3) weight loss programs and participants are randomly assigned to one of the comparison programs and are counseled on the details of the assigned program. 
+  - low-calorie diet
+  - low fat diet
+  - low carbohydrate diet
+  - control
+
+--
+
+&gt;- Participants follow the assigned program for 8 weeks. 
+
+--
+
+&gt;- The outcome of interest is weight loss, defined as the difference in weight measured at the start of the study (baseline) and weight measured at the end of the study measured in pounds. 
+
+---
+
+### Data 
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Low Calorie &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Low Fat &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Low Carbohydrate &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Control &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; -1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Process 1/5
+
+*Step 1*: Set up hypotheses and determine level of significance
+
+`\(H_0: \mu_1=\mu_2=\mu_3=\mu_4\)`; `\(\alpha = 0.05\)`
+
+--
+
+*Step 2*: Select the appropriate test statistic
+
+Using the *F*-statistic
+
+--
+
+*Step 3*: Set up decision rule
+
+- The appropriate critical value can be found in a table of probabilities for the `\(F\)` distribution (Appendix F)
+
+- n order to determine the critical value of `\(F\)`, we need
+  - `\(df_b=4-1=3\)`
+  - `\(df_w=20-4=16\)`
+
+---
+
+### Process 2/5
+
+*Step 4*: Compute the test statistic
+
+- `\(N=20\)`
+- `\(\overline{Y}=3.6\)`
+
+--
+
+So
+
+`\begin{aligned}
+SSB &amp;= 5(6.6-3.6)^2+5(3.0-3.6)^2+5(3.4-3.6)^2+5(1.2-3.6)^2\\
+&amp;= 75.8
+\end{aligned}`
+
+---
+
+### Process 3/5
+
+And
+
+- low calorie diet: `$$\sum(Y-6.6)^2 = 21.4$$`
+
+- low fat diet: `$$\sum(Y-3.0)^2 = 10.0$$`
+
+- low carbohydrate diet: `$$\sum(Y-3.4)^2 = 5.4$$`
+
+- control: `$$\sum(Y-1.2)^2 = 10.6$$`
+
+--
+
+So `\(SSE=21.4_10.0+5.4_10.6=47.4\)`
+
+---
+
+### Process 4/5
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;"&gt; Source of Variation &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Sum of Squares (SS) &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Degrees of Freedom (df) &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Means Squared &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; F &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; font-weight: bold;"&gt; Between treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 75.8 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 4-1=3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 75.8/3=25.3 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 25.3/3 = 8.43 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Error &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 47.4 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 20-4=16 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 47.4/16 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; font-weight: bold;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 123.2 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 20-1=19 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### Process 5/5
+
+*Step 5*: Conclusion
+
+Since `\(8.43\geq 3.24\)`, we reject `\(H_0\)` and say that *there is a statistically significant difference in the mean weight loss among the four diets*.
+
+---
+
+## That's it. Take a break before our R session!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

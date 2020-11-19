@@ -1,0 +1,373 @@
+---
+title: "Chi-Square and ANOVAs"
+subtitle: "EDP 613"
+author: "Week 13"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r setup, include=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(clt)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+## Bivariate Tables: Reducing Errors
+
+A **proportional reduction of error** (PRE)  
+
+--
+
+- is a general term for statistical measures that tells us how much we can improve predictive the vale of a dependent variable based on available information on the independent variable.
+
+--
+ 
+- includes variables 
+  - $E_1$: errors of predictions made when the independent variable is *ignored*
+  - $E_2$: errors of predictions made when the independent variable is *included*
+
+--
+
+- is found by $$PRE = \dfrac{E_1-E_2}{E_1}$$
+
+--
+
+- takes on values between (0,1) with
+  - 0: no reduction in error
+  - 1: perfect prediction—the error is completely eliminated.
+
+---
+
+## Very General Rule of Thumb
+
+--
+
+- 0 - 0.1: weak
+- 0.1 - 0.4: moderate
+- 0.4 - 1: is strong
+
+---
+
+## *PRE*: Lambda $\lambda$
+
+--
+
+- $\lambda$ is used to determine the strength of the relationship between two nominal variables.
+
+--
+
+- Process
+
+>- Find $E_1$
+
+--
+
+>- Find $E_2$
+
+--
+
+>- Calculate $PRE$ which is given by $\lambda$ in these cases
+
+---
+
+## Gamma $\gamma$ and Kendall's Tau $\tau$-B
+
+- $\gamma$ and $\tau$-B are used to determine the strength of the relationship between two ordinal variables.
+
+---
+
+# ANOVAS
+
+--
+
+- An *analysis of variance* (ANOVA) is a test to find a significant relationship between two variables in two or more groups or samples.
+
+--
+
+  - *one-way ANOVA*:Used to determine whether there are any statistically significant differences between the means of two or more independent (unrelated) groups.
+  
+--
+
+  - *two-way ANOVA*: Used to compare the mean differences between groups that have been split on two independent variables (called *factors*)
+ 
+---
+
+## Assumptions 1/2: one-way ANOVA
+
+>- Assumption 1: Dependent variable should be measured at the interval or ratio level (i.e., they are continuous)
+>- Examples: time (measured in hours), intelligence (measured using IQ score), exam performance (measured from 0 to 100), weight (measured in kg)
+
+--
+
+<br>
+>- Assumption 2: Independent variable should consist of two or more categorical, independent groups
+>- Examples: ethnicity (e.g., 3 groups: Caucasian, African American and Hispanic), physical activity level (e.g., 4 groups: sedentary, low, moderate and high), profession (e.g., 5 groups: surgeon, doctor, nurse, dentist, therapist)
+
+--
+
+<br>
+>- Assumption 3: *Independence of observations*, which means that there is no relationship between the observations in each group or between the groups themselves
+
+
+---
+
+## Assumptions 2/2: one-way ANOVA
+
+>- Assumption 4: No significant outliers.
+>- Example: in a study of 100 students' IQ scores, where the mean score was 108 with only a small variation between students, one student had a score of 156, which places that individual in top 1% of IQ scores globally
+
+--
+
+<br>
+>- Assumption 5: Dependent variable should be approximately normally distributed for each category of the independent variable. 
+
+--
+
+<br>
+>- Assumption 6: **Homogeneity of variances** where all groups have the same or similar variance.
+
+---
+
+## Formulas to know 1/3
+
+**between-group sum of squares** (SSB) given by $$\sum n_k\cdot(\overline{Y}_k-\overline{Y})^2$$ where
+
+  - $k$: number of different samples
+  - $n_k$: the number of cases in a sample $k$
+  - $\overline{Y}_k$: the mean of a sample $k$
+  - $\overline{Y}$: the overall mean
+  
+---
+
+## Formulas to know 2/3
+
+**within-group sum of squares** (SSW) given by $$\sum (Y_i-\overline{Y}_k)^2$$ where
+
+  - $k$: number of different samples
+  - $\overline{Y}_k$: the mean of a sample $k$
+  - $Y_i$: each individual score in a sample
+
+
+---
+
+## Formulas to know 3/3
+
+**F ratio obtained** or **F statistic** ($F$) given by $$\dfrac{SSB/df_b}{SSW/df_w}$$ where
+
+  - the numerator is called the **mean square between**
+  - the denominator is called the **mean square within**
+  - $df_b = k-1$
+  - $df_w = N-k$
+  - $N$: total number of cases
+  
+---
+
+## Example
+
+>- A clinical trial is run to compare three (3) weight loss programs and participants are randomly assigned to one of the comparison programs and are counseled on the details of the assigned program. 
+  - low-calorie diet
+  - low fat diet
+  - low carbohydrate diet
+  - control
+
+--
+
+>- Participants follow the assigned program for 8 weeks. 
+
+--
+
+>- The outcome of interest is weight loss, defined as the difference in weight measured at the start of the study (baseline) and weight measured at the end of the study measured in pounds. 
+
+---
+
+### Data 
+
+```{r eval = TRUE, echo = FALSE}
+
+study1 <- tibble(
+  
+`Low Calorie` = c("8",
+                 "9",
+                 "6",
+                 "7",
+                 "3"),
+  
+`Low Fat` = c("2",
+              "4",
+              "3",
+              "5",
+              "1"),
+
+`Low Carbohydrate` = c("3",
+                       "5",
+                       "4",
+                       "2",
+                       "3"),
+
+`Control` = c("2",
+              "2",
+              "-1",
+              "0",
+              "3")
+ 
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(study1, 
+      escape = FALSE,
+      align = 'cccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") %>%
+  row_spec(4, background = "#212121") 
+
+```
+
+---
+
+### Process 1/5
+
+*Step 1*: Set up hypotheses and determine level of significance
+
+$H_0: \mu_1=\mu_2=\mu_3=\mu_4$; $\alpha = 0.05$
+
+--
+
+*Step 2*: Select the appropriate test statistic
+
+Using the *F*-statistic
+
+--
+
+*Step 3*: Set up decision rule
+
+- The appropriate critical value can be found in a table of probabilities for the $F$ distribution (Appendix F)
+
+- n order to determine the critical value of $F$, we need
+  - $df_b=4-1=3$
+  - $df_w=20-4=16$
+
+---
+
+### Process 2/5
+
+*Step 4*: Compute the test statistic
+
+- $N=20$
+- $\overline{Y}=3.6$
+
+--
+
+So
+
+\begin{aligned}
+SSB &= 5(6.6-3.6)^2+5(3.0-3.6)^2+5(3.4-3.6)^2+5(1.2-3.6)^2\\
+&= 75.8
+\end{aligned}
+
+---
+
+### Process 3/5
+
+And
+
+- low calorie diet: $$\sum(Y-6.6)^2 = 21.4$$
+
+- low fat diet: $$\sum(Y-3.0)^2 = 10.0$$
+
+- low carbohydrate diet: $$\sum(Y-3.4)^2 = 5.4$$
+
+- control: $$\sum(Y-1.2)^2 = 10.6$$
+
+--
+
+So $SSE=21.4_10.0+5.4_10.6=47.4$
+
+---
+
+### Process 4/5
+
+```{r eval = TRUE, echo = FALSE}
+
+study2 <- tibble(
+  
+`Source of Variation` = c("Between treatment",
+                 "Error",
+                 "Total"),
+  
+`Sum of Squares (SS)` = c("75.8",
+              "47.4",
+              "123.2"),
+
+`Degrees of Freedom (df)` = c("4-1=3",
+                       "20-4=16",
+                       "20-1=19"),
+
+`Means Squared` = c("75.8/3=25.3",
+              "47.4/16",
+              ""),
+
+`F` = c("25.3/3 = 8.43",
+              "",
+              "")
+ 
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+
+kable(study2, 
+      escape = FALSE,
+      align = 'lcccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", bold = TRUE) %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "10em") %>%
+  row_spec(0, background = "#212121") %>%
+  row_spec(2, background = "#212121") 
+
+```
+
+---
+
+### Process 5/5
+
+*Step 5*: Conclusion
+
+Since $8.43\geq 3.24$, we reject $H_0$ and say that *there is a statistically significant difference in the mean weight loss among the four diets*.
+
+---
+
+## That's it. Take a break before our R session!

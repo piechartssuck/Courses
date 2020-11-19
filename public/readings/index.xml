@@ -82,6 +82,38 @@
     </item>
     
     <item>
+      <title>Chi-Square and ANOVAs</title>
+      <link>/readings/13-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/readings/13-readings/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#book-stuff&#34;&gt;Book Stuff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;book-stuff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Stuff&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Read Chapter 11: &lt;em&gt;Analysis of Variance&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Read over &lt;a href=&#34;%22/papers/A%20Gentle%20Introduction%20to%20Bayesian%20Analysis.pdf%22&#34;&gt;&lt;em&gt;A Gentle Introduction to Bayesian Analysis: Applications to
+Developmental Research&lt;/em&gt;&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;You certainly do not have to understand this. It is a different way of thinking. If you can just get the idea of how Bayesian thinking works, that is win!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The What and Why of Statistics</title>
       <link>/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
