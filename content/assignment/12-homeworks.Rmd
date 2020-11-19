@@ -1,13 +1,13 @@
 ---
-title: "Testing Hypotheses"
-linktitle: "Week 10: Testing Hypotheses"
+title: "The Chi-Square Test and Measures of Association"
+linktitle: "Week 12: The Chi-Square Test and Measures of Association"
 output:
   blogdown::html_page:
     toc: true
 menu:
   assignment:
     parent: Homeworks
-    weight: 9
+    weight: 10
 type: docs
 weight: 1
 editor_options: 

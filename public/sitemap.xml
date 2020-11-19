@@ -36,14 +36,6 @@
   </url>
   
   <url>
-    <loc>/assignment/11-homeworks/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/12-homeworks/</loc>
-  </url>
-  
-  <url>
     <loc>/due/10-due/</loc>
   </url>
   
@@ -64,6 +56,10 @@
   </url>
   
   <url>
+    <loc>/assignment/11-homeworks/</loc>
+  </url>
+  
+  <url>
     <loc>/due/11-due/</loc>
   </url>
   
@@ -73,6 +69,10 @@
   
   <url>
     <loc>/readings/11-readings/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/12-homeworks/</loc>
   </url>
   
   <url>
