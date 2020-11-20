@@ -1,8 +1,8 @@
-## ----echo = FALSE, eval = TRUE, message=FALSE-------------------------------------
+## ----echo = FALSE, eval = TRUE, message=FALSE---------------------------------
 library(tidyverse)
 
 
-## ----eval = TRUE, echo = FALSE----------------------------------------------------
+## ----eval = TRUE, echo = FALSE------------------------------------------------
 
 study1 <- tibble(
   
@@ -33,7 +33,7 @@ study1 <- tibble(
 )
 
 
-## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE----------------------
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE------------------
 
 kable(study1, 
       escape = FALSE,
@@ -49,7 +49,7 @@ kable(study1,
 
 
 
-## ----eval = TRUE, echo = FALSE----------------------------------------------------
+## ----eval = TRUE, echo = FALSE------------------------------------------------
 
 study2 <- tibble(
   
@@ -76,7 +76,7 @@ study2 <- tibble(
 )
 
 
-## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE----------------------
+## ----message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE------------------
 
 kable(study2, 
       escape = FALSE,

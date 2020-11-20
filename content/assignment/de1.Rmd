@@ -21,8 +21,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 <center>
-![My cats did not care about this data set but they did yawn!](img/cats.png){#id .class width=50% height=50%}
+![My cats did not care about this data set but they did yawn!](/img/tasks/cats.png){#id .class width=50% height=50%}
+*My cats did not care about this data set but they did yawn!*
 </center>
+
 
 ## Background
 The data set included with this task is derived from the Mythbusters Episode [Is Yawning Contagious?](https://go.discovery.com/tv-shows/mythbusters/videos/is-yawning-contagious-2){target="_blank"}. The file `yawning_data.csv` contains all of the actual data they collected.
