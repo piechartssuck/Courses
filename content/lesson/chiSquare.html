@@ -345,16 +345,16 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 <pre><code>## # A tibble: 149 x 4
 ##    party space       random_1    random_2   
 ##    &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt;       &lt;fct&gt;      
-##  1 Ind   TOO LITTLE  TOO MUCH    TOO LITTLE 
-##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
-##  3 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
-##  4 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
-##  5 Ind   TOO MUCH    TOO LITTLE  TOO MUCH   
-##  6 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
-##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  1 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
+##  3 Dem   ABOUT RIGHT TOO LITTLE  TOO LITTLE 
+##  4 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
+##  5 Ind   TOO MUCH    TOO LITTLE  TOO LITTLE 
+##  6 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
 ##  8 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
-##  9 Dem   TOO LITTLE  ABOUT RIGHT TOO MUCH   
-## 10 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+## 10 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
 ## # … with 139 more rows</code></pre>
 <p>The last two columns are distributions of random samples from the available choices within <code>space</code> and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.</p>
 <div class="figure" style="text-align: center"><span id="fig:figurename5"></span>
@@ -403,7 +403,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 <pre><code>## # A tibble: 1 x 1
 ##   p_val
 ##   &lt;dbl&gt;
-## 1  0.85</code></pre>
+## 1 0.851</code></pre>
 </div>
 </div>
 <div id="interpretation-and-conclusion" class="section level3">

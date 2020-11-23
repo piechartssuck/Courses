@@ -952,6 +952,7 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;/slides/Week%2011/predimed_codebook.csv&#34; target=&#34;_blank&#34;&gt;PREDIMED Codebook&lt;/a&gt; used in the slideshow.&lt;/li&gt;
 &lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-11R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
 &lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-11R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1760,16 +1761,16 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 &lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 4
 ##    party space       random_1    random_2   
 ##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
-##  1 Ind   TOO LITTLE  TOO MUCH    TOO LITTLE 
-##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
-##  3 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
-##  4 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
-##  5 Ind   TOO MUCH    TOO LITTLE  TOO MUCH   
-##  6 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
-##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  1 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
+##  3 Dem   ABOUT RIGHT TOO LITTLE  TOO LITTLE 
+##  4 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
+##  5 Ind   TOO MUCH    TOO LITTLE  TOO LITTLE 
+##  6 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
 ##  8 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
-##  9 Dem   TOO LITTLE  ABOUT RIGHT TOO MUCH   
-## 10 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+## 10 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
 ## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
@@ -1818,7 +1819,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
 ##   p_val
 ##   &amp;lt;dbl&amp;gt;
-## 1  0.85&lt;/code&gt;&lt;/pre&gt;
+## 1 0.851&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
@@ -7132,25 +7133,25 @@ sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &amp;lt;dbl&amp;gt;
-##  1        904289.
-##  2        840847 
-##  3        803055 
-##  4        535149 
-##  5        522755.
-##  6        540973.
-##  7       1006720.
-##  8        596438.
-##  9        230583 
-## 10        528932&lt;/code&gt;&lt;/pre&gt;
+##  1        433847 
+##  2        560429 
+##  3        489841.
+##  4        342491 
+##  5        599938.
+##  6        476878.
+##  7        499999.
+##  8        179574.
+##  9        575453.
+## 10        166998.&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 650974.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 432544.7&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 d. The standard deviation of these 10 means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 232488.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 155355&lt;/code&gt;&lt;/pre&gt;
 or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 &lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;

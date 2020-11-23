@@ -107,20 +107,20 @@ predimed %&gt;%
 ```
 
 ```
-##            group    sex age   smoke   bmi waist       wth htn diab hyperchol famhist
-## 1        Control   Male  58  Former 33.53   122 0.7530864  No   No       Yes      No
-## 2        Control   Male  77 Current 31.05   119 0.7300614 Yes  Yes        No      No
-## 4  MedDiet + VOO Female  72  Former 30.86   106 0.6543210  No  Yes        No     Yes
-## 5 MedDiet + Nuts   Male  71  Former 27.68   118 0.6941177 Yes   No       Yes      No
-## 6  MedDiet + VOO Female  79   Never 35.94   129 0.8062500 Yes   No       Yes      No
-## 8        Control   Male  63  Former 41.66   143 0.8033708 Yes  Yes       Yes      No
-##   hormo p14  toevent event
-## 1    No  10 5.374401   Yes
-## 2    No  10 6.097194    No
-## 4    No   8 5.946612    No
-## 5    No   8 2.907598   Yes
-## 6    No   9 4.761123    No
-## 8  &lt;NA&gt;   9 3.148528   Yes
+##            group    sex age   smoke   bmi waist       wth htn diab hyperchol
+## 1        Control   Male  58  Former 33.53   122 0.7530864  No   No       Yes
+## 2        Control   Male  77 Current 31.05   119 0.7300614 Yes  Yes        No
+## 4  MedDiet + VOO Female  72  Former 30.86   106 0.6543210  No  Yes        No
+## 5 MedDiet + Nuts   Male  71  Former 27.68   118 0.6941177 Yes   No       Yes
+## 6  MedDiet + VOO Female  79   Never 35.94   129 0.8062500 Yes   No       Yes
+## 8        Control   Male  63  Former 41.66   143 0.8033708 Yes  Yes       Yes
+##   famhist hormo p14  toevent event
+## 1      No    No  10 5.374401   Yes
+## 2      No    No  10 6.097194    No
+## 4     Yes    No   8 5.946612    No
+## 5      No    No   8 2.907598   Yes
+## 6      No    No   9 4.761123    No
+## 8      No  &lt;NA&gt;   9 3.148528   Yes
 ```
 
 ---
@@ -150,7 +150,7 @@ predimed_vars &lt;- read_csv("predimed_codebook.csv", na = "NA")
 
 ```
 ## 
-## ── Column specification ─────────────────────────────────────────────────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   Name = col_character(),
 ##   Label = col_character(),
@@ -171,23 +171,23 @@ predimed_vars
 
 ```
 ## # A tibble: 15 x 3
-##    Name      Label                           Codes                                   
-##    &lt;chr&gt;     &lt;chr&gt;                           &lt;chr&gt;                                   
-##  1 group     Intervention group              "Control; MedDiet + Nuts; MedDiet + VOO"
-##  2 sex       Sex                             "Male; Female"                          
-##  3 age       Age                             ""                                      
-##  4 smoke     Smoking                         "Never; Current; Former"                
-##  5 bmi       Body mass index                 ""                                      
-##  6 waist     Waist circumference             ""                                      
-##  7 wth       Waist-to-height ratio           ""                                      
-##  8 htn       Hypertension                    "No; Yes"                               
-##  9 diab      Type-2 diabetes                 "No; Yes"                               
-## 10 hyperchol Dyslipidemia                    "No; Yes"                               
-## 11 famhist   Family history of premature CHD "No; Yes"                               
-## 12 hormo     Hormone-replacement therapy     "No; Yes"                               
-## 13 p14       MeDiet Adherence score          ""                                      
-## 14 toevent   follow-up to main event (years) ""                                      
-## 15 event     AMI, stroke, or CV Death        "No; Yes"
+##    Name      Label                         Codes                                
+##    &lt;chr&gt;     &lt;chr&gt;                         &lt;chr&gt;                                
+##  1 group     Intervention group            "Control; MedDiet + Nuts; MedDiet + …
+##  2 sex       Sex                           "Male; Female"                       
+##  3 age       Age                           ""                                   
+##  4 smoke     Smoking                       "Never; Current; Former"             
+##  5 bmi       Body mass index               ""                                   
+##  6 waist     Waist circumference           ""                                   
+##  7 wth       Waist-to-height ratio         ""                                   
+##  8 htn       Hypertension                  "No; Yes"                            
+##  9 diab      Type-2 diabetes               "No; Yes"                            
+## 10 hyperchol Dyslipidemia                  "No; Yes"                            
+## 11 famhist   Family history of premature … "No; Yes"                            
+## 12 hormo     Hormone-replacement therapy   "No; Yes"                            
+## 13 p14       MeDiet Adherence score        ""                                   
+## 14 toevent   follow-up to main event (yea… ""                                   
+## 15 event     AMI, stroke, or CV Death      "No; Yes"
 ```
 
 ---
@@ -509,8 +509,8 @@ plot(export_comparison["age"]) # histogram and normality plot by age
 ```
 
 ```
-## Warning in norm.plot(x = x.var, file = file.i, var.label.x = var.labels[i], : p-value
-## for normality in Age could not be calculated
+## Warning in norm.plot(x = x.var, file = file.i, var.label.x = var.labels[i], : p-
+## value for normality in Age could not be calculated
 ```
 
 &lt;img src="Slides-Week-11R_files/figure-html/unnamed-chunk-18-1.png" width="40%" style="display: block; margin: auto;" /&gt;
