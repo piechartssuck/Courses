@@ -68,10 +68,6 @@
   </url>
   
   <url>
-    <loc>/due/13-due/</loc>
-  </url>
-  
-  <url>
     <loc>/example/12-example/</loc>
   </url>
   
@@ -85,6 +81,10 @@
   
   <url>
     <loc>/lesson/chisquare/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/13-due/</loc>
   </url>
   
   <url>

@@ -1,6 +1,6 @@
 ---
-title: "The Chi-Square Test and Measures of Association"
-linktitle: "Week 12: The Chi-Square Test and Measures of Association"
+title: "Chi-Square and ANOVAs"
+linktitle: "Week 13: Chi-Square and ANOVAs"
 output:
   blogdown::html_page:
     toc: true
@@ -35,10 +35,10 @@ wk_post <- tibble(
                unchecked),
 
 Description = c("Submit problems 1, 2, 3, 5, 7, and 13 in Chapter 10.",
-               "Take a look at the R Walkthroughs on ANOVAs."),
+               "Take a look at jamovi."),
 
-Location = c("[Link](/assignment/11-homeworks/#assignment-1)",
-             "[Link](/lesson/chisquare/)")
+Location = c("[Link](/assignment/13-homeworks/#assignment-1)",
+             "[Link](/lesson/13-lesson/#jamovi-1)")
 )
 ```
 
@@ -52,10 +52,12 @@ kable(wk_post,
   column_spec(3, width = "10em")
 ```
 
+<!--
 <br />
 
-### What to do for Week 13 before coming to class^[For preparation.]
+### What to do for Week 14 before coming to class^[For preparation.]
 
+<!--
 ```{r eval = TRUE, echo = FALSE}
 book <- as.character(fontawesome::fa("book", fill = "steelblue"))
 
@@ -89,6 +91,7 @@ kable(wk_pre,
   column_spec(2, width = "30em") %>%
   column_spec(3, width = "10em")
 ```
+-->
 
 ### Extra Credit
 
