@@ -1,0 +1,16 @@
+﻿Name,Label,Codes
+group,Intervention group,Control; MedDiet + Nuts; MedDiet + VOO
+sex,Sex,Male; Female
+age,Age,
+smoke,Smoking,Never; Current; Former
+bmi,Body mass index,
+waist,Waist circumference,
+wth,Waist-to-height ratio,
+htn,Hypertension,No; Yes
+diab,Type-2 diabetes,No; Yes
+hyperchol,Dyslipidemia,No; Yes
+famhist,Family history of premature CHD,No; Yes
+hormo,Hormone-replacement therapy,No; Yes
+p14,MeDiet Adherence score,
+toevent,follow-up to main event (years),
+event,"AMI, stroke, or CV Death",No; Yes

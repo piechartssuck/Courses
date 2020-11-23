@@ -503,14 +503,14 @@ t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2011/Slides-Week-10.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2011/Slides-Week-11.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;/slides/Week 11/Slides-Week-10.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;/slides/Week 11/Slides-Week-11.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-10.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-11.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;textbook-class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -523,7 +523,19 @@ t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-comparing-groups&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough: Comparing Groups&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/comparinggroups/&#34;&gt;walkthrough&lt;/a&gt; about comparing groups.&lt;/p&gt;
+&lt;p&gt;Click on the presentation itself and then you may&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
+&lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%209/Slides-Week-9R.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;/slides/Week 11/Slides-Week-11R.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-11R.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation above.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;/slides/Week%2011/Slides-Week-11R.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in the presentation.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -552,7 +564,7 @@ t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2011/Slides-Week-11.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;/slides/Week%2012/Slides-Week-12.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe src=&#34;/slides/Week 12/Slides-Week-12.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
@@ -566,8 +578,8 @@ t.test(sleep$extra, sleep$group, paired = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2012/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week12/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2012/SSDS_Ch10.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week12/SSDS_Ch10.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-chi-square&#34; class=&#34;section level3&#34;&gt;
@@ -914,16 +926,16 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 &lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 4
 ##    party space       random_1    random_2   
 ##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
-##  1 Ind   TOO LITTLE  TOO LITTLE  TOO LITTLE 
-##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
-##  3 Dem   ABOUT RIGHT TOO MUCH    TOO LITTLE 
-##  4 Ind   TOO LITTLE  TOO LITTLE  TOO MUCH   
-##  5 Ind   TOO MUCH    ABOUT RIGHT ABOUT RIGHT
-##  6 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
-##  7 Ind   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
-##  8 Dem   ABOUT RIGHT TOO MUCH    TOO MUCH   
+##  1 Ind   TOO LITTLE  TOO MUCH    TOO LITTLE 
+##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  3 Dem   ABOUT RIGHT TOO LITTLE  ABOUT RIGHT
+##  4 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  5 Ind   TOO MUCH    TOO LITTLE  TOO MUCH   
+##  6 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  8 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
 ##  9 Dem   TOO LITTLE  ABOUT RIGHT TOO MUCH   
-## 10 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
+## 10 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
 ## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
@@ -972,7 +984,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
 ##   p_val
 ##   &amp;lt;dbl&amp;gt;
-## 1  0.87&lt;/code&gt;&lt;/pre&gt;
+## 1  0.85&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
@@ -1026,7 +1038,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#in-class-notes&#34;&gt;In Class Notes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#textbook-class-notes&#34;&gt;Textbook Class Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#r-walkthrough-chi-square&#34;&gt;R Walkthrough: Chi Square&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jamovi&#34;&gt;Jamovi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1051,13 +1063,13 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2013/SSDS_Ch11.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week13/SSDS_Ch11.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2013/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week13/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;r-walkthrough-chi-square&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;R Walkthrough: Chi Square&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/moreaboutchisquare/&#34;&gt;walkthrough&lt;/a&gt; more about the &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt; statistic.&lt;/p&gt;
+&lt;div id=&#34;jamovi&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Jamovi&lt;/h3&gt;
+&lt;p&gt;Download and explore the &lt;a href=&#34;https://www.jamovi.org/&#34; target=&#34;_blank&#34;&gt;jamovi&lt;/a&gt; software that uses the power and open source abilities of R in an environment that resembles SPSS.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

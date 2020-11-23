@@ -72,11 +72,11 @@ There are three things to consider:
 
 --
 
->-Column totals: Add across columns
+>- Column totals: Add across columns
 
 --
 
->-Row totals: Add across rows
+>- Row totals: Add across rows
 
 ---
 

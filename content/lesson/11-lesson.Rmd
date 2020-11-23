@@ -20,15 +20,15 @@ editor_options:
 
   + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
   + Press the letter **O** at any point to see see a tile view of the slideshow.
-  + Use this [link](/slides/Week 11/Slides-Week-10.html){target="_blank"} to view a larger version of slideshow in a new window.
+  + Use this [link](/slides/Week 11/Slides-Week-11.html){target="_blank"} to view a larger version of slideshow in a new window.
         
 ```{r echo = FALSE}
-knitr::include_url("/slides/Week 11/Slides-Week-10.html")
+knitr::include_url("/slides/Week 11/Slides-Week-11.html")
 ```
 
 You can download 
 
-- a [PDF](/slides/Week 11/Slides-Week-10.pdf){target="_blank"} of the presentation. 
+- a [PDF](/slides/Week 11/Slides-Week-11.pdf){target="_blank"} of the presentation. 
 
 ### Textbook Class Notes
 Download the textbook
@@ -38,4 +38,18 @@ Download the textbook
 
 ### R Walkthrough: Comparing Groups
 
-Take a look at a [walkthrough](/lesson/comparinggroups/) about comparing groups.
+Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 9/Slides-Week-9R.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 11/Slides-Week-11R.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 11/Slides-Week-11R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 11/Slides-Week-11R.R){target="_blank"} file of just the R chunks used in the presentation.

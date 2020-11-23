@@ -20,7 +20,7 @@ editor_options:
 
   + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
   + Press the letter **O** at any point to see see a tile view of the slideshow.
-  + Use this [link](/slides/Week 11/Slides-Week-11.html){target="_blank"} to view a larger version of slideshow in a new window.
+  + Use this [link](/slides/Week 12/Slides-Week-12.html){target="_blank"} to view a larger version of slideshow in a new window.
         
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 12/Slides-Week-12.html")
@@ -33,8 +33,8 @@ You can download
 ### Textbook Class Notes
 Download the textbook
 
-- [Ch 12 PDF](/slides/Week 12/SSDS_Ch12.pdf){target="_blank"}, 
-- [Ch 12 Outline](/lecture_notes/Week12/SSDS_Ch12.pdf){target="_blank"},
+- [Ch 12 PDF](/slides/Week 12/SSDS_Ch10.pdf){target="_blank"}, 
+- [Ch 12 Outline](/lecture_notes/Week12/SSDS_Ch10.pdf){target="_blank"},
 
 ### R Walkthrough: Chi Square
 

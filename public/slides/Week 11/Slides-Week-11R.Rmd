@@ -102,9 +102,239 @@ Let's use one of the preloaded data sets: `PREDIMED`.
 
 >- longitudinal study containing several baseline characteristics of the participants as well as events occurred during the 7 years follow-up period given by variables `event` and `toevent`.
 
->-Each individual has been assigned to a three intervention diet randomly given by the variable `group`.
+>- Each individual has been assigned to a three intervention diet randomly given by the variable `group`.
+
+>- You can read the study via [PubMed](https://pubmed.ncbi.nlm.nih.gov/29897866/)
+
+--
+
+Run the following
+```{r eval = TRUE, echo = TRUE}
+data("predimed")
+```
 
 ---
 
+# View the Data
+
+We can take a look at the data by 
+```{r eval = TRUE, echo = TRUE}
+predimed %>%
+  head()
+```
+
+---
+
+# Variable Names
+
+You can take a look at the variables in the data set by running
+```{r eval = TRUE, echo = TRUE}
+names(predimed)
+```
+
+--
+
+Well that's not overtly helpful. Oh wait there's a codebook!
+
+```{r echo = TRUE, eval = TRUE}
+predimed_vars <- read_csv("predimed_codebook.csv", na = "NA")
+```
+
+---
+
+# Code Book 
+
+Ok so let's take a look!
+
+```{r echo = TRUE, eval = TRUE}
+predimed_vars
+```
+
+---
+
+# Descriptive Tables for Observations
+
+If you want to create a quick table full of descriptives that *aren't meant for exporting*, use the `descrTable()` command
+
+```{r echo = TRUE, eval = TRUE}
+descrTable(group ~ ., predimed)
+```
+
+---
+
+# Descriptive Tables for Analysis 
+
+If you want to create a table full of descriptives that *you can use for analysis*, use the `compareGroups()` command
+
+```{r echo = TRUE, eval = TRUE}
+comparison <- compareGroups(group ~ ., predimed)
+
+comparison
+```
+
+---
+
+# Subsetting
+
+The previous example gave us the gambit. In `compareGroups(group ~ ., predimed)`, all of the variables were compared to each other. What if we just want to look at a few variables?
+
+In this first example, we'll look at the impact of age, smoking, waist size, and hypercholesterol together on the group
+
+```{r echo = TRUE, eval = TRUE}
+compareGroups(group ~ age + smoke + waist + hyperchol, data = predimed)
+```
+
+Notice by using the *p*-value from the column `p.value`, we have our first indicator that something happened. It is NOT a guarantee!
+
+---
+
+# A Quick Note About the *p*-value
+
+You may have read articles where the outcomes of a study are labeled as a fact because the results were *statistically significant*. 
+
+--
+
+- **What has happened?** Historically and even to this day, *p*-values are commonly used to test and dismiss $H_0$, which generally states that there is no 
+  - difference between two groups, or 
+  - correlation between a pair of characteristics. 
+
+--
+
+  Traditionally, the mistake has been in the interpretation and reliance on the notion that 
+  
+ *the smaller the **p-value**, the less likely an observed set of values would occur by chance.*
+  
+  So $p\leq0.05$ is generally taken to mean that a finding is statistically significant and therefore warrants publication which the [American Statistical Association](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf) and [anyone who knows better than to rely on a single measure](https://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517) can tell you is nonsense (what is called dumpster or garbage stats). 
+
+---
+
+# Ok That Wasn't a Quick A Note About the *p*-value
+
+At best the *p*-value is what we call an *indicator* of something happening. Essentially it is one piece of evidence of many!
+
+--
+
+- **What it doesn't mean!** Firstly $p\leq0.05$
+***does not imply that there is a 95% chance that $H_0$ is correct.***
+
+- **What it does mean!** It signifies that if the $H_0$ is true and all other assumptions made are valid, then there is a 5% chance of obtaining a result at least as extreme as the one observed. 
+
+  - **Most important!** A *p*-value cannot indicate the importance of a finding
+    - *Example*: a medication can have a statistically significant effect on patients’ blood glucose levels without having a therapeutic effect.
+
+- **Time to get rid of it?** Well no. It is an indicator but just because its not the end all be all measure doesn't mean it's not useful. So
+  - use it *but* also use others! For example, confidence intervals are another piece of information to use. Other approaches include Bayesian methods and effect sizes.
+
+---
+
+# Ok ok I promise this is the last slide strictly about *p*-values
+
+Here is a good summary...well a summary at least:
+
+NOPE: <br>*p*-values 
+  - are not indicating *reproducibility* or *evidence*
+  - do not *prove* or *disprove* a hypothesis
+  - cannot be used to *test competitive* hypotheses
+
+YUP: <br>*p*-values
+  - are indicators that something is happening
+  - do imply a probability exists
+  - can be misinterpreted yielding Type I and Type II Errors
+  
+---
+
+# Back to Subsetting
+
+Now that we hopefully have an idea what the *p*-value implies, let's look at the impact of age, smoking, waist size, and hypercholesterol together on the the sample of females
+
+```{r echo = TRUE, eval = TRUE}
+compareGroups(group ~ age + smoke + waist + hyperchol, data = predimed, 
+              subset = sex == "Female")
+
+```
+
+It seems that `Age` and `Waist circumference` may impact the `Female` population in the study (i.e. sample). We'd have to investigate *all* of the variables more to know for sure.
+
+---
+
+# Getting all of the *p*-values
+
+If we wanted to get an idea if the variables impact each other, we can use
+
+```{r echo = TRUE, eval = TRUE}
+pvals <- getResults(comparison, "p.overall")
+
+pvals
+```
+
+Remember this is considering all of the variables, not those we subsetted!
+
+---
+
+# APA Tables ...
+
+We can also create an APA 7th edition formatted table!
+
+```{r echo = TRUE, eval = TRUE}
+export_comparison <- createTable(comparison)
+
+export_comparison
+```
+
+Remember this is considering all of the variables, not those we subsetted!
+
+---
+
+# ... and Plot ...
+
+And we can also create an APA 7th edition formatted plot!
+
+
+```{r echo = TRUE, eval = TRUE, out.width = '50%', fig.align='center'}
+plot(export_comparison["sex"]) # barplot by sex
+```
+
+
+---
+
+# ... and Other Plots
+
+```{r echo = TRUE, eval = TRUE, out.width = '40%', fig.align='center'}
+plot(export_comparison["age"]) # histogram and normality plot by age
+```
+
+---
+
+# Exporting
+
+Finally you can export your items! Here are some common ways to export tables
+
+```{r echo = TRUE, eval = FALSE}
+export2csv(export_comparison, 
+           file = "comparison.csv") # as a csv file
+
+export2word(export_comparison, 
+            file = "comparison.docx") # as a word file
+
+export2xls(export_comparison, 
+           file = "comparison.xls") # as a word file
+
+export2pdf(export_comparison, 
+           file = "comparison.pdf") # as a pdf file
+```
+
+---
+
+# One More Thing: The GUI
+
+If you do not like the command line interface of R or in general, there is an experimental click-click based built in app you can by typing 
+
+```{r echo = TRUE, eval = FALSE}
+cGroupsGUI(predimed)
+```
+
+It appears to work fine on a PC. However if you have a Mac and *did not* install [XQuartz](https://www.xquartz.org/) as originally instructed, there is a *statistically significant* chance it may (a) not load or (b) have quirks if it does.
+
+---
 
 ## Thats it!

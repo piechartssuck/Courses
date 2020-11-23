@@ -33,9 +33,9 @@ You can download
 ### Textbook Class Notes
 Download the textbook
 
-- [Ch 12 PDF](/slides/Week 13/SSDS_Ch11.pdf){target="_blank"}, 
-- [Ch 12 Outline](/lecture_notes/Week13/SSDS_Ch11.pdf){target="_blank"},
+- [Ch 12 PDF](/slides/Week 13/SSDS_Ch12.pdf){target="_blank"}, 
+- [Ch 12 Outline](/lecture_notes/Week13/SSDS_Ch12.pdf){target="_blank"},
 
-### R Walkthrough: Chi Square
+### Jamovi
 
-Take a look at a [walkthrough](/lesson/moreaboutchisquare/) more about the $\chi^2$ statistic.
+Download and explore the [jamovi](https://www.jamovi.org/){target="_blank"} software that uses the power and open source abilities of R in an environment that resembles SPSS.
