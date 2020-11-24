@@ -27,8 +27,8 @@ This now sets us up to do meaningful statistics in R.
 ### Book Materials
 Download the textbook
 
-- [PowerPoint](/slides/Week 3/SSDS_Ch3.pptx){target="_blank"} and
-- [Lecture Notes](/lecture_notes/Week 3/SSDS_Ch3.docx){target="_blank"}.
+- [Chapter 3 PowerPoint](/slides/Week 3/SSDS_Ch3.PPTX){target="_blank"}
+- [Chapter 3 Lecture Notes](/lecture_notes/Week 3/SSDS_Ch3.docx){target="_blank"}
 
 ### Class Notes
 Download the class

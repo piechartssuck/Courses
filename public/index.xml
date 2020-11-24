@@ -286,10 +286,10 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 Outline&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2010/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 PDF&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week10/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch7.PPTX&#34; target=&#34;_blank&#34;&gt;Ch 7 PowerPoint&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch7.docx&#34; target=&#34;_blank&#34;&gt;Ch 7 Lecture Notes&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2010/SSDS_Ch8.PPTX&#34; target=&#34;_blank&#34;&gt;Ch 8 PowerPoint&lt;/a&gt;, and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week10/SSDS_Ch8.docx&#34; target=&#34;_blank&#34;&gt;Ch 8 Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-testing&#34; class=&#34;section level3&#34;&gt;
@@ -936,8 +936,8 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2011/SSDS_Ch9.pdf&#34; target=&#34;_blank&#34;&gt;Ch 9 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week11/SSDS_Ch9.pdf&#34; target=&#34;_blank&#34;&gt;Ch 9 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2011/SSDS_Ch9.PPTX&#34; target=&#34;_blank&#34;&gt;Ch 9 PowerPoint&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week11/SSDS_Ch9.docx&#34; target=&#34;_blank&#34;&gt;Ch 9 Lecture Notes&lt;/a&gt;,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-comparing-groups&#34; class=&#34;section level3&#34;&gt;
@@ -1219,8 +1219,8 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2012/SSDS_Ch10.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week12/SSDS_Ch10.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2012/SSDS_Ch10.PPTX&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week12/SSDS_Ch10.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-chi-square&#34; class=&#34;section level3&#34;&gt;
@@ -1589,16 +1589,16 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 &lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 4
 ##    party space       random_1    random_2   
 ##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
-##  1 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
-##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
-##  3 Dem   ABOUT RIGHT TOO LITTLE  TOO LITTLE 
-##  4 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
-##  5 Ind   TOO MUCH    TOO LITTLE  TOO LITTLE 
-##  6 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
-##  7 Ind   ABOUT RIGHT ABOUT RIGHT TOO LITTLE 
-##  8 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
-##  9 Dem   TOO LITTLE  TOO LITTLE  TOO LITTLE 
-## 10 Ind   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+##  1 Ind   TOO LITTLE  TOO MUCH    TOO LITTLE 
+##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
+##  3 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  4 Ind   TOO LITTLE  TOO LITTLE  TOO LITTLE 
+##  5 Ind   TOO MUCH    ABOUT RIGHT TOO LITTLE 
+##  6 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  8 Dem   ABOUT RIGHT TOO LITTLE  TOO MUCH   
+##  9 Dem   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
+## 10 Ind   TOO LITTLE  TOO MUCH    TOO LITTLE 
 ## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
@@ -1647,7 +1647,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
 ##   p_val
 ##   &amp;lt;dbl&amp;gt;
-## 1 0.851&lt;/code&gt;&lt;/pre&gt;
+## 1 0.862&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
@@ -1929,8 +1929,8 @@ If you want to take a look at ANOVA+&lt;a href=&#34;#fn1&#34; class=&#34;footnot
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2013/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week13/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2013/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week13/SSDS_Ch12.pdf&#34; target=&#34;_blank&#34;&gt;Ch 12 Outline&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;jamovi&#34; class=&#34;section level3&#34;&gt;
@@ -2176,8 +2176,8 @@ Watch a video on Data Visualization.&lt;a href=&#34;#fn3&#34; class=&#34;footnot
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch1.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%201/SSDS_Ch1.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 1 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%201/SSDS_Ch1.docx&#34; target=&#34;_blank&#34;&gt;Chapter 1 Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -2451,16 +2451,16 @@ Watch a video on the Measures of Central Tendency.&lt;a href=&#34;#fn3&#34; clas
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%202/SSDS_Ch2.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%202/SSDS_Ch2.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 2 PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/SSDS_Ch2.docx&#34; target=&#34;_blank&#34;&gt;Chapter 2 Lecture Notes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the in-class slides via&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%202/ICS_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/ICN_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%202/ICS_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%202/ICN_Ch2.pdf&#34; target=&#34;_blank&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
@@ -2725,8 +2725,8 @@ The following video is a bit of a compilation of things that come up that are fr
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%203/SSDS_Ch3.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%203/SSDS_Ch3.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%203/SSDS_Ch3.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 3 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%203/SSDS_Ch3.docx&#34; target=&#34;_blank&#34;&gt;Chapter 3 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -3015,8 +3015,8 @@ The following video is a bit of a compilation of things that come up that are fr
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%204/SSDS_Ch4.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%204/SSDS_Ch4.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%204/SSDS_Ch4.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 4 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%204/SSDS_Ch4.docx&#34; target=&#34;_blank&#34;&gt;Chapter 4 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -3292,8 +3292,8 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%205/SSDS_Ch5.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch5.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%205/SSDS_Ch5.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 5 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch5.docx&#34; target=&#34;_blank&#34;&gt;Chapter 5 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -3398,8 +3398,8 @@ Watch videos on Experimental Designs and Sampling Methods.&lt;a href=&#34;#fn3&#
 &lt;h3&gt;Book Materials&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch6.pptx&#34; target=&#34;_blank&#34;&gt;PowerPoint&lt;/a&gt; and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Lecture Notes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch6.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 6 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Chapter 6 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -3845,9 +3845,11 @@ Known since we already know what we know.
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#book-materials&#34;&gt;Book Materials&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#class-notes&#34;&gt;Class Notes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#r-walkthrough-an-incomplete-review-of-descriptive-statistics-commands-in-r&#34;&gt;R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#kaggle&#34;&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#other-sites&#34;&gt;Other Sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -3859,6 +3861,14 @@ Known since we already know what we know.
 &lt;li&gt;Study types and cautionary tales&lt;/li&gt;
 &lt;li&gt;Sampling strategies and experimental design&lt;/li&gt;
 &lt;li&gt;Case study&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;book-materials&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Book Materials&lt;/h3&gt;
+&lt;p&gt;Download the textbook&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%206/SSDS_Ch6.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 6 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week%205/SSDS_Ch6.docx&#34; target=&#34;_blank&#34;&gt;Chapter 6 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-notes&#34; class=&#34;section level3&#34;&gt;
@@ -3897,13 +3907,18 @@ Known since we already know what we know.
 &lt;/div&gt;
 &lt;div id=&#34;kaggle&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Kaggle&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/&#34; target=&#34;_blank&#34;&gt;Kaggle&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; is an online learning community for data scientists and machine learning practitioners&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; That’s great but what its really good for are tutorials/walkthroughs and dfinding data sets. In an upcoming data task, you’ll be asked to locate a data set of interest to perform some analysis and Kaggle is a great place to start so if you get a chance, sign up for free and look around. However for now, there is an excellent &lt;a href=&#34;https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial-1&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;dplyr&lt;/code&gt; walkthrough&lt;/a&gt; that was posted recently and may be helpful to you for the exam.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/&#34; target=&#34;_blank&#34;&gt;Kaggle&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; is an online learning community for data scientists and machine learning practitioners&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; That’s great but its greatest benefit are the numerous tutorials/walkthroughs provided and also to locate data sets&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. In an upcoming data task, you’ll be asked to locate a data set of interest to perform some analysis and Kaggle is a great place to start so if you get a chance, sign up for free and look around. However for now, there is an excellent &lt;a href=&#34;https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial-1&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;dplyr&lt;/code&gt; walkthrough&lt;/a&gt; that was posted recently and may be helpful to you for the exam.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-sites&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other Sites&lt;/h3&gt;
+&lt;p&gt;Head over to the &lt;a href=&#34;/resource/data/&#34;&gt;Data&lt;/a&gt; page under Resources to find more outlets!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Subsidiary of Google.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Stolen from Wikipedia.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;All data sets are submitted by people so while its fun for &lt;em&gt;window shopping&lt;/em&gt;, if possible find the original source. Typically users will list where their posted data sets can be found publicly&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -4357,10 +4372,10 @@ An extra credit task on using Rmarkdown for reporting purposes is still availabl
 &lt;h3&gt;Textbook Class Notes&lt;/h3&gt;
 &lt;p&gt;Download the textbook&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 PDF&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch7.pdf&#34; target=&#34;_blank&#34;&gt;Ch 7 Outline&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/slides/Week%2010/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 PDF&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week10/SSDS_Ch8.pdf&#34; target=&#34;_blank&#34;&gt;Ch 8 Outline&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%209/SSDS_Ch7.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 7 PowerPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week9/SSDS_Ch7.docx&#34; target=&#34;_blank&#34;&gt;Chapter 7 Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/slides/Week%2010/SSDS_Ch8.PPTX&#34; target=&#34;_blank&#34;&gt;Chapter 8 PowerPoint&lt;/a&gt; and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/lecture_notes/Week10/SSDS_Ch8.docx&#34; target=&#34;_blank&#34;&gt;Chapter 8 Lecture Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough-confidence-intervals&#34; class=&#34;section level3&#34;&gt;
@@ -7105,25 +7120,25 @@ sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
 ##    `Sample Means`
 ##             &amp;lt;dbl&amp;gt;
-##  1        433847 
-##  2        560429 
-##  3        489841.
-##  4        342491 
-##  5        599938.
-##  6        476878.
-##  7        499999.
-##  8        179574.
-##  9        575453.
-## 10        166998.&lt;/code&gt;&lt;/pre&gt;
+##  1        248705.
+##  2        536761.
+##  3        733127.
+##  4        257439 
+##  5        526281.
+##  6        522720 
+##  7        283032 
+##  8        519178.
+##  9        581282.
+## 10        361932.&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 432544.7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 457045.9&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 d. The standard deviation of these 10 means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 155355&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 161091.2&lt;/code&gt;&lt;/pre&gt;
 or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
 &lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;

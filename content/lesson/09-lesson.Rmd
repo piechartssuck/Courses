@@ -33,10 +33,10 @@ You can download
 ### Textbook Class Notes
 Download the textbook
 
-- [Ch 7 PDF](/slides/Week 9/SSDS_Ch7.pdf){target="_blank"}, 
-- [Ch 7 Outline](/lecture_notes/Week9/SSDS_Ch7.pdf){target="_blank"},
-- [Ch 8 PDF](/slides/Week 10/SSDS_Ch8.pdf){target="_blank"}, and
-- [Ch 8 Outline](/lecture_notes/Week10/SSDS_Ch8.pdf){target="_blank"}.
+- [Chapter 7 PowerPoint](/slides/Week 9/SSDS_Ch7.PPTX){target="_blank"} 
+- [Chapter 7 Lecture Notes](/lecture_notes/Week9/SSDS_Ch7.docx){target="_blank"}
+- [Chapter 8 PowerPoint](/slides/Week 10/SSDS_Ch8.PPTX){target="_blank"} and
+- [Chapter 8 Lecture Notes](/lecture_notes/Week10/SSDS_Ch8.docx){target="_blank"}
 
 ### R Walkthrough: Confidence Intervals
 

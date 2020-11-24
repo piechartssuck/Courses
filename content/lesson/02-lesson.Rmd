@@ -25,14 +25,14 @@ The second [Data Camp](https://www.datacamp.com/){target="_blank"} module is due
 ### Book Materials
 Download the textbook
 
-- [PowerPoint](/slides/Week 2/SSDS_Ch2.pptx){target="_blank"} and
-- [Lecture Notes](/lecture_notes/Week 2/SSDS_Ch2.docx){target="_blank"}.
+- [Chapter 2 PowerPoint](/slides/Week 2/SSDS_Ch2.PPTX){target="_blank"} and
+- [Chapter 2 Lecture Notes](/lecture_notes/Week 2/SSDS_Ch2.docx){target="_blank"}.
 
 ### Class Notes
 Download the in-class slides via
 
-- [PDF](/slides/Week 2/ICS_Ch2.pdf){target="_blank"} and 
-- [Outline](/lecture_notes/Week 2/ICN_Ch2.pdf){target="_blank"}.
+- [PDF](/slides/Week 2/ICS_Ch2.pdf){target="_blank"} 
+- [Outline](/lecture_notes/Week 2/ICN_Ch2.pdf){target="_blank"}
 
 ### R Walkthrough
 

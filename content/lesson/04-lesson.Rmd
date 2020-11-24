@@ -28,8 +28,8 @@ As promised, we start performing basic statistical analyses in R.
 ### Book Materials
 Download the textbook
 
-- [PowerPoint](/slides/Week 4/SSDS_Ch4.pptx){target="_blank"} and
-- [Lecture Notes](/lecture_notes/Week 4/SSDS_Ch4.docx){target="_blank"}.
+- [Chapter 4 PowerPoint](/slides/Week 4/SSDS_Ch4.PPTX){target="_blank"}
+- [Chapter 4 Lecture Notes](/lecture_notes/Week 4/SSDS_Ch4.docx){target="_blank"}
 
 ### Class Notes
 *Posted after class*

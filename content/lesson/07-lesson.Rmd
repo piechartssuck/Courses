@@ -22,6 +22,12 @@ The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due.
 - Sampling strategies and experimental design
 - Case study
 
+### Book Materials
+Download the textbook
+
+- [Chapter 6 PowerPoint](/slides/Week 6/SSDS_Ch6.PPTX){target="_blank"}
+- [Chapter 6 Lecture Notes](/lecture_notes/Week 5/SSDS_Ch6.docx){target="_blank"}
+
 ### Class Notes
 
 - Download the class slides: Remember to click on the presentation itself and then you may
@@ -58,4 +64,7 @@ You can download
 
 ### Kaggle
 
-[Kaggle](https://www.kaggle.com/){target="_blank"}^[Subsidiary of Google.] is an online learning community for data scientists and machine learning practitioners^[Stolen from Wikipedia.] That's great but what its really good for are tutorials/walkthroughs and dfinding data sets. In an upcoming data task, you'll be asked to locate a data set of interest to perform some analysis and Kaggle is a great place to start so if you get a chance, sign up for free and look around. However for now, there is an excellent [`dplyr` walkthrough](https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial-1){target="_blank"} that was posted recently and may be helpful to you for the exam.
+[Kaggle](https://www.kaggle.com/){target="_blank"}^[Subsidiary of Google.] is an online learning community for data scientists and machine learning practitioners^[Stolen from Wikipedia.] That's great but its greatest benefit are the numerous tutorials/walkthroughs provided and also to locate data sets^[All data sets are submitted by people so while its fun for *window shopping*, if possible find the original source. Typically users will list where their posted data sets can be found publicly]. In an upcoming data task, you'll be asked to locate a data set of interest to perform some analysis and Kaggle is a great place to start so if you get a chance, sign up for free and look around. However for now, there is an excellent [`dplyr` walkthrough](https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial-1){target="_blank"} that was posted recently and may be helpful to you for the exam.
+
+### Other Sites
+Head over to the [Data](/resource/data/) page under Resources to find more outlets!
