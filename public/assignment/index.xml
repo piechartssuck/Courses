@@ -2434,13 +2434,11 @@ z &amp;amp;= \dfrac{970-976}{34.9}\\\\
 \end{aligned}\]&lt;/span&gt;
 &lt;p&gt;So &lt;span class=&#34;boxed&#34;&gt;Team B is better on both eligibility and retention than Team A&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team B&lt;/strong&gt; a &lt;strong&gt;&lt;em&gt;retention criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.17\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
-&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4325\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.36\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
+&lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;40%&#34; /&gt;
+which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.4325\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For &lt;strong&gt;Team A&lt;/strong&gt; an &lt;strong&gt;&lt;em&gt;eligibility criterion&lt;/em&gt;&lt;/strong&gt; score of &lt;span class=&#34;math inline&#34;&gt;\(z=-0.36\)&lt;/span&gt; is below the mean and the corresponding proportion can be viewed by
 &lt;img src=&#34;/assignment/05-homeworks_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;40%&#34; /&gt;
-which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;math inline&#34;&gt;\(0.3594\)&lt;/span&gt; implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.&lt;/li&gt;
+which is the area between &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; and the tail, or &lt;span class=&#34;math inline&#34;&gt;\(0.3594\)&lt;/span&gt; implying about the &lt;span class=&#34;boxed&#34;&gt;35th percentile&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/details&gt;
 &lt;/p&gt;
@@ -2495,6 +2493,11 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
+
 &lt;/style&gt;
 &lt;div id=&#34;week-7-problem-set&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Week 7 Problem Set&lt;/h3&gt;
@@ -2508,11 +2511,11 @@ tr:nth-child(even) { background: #ffffff;
 &lt;summary&gt;1&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Although there are problems with the collection of data from all Americans, the census is assumed to be complete, so the mean age would be a &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt;.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;A &lt;span class=&#34;boxed&#34;&gt;statistic&lt;/span&gt; because it is estimated from a sample.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;A &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt; because the school would have information on all its students.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;A &lt;span class=&#34;boxed&#34;&gt;statistic&lt;/span&gt; because it is estimated from a sample.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;A &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt; because the school has information on all employees.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Although there are problems with the collection of data from all Americans, the census is assumed to be complete, so the mean age would be a &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;span class=&#34;boxed&#34;&gt;statistic&lt;/span&gt; because it is estimated from a sample.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt; because the school would have information on all its students.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;span class=&#34;boxed&#34;&gt;statistic&lt;/span&gt; because it is estimated from a sample.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;span class=&#34;boxed&#34;&gt;parameter&lt;/span&gt; because the school has information on all employees.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
@@ -2520,8 +2523,8 @@ tr:nth-child(even) { background: #ffffff;
 &lt;summary&gt;2&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;First, the population is not clearly defined. Are the population subscribers to the newspaper? Readers of the newspaper? Or some other set of people? Even given this uncertainty, the letters to the editor would only be a random sample of a population if, clearly, they came randomly from that population. But there is no reason to assume this to be the case. People with stronger opinions, who can write reasonably well, and who have the time to write are more likely to write the editor. Since these characteristics are not distributed randomly throughout the adult population, it is improbable that the letters are a random sample.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;The mayor might consider forming a coalition to randomly sample landline and cell phone numbers of city residents.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;First, the population is not clearly defined. Are the population subscribers to the newspaper? Readers of the newspaper? Or some other set of people? Even given this uncertainty, the letters to the editor would only be a random sample of a population if, clearly, they came randomly from that population. But there is no reason to assume this to be the case. People with stronger opinions, who can write reasonably well, and who have the time to write are more likely to write the editor. Since these characteristics are not distributed randomly throughout the adult population, it is improbable that the letters are a random sample.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The mayor might consider forming a coalition to randomly sample landline and cell phone numbers of city residents.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
@@ -2529,10 +2532,10 @@ tr:nth-child(even) { background: #ffffff;
 &lt;summary&gt;3&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Assuming that the population is defined as all persons shopping at that shopping mall that day of the week, she is selecting a systematic random sample. A more precise definition might limit it to all persons passing by the department store at the mall that day.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;This is a stratified sample because voters were first grouped by county, and unless the counties have the same number of voters, it is a disproportionate stratified sample because the same number is chosen from each county. We can assume that it was a probability sample, but we are not told exactly how the 50 voters were chosen from the lists. However, assuming that the population is defined as all Americans, this sort of sampling technique would qualify as nonprobability sampling.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;This is neither a simple random sample nor a systematic random sample. It might be thought of as a sample stratified on last name, but even then, choosing the first 20 names is not a random selection process.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;This is not a probability sample. Instead, it is a purposive sample chosen to represent a cross section of the population in New York City.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Assuming that the population is defined as all persons shopping at that shopping mall that day of the week, she is selecting a systematic random sample. A more precise definition might limit it to all persons passing by the department store at the mall that day.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This is a stratified sample because voters were first grouped by county, and unless the counties have the same number of voters, it is a disproportionate stratified sample because the same number is chosen from each county. We can assume that it was a probability sample, but we are not told exactly how the 50 voters were chosen from the lists. However, assuming that the population is defined as all Americans, this sort of sampling technique would qualify as nonprobability sampling.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This is neither a simple random sample nor a systematic random sample. It might be thought of as a sample stratified on last name, but even then, choosing the first 20 names is not a random selection process.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This is not a probability sample. Instead, it is a purposive sample chosen to represent a cross section of the population in New York City.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
@@ -2540,186 +2543,181 @@ tr:nth-child(even) { background: #ffffff;
 &lt;summary&gt;4&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;There are 120 students where 57 are juniors who represent &lt;span class=&#34;math inline&#34;&gt;\(57\div120 = 47.5\)&lt;/span&gt;, or 47.5% of the class. This implies the probability of choosing a junior is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.475\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;The probability that the student will be a freshman is &lt;span class=&#34;math inline&#34;&gt;\(7\div120 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.058\)&lt;/span&gt;&lt;/span&gt;.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;The proportion of seniors in the class is 34/120 = .283. The proportion of sophomores is &lt;span class=&#34;math inline&#34;&gt;\(22\div120 = 0.183\)&lt;/span&gt;. Then the number of students to be chosen at each class level is:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;center&gt;
+&lt;li&gt;&lt;p&gt;There are 120 students where 57 are juniors who represent &lt;span class=&#34;math inline&#34;&gt;\(57\div120 = 47.5\)&lt;/span&gt;, or 47.5% of the class. This implies the probability of choosing a junior is &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.475\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The probability that the student will be a freshman is &lt;span class=&#34;math inline&#34;&gt;\(7\div120 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(0.058\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The proportion of seniors in the class is &lt;span class=&#34;math inline&#34;&gt;\(34/120 = 0.283\)&lt;/span&gt;. The proportion of sophomores is &lt;span class=&#34;math inline&#34;&gt;\(22\div120 = 0.183\)&lt;/span&gt;. Then the number of students to be chosen at each class level is:&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 50%; margin:0 left;text-align: left;&#34;&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
-Class Level
+&lt;p&gt;Class Level&lt;/p&gt;
 &lt;/th&gt;
 &lt;th style=&#34;text-align:center;&#34;&gt;
-Calculation
+&lt;p&gt;Calculation&lt;/p&gt;
 &lt;/th&gt;
 &lt;th style=&#34;text-align:center;&#34;&gt;
-Result
+&lt;p&gt;Result&lt;/p&gt;
 &lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Freshman
+&lt;p&gt;Freshman&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0.058(30)
+&lt;p&gt;0.058(30)&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-1.74
+&lt;p&gt;1.74&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Sophomore
+&lt;p&gt;Sophomore&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0.183(30)
+&lt;p&gt;0.183(30)&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-5.49
+&lt;p&gt;5.49&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Junior
+&lt;p&gt;Junior&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0.475(30)
+&lt;p&gt;0.475(30)&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-14.25
+&lt;p&gt;14.25&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;&#34;&gt;
-Senior
+&lt;p&gt;Senior&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0.283(30)
+&lt;p&gt;0.283(30)&lt;/p&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-8.49
+&lt;p&gt;8.49&lt;/p&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/center&gt;
-&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;2 freshman&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 sophomores&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;14 juniors&lt;/span&gt;, and &lt;span class=&#34;boxed&#34;&gt;8 seniors&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-d. For a disproportionate sample we choose the same number of students from each class level. For example, we could have &lt;span class=&#34;boxed&#34;&gt;5 freshman&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 sophomores&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 juniors&lt;/span&gt;, and &lt;span class=&#34;boxed&#34;&gt;5 seniors&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;2 freshman&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 sophomores&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;14 juniors&lt;/span&gt;, and &lt;span class=&#34;boxed&#34;&gt;8 seniors&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For a disproportionate sample we choose the same number of students from each class level. For example, we could have &lt;span class=&#34;boxed&#34;&gt;5 freshman&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 sophomores&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;5 juniors&lt;/span&gt;, and &lt;span class=&#34;boxed&#34;&gt;5 seniors&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;5&lt;/summary&gt;
 &lt;p&gt;
-&lt;p&gt;The relationship between the standard error and the standard deviation is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt;. Since &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; is divided by &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{N}\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; must always be smaller than &lt;span class=&#34;math inline&#34;&gt;\(sigma\)&lt;/span&gt; barring the trivial case where &lt;span class=&#34;math inline&#34;&gt;\(N = 1\)&lt;/span&gt;. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that &lt;span class=&#34;boxed&#34;&gt;the standard error of the mean is less than the standard deviation&lt;/span&gt;.&lt;/p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;The relationship between the standard error and the standard deviation is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt;. Since &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; is divided by &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{N}\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; must always be smaller than &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; barring the trivial case where &lt;span class=&#34;math inline&#34;&gt;\(N = 1\)&lt;/span&gt;. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that &lt;span class=&#34;boxed&#34;&gt;the standard error of the mean is less than the standard deviation&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
-&lt;p&gt;First note that the standard error of the mean is proportional to &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{\sqrt{N}}\)&lt;/span&gt;.
-a. The standard error of the mean is&lt;br&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)&lt;/span&gt; for a sample size of 100&lt;br&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}\)&lt;/span&gt; for a sample size of 16000&lt;br&gt;
-We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{40}{10} =4\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;is smaller by a factor of 4&lt;/span&gt; when the sample size increases from 100 to 1600.&lt;br&gt;&lt;br&gt;
-b. The standard error of the mean is&lt;br&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}\)&lt;/span&gt; for a sample size of 300&lt;br&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}\)&lt;/span&gt; for a sample size of 150&lt;br&gt;
-We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{17.32}{12.25} \approx 1.41\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;is greater by a factor of 1.41&lt;/span&gt; when the sample size decreases from 300 to 150&lt;br&gt;&lt;br&gt;
-c. For simplicity, assume an initial sample size of 100. We then have
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)&lt;/span&gt; for a sample size of 10 0&lt;br&gt;
-&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{4\cdot100}}=\frac{\sigma}{20}\)&lt;/span&gt; for a sample size of 4000&lt;br&gt;
-We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{20}{10} = 2\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;decreases by a factor of 2&lt;/span&gt;.&lt;/p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;First note that the standard error of the mean is proportional to &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{\sqrt{N}}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;The standard error of the mean is&lt;br&gt;&lt;br&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)&lt;/span&gt; for a sample size of 100&lt;br&gt;&lt;br&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}\)&lt;/span&gt; for a sample size of 16000&lt;br&gt;&lt;br&gt;
+We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{40}{10} =4\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;is smaller by a factor of 4&lt;/span&gt; when the sample size increases from 100 to 1600.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The standard error of the mean is&lt;br&gt;&lt;br&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}\)&lt;/span&gt; for a sample size of 300&lt;br&gt;&lt;br&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}\)&lt;/span&gt; for a sample size of 150&lt;br&gt;&lt;br&gt;
+We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{17.32}{12.25} \approx 1.41\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;is greater by a factor of 1.41&lt;/span&gt; when the sample size decreases from 300 to 150.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For simplicity, assume an initial sample size of 100. We then have
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)&lt;/span&gt; for a sample size of 10 0&lt;br&gt;&lt;br&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{4\cdot100}}=\frac{\sigma}{20}\)&lt;/span&gt; for a sample size of 4000&lt;br&gt;&lt;br&gt;
+We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{20}{10} = 2\)&lt;/span&gt;. So &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;decreases by a factor of 2&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;7&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Facebook ® polls are ,ost definitely not probability samples. While many reasons exists, the two noted below are likely the most important:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;Facebook ® polls are most definitely not probability samples. While many reasons exists, the two noted below are likely the most important:
 &lt;ul&gt;
 &lt;li&gt;the &lt;em&gt;population&lt;/em&gt; from which data are gathered is limited to the &lt;em&gt;friends&lt;/em&gt; on one’s Facebook ® profile–and such is certainly not a representative sample from the larger population.&lt;/li&gt;
-&lt;li&gt;due to Facebook ® algorithms, we can’t be sure that every Facebook ® friend would have the same opportunity to see, and thus participate, in the poll.&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;due to Facebook ® algorithms, we can’t be sure that every Facebook ® friend would have the same opportunity to see, and thus participate, in the poll.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;The population is our Facebook ® friends who come across the poll.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;p&gt;&lt;summary&gt;8&lt;/summary&gt;&lt;/p&gt;
-&lt;p&gt;First we convert these to a vector&lt;/p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;First we convert these to a vector and take the sum&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;military &amp;lt;- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
+    
+total_mil &amp;lt;- sum(military)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;The mean number of active military personnel per region in 2009 was&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(military)&lt;/code&gt;&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;The mean number of active military personnel per region in 2009 was&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_mil = mean(military)
+
+mu_mil&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 120248.7&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;120249&lt;/span&gt;. The standard deviation is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 
-sd_pop(military)&lt;/code&gt;&lt;/pre&gt;
+sigma_mil = sd_pop(military)
+
+sigma_mil&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 112966.1&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3.&lt;/li&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;112966&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# replicate(size #, rnorm(#of sample means, mu, sigma))
+
+samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
+
+samples&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            [,1]      [,2]      [,3]
+##  [1,] 143667.66  75698.41  71012.75
+##  [2,] 209807.56 216681.59 135734.04
+##  [3,] 134486.86 262527.40 235081.81
+##  [4,]  86925.74 195414.30 183005.79
+##  [5,]  97199.93 196381.73 120257.03
+##  [6,] 337892.00  38901.58 204608.70
+##  [7,] 110316.73 162259.11 -36203.24
+##  [8,]  30517.90 119866.42 189122.21
+##  [9,] 135734.55 198226.40 174500.52
+## [10,] 181081.07  64970.67 118144.33&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The mean of these 10 sets of means is&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 146460.7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The standard deviation of these 10 sets of means is&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 76299.51&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pop = 1082228
-n = 3
-repeats = 10
-
-thing = NULL
-
-  for (i in 1:repeats){
-  thing[i] &amp;lt;- sample(x = pop, size = n) %&amp;gt;%
-      as_tibble() %&amp;gt;%
-      summarize(mean(value))
-  }
-
-sample_means &amp;lt;- do.call(rbind, thing) %&amp;gt;%
-  as_tibble() %&amp;gt;%
-  rename(`Sample Means` = V1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if `.name_repair` is omitted as of tibble 2.0.0.
-## Using compatibility `.name_repair`.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sample_means &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 1
-##    `Sample Means`
-##             &amp;lt;dbl&amp;gt;
-##  1        248705.
-##  2        536761.
-##  3        733127.
-##  4        257439 
-##  5        526281.
-##  6        522720 
-##  7        283032 
-##  8        519178.
-##  9        581282.
-## 10        361932.&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;The mean of these 10 means is&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 457045.9&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-d. The standard deviation of these 10 means is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(sample_means$`Sample Means`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 161091.2&lt;/code&gt;&lt;/pre&gt;
-or about &lt;span class=&#34;boxed&#34;&gt;230195&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
-e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6.
-&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
-&lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;9&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;

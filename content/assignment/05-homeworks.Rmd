@@ -1060,7 +1060,6 @@ ggplot(data.frame(x = c(lb, ub)), aes(x = x)) +
         axis.ticks.y=element_blank()
         )
 ```
-
 which is the area between $z$ and the tail, or <span class="boxed">$0.4325$</span>.
 
 c. For **Team A** an ***eligibility criterion*** score of $z=-0.36$ is below the mean and the corresponding proportion can be viewed by
