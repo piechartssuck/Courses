@@ -39,8 +39,8 @@ Description = c("Complete problems 1, 2, 3, 4, 5, and 10 in Chapter 7.",
                "Complete problems 1, 2, 3, 4, and 5 in Chapter 8.",
                "Take a look at the R Walkthrough on Confidence Intervals."),
 
-Location = c("[Link](/assignment/09-homeworks/#assignment-1)",
-             "[Link](/assignment/09-homeworks/#assignment-1)",
+Location = c("[Link](/assignment/10-homeworks/#assignment-1)",
+             "[Link](/assignment/10-homeworks/#assignment-1)",
              "[Link](/lesson/09-lesson/#r-walkthrough-confidence-intervals-1)")
 )
 ```

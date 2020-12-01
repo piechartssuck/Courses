@@ -73,7 +73,6 @@ lessons:
     readings: "09-readings"
     lesson: "09-lesson"
     example: "09-example"
-    assignment: "09-homeworks"
     due: "09-due"
 
   - title: 'Testing Hypotheses'
