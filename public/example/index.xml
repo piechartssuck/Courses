@@ -439,9 +439,9 @@ Please make sure that you also look over the Survey Options tab before distribut
     
     <item>
       <title>Coding and Recoding Scaled Items</title>
-      <link>/example/11-exercise/</link>
+      <link>/example/11-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/11-exercise/</guid>
+      <guid>/example/11-example/</guid>
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
@@ -823,22 +823,22 @@ big_five_data_EXT_rev&lt;/code&gt;&lt;/pre&gt;
 ## Correlation method: &amp;#39;pearson&amp;#39;
 ## Missing treated using: &amp;#39;pairwise.complete.obs&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 11
-##    rowname   EXT1   EXT2   EXT3   EXT4   EXT5   EXT6   EXT7   EXT8   EXT9  EXT10
-##    &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
-##  1 EXT1    NA      0.363  0.443  0.494  0.454  0.289  0.546  0.363  0.478  0.435
-##  2 EXT2     0.363 NA      0.415  0.500  0.644  0.628  0.506  0.315  0.438  0.543
-##  3 EXT3     0.443  0.415 NA      0.577  0.631  0.379  0.566  0.295  0.496  0.629
-##  4 EXT4     0.494  0.500  0.577 NA      0.471  0.595  0.540  0.501  0.452  0.636
-##  5 EXT5     0.454  0.644  0.631  0.471 NA      0.495  0.649  0.246  0.582  0.551
-##  6 EXT6     0.289  0.628  0.379  0.595  0.495 NA      0.356  0.373  0.315  0.544
-##  7 EXT7     0.546  0.506  0.566  0.540  0.649  0.356 NA      0.359  0.559  0.509
-##  8 EXT8     0.363  0.315  0.295  0.501  0.246  0.373  0.359 NA      0.450  0.396
-##  9 EXT9     0.478  0.438  0.496  0.452  0.582  0.315  0.559  0.450 NA      0.391
-## 10 EXT10    0.435  0.543  0.629  0.636  0.551  0.544  0.509  0.396  0.391 NA&lt;/code&gt;&lt;/pre&gt;
+##    term    EXT1   EXT2   EXT3   EXT4   EXT5   EXT6   EXT7   EXT8   EXT9  EXT10
+##    &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1 EXT1  NA      0.363  0.443  0.494  0.454  0.289  0.546  0.363  0.478  0.435
+##  2 EXT2   0.363 NA      0.415  0.500  0.644  0.628  0.506  0.315  0.438  0.543
+##  3 EXT3   0.443  0.415 NA      0.577  0.631  0.379  0.566  0.295  0.496  0.629
+##  4 EXT4   0.494  0.500  0.577 NA      0.471  0.595  0.540  0.501  0.452  0.636
+##  5 EXT5   0.454  0.644  0.631  0.471 NA      0.495  0.649  0.246  0.582  0.551
+##  6 EXT6   0.289  0.628  0.379  0.595  0.495 NA      0.356  0.373  0.315  0.544
+##  7 EXT7   0.546  0.506  0.566  0.540  0.649  0.356 NA      0.359  0.559  0.509
+##  8 EXT8   0.363  0.315  0.295  0.501  0.246  0.373  0.359 NA      0.450  0.396
+##  9 EXT9   0.478  0.438  0.496  0.452  0.582  0.315  0.559  0.450 NA      0.391
+## 10 EXT10  0.435  0.543  0.629  0.636  0.551  0.544  0.509  0.396  0.391 NA&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The package gives an &lt;code&gt;NA&lt;/code&gt; for variables that try to correlate with themselves. By default each variable should be perfectly correlated with itself but who cares? With the diagonal owned by &lt;code&gt;NA&lt;/code&gt;s, we can obtain the average correlation of each item with all others by computing the means for each column &lt;code&gt;EXT1&lt;/code&gt; - &lt;code&gt;EXT10&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;inter_measure  &amp;lt;- big_five_data_EXT_rev %&amp;gt;% 
                     correlate() %&amp;gt;% 
-                    select(-rowname) %&amp;gt;% 
+                    select(-term) %&amp;gt;% 
                     colMeans(na.rm = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ## Correlation method: &amp;#39;pearson&amp;#39;
@@ -1033,18 +1033,18 @@ I don’t like to draw attention to myself.
 ## Missing treated using: &amp;#39;pairwise.complete.obs&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;agg_scores&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
-##    rowname score
-##    &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
-##  1 EXT4    0.791
-##  2 EXT5    0.789
-##  3 EXT7    0.776
-##  4 EXT10   0.775
-##  5 EXT3    0.749
-##  6 EXT2    0.732
-##  7 EXT9    0.714
-##  8 EXT6    0.680
-##  9 EXT1    0.666
-## 10 EXT8    0.594&lt;/code&gt;&lt;/pre&gt;
+##    term  score
+##    &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 EXT4  0.791
+##  2 EXT5  0.789
+##  3 EXT7  0.776
+##  4 EXT10 0.775
+##  5 EXT3  0.749
+##  6 EXT2  0.732
+##  7 EXT9  0.714
+##  8 EXT6  0.680
+##  9 EXT1  0.666
+## 10 EXT8  0.594&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Well that is quite enough for now. There are other ways to assess reliability. As you move to the deliverable for this week, keep in mind that none of these could yield good measures for internal consistency. You may have to look around the internet for other R commands and packages that may be a better fit. As usual, you always have your peers and me in times of frustration with R.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

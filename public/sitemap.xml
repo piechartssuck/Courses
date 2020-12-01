@@ -44,6 +44,10 @@
   </url>
   
   <url>
+    <loc>/due/13-due/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/01-assignment/</loc>
   </url>
   
@@ -140,6 +144,10 @@
   </url>
   
   <url>
+    <loc>/assignment/13-assignment/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/02-assignment/</loc>
   </url>
   
@@ -228,7 +236,7 @@
   </url>
   
   <url>
-    <loc>/example/11-exercise/</loc>
+    <loc>/example/11-example/</loc>
   </url>
   
   <url>

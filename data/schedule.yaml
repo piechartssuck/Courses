@@ -91,3 +91,9 @@ lessons:
     example: "11-example"
     assignment: "11-assignment"
     due: "11-due"
+
+  - title: 'Survey Results'
+    session: 13
+    date: "November 22, 2020"
+    assignment: "13-assignment"
+    due: "13-due"

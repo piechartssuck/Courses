@@ -280,7 +280,7 @@ The package gives an `NA` for variables that try to correlate with themselves. B
 ```{r}
 inter_measure  <- big_five_data_EXT_rev %>% 
                     correlate() %>% 
-                    select(-rowname) %>% 
+                    select(-term) %>% 
                     colMeans(na.rm = TRUE)
 
 inter_measure 
