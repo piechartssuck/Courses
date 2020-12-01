@@ -162,6 +162,7 @@ a. The standard error of the mean is<br><br>
 $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 100<br><br>
 $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}$ for a sample size of 16000<br><br>
 We compare the two by $\frac{40}{10} =4$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">is smaller by a factor of 4</span> when the sample size increases from 100 to 1600.
+
 b. The standard error of the mean is<br><br> 
 $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}$ for a sample size of 300<br><br>
 $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}$ for a sample size of 150<br><br>

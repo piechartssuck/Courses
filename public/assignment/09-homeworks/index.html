@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Week 9 Problem Set    span.boxed { border: 0px solid #FFFFFF; padding: 5px; color: #FFFFFF; background-color: #005b96; display: inline; } table { margin-left: auto; margin-right: auto; } table thead th { border-bottom: 1px solid #ddd; } th, td { padding: 5px; } tr:nth-child(even) { background: #ffffff; }  Week 9 Problem Set Assignment  Chapter 7 Exercises: 1, 2, 3, 4, 5, 10.">
+  <meta name="description" content="Week 9 Problem Set    span.boxed { border: 0px solid #FFFFFF; padding: 5px; color: #FFFFFF; background-color: #005b96; display: inline; } table { margin-left: auto; margin-right: auto; } table thead th { border-bottom: 1px solid #ddd; } th, td { padding: 5px; } tr:nth-child(even) { background: #ffffff; } li { margin-left: 1.">
 
   
   <link rel="alternate" hreflang="en-us" href="/assignment/09-homeworks/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Statistical Methods I">
   <meta property="og:url" content="/assignment/09-homeworks/">
   <meta property="og:title" content="Estimations | Statistical Methods I">
-  <meta property="og:description" content="Week 9 Problem Set    span.boxed { border: 0px solid #FFFFFF; padding: 5px; color: #FFFFFF; background-color: #005b96; display: inline; } table { margin-left: auto; margin-right: auto; } table thead th { border-bottom: 1px solid #ddd; } th, td { padding: 5px; } tr:nth-child(even) { background: #ffffff; }  Week 9 Problem Set Assignment  Chapter 7 Exercises: 1, 2, 3, 4, 5, 10."><meta property="og:image" content="/img/course_info.png">
+  <meta property="og:description" content="Week 9 Problem Set    span.boxed { border: 0px solid #FFFFFF; padding: 5px; color: #FFFFFF; background-color: #005b96; display: inline; } table { margin-left: auto; margin-right: auto; } table thead th { border-bottom: 1px solid #ddd; } th, td { padding: 5px; } tr:nth-child(even) { background: #ffffff; } li { margin-left: 1."><meta property="og:image" content="/img/course_info.png">
   <meta property="twitter:image" content="/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -794,6 +794,8 @@
                         
 <link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -823,6 +825,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
 </style>
 <div id="week-9-problem-set" class="section level3">
 <h3>Week 9 Problem Set</h3>
@@ -834,9 +840,389 @@ tr:nth-child(even) { background: #ffffff;
 </ul>
 <p>Please turn both in as one task within the Submission Portal on <a href="https://ecampus.wvu.edu/" target="_blank">ecampus</a> by 11:59 PM in two Wednesdays.<br></p>
 </div>
-<div id="solutions" class="section level4">
+<div id="solutions" class="section level4 tabset tabset-pills">
 <h4>Solutions</h4>
+<div id="chapter-7" class="section level5">
+<h5>Chapter 7</h5>
+<details>
+<summary>1</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The estimate at the 90% confidence level is 20.87–21.13%. This means that there are 90 chances out of 100 that the confidence interval will contain the true population percentage of victims in the American population. Due to the large sample size, we converted the proportions to percentages, subtracting from 100, rather than 1.
+<span class="math display">\[\begin{align}
+SE &amp;= \sqrt{\dfrac{21\cdot(100-21)}{239541}}\\
+&amp;\approx 0.08
+\end{align}\]</span>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 21\pm 1.65\cdot0.08\\
+&amp;= 21\pm 0.13\\
+&amp;= (20.87, 21.13)
+\end{align}\]</span>
+So the standard error of the mean is approximately <span class="boxed">0.08</span> with a confidence interval between <span class="boxed">20.87 to 21.13</span>.</p></li>
+<li><p>The true percentage of crime victims in the American population is somewhere between 20.79% and 21.21% based on the 99% confidence interval. There are 99 chances out of 100 that the confidence interval will contain the true population percentage of crime victims.
+<span class="math display">\[\begin{align}
+CI &amp;= 21\pm 2.58\cdot0.08\\
+&amp;= 21\pm 0.21\\
+&amp;= (20.79, 21.21)
+\end{align}\]</span>
+So we have a confidence interval between <span class="boxed">20.79 to 21.21</span>.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>2</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>For lower-class respondents, we have
+<span class="math display">\[\begin{align}
+S_{\overline{Y}} &amp;=\dfrac{3.08}{\sqrt{102}}\$0.5ex]
+&amp;\approx 0.30
+\end{align}\]</span>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 12.19\pm 1.96\cdot0.30\\
+&amp;= 12.19\pm 0.59\\
+&amp;= (11.60, 12.78)
+\end{align}\]</span>
+So the estimated standard error for the sampling distribution is approximately <span class="boxed">0.30</span> with a confidence interval between <span class="boxed">11.60 to 12.78</span>.<br><br>
+For working-class respondents, we have
+<span class="math display">\[\begin{align}
+S_{\overline{Y}} &amp;= \dfrac{2.93}{\sqrt{523}}\$0.5ex]
+&amp;\approx 0.13
+\end{align}\]</span>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 13.16\pm 1.96\cdot0.13\\
+&amp;= 13.16\pm 0.25\\
+&amp;= (12.91, 13.41)
+\end{align}\]</span>
+So the estimated standard error for the sampling distribution is approximately <span class="boxed">0.13</span> with a confidence interval between <span class="boxed">12.91 to 13.41</span>.</p></li>
+<li><p>For lower-class respondents, we have
+<span class="math display">\[\begin{align}
+CI &amp;= 12.19\pm 2.58\cdot0.13\\
+&amp;= 12.19\pm 0.77\\
+&amp;= (11.42, 12.96)
+\end{align}\]</span>
+So the confidence interval is between <span class="boxed">11.42 to 12.96</span>.<br><br>
+For working-class respondents, we have
+<span class="math display">\[\begin{align}
+CI &amp;= 14.60\pm 2.58\cdot0.13\\
+&amp;= 14.60\pm 0.34\\
+&amp;= (14.26, 14.94)
+\end{align}\]</span>
+So the confidence interval is between <span class="boxed">14.26 to 14.94</span>.</p></li>
+<li><p>As our confidence level increases, the confidence interval gets wider, not narrower. This is because a wider interval is needed to increase the probability that our calculated interval includes the true population value. Thus, increasing confidence leads to less precise intervals.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>3</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>For Canadians we have
+<span class="math display">\[\begin{align}
+s_p &amp;= \sqrt{\dfrac{0.51\cdot(1-0.51)}{1004}}\\
+&amp;\approx 0.02
+\end{align}\]</span></li>
+</ol>
+</p>
+<p>and
+<span class="math display">\[\begin{align}
+CI &amp;= 0.51\pm 1.96\cdot0.02\\
+&amp;= 0.51\pm 0.04\\
+&amp;= (0.47, 0.55)
+\end{align}\]</span>
+So the estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.47 to 0.55</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>For Americans we have <span class="math display">\[\begin{align}
+CI &amp;= 0.45\pm 1.96\cdot0.02\\
+&amp;= 0.45\pm 0.04\\
+&amp;= (0.39, 0.49)
+\end{align}\]</span>
+implying a confidence interval between <span class="boxed">0.39 to 0.49</span>.</p></li>
+<li><p>Based upon the calculated 95% confidence interval, the majority of Americans do not believe climate change is a serious problem. The true percentage of Americans who believe climate change is a serious problem is under 50%, somewhere between 39% and 49%, based upon this Pew Research Center sample. On the other hand, it is possible that the majority of Canadians believe climate change is a serious problem. We can be 95% confident that the true percentage of Canadians is somewhere between 47% and 55%.</p></li>
+</ol>
+</details>
+<details>
+<summary>4</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>We have a 90% confidence interval for the males by calculating
+<span class="math display">\[\begin{align}
+s_p &amp;= \sqrt{\dfrac{0.21\cdot(1-0.21)}{337}}\\
+&amp;\approx 0.02
+\end{align}\]</span></li>
+</ol>
+</p>
+<p>and
+<span class="math display">\[\begin{align}
+CI &amp;= 0.21\pm 1.65\cdot0.02\\
+&amp;= 0.21\pm 0.03\\
+&amp;= (0.18, 0.24)
+\end{align}\]</span>
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.18 to 0.24</span>.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>We have a 90% confidence interval for the demales by calculating
+<span class="math display">\[\begin{align}
+s_p &amp;= \sqrt{\dfrac{0.37\cdot(1-0.37)}{441}}\\
+&amp;\approx 0.02
+\end{align}\]</span>
+</p>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 0.37\pm 1.65\cdot0.02\\
+&amp;= 0.37\pm 0.03\\
+&amp;= (0.34, 0.40)
+\end{align}\]</span>
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.34 to 0.40</span>.</li>
+</ol>
+</p>
+</details>
+<details>
+<summary>5</summary>
+<p>
+<p>Due to the large sample size, we converted the proportion to full percentages, subtracting from 100 rather than 1.
+<span class="math display">\[\begin{align}
+SE &amp;= \sqrt{\dfrac{51\cdot(100-51)}{5490}}\\
+&amp;\approx 0.67
+\end{align}\]</span>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 51\pm 1.96\cdot0.67\\
+&amp;= 51\pm 0.13\\
+&amp;= (49.69, 52.31)
+\end{align}\]</span>
+We set the interval at the 95% confidence level. However, no matter whether the 90%, 95%, or 99% confidence level is chosen, the calculated interval includes values below 50% for the vote for a Republican candidate. Therefore, you should tell your supervisors that it span class=“boxed”&gt;would not be possible to declare a Republican candidate the likely winner of the votes coming from men if there was an election today because it seems quite possible that less than a majority of male voters would support her/him.</span></p>
+</p>
+</details>
+<details>
+<summary>10</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>For Bernie Sanders we have
+<span class="math display">\[\begin{align}
+s_p &amp;= \sqrt{\dfrac{0.18\cdot(1-0.18)}{446}}\\
+&amp;\approx 0.02
+\end{align}\]</span></li>
+</ol>
+</p>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 0.18\pm 1.96\cdot0.02\\
+&amp;= 0.18\pm 0.04\\
+&amp;= (0.14, 0.22)
+\end{align}\]</span>
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.14 to 0.22</span>.<br><br>
+For Hillary Clinton we have
+<span class="math display">\[\begin{align}
+s_p &amp;= \sqrt{\dfrac{0.15\cdot(1-0.15)}{522}}\\
+&amp;\approx 0.02
+\end{align}\]</span>
+</p>
+and
+<span class="math display">\[\begin{align}
+CI &amp;= 0.15\pm 1.96\cdot0.02\\
+&amp;= 0.15\pm 0.04\\
+&amp;= (0.11, 0.19)
+\end{align}\]</span>
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.11 to 0.19</span>.
+</p>
+</details>
+</div>
+<div id="chapter-8" class="section level5">
+<h5>Chapter 8</h5>
+<p><em>Note: The</em> <span class="math inline">\(z\)</span> <em>value obtained will be referenced by the variable</em> <span class="math inline">\(z_{obt}\)</span>.</p>
+<details>
+<summary>1</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have
+<span class="math display">\[\begin{align}
+H_0:\,\mu_Y=13.5\,\,\text{years}\\
+H_0:\,\mu_Y&lt;13.5\,\,\text{years}
+\end{align}\]</span></p></li>
+<li><p>The <span class="math inline">\(z\)</span> value, or <span class="math inline">\(z_{obt} = -4.19\)</span>. The <span class="math inline">\(p\)</span>-value for this <span class="math inline">\(z_{obt} &lt; 0.001\)</span> for a one-tailed test where <span class="math inline">\(\alpha = 0.01\)</span>. Since <span class="math inline">\(z_{obt} &lt; 0.001\)</span> and <span class="math inline">\(0.001 &lt; \alpha\)</span>, we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span></p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>2</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have <span class="math inline">\(z_{obt} = -2.33\)</span> so
+<span class="math display">\[\begin{align}
+z &amp;= \dfrac{0.43-0.50}{0.03}\\[0.5ex]
+&amp;\approx -2.33
+\end{align}\]</span>
+implying the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.0099\cdot 2=0.0198\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Hispanic Americans. In fact given we have <span class="math inline">\(0.43-0.50=-0.07\)</span>, there is a lower proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
+<li><p>We have <span class="math inline">\(z_{obt} = 3.50\)</span> so
+<span class="math display">\[\begin{align}
+z &amp;= \dfrac{0.58-0.51}{0.02}\\[0.5ex]
+&amp;\approx 3.50
+\end{align}\]</span>
+implying the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.002\cdot 2=0.0004\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have <span class="math inline">\(0.58-0.51=0.07\)</span>, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>3</summary>
+<p>
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Item
+</th>
+<th style="text-align:left;">
+Test
+</th>
+<th style="text-align:center;">
+Research Hypothesis
+</th>
+<th style="text-align:center;">
+Null Hypothesis
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{a}\)</span>
+</td>
+<td style="text-align:left;">
+Two-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu\neq53657\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu=53657\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{b}\)</span>
+</td>
+<td style="text-align:left;">
+One-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu&gt;3.2\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu=3.2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{c}\)</span>
+</td>
+<td style="text-align:left;">
+One-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1&lt;\mu_2\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1=\mu_2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{d}\)</span>
+</td>
+<td style="text-align:left;">
+Two-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1\neq\mu_2\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1=\mu_2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{e}\)</span>
+</td>
+<td style="text-align:left;">
+One-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1&gt;\mu_2\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1=\mu_2\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\text{f}\)</span>
+</td>
+<td style="text-align:left;">
+One-tailed
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1&lt;\mu_2\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\mu_1=\mu_2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</p>
+</details>
+<details>
+<summary>4</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have
+<span class="math display">\[\begin{align}
+H_0:\,\pi_1&lt;\pi_2\\
+H_0:\,\pi_1=\pi_2
+\end{align}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{align}
+z &amp;= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
+&amp;\approx -3.50
+\end{align}\]</span>
+with
+<span class="math display">\[\begin{align}
+s_{p_1-p_2} &amp;=\sqrt{\dfrac{0.34\cdot(1-0.34)}{1799}+\dfrac{0.41\cdot(1-0.41)}{1001}}\\[0.5ex]
+&amp;= \sqrt{0.0003664}
+&amp;\approx 0.02
+\end{align}\]</span>
+yielding that <span class="boxed"><span class="math inline">\(z_{obt}=-3.50 &lt;\alpha = 0.05\)</span></span> (and less than <span class="math inline">\(0.0002\)</span> from Appendix A). So <span class="boxed">the proportion of White respondents who support the tactic of bringing people of different racial backgrounds together to talk about race is lower than the proportion of Black respondents</span>. The difference given by <span class="math inline">\(0.41-0.34\)</span> is likely significant at the <span class="math inline">\(0.05\)</span> level.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>5</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have
+<span class="math display">\[\begin{align}
+H_0:\,\mu\neq 37.8\\
+H_0:\,\mu=37.8
+\end{align}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{align}
+z &amp;= \dfrac{48.69-37.80}{17.99/\sqrt{1495}}\\[0.5ex]
+&amp;\approx 23.17
+\end{align}\]</span>
+yielding that <span class="boxed"><span class="math inline">\(z_{obt}=23.17\)</span></span> with <span class="boxed"><span class="math inline">\(p &lt; 0.001\)</span></span> (and is greater than <span class="math inline">\(3.291\)</span> from Appendix B).</p></li>
+<li><p>We can say that <span class="math inline">\(H_0\)</span> should likely be rejected in favor of the <span class="math inline">\(H_1\)</span>. So <span class="boxed">there is a difference between the mean age of the GSS sample and the mean age of all American adults</span>. Relative to age, the GSS sample is not representative of all American adults (the GSS sample is significantly older).</p></li>
+</ol>
+</p>
+</details>
 <p>:::</p>
+</div>
 </div>
 </div>
 
