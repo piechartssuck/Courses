@@ -50,7 +50,193 @@ library(kableExtra)
 Chapter 9 Exercises: 1, 3, 5, 6, 7, 9. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
 
 #### Solutions
+<details><summary>1</summary>
+<p>
 
+a. <span class="boxed">The *independent variable* is sex</span> while <span class="boxed">the *dependent variable* is fear of walking alone at night</span>.
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+```{r, echo=FALSE, eval=TRUE}
+walking1 <- tibble(
+  
+  Choice = c("Yes", 
+             "No"),
+  
+  Male = c("2 (22%)", 
+           "7 (78%)"),
+  
+  Female = c("8 (73%)", 
+             "3 (27%)"),
+) 
 
+walking1 %>%
+  kable(align = 'lcc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</div>
+</div>
+
+b. Approximately $73$% of women are afraid to walk alone in their neighborhoods at night, whereas approximately $22$% of men said the same. This amounts to about a <span class="boxed">$51$% difference between women and men who are not afraid to walk alone at night</span>, indicating a strong relationship. It is important to keep in mind that our small sample size limits the generalizability of these results. 
+
+c. There does not appear to be much of a relationship between homeownership and fear of walking alone at night. The majority in both homeownership categories ($54$% and $55$%) indicated that <span class="boxed">they were not afraid of walking alone at night in their neighborhood</span>. 
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+```{r, echo=FALSE, eval=TRUE}
+walking2 <- tibble(
+  
+  Response = c("Yes", 
+               "No"),
+  
+  Male = c("4 (44%)", 
+           "5 (54%)"),
+  
+  Female = c("5 (45%)", 
+             "6 (55%)"),
+) 
+
+walking2 %>%
+  kable(align = 'lcc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</div>
+</div>
+</p>
+</details>
+
+<details><summary>3</summary>
+<p>
+a. Based on the student’s argument, <span class="boxed">the *independent variable* is race</span>< and <span class="boxed">the *dependent variable* is home ownership</span>.
+
+b. We have $$\dfrac{539}{857} \approx 0.6289$$ or about <span class="boxed">$63$%</span>.
+
+c. <span class="boxed">There appears to be a relationship between race and home ownership</span>. While $63$% of those surveyed report owning a home, far less Black respondents report such ($41.3$%) than White respondents ($67.7$%). Furthermore, $58.7$% of Black respondents rent as compared to $32.3$% of White respondents.  
+
+</p>
+</details>
+
+<details><summary>5</summary>
+<p>
+<span class="boxed">There appears to be a relationship between race and the frequency of being drunk in the last 12 months</span>. The majority of students ($60$%) are likely to report not being drunk in the last 12 months. However, the percentage of students being drunk at least 3 or more times is highest for Whites ($28$%), followed by Hispanic ($16$%) and Black ($11$%) students.  
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+```{r, echo=FALSE, eval=TRUE}
+drunk <- tibble(
+  
+  Frequency = c("None", 
+                "1-2 times",
+                "3-5 times",
+                "> 6 times",
+                "Total"),
+  
+  Black = c("359 (75%)", 
+            "63 (13%)",
+            "24 (5%)",
+            "31 (6%)",
+            "477 (99%)"),
+  
+  White = c("1081 (55%)", 
+            "342 (17%)",
+            "168 (8%)",
+            "389 (20%)",
+            "1980 (100%)"),
+  
+  Hispanic = c("480 (67%)", 
+               "125 (17%)",
+               "50 (7%)",
+               "64 (9%)",
+               "719 (100%)"),
+  
+  Total = c("1920 (60%)", 
+            "530 (17%)",
+            "242 (8%)",
+            "484 (15%)",
+            "3176 (100%)")
+  
+) 
+
+drunk %>%
+  kable(align = 'lccccc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</div>
+</div>
+
+</p>
+</details>
+
+<details><summary>6</summary>
+<p>
+<span class="boxed">The death penalty is more likely in cases where the victim was female or White</span>. The percentage difference is greater between female versus male victims ($57.5 – 45.4 = 12.1$%) than White versus Black victims ($52.7 – 46.5 = 6.2$%). When considering the interactive effects of gender and race, death sentences are more likely in cases with White and Black female victims ($55$% or higher). Death sentences are least likely in cases with a Black male victim. 
+
+a. We have $$\dfrac{703}{766}\approx 0.9177$$ or about <span class="boxed">$91.8$%</span>.
+
+b. <span class="boxed">14</span>.
+
+c. We have $$4 + \dfrac{19}{384}\approx 4.0495$$ or about <span class="boxed">$4.05$%</span>.
+
+d. <span class="boxed">There appears to be a relationship between age and feeling of age discrimination</span>. $8.2$% of all respondents felt discriminated against because of their age. However, those between 18 and 29 were more likely to feel discriminated against because of their age than any other age category represented in the cross-tabulation.
+```{r, echo=FALSE, eval=TRUE}
+discrimination <- tibble(
+  
+  Response = c("Yes", 
+               "No",
+               "Total"),
+  
+  "18-29" = c("26 (16%)", 
+              "136 (84%)",
+              "162 (100%)"),
+  
+  "30-39" = c("14 (6%)", 
+              "206 (94%)",
+              "220 (100%)"),
+  
+  "40-49" = c("4 (2%)", 
+              "183 (98%)",
+              "187 (100%)"),
+  
+  "50-59" = c("19 (10%)", 
+              "178 (90%)",
+              "197 (100%)"),
+  
+  "Total" = c("63 (8%)", 
+              "703 (92%)",
+              "766 (100%)"),
+  
+) 
+
+discrimination %>%
+  kable(align = 'lccccc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</p>
+</details>
+
+<details><summary>7</summary>
+<p>
+a. <span class="boxed">The *dependent variable* is housework disagreement</span>.
+b. <span class="boxed">$n = 7144$</span> is the total sample size.
+c. We have $$\dfrac{3953}{7144} \approx 0.5533$$ or about <span class="boxed">$55.33$%</span>.
+d. <span class="boxed">There is a relationship between perceived unfairness of housework divisions and housework disagreement for women</span>. $33.68$% of women reported never having housework disagreement. However, women who felt housework divisions were fair to women ($43.65$%) were more likely to report never having disagreement over housework than women who felt housework divisions were unfair to women ($25.62$%).
+
+</p>
+</details>
+
+<details><summary>9</summary>
+<p>
+Yes, <span class="boxed">there is a relationship between political party affiliation and attitudes toward the Affordable Care Act</span>. The majority of physicians who reported being Republican or Other party were strongly against or against ACA. The largest reporting percentage was among $31.08$% + $52.99$% $=$ $84.07$% Republicans. Only $11.20$% + $36$% $=$ $47.2$% of Democrats were strongly against or against the act. 
+</p>
+</details>
 :::
 

@@ -459,6 +459,8 @@ yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -497,6 +499,346 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;details&gt;
+&lt;summary&gt;1&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;The &lt;em&gt;independent variable&lt;/em&gt; is sex&lt;/span&gt; while &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;dependent variable&lt;/em&gt; is fear of walking alone at night&lt;/span&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 50%; margin:0 left;text-align: left;&#34;&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Choice&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Male&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Female&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Yes&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;2 (22%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;8 (73%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;No&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;7 (78%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;3 (27%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Approximately &lt;span class=&#34;math inline&#34;&gt;\(73\)&lt;/span&gt;% of women are afraid to walk alone in their neighborhoods at night, whereas approximately &lt;span class=&#34;math inline&#34;&gt;\(22\)&lt;/span&gt;% of men said the same. This amounts to about a &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(51\)&lt;/span&gt;% difference between women and men who are not afraid to walk alone at night&lt;/span&gt;, indicating a strong relationship. It is important to keep in mind that our small sample size limits the generalizability of these results.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There does not appear to be much of a relationship between homeownership and fear of walking alone at night. The majority in both homeownership categories (&lt;span class=&#34;math inline&#34;&gt;\(54\)&lt;/span&gt;% and &lt;span class=&#34;math inline&#34;&gt;\(55\)&lt;/span&gt;%) indicated that &lt;span class=&#34;boxed&#34;&gt;they were not afraid of walking alone at night in their neighborhood&lt;/span&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 50%; margin:0 left;text-align: left;&#34;&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Response&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Male&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Female&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Yes&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;4 (44%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;5 (45%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;No&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;5 (54%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;6 (55%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;3&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;Based on the student’s argument, &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;independent variable&lt;/em&gt; is race&lt;/span&gt;&amp;lt; and &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;dependent variable&lt;/em&gt; is home ownership&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math display&#34;&gt;\[\dfrac{539}{857} \approx 0.6289\]&lt;/span&gt; or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(63\)&lt;/span&gt;%&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;There appears to be a relationship between race and home ownership&lt;/span&gt;. While &lt;span class=&#34;math inline&#34;&gt;\(63\)&lt;/span&gt;% of those surveyed report owning a home, far less Black respondents report such (&lt;span class=&#34;math inline&#34;&gt;\(41.3\)&lt;/span&gt;%) than White respondents (&lt;span class=&#34;math inline&#34;&gt;\(67.7\)&lt;/span&gt;%). Furthermore, &lt;span class=&#34;math inline&#34;&gt;\(58.7\)&lt;/span&gt;% of Black respondents rent as compared to &lt;span class=&#34;math inline&#34;&gt;\(32.3\)&lt;/span&gt;% of White respondents.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;5&lt;/summary&gt;
+&lt;p&gt;
+&lt;span class=&#34;boxed&#34;&gt;There appears to be a relationship between race and the frequency of being drunk in the last 12 months&lt;/span&gt;. The majority of students (&lt;span class=&#34;math inline&#34;&gt;\(60\)&lt;/span&gt;%) are likely to report not being drunk in the last 12 months. However, the percentage of students being drunk at least 3 or more times is highest for Whites (&lt;span class=&#34;math inline&#34;&gt;\(28\)&lt;/span&gt;%), followed by Hispanic (&lt;span class=&#34;math inline&#34;&gt;\(16\)&lt;/span&gt;%) and Black (&lt;span class=&#34;math inline&#34;&gt;\(11\)&lt;/span&gt;%) students.&lt;br /&gt;
+
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 50%; margin:0 left;text-align: left;&#34;&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Frequency
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Black
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+White
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Hispanic
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Total
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+None
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+359 (75%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1081 (55%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+480 (67%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1920 (60%)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+1-2 times
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+63 (13%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+342 (17%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+125 (17%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+530 (17%)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+3-5 times
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+24 (5%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+168 (8%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+50 (7%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+242 (8%)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&amp;gt; 6 times
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+31 (6%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+389 (20%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+64 (9%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+484 (15%)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+477 (99%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1980 (100%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+719 (100%)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+3176 (100%)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;6&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;The death penalty is more likely in cases where the victim was female or White&lt;/span&gt;. The percentage difference is greater between female versus male victims (&lt;span class=&#34;math inline&#34;&gt;\(57.5 – 45.4 = 12.1\)&lt;/span&gt;%) than White versus Black victims (&lt;span class=&#34;math inline&#34;&gt;\(52.7 – 46.5 = 6.2\)&lt;/span&gt;%). When considering the interactive effects of gender and race, death sentences are more likely in cases with White and Black female victims (&lt;span class=&#34;math inline&#34;&gt;\(55\)&lt;/span&gt;% or higher). Death sentences are least likely in cases with a Black male victim.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math display&#34;&gt;\[\dfrac{703}{766}\approx 0.9177\]&lt;/span&gt; or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(91.8\)&lt;/span&gt;%&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;14&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math display&#34;&gt;\[4 + \dfrac{19}{384}\approx 4.0495\]&lt;/span&gt; or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(4.05\)&lt;/span&gt;%&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;There appears to be a relationship between age and feeling of age discrimination&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(8.2\)&lt;/span&gt;% of all respondents felt discriminated against because of their age. However, those between 18 and 29 were more likely to feel discriminated against because of their age than any other age category represented in the cross-tabulation.&lt;/p&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Response&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;18-29&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;30-39&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;40-49&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;50-59&lt;/p&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Yes&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;26 (16%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;14 (6%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;4 (2%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;19 (10%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;63 (8%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;No&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;136 (84%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;206 (94%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;183 (98%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;178 (90%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;703 (92%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;p&gt;Total&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;162 (100%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;220 (100%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;187 (100%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;197 (100%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;p&gt;766 (100%)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;The &lt;em&gt;dependent variable&lt;/em&gt; is housework disagreement&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(n = 7144\)&lt;/span&gt;&lt;/span&gt; is the total sample size.&lt;/li&gt;
+&lt;li&gt;We have &lt;span class=&#34;math display&#34;&gt;\[\dfrac{3953}{7144} \approx 0.5533\]&lt;/span&gt; or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(55.33\)&lt;/span&gt;%&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;boxed&#34;&gt;There is a relationship between perceived unfairness of housework divisions and housework disagreement for women&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(33.68\)&lt;/span&gt;% of women reported never having housework disagreement. However, women who felt housework divisions were fair to women (&lt;span class=&#34;math inline&#34;&gt;\(43.65\)&lt;/span&gt;%) were more likely to report never having disagreement over housework than women who felt housework divisions were unfair to women (&lt;span class=&#34;math inline&#34;&gt;\(25.62\)&lt;/span&gt;%).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;9&lt;/summary&gt;
+&lt;p&gt;
+Yes, &lt;span class=&#34;boxed&#34;&gt;there is a relationship between political party affiliation and attitudes toward the Affordable Care Act&lt;/span&gt;. The majority of physicians who reported being Republican or Other party were strongly against or against ACA. The largest reporting percentage was among &lt;span class=&#34;math inline&#34;&gt;\(31.08\)&lt;/span&gt;% + &lt;span class=&#34;math inline&#34;&gt;\(52.99\)&lt;/span&gt;% &lt;span class=&#34;math inline&#34;&gt;\(=\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(84.07\)&lt;/span&gt;% Republicans. Only &lt;span class=&#34;math inline&#34;&gt;\(11.20\)&lt;/span&gt;% + &lt;span class=&#34;math inline&#34;&gt;\(36\)&lt;/span&gt;% &lt;span class=&#34;math inline&#34;&gt;\(=\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(47.2\)&lt;/span&gt;% of Democrats were strongly against or against the act.
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3070,24 +3412,24 @@ sigma_mil&lt;/code&gt;&lt;/pre&gt;
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##            [,1]       [,2]       [,3]
-##  [1,] -63764.20 163432.062 348562.544
-##  [2,] 117187.44  40719.739 106869.423
-##  [3,] 240052.49  59500.638 -29854.068
-##  [4,] 201171.87 -37467.262 236761.753
-##  [5,] 167088.19   1660.096 152094.417
-##  [6,] 170092.80 242845.259 233924.803
-##  [7,] -19159.89 242152.616 153019.089
-##  [8,] 306550.72 308002.007   2113.647
-##  [9,] 188454.34   1851.286 196922.055
-## [10,] 219923.81 133862.445 120414.172&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;##             [,1]        [,2]       [,3]
+##  [1,]   99208.69  92238.7532 269680.833
+##  [2,]   30424.90  94577.5577 255463.909
+##  [3,]  193226.59  87715.8287 197774.638
+##  [4,]  162437.92  93912.7087  16146.502
+##  [5,]  -49231.80  44544.7793   1966.708
+##  [6,]  210609.80   -106.5516  -1133.195
+##  [7,]  220011.58 284242.8494  52101.551
+##  [8,] -155133.98 329349.2910 336421.412
+##  [9,]  -13612.47 124881.1589 170431.907
+## [10,]  143253.11  67174.1105 -31415.207&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The mean of these 10 sets of means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 140166.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 110905.5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The standard deviation of these 10 sets of means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 112908.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 119491.8&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
