@@ -47,6 +47,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
 </style>
 <div id="week-10-problem-set" class="section level3">
 <h3>Week 10 Problem Set</h3>
@@ -138,21 +142,18 @@ So the confidence interval is between <span class="boxed">14.26 to 14.94</span>.
 <summary>3</summary>
 <p>
 <ol style="list-style-type: lower-alpha">
-<li>For Canadians we have
+<li><p>For Canadians we have
 <span class="math display">\[\begin{align}
 s_p &amp;= \sqrt{\dfrac{0.51\cdot(1-0.51)}{1004}}\\
 &amp;\approx 0.02
-\end{align}\]</span></li>
-</ol>
-</p>
-<p>and
+\end{align}\]</span>
+and
 <span class="math display">\[\begin{align}
 CI &amp;= 0.51\pm 1.96\cdot0.02\\
 &amp;= 0.51\pm 0.04\\
 &amp;= (0.47, 0.55)
 \end{align}\]</span>
-So the estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.47 to 0.55</span>.</p>
-<ol start="2" style="list-style-type: lower-alpha">
+So the estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.47 to 0.55</span>.</p></li>
 <li><p>For Americans we have <span class="math display">\[\begin{align}
 CI &amp;= 0.45\pm 1.96\cdot0.02\\
 &amp;= 0.45\pm 0.04\\
@@ -161,45 +162,43 @@ CI &amp;= 0.45\pm 1.96\cdot0.02\\
 implying a confidence interval between <span class="boxed">0.39 to 0.49</span>.</p></li>
 <li><p>Based upon the calculated 95% confidence interval, the majority of Americans do not believe climate change is a serious problem. The true percentage of Americans who believe climate change is a serious problem is under 50%, somewhere between 39% and 49%, based upon this Pew Research Center sample. On the other hand, it is possible that the majority of Canadians believe climate change is a serious problem. We can be 95% confident that the true percentage of Canadians is somewhere between 47% and 55%.</p></li>
 </ol>
+</p>
 </details>
 <details>
 <summary>4</summary>
 <p>
 <ol style="list-style-type: lower-alpha">
-<li>We have a 90% confidence interval for the males by calculating
+<li><p>We have a 90% confidence interval for the males by calculating
 <span class="math display">\[\begin{align}
 s_p &amp;= \sqrt{\dfrac{0.21\cdot(1-0.21)}{337}}\\
 &amp;\approx 0.02
-\end{align}\]</span></li>
-</ol>
-</p>
-<p>and
+\end{align}\]</span>
+and
 <span class="math display">\[\begin{align}
 CI &amp;= 0.21\pm 1.65\cdot0.02\\
 &amp;= 0.21\pm 0.03\\
 &amp;= (0.18, 0.24)
 \end{align}\]</span>
-implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.18 to 0.24</span>.</p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>We have a 90% confidence interval for the demales by calculating
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.18 to 0.24</span>.</p></li>
+<li><p>We have a 90% confidence interval for the demales by calculating
 <span class="math display">\[\begin{align}
 s_p &amp;= \sqrt{\dfrac{0.37\cdot(1-0.37)}{441}}\\
 &amp;\approx 0.02
 \end{align}\]</span>
-</p>
 and
 <span class="math display">\[\begin{align}
 CI &amp;= 0.37\pm 1.65\cdot0.02\\
 &amp;= 0.37\pm 0.03\\
 &amp;= (0.34, 0.40)
 \end{align}\]</span>
-implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.34 to 0.40</span>.</li>
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.34 to 0.40</span>.</p></li>
 </ol>
 </p>
 </details>
 <details>
 <summary>5</summary>
 <p>
+<div style="padding-left: 30px;">
 <p>Due to the large sample size, we converted the proportion to full percentages, subtracting from 100 rather than 1.
 <span class="math display">\[\begin{align}
 SE &amp;= \sqrt{\dfrac{51\cdot(100-51)}{5490}}\\
@@ -212,6 +211,7 @@ CI &amp;= 51\pm 1.96\cdot0.67\\
 &amp;= (49.69, 52.31)
 \end{align}\]</span>
 We set the interval at the 95% confidence level. However, no matter whether the 90%, 95%, or 99% confidence level is chosen, the calculated interval includes values below 50% for the vote for a Republican candidate. Therefore, you should tell your supervisors that it span class=“boxed”&gt;would not be possible to declare a Republican candidate the likely winner of the votes coming from men if there was an election today because it seems quite possible that less than a majority of male voters would support her/him.</span></p>
+</div>
 </p>
 </details>
 <details>
@@ -222,9 +222,7 @@ We set the interval at the 95% confidence level. However, no matter whether the 
 <span class="math display">\[\begin{align}
 s_p &amp;= \sqrt{\dfrac{0.18\cdot(1-0.18)}{446}}\\
 &amp;\approx 0.02
-\end{align}\]</span></li>
-</ol>
-</p>
+\end{align}\]</span>
 and
 <span class="math display">\[\begin{align}
 CI &amp;= 0.18\pm 1.96\cdot0.02\\
@@ -237,14 +235,14 @@ For Hillary Clinton we have
 s_p &amp;= \sqrt{\dfrac{0.15\cdot(1-0.15)}{522}}\\
 &amp;\approx 0.02
 \end{align}\]</span>
-</p>
 and
 <span class="math display">\[\begin{align}
 CI &amp;= 0.15\pm 1.96\cdot0.02\\
 &amp;= 0.15\pm 0.04\\
 &amp;= (0.11, 0.19)
 \end{align}\]</span>
-implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.11 to 0.19</span>.
+implying an estimated standard error of proportions is approximately <span class="boxed">0.02</span> with a confidence interval between <span class="boxed">0.11 to 0.19</span>.</li>
+</ol>
 </p>
 </details>
 </div>

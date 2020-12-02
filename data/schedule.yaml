@@ -98,7 +98,6 @@ lessons:
     readings: "12-readings"
     lesson: "12-lesson"
     example: "12-example"
-    assignment: "12-homeworks"
     due: "12-due"
 
   - title: 'Chi-Square and ANOVAs'

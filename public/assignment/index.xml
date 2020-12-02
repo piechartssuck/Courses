@@ -51,6 +51,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
 &lt;/style&gt;
 &lt;div id=&#34;week-10-problem-set&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Week 10 Problem Set&lt;/h3&gt;
@@ -142,21 +146,18 @@ So the confidence interval is between &lt;span class=&#34;boxed&#34;&gt;14.26 to
 &lt;summary&gt;3&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;For Canadians we have
+&lt;li&gt;&lt;p&gt;For Canadians we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_p &amp;amp;= \sqrt{\dfrac{0.51\cdot(1-0.51)}{1004}}\\
 &amp;amp;\approx 0.02
-\end{align}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/p&gt;
-&lt;p&gt;and
+\end{align}\]&lt;/span&gt;
+and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.51\pm 1.96\cdot0.02\\
 &amp;amp;= 0.51\pm 0.04\\
 &amp;amp;= (0.47, 0.55)
 \end{align}\]&lt;/span&gt;
-So the estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.47 to 0.55&lt;/span&gt;.&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+So the estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.47 to 0.55&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For Americans we have &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.45\pm 1.96\cdot0.02\\
 &amp;amp;= 0.45\pm 0.04\\
@@ -165,45 +166,43 @@ CI &amp;amp;= 0.45\pm 1.96\cdot0.02\\
 implying a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.39 to 0.49&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Based upon the calculated 95% confidence interval, the majority of Americans do not believe climate change is a serious problem. The true percentage of Americans who believe climate change is a serious problem is under 50%, somewhere between 39% and 49%, based upon this Pew Research Center sample. On the other hand, it is possible that the majority of Canadians believe climate change is a serious problem. We can be 95% confident that the true percentage of Canadians is somewhere between 47% and 55%.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;4&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;We have a 90% confidence interval for the males by calculating
+&lt;li&gt;&lt;p&gt;We have a 90% confidence interval for the males by calculating
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_p &amp;amp;= \sqrt{\dfrac{0.21\cdot(1-0.21)}{337}}\\
 &amp;amp;\approx 0.02
-\end{align}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/p&gt;
-&lt;p&gt;and
+\end{align}\]&lt;/span&gt;
+and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.21\pm 1.65\cdot0.02\\
 &amp;amp;= 0.21\pm 0.03\\
 &amp;amp;= (0.18, 0.24)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.18 to 0.24&lt;/span&gt;.&lt;/p&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;We have a 90% confidence interval for the demales by calculating
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.18 to 0.24&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have a 90% confidence interval for the demales by calculating
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_p &amp;amp;= \sqrt{\dfrac{0.37\cdot(1-0.37)}{441}}\\
 &amp;amp;\approx 0.02
 \end{align}\]&lt;/span&gt;
-&lt;/p&gt;
 and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.37\pm 1.65\cdot0.02\\
 &amp;amp;= 0.37\pm 0.03\\
 &amp;amp;= (0.34, 0.40)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.34 to 0.40&lt;/span&gt;.&lt;/li&gt;
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.34 to 0.40&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;5&lt;/summary&gt;
 &lt;p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
 &lt;p&gt;Due to the large sample size, we converted the proportion to full percentages, subtracting from 100 rather than 1.
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 SE &amp;amp;= \sqrt{\dfrac{51\cdot(100-51)}{5490}}\\
@@ -216,6 +215,7 @@ CI &amp;amp;= 51\pm 1.96\cdot0.67\\
 &amp;amp;= (49.69, 52.31)
 \end{align}\]&lt;/span&gt;
 We set the interval at the 95% confidence level. However, no matter whether the 90%, 95%, or 99% confidence level is chosen, the calculated interval includes values below 50% for the vote for a Republican candidate. Therefore, you should tell your supervisors that it span class=“boxed”&amp;gt;would not be possible to declare a Republican candidate the likely winner of the votes coming from men if there was an election today because it seems quite possible that less than a majority of male voters would support her/him.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;details&gt;
@@ -226,9 +226,7 @@ We set the interval at the 95% confidence level. However, no matter whether the 
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_p &amp;amp;= \sqrt{\dfrac{0.18\cdot(1-0.18)}{446}}\\
 &amp;amp;\approx 0.02
-\end{align}\]&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/p&gt;
+\end{align}\]&lt;/span&gt;
 and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.18\pm 1.96\cdot0.02\\
@@ -241,14 +239,14 @@ For Hillary Clinton we have
 s_p &amp;amp;= \sqrt{\dfrac{0.15\cdot(1-0.15)}{522}}\\
 &amp;amp;\approx 0.02
 \end{align}\]&lt;/span&gt;
-&lt;/p&gt;
 and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 CI &amp;amp;= 0.15\pm 1.96\cdot0.02\\
 &amp;amp;= 0.15\pm 0.04\\
 &amp;amp;= (0.11, 0.19)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.11 to 0.19&lt;/span&gt;.
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.11 to 0.19&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;/div&gt;
@@ -846,58 +844,6 @@ Yes, &lt;span class=&#34;boxed&#34;&gt;there is a relationship between political
     </item>
     
     <item>
-      <title>The Chi-Square Test and Measures of Association</title>
-      <link>/assignment/12-homeworks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/12-homeworks/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#week-12-problem-set&#34;&gt;Week 12 Problem Set&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;style&gt;
-span.boxed {
-  border: 0px solid #FFFFFF;
-  padding: 5px;
-  color: #FFFFFF;
-  background-color: #005b96;
-  display: inline;
-} 
-
-table {
-   margin-left: auto;
-   margin-right: auto;
-}
-
-table thead th { border-bottom: 1px solid #ddd; 
-}
-
-th, td { padding: 5px; 
-}
-
-tr:nth-child(even) { background: #ffffff; 
-}
-&lt;/style&gt;
-&lt;div id=&#34;week-12-problem-set&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Week 12 Problem Set&lt;/h3&gt;
-&lt;div id=&#34;assignment&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Assignment&lt;/h4&gt;
-&lt;p&gt;Chapter 10 Exercises: 1, 2, 3, 5, 7, 13. Please turn it in to the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;ecampus&lt;/a&gt; by 11:59 PM two Wednesdays from now.&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Solutions&lt;/h4&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Chi-Square and ANOVAs</title>
       <link>/assignment/13-homeworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -905,6 +851,8 @@ tr:nth-child(even) { background: #ffffff;
       <description>
 &lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -934,6 +882,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
 &lt;/style&gt;
 &lt;div id=&#34;week-13-problem-set&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Week 13 Problem Set&lt;/h3&gt;
@@ -943,6 +895,406 @@ tr:nth-child(even) { background: #ffffff;
 &lt;/div&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
+&lt;em&gt;Note: The&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi^2\)&lt;/span&gt; &lt;em&gt;value obtained will be referenced by the variable&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\chi^2_{obt}\)&lt;/span&gt;.
+&lt;details&gt;
+&lt;summary&gt;1&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;We have
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+df &amp;amp;= (3-1)\cdot(2-1)\\
+&amp;amp;= 2
+\end{align}\]&lt;/span&gt;
+yielding &lt;span class=&#34;boxed&#34;&gt;2 degrees of freedom&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math inline&#34;&gt;\(\chi^2 = 3.311\)&lt;/span&gt;. With &lt;span class=&#34;math inline&#34;&gt;\(\chi^2_{obt} = 0.191 &amp;gt; \alpha = 0.01\)&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;we fail to reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; and conclude that sex and opinion of whether or not people can be trusted are likely independent&lt;/span&gt;. Specifically, similar percentages of men (&lt;span class=&#34;math inline&#34;&gt;\(34.94\)&lt;/span&gt;%) and women (&lt;span class=&#34;math inline&#34;&gt;\(29.7\)&lt;/span&gt;%) felt that people can be trusted.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.05\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\chi^2_{obt} = 0.191\)&lt;/span&gt; would still be greater and thus &lt;span class=&#34;boxed&#34;&gt;we would still reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math inline&#34;&gt;\(\lambda = 0.000\)&lt;/span&gt; implying that there &lt;span class=&#34;boxed&#34;&gt;is no proportional reduction of error using sex to predict whether or not people can be trusted&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;2&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;There does not appear to be a relationship between gender and views on restoring the voting rights of felons in prison. &lt;span class=&#34;math inline&#34;&gt;\(30\)&lt;/span&gt;% of respondents supported restoring the voting rights of felons in prison, with only a slightly greater percentage of men (&lt;span class=&#34;math inline&#34;&gt;\(31\)&lt;/span&gt;%) reporting such compared to women (&lt;span class=&#34;math inline&#34;&gt;\(28\)&lt;/span&gt;%).
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 50%; margin:0 left;text-align: left;&#34;&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Restoring Voting Rights
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Men
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Women
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Total
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Support
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+31%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+28%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+30%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Oppose
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+69%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+71%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+70%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Total
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+100%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+99%
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+100%
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;We &lt;span class=&#34;boxed&#34;&gt;fail to reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; of no relationship and conclude that there is not a relationship between gender and views on restoring the voting rights of felons in prison at the &lt;span class=&#34;math inline&#34;&gt;\(0.05\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; level&lt;/span&gt;.
+&lt;/p&gt;
+&lt;/details&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;3&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;A higher percentage of White respondents (&lt;span class=&#34;math inline&#34;&gt;\(38.14\)&lt;/span&gt;%), compared to Black respondents (&lt;span class=&#34;math inline&#34;&gt;\(23\)&lt;/span&gt;%), reported that people could be trusted&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;For Black respondents, a slightly higher percentage of men (&lt;span class=&#34;math inline&#34;&gt;\(15.1\)&lt;/span&gt;%) compared to women (&lt;span class=&#34;math inline&#34;&gt;\(12.5\)&lt;/span&gt;%) reported that people could be trusted&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Whites with &lt;span class=&#34;math inline&#34;&gt;\(\chi^2 = 2.395\)&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;we fail to reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Blacks with &lt;span class=&#34;math inline&#34;&gt;\(\chi^2 = 0.233\)&lt;/span&gt;, &lt;span class=&#34;boxed&#34;&gt;we fail to reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;&lt;/span&gt;.
+It is also worth noting that two of the cells have expected counts less than 5 so results should be cautiously interpreted. It would likely be beneficial to repeat the study with a larger sample size.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;5&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;We will make 2,973 errors&lt;/span&gt; since we predict that all victims fall in the modal category (White) where
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+E_1 &amp;amp;= 6084 – 3111\\
+&amp;amp;= 2973
+\end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;White offenders, we could make &lt;span class=&#34;boxed&#34;&gt;373 errors&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Black offenders, we could make &lt;span class=&#34;boxed&#34;&gt;493 errors&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Other offenders, we would make &lt;span class=&#34;boxed&#34;&gt;42 errors&lt;/span&gt; given &lt;span class=&#34;math inline&#34;&gt;\(E_2 = 9084\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The proportional reduction in error is then
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+\dfrac{2973 – 908}{2973} &amp;amp; \approx 0.6946
+\end{align}\]&lt;/span&gt;
+This indicates a very strong relationship between the two variables. &lt;span class=&#34;boxed&#34;&gt;We can reduce the error in predicting victim’s race based upon race of offender by 69.46%&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7&lt;/summary&gt;
+&lt;p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;We have&lt;/p&gt;
+&lt;/div&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;div style=&#34;width: 90%; margin:0 left;text-align: left;&#34;&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Race/Status
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f_0\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f_e\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(f_0-f_e\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\((f_0-f_e)^2\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\dfrac{(f_0-f_e)^2}{f_e}\)&lt;/span&gt;
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+White/First-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1742
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+1749.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-7.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+57.76
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.03
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+White/Nonfirst-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2392
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2384.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+7.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+57.76
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.02
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Black/First-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+102
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+93.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+8.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+72.25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.77
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Black/Nonfirst-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+119
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+127.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-8.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+72.25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.57
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Native American/First-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+41
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+36.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+4.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+21.16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.58
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Native American/Nonfirst-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+45
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+49.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-4.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+21.16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.43
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Hispanic/First-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+19
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+18.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.01
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Hispanic/Nonfirst-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+25
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+25.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-0.4
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.16
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+0.01
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Asian American/First-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+11.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-5.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+34.81
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2.93
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Asian American/Nonfirst-Generation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+22
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+16.1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+5.9
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+34.81
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+2.16
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(\chi^2 = 7.51\)&lt;/span&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;So &lt;span class=&#34;math inline&#34;&gt;\(\chi^2 = 7.51\)&lt;/span&gt; with &lt;span class=&#34;math inline&#34;&gt;\(df = (2-1)\cdot(5-1) = 4\)&lt;/span&gt; implying we would fail to reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt;&lt;/span&gt;. The probability of &lt;span class=&#34;math inline&#34;&gt;\(\chi^2_{obt}\)&lt;/span&gt; is between &lt;span class=&#34;math inline&#34;&gt;\((0.20, 0.10)&amp;gt;\alpha = 0.05\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;13&lt;/summary&gt;
+&lt;p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;p&gt;For&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Gender, the model is significant at the &lt;span class=&#34;math inline&#34;&gt;\(0.01 \alpha\)&lt;/span&gt; level, &lt;span class=&#34;boxed&#34;&gt;indicating a likely significant relationship between the variables&lt;/span&gt;. Though males contribute to more violent onset, in proportional terms, females exhibit a higher prevalence rate, in that &lt;span class=&#34;math inline&#34;&gt;\(18.32\)&lt;/span&gt;% of females exhibit violent onset compared with &lt;span class=&#34;math inline&#34;&gt;\(11.71\)&lt;/span&gt;% of males.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Age at first offense, the model is significant at the &lt;span class=&#34;math inline&#34;&gt;\(0.01 \alpha\)&lt;/span&gt; level, &lt;span class=&#34;boxed&#34;&gt;indicating a likely significant relationship between age at first offense and violent onset&lt;/span&gt;. Violent onset is more likely among the group 14 years and older (&lt;span class=&#34;math inline&#34;&gt;\(14.74\)&lt;/span&gt;%) than those less than 14 years of age at first onset (&lt;span class=&#34;math inline&#34;&gt;\(9.67\)&lt;/span&gt;%).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3223,6 +3575,10 @@ li {
     margin-left: 1.5em;
 }
 
+ul {
+    margin-left: 1.5em;
+}
+
 &lt;/style&gt;
 &lt;div id=&#34;week-7-problem-set&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Week 7 Problem Set&lt;/h3&gt;
@@ -3412,24 +3768,24 @@ sigma_mil&lt;/code&gt;&lt;/pre&gt;
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##             [,1]        [,2]       [,3]
-##  [1,]   99208.69  92238.7532 269680.833
-##  [2,]   30424.90  94577.5577 255463.909
-##  [3,]  193226.59  87715.8287 197774.638
-##  [4,]  162437.92  93912.7087  16146.502
-##  [5,]  -49231.80  44544.7793   1966.708
-##  [6,]  210609.80   -106.5516  -1133.195
-##  [7,]  220011.58 284242.8494  52101.551
-##  [8,] -155133.98 329349.2910 336421.412
-##  [9,]  -13612.47 124881.1589 170431.907
-## [10,]  143253.11  67174.1105 -31415.207&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;##             [,1]      [,2]       [,3]
+##  [1,] 307064.437 252393.87  234142.09
+##  [2,]  88989.288 147525.88  233194.59
+##  [3,] -50290.954 208118.98   30830.67
+##  [4,] 248477.324  42453.33  104663.58
+##  [5,]  -2104.913  70527.20   41036.45
+##  [6,] 121033.238  64396.49   68830.73
+##  [7,]  95978.704  37947.34  140439.42
+##  [8,] 291538.718  49732.26  109746.95
+##  [9,] 142995.862 267650.26 -142419.52
+## [10,] 271523.604 128004.20  215520.85&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The mean of these 10 sets of means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 110905.5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 127331.4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The standard deviation of these 10 sets of means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 119491.8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 108402.2&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;

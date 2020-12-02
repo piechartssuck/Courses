@@ -16,6 +16,8 @@ editor_options:
 
 <link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -45,6 +47,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 1.5em;
+}
 </style>
 <div id="week-13-problem-set" class="section level3">
 <h3>Week 13 Problem Set</h3>
@@ -54,6 +60,406 @@ tr:nth-child(even) { background: #ffffff;
 </div>
 <div id="solutions" class="section level4">
 <h4>Solutions</h4>
+<em>Note: The</em> <span class="math inline">\(\chi^2\)</span> <em>value obtained will be referenced by the variable</em> <span class="math inline">\(\chi^2_{obt}\)</span>.
+<details>
+<summary>1</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have
+<span class="math display">\[\begin{align}
+df &amp;= (3-1)\cdot(2-1)\\
+&amp;= 2
+\end{align}\]</span>
+yielding <span class="boxed">2 degrees of freedom</span>.</p></li>
+<li><p>We have <span class="math inline">\(\chi^2 = 3.311\)</span>. With <span class="math inline">\(\chi^2_{obt} = 0.191 &gt; \alpha = 0.01\)</span>, <span class="boxed">we fail to reject <span class="math inline">\(H_0\)</span> and conclude that sex and opinion of whether or not people can be trusted are likely independent</span>. Specifically, similar percentages of men (<span class="math inline">\(34.94\)</span>%) and women (<span class="math inline">\(29.7\)</span>%) felt that people can be trusted.</p></li>
+<li><p>If <span class="math inline">\(\alpha = 0.05\)</span>, <span class="math inline">\(\chi^2_{obt} = 0.191\)</span> would still be greater and thus <span class="boxed">we would still reject <span class="math inline">\(H_0\)</span></span>.</p></li>
+<li><p>We have <span class="math inline">\(\lambda = 0.000\)</span> implying that there <span class="boxed">is no proportional reduction of error using sex to predict whether or not people can be trusted</span>.</p></li>
+</ol>
+</p>
+</details>
+<details>
+<summary>2</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>There does not appear to be a relationship between gender and views on restoring the voting rights of felons in prison. <span class="math inline">\(30\)</span>% of respondents supported restoring the voting rights of felons in prison, with only a slightly greater percentage of men (<span class="math inline">\(31\)</span>%) reporting such compared to women (<span class="math inline">\(28\)</span>%).
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Restoring Voting Rights
+</th>
+<th style="text-align:center;">
+Men
+</th>
+<th style="text-align:center;">
+Women
+</th>
+<th style="text-align:center;">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Support
+</td>
+<td style="text-align:center;">
+31%
+</td>
+<td style="text-align:center;">
+28%
+</td>
+<td style="text-align:center;">
+30%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oppose
+</td>
+<td style="text-align:center;">
+69%
+</td>
+<td style="text-align:center;">
+71%
+</td>
+<td style="text-align:center;">
+70%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:center;">
+100%
+</td>
+<td style="text-align:center;">
+99%
+</td>
+<td style="text-align:center;">
+100%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+<li>We <span class="boxed">fail to reject <span class="math inline">\(H_0\)</span> of no relationship and conclude that there is not a relationship between gender and views on restoring the voting rights of felons in prison at the <span class="math inline">\(0.05\)</span> <span class="math inline">\(\alpha\)</span> level</span>.
+</p>
+</details></li>
+</ol>
+<details>
+<summary>3</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="boxed">A higher percentage of White respondents (<span class="math inline">\(38.14\)</span>%), compared to Black respondents (<span class="math inline">\(23\)</span>%), reported that people could be trusted</span>.</p></li>
+<li><p><span class="boxed">For Black respondents, a slightly higher percentage of men (<span class="math inline">\(15.1\)</span>%) compared to women (<span class="math inline">\(12.5\)</span>%) reported that people could be trusted</span>.</p></li>
+<li><p>For</p></li>
+</ol>
+<ul>
+<li>Whites with <span class="math inline">\(\chi^2 = 2.395\)</span>, <span class="boxed">we fail to reject <span class="math inline">\(H_0\)</span>.</span></li>
+<li>Blacks with <span class="math inline">\(\chi^2 = 0.233\)</span>, <span class="boxed">we fail to reject <span class="math inline">\(H_0\)</span></span>.
+It is also worth noting that two of the cells have expected counts less than 5 so results should be cautiously interpreted. It would likely be beneficial to repeat the study with a larger sample size.</li>
+</ul>
+</p>
+</details>
+<details>
+<summary>5</summary>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="boxed">We will make 2,973 errors</span> since we predict that all victims fall in the modal category (White) where
+<span class="math display">\[\begin{align}
+E_1 &amp;= 6084 – 3111\\
+&amp;= 2973
+\end{align}\]</span></p></li>
+<li><p>For</p></li>
+</ol>
+<ul>
+<li>White offenders, we could make <span class="boxed">373 errors</span></li>
+<li>Black offenders, we could make <span class="boxed">493 errors</span></li>
+<li>Other offenders, we would make <span class="boxed">42 errors</span> given <span class="math inline">\(E_2 = 9084\)</span>.</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>The proportional reduction in error is then
+<span class="math display">\[\begin{align}
+\dfrac{2973 – 908}{2973} &amp; \approx 0.6946
+\end{align}\]</span>
+This indicates a very strong relationship between the two variables. <span class="boxed">We can reduce the error in predicting victim’s race based upon race of offender by 69.46%</span>.</li>
+</ol>
+</p>
+</details>
+<details>
+<summary>7</summary>
+<p>
+<div style="padding-left: 30px;">
+<p>We have</p>
+</div>
+<div align="center">
+<div style="width: 90%; margin:0 left;text-align: left;">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Race/Status
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(f_0\)</span>
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(f_e\)</span>
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(f_0-f_e\)</span>
+</th>
+<th style="text-align:center;">
+<span class="math inline">\((f_0-f_e)^2\)</span>
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(\dfrac{(f_0-f_e)^2}{f_e}\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+White/First-Generation
+</td>
+<td style="text-align:center;">
+1742
+</td>
+<td style="text-align:center;">
+1749.6
+</td>
+<td style="text-align:center;">
+-7.6
+</td>
+<td style="text-align:center;">
+57.76
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White/Nonfirst-Generation
+</td>
+<td style="text-align:center;">
+2392
+</td>
+<td style="text-align:center;">
+2384.4
+</td>
+<td style="text-align:center;">
+7.6
+</td>
+<td style="text-align:center;">
+57.76
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Black/First-Generation
+</td>
+<td style="text-align:center;">
+102
+</td>
+<td style="text-align:center;">
+93.5
+</td>
+<td style="text-align:center;">
+8.5
+</td>
+<td style="text-align:center;">
+72.25
+</td>
+<td style="text-align:center;">
+0.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Black/Nonfirst-Generation
+</td>
+<td style="text-align:center;">
+119
+</td>
+<td style="text-align:center;">
+127.5
+</td>
+<td style="text-align:center;">
+-8.5
+</td>
+<td style="text-align:center;">
+72.25
+</td>
+<td style="text-align:center;">
+0.57
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Native American/First-Generation
+</td>
+<td style="text-align:center;">
+41
+</td>
+<td style="text-align:center;">
+36.4
+</td>
+<td style="text-align:center;">
+4.6
+</td>
+<td style="text-align:center;">
+21.16
+</td>
+<td style="text-align:center;">
+0.58
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Native American/Nonfirst-Generation
+</td>
+<td style="text-align:center;">
+45
+</td>
+<td style="text-align:center;">
+49.6
+</td>
+<td style="text-align:center;">
+-4.6
+</td>
+<td style="text-align:center;">
+21.16
+</td>
+<td style="text-align:center;">
+0.43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hispanic/First-Generation
+</td>
+<td style="text-align:center;">
+19
+</td>
+<td style="text-align:center;">
+18.6
+</td>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:center;">
+0.16
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hispanic/Nonfirst-Generation
+</td>
+<td style="text-align:center;">
+25
+</td>
+<td style="text-align:center;">
+25.4
+</td>
+<td style="text-align:center;">
+-0.4
+</td>
+<td style="text-align:center;">
+0.16
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Asian American/First-Generation
+</td>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+11.9
+</td>
+<td style="text-align:center;">
+-5.9
+</td>
+<td style="text-align:center;">
+34.81
+</td>
+<td style="text-align:center;">
+2.93
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Asian American/Nonfirst-Generation
+</td>
+<td style="text-align:center;">
+22
+</td>
+<td style="text-align:center;">
+16.1
+</td>
+<td style="text-align:center;">
+5.9
+</td>
+<td style="text-align:center;">
+34.81
+</td>
+<td style="text-align:center;">
+2.16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(\chi^2 = 7.51\)</span>
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="padding-left: 30px;">
+<p><span class="boxed">So <span class="math inline">\(\chi^2 = 7.51\)</span> with <span class="math inline">\(df = (2-1)\cdot(5-1) = 4\)</span> implying we would fail to reject <span class="math inline">\(H_0\)</span></span>. The probability of <span class="math inline">\(\chi^2_{obt}\)</span> is between <span class="math inline">\((0.20, 0.10)&gt;\alpha = 0.05\)</span>.</p>
+</div>
+</p>
+</details>
+<details>
+<summary>13</summary>
+<p>
+<div style="padding-left: 30px;">
+<p>For</p>
+</div>
+<ul>
+<li><p>Gender, the model is significant at the <span class="math inline">\(0.01 \alpha\)</span> level, <span class="boxed">indicating a likely significant relationship between the variables</span>. Though males contribute to more violent onset, in proportional terms, females exhibit a higher prevalence rate, in that <span class="math inline">\(18.32\)</span>% of females exhibit violent onset compared with <span class="math inline">\(11.71\)</span>% of males.</p></li>
+<li><p>Age at first offense, the model is significant at the <span class="math inline">\(0.01 \alpha\)</span> level, <span class="boxed">indicating a likely significant relationship between age at first offense and violent onset</span>. Violent onset is more likely among the group 14 years and older (<span class="math inline">\(14.74\)</span>%) than those less than 14 years of age at first onset (<span class="math inline">\(9.67\)</span>%).</p></li>
+</ul>
+</p>
+</details>
 <p>:::</p>
 </div>
 </div>
