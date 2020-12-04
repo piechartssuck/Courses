@@ -8190,43 +8190,42 @@ mu_mil
 ## [1] 120248.7
 ```&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;120249&lt;/span&gt;. The standard deviation is&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```r
-sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-  
-sigma_mil = sd_pop(military)
-  
-sigma_mil
-```
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 
-```
-## [1] 112966.1
-```&lt;/code&gt;&lt;/pre&gt;
+sigma_mil = sd_pop(military)
+
+sigma_mil&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 112966.1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;112966&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;p&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/p&gt;
+&lt;li&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# replicate(size #, rnorm(#of sample means, mu, sigma))
 
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##            [,1]       [,2]       [,3]
-##  [1,] 116281.78 -111540.65  115421.58
-##  [2,] -10235.22  250741.73  203279.43
-##  [3,] 114851.62  361622.43  206449.58
-##  [4,]  70692.18  159070.29  111525.48
-##  [5,] 187208.29  -41467.75  253636.99
-##  [6,] 140250.69   67818.29 -104617.32
-##  [7,] 135424.33  121204.83   53374.74
-##  [8,]  82221.83   93747.14   54187.46
-##  [9,] -59730.44  174042.74   94281.44
-## [10,]  98319.79  169777.64  172034.38&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The mean of these 10 sets of means is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##            [,1]      [,2]       [,3]
+##  [1,]  33426.95 335549.95  -18025.46
+##  [2,] 169537.49 -14398.06  231391.02
+##  [3,]  74678.11 -45349.25   76466.65
+##  [4,] 114869.64 -24663.72  102687.21
+##  [5,] 154684.53  54469.29   65382.51
+##  [6,] 176616.48 246989.32  156595.21
+##  [7,] 166283.60 292779.84  197429.97
+##  [8,] 110859.90 199786.65  251832.85
+##  [9,] 144781.25  97621.66  141910.31
+## [10,] 262273.01 137820.70 -133613.34&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The mean of these 10 sets of means is&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 109329.2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;or about &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;105428&amp;lt;/span&amp;gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 125355.8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;or about &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;105428&amp;lt;/span&amp;gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The standard deviation of these 10 sets of means is&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 104358.6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 107488.6&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;or about &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;122991&amp;lt;/span&amp;gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;

@@ -208,33 +208,33 @@ First we convert these to a vector and take the sum
   </div>
     
   a. The mean number of active military personnel per region in 2009 was 
-    ```{r, echo=TRUE, eval=TRUE}
-    mu_mil = mean(military)
+  ```{r, echo=TRUE, eval=TRUE}
+  mu_mil = mean(military)
   
-    mu_mil
-    ```
+  mu_mil
+  ```
   or about <span class="boxed">120249</span>. The standard deviation is
-    ```{r, echo=TRUE, eval=TRUE}
+  ```{r, echo=TRUE, eval=TRUE}
     sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
   
-    sigma_mil = sd_pop(military)
+  sigma_mil = sd_pop(military)
   
-    sigma_mil
-    ```
+  sigma_mil
+  ```
   or about <span class="boxed">112966</span>.
   
   b. We can use the `sample` command to get our 10 sample means of size 3. We can use the `replcate` and `rnorm` commands in R to do this 
-        ```{r, echo=TRUE, eval=TRUE}
-        # replicate(size #, rnorm(#of sample means, mu, sigma))
+  ```{r, echo=TRUE, eval=TRUE}
+  # replicate(size #, rnorm(#of sample means, mu, sigma))
   
-        samples <- replicate(3,rnorm(10, mu_mil,sigma_mil))
+  samples <- replicate(3,rnorm(10, mu_mil,sigma_mil))
   
-        samples
-       ```
+  samples
+  ```
   c. The mean of these 10 sets of means is 
-        ```{r, echo=TRUE, eval=TRUE}
-        mean(samples)
-        ```
+  ```{r, echo=TRUE, eval=TRUE}
+  mean(samples)
+  ```
     or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.
   
   d. The standard deviation of these 10 sets of means is
