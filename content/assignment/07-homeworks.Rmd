@@ -160,7 +160,8 @@ The relationship between the standard error and the standard deviation is $\sigm
 <p>
       
 <div style="padding-left: 30px;">
-        First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
+
+First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
       </div>
         
   a. The standard error of the mean is<br><br> 
@@ -197,7 +198,8 @@ We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sig
 <details><summary>8</summary>
   
   <div style="padding-left: 30px;">
-    First we convert these to a vector and take the sum
+
+First we convert these to a vector and take the sum
   ```{r, echo=TRUE, eval=TRUE}
   military <- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
   
@@ -205,7 +207,7 @@ We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sig
   ```
   </div>
     
-    a. The mean number of active military personnel per region in 2009 was 
+  a. The mean number of active military personnel per region in 2009 was 
   ```{r, echo=TRUE, eval=TRUE}
   mu_mil = mean(military)
   

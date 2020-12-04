@@ -3709,9 +3709,8 @@ ul {
 &lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
 &lt;div style=&#34;padding-left: 30px;&#34;&gt;
-&lt;pre&gt;&lt;code&gt;    First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
-  &amp;lt;/div&amp;gt;
-    &lt;/code&gt;&lt;/pre&gt;
+First note that the standard error of the mean is proportional to &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{\sqrt{N}}\)&lt;/span&gt;.
+&lt;/div&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The standard error of the mean is&lt;br&gt;&lt;br&gt;
 &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)&lt;/span&gt; for a sample size of 100&lt;br&gt;&lt;br&gt;
@@ -3742,12 +3741,14 @@ We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{20}{10} = 
 &lt;details&gt;
 &lt;p&gt;&lt;summary&gt;8&lt;/summary&gt;&lt;/p&gt;
 &lt;div style=&#34;padding-left: 30px;&#34;&gt;
-&lt;pre&gt;&lt;code&gt;First we convert these to a vector and take the sum&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First we convert these to a vector and take the sum&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;military &amp;lt;- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
 
 total_mil &amp;lt;- sum(military)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;pre&gt;&lt;code&gt;a. The mean number of active military personnel per region in 2009 was &lt;/code&gt;&lt;/pre&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The mean number of active military personnel per region in 2009 was&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_mil = mean(military)
 
 mu_mil&lt;/code&gt;&lt;/pre&gt;
@@ -3768,28 +3769,28 @@ sigma_mil&lt;/code&gt;&lt;/pre&gt;
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##            [,1]       [,2]      [,3]
-##  [1,] 235917.43  227021.68 283610.45
-##  [2,] 187434.42  127267.02 123563.18
-##  [3,]  75060.34  203805.90  84956.69
-##  [4,] 101207.90   71786.71 -44357.24
-##  [5,] 173447.80  254023.41  75831.42
-##  [6,]  13997.34  117844.30  44602.21
-##  [7,] 157578.43  264590.03  98066.55
-##  [8,]  86732.19 -126231.03 -82869.16
-##  [9,]  65809.37  -23415.40  47130.83
-## [10,]  27747.76  145797.35 326237.42&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            [,1]      [,2]       [,3]
+##  [1,] 239875.23 303185.99  -80360.83
+##  [2,] 189215.85 -46955.86 -104048.99
+##  [3,] 257144.39 204593.44   88215.96
+##  [4,] -50970.21 103860.36  250109.74
+##  [5,] 142226.17 179402.48  111288.26
+##  [6,]  33902.49  55868.32   66642.14
+##  [7,]  31424.71 179103.37  193804.58
+##  [8,]  69761.97 101293.29  181165.17
+##  [9,]  68407.22 148939.62   98783.43
+## [10,] -55056.84 172043.27   67268.25&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 111473.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 106671.1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The standard deviation of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 108272.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 105201.8&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;5&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/li&gt;

@@ -956,9 +956,8 @@ ul {
 <summary>6</summary>
 <p>
 <div style="padding-left: 30px;">
-<pre><code>    First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
-  &lt;/div&gt;
-    </code></pre>
+First note that the standard error of the mean is proportional to <span class="math inline">\(\frac{1}{\sqrt{N}}\)</span>.
+</div>
 <ol style="list-style-type: lower-alpha">
 <li><p>The standard error of the mean is<br><br>
 <span class="math inline">\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}\)</span> for a sample size of 100<br><br>
@@ -989,12 +988,14 @@ We compare the two by <span class="math inline">\(\frac{20}{10} = 2\)</span>. So
 <details>
 <p><summary>8</summary></p>
 <div style="padding-left: 30px;">
-<pre><code>First we convert these to a vector and take the sum</code></pre>
+<p>First we convert these to a vector and take the sum</p>
 <pre class="r"><code>military &lt;- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
 
 total_mil &lt;- sum(military)</code></pre>
 </div>
-<pre><code>a. The mean number of active military personnel per region in 2009 was </code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>The mean number of active military personnel per region in 2009 was</li>
+</ol>
 <pre class="r"><code>mu_mil = mean(military)
 
 mu_mil</code></pre>
@@ -1015,28 +1016,28 @@ sigma_mil</code></pre>
 samples &lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples</code></pre>
-<pre><code>##            [,1]       [,2]      [,3]
-##  [1,] 235917.43  227021.68 283610.45
-##  [2,] 187434.42  127267.02 123563.18
-##  [3,]  75060.34  203805.90  84956.69
-##  [4,] 101207.90   71786.71 -44357.24
-##  [5,] 173447.80  254023.41  75831.42
-##  [6,]  13997.34  117844.30  44602.21
-##  [7,] 157578.43  264590.03  98066.55
-##  [8,]  86732.19 -126231.03 -82869.16
-##  [9,]  65809.37  -23415.40  47130.83
-## [10,]  27747.76  145797.35 326237.42</code></pre>
+<pre><code>##            [,1]      [,2]       [,3]
+##  [1,] 239875.23 303185.99  -80360.83
+##  [2,] 189215.85 -46955.86 -104048.99
+##  [3,] 257144.39 204593.44   88215.96
+##  [4,] -50970.21 103860.36  250109.74
+##  [5,] 142226.17 179402.48  111288.26
+##  [6,]  33902.49  55868.32   66642.14
+##  [7,]  31424.71 179103.37  193804.58
+##  [8,]  69761.97 101293.29  181165.17
+##  [9,]  68407.22 148939.62   98783.43
+## [10,] -55056.84 172043.27   67268.25</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>The mean of these 10 sets of means is</li>
 </ol>
 <pre class="r"><code>mean(samples)</code></pre>
-<pre><code>## [1] 111473.2</code></pre>
+<pre><code>## [1] 106671.1</code></pre>
 <p>or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that <span class="math inline">\(\mu_Y = \mu_{\overline{Y}}\)</span>.</p>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>The standard deviation of these 10 sets of means is</li>
 </ol>
 <pre class="r"><code>sd(samples)</code></pre>
-<pre><code>## [1] 108272.4</code></pre>
+<pre><code>## [1] 105201.8</code></pre>
 <p>or about <span class="boxed">122991</span>.</p>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below</li>
