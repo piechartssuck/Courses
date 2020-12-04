@@ -226,49 +226,74 @@ total_mil &lt;- sum(military)</code></pre>
 <ol style="list-style-type: lower-alpha">
 <li>The mean number of active military personnel per region in 2009 was</li>
 </ol>
-<pre class="r"><code>mu_mil = mean(military)
+<pre><code>```r
+mu_mil = mean(military)
+  
+mu_mil
+```
 
-mu_mil</code></pre>
-<pre><code>## [1] 120248.7</code></pre>
+```
+## [1] 120248.7
+```</code></pre>
 <p>or about <span class="boxed">120249</span>. The standard deviation is</p>
-<pre class="r"><code>sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-
+<pre><code>```r
+sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+  
 sigma_mil = sd_pop(military)
+  
+sigma_mil
+```
 
-sigma_mil</code></pre>
-<pre><code>## [1] 112966.1</code></pre>
+```
+## [1] 112966.1
+```</code></pre>
 <p>or about <span class="boxed">112966</span>.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>We can use the <code>sample</code> command to get our 10 sample means of size 3. We can use the <code>replcate</code> and <code>rnorm</code> commands in R to do this</li>
 </ol>
-<pre class="r"><code># replicate(size #, rnorm(#of sample means, mu, sigma))
-
+<pre><code>```r
+# replicate(size #, rnorm(#of sample means, mu, sigma))
+  
 samples &lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
+  
+samples
+```
 
-samples</code></pre>
-<pre><code>##            [,1]      [,2]       [,3]
-##  [1,] 239875.23 303185.99  -80360.83
-##  [2,] 189215.85 -46955.86 -104048.99
-##  [3,] 257144.39 204593.44   88215.96
-##  [4,] -50970.21 103860.36  250109.74
-##  [5,] 142226.17 179402.48  111288.26
-##  [6,]  33902.49  55868.32   66642.14
-##  [7,]  31424.71 179103.37  193804.58
-##  [8,]  69761.97 101293.29  181165.17
-##  [9,]  68407.22 148939.62   98783.43
-## [10,] -55056.84 172043.27   67268.25</code></pre>
+```
+##            [,1]      [,2]      [,3]
+##  [1,] 141756.82 224495.15 141600.87
+##  [2,] 186844.89 105788.43 189100.68
+##  [3,] 112059.04 375627.00  30801.45
+##  [4,] 199030.19 162553.71 -95972.12
+##  [5,] 185270.12 142173.43 -18173.36
+##  [6,] 122642.53  23757.82 -25023.67
+##  [7,]  26216.79  81322.35  40578.34
+##  [8,] 125665.27 228006.50  42845.15
+##  [9,] -24035.00 116741.85 319441.42
+## [10,]  91814.50 143308.00 150705.31
+```</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>The mean of these 10 sets of means is</li>
 </ol>
-<pre class="r"><code>mean(samples)</code></pre>
-<pre><code>## [1] 106671.1</code></pre>
-<p>or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that <span class="math inline">\(\mu_Y = \mu_{\overline{Y}}\)</span>.</p>
+<pre><code>```r
+mean(samples)
+```
+
+```
+## [1] 118231.4
+```
+or about &lt;span class=&quot;boxed&quot;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.</code></pre>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>The standard deviation of these 10 sets of means is</li>
 </ol>
-<pre class="r"><code>sd(samples)</code></pre>
-<pre><code>## [1] 105201.8</code></pre>
-<p>or about <span class="boxed">122991</span>.</p>
+<pre><code>```r
+sd(samples)
+```
+
+```
+## [1] 101791.6
+```
+or about &lt;span class=&quot;boxed&quot;&gt;122991&lt;/span&gt;.</code></pre>
 <ol start="5" style="list-style-type: lower-alpha">
 <li>The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below</li>
 </ol>

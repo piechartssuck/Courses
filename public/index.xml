@@ -8180,17 +8180,27 @@ total_mil &amp;lt;- sum(military)&lt;/code&gt;&lt;/pre&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean number of active military personnel per region in 2009 was&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_mil = mean(military)
+&lt;pre&gt;&lt;code&gt;```r
+mu_mil = mean(military)
+  
+mu_mil
+```
 
-mu_mil&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 120248.7&lt;/code&gt;&lt;/pre&gt;
+```
+## [1] 120248.7
+```&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;120249&lt;/span&gt;. The standard deviation is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-
+&lt;pre&gt;&lt;code&gt;```r
+sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+  
 sigma_mil = sd_pop(military)
+  
+sigma_mil
+```
 
-sigma_mil&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 112966.1&lt;/code&gt;&lt;/pre&gt;
+```
+## [1] 112966.1
+```&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;112966&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/li&gt;
@@ -8200,28 +8210,28 @@ sigma_mil&lt;/code&gt;&lt;/pre&gt;
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##            [,1]      [,2]       [,3]
-##  [1,] 239875.23 303185.99  -80360.83
-##  [2,] 189215.85 -46955.86 -104048.99
-##  [3,] 257144.39 204593.44   88215.96
-##  [4,] -50970.21 103860.36  250109.74
-##  [5,] 142226.17 179402.48  111288.26
-##  [6,]  33902.49  55868.32   66642.14
-##  [7,]  31424.71 179103.37  193804.58
-##  [8,]  69761.97 101293.29  181165.17
-##  [9,]  68407.22 148939.62   98783.43
-## [10,] -55056.84 172043.27   67268.25&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            [,1]       [,2]      [,3]
+##  [1,]  90170.84  96368.831 240920.40
+##  [2,]  73681.93 242584.627 110453.52
+##  [3,] 172829.27 255264.771 137741.17
+##  [4,] 139206.59 130667.164 -82906.67
+##  [5,] 329741.25 219219.775  45989.70
+##  [6,] 128954.33  46434.652  73172.67
+##  [7,]  25915.05 138328.683  67889.73
+##  [8,]  46076.85    830.354 133400.81
+##  [9,]  51412.48 111011.092 251497.26
+## [10,] 217352.06 206663.991 284852.54&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 106671.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 132857.5&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The standard deviation of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 105201.8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 94031.97&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;5&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/li&gt;
