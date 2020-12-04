@@ -3701,11 +3701,10 @@ ul {
 &lt;summary&gt;5&lt;/summary&gt;
 &lt;p&gt;
 &lt;div style=&#34;padding-left: 30px;&#34;&gt;
-&lt;pre&gt;&lt;code&gt;The relationship between the standard error and the standard deviation is $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$. Since $\sigma$ is divided by $\sqrt{N}$, $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ must always be smaller than $\sigma$ barring the trivial case where $N = 1$. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;the standard error of the mean is less than the standard deviation&amp;lt;/span&amp;gt;.
-&amp;lt;/div&amp;gt;
-  &amp;lt;/p&amp;gt;
-  &amp;lt;/details&amp;gt;
-  &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The relationship between the standard error and the standard deviation is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt;. Since &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; is divided by &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{N}\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}\)&lt;/span&gt; must always be smaller than &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; barring the trivial case where &lt;span class=&#34;math inline&#34;&gt;\(N = 1\)&lt;/span&gt;. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that &lt;span class=&#34;boxed&#34;&gt;the standard error of the mean is less than the standard deviation&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;details&gt;
 &lt;summary&gt;6&lt;/summary&gt;
 &lt;p&gt;
@@ -3769,46 +3768,45 @@ sigma_mil&lt;/code&gt;&lt;/pre&gt;
 samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##             [,1]       [,2]      [,3]
-##  [1,]  136703.63  201009.97 -44213.55
-##  [2,]   56307.26   86690.01 255753.95
-##  [3,] -148337.61 -135564.79 -28419.52
-##  [4,]  104884.61  121925.20 242399.12
-##  [5,]   62747.47   84356.75  40325.24
-##  [6,]  192981.56  344317.67  95632.41
-##  [7,]  116919.44  207525.96 136364.63
-##  [8,]  194982.06  297966.61 -30293.76
-##  [9,]  -57804.62  231777.72 -42939.33
-## [10,]  195792.51   24661.87 202911.82&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            [,1]       [,2]      [,3]
+##  [1,] 235917.43  227021.68 283610.45
+##  [2,] 187434.42  127267.02 123563.18
+##  [3,]  75060.34  203805.90  84956.69
+##  [4,] 101207.90   71786.71 -44357.24
+##  [5,] 173447.80  254023.41  75831.42
+##  [6,]  13997.34  117844.30  44602.21
+##  [7,] 157578.43  264590.03  98066.55
+##  [8,]  86732.19 -126231.03 -82869.16
+##  [9,]  65809.37  -23415.40  47130.83
+## [10,]  27747.76  145797.35 326237.42&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The mean of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 104912.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 111473.2&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The standard deviation of these 10 sets of means is&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 124907.7&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 108272.4&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;5&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/li&gt;
 &lt;/ol&gt;
 &lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/details&amp;gt;
-
-&amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;9&amp;lt;/summary&amp;gt;
-&amp;lt;p&amp;gt;
-
-a. This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;9&lt;/summary&gt;
+&lt;p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/details&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

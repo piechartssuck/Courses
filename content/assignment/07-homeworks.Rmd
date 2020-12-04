@@ -148,15 +148,16 @@ d. For a disproportionate sample we choose the same number of students from each
 </details>
 
 <details><summary>5</summary>
-  <p>
-  <div style="padding-left: 30px;">
-    The relationship between the standard error and the standard deviation is $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$. Since $\sigma$ is divided by $\sqrt{N}$, $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ must always be smaller than $\sigma$ barring the trivial case where $N = 1$. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that <span class="boxed">the standard error of the mean is less than the standard deviation</span>.
-    </div>
-      </p>
-      </details>
+<p>
+<div style="padding-left: 30px;">
+
+The relationship between the standard error and the standard deviation is $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$. Since $\sigma$ is divided by $\sqrt{N}$, $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ must always be smaller than $\sigma$ barring the trivial case where $N = 1$. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that <span class="boxed">the standard error of the mean is less than the standard deviation</span>.
+</div>
+</p>
+</details>
       
 <details><summary>6</summary>
-      <p>
+<p>
       
 <div style="padding-left: 30px;">
         First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
@@ -327,22 +328,20 @@ We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sig
   p1 + p2
   
   ```
-  </p>
-    </details>
+</p>
+</details>
     
-    <details><summary>9</summary>
-    <p>
+<details><summary>9</summary>
+<p>
     
-    a. This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.
+  a. This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.
   
   b. This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.
   
   c. Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.  
   
-  </p>
-    </details>
-
-
+</p>
+</details>
 
 :::
 
