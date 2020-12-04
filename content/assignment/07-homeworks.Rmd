@@ -155,43 +155,43 @@ d. For a disproportionate sample we choose the same number of students from each
       </p>
       </details>
       
-      <details><summary>6</summary>
+<details><summary>6</summary>
       <p>
       
-      <div style="padding-left: 30px;">
+<div style="padding-left: 30px;">
         First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
       </div>
         
-        a. The standard error of the mean is<br><br> 
-        $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 100<br><br>
+  a. The standard error of the mean is<br><br> 
+$\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 100<br><br>
           $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}$ for a sample size of 16000<br><br>
             We compare the two by $\frac{40}{10} =4$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">is smaller by a factor of 4</span> when the sample size increases from 100 to 1600.
-            
-            b. The standard error of the mean is<br><br> 
+
+  b. The standard error of the mean is<br><br> 
               $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}$ for a sample size of 300<br><br>
               $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}$ for a sample size of 150<br><br>
               We compare the two by $\frac{17.32}{12.25} \approx 1.41$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">is greater by a factor of 1.41</span> when the sample size decreases from 300 to 150.
             
-            c. For simplicity, assume an initial sample size of 100. We then have
+  c. For simplicity, assume an initial sample size of 100. We then have
             $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 10 0<br><br>
               $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{4\cdot100}}=\frac{\sigma}{20}$ for a sample size of 4000<br><br>
-              We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">decreases by a factor of 2</span>.
+We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">decreases by a factor of 2</span>.
             
-            </p>
-              </details>
+</p>
+</details>
               
               
-              <details><summary>7</summary>
-              <p>
+<details><summary>7</summary>
+<p>
               
-              a. Facebook ® polls are most definitely not probability samples. While many reasons exists, the two noted below are likely the most important: 
+  a. Facebook ® polls are most definitely not probability samples. While many reasons exists, the two noted below are likely the most important: 
               - the *population* from which data are gathered is limited to the *friends* on one’s Facebook ® profile--and such is certainly not a representative sample from the larger population.
             - due to Facebook ® algorithms, we can’t be sure that every Facebook ® friend would have the same opportunity to see, and thus participate, in the poll.
             
-            b.	The population is our Facebook ® friends who come across the poll.
+  b.	The population is our Facebook ® friends who come across the poll.
             
-            </p>
-              </details>
+</p>
+</details>
               
 <details><summary>8</summary>
   
