@@ -224,54 +224,48 @@ We compare the two by <span class="math inline">\(\frac{20}{10} = 2\)</span>. So
 total_mil &lt;- sum(military)</code></pre>
 </div>
 <ol style="list-style-type: lower-alpha">
-<li>The mean number of active military personnel per region in 2009 was</li>
-</ol>
+<li><p>The mean number of active military personnel per region in 2009 was</p>
 <pre class="r"><code>mu_mil = mean(military)
 
 mu_mil</code></pre>
 <pre><code>## [1] 120248.7</code></pre>
 <p>or about <span class="boxed">120249</span>. The standard deviation is</p>
-<pre class="r"><code>  sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+<pre class="r"><code>sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
 
 sigma_mil = sd_pop(military)
 
 sigma_mil</code></pre>
 <pre><code>## [1] 112966.1</code></pre>
-<p>or about <span class="boxed">112966</span>.</p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>We can use the <code>sample</code> command to get our 10 sample means of size 3. We can use the <code>replcate</code> and <code>rnorm</code> commands in R to do this</li>
-</ol>
+<p>or about <span class="boxed">112966</span>.</p></li>
+<li><p>We can use the <code>sample</code> command to get our 10 sample means of size 3. We can use the <code>replcate</code> and <code>rnorm</code> commands in R to do this</p>
 <pre class="r"><code># replicate(size #, rnorm(#of sample means, mu, sigma))
 
 samples &lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
 
 samples</code></pre>
-<pre><code>##             [,1]     [,2]     [,3]
-##  [1,]  118630.92 277214.6 135616.3
-##  [2,]  142312.51 121393.5 143697.9
-##  [3,]  131361.15 215884.9 237968.7
-##  [4,]   41287.94 158276.9 336859.8
-##  [5,]  301241.26 132977.4 107781.4
-##  [6,]   50451.39 226522.7 234776.7
-##  [7,]   56984.90 147155.3 162672.2
-##  [8,]   95270.75 338488.2  91608.0
-##  [9,]  119022.15 131100.5 292506.3
-## [10,] -149625.02 208438.8 153165.7</code></pre>
-<ol start="3" style="list-style-type: lower-alpha">
-<li>The mean of these 10 sets of means is</li>
-</ol>
+<pre><code>##             [,1]      [,2]      [,3]
+##  [1,]  399473.29  73740.87  35360.45
+##  [2,]  226997.92  91654.52 249427.96
+##  [3,]  148438.23 241249.64 143465.94
+##  [4,]   78559.68 216517.70 131105.86
+##  [5,] -108608.16 -49320.95 146716.98
+##  [6,]  146050.73 231493.99 171600.62
+##  [7,]  148508.68  61423.13  83375.54
+##  [8,]  113523.72  27834.55 215348.15
+##  [9,]   64168.90 269434.83 192237.97
+## [10,]  169974.22 175851.92  41508.11</code></pre></li>
+<li><p>The mean of these 10 sets of means is</p>
 <pre class="r"><code>mean(samples)</code></pre>
-<pre><code>## [1] 158701.5</code></pre>
-<pre><code>or about &lt;span class=&quot;boxed&quot;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.</code></pre>
-<ol start="4" style="list-style-type: lower-alpha">
+<pre><code>## [1] 137903.8</code></pre>
+<p>or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that <span class="math inline">\(\mu_Y = \mu_{\overline{Y}}\)</span>.</p></li>
 <li><p>The standard deviation of these 10 sets of means is</p>
 <pre class="r"><code>sd(samples)</code></pre>
-<pre><code>## [1] 99780.35</code></pre>
-<pre><code>or about &lt;span class=&quot;boxed&quot;&gt;122991&lt;/span&gt;.</code></pre></li>
-<li><p>The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below</p></li>
+<pre><code>## [1] 101214.7</code></pre>
+<p>or about <span class="boxed">122991</span>.</p></li>
+<li><p>The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below
+<img src="/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</p></li>
 </ol>
-<img src="/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png" width="672" />
-</p>
 </details>
 <details>
 <summary>9</summary>
