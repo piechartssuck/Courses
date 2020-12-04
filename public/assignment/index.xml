@@ -3740,68 +3740,6 @@ We compare the two by &lt;span class=&#34;math inline&#34;&gt;\(\frac{20}{10} = 
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
-&lt;details&gt;
-&lt;p&gt;&lt;summary&gt;8&lt;/summary&gt;&lt;/p&gt;
-&lt;div style=&#34;padding-left: 30px;&#34;&gt;
-&lt;p&gt;First we convert these to a vector and take the sum&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;military &amp;lt;- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
-    
-total_mil &amp;lt;- sum(military)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;p&gt;The mean number of active military personnel per region in 2009 was&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_mil = mean(military)
-
-mu_mil&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 120248.7&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;120249&lt;/span&gt;. The standard deviation is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
-
-sigma_mil = sd_pop(military)
-
-sigma_mil&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 112966.1&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;112966&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# replicate(size #, rnorm(#of sample means, mu, sigma))
-
-samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
-
-samples&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##            [,1]      [,2]        [,3]
-##  [1,]  21281.91  67603.03 276507.4931
-##  [2,] 169457.77  31315.74 -19758.2460
-##  [3,] 236281.86 288862.07 -40197.8664
-##  [4,]  83726.96 125884.11  79482.3931
-##  [5,]  41595.09  82100.19  30115.3731
-##  [6,] 118324.55 106452.70  33793.6190
-##  [7,] 135371.12 291089.37 219723.6498
-##  [8,] 287889.59 224473.82   7321.0540
-##  [9,] 221563.18 338840.26   -517.2991
-## [10,] 214766.95 234667.62 152915.2591&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The mean of these 10 sets of means is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 135364.4&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The standard deviation of these 10 sets of means is&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 108423.3&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/details&gt;
-&lt;details&gt;
-&lt;summary&gt;9&lt;/summary&gt;
-&lt;p&gt;
-&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;p&gt;This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/p&gt;
-&lt;/details&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
