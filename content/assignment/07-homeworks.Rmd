@@ -147,7 +147,200 @@ d. For a disproportionate sample we choose the same number of students from each
 </p>
 </details>
 
-
+<details><summary>5</summary>
+  <p>
+  <div style="padding-left: 30px;">
+    The relationship between the standard error and the standard deviation is $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$. Since $\sigma$ is divided by $\sqrt{N}$, $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ must always be smaller than $\sigma$ barring the trivial case where $N = 1$. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that <span class="boxed">the standard error of the mean is less than the standard deviation</span>.
+    </div>
+      </p>
+      </details>
+      
+      <details><summary>6</summary>
+      <p>
+      
+      <div style="padding-left: 30px;">
+        First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
+      </div>
+        
+        a. The standard error of the mean is<br><br> 
+        $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 100<br><br>
+          $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}$ for a sample size of 16000<br><br>
+            We compare the two by $\frac{40}{10} =4$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">is smaller by a factor of 4</span> when the sample size increases from 100 to 1600.
+            
+            b. The standard error of the mean is<br><br> 
+              $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}$ for a sample size of 300<br><br>
+              $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}$ for a sample size of 150<br><br>
+              We compare the two by $\frac{17.32}{12.25} \approx 1.41$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">is greater by a factor of 1.41</span> when the sample size decreases from 300 to 150.
+            
+            c. For simplicity, assume an initial sample size of 100. We then have
+            $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 10 0<br><br>
+              $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{4\cdot100}}=\frac{\sigma}{20}$ for a sample size of 4000<br><br>
+              We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ <span class="boxed">decreases by a factor of 2</span>.
+            
+            </p>
+              </details>
+              
+              
+              <details><summary>7</summary>
+              <p>
+              
+              a. Facebook ® polls are most definitely not probability samples. While many reasons exists, the two noted below are likely the most important: 
+              - the *population* from which data are gathered is limited to the *friends* on one’s Facebook ® profile--and such is certainly not a representative sample from the larger population.
+            - due to Facebook ® algorithms, we can’t be sure that every Facebook ® friend would have the same opportunity to see, and thus participate, in the poll.
+            
+            b.	The population is our Facebook ® friends who come across the poll.
+            
+            </p>
+              </details>
+              
+<details><summary>8</summary>
+  
+  <div style="padding-left: 30px;">
+    First we convert these to a vector and take the sum
+  ```{r, echo=TRUE, eval=TRUE}
+  military <- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
+  
+  total_mil <- sum(military)
+  ```
+  </div>
+    
+    a. The mean number of active military personnel per region in 2009 was 
+  ```{r, echo=TRUE, eval=TRUE}
+  mu_mil = mean(military)
+  
+  mu_mil
+  ```
+  or about <span class="boxed">120249</span>. The standard deviation is
+  ```{r, echo=TRUE, eval=TRUE}
+  sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+  
+  sigma_mil = sd_pop(military)
+  
+  sigma_mil
+  ```
+  or about <span class="boxed">112966</span>.
+  
+  b. We can use the `sample` command to get our 10 sample means of size 3. We can use the `replcate` and `rnorm` commands in R to do this 
+  ```{r, echo=TRUE, eval=TRUE}
+  # replicate(size #, rnorm(#of sample means, mu, sigma))
+  
+  samples <- replicate(3,rnorm(10, mu_mil,sigma_mil))
+  
+  samples
+  ```
+  c. The mean of these 10 sets of means is 
+  ```{r, echo=TRUE, eval=TRUE}
+  mean(samples)
+  ```
+  or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that $\mu_Y = \mu_{\overline{Y}}$.
+  
+  d. The standard deviation of these 10 sets of means is
+  ```{r, echo=TRUE, eval=TRUE}
+  sd(samples)
+  ```
+  or about <span class="boxed">122991</span>.
+  
+  e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below
+  
+  ```{r, echo=FALSE, eval=TRUE, warning = FALSE}
+  # Convert into tibbles
+  sample_means <- samples %>% 
+    as_tibble() %>%
+    rowwise() %>% 
+    mutate(sample_mus = mean(c(V1, V2, V2))) %>%
+    select(sample_mus)
+  
+  military_tib <- military %>%
+    as_tibble() %>%
+    rename(pop = value)
+  
+  # Plot the distributions
+  p1 <- ggplot(military_tib, aes(x = pop)) + 
+    geom_histogram(aes(y =..density..,
+                       fill =..count..),
+                   binwidth = 100000,
+                   color="#333333",
+                   show.legend = FALSE) +
+    scale_fill_gradient(low = "#ff6347",
+                        high = "#4682b4",
+                        breaks = seq(0, 400000, 
+                                     by = 100000)) + 
+    scale_x_continuous(labels = function(x) format(x, scientific = FALSE)) +
+    scale_y_continuous(labels = function(x) format(x*1000000, scientific = FALSE)) +
+    stat_function(fun=dnorm,
+                  color="#66b2b2",
+                  size = 1.5,
+                  args=list(mean=mean(military), 
+                            sd=sd_pop(military))) +
+    theme_minimal() +
+    xlab("Population") +
+    ylab("Count") + 
+    theme(plot.margin = margin(t = 0, r = 1, b = 0, l = 0, "cm"))
+  
+  
+  p2 <- ggplot(military_tib, aes(x = pop)) + 
+    geom_histogram(aes(y =..density..,
+                       fill =..count..),
+                   binwidth = 100000,
+                   color="#333333",
+                   show.legend = FALSE) +
+    scale_fill_gradient(low = "#ff6347",
+                        high = "#4682b4",
+                        breaks = seq(0, 400000, 
+                                     by = 100000)) + 
+    scale_x_continuous(labels = function(x) format(x, scientific = FALSE)) +
+    scale_y_continuous(labels = function(x) format(x*1000000, scientific = FALSE)) +
+    stat_function(fun=dnorm,
+                  color="#66b2b2",
+                  size = 1.5,
+                  args=list(mean=mean(military), 
+                            sd=sd_pop(military))) +
+    theme_minimal() +
+    xlab("Population") +
+    ylab("Count") + 
+    theme(plot.margin = margin(t = 0, r = 1, b = 0, l = 0, "cm"))
+  
+  
+  p2 <- ggplot(sample_means, aes(x = sample_mus)) + 
+    geom_histogram(aes(y =..density..,
+                       fill =..count..),
+                   binwidth = 50000,
+                   color="#333333",
+                   show.legend = FALSE) +
+    scale_fill_gradient(low = "#ff6347",
+                        high = "#4682b4",
+                        breaks = seq(0, 250000, 
+                                     by = 50000)) + 
+    scale_x_continuous(labels = function(x) format(x, scientific = FALSE)) +
+    scale_y_continuous(labels = function(x) format(x*1000000, scientific = FALSE)) +
+    stat_function(fun=dnorm,
+                  color="#66b2b2",
+                  size = 1.5,
+                  args=list(mean=mean(sample_means$sample_mus), 
+                            sd=sd(sample_means$sample_mus))) +
+    theme_minimal() +
+    xlab("Sample") +
+    ylab("Count") + 
+    theme(plot.margin = margin(t = 0, r = 0, b = 0, l = 1, "cm"))
+  
+  # This uses the patchwork package
+  p1 + p2
+  
+  ```
+  </p>
+    </details>
+    
+    <details><summary>9</summary>
+    <p>
+    
+    a. This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.
+  
+  b. This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.
+  
+  c. Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.  
+  
+  </p>
+    </details>
 
 
 

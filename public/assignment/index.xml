@@ -3697,6 +3697,122 @@ ul {
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;5&lt;/summary&gt;
+&lt;p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;pre&gt;&lt;code&gt;The relationship between the standard error and the standard deviation is $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$. Since $\sigma$ is divided by $\sqrt{N}$, $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ must always be smaller than $\sigma$ barring the trivial case where $N = 1$. Theoretically, the dispersion of the mean must be less than the dispersion of the raw scores. This implies that &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;the standard error of the mean is less than the standard deviation&amp;lt;/span&amp;gt;.
+&amp;lt;/div&amp;gt;
+  &amp;lt;/p&amp;gt;
+  &amp;lt;/details&amp;gt;
+  
+  &amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;6&amp;lt;/summary&amp;gt;
+  &amp;lt;p&amp;gt;
+  
+  &amp;lt;div style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    First note that the standard error of the mean is proportional to $\frac{1}{\sqrt{N}}$.
+  &amp;lt;/div&amp;gt;
+    
+    a. The standard error of the mean is&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; 
+    $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 100&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+      $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{1600}}=\frac{\sigma}{40}$ for a sample size of 16000&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+        We compare the two by $\frac{40}{10} =4$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;is smaller by a factor of 4&amp;lt;/span&amp;gt; when the sample size increases from 100 to 1600.
+        
+        b. The standard error of the mean is&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; 
+          $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{300}}\approx\frac{\sigma}{17.32}$ for a sample size of 300&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+          $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{150}}\approx\frac{\sigma}{12.25}$ for a sample size of 150&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+          We compare the two by $\frac{17.32}{12.25} \approx 1.41$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;is greater by a factor of 1.41&amp;lt;/span&amp;gt; when the sample size decreases from 300 to 150.
+        
+        c. For simplicity, assume an initial sample size of 100. We then have
+        $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{100}}=\frac{\sigma}{10}$ for a sample size of 10 0&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+          $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{4\cdot100}}=\frac{\sigma}{20}$ for a sample size of 4000&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+          We compare the two by $\frac{20}{10} = 2$. So $\sigma_{\overline{Y}} =\frac{\sigma}{\sqrt{N}}$ &amp;lt;span class=&amp;quot;boxed&amp;quot;&amp;gt;decreases by a factor of 2&amp;lt;/span&amp;gt;.
+        
+        &amp;lt;/p&amp;gt;
+          &amp;lt;/details&amp;gt;
+          
+          
+          &amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;7&amp;lt;/summary&amp;gt;
+          &amp;lt;p&amp;gt;
+          
+          a. Facebook ® polls are most definitely not probability samples. While many reasons exists, the two noted below are likely the most important: 
+          - the *population* from which data are gathered is limited to the *friends* on one’s Facebook ® profile--and such is certainly not a representative sample from the larger population.
+        - due to Facebook ® algorithms, we can’t be sure that every Facebook ® friend would have the same opportunity to see, and thus participate, in the poll.
+        
+        b.  The population is our Facebook ® friends who come across the poll.
+        
+        &amp;lt;/p&amp;gt;
+          &amp;lt;/details&amp;gt;
+          &lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;8&lt;/summary&gt;&lt;/p&gt;
+&lt;div style=&#34;padding-left: 30px;&#34;&gt;
+&lt;pre&gt;&lt;code&gt;First we convert these to a vector and take the sum&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;military &amp;lt;- c(229634, 64564, 376034, 89826, 26384, 41441, 177336, 68440, 8579)
+
+total_mil &amp;lt;- sum(military)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;a. The mean number of active military personnel per region in 2009 was &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_mil = mean(military)
+
+mu_mil&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 120248.7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;120249&lt;/span&gt;. The standard deviation is&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd_pop=function(x){sd(x)*sqrt((length(x)-1)/length(x))}
+
+sigma_mil = sd_pop(military)
+
+sigma_mil&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 112966.1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;112966&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;We can use the &lt;code&gt;sample&lt;/code&gt; command to get our 10 sample means of size 3. We can use the &lt;code&gt;replcate&lt;/code&gt; and &lt;code&gt;rnorm&lt;/code&gt; commands in R to do this&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# replicate(size #, rnorm(#of sample means, mu, sigma))
+
+samples &amp;lt;- replicate(3,rnorm(10, mu_mil,sigma_mil))
+
+samples&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             [,1]       [,2]      [,3]
+##  [1,]  -99987.82 204453.928  40404.70
+##  [2,]  235982.29 -31367.844 321014.94
+##  [3,]   49321.79  14589.569 256050.55
+##  [4,] -119542.39 164293.763  84942.33
+##  [5,]   36378.01 182942.552  39227.43
+##  [6,] -105675.53  37394.403 109762.31
+##  [7,]  139016.37  -8337.044 183385.81
+##  [8,]   30174.61 211041.802 216801.22
+##  [9,]   11019.67 102270.908 179385.40
+## [10,]  192621.41  93249.117  30369.55&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The mean of these 10 sets of means is&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(samples)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 93372.79&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;105428&lt;/span&gt;. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that &lt;span class=&#34;math inline&#34;&gt;\(\mu_Y = \mu_{\overline{Y}}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The standard deviation of these 10 sets of means is&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sd(samples)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 112066.2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or about &lt;span class=&#34;boxed&#34;&gt;122991&lt;/span&gt;.&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;/assignment/07-homeworks_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/details&amp;gt;
+
+&amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;9&amp;lt;/summary&amp;gt;
+&amp;lt;p&amp;gt;
+
+a. This is not a reliable sample. The students eating lunch on Tuesday are not necessarily representative of all students at the school, and you have no way of calculating the probability of inclusion of any student. Many students might, for example, rarely eat lunch at the student union and, therefore, have no chance of being represented in your sample. The fact that you selected all the students eating lunch on Tuesday makes your selection appear to be a census of a population, but that isn’t true either unless all the students ate at the student union on Tuesday.&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;This is not a reliable sample. The majority of people in attendance at the rally would probably be in support of open borders. Students against such might not have any chance of selection.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Answers will vary, but it seems the best route would be to obtain a list of all registered students from your university’s registrar. And then employ a known sampling strategy (simple random sampling, stratified sampling, etc.) to create your sample of 10% of the student body. From there, you would reach out to each person you’ve selected via e-mail, telephone, mail, and so on and ask them to complete your survey.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/details&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
