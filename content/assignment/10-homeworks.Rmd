@@ -246,25 +246,42 @@ H_0:\,\mu_Y=13.5\,\,\text{years}\\
 H_1:\,\mu_Y<13.5\,\,\text{years}
 \end{align}
 
-b. The $z$ value, or $z_{obt} = -4.19$. The $p$-value for this $z_{obt} < 0.001$ for a one-tailed test where $\alpha = 0.01$. Since $z_{obt} < 0.001$ and $0.001 < \alpha$, we <span class="boxed">reject $H_0$ and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span> 
+b. We have 
+\begin{align}
+t &= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
+&\approx -4.19
+\end{align}
+yielding that $z$ value, or $z_{obt} = -4.19$. The $p$-value for this $z_{obt} < 0.001$ for a one-tailed test where $\alpha = 0.01$. Since $z_{obt} < 0.001$ and $0.001 < \alpha$, we <span class="boxed">reject $H_0$ and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span> 
 </p>
 </details>
 
 <details><summary>2</summary>
 <p>
-a. We have $z_{obt} = -2.33$ so 
+a. We have  
+\begin{align}
+s_{p_1-p_2} &=\sqrt{\dfrac{0.43\cdot(1-0.43)}{899}+\dfrac{0.50\cdot(1-0.50)}{351}}\\[0.5ex]
+&= \sqrt{0.0313}\\
+&\approx 0.03
+\end{align}
+implying 
 \begin{align}
 z &= \dfrac{0.43-0.50}{0.03}\\[0.5ex]
 &\approx -2.33
 \end{align}
-implying the probability of obtaining this $z$ statistic is $0.0099\cdot 2=0.0198$ which is less than $\alpha = 0.01$. So we <span class="boxed">reject $H_0$ and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Hispanic Americans. In fact given we have $0.43-0.50=-0.07$, there is a lower proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.
+so $z_{obt} = -2.33$ and the probability of obtaining this $z$ statistic is $0.0099\cdot 2=0.0198$ which is less than $\alpha = 0.01$. So we <span class="boxed">reject $H_0$ and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Hispanic Americans. In fact given we have $0.43-0.50=-0.07$, there is a lower proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.
 
-b. We have $z_{obt} = 3.50$ so 
+b. We have  
+\begin{align}
+s_{p_1-p_2} &=\sqrt{\dfrac{0.58\cdot(1-0.58)}{2684}+\dfrac{0.51\cdot(1-0.51)}{566}}\\[0.5ex]
+&= \sqrt{0.0229}\\
+&\approx 0.02
+\end{align}
+implying 
 \begin{align}
 z &= \dfrac{0.58-0.51}{0.02}\\[0.5ex]
-&\approx 3.
+&\approx 3.50
 \end{align}
-implying the probability of obtaining this $z$ statistic is $0.002\cdot 2=0.0004$ which is less than $\alpha = 0.01$. So we <span class="boxed">reject $H_0$ and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have $0.58-0.51=0.07$, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.
+so $z_{obt} = 3.50$ and the probability of obtaining this $z$ statistic is $0.002\cdot 2=0.0004$ which is less than $\alpha = 0.01$. So we <span class="boxed">reject $H_0$ and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have $0.58-0.51=0.07$, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.
 
 </p>
 </details>

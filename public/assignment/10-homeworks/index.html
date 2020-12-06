@@ -1030,7 +1030,12 @@ implying an estimated standard error of proportions is approximately <span class
 H_0:\,\mu_Y=13.5\,\,\text{years}\\
 H_1:\,\mu_Y&lt;13.5\,\,\text{years}
 \end{align}\]</span></p></li>
-<li><p>The <span class="math inline">\(z\)</span> value, or <span class="math inline">\(z_{obt} = -4.19\)</span>. The <span class="math inline">\(p\)</span>-value for this <span class="math inline">\(z_{obt} &lt; 0.001\)</span> for a one-tailed test where <span class="math inline">\(\alpha = 0.01\)</span>. Since <span class="math inline">\(z_{obt} &lt; 0.001\)</span> and <span class="math inline">\(0.001 &lt; \alpha\)</span>, we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{align}
+t &amp;= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
+&amp;\approx -4.19
+\end{align}\]</span>
+yielding that <span class="math inline">\(z\)</span> value, or <span class="math inline">\(z_{obt} = -4.19\)</span>. The <span class="math inline">\(p\)</span>-value for this <span class="math inline">\(z_{obt} &lt; 0.001\)</span> for a one-tailed test where <span class="math inline">\(\alpha = 0.01\)</span>. Since <span class="math inline">\(z_{obt} &lt; 0.001\)</span> and <span class="math inline">\(0.001 &lt; \alpha\)</span>, we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span></p></li>
 </ol>
 </p>
 </details>
@@ -1038,18 +1043,30 @@ H_1:\,\mu_Y&lt;13.5\,\,\text{years}
 <summary>2</summary>
 <p>
 <ol style="list-style-type: lower-alpha">
-<li><p>We have <span class="math inline">\(z_{obt} = -2.33\)</span> so
+<li><p>We have<br />
+<span class="math display">\[\begin{align}
+s_{p_1-p_2} &amp;=\sqrt{\dfrac{0.43\cdot(1-0.43)}{899}+\dfrac{0.50\cdot(1-0.50)}{351}}\\[0.5ex]
+&amp;= \sqrt{0.0313}\\
+&amp;\approx 0.03
+\end{align}\]</span>
+implying
 <span class="math display">\[\begin{align}
 z &amp;= \dfrac{0.43-0.50}{0.03}\\[0.5ex]
 &amp;\approx -2.33
 \end{align}\]</span>
-implying the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.0099\cdot 2=0.0198\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Hispanic Americans. In fact given we have <span class="math inline">\(0.43-0.50=-0.07\)</span>, there is a lower proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
-<li><p>We have <span class="math inline">\(z_{obt} = 3.50\)</span> so
+so <span class="math inline">\(z_{obt} = -2.33\)</span> and the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.0099\cdot 2=0.0198\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Hispanic Americans. In fact given we have <span class="math inline">\(0.43-0.50=-0.07\)</span>, there is a lower proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
+<li><p>We have<br />
+<span class="math display">\[\begin{align}
+s_{p_1-p_2} &amp;=\sqrt{\dfrac{0.58\cdot(1-0.58)}{2684}+\dfrac{0.51\cdot(1-0.51)}{566}}\\[0.5ex]
+&amp;= \sqrt{0.0229}\\
+&amp;\approx 0.02
+\end{align}\]</span>
+implying
 <span class="math display">\[\begin{align}
 z &amp;= \dfrac{0.58-0.51}{0.02}\\[0.5ex]
-&amp;\approx 3.
+&amp;\approx 3.50
 \end{align}\]</span>
-implying the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.002\cdot 2=0.0004\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have <span class="math inline">\(0.58-0.51=0.07\)</span>, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
+so <span class="math inline">\(z_{obt} = 3.50\)</span> and the probability of obtaining this <span class="math inline">\(z\)</span> statistic is <span class="math inline">\(0.002\cdot 2=0.0004\)</span> which is less than <span class="math inline">\(\alpha = 0.01\)</span>. So we <span class="boxed">reject <span class="math inline">\(H_0\)</span> and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have <span class="math inline">\(0.58-0.51=0.07\)</span>, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.</p></li>
 </ol>
 </p>
 </details>
