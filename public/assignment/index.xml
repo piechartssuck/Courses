@@ -102,7 +102,7 @@ So we have a confidence interval between &lt;span class=&#34;boxed&#34;&gt;20.79
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;For lower-class respondents, we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-S_{\overline{Y}} &amp;amp;=\dfrac{3.08}{\sqrt{102}}\$0.5ex]
+S_{\overline{Y}} &amp;amp;=\dfrac{3.08}{\sqrt{102}}\\[0.5ex]
 &amp;amp;\approx 0.30
 \end{align}\]&lt;/span&gt;
 and
