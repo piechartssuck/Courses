@@ -4915,7 +4915,7 @@ implying an estimated standard error of proportions is approximately &lt;span cl
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 H_0:\,\mu_Y=13.5\,\,\text{years}\\
-H_0:\,\mu_Y&amp;lt;13.5\,\,\text{years}
+H_1:\,\mu_Y&amp;lt;13.5\,\,\text{years}
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; value, or &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} = -4.19\)&lt;/span&gt;. The &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value for this &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} &amp;lt; 0.001\)&lt;/span&gt; for a one-tailed test where &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.01\)&lt;/span&gt;. Since &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} &amp;lt; 0.001\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0.001 &amp;lt; \alpha\)&lt;/span&gt;, we &lt;span class=&#34;boxed&#34;&gt;reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -4934,7 +4934,7 @@ implying the probability of obtaining this &lt;span class=&#34;math inline&#34;&
 &lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} = 3.50\)&lt;/span&gt; so
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 z &amp;amp;= \dfrac{0.58-0.51}{0.02}\\[0.5ex]
-&amp;amp;\approx 3.50
+&amp;amp;\approx 3.
 \end{align}\]&lt;/span&gt;
 implying the probability of obtaining this &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; statistic is &lt;span class=&#34;math inline&#34;&gt;\(0.002\cdot 2=0.0004\)&lt;/span&gt; which is less than &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.01\)&lt;/span&gt;. So we &lt;span class=&#34;boxed&#34;&gt;reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have &lt;span class=&#34;math inline&#34;&gt;\(0.58-0.51=0.07\)&lt;/span&gt;, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -5059,8 +5059,8 @@ One-tailed
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-H_0:\,\pi_1&amp;lt;\pi_2\\
-H_0:\,\pi_1=\pi_2
+H_0:\,\pi_1=\pi_2\\
+H_1:\,\pi_1&amp;lt;\pi_2
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
@@ -5083,8 +5083,8 @@ yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-H_0:\,\mu\neq 37.8\\
-H_0:\,\mu=37.8
+H_0:\,\mu = 37.8\\
+H_1:\,\mu\neq 37.8
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}

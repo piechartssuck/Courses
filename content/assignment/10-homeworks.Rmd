@@ -243,7 +243,7 @@ implying an estimated standard error of proportions is approximately <span class
 a. We have 
 \begin{align}
 H_0:\,\mu_Y=13.5\,\,\text{years}\\
-H_0:\,\mu_Y<13.5\,\,\text{years}
+H_1:\,\mu_Y<13.5\,\,\text{years}
 \end{align}
 
 b. The $z$ value, or $z_{obt} = -4.19$. The $p$-value for this $z_{obt} < 0.001$ for a one-tailed test where $\alpha = 0.01$. Since $z_{obt} < 0.001$ and $0.001 < \alpha$, we <span class="boxed">reject $H_0$ and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span> 
@@ -262,7 +262,7 @@ implying the probability of obtaining this $z$ statistic is $0.0099\cdot 2=0.019
 b. We have $z_{obt} = 3.50$ so 
 \begin{align}
 z &= \dfrac{0.58-0.51}{0.02}\\[0.5ex]
-&\approx 3.50
+&\approx 3.
 \end{align}
 implying the probability of obtaining this $z$ statistic is $0.002\cdot 2=0.0004$ which is less than $\alpha = 0.01$. So we <span class="boxed">reject $H_0$ and can likely assume there is a significant difference in the proportion of homeowners between first-generation and second-generation Asian Americans. In fact given we have $0.58-0.51=0.07$, there is a higher proportion of home ownership among first-generation Hispanic Americans than second-generation Hispanic Americans</span>.
 
@@ -322,8 +322,8 @@ tails %>%
 <p>
 a. We have 
 \begin{align}
-H_0:\,\pi_1<\pi_2\\
-H_0:\,\pi_1=\pi_2
+H_0:\,\pi_1=\pi_2\\
+H_1:\,\pi_1<\pi_2
 \end{align}
 
 b. We have 
@@ -345,8 +345,8 @@ yielding that <span class="boxed">$z_{obt}=-3.50 <\alpha = 0.05$</span> (and les
 <p>
 a. We have 
 \begin{align}
-H_0:\,\mu\neq 37.8\\
-H_0:\,\mu=37.8
+H_0:\,\mu = 37.8\\
+H_1:\,\mu\neq 37.8
 \end{align}
 
 b. We have 
