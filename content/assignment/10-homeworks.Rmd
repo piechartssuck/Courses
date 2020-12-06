@@ -100,7 +100,7 @@ CI &= 12.19\pm 1.96\cdot0.30\\
 So the estimated standard error for the sampling distribution is approximately <span class="boxed">0.30</span> with a confidence interval between <span class="boxed">11.60 to 12.78</span>.<br><br>
 For working-class respondents, we have
 \begin{align}
-S_{\overline{Y}} &= \dfrac{2.93}{\sqrt{523}}\$0.5ex]
+S_{\overline{Y}} &= \dfrac{2.93}{\sqrt{523}}\\[$0.5ex]
 &\approx 0.13
 \end{align}
 and
@@ -201,7 +201,7 @@ CI &= 51\pm 1.96\cdot0.67\\
 &= 51\pm 0.13\\
 &= (49.69, 52.31)
 \end{align}
-We set the interval at the 95% confidence level. However, no matter whether the 90%, 95%, or 99% confidence level is chosen, the calculated interval includes values below 50% for the vote for a Republican candidate. Therefore, you should tell your supervisors that it span class="boxed">would not be possible to declare a Republican candidate the likely winner of the votes coming from men if there was an election today because it seems quite possible that less than a majority of male voters would support her/him.</span>
+We set the interval at the 95% confidence level. However, no matter whether the 90%, 95%, or 99% confidence level is chosen, the calculated interval includes values below 50% for the vote for a Republican candidate. Therefore, you should tell your supervisors that it <span class="boxed">would not be possible to declare a Republican candidate the likely winner of the votes coming from men if there was an election today because it seems quite possible that less than a majority of male voters would support her/him.</span>
 </div>
 </p>
 </details>

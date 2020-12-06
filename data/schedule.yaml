@@ -66,6 +66,7 @@ lessons:
     session: 8
     date: "October 21, 2020"
     assignment: "08-homeworks"
+    due: "08-due"
 
   - title: 'Estimations'
     session: 9
@@ -102,9 +103,21 @@ lessons:
 
   - title: 'Chi-Square and ANOVAs'
     session: 13
-    date: "November 18, 2020"
+    date: "November 25, 2020"
     readings: "13-readings"
     lesson: "13-lesson"
     example: "13-example"
     assignment: "13-homeworks"
     due: "13-due"
+
+  - title: 'Exam II'
+    session: 14
+    date: "December 2, 2020"
+    assignment: "14-homeworks"
+    due: "14-due"
+
+  - title: 'Sentiment Analysis'
+    session: 15
+    date: "December 9, 2020"
+    lesson: "15-lesson"
+    due: "15-due"

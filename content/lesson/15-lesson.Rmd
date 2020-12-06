@@ -1,0 +1,18 @@
+---
+title: "Sentiment Analysis"
+linktitle: "Week 15: Sentiment Analysis"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 12
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### R Walkthrough
+Take a look at a fun [walkthrough](/lesson/SentimentAnalysisIntro/) about applying statistics and machine learning to perform a sentiment analysis.

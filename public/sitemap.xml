@@ -100,6 +100,18 @@
   </url>
   
   <url>
+    <loc>/due/14-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/due/15-due/</loc>
+  </url>
+  
+  <url>
+    <loc>/lesson/15-lesson/</loc>
+  </url>
+  
+  <url>
     <loc>/due/01-due/</loc>
   </url>
   
@@ -276,6 +288,10 @@
   </url>
   
   <url>
+    <loc>/lesson/sentimentanalysisintro/</loc>
+  </url>
+  
+  <url>
     <loc>/lesson/nflpipes/</loc>
   </url>
   
@@ -291,6 +307,10 @@
   <url>
     <loc>/resource/markdown/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/assignment/exams2/</loc>
   </url>
   
   <url>

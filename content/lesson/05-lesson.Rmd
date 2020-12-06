@@ -35,4 +35,4 @@ Download the class
 - [Outline](/lecture_notes/Week5/ICN_Ch5.pdf){target="_blank"}.
 
 ### R Walkthrough
-Take a look at a [walkthrough](/walkthroughs/nfl/nflpipes/) about using NFL data and pipes from `tidyverse`.
+Take a look at a [walkthrough](/lesson/NFLpipes/) about using NFL data and pipes from `tidyverse`.

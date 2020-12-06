@@ -928,15 +928,15 @@ Figure 4: Chi-squre distribution constructed in R (code availible upon request).
 ##    party space       random_1    random_2   
 ##    &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;       &amp;lt;fct&amp;gt;      
 ##  1 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
-##  2 Ind   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
-##  3 Dem   ABOUT RIGHT ABOUT RIGHT TOO MUCH   
-##  4 Ind   TOO LITTLE  TOO MUCH    TOO MUCH   
-##  5 Ind   TOO MUCH    TOO LITTLE  TOO MUCH   
-##  6 Ind   TOO LITTLE  TOO LITTLE  ABOUT RIGHT
-##  7 Ind   ABOUT RIGHT TOO MUCH    TOO LITTLE 
-##  8 Dem   ABOUT RIGHT TOO MUCH    TOO LITTLE 
-##  9 Dem   TOO LITTLE  ABOUT RIGHT TOO LITTLE 
-## 10 Ind   TOO LITTLE  TOO MUCH    TOO MUCH   
+##  2 Ind   ABOUT RIGHT TOO MUCH    ABOUT RIGHT
+##  3 Dem   ABOUT RIGHT TOO LITTLE  TOO LITTLE 
+##  4 Ind   TOO LITTLE  TOO LITTLE  TOO MUCH   
+##  5 Ind   TOO MUCH    TOO LITTLE  ABOUT RIGHT
+##  6 Ind   TOO LITTLE  ABOUT RIGHT TOO MUCH   
+##  7 Ind   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  8 Dem   ABOUT RIGHT ABOUT RIGHT ABOUT RIGHT
+##  9 Dem   TOO LITTLE  TOO MUCH    ABOUT RIGHT
+## 10 Ind   TOO LITTLE  ABOUT RIGHT ABOUT RIGHT
 ## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The last two columns are distributions of random samples from the available choices within &lt;code&gt;space&lt;/code&gt; and they represent what we would expect to see if the relationship between variables was completely random. We could generate many, many permutations, calculate an Chi-squared statistic for each, and we would expect their distribution to approach the density functions shown above. Then we could plot our data on that distribution and see where it fell. If the area under the curve to the right of the point was less than 5%, we could reject the null hypothesis.&lt;/p&gt;
 &lt;div class=&#34;figure&#34; style=&#34;text-align: center&#34;&gt;&lt;span id=&#34;fig:figurename5&#34;&gt;&lt;/span&gt;
@@ -985,7 +985,7 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 1
 ##   p_val
 ##   &amp;lt;dbl&amp;gt;
-## 1 0.855&lt;/code&gt;&lt;/pre&gt;
+## 1 0.859&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;interpretation-and-conclusion&#34; class=&#34;section level3&#34;&gt;
@@ -1071,6 +1071,28 @@ Figure 6: Visualization of the gss_newlevels data set using infer.
 &lt;div id=&#34;jamovi&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Jamovi&lt;/h3&gt;
 &lt;p&gt;Download and explore the &lt;a href=&#34;https://www.jamovi.org/&#34; target=&#34;_blank&#34;&gt;jamovi&lt;/a&gt; software that uses the power and open source abilities of R in an environment that resembles SPSS.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis</title>
+      <link>/lesson/15-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/15-lesson/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#r-walkthrough&#34;&gt;R Walkthrough&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R Walkthrough&lt;/h3&gt;
+&lt;p&gt;Take a look at a fun &lt;a href=&#34;/lesson/SentimentAnalysisIntro/&#34;&gt;walkthrough&lt;/a&gt; about applying statistics and machine learning to perform a sentiment analysis.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1383,7 +1405,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;/div&gt;
 &lt;div id=&#34;r-walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;R Walkthrough&lt;/h3&gt;
-&lt;p&gt;Take a look at a &lt;a href=&#34;/walkthroughs/nfl/nflpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;/lesson/NFLpipes/&#34;&gt;walkthrough&lt;/a&gt; about using NFL data and pipes from &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1630,6 +1652,1078 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
     </item>
     
     <item>
+      <title>Week 15: Something Fun - An Introduction to Sentiment Analysis Using (My Favorite Band): The Grateful Dead</title>
+      <link>/lesson/sentimentanalysisintro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lesson/sentimentanalysisintro/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preparation&#34;&gt;Preparation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sentiment-analysis&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learning-by-doing&#34;&gt;Learning by Doing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extra-information&#34;&gt;Extra Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-data&#34;&gt;Getting Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-wrangling&#34;&gt;Data Wrangling&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-data&#34;&gt;Exploring Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lemmatize-words&#34;&gt;Lemmatize Words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#using-stop-words&#34;&gt;Using Stop Words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#descriptive-statistics&#34;&gt;Descriptive Statistics&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#wordclouds&#34;&gt;Wordclouds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bar-plots&#34;&gt;Bar Plots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sentiment-analysis-1&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-text-analysis&#34;&gt;Basic Text Analysis&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#most-common-positive-and-negative-words-in-a-bar-graph&#34;&gt;Most Common Positive and Negative Words in a Bar Graph&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#most-common-positive-and-negative-words-in-a-wordcloud&#34;&gt;Most Common Positive and Negative Words in a WordCloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#positive-and-negative-words-in-a-line-graph&#34;&gt;Positive and Negative Words in a Line Graph&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#positive-and-negative-words-in-a-boxplot&#34;&gt;Positive and Negative Words in a Boxplot&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#viewing-across-all-lexicons&#34;&gt;Viewing Across all Lexicons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;div id=&#34;preparation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preparation&lt;/h2&gt;
+&lt;p&gt;Download a &lt;a href=&#34;/scripts/SentimentAnalysisIntro.R&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; file of just the R chunks used in this walkthrough.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sentiment Analysis&lt;/h2&gt;
+&lt;p&gt;Without getting into the specifics of machine learning, a &lt;strong&gt;sentiment analysis&lt;/strong&gt; is a quantitative process of determining whether a piece of writing is positive, negative or neutral. It entails using a mix of statistics (you know…that old chestnut), &lt;a href=&#34;https://www.sas.com/en_us/insights/analytics/what-is-natural-language-processing-nlp.html&#34; target=&#34;_blank&#34;&gt;natural language processing (NLP)&lt;/a&gt;, and &lt;a href=&#34;https://www.ibm.com/cloud/learn/machine-learning&#34; target=&#34;_blank&#34;&gt;machine learning&lt;/a&gt; to identify and extract subjective information from text files, for instance, a reviewer’s feelings, thoughts, judgments, or assessments within open text. If you want to know more about this method, Qualtrics provides a nice readable &lt;a href=&#34;https://www.qualtrics.com/experience-management/research/sentiment-analysis/&#34; target=&#34;_blank&#34;&gt;writeup&lt;/a&gt; about it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learning-by-doing&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Learning by Doing&lt;/h2&gt;
+&lt;p&gt;We are essentially going to learn about a sentiment analysis using music…well music that I like anyway. In this session we’ll be looking at some Grateful Dead lyrics from two albums.&lt;/p&gt;
+&lt;p&gt;With that said, let’s load up some libraries. If you don’t have some of these (and you most likely don’t), remember to download them first using &lt;code&gt;Tools &amp;gt; Install Packages&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# We are using the tidyverse family which is essentially the gold standard for 
+# data wrangling:
+library(tidyverse) 
+library(scales)
+
+# text mining and annoying wordclouds based on the tidyverse family
+library(tidytext)
+library(ggwordcloud)
+library(textstem)
+library(textdata)
+library(wordcloud)
+
+# getting lyrics
+library(genius) # Allows you to download lyrics for an entire album in a tidy format from
+# genius.com
+
+# the aesthetics
+library(viridis)
+library(RColorBrewer)
+library(hrbrthemes)
+hrbrthemes::import_roboto_condensed()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-information&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra Information&lt;/h2&gt;
+&lt;p&gt;More information about
+* the &lt;code&gt;tidyverse&lt;/code&gt; family of packages are introduced by selecting &lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34;&gt;https://www.tidyverse.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;genius.com can be found here &lt;a href=&#34;https://genius.com/&#34; target=&#34;_blank&#34;&gt;https://genius.com/&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the genius package can be found via this link
+&lt;a href=&#34;https://github.com/josiahparry/genius&#34; target=&#34;_blank&#34;&gt;https://github.com/josiahparry/genius&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Data&lt;/h2&gt;
+&lt;p&gt;Grab the lyrics for &lt;strong&gt;&lt;em&gt;American Beauty&lt;/em&gt;&lt;/strong&gt; (1971) which was more about rock and roll and &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt; (1978) which was influenced by disco (ugh yes…disco). Were going to see if the sentiments associated within each album changed over time. On a side note, feel free to grab albums and lyrics that you like instead but the example will be based on the two albums so I would suggest going through it with these first and then doing your own. We’ll compare the two using a sentiment analysis.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;american_beauty &amp;lt;- genius_album(artist = &amp;quot;The Grateful Dead&amp;quot;, album = &amp;quot;***American Beauty***&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = c(&amp;quot;album_name&amp;quot;, &amp;quot;track_n&amp;quot;, &amp;quot;track_url&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To see the results, just type in the following:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;american_beauty&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 359 x 4
+##    track_n  line lyric                                               track_title
+##      &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                               &amp;lt;chr&amp;gt;      
+##  1       1     1 Look out of any window                              Box of Rain
+##  2       1     2 Any morning, any evening, any day                   Box of Rain
+##  3       1     3 Maybe the sun is shining                            Box of Rain
+##  4       1     4 Birds are winging or rain is falling from a heavy … Box of Rain
+##  5       1     5 What do you want me to do                           Box of Rain
+##  6       1     6 To do for you to see you through?                   Box of Rain
+##  7       1     7 For this is all a dream we dreamed                  Box of Rain
+##  8       1     8 One afternoon, long ago                             Box of Rain
+##  9       1     9 Walk out of any doorway                             Box of Rain
+## 10       1    10 Feel your way, feel your way like the day before    Box of Rain
+## # … with 349 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let’s do the same for &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shakedown_street &amp;lt;- genius_album(artist = &amp;quot;The Grateful Dead&amp;quot;, album = &amp;quot;***Shakedown Street***&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = c(&amp;quot;album_name&amp;quot;, &amp;quot;track_n&amp;quot;, &amp;quot;track_url&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the results look like:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shakedown_street&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 304 x 4
+##    track_n  line lyric                                               track_title
+##      &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                               &amp;lt;chr&amp;gt;      
+##  1       1     1 &amp;quot;Well, I was feeling so bad, asked my family docto… Good Lovin&amp;#39;
+##  2       1     2 &amp;quot;I said, \&amp;quot;Doctor, Doctor, Mister M.D., (doctor) c… Good Lovin&amp;#39;
+##  3       1     3 &amp;quot;He said, \&amp;quot;Yeah, yeah, yeah, yeah, yeah, yeah, ye… Good Lovin&amp;#39;
+##  4       1     4 &amp;quot;All you need, all you really need: good loving&amp;quot;    Good Lovin&amp;#39;
+##  5       1     5 &amp;quot;Because you got to have loving (good loving)&amp;quot;      Good Lovin&amp;#39;
+##  6       1     6 &amp;quot;Everybody got to have loving (good loving)&amp;quot;        Good Lovin&amp;#39;
+##  7       1     7 &amp;quot;A little good loving now baby, good loving&amp;quot;        Good Lovin&amp;#39;
+##  8       1     8 &amp;quot;So come on baby, squeeze me tight&amp;quot;                 Good Lovin&amp;#39;
+##  9       1     9 &amp;quot;Don&amp;#39;t you want your daddy to be alright?&amp;quot;          Good Lovin&amp;#39;
+## 10       1    10 &amp;quot;I said baby, now it&amp;#39;s for sure&amp;quot;                    Good Lovin&amp;#39;
+## # … with 294 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To find out the internal structure of one of your data sets, run this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(shakedown_street)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## tibble [304 × 4] (S3: tbl_df/tbl/data.frame)
+##  $ track_n    : int [1:304] 1 1 1 1 1 1 1 1 1 1 ...
+##  $ line       : int [1:304] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ lyric      : chr [1:304] &amp;quot;Well, I was feeling so bad, asked my family doctor about what I had&amp;quot; &amp;quot;I said, \&amp;quot;Doctor, Doctor, Mister M.D., (doctor) can you tell me (doctor), what&amp;#39;s ailing me? (doctor)\&amp;quot;&amp;quot; &amp;quot;He said, \&amp;quot;Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah\&amp;quot;&amp;quot; &amp;quot;All you need, all you really need: good loving&amp;quot; ...
+##  $ track_title: chr [1:304] &amp;quot;Good Lovin&amp;#39;&amp;quot; &amp;quot;Good Lovin&amp;#39;&amp;quot; &amp;quot;Good Lovin&amp;#39;&amp;quot; &amp;quot;Good Lovin&amp;#39;&amp;quot; ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This gives you a good bit of information about the structure of your data set.
+* The class of the data are in multiple formats: &lt;code&gt;tbl_df&lt;/code&gt; (tabular data frame), &lt;code&gt;tbl&lt;/code&gt; (table), and &lt;code&gt;data.frame&lt;/code&gt; (normal data frame). This implies that you can use common commands to wrangle the data within this variable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;You have four (4) internal variables and 304 lines in this data frame (think an excel document which has 4 columns and 304 rows).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Notice that the track_title (track title) and &lt;code&gt;lyric&lt;/code&gt; (lyrics) columns are character vectors while &lt;code&gt;track_n&lt;/code&gt; (track number) and &lt;code&gt;line&lt;/code&gt; (line number) are integer vectors. These are important because what you can do with any vector is mostly dependent on its type.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Wrangling&lt;/h1&gt;
+&lt;p&gt;If we’re going to compare the two albums, we should probably put them in the same data frame. But to make sure we can distinguish each, we’re going to have to tag them by album name. To do this, we need to add a column. The package &lt;code&gt;dplyr&lt;/code&gt; let’s you mess around with the data without destroying the data frame format. It also lets you deal with pipes (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) which is a fantastic thing. During the dark days of R before pipes, you had to go back and rerun any R code that you made changes to which meant you had to keep track of everything. In any case, when using pipes, to do (nearly) anything to the data frame, you must use the command &lt;code&gt;mutate&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Remember we are adding a column that denoted the album name:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;american_beauty_tagged &amp;lt;- american_beauty %&amp;gt;% 
+  mutate(album = &amp;quot;***American Beauty***&amp;quot;) %&amp;gt;%
+  select(album, track_title, track_n, line, lyric)&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Ok so let’s take a moment to get our bearings straight. Currently we are&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;using the &lt;code&gt;american_beauty&lt;/code&gt; data set&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;adding a column named album and then populating it with the text &lt;strong&gt;&lt;em&gt;American Beauty&lt;/em&gt;&lt;/strong&gt; (in quotes); and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;rearranging the columns. By default, any new columns are put at the end of a data frame. Just to satisfy my obsessive nature, we’ll rearrange them in order of scope by putting the album name in front.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Good? Ok then let’s take a look at the data set now:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;american_beauty&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 359 x 4
+##    track_n  line lyric                                               track_title
+##      &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                               &amp;lt;chr&amp;gt;      
+##  1       1     1 Look out of any window                              Box of Rain
+##  2       1     2 Any morning, any evening, any day                   Box of Rain
+##  3       1     3 Maybe the sun is shining                            Box of Rain
+##  4       1     4 Birds are winging or rain is falling from a heavy … Box of Rain
+##  5       1     5 What do you want me to do                           Box of Rain
+##  6       1     6 To do for you to see you through?                   Box of Rain
+##  7       1     7 For this is all a dream we dreamed                  Box of Rain
+##  8       1     8 One afternoon, long ago                             Box of Rain
+##  9       1     9 Walk out of any doorway                             Box of Rain
+## 10       1    10 Feel your way, feel your way like the day before    Box of Rain
+## # … with 349 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sure enough, there’s the column with the album name. So now let’s do the same for the other album&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shakedown_street_tagged &amp;lt;- shakedown_street %&amp;gt;% 
+  mutate(album = &amp;quot;***Shakedown Street***&amp;quot;) %&amp;gt;%
+  select(album, track_title, track_n, line, lyric)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and verify:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shakedown_street&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 304 x 4
+##    track_n  line lyric                                               track_title
+##      &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                               &amp;lt;chr&amp;gt;      
+##  1       1     1 &amp;quot;Well, I was feeling so bad, asked my family docto… Good Lovin&amp;#39;
+##  2       1     2 &amp;quot;I said, \&amp;quot;Doctor, Doctor, Mister M.D., (doctor) c… Good Lovin&amp;#39;
+##  3       1     3 &amp;quot;He said, \&amp;quot;Yeah, yeah, yeah, yeah, yeah, yeah, ye… Good Lovin&amp;#39;
+##  4       1     4 &amp;quot;All you need, all you really need: good loving&amp;quot;    Good Lovin&amp;#39;
+##  5       1     5 &amp;quot;Because you got to have loving (good loving)&amp;quot;      Good Lovin&amp;#39;
+##  6       1     6 &amp;quot;Everybody got to have loving (good loving)&amp;quot;        Good Lovin&amp;#39;
+##  7       1     7 &amp;quot;A little good loving now baby, good loving&amp;quot;        Good Lovin&amp;#39;
+##  8       1     8 &amp;quot;So come on baby, squeeze me tight&amp;quot;                 Good Lovin&amp;#39;
+##  9       1     9 &amp;quot;Don&amp;#39;t you want your daddy to be alright?&amp;quot;          Good Lovin&amp;#39;
+## 10       1    10 &amp;quot;I said baby, now it&amp;#39;s for sure&amp;quot;                    Good Lovin&amp;#39;
+## # … with 294 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Great those look good. Now to merge the data sets, we are going to use a command called &lt;code&gt;rbind&lt;/code&gt;. The single requirement is that both data frames have the same column names since it needs to know what columns go with what (but notice that having the same column names implies that the columns do not have to be in the same order!)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all_albums &amp;lt;- rbind(american_beauty_tagged, shakedown_street_tagged)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you simply do the following&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all_albums&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 663 x 5
+##    album           track_title track_n  line lyric                              
+##    &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                              
+##  1 ***American Be… Box of Rain       1     1 Look out of any window             
+##  2 ***American Be… Box of Rain       1     2 Any morning, any evening, any day  
+##  3 ***American Be… Box of Rain       1     3 Maybe the sun is shining           
+##  4 ***American Be… Box of Rain       1     4 Birds are winging or rain is falli…
+##  5 ***American Be… Box of Rain       1     5 What do you want me to do          
+##  6 ***American Be… Box of Rain       1     6 To do for you to see you through?  
+##  7 ***American Be… Box of Rain       1     7 For this is all a dream we dreamed 
+##  8 ***American Be… Box of Rain       1     8 One afternoon, long ago            
+##  9 ***American Be… Box of Rain       1     9 Walk out of any doorway            
+## 10 ***American Be… Box of Rain       1    10 Feel your way, feel your way like …
+## # … with 653 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that you can’t actually observe both data frames were &lt;em&gt;stacked&lt;/em&gt;, or &lt;em&gt;bound.&lt;/em&gt; To do this, or at least get an indicator that the binding worked, you can find the &lt;em&gt;unique&lt;/em&gt; values in a column by doing&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unique(all_albums$album)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;***American Beauty***&amp;quot;  &amp;quot;***Shakedown Street***&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sure enough, it looks like both albums are there.&lt;/p&gt;
+&lt;div id=&#34;exploring-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exploring Data&lt;/h2&gt;
+&lt;p&gt;OK now to do some exploratory data analysis (EDA) which have to be displayed in a useless format on par with &lt;em&gt;pie charts&lt;/em&gt; - that is &lt;em&gt;wordclouds&lt;/em&gt;. Let’s tidy the data sets.&lt;/p&gt;
+&lt;p&gt;First we are going to tokenize the lyrics into a tidy dataframe&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics&amp;lt;- all_albums %&amp;gt;% 
+  group_by(album) %&amp;gt;% 
+  unnest_tokens(word, lyric) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So here we are
+1. using the all_albums data set we just created;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;grouping by album name which means all operations are done within the context of each album; and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tokenizing the data set which basically is a fancy way of saying we’re splitting up lyrics into words within each album.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Take a look at what this data frame now looks like by using&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics %&amp;gt;%
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+## # Groups:   album [1]
+##   album                 track_title track_n  line word  
+##   &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; 
+## 1 ***American Beauty*** Box of Rain       1     1 look  
+## 2 ***American Beauty*** Box of Rain       1     1 out   
+## 3 ***American Beauty*** Box of Rain       1     1 of    
+## 4 ***American Beauty*** Box of Rain       1     1 any   
+## 5 ***American Beauty*** Box of Rain       1     1 window
+## 6 ***American Beauty*** Box of Rain       1     2 any&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or simply use &lt;code&gt;View(tidy_lyrics)&lt;/code&gt; to get a full view in a separate tab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lemmatize-words&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lemmatize Words&lt;/h2&gt;
+&lt;p&gt;For grammatical reasons, lyrics are going to use different forms of a word known as &lt;a href=&#34;https://essentialsoflinguistics.pressbooks.com/chapter/6-5-unsure-how-to-format-that-derivational-morphology/&#34; target=&#34;_blank&#34;&gt;morphological derivations&lt;/a&gt; such as drink, drinks, and drinking to name a few. Additionally, there are families of derivationally related words with similar meanings known as differentiated inflections such as democracy, democratic, and democratization. In many situations including lyrics, it is useful to use the basic term for each of these variants. For this we have &lt;strong&gt;stemming&lt;/strong&gt; and &lt;strong&gt;lemmatization&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Stemming&lt;/strong&gt; refers to a crude heuristic process that chops off the ends of words in the hope of achieving this goal correctly most of the time, and often includes the removal of derivational affixes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Lemmatization&lt;/strong&gt; refers to doing things properly with the use of a vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and to return the base or dictionary form of a word, which is known as the lemma.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;code&gt;textstem&lt;/code&gt; package can do both, but for reasons associated with robustness, we’ll use lemmatization.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics$word &amp;lt;- lemmatize_words(tidy_lyrics$word)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The command (right) above takes the column &lt;code&gt;word&lt;/code&gt; in &lt;code&gt;tidy_lyrics&lt;/code&gt;, lemmatizes it, and then replaces the column &lt;code&gt;word&lt;/code&gt; in &lt;code&gt;tidy_lyrics&lt;/code&gt; (left) with the results. Take a look using &lt;code&gt;View(tidy_lyrics)&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-stop-words&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using Stop Words&lt;/h2&gt;
+&lt;p&gt;Now that we have a list in a tidy format, let’s do something with it. First let’s remove all of the stop words. Recall that these are terms that are commonly used (e.g. the, an, in, etc) and for this type of analysis, are noise and basically useless. To do this, we’re going to use some logic! The approach that is the most efficient besides making someone else do it is to utilize &lt;em&gt;joins&lt;/em&gt;. If you want to know more about joins in R - which you definitely should get familiar with as it will make merging of data sets so much easier in your life - check out &lt;a href=&#34;https://stat545.com/bit001_dplyr-cheatsheet.html&#34; target=&#34;_blank&#34;&gt;Dr. Jenny Bryant’s Stat545 course&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In our case, we’ll be using an &lt;code&gt;anti_join&lt;/code&gt; which basically gives you an output by finding the rows of the first table cannot that cannot be matched in the second table. But before that, let’s pull out the stop words from the &lt;code&gt;tidytext&lt;/code&gt; package by doing&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;stop_words&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then we’ll remove those words from our tidy data frame using an &lt;code&gt;anti_join&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics_nsw &amp;lt;- tidy_lyrics %&amp;gt;%
+  ungroup() %&amp;gt;%
+  anti_join(stop_words)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = &amp;quot;word&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Ok so let’s take another moment to get our bearings straight. Currently we are&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;using the &lt;code&gt;tidy_lyrics&lt;/code&gt; data set that we created;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ungrouping the data set; and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;removing all of the stop words from that data frame.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Now you can take a look by using &lt;code&gt;View(tidy_lyrics_nsw)&lt;/code&gt; or just look at the top six using the following syntax&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics_nsw %&amp;gt;%
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   album                 track_title track_n  line word   
+##   &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  
+## 1 ***American Beauty*** Box of Rain       1     1 window 
+## 2 ***American Beauty*** Box of Rain       1     2 morning
+## 3 ***American Beauty*** Box of Rain       1     2 day    
+## 4 ***American Beauty*** Box of Rain       1     3 sun    
+## 5 ***American Beauty*** Box of Rain       1     3 shine  
+## 6 ***American Beauty*** Box of Rain       1     4 bird&lt;/code&gt;&lt;/pre&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;Not seeing what you want? How about the bottom six then?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics_nsw %&amp;gt;%
+  tail()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   album                  track_title        track_n  line word   
+##   &amp;lt;chr&amp;gt;                  &amp;lt;chr&amp;gt;                &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  
+## 1 ***Shakedown Street*** Stagger Lee (Live)      14    29 lee    
+## 2 ***Shakedown Street*** Stagger Lee (Live)      14    30 song   
+## 3 ***Shakedown Street*** Stagger Lee (Live)      14    30 delia  
+## 4 ***Shakedown Street*** Stagger Lee (Live)      14    30 sing   
+## 5 ***Shakedown Street*** Stagger Lee (Live)      14    30 stagger
+## 6 ***Shakedown Street*** Stagger Lee (Live)      14    30 lee&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can remove additional words manually but for the purposes of this walkthrough, let’s not.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;descriptive-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Descriptive Statistics&lt;/h2&gt;
+&lt;p&gt;Until recently, the quantitative approach to analyze open text was in the use of word clouds. For all of my griping, this isn’t necessarily a flawed approach since it will indicate if some words are more important than others but they are &lt;em&gt;descriptive&lt;/em&gt; at best. Historically, the issue has been related to certain scholars making overarching claims, or &lt;em&gt;inferences&lt;/em&gt; from what are essentially visual representations of frequency counts which you should know by now is nonsense. However, with the advent of machine learning as a methodological tool, we now use inferential statistics to derive usable outcomes though there are still some people who stick by frequencies. In any case, let’s calculate some frequencies to get an idea of how our data looks.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;frequencies_lyrics &amp;lt;- tidy_lyrics_nsw %&amp;gt;%
+  group_by(album) %&amp;gt;%
+  count(word, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then plot them on a wordcloud. At this point, if you are unfamiliar or uncomfortable with &lt;code&gt;ggplot&lt;/code&gt;, I suggest going through or reviewing the first &lt;code&gt;ggplot&lt;/code&gt; section on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;datacamp&lt;/a&gt;. With that said, there will also be a brief explanation below of what’s used below the plot.&lt;/p&gt;
+&lt;p&gt;OK if you’re ready, run the following but be forewarned, it may take some time!&lt;/p&gt;
+&lt;div id=&#34;wordclouds&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wordclouds&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(99)
+ggplot(frequencies_lyrics, aes(label = word, size = n, color = album)) +
+  geom_text_wordcloud() +
+  scale_radius(range = c(0, 20)) +
+  theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 2 rows containing missing values (geom_text_wordcloud).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/wordcloud-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So what’s going on above? Well let’s break it down:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ggplot(frequencies_lyrics, aes(label = word, size = n, color = album))&lt;/code&gt; tells R to use the &lt;code&gt;ggplot2&lt;/code&gt; package by looking at the data set &lt;code&gt;frequencies_lyrics&lt;/code&gt; with the aesthetics (&lt;code&gt;aes&lt;/code&gt;) of labeling the data by the word, sizing each by its corresponding frequency (&lt;code&gt;n&lt;/code&gt;), and color by album title (&lt;code&gt;album&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_text_wordcloud()&lt;/code&gt; tells R to use the &lt;code&gt;ggwordcloud&lt;/code&gt; package and that text will be used to represent the data and to put it in a spiral.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;scale_radius(range = c(0, 20))&lt;/code&gt; tells &lt;code&gt;ggplot&lt;/code&gt; that the smallest a data point can be is 0 points and the largest is 20 points.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;theme_minimal&lt;/code&gt; is a &lt;code&gt;ggplot&lt;/code&gt; theme that removes all default(background, axes, etc.) information and just plots what you ask for.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You may notice that I did not go over &lt;code&gt;set.seed&lt;/code&gt;. That is for another time because it deals with probabilities that are contingent on how data is analyzed and/or rendered by each package in R.&lt;/p&gt;
+&lt;p&gt;OK great but that takes too long to render, its not very pretty nor does it do a great job of splitting the words apart - we do want to compare them after all! Let’s make it better:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(99)
+frequencies_lyrics %&amp;gt;%
+  filter(n &amp;gt; 1) %&amp;gt;%
+  ggplot(aes(label = word, size = n, color = album)) +
+  scale_color_manual(values = c(&amp;quot;#5bc0de&amp;quot;, &amp;quot;#5cb85c&amp;quot;)) +
+  geom_text_wordcloud(rm_outside = TRUE, shape = &amp;quot;circle&amp;quot;) +
+  scale_radius(range = c(4, 15)) +
+  theme_minimal() +
+  facet_grid(.~ album) +
+  theme(panel.spacing = unit(0.5, &amp;quot;cm&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 1 rows containing missing values (geom_text_wordcloud).&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Some words could not fit on page. They have been removed.
+## Some words could not fit on page. They have been removed.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/wordcloud_custom_actual-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That looks better and we know what words come from what album. So what’s different here?
+Well first of all, it is worth noting that not all of the syntax from above will be explained here simply due to the fact they are included for aesthetics and have nothing to do with the function creating the actual wordcloud. However, you are given the entire code so that the modified output is or will be at some point understandable. If you would like to know what this looks like without the extra aesthetics for comparison, run the following in your companion R script:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(99)
+frequencies_lyrics %&amp;gt;%
+  filter(n &amp;gt; 1) %&amp;gt;%
+ggplot(aes(label = word, size = n, color = album)) +
+  scale_color_manual(values = c(&amp;quot;#5bc0de&amp;quot;, &amp;quot;#5cb85c&amp;quot;)) +
+  geom_text_wordcloud(rm_outside = TRUE, shape = &amp;quot;circle&amp;quot;) +
+  scale_radius(range = c(4, 15)) +
+  theme_minimal() +
+  facet_grid(album ~ .)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now back to the pending question that has been updated a bit: &lt;em&gt;What are the major differences here that aren’t related to the aesthetics?&lt;/em&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;If you call &lt;code&gt;frequencies_lyrics&lt;/code&gt;, you’ll notice that there are 684 rows implying that R has to plot 684 words. That takes some time! To reduce the time and before even calling &lt;code&gt;ggplot&lt;/code&gt;, let’s get rid of the “one offs”, or those terms that only appear once. Here we&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;called the original data set,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;filtered the frequency &lt;code&gt;n&lt;/code&gt; by telling R to only look at values greater than 1, and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;then called &lt;code&gt;ggplot&lt;/code&gt;. One side note, notice that we don’t called the data set again in &lt;code&gt;ggplot&lt;/code&gt; since we already did that when filtering. The &lt;code&gt;%&amp;gt;%&lt;/code&gt; gives you the control to pass information through pipes. Much like anything Mario…pipes make everything better.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;I have manually assigned colors by using the &lt;code&gt;scale_color_manual&lt;/code&gt; command and inputting hexadecimal, or hex codes. These are one of two ways internet browsers determine what colors you see on screen (the other is called RBG) and most computer languages recognize them too. You can Google hex codes and find all sorts of examples. I suggest using this site which also includes user generated palettes, but obviously there is no mandate: &lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;https://www.color-hex.com/&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(same as before)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To make some of the text appear readable, the range of &lt;code&gt;scale_radius&lt;/code&gt; was changed to reflect a minimum of 2 points.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(same as before)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;facet_grid&lt;/code&gt; (and its counterpart &lt;code&gt;facet_wrap&lt;/code&gt; - not shown here) is a way of splitting up a visualization by a value in a column within your data frame. If you were confused as to why the album name was important and that we binded the original data frames, this is the reason! There are ways to customize a facet but we’ll get to that later.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;NOTE: If you see some blurred or overlapping text, just push the Zoom option right above the graphics window.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You can find more information, examples, and usable syntax/lines of code for &lt;code&gt;ggwordcloud&lt;/code&gt; by selecting going to this &lt;a href=&#34;https://cran.r-project.org/web/packages/ggwordcloud/vignettes/ggwordcloud.html&#34; target=&#34;_blank&#34;&gt;vignette&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bar-plots&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bar Plots&lt;/h3&gt;
+&lt;p&gt;One avenue to look at when comparing sets of open ended text is to compare terms, in that are common terms used? We can do this or &lt;a href=&#34;https://www.youtube.com/watch?v=AjPau5QYtYs&#34; target=&#34;_blank&#34;&gt;we can dance if we want to&lt;/a&gt;. Let’s say we don’t do the latter:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;frequencies_lyrics %&amp;gt;%
+  filter(n &amp;gt; 5) %&amp;gt;%
+  group_by(album) %&amp;gt;% 
+  count(word, sort = TRUE) %&amp;gt;%
+  mutate(word = reorder(word, n)) %&amp;gt;% 
+  ungroup() %&amp;gt;% 
+  mutate(album = reorder(album, n)) %&amp;gt;% 
+  ggplot(aes(word, n)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  facet_grid(~ album) +
+  xlab(NULL) +
+  coord_flip() +
+  theme(axis.text.y = element_text(size = 8))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/frequency_by_facet-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There is a lot going on here! While some of these items may be repetitive, let’s break it down anyway:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;frequencies_lyrics&lt;/code&gt; data set has been called.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We use &lt;code&gt;filter(n &amp;gt; 5)&lt;/code&gt; to filter out all of the word counts that are 5 or less. If you are using your own data set, this will vary.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since we are looking at albums, we should first pair those out by using &lt;code&gt;group_by(album)&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using &lt;code&gt;count(word, sort = TRUE)&lt;/code&gt;, we count the number of words. Now you may be saying something like “Wait! didn’t we already do that?” Well we did but we counted them across both albums basically ignoring which word came from what album. This time, when we used &lt;code&gt;group_by(album)&lt;/code&gt;, the system now performs all operations by album. So words are now counted within each album.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you run the entire pipe chain up to this &lt;code&gt;count(word, sort = TRUE)&lt;/code&gt;, you may have noticed that the words are in order by counts. We can reorder the column &lt;code&gt;word&lt;/code&gt; by a particular word and then their respective counts &lt;code&gt;n&lt;/code&gt; by using &lt;code&gt;mutate(word = reorder(word, n))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When you group something, that structure is maintained indefinitely. To remove it, we use the common &lt;code&gt;ungroup()&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Similar to step 5, we can reorder the column &lt;code&gt;album&lt;/code&gt; by a particular album and then their respective counts &lt;code&gt;n&lt;/code&gt; by using &lt;code&gt;mutate(album = reorder(album, n))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;At this point, you may realize we are starting to plot. The great thing about the tidyverse universe is that you can do operations and plot in one fell swoop.&lt;/p&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ggplot(aes(word, n))&lt;/code&gt; tells R that we’re going to plot something using ggplot using the a &lt;code&gt;word&lt;/code&gt; on the &lt;em&gt;x&lt;/em&gt;-axis and its corresponding count &lt;code&gt;n&lt;/code&gt; on the y-axis.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_bar(stat = &#34;identity&#34;)&lt;/code&gt; indicates that we are going to use as bar plot. For the time being, we won’t discuss the &lt;code&gt;stat = identity&lt;/code&gt; part except to tell you that when a &lt;em&gt;y&lt;/em&gt; variable is declared, &lt;code&gt;geom_bar&lt;/code&gt; requires &lt;code&gt;stat = identity&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;facet_grid(~ albums)&lt;/code&gt; simply means we are going to facet, or ploy by albums.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;xlab(NULL)&lt;/code&gt; tells the system to ignore the label on the &lt;em&gt;x&lt;/em&gt;-axis which in this case is word.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Running the command up to this point yields vertical bar plots which are somewhat difficult to compare. They would probably be easier to interpret if the bars were horizontal. Well &lt;code&gt;coord_flip()&lt;/code&gt; does just that! This flips the &lt;em&gt;x&lt;/em&gt;- and &lt;em&gt;y&lt;/em&gt;-axes as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We will discuss themes at a later point but so you can simply read the vertical axis with the words, we are going to make the font size 8 (pixels) by stating &lt;code&gt;theme(axis.text.y = element_text(size = 8))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-analysis-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sentiment Analysis&lt;/h1&gt;
+&lt;p&gt;Now we’ll investigate the various sentiments and emotions expressed in the lyrics by using three sentiment dictionaries or &lt;strong&gt;lexicons&lt;/strong&gt;, included with the &lt;code&gt;tidytext&lt;/code&gt; package: &lt;strong&gt;Bing&lt;/strong&gt;, &lt;strong&gt;NRC&lt;/strong&gt;, and &lt;strong&gt;AFINN&lt;/strong&gt;. I won’t cover what these are in great depth but in a nutshell&lt;/p&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+lexicon
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+variable type
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+sentiments
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+more information
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Bing
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A backend of &lt;a href=&#34;https://www.bing.com/&#34; target=&#34;_blank&#34;&gt;Microsoft Bing&lt;/a&gt;), this lexicon may be used to assesses open text for its polarities in sentiments.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+categorical
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+positive, negative
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html&#34; target=&#34;_blank&#34;&gt;Bing&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NRC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+One of the most utilized and researched lexicons that provides information about emotional context.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+categorical
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+anger, anticipation, disgust, fear, joy, sadness, surprise, trust
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm&#34; target=&#34;_blank&#34;&gt;NRC&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+AFINN
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+A lexicon used for measuring psychological valence by assigning a level of severity to a term.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+numerical
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+-5,-4,-3,-2,-1,0,1,2,3,4,5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://github.com/fnielsen/afinn&#34; target=&#34;_blank&#34;&gt;AFINN&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We can categorize the lyrics and then perform some text based transformations and manipulations to construct some visualizations.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;tidy_lyrics_nsw&lt;/code&gt; data set that we created earlier, we will filter out any numbers in our data set and&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Get the &lt;strong&gt;Bing&lt;/strong&gt; lexicon with the get_sentiments() function.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Join the &lt;strong&gt;Bing&lt;/strong&gt; lexicon to the tokenized data set, specify by = “word”&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_bing &amp;lt;- tidy_lyrics_nsw %&amp;gt;% 
+  filter(!grepl(&amp;#39;[0-9]&amp;#39;, word)) %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;bing&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  group_by(album) %&amp;gt;%   
+  mutate(sentiment = ifelse(is.na(sentiment), &amp;#39;neutral&amp;#39;, sentiment))
+
+emotions_lyrics_bing&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,605 x 6
+## # Groups:   album [2]
+##    album                 track_title track_n  line word    sentiment
+##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;    
+##  1 ***American Beauty*** Box of Rain       1     1 window  neutral  
+##  2 ***American Beauty*** Box of Rain       1     2 morning neutral  
+##  3 ***American Beauty*** Box of Rain       1     2 day     neutral  
+##  4 ***American Beauty*** Box of Rain       1     3 sun     neutral  
+##  5 ***American Beauty*** Box of Rain       1     3 shine   positive 
+##  6 ***American Beauty*** Box of Rain       1     4 bird    neutral  
+##  7 ***American Beauty*** Box of Rain       1     4 wing    neutral  
+##  8 ***American Beauty*** Box of Rain       1     4 rain    neutral  
+##  9 ***American Beauty*** Box of Rain       1     4 fall    negative 
+## 10 ***American Beauty*** Box of Rain       1     4 heavy   neutral  
+## # … with 1,595 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, there is a lot going on here! Let’s break it down line by line:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;tidy_lyrics_nsw&lt;/code&gt; data set has been called. We are using this rather than &lt;code&gt;tidy_lyrics&lt;/code&gt; because the stop words were removed.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We use &lt;code&gt;filter(!grepl(&#39;[0-9]&#39;, word))&lt;/code&gt; to filter out any numbers in our data set, namely in the &lt;code&gt;word&lt;/code&gt; column.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To get the &lt;strong&gt;Bing&lt;/strong&gt; lexicon and compare it to our list of words, we use &lt;code&gt;left_join(get_sentiments(&#34;bing&#34;), by = &#34;word&#34;)&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Like before, we used &lt;code&gt;group_by(album)&lt;/code&gt; to perform all operations by album (or within each album if you prefer).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To perform most any operation on a data set when using &lt;code&gt;%&amp;gt;%&lt;/code&gt;, we use &lt;code&gt;mutate&lt;/code&gt;. In this case, we are using a logic statement to tell the program if it sees an entry with &lt;code&gt;NA&lt;/code&gt; in the sentiment column, change it to the term &lt;code&gt;neutral&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For a total count, we delineate the sentiments and count how many are in each by album using &lt;code&gt;count(sentiment)&lt;/code&gt; which uses the &lt;code&gt;sentiment&lt;/code&gt; column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_bing %&amp;gt;%
+  count(sentiment)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+## # Groups:   album [2]
+##   album                  sentiment     n
+##   &amp;lt;chr&amp;gt;                  &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 ***American Beauty***  negative     62
+## 2 ***American Beauty***  neutral     703
+## 3 ***American Beauty***  positive     62
+## 4 ***Shakedown Street*** negative     76
+## 5 ***Shakedown Street*** neutral     619
+## 6 ***Shakedown Street*** positive     83&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;basic-text-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Basic Text Analysis&lt;/h2&gt;
+&lt;div id=&#34;most-common-positive-and-negative-words-in-a-bar-graph&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Most Common Positive and Negative Words in a Bar Graph&lt;/h3&gt;
+&lt;p&gt;We can associate terms tagged with a negative sentiment with negative numbers to better visualize them. To accomplish this, we can create a logic statement called an if-else statement that assigns -n to a word with a negative sentiment and to everything else, it provides an n count. We’ll then order the words in these groups by the number of times they appear in the plot.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;word_count &amp;lt;- emotions_lyrics_bing %&amp;gt;% 
+  count(word, sentiment, sort = TRUE) 
+
+word_count&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 693 x 4
+## # Groups:   album [2]
+##    album                  word     sentiment     n
+##    &amp;lt;chr&amp;gt;                  &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+##  1 ***Shakedown Street*** love     positive     45
+##  2 ***Shakedown Street*** lovin    neutral      25
+##  3 ***Shakedown Street*** fire     neutral      24
+##  4 ***Shakedown Street*** doctor   neutral      17
+##  5 ***American Beauty***  home     neutral      16
+##  6 ***Shakedown Street*** stagger  neutral      16
+##  7 ***American Beauty***  friend   neutral      14
+##  8 ***American Beauty***  time     neutral      14
+##  9 ***Shakedown Street*** lee      neutral      14
+## 10 ***Shakedown Street*** mountain neutral      14
+## # … with 683 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above, we are going to&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Use the &lt;code&gt;emotions_lyrics_bing&lt;/code&gt; data set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Count up the words by sentiment and then sort them by &lt;code&gt;count(word, sentiment, sort = TRUE)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;top_sentiments_bing &amp;lt;-  word_count %&amp;gt;% 
+  filter(sentiment != &amp;#39;neutral&amp;#39;) %&amp;gt;% 
+  group_by(sentiment) %&amp;gt;% 
+  top_n(10, n) %&amp;gt;% 
+  mutate(num = ifelse(sentiment == &amp;quot;negative&amp;quot;, -n, n)) %&amp;gt;%  
+  select(-n) %&amp;gt;% 
+  mutate(word = reorder(word, num)) %&amp;gt;% 
+  ungroup() 
+
+top_sentiments_bing&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 21 x 4
+##    album                  word    sentiment   num
+##    &amp;lt;chr&amp;gt;                  &amp;lt;fct&amp;gt;   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+##  1 ***Shakedown Street*** love    positive     45
+##  2 ***American Beauty***  easy    positive     13
+##  3 ***American Beauty***  sweet   positive      9
+##  4 ***American Beauty***  devil   negative     -7
+##  5 ***Shakedown Street*** dark    negative     -6
+##  6 ***American Beauty***  fall    negative     -5
+##  7 ***American Beauty***  lie     negative     -5
+##  8 ***American Beauty***  numb    negative     -5
+##  9 ***Shakedown Street*** dead    negative     -5
+## 10 ***Shakedown Street*** miracle positive      5
+## # … with 11 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s break it down line by line:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;word_count&lt;/code&gt; data set has been called.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We use &lt;code&gt;filter(sentiment != &#39;neutral&#39;)&lt;/code&gt; to filter out any term in the &lt;code&gt;sentiment&lt;/code&gt; column that is &lt;code&gt;neutral&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To get the top 10 of words used in each album use &lt;code&gt;top_n(10, n)&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We use a logic statement &lt;code&gt;mutate(num = ifelse(sentiment == &#34;negative&#34;, -n, n))&lt;/code&gt; to tell R that if it sees the term &lt;code&gt;neutral&lt;/code&gt; in the sentiment column, to change the the count associated with it to a negative in a new column called &lt;code&gt;num&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using &lt;code&gt;select(-n)&lt;/code&gt; tells the program that we want to get rid of the the column &lt;code&gt;n&lt;/code&gt;. You can think of the negative as a way to deselect a column.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We simply put the terms from greatest to least disregarding album by &lt;code&gt;mutate(word = reorder(word, num))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/top_sentiments_plot_true-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top_sentiments_bing, aes(reorder(word, num), num, fill = sentiment)) +
+  geom_bar(stat = &amp;#39;identity&amp;#39;, alpha = 0.75) + 
+  scale_fill_manual(guide = FALSE, values = c(&amp;quot;#d9534f&amp;quot;, &amp;quot;#428bca&amp;quot;)) +
+  scale_y_continuous(limits = c(-10, 55), breaks = pretty_breaks(7)) + 
+  labs(x = &amp;#39;&amp;#39;, y = &amp;quot;Number of Occurrences&amp;quot;,
+       title = &amp;#39;Top Sentiments of Lyrics&amp;#39;,
+       subtitle = &amp;#39;Most Common Positive and Negative Words&amp;#39;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 14 , face = &amp;quot;bold&amp;quot;),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(size = 1.1),
+        panel.spacing = unit(0.5, &amp;quot;cm&amp;quot;)) +
+   facet_wrap(album ~ ., scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now there a bunch of things going on in this bar plot too!&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Here we are using the &lt;code&gt;top_sentiments_bing&lt;/code&gt; data set but reordering the way its plotted by greatest to least and filling by positive or negative sentiment by &lt;code&gt;aes(reorder(word, num), num, fill = sentiment)&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_bar&lt;/code&gt; is a bar graph as we saw before, but here the transparency level is set to 75% by &lt;code&gt;alpha = 0.75&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The positive and negative colors are set to a specific blue (#d9534f) and red (#428bca), respectively by &lt;code&gt;scale_fill_manual(guide = FALSE, values = c(&#34;#d9534f&#34;, &#34;#428bca&#34;))&lt;/code&gt;. Additionally, the legend has been turned off as well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The y-axis is limited to plotting between -10 and 55 with an even number of breaks given by &lt;code&gt;scale_y_continuous(limits = c(-10, 55), breaks = pretty_breaks(7))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;labs&lt;/code&gt; provides the opportunity to name the axes, title and subtitle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;One of the default themes that can be used by &lt;code&gt;ggplot&lt;/code&gt; is &lt;code&gt;theme_bw()&lt;/code&gt; or a black and white theme.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The values along the x-axis can be aesthetically manipulated to be at a 45 degree angle in size 14 bold print right-adjusted by &lt;code&gt;axis.text.x = element_text(angle = 45, hjust = 1, size = 14, face = &#34;bold&#34;)&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;most-common-positive-and-negative-words-in-a-wordcloud&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Most Common Positive and Negative Words in a WordCloud&lt;/h3&gt;
+&lt;p&gt;To compare the words within each album, we can initially use a comparison wordcloud. Now we can create this using &lt;code&gt;ggwordcloud&lt;/code&gt; as before, but if you just want a quick look, an older package named &lt;code&gt;wordcloud&lt;/code&gt; does a pretty good job and it has a built in function for comparisons.&lt;/p&gt;
+&lt;p&gt;Let’s take a look at the album &lt;strong&gt;&lt;em&gt;American Beauty&lt;/em&gt;&lt;/strong&gt; first:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_bing %&amp;gt;%
+  filter(album == &amp;quot;***American Beauty***&amp;quot;) %&amp;gt;%
+  filter(sentiment != &amp;quot;neutral&amp;quot;) %&amp;gt;% 
+  count(word, sentiment, sort = TRUE) %&amp;gt;% 
+  spread(sentiment, n, fill = 0L) %&amp;gt;% 
+  as.data.frame() %&amp;gt;% 
+  remove_rownames() %&amp;gt;% 
+  column_to_rownames(&amp;quot;word&amp;quot;) %&amp;gt;% 
+  select(-album) %&amp;gt;%
+  comparison.cloud(colors = c(&amp;quot;#d9534f&amp;quot;, &amp;quot;#428bca&amp;quot;), title.size = 1.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/am_beauty_cwc-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;and then &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_bing %&amp;gt;%
+  filter(album == &amp;quot;***Shakedown Street***&amp;quot;) %&amp;gt;%
+  filter(sentiment != &amp;quot;neutral&amp;quot;) %&amp;gt;% 
+  count(word, sentiment, sort = TRUE) %&amp;gt;% 
+  spread(sentiment, n, fill = 0L) %&amp;gt;% 
+  as.data.frame() %&amp;gt;% 
+  remove_rownames() %&amp;gt;% 
+  column_to_rownames(&amp;quot;word&amp;quot;) %&amp;gt;% 
+  select(-album) %&amp;gt;%
+  comparison.cloud(colors = c(&amp;quot;#d9534f&amp;quot;, &amp;quot;#428bca&amp;quot;), title.size = 1.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/shakedown_st_cwc-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Without being repetitive, the only command you haven’t seen is &lt;code&gt;spread&lt;/code&gt; which essentially takes a long data set and converts it into a wide one. Both &lt;code&gt;spread&lt;/code&gt; and its counterpart &lt;code&gt;gather&lt;/code&gt; are commands that are used often and worth your time getting to know a bit about, though the current incarnations of these known as &lt;code&gt;pivot_wider&lt;/code&gt; and &lt;code&gt;pivot_longer&lt;/code&gt;. If interested, take a look at the online version of the text &lt;a href=&#34;https://r4ds.had.co.nz/tidy-data.html?q=pivot#pivoting&#34; target=&#34;_blank&#34;&gt;R for Data Science&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;positive-and-negative-words-in-a-line-graph&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Positive and Negative Words in a Line Graph&lt;/h3&gt;
+&lt;p&gt;Now that we’ve looked at the most common words for either positive or negative sentiment, what proportion of these sentiments are present in within the entire lyrical data set?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_album &amp;lt;- tidy_lyrics_nsw %&amp;gt;% 
+  filter(!grepl(&amp;#39;[0-9]&amp;#39;, word)) %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;bing&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  mutate(sentiment = ifelse(is.na(sentiment), &amp;#39;neutral&amp;#39;, sentiment)) %&amp;gt;%   
+  group_by(album, sentiment) %&amp;gt;% 
+  summarize(n = n()) %&amp;gt;% 
+  mutate(percent = n / sum(n)) %&amp;gt;% 
+  select(-n) %&amp;gt;% 
+  ungroup() &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;album&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_album&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   album                  sentiment percent
+##   &amp;lt;chr&amp;gt;                  &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
+## 1 ***American Beauty***  negative   0.0750
+## 2 ***American Beauty***  neutral    0.850 
+## 3 ***American Beauty***  positive   0.0750
+## 4 ***Shakedown Street*** negative   0.0977
+## 5 ***Shakedown Street*** neutral    0.796 
+## 6 ***Shakedown Street*** positive   0.107&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_album %&amp;gt;% 
+  filter(sentiment != &amp;quot;neutral&amp;quot;) %&amp;gt;% 
+  ggplot(aes(x = album, y = percent, color = sentiment, group = sentiment)) + 
+  geom_line(size = 1) + 
+  geom_point(size = 3) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  labs(x = &amp;quot;Album&amp;quot;, y = &amp;quot;Emotion Words Count (as %)&amp;quot;) +
+  scale_color_manual(values = c(positive = &amp;quot;#d9534f&amp;quot;, negative = &amp;quot;#428bca&amp;quot;)) +
+  ggtitle(&amp;quot;Proportion of Positive and Negative Words by Album&amp;quot;, 
+          subtitle = &amp;quot;Bing lexicon&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 11, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/albums_pos_neg_plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well while this isn’t overtly interesting, it does provide some indication that while &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt; is slightly more positive, it is also more negative as well. Maybe we’ll get a better idea by looking at the individual songs:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_track &amp;lt;- tidy_lyrics_nsw %&amp;gt;% 
+  filter(!grepl(&amp;#39;[0-9]&amp;#39;, word)) %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;bing&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  mutate(sentiment = ifelse(is.na(sentiment), &amp;#39;neutral&amp;#39;, sentiment)) %&amp;gt;%   
+  group_by(album, track_title, track_n, sentiment) %&amp;gt;% 
+  summarize(n = n()) %&amp;gt;% 
+  mutate(percent = n / sum(n)) %&amp;gt;% 
+  select(-n) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;album&amp;#39;, &amp;#39;track_title&amp;#39;, &amp;#39;track_n&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_track&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 64 x 5
+## # Groups:   album, track_title, track_n [22]
+##    album                 track_title       track_n sentiment percent
+##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;               &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 ***American Beauty*** Attics of My Life       9 negative   0.04  
+##  2 ***American Beauty*** Attics of My Life       9 neutral    0.92  
+##  3 ***American Beauty*** Attics of My Life       9 positive   0.04  
+##  4 ***American Beauty*** Box of Rain             1 negative   0.0741
+##  5 ***American Beauty*** Box of Rain             1 neutral    0.889 
+##  6 ***American Beauty*** Box of Rain             1 positive   0.0370
+##  7 ***American Beauty*** Brokedown Palace        7 negative   0.0392
+##  8 ***American Beauty*** Brokedown Palace        7 neutral    0.892 
+##  9 ***American Beauty*** Brokedown Palace        7 positive   0.0686
+## 10 ***American Beauty*** Candyman                5 negative   0.0615
+## # … with 54 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pos_neg_bing_track %&amp;gt;% 
+  filter(sentiment != &amp;quot;neutral&amp;quot;) %&amp;gt;% 
+  ggplot(aes(x = reorder(track_title, track_n), y = percent, color = sentiment, 
+             group = sentiment)) + 
+  geom_line(size = 1) + 
+  geom_point(size = 3) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  labs(x = &amp;quot;Album&amp;quot;, y = &amp;quot;Sentiment Count (as %)&amp;quot;) +
+  scale_color_manual(values = c(positive = &amp;quot;#d9534f&amp;quot;, negative = &amp;quot;#428bca&amp;quot;)) +
+  ggtitle(&amp;quot;Proportion of Positive and Negative Words by Track&amp;quot;, 
+          subtitle = &amp;quot;Bing lexicon&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 11, face = &amp;quot;bold&amp;quot;)) +
+  facet_wrap(. ~ album, ncol = 1, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/track_pos_neg_plot-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Firstly, you may notice that &lt;code&gt;geom_line&lt;/code&gt;, &lt;code&gt;geom_point&lt;/code&gt;, and &lt;code&gt;reorder(track_title, track_n)&lt;/code&gt;. The first two are fairly obvious as they are parts of the visualization that render the dots and lines. In the latter, we arrange the tracks by their original order since many artists tend to itemize tracks in a preferred way. Sometimes this is intended to tell a story&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; while other times it is simply a personal or studio preference.&lt;/p&gt;
+&lt;p&gt;Visually, the ebbs and flows of the sentiments within each album are relatively consistent and are reflections of each other as one would expect. In fact they both have an instance where the sentiments have a declining slop. The primary differential is the area between the positive and negative curves which is greater in the album &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt; than &lt;strong&gt;&lt;em&gt;American Beauty&lt;/em&gt;&lt;/strong&gt;. In fact, it is this disparity that is the main contribution to the earlier variant of this plot which looked at the albums as a whole.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;positive-and-negative-words-in-a-boxplot&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Positive and Negative Words in a Boxplot&lt;/h3&gt;
+&lt;p&gt;No we switch our attention to something that may be of greater interest, that is the &lt;code&gt;NRC&lt;/code&gt; lexicon. Recall this dictionary not only has positive and negative categories, it also has eight different emotional classifications: &lt;em&gt;Anger&lt;/em&gt;, &lt;em&gt;Anticipation&lt;/em&gt;, &lt;em&gt;Disgust&lt;/em&gt;, &lt;em&gt;Fear&lt;/em&gt;, &lt;em&gt;Joy&lt;/em&gt;, &lt;em&gt;Sadness&lt;/em&gt;, &lt;em&gt;Surprise&lt;/em&gt;, and &lt;em&gt;Trust&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this case we will disregard the positive and negative tags but please note that what &lt;code&gt;Bing&lt;/code&gt; classifies by either tag may not necessarily be the same as how &lt;strong&gt;NRC&lt;/strong&gt; groups them. In a nutshell, both &lt;code&gt;Bing&lt;/code&gt; and &lt;code&gt;NRC&lt;/code&gt; are different lexicons from two different sources so it would make sense that there would be a discrepancy between classifications.&lt;/p&gt;
+&lt;p&gt;Using a similar approach as before, we first look at the differentials by album:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_album_nrc &amp;lt;- tidy_lyrics_nsw  %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;nrc&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  filter(!(sentiment == &amp;quot;negative&amp;quot; | sentiment == &amp;quot;positive&amp;quot;)) %&amp;gt;% 
+  mutate(sentiment = as.factor(sentiment)) %&amp;gt;% 
+    group_by(album, sentiment) %&amp;gt;%
+  summarize(n = n()) %&amp;gt;% 
+  mutate(percent = n / sum(n)) %&amp;gt;%   
+  select(-n) %&amp;gt;% 
+  ungroup() &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;album&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_album_nrc &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 16 x 3
+##    album                  sentiment    percent
+##    &amp;lt;chr&amp;gt;                  &amp;lt;fct&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 ***American Beauty***  anger         0.0611
+##  2 ***American Beauty***  anticipation  0.195 
+##  3 ***American Beauty***  disgust       0.0611
+##  4 ***American Beauty***  fear          0.0656
+##  5 ***American Beauty***  joy           0.208 
+##  6 ***American Beauty***  sadness       0.143 
+##  7 ***American Beauty***  surprise      0.0905
+##  8 ***American Beauty***  trust         0.176 
+##  9 ***Shakedown Street*** anger         0.0892
+## 10 ***Shakedown Street*** anticipation  0.140 
+## 11 ***Shakedown Street*** disgust       0.0255
+## 12 ***Shakedown Street*** fear          0.178 
+## 13 ***Shakedown Street*** joy           0.219 
+## 14 ***Shakedown Street*** sadness       0.110 
+## 15 ***Shakedown Street*** surprise      0.104 
+## 16 ***Shakedown Street*** trust         0.134&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then the corresponding plot.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_album_nrc %&amp;gt;% 
+  ggplot() +
+  geom_boxplot(aes(x = reorder(sentiment, percent), y = percent, fill = sentiment)) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  scale_fill_brewer(palette = &amp;quot;Spectral&amp;quot;) +
+  ggtitle(&amp;quot;Distribution of Sentiments by Album&amp;quot;) +
+  labs(x = &amp;quot;Sentiment&amp;quot;, y = &amp;quot;Percentage&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        legend.position = &amp;quot;none&amp;quot;,
+        axis.text.x = element_text(size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.text.y = element_text(size = 11, face = &amp;quot;bold&amp;quot;)) +
+  facet_wrap(. ~ album, ncol = 1, scales = &amp;quot;free&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/album_nrc_plot-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The lack of boxes isn’t surprising considering we only have one value for each sentiment per album. What is interesting is that the percent of terms associated with anger, anticipation, fear and trust are elevated in &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Now a bit of social commentary: These emotions tend to reflect the inner turmoil going on within the band where two of the staple members (Keith and Donna Jean Godchaux) left the band after it was reportedly found that Donna Jean was having an affair with another band member by the name of Bob Weir. Let’s see if this is reflected in the songs themselves.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc &amp;lt;- tidy_lyrics_nsw  %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;nrc&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  filter(!(sentiment == &amp;quot;negative&amp;quot; | sentiment == &amp;quot;positive&amp;quot;)) %&amp;gt;% 
+  mutate(sentiment = as.factor(sentiment)) %&amp;gt;% 
+  group_by(album, track_title, track_n, sentiment) %&amp;gt;% 
+  summarize(n = n()) %&amp;gt;% 
+  mutate(percent = n / sum(n)) %&amp;gt;%   
+  select(-n) %&amp;gt;% 
+  ungroup() &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;album&amp;#39;, &amp;#39;track_title&amp;#39;, &amp;#39;track_n&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 149 x 5
+##    album                 track_title       track_n sentiment    percent
+##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;               &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 ***American Beauty*** Attics of My Life       9 anger         0.0625
+##  2 ***American Beauty*** Attics of My Life       9 anticipation  0.25  
+##  3 ***American Beauty*** Attics of My Life       9 disgust       0.0625
+##  4 ***American Beauty*** Attics of My Life       9 joy           0.125 
+##  5 ***American Beauty*** Attics of My Life       9 sadness       0.188 
+##  6 ***American Beauty*** Attics of My Life       9 surprise      0.0625
+##  7 ***American Beauty*** Attics of My Life       9 trust         0.25  
+##  8 ***American Beauty*** Box of Rain             1 anger         0.0345
+##  9 ***American Beauty*** Box of Rain             1 anticipation  0.276 
+## 10 ***American Beauty*** Box of Rain             1 fear          0.103 
+## # … with 139 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then the corresponding plot.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc  %&amp;gt;% 
+  ggplot() +
+  geom_boxplot(aes(x = reorder(sentiment, percent), y = percent, fill = sentiment)) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  scale_fill_brewer(palette = &amp;quot;Spectral&amp;quot;) +
+  ggtitle(&amp;quot;Distribution of Sentiments by Album Aggregated by Track&amp;quot;) +
+  labs(x = &amp;quot;Detected Sentiments&amp;quot;, y = &amp;quot;Percentage&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        legend.position = &amp;quot;none&amp;quot;,
+        axis.text.x = element_text(size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.text.y = element_text(size = 11, face = &amp;quot;bold&amp;quot;)) +
+  facet_wrap(. ~ album, ncol = 1, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/tracks_nrc_plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So when we look at the scores by track and then aggregate, we see the the original findings seem to be correct though there is great deal more variability in joy within &lt;strong&gt;&lt;em&gt;Shakedown Street&lt;/em&gt;&lt;/strong&gt; that wasn’t detected earlier (maybe it was the disco). Additionally there appears to be a greater association with sadness in &lt;strong&gt;&lt;em&gt;American Beauty&lt;/em&gt;&lt;/strong&gt; that was not found earlier as well. While you may not be familiar with the album, the new findings here are also not a bug surprise. The album is known for its polar track sequencing where an extremely upbeat song (reflected in joy) would be followed by one that is sorrowful (reflected almost equally by sadness).&lt;/p&gt;
+&lt;p&gt;What if we wanted to see how the songs changed by track order? We can use a bump chart to visualize this&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc %&amp;gt;% 
+  ggplot(aes(reorder(track_title, track_n), percent, color = sentiment, 
+             group = sentiment)) +
+  geom_line(size = 1.5) +
+  geom_point(size = 3.5) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  xlab(&amp;quot;Album&amp;quot;) + ylab(&amp;quot;Proportion of Sentiments&amp;quot;) +
+  ggtitle(&amp;quot;Sentiments by Albums&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 11, face = &amp;quot;bold&amp;quot;)) +
+  scale_color_brewer(palette = &amp;quot;Spectral&amp;quot;) +
+  facet_wrap(. ~ album, ncol = 1, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/tracks_agg_nrc_bump-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well that got messy. Even with the colors, it is hard to discern what is going on. This is a good instance where you can use &lt;code&gt;facet_grid&lt;/code&gt;. Until now, we have been using &lt;code&gt;facet_wrap&lt;/code&gt; to separate the &lt;code&gt;album&lt;/code&gt; variable into its distinct entries. However the functionality of &lt;code&gt;facet_wrap&lt;/code&gt; is limited and will return a symmetrical matrix of plots for the number of unique levels or factors of a given variable. &lt;code&gt;facet_grid&lt;/code&gt; serves another purpose by return facets equal to the levels or factors of a given variable. Think of it more this way -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;facet_wrap&lt;/code&gt; essentially splits your plot across the categories you want.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;facet_grid&lt;/code&gt; does a similar thing but instead of creating different plots it creates different grids and then plots each plot in the grids.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Still confused? Well let’s apply it and see.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc %&amp;gt;% 
+  ggplot(aes(x = reorder(track_title, track_n), y = percent, color = sentiment, 
+             group = sentiment)) +
+  geom_line(size = 1.5) +
+  geom_point(size = 3.5) +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  xlab(&amp;quot;Album&amp;quot;) + ylab(&amp;quot;Proportion of Sentiments&amp;quot;) +
+  ggtitle(&amp;quot;Individual Sentiments by Album&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 8, face = &amp;quot;bold&amp;quot;)) +
+  scale_color_brewer(palette = &amp;quot;Spectral&amp;quot;) +
+  facet_grid(sentiment ~ album, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/tracks_ind_nrc_bump-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We only changed &lt;code&gt;facet_wrap(. ~ album, ncol = 1, scales = &#34;free_x&#34;)&lt;/code&gt; in the messy plot to &lt;code&gt;facet_grid(sentiment ~ album, scales = &#34;free_x&#34;)&lt;/code&gt; in the new one. Sure it could still use some work on the aesthetics side of things but the line graphs are now provided by type, or facet which makes a visual comparison much easier.&lt;/p&gt;
+&lt;p&gt;With a few exceptions, you may notice that the sentiments share a common shape when comparing tracks in order. This consistency is not an outlier. One of the reasons you may enjoy a follow-up album by an artist you liked before is hypothesized to having a similar line of best fit. Don’t believe me? Try it yourself and hopefully you remember some basic terms from Algebra.&lt;/p&gt;
+&lt;p&gt;First let’s define a binomial function&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;binomial_smooth &amp;lt;- function(...) {
+  geom_smooth(method = &amp;quot;glm&amp;quot;, method.args = list(family = &amp;quot;binomial&amp;quot;), ...)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then apply it as a third degree polynomial&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_tracks_nrc %&amp;gt;% 
+  ggplot(aes(x = reorder(track_title, track_n), y = percent, color = sentiment, 
+             group = sentiment)) +
+  geom_line(size = 1.5) +
+  geom_point(size = 3.5) +
+  binomial_smooth(formula = y ~ splines::ns(x, 3), color = &amp;quot;#000000&amp;quot;)   +
+  scale_y_continuous(breaks = pretty_breaks(5), labels = percent_format()) +
+  xlab(&amp;quot;Album&amp;quot;) + ylab(&amp;quot;Proportion of Sentiments&amp;quot;) +
+  ggtitle(&amp;quot;Individual Sentiments by Album&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 11, face = &amp;quot;bold&amp;quot;),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 8, face = &amp;quot;bold&amp;quot;)) +
+  scale_color_brewer(palette = &amp;quot;Spectral&amp;quot;) +
+  facet_grid(sentiment ~ album, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/tracks_ind_nrc_bump_glm-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Change the number &lt;code&gt;3&lt;/code&gt; in &lt;code&gt;binomial_smooth(formula = y ~ splines::ns(x, 3), color = &#34;#000000&#34;)&lt;/code&gt; to amend the degree as you see fit. In any case, you may notice that the line of best fit is relatively consistent between the two albums when assessing sentiments in track order.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;viewing-across-all-lexicons&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Viewing Across all Lexicons&lt;/h2&gt;
+&lt;p&gt;Let’s compare the lexicons themselves on how many positive and negative words they each categorize.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_sentiments(&amp;quot;bing&amp;quot;) %&amp;gt;% 
+  count(sentiment)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment     n
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative   4781
+## 2 positive   2005&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_sentiments(&amp;quot;nrc&amp;quot;) %&amp;gt;% 
+  count(sentiment)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    sentiment        n
+##    &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;
+##  1 anger         1247
+##  2 anticipation   839
+##  3 disgust       1058
+##  4 fear          1476
+##  5 joy            689
+##  6 negative      3324
+##  7 positive      2312
+##  8 sadness       1191
+##  9 surprise       534
+## 10 trust         1231&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;In the &lt;code&gt;bing&lt;/code&gt; lexicon, there are 4781 negative and 2005 positive terms.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the &lt;code&gt;nrc&lt;/code&gt; lexicon, there are 3324 negative and 2312 positive terms.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_sentiments(&amp;quot;afinn&amp;quot;) %&amp;gt;% 
+  count(value)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 11 x 2
+##    value     n
+##    &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;
+##  1    -5    16
+##  2    -4    43
+##  3    -3   264
+##  4    -2   966
+##  5    -1   309
+##  6     0     1
+##  7     1   208
+##  8     2   448
+##  9     3   172
+## 10     4    45
+## 11     5     5&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;AFINN&lt;/code&gt; lexicon, the measure with regards to the severity of a term being positive or negative, rather than just treating a word as one or the other. However, we can just treat the negative measures as negative sentiments and the positive measures as positive sentiments just to get a general idea of the total number. With that in mind, we can do the following:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_sentiments(&amp;quot;afinn&amp;quot;) %&amp;gt;% 
+  select(value) %&amp;gt;% 
+  mutate(sentiment = if_else(value &amp;gt; 0, &amp;quot;positive&amp;quot;, &amp;quot;negative&amp;quot;, &amp;quot;NA&amp;quot;)) %&amp;gt;% 
+  group_by(sentiment) %&amp;gt;% 
+  summarize(sum = n()) %&amp;gt;%
+  filter(sentiment == &amp;quot;positive&amp;quot; | sentiment == &amp;quot;negative&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment   sum
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative   1599
+## 2 positive    878&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;In the &lt;code&gt;AFINN&lt;/code&gt; lexicon, there are (generally) 1599 negative and 877 positive terms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now taking a look at our data set, let’s see how our terms get tagged.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_bing %&amp;gt;% 
+  group_by(sentiment) %&amp;gt;% 
+  summarize(sum = n()) %&amp;gt;%  
+  filter(sentiment == &amp;quot;positive&amp;quot; | sentiment == &amp;quot;negative&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment   sum
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative    138
+## 2 positive    145&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;bing&lt;/code&gt; tags 134 of our terms as negative and 143 as positive.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tidy_lyrics_nsw %&amp;gt;%
+  left_join(get_sentiments(&amp;quot;nrc&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  group_by(sentiment) %&amp;gt;% 
+  summarize(sum = n()) %&amp;gt;%
+  filter(sentiment == &amp;quot;positive&amp;quot; | sentiment == &amp;quot;negative&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment   sum
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative    145
+## 2 positive    264&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, &lt;code&gt;nrc&lt;/code&gt; tags 140 of our terms as negative and 258 as positive.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;emotions_lyrics_afinn &amp;lt;- tidy_lyrics_nsw  %&amp;gt;% 
+  left_join(get_sentiments(&amp;quot;afinn&amp;quot;), by = &amp;quot;word&amp;quot;) %&amp;gt;% 
+  filter(!grepl(&amp;#39;[0-9]&amp;#39;, word))
+
+emotions_lyrics_afinn %&amp;gt;% 
+  select(value) %&amp;gt;% 
+  mutate(sentiment = if_else(value &amp;gt; 0, &amp;quot;positive&amp;quot;, &amp;quot;negative&amp;quot;, &amp;quot;NA&amp;quot;)) %&amp;gt;% 
+  group_by(sentiment) %&amp;gt;% 
+  summarize(sum = n()) %&amp;gt;%
+  filter(sentiment == &amp;quot;positive&amp;quot; | sentiment == &amp;quot;negative&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment   sum
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative    116
+## 2 positive    155&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally &lt;code&gt;AFINN&lt;/code&gt; (generally) tags 113 of our terms as negative and 153 as positive.&lt;/p&gt;
+&lt;p&gt;So you can see that the sentiments are dependent on lexicons. Is this a bad thing? Well it depends on what you are using it for.&lt;/p&gt;
+&lt;p&gt;Now let’s put all of the lexicons together and see how they compare. Note that there is a lot below which will not have a line-by-line explanation. At this point, try reading the code to figure out what is occurring. You may find this to be easier when using albums of artists that you enjoy. In any case, please ask questions if needed!&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;First we calculate &lt;strong&gt;AFINN&lt;/strong&gt; sentiment scores and compare them to the list of terms we already have.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;afinn_scores &amp;lt;- emotions_lyrics_afinn %&amp;gt;% 
+  replace_na(replace = list(value = 0)) %&amp;gt;%
+  group_by(index = album, track_title) %&amp;gt;% 
+  summarize(sentiment = sum(value)) %&amp;gt;% 
+  mutate(lexicon = &amp;quot;AFINN&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` regrouping output by &amp;#39;index&amp;#39; (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We then combine both the &lt;code&gt;bing&lt;/code&gt; and &lt;code&gt;nrc&lt;/code&gt; lexicons into one data frame and calculate the sentiment scores for each.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bing_nrc_scores &amp;lt;- bind_rows(
+  tidy_lyrics_nsw %&amp;gt;% 
+    inner_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;% 
+    mutate(lexicon = &amp;quot;Bing&amp;quot;),
+  tidy_lyrics %&amp;gt;% 
+    inner_join(get_sentiments(&amp;quot;nrc&amp;quot;) %&amp;gt;% 
+                 filter(sentiment %in% c(&amp;quot;positive&amp;quot;, &amp;quot;negative&amp;quot;))) %&amp;gt;% 
+    mutate(lexicon = &amp;quot;NRC&amp;quot;)) %&amp;gt;% 
+  # from here we count the sentiments, spread on positive/negative, 
+  # then create the final sentiment score:
+  count(lexicon, index = album, track_title, sentiment) %&amp;gt;% 
+  spread(sentiment, n, fill = 0) %&amp;gt;% 
+  mutate(lexicon = as.factor(lexicon),
+         sentiment = positive - negative)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = &amp;quot;word&amp;quot;
+## Joining, by = &amp;quot;word&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally we compile a list of all three lexicons using the &lt;code&gt;bind_rows&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all_lexicons &amp;lt;- bind_rows(afinn_scores, bing_nrc_scores) %&amp;gt;%
+  select(-negative, -positive)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Try &lt;code&gt;View(all_lexicons)&lt;/code&gt; if you want to view the resulting data frame. To make the final plot more interesting, let’s assign a palette using hex colors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lexicon_cols &amp;lt;- c(&amp;quot;AFINN&amp;quot; = &amp;quot;#ae5a41&amp;quot;, &amp;quot;NRC&amp;quot; = &amp;quot;#559e83&amp;quot;, &amp;quot;Bing&amp;quot; = &amp;quot;#1b85b8&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally we plot all of the lexicons by album and score.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all_lexicons %&amp;gt;% 
+  ggplot(aes(track_title, sentiment, fill = lexicon)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~lexicon, ncol = 1, scales = &amp;quot;free_y&amp;quot;) +
+  scale_fill_manual(values = lexicon_cols) +
+  ggtitle(&amp;quot;Comparison of Sentiments&amp;quot;, subtitle = &amp;quot;by track order&amp;quot;) +
+  labs(x = &amp;quot;Index of All Songs&amp;quot;, y = &amp;quot;Sentiment Score&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust=0.5),
+        plot.subtitle = element_text(hjust=0.5),
+        axis.text.x = element_blank()) +
+  facet_grid(lexicon ~ index, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/lesson/SentimentAnalysisIntro_files/figure-html/all_lexicons_plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well that is a lot to take in but this is essentially one way statistics can be applied! We have taken open text, broken it down into its basic terms, filtered out common terms, and used natural language processing (NLP) including various lexicons to derive sentiments.&lt;/p&gt;
+&lt;p&gt;This work is registered under the &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/3.0/us/&#34; target=&#34;_blank&#34;&gt;CC BY-NC-SA 3.0 Creative Commons License&lt;/a&gt;. Any items including, but not limited to lyrics, logos, and references associated with the Grateful Dead are licensed under  Grateful Dead Productions unless otherwise noted. All rights reserved.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;like Dark Side of the Moon by Pink Floyd or maybe that reference just dated me and you are even more confused.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Dplyr, Pipes, and the NFL</title>
       <link>/lesson/nflpipes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1674,7 +2768,7 @@ You can download a [PDF](/slides/Week 4/Slides-Week-4.pdf){target=&#34;_blank&#3
 &lt;div id=&#34;purpose&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Purpose&lt;/h2&gt;
 &lt;p&gt;What are some common things you like to do with your data? Maybe remove rows or columns, do calculations and maybe add new columns? This is called &lt;strong&gt;data wrangling&lt;/strong&gt;. It’s not data management or data manipulation: you &lt;strong&gt;keep the raw data raw&lt;/strong&gt; and do these things programatically in R with the &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;You are going to be introduced to data wrangling in R without using the base package, or “Base R.” The &lt;code&gt;tidyverse&lt;/code&gt; is a suite of packages that match a philosophy of data science developed by Hadley Wickham and the RStudio team. It is a more straight-forward way to learn R. I encourage you to take a look around the &lt;code&gt;tidyverse&lt;/code&gt; web page just to see everything it can do. You can fine it here: &lt;a href=&#34;https://www.tidyverse.org/&#34;&gt;https://www.tidyverse.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You are going to be introduced to data wrangling in R without using the base package, or “Base R.” The &lt;code&gt;tidyverse&lt;/code&gt; is a suite of packages that match a philosophy of data science developed by Hadley Wickham and the RStudio team. It is a more straight-forward way to learn R. I encourage you to take a look around the &lt;code&gt;tidyverse&lt;/code&gt; web page just to see everything it can do. You can fine it here: &lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34;&gt;https://www.tidyverse.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Now that you have had two weeks of utter frustration with “Base R”, which means, in R without using any additional packages (though we have used a bit of tidyverse), I will show you by comparison what code will look like in “Base R”. For some things, base-R is more straightforward and where tat is apparent, I will note it. Whenever we use a function that is from the &lt;code&gt;tidyverse&lt;/code&gt;, we will prefix it so you’ll know for sure.&lt;/p&gt;
 &lt;div id=&#34;objectives&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Objectives&lt;/h3&gt;
