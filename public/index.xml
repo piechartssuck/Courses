@@ -4880,28 +4880,28 @@ We set the interval at the 95% confidence level. However, no matter whether the 
 &lt;p&gt;
 For Bernie Sanders we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-s_p &amp;amp;= \sqrt{\dfrac{0.18\cdot(1-0.18)}{446}}\\
-&amp;amp;\approx 0.02
+s_p &amp;amp;= \sqrt{\dfrac{0.55\cdot(1-0.55)}{1754}}\\
+&amp;amp;\approx 0.01
 \end{align}\]&lt;/span&gt;
 and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-CI &amp;amp;= 0.18\pm 1.96\cdot0.02\\
-&amp;amp;= 0.18\pm 0.04\\
-&amp;amp;= (0.14, 0.22)
+CI &amp;amp;= 0.55\pm 1.65\cdot0.01\\
+&amp;amp;= 0.55\pm 0.02\\
+&amp;amp;= (0.53, 0.57)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.14 to 0.22&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.53 to 0.57&lt;/span&gt;.&lt;br&gt;&lt;br&gt;
 For Hillary Clinton we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-s_p &amp;amp;= \sqrt{\dfrac{0.15\cdot(1-0.15)}{522}}\\
-&amp;amp;\approx 0.02
+s_p &amp;amp;= \sqrt{\dfrac{0.38\cdot(1-0.38)}{1754}}\\
+&amp;amp;\approx 0.01
 \end{align}\]&lt;/span&gt;
 and
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-CI &amp;amp;= 0.15\pm 1.96\cdot0.02\\
-&amp;amp;= 0.15\pm 0.04\\
-&amp;amp;= (0.11, 0.19)
+CI &amp;amp;= 0.38\pm 1.65\cdot0.01\\
+&amp;amp;= 0.38\pm 0.02\\
+&amp;amp;= (0.36, 0.40)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.11 to 0.19&lt;/span&gt;.
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.36 to 0.40&lt;/span&gt;.
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;/div&gt;
