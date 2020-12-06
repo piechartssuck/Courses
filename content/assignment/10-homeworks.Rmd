@@ -63,7 +63,7 @@ Please turn both in as one task within the Submission Portal on [ecampus](https:
 <p>
 a. The estimate at the 90% confidence level is 20.87–21.13%. This means that there are 90 chances out of 100 that the confidence interval will contain the true population percentage of victims in the American population. Due to the large sample size, we converted the proportions to percentages, subtracting from 100, rather than 1.
 \begin{align}
-SE &= \sqrt{\dfrac{21\cdot(100-21)}{239541}}\\
+s_p &= \sqrt{\dfrac{21\cdot(100-21)}{239541}}\\
 &\approx 0.08
 \end{align}
 and

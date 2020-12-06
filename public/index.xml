@@ -4733,7 +4733,7 @@ li {
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The estimate at the 90% confidence level is 20.87–21.13%. This means that there are 90 chances out of 100 that the confidence interval will contain the true population percentage of victims in the American population. Due to the large sample size, we converted the proportions to percentages, subtracting from 100, rather than 1.
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-SE &amp;amp;= \sqrt{\dfrac{21\cdot(100-21)}{239541}}\\
+s_p &amp;amp;= \sqrt{\dfrac{21\cdot(100-21)}{239541}}\\
 &amp;amp;\approx 0.08
 \end{align}\]&lt;/span&gt;
 and
@@ -5081,14 +5081,14 @@ H_1:\,\pi_1&amp;lt;\pi_2
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-z &amp;amp;= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
-&amp;amp;\approx -3.50
-\end{align}\]&lt;/span&gt;
-with
-&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_{p_1-p_2} &amp;amp;=\sqrt{\dfrac{0.34\cdot(1-0.34)}{1799}+\dfrac{0.41\cdot(1-0.41)}{1001}}\\[0.5ex]
 &amp;amp;= \sqrt{0.0003664}\\
 &amp;amp;\approx 0.02
+\end{align}\]&lt;/span&gt;
+implying
+&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
+z &amp;amp;= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
+&amp;amp;\approx -3.50
 \end{align}\]&lt;/span&gt;
 yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{obt}=-3.50 &amp;lt;\alpha = 0.05\)&lt;/span&gt;&lt;/span&gt; (and less than &lt;span class=&#34;math inline&#34;&gt;\(0.0002\)&lt;/span&gt; from Appendix A). So &lt;span class=&#34;boxed&#34;&gt;the proportion of White respondents who support the tactic of bringing people of different racial backgrounds together to talk about race is lower than the proportion of Black respondents&lt;/span&gt;. The difference given by &lt;span class=&#34;math inline&#34;&gt;\(0.41-0.34\)&lt;/span&gt; is likely significant at the &lt;span class=&#34;math inline&#34;&gt;\(0.05\)&lt;/span&gt; level.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
