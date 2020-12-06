@@ -113,7 +113,7 @@ So the estimated standard error for the sampling distribution is approximately <
 
 b. For lower-class respondents, we have
 \begin{align}
-CI &= 12.19\pm 2.58\cdot0.13\\
+CI &= 12.19\pm 2.58\cdot0.30\\
 &= 12.19\pm 0.77\\
 &= (11.42, 12.96)
 \end{align}

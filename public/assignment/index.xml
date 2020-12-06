@@ -126,7 +126,7 @@ CI &amp;amp;= 13.16\pm 1.96\cdot0.13\\
 So the estimated standard error for the sampling distribution is approximately &lt;span class=&#34;boxed&#34;&gt;0.13&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;12.91 to 13.41&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For lower-class respondents, we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-CI &amp;amp;= 12.19\pm 2.58\cdot0.13\\
+CI &amp;amp;= 12.19\pm 2.58\cdot0.30\\
 &amp;amp;= 12.19\pm 0.77\\
 &amp;amp;= (11.42, 12.96)
 \end{align}\]&lt;/span&gt;
