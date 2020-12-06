@@ -4878,8 +4878,7 @@ We set the interval at the 95% confidence level. However, no matter whether the 
 &lt;details&gt;
 &lt;summary&gt;10&lt;/summary&gt;
 &lt;p&gt;
-&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;For Bernie Sanders we have
+For Bernie Sanders we have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_p &amp;amp;= \sqrt{\dfrac{0.18\cdot(1-0.18)}{446}}\\
 &amp;amp;\approx 0.02
@@ -4902,8 +4901,7 @@ CI &amp;amp;= 0.15\pm 1.96\cdot0.02\\
 &amp;amp;= 0.15\pm 0.04\\
 &amp;amp;= (0.11, 0.19)
 \end{align}\]&lt;/span&gt;
-implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.11 to 0.19&lt;/span&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+implying an estimated standard error of proportions is approximately &lt;span class=&#34;boxed&#34;&gt;0.02&lt;/span&gt; with a confidence interval between &lt;span class=&#34;boxed&#34;&gt;0.11 to 0.19&lt;/span&gt;.
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;/div&gt;
@@ -5072,7 +5070,7 @@ z &amp;amp;= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
 with
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
 s_{p_1-p_2} &amp;amp;=\sqrt{\dfrac{0.34\cdot(1-0.34)}{1799}+\dfrac{0.41\cdot(1-0.41)}{1001}}\\[0.5ex]
-&amp;amp;= \sqrt{0.0003664}
+&amp;amp;= \sqrt{0.0003664}\\
 &amp;amp;\approx 0.02
 \end{align}\]&lt;/span&gt;
 yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{obt}=-3.50 &amp;lt;\alpha = 0.05\)&lt;/span&gt;&lt;/span&gt; (and less than &lt;span class=&#34;math inline&#34;&gt;\(0.0002\)&lt;/span&gt; from Appendix A). So &lt;span class=&#34;boxed&#34;&gt;the proportion of White respondents who support the tactic of bringing people of different racial backgrounds together to talk about race is lower than the proportion of Black respondents&lt;/span&gt;. The difference given by &lt;span class=&#34;math inline&#34;&gt;\(0.41-0.34\)&lt;/span&gt; is likely significant at the &lt;span class=&#34;math inline&#34;&gt;\(0.05\)&lt;/span&gt; level.&lt;/p&gt;&lt;/li&gt;
