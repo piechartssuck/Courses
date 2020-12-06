@@ -4862,7 +4862,7 @@ implying an estimated standard error of proportions is approximately &lt;span cl
 &lt;div style=&#34;padding-left: 30px;&#34;&gt;
 &lt;p&gt;Due to the large sample size, we converted the proportion to full percentages, subtracting from 100 rather than 1.
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-SE &amp;amp;= \sqrt{\dfrac{51\cdot(100-51)}{5490}}\\
+s_p &amp;amp;= \sqrt{\dfrac{51\cdot(100-51)}{5490}}\\
 &amp;amp;\approx 0.67
 \end{align}\]&lt;/span&gt;
 and
