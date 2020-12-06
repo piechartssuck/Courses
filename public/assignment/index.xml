@@ -262,7 +262,7 @@ H_1:\,\mu_Y&amp;lt;13.5\,\,\text{years}
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-t &amp;amp;= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
+z &amp;amp;= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
 &amp;amp;\approx -4.19
 \end{align}\]&lt;/span&gt;
 yielding that &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; value, or &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} = -4.19\)&lt;/span&gt;. The &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-value for this &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} &amp;lt; 0.001\)&lt;/span&gt; for a one-tailed test where &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.01\)&lt;/span&gt;. Since &lt;span class=&#34;math inline&#34;&gt;\(z_{obt} &amp;lt; 0.001\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0.001 &amp;lt; \alpha\)&lt;/span&gt;, we &lt;span class=&#34;boxed&#34;&gt;reject &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;

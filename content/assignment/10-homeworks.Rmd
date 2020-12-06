@@ -248,7 +248,7 @@ H_1:\,\mu_Y<13.5\,\,\text{years}
 
 b. We have 
 \begin{align}
-t &= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
+z &= \dfrac{10.9-13.5}{7.6/\sqrt{150}}\\[0.5ex]
 &\approx -4.19
 \end{align}
 yielding that $z$ value, or $z_{obt} = -4.19$. The $p$-value for this $z_{obt} < 0.001$ for a one-tailed test where $\alpha = 0.01$. Since $z_{obt} < 0.001$ and $0.001 < \alpha$, we <span class="boxed">reject $H_0$ and can likely assume that the doctors at the HMO do have less experience than the population of doctors at all HMOs.</span> 
@@ -345,14 +345,14 @@ H_1:\,\pi_1<\pi_2
 
 b. We have 
 \begin{align}
-z &= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
-&\approx -3.50
-\end{align}
-with
-\begin{align}
 s_{p_1-p_2} &=\sqrt{\dfrac{0.34\cdot(1-0.34)}{1799}+\dfrac{0.41\cdot(1-0.41)}{1001}}\\[0.5ex]
 &= \sqrt{0.0003664}\\
 &\approx 0.02
+\end{align}
+implying
+\begin{align}
+z &= \dfrac{0.34-0.41}{0.02}\\[0.5ex]
+&\approx -3.50
 \end{align}
 yielding that <span class="boxed">$z_{obt}=-3.50 <\alpha = 0.05$</span> (and less than $0.0002$ from Appendix A). So <span class="boxed">the proportion of White respondents who support the tactic of bringing people of different racial backgrounds together to talk about race is lower than the proportion of Black respondents</span>. The difference given by $0.41-0.34$ is likely significant at the $0.05$ level.
 </p>
