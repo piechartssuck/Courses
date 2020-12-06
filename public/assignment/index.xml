@@ -431,10 +431,10 @@ H_1:\,\mu\neq 37.8
 \end{align}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have
 &lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-z &amp;amp;= \dfrac{48.69-37.80}{17.99/\sqrt{1495}}\\[0.5ex]
+t &amp;amp;= \dfrac{48.69-37.80}{17.99/\sqrt{1495}}\\[0.5ex]
 &amp;amp;\approx 23.17
 \end{align}\]&lt;/span&gt;
-yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(z_{obt}=23.17\)&lt;/span&gt;&lt;/span&gt; with &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(p &amp;lt; 0.001\)&lt;/span&gt;&lt;/span&gt; (and is greater than &lt;span class=&#34;math inline&#34;&gt;\(3.291\)&lt;/span&gt; from Appendix B).&lt;/p&gt;&lt;/li&gt;
+yielding that &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(t_{obt}=23.17\)&lt;/span&gt;&lt;/span&gt; with &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(p &amp;lt; 0.001\)&lt;/span&gt;&lt;/span&gt; (and is greater than &lt;span class=&#34;math inline&#34;&gt;\(3.291\)&lt;/span&gt; from Appendix B).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We can say that &lt;span class=&#34;math inline&#34;&gt;\(H_0\)&lt;/span&gt; should likely be rejected in favor of the &lt;span class=&#34;math inline&#34;&gt;\(H_1\)&lt;/span&gt;. So &lt;span class=&#34;boxed&#34;&gt;there is a difference between the mean age of the GSS sample and the mean age of all American adults&lt;/span&gt;. Relative to age, the GSS sample is not representative of all American adults (the GSS sample is significantly older).&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/p&gt;

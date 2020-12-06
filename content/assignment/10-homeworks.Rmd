@@ -351,10 +351,10 @@ H_1:\,\mu\neq 37.8
 
 b. We have 
 \begin{align}
-z &= \dfrac{48.69-37.80}{17.99/\sqrt{1495}}\\[0.5ex]
+t &= \dfrac{48.69-37.80}{17.99/\sqrt{1495}}\\[0.5ex]
 &\approx 23.17
 \end{align}
-yielding that <span class="boxed">$z_{obt}=23.17$</span> with <span class="boxed">$p < 0.001$</span> (and is greater than $3.291$ from Appendix B). 
+yielding that <span class="boxed">$t_{obt}=23.17$</span> with <span class="boxed">$p < 0.001$</span> (and is greater than $3.291$ from Appendix B). 
 
 c. We can say that $H_0$ should likely be rejected in favor of the $H_1$. So <span class="boxed">there is a difference between the mean age of the GSS sample and the mean age of all American adults</span>. Relative to age, the GSS sample is not representative of all American adults (the GSS sample is significantly older). 
 
