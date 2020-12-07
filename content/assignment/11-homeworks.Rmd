@@ -181,7 +181,7 @@ a. We have $$\dfrac{703}{766}\approx 0.9177$$ or about <span class="boxed">$91.8
 
 b. <span class="boxed">14</span>.
 
-c. We have $$4 + \dfrac{19}{384}\approx 4.0495$$ or about <span class="boxed">$4.05$%</span>.
+c. There are a total of $187+197=384$ individuals in this class. Of those, there are $4+19=23$ that feel discriminated against. So we have $$\dfrac{23}{384}\approx 0.0599$$ or about <span class="boxed">$5.99$%</span>.
 
 d. <span class="boxed">There appears to be a relationship between age and feeling of age discrimination</span>. $8.2$% of all respondents felt discriminated against because of their age. However, those between 18 and 29 were more likely to feel discriminated against because of their age than any other age category represented in the cross-tabulation.
 ```{r, echo=FALSE, eval=TRUE}
