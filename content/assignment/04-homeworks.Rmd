@@ -35,6 +35,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 2.5em;
+}
 </style>
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
@@ -124,7 +128,6 @@ a. The range of convictions in
 
 - 2010 is given by $397 – 108 =$ <span class="boxed">$289$</span>.
 - 2015 is given by $402 – 97 =$ <span class="boxed">$305$</span>.
-
 Therefore the range of conviction in <span class="boxed">2015 is larger</span>.
 
 b. The mean number in **2010** across all levels of government was

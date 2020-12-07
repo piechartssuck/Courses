@@ -139,7 +139,7 @@ E_1 &= 6084 – 3111\\
 b. For 
 - White offenders, we could make <span class="boxed">373 errors</span>
 - Black offenders, we could make <span class="boxed">493 errors</span>
-- Other offenders, we would make <span class="boxed">42 errors</span> given $E_2 = 9084$. 
+- Other offenders, we would make <span class="boxed">42 errors</span> given $E_2 = 908$. 
 
 c.	The proportional reduction in error is then 
 \begin{align}

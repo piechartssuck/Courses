@@ -5687,7 +5687,7 @@ E_1 &amp;amp;= 6084 – 3111\\
 &lt;ul&gt;
 &lt;li&gt;White offenders, we could make &lt;span class=&#34;boxed&#34;&gt;373 errors&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;Black offenders, we could make &lt;span class=&#34;boxed&#34;&gt;493 errors&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Other offenders, we would make &lt;span class=&#34;boxed&#34;&gt;42 errors&lt;/span&gt; given &lt;span class=&#34;math inline&#34;&gt;\(E_2 = 9084\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Other offenders, we would make &lt;span class=&#34;boxed&#34;&gt;42 errors&lt;/span&gt; given &lt;span class=&#34;math inline&#34;&gt;\(E_2 = 908\)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;The proportional reduction in error is then
@@ -7116,6 +7116,10 @@ th, td { padding: 5px;
 
 tr:nth-child(even) { background: #ffffff; 
 }
+
+li {
+    margin-left: 2.5em;
+}
 &lt;/style&gt;
 &lt;div id=&#34;week-4-problem-set&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Week 4 Problem Set&lt;/h3&gt;
@@ -7282,9 +7286,9 @@ So &lt;span class=&#34;boxed&#34;&gt;both IQRs provide the same groups of cases&
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;2010 is given by &lt;span class=&#34;math inline&#34;&gt;\(397 – 108 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(289\)&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;2015 is given by &lt;span class=&#34;math inline&#34;&gt;\(402 – 97 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(305\)&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;2015 is given by &lt;span class=&#34;math inline&#34;&gt;\(402 – 97 =\)&lt;/span&gt; &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(305\)&lt;/span&gt;&lt;/span&gt;.
+Therefore the range of conviction in &lt;span class=&#34;boxed&#34;&gt;2015 is larger&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Therefore the range of conviction in &lt;span class=&#34;boxed&#34;&gt;2015 is larger&lt;/span&gt;.&lt;/p&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;p&gt;The mean number in &lt;strong&gt;2010&lt;/strong&gt; across all levels of government was&lt;/p&gt;
 &lt;span class=&#34;math display&#34;&gt;\[\begin{aligned}
