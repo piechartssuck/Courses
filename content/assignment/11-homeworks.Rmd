@@ -111,7 +111,7 @@ walking2 %>%
 
 <details><summary>3</summary>
 <p>
-a. Based on the student’s argument, <span class="boxed">the *independent variable* is race</span>< and <span class="boxed">the *dependent variable* is home ownership</span>.
+a. Based on the student’s argument, <span class="boxed">the *independent variable* is race</span> and <span class="boxed">the *dependent variable* is home ownership</span>.
 
 b. We have $$\dfrac{539}{857} \approx 0.6289$$ or about <span class="boxed">$63$%</span>.
 

@@ -611,7 +611,7 @@ tr:nth-child(even) { background: #ffffff;
 &lt;summary&gt;3&lt;/summary&gt;
 &lt;p&gt;
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;&lt;p&gt;Based on the student’s argument, &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;independent variable&lt;/em&gt; is race&lt;/span&gt;&amp;lt; and &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;dependent variable&lt;/em&gt; is home ownership&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Based on the student’s argument, &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;independent variable&lt;/em&gt; is race&lt;/span&gt; and &lt;span class=&#34;boxed&#34;&gt;the &lt;em&gt;dependent variable&lt;/em&gt; is home ownership&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;We have &lt;span class=&#34;math display&#34;&gt;\[\dfrac{539}{857} \approx 0.6289\]&lt;/span&gt; or about &lt;span class=&#34;boxed&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(63\)&lt;/span&gt;%&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class=&#34;boxed&#34;&gt;There appears to be a relationship between race and home ownership&lt;/span&gt;. While &lt;span class=&#34;math inline&#34;&gt;\(63\)&lt;/span&gt;% of those surveyed report owning a home, far less Black respondents report such (&lt;span class=&#34;math inline&#34;&gt;\(41.3\)&lt;/span&gt;%) than White respondents (&lt;span class=&#34;math inline&#34;&gt;\(67.7\)&lt;/span&gt;%). Furthermore, &lt;span class=&#34;math inline&#34;&gt;\(58.7\)&lt;/span&gt;% of Black respondents rent as compared to &lt;span class=&#34;math inline&#34;&gt;\(32.3\)&lt;/span&gt;% of White respondents.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
