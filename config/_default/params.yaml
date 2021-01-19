@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "A simple course centering on survey design, development, and analysis with a focus on aesthetics."
+description: "An introductory course for all things program evaluation."
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/piechartssuck/Courses/edp619'
+  repo_url: 'https://github.com/piechartssuck/Courses/edp617'
   content_dir: ''
   repo_branch: master
   editable:
@@ -92,15 +92,15 @@ edit_page:
 author: Abhik Roy
 
 course:
-  number: "EDP 619"
-  semester: "Fall 2020"
-  days: "Forever (for the next 13 weeks)"
+  number: "EDP 617"
+  semester: "Spring 2021"
+  days: "Forever (for the next 15 weeks)"
   time: "You pick!"
   location: "Online"
-  dates: "August 19 - December 4"
-  github: piechartssuck/Courses/tree/edp619
-  copyrightYear: "2020"
-  slack: "https://2020edp619.slack.com"
+  dates: "January 19 - May 8"
+  github: piechartssuck/Courses/tree/edp617
+  copyrightYear: "2021"
+  slack: "https://2021edp617.slack.com"
 
 instructor:
   name: Dr. Abhik Roy
@@ -110,12 +110,12 @@ instructor:
   github: piechartssuck
   office: "Allen Hall 504O"
   contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
+    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is still omewhat chaotic at this time!
   appointment_url: "https://calendly.com/nopiecharts/short30"
 
 school:
   name: Counseling & Learning Sciences
-  url: "https://lshd.wvu.edu/"
+  url: "https://counselingandlearningsci.wvu.edu/"
 
 university:
   name: West Virginia University

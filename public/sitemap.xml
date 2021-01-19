@@ -28,27 +28,7 @@
   </url>
   
   <url>
-    <loc>/assignment/datacamp-assignment/</loc>
-  </url>
-  
-  <url>
     <loc>/due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/10-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/11-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/13-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/01-assignment/</loc>
   </url>
   
   <url>
@@ -60,6 +40,10 @@
   </url>
   
   <url>
+    <loc>/assignment/01-assignment/</loc>
+  </url>
+  
+  <url>
     <loc>/lesson/01-lesson/</loc>
   </url>
   
@@ -68,175 +52,11 @@
   </url>
   
   <url>
-    <loc>/due/02-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/03-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/03-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/04-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/05-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/05-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/06-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/06-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/07-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/07-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/08-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/08-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/due/09-due/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/09-example/</loc>
-  </url>
-  
-  <url>
     <loc>/resource/data/</loc>
   </url>
   
   <url>
-    <loc>/lesson/10-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/11-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/11-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/11-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/13-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/02-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/02-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/02-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/03-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/03-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/03-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/04-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/04-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/05-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/05-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/06-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/06-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/06-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/07-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/07-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/07-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/08-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/08-readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/09-assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/09-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/09-readings/</loc>
-  </url>
-  
-  <url>
     <loc>/resource/design/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/11-example/</loc>
   </url>
   
   <url>

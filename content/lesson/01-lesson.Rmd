@@ -1,6 +1,6 @@
 ---
-title: "Getting Familiar with the Course"
-linktitle: "Week 1: Getting Familiar with the Course"
+title: "Who Are You Really?"
+linktitle: "Week 1: Who Are You Really?"
 output:
   blogdown::html_page:
     toc: true
@@ -13,9 +13,11 @@ weight: 1
 editor_options: 
   chunk_output_type: console
 ---
+## First Timers Note
+You'll see class related task materials posted here on a weekly basis. 
 
-### Data Camp
-The purpose of these modules is not have you become a programmer! Rather these lay a foundation for a common language and software we'll be using. Some are better than others and some are more technical than others as well. Just remember, this is not a programming class! Falling behind on these can make some material we cover in the course inaccessible. If you get stuck, please ask me for help, search the Internet or move on! 
+## Jane Davidson's Helpful Website
+Dr. Davidson is the author of the primary textbook in the course. She is an accomplished evaluator who has generally created a large impact within the field and has a [website](https://www.betterevaluation.org){target="_blank"} dedicated to the practice of evaluation full of resources. While not mandated, you may want to look around and bookmark the site.
 
-If you are feeling ambitious, please go ahead and start the first module covering the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. There is a lot on there and please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks. 
+
 

@@ -2,98 +2,119 @@ lessons:
   - title: '<span class="fake-header-table">Concentration</span>'
     header: True
 
-  - title: 'Getting Familar with the Course'
+  - title: 'Who Are You Really?'
     session: 1
-    date: "August 23, 2020"
+    date: "Jan 19, 2020"
     readings: "01-readings"
     lesson: "01-lesson"
     assignment: "01-assignment"
     due: "01-due"
 
-  - title: 'An Introduction to Surveys'
-    session: 2
-    date: "August 30, 2020"
-    readings: "02-readings"
-    lesson: "02-lesson"
-    assignment: "02-assignment"
-    due: "02-due"
+  #
+  # - title: 'Rethinking the Way You Think'
+  #   session: 2
+  #   date: "August 30, 2020"
+  #   readings: "02-readings"
+  #   lesson: "02-lesson"
+  #   assignment: "02-assignment"
+  #   due: "02-due"
+  #
+  # - title: 'Aims, Scope and Sequencing'
+  #   session: 3
+  #   date: "September 6, 2020"
+  #   readings: "03-readings"
+  #   lesson: "03-lesson"
+  #   example: "03-example"
+  #   assignment: "03-assignment"
+  #   due: "03-due"
+  #
+  # - title: 'Causation and Criteria'
+  #   session: 4
+  #   date: "September 13, 2020"
+  #   readings: "04-readings"
+  #   lesson: "04-lesson"
+  #   example: "04-example"
+  #   due: "04-due"
+  #
+  # - title: 'Valuable Valued Values'
+  #   session: 5
+  #   date: "September 20, 2020"
+  #   readings: "05-readings"
+  #   lesson: "05-lesson"
+  #   example: "05-example"
+  #   assignment: "05-assignment"
+  #   due: "05-due"
+  #
+  # - title: 'The Importance of Knowing What's Important'
+  #   session: 6
+  #   date: "September 27, 2020"
+  #   readings: "06-readings"
+  #   lesson: "06-lesson"
+  #   example: "06-example"
+  #   assignment: "06-assignment"
+  #   due: "06-due"
+  #
+  # - title: 'Making Sense Even if You Have Some Nonsense'
+  #   session: 7
+  #   date: "October 4, 2020"
+  #   readings: "07-readings"
+  #   lesson: "07-lesson"
+  #   example: "07-example"
+  #   due: "07-due"
+  #
+  # - title: 'Who Evaluates the Evaluators?'
+  #   session: 8
+  #   date: "October 11, 2020"
+  #   readings: "08-readings"
+  #   lesson: "08-lesson"
+  #   due: "08-due"
+  #
+  # - title: 'Who's Side Are You on Anyway?'
+  #   session: 9
+  #   date: "October 18, 2020"
+  #   readings: "09-readings"
+  #   lesson: "09-lesson"
+  #   example: "09-example"
+  #   assignment: "09-assignment"
+  #   due: "09-due"
+  #
+  # - title: 'Thinking About Mixing Your Methods Up'
+  #   session: 10
+  #   date: "October 25, 2020"
+  #   lesson: "10-lesson"
+  #   due: "10-due"
+  #
+  # - title: 'Wrangling Data'
+  #   session: 11
+  #   date: "November 1, 2020"
+  #   readings: "11-readings"
+  #   lesson: "11-lesson"
+  #   example: "11-example"
+  #   assignment: "11-assignment"
+  #   due: "11-due"
+  #
+  # - title: 'Cross-Examinations'
+  #   session: 12
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Tuning Instruments'
+  #   session: 13
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Finals'
+  #   session: 14
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Presentations'
+  #   session: 15
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
 
-  - title: 'Covering the Population and Selecting Who to Survey'
-    session: 3
-    date: "September 6, 2020"
-    readings: "03-readings"
-    lesson: "03-lesson"
-    example: "03-example"
-    assignment: "03-assignment"
-    due: "03-due"
-
-  - title: 'The Fundamentals of Writing Questions'
-    session: 4
-    date: "September 13, 2020"
-    readings: "04-readings"
-    lesson: "04-lesson"
-    example: "04-example"
-    due: "04-due"
-
-  - title: 'How to Write Open- and Closed-Ended Questions'
-    session: 5
-    date: "September 20, 2020"
-    readings: "05-readings"
-    lesson: "05-lesson"
-    example: "05-example"
-    assignment: "05-assignment"
-    due: "05-due"
-
-  - title: 'Aural Versus Visual Design of Questions and Questionnaires'
-    session: 6
-    date: "September 27, 2020"
-    readings: "06-readings"
-    lesson: "06-lesson"
-    example: "06-example"
-    assignment: "06-assignment"
-    due: "06-due"
-
-  - title: 'Ordering Questions and Testing for Question Order Effects'
-    session: 7
-    date: "October 4, 2020"
-    readings: "07-readings"
-    lesson: "07-lesson"
-    example: "07-example"
-    due: "07-due"
-
-  - title: 'Ordering Questions and Testing for Question Order Effects'
-    session: 8
-    date: "October 11, 2020"
-    readings: "08-readings"
-    lesson: "08-lesson"
-    due: "08-due"
-
-  - title: 'Getting to Know the Complex Sample Design'
-    session: 9
-    date: "October 18, 2020"
-    readings: "09-readings"
-    lesson: "09-lesson"
-    example: "09-example"
-    assignment: "09-assignment"
-    due: "09-due"
-
-  - title: 'A Bit More on Categorical Data'
-    session: 10
-    date: "October 25, 2020"
-    lesson: "10-lesson"
-    due: "10-due"
-
-  - title: 'Coding and Recoding Scaled Items'
-    session: 11
-    date: "November 1, 2020"
-    readings: "11-readings"
-    lesson: "11-lesson"
-    example: "11-example"
-    assignment: "11-assignment"
-    due: "11-due"
-
-  - title: 'Survey Results'
-    session: 13
-    date: "November 22, 2020"
-    assignment: "13-assignment"
-    due: "13-due"
+# command + /

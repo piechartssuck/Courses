@@ -27,7 +27,7 @@ main:
     url: /professor/
     weight: 9
   - name: '<i class="fab fa-slack"></i>'
-    url: "https://2020edp619.slack.com"
+    url: "https://2021edp617.slack.com"
     weight: 10
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://rstudio.cloud/"
@@ -58,22 +58,16 @@ assignment:
     weight: 1
   - name: Weekly Tasks
     weight: 2
-  - name: Data Camp
+  - name: Evaluation Prospectus
     weight: 3
-  - name: Data Tasks
+  - name: Needs Assessment
     weight: 4
-  - name: Selecting a Population
+  - name: Evaluation Proposal
     weight: 5
-  - name: Survey Draft
+  - name: Final Report
     weight: 6
-  - name: Pilot Study Ledger
-    weight: 7
-  - name: Final Survey and Skeleton
-    weight: 8
-  - name: Survey Report
-    weight: 9
   - name: Presentation of Results
-    weight: 10
+    weight: 7
 resource:
   - name: Resources
     weight: 1

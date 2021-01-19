@@ -1,6 +1,6 @@
-git@github.com: baseurl: https://edp619.theoreticalphysed.com/
+git@github.com: baseurl: https://ed617.theoreticalphysed.com/
 defaultContentLanguage: en
-title: "EDP 619"
+title: "EDP 617"
 theme: hugo-academic
 
 

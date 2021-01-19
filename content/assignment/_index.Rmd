@@ -11,57 +11,60 @@ output:
     toc: true
 ---
 
-Foremost please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given within the description of each assignment.
+This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each assignment.
 
 ## Keeping Up
 
 There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
 
 1. Engaging with the readings and materials;
-2. Following all R related materials and using the software to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis;
-3. Putting in a good faithed effort but also asking for help when needed; 
-4. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+2. Putting in a good faith effort but also asking for help when needed; 
+3. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
 
+## Evaluation Workgroups
+You will need to form 2 - 4 member support and project groups. There will be a discussion board where you can discuss available times in your schedules for group chats and there will be a group signup tool in Slack^[Available starting week 2 of the course]. Once you have completed sign up, Slack will automatically privatize your group. 
 
-## Lessons
+## General Course Makeup
 
-Most class sessions have [interactive lessons](/lesson/) via [Data Camp](https://www.datacamp.com/). Your task is simply to go through these. 
+### Weekly Postings
+I will create discussion boards for a variety of purposes including discussing general course questions / logistics, getting to know each other, getting organized into groups, discussing each assignment, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. The Slack site will include an assignments section organized by week. Within each week, I will post a description of everything you should complete for that week, including discussion board postings, chat room prompts and scaffolding, readings, and assignments as applicable. In addition to working together in the chat rooms, these groups will also do presentations and an evaluation project together. All members must contribute to all of these activities equitably; all members will receive the same grade on all group assignments. If any challenges or contention arise among group members, please let me know immediately so I can address the issue appropriately.  
 
-I will grade these short exercises using a check system:
-
-- ✔+: (*11.5 points (115%) in gradebook*) Modules are 100% completed. Every task was attempted and answered, and most answers are correct. These are not earned often.
-- ✔: (*10 points (100%) in gradebook*) Modules are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
-- ✔−: (*5 points (50%) in gradebook*) Modules are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
-
-Otherwise *0 points (0%) in gradebook*.
-
-
-## Exercises
-
-Some classes also have [fully annotated examples](/example/) of CSS, HTML, Javascript or R code that teach and demonstrate how to do specific tasks in R we cover here or elsewhere and on [Data Camp](https://www.datacamp.com/){target="_blank"}. Your task will be to submit a materials to show that these have been applied.
-
-I will grade these short exercises using a check system:
-
-- ✔+: (*11.5 points (115%) in gradebook*) Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document are clean and easy to follow. This indicates that your work is exceptional. These are not earned often.
-- ✔: (*10 points (100%) in gradebook*) Exercises are 70–99% complete and most answers are correct or on point. This is the expected level of performance.
-- ✔−: (*5 points (50%) in gradebook*) Exercises are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.
-
-Again, I am not grading your coding ability, checking each line of code or syntax to make sure it produces the exact output, and most importantly, I am not looking for perfection! Try hard, get frustrated, do good work and you'll get a ✓ or even a ✔+.
-
-I encourage you to work together on the courses if possible, but you must turn in your own work on [eCampus](https://ecampus.wvu.edu){target="_blank"}.
+These postings will be graded using a check system:
+  
+  - ✔+: (*11.5 points (115%) in gradebook*) Postings address a topic area completely and arguments are exceptional with plenty of justifications. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Postings mostly address a topic area completely and/or arguments are on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Postings generally fail to address a topic area completely and/or arguments are on off-point This is the expected level of performance. This indicates that you need to improve next time. Hopefully people will not earn this often.
 
 Otherwise *0 points (0%) in gradebook*.
 
-## Final Task
+### Synchronous Meetings
+There are two types of meetings in this class: *ongoing* and *check-in*. Please see the details below for an explanation of each.
 
-At the end of the course, you will demonstrate your survey skills by completing a final report and presentation. Complete details for this will be posted here soon. To preview, you will need to document the processes reralted to survey planning, design, piloting, distribution, data collection, analysis, and reporting.
+#### Ongoing
+You will need to meet weekly in the chat room to discuss your understanding, questions, and challenges with the readings, upcoming assignments, etc. I will provide prompts and scaffolding for your discussions. A one page summary consisting of who attended the meeting, content and general synopsis must submitted to eCampus unless otherwise noted.
 
-The project will ***not*** be graded using a check system. If you've engaged with the course content and completed the exercises and other course items throughout the course, you should do just fine with the course task.
+#### Check-in
+We will need to meet at least six (6) times over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to serve as a mentor during your evaluation but that requires you to ask questions and be up to date on the course material. I will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
 
-<hr />
+### Evaluation Deliverables
+There are four primary deliverables in the course - 
 
-## A Note About Discussion Board Postings
+#### Evaluation Prospectus
+A general list and brief descriptions of possible programs to evaluate.
 
-While you may like or even love them, I hate discussion board posts. I hated them as a graduate student and still hate them as a professor. I recently made the decision to never use discussion board posts again for many reasons which are not useful to discuss here.
+#### Needs Assessment
+After identifying a program, your group will be tasked to conduct at least one interview and/or focus group using an approved medium of the primary stakeholder(s) and/or sponsor(s). 
 
-I always prefer face to face or at least conferencing if needed. With that said, we have Zoom and a [Slack channel](https:/2020edp613.slack.com) so please use both! 
+#### Evaluation Proposal
+A full proposal of the anticipated evaluation framework including a discussion of the program, its needs, and intended approach/methods.
+
+#### Final Report
+A stakeholder or sponsor oriented report of the full evaluation process written to be accessible and appropriate for the intended audience.  
+
+Depending on the program you evaluate and on how you end up conceptualizing your evaluation study, these assignments may be modified in order to make them more meaningful and applicable to your needs and interests. Further details may be found the individual task documents. Never hesitate to discuss any issues you have relative to the assignments with me. More about these task will be posted in the following weeks. 
+
+### Presentation of Results
+This task will involve your group presenting on your evaluation. This will be your way of teaching the class about the program your group chose to evaluate and what you learned from conducting your evaluation project.
+
+### Need Help?
+I always prefer a face to face meeting if possible. With that said, we have Zoom and a [Slack channel](https:/2021edp617.slack.com){target="_blank"} let's meet if you need help! 

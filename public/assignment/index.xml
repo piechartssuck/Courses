@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Assignments | Survey Research Methods</title>
+    <title>About the Assignments | Program Evaluation</title>
     <link>/assignment/</link>
       <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
@@ -13,373 +13,53 @@
     </image>
     
     <item>
-      <title>What is a Data Camp?</title>
-      <link>/assignment/datacamp-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/datacamp-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;You can find information pertaining to Data Camp by heading over to &lt;a href=&#34;/lesson/&#34;&gt;lessons page&lt;/a&gt;. To simply get to Data Camp site, please click on their logo below to go to their sign in page (or directly to the modules if you are already signed in):&lt;/p&gt;
-&lt;center&gt;
-&lt;a href=&#34;https://www.datacamp.com/users/sign_in&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/logos/datacamp.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Data Camp Logo&#34; /&gt;&lt;/a&gt;
-&lt;/center&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Familiar with the Course</title>
+      <title>Who Are You Really?</title>
       <link>/assignment/01-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/assignment/01-assignment/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mulling-bad-survey-questions&#34;&gt;Mulling Bad Survey Questions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#verify-qualtrics-account-login&#34;&gt;Verify Qualtrics Account Login&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#drawing-evaluations&#34;&gt;Drawing Evaluations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Timers Note&lt;/h2&gt;
+&lt;p&gt;You’ll see class related tasks posted here on a weekly basis.&lt;/p&gt;
 &lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
 &lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Go to the course &lt;a href=&#34;2020edp619.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Go to the course &lt;a href=&#34;2021edp617.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
 &lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
 &lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
 &lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization in the Spring to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization this term to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&#34;mulling-bad-survey-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Mulling Bad Survey Questions&lt;/h3&gt;
-This week you have nothing to turn in but there is still something to do! First think about what constitutes a bad survey question like the one below
-&lt;center&gt;
-&lt;img src=&#34;/img/examples/Week1.png&#34; title=&#34;fig:&#34; style=&#34;width:50.0%&#34; alt=&#34;Terrible Item&#34; /&gt;
-&lt;/center&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Now download the &lt;a href=&#34;/files/Week1/Bad_Questions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions&lt;/a&gt; document.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka &lt;strong&gt;response errors&lt;/strong&gt; and/or &lt;strong&gt;item errors&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;I will post solutions of what may be the most egregious errors next week.&lt;/em&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
-&lt;p&gt;Go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible. We will be working with Qualtrics very soon!&lt;br&gt;
-:::&lt;/p&gt;
+&lt;p&gt;You may end up using a survey in this course so its a good idea to go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible.&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Coding and Recoding Scaled Items</title>
-      <link>/assignment/11-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/11-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#plan-of-analysis&#34;&gt;Plan of Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;plan-of-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Plan of Analysis&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, design, pilot, distribute, &lt;strong&gt;analyze&lt;/strong&gt; and report on a survey from start to finish. The material below is highly recommended, especially for those who do not have a great deal of experience administering surveys as a primary investigator (PI).&lt;/p&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Process&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Take this week to think and finalize a plan for analysis. Remember that different types if questions require different types of analyses If you would like to discuss, simply send a request over Slack or email and I will be happy to meet.&lt;/li&gt;
-&lt;li&gt;Keep a detailed record of the types of analyses.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;Please note you DO NOT have to turn this in as a separate task. However it will need to be integrated into your final report and presentation as well.&lt;/em&gt;
-:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Survey Results</title>
-      <link>/assignment/13-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/13-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#dissementation-of-results&#34;&gt;Dissementation of Results&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;dissementation-of-results&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Dissementation of Results&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, design, pilot, distribute, analyze and &lt;strong&gt;report&lt;/strong&gt; on a survey from start to finish. In this session, there are two For the report, you are tasked to&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create an executive summary&lt;/li&gt;
-&lt;li&gt;Present your results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Process&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Reporting&lt;/strong&gt;: The reporting phase can be conducted using one of two approaches.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Template&lt;/em&gt;. You may use the &lt;a href=&#34;/projects/ReportTemplate.docx&#34;&gt;survey reporting template&lt;/a&gt; to report your findings&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Negotiation&lt;/em&gt;. If you have a reason to report results outside of this course (e.g. dissertations, evaluations, theses, etc.), then please contact me via email with a description of how you will be reporting the results.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt;: There is no formal outline to this deliverable&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Slideshow&lt;/strong&gt;. If you choose a traditional slideshow route, your presentation must adhere to the following stipulations:
-&lt;ul&gt;
-&lt;li&gt;Must be 5-7 minutes (+/- one minute) in length;&lt;/li&gt;
-&lt;li&gt;Fully narrated with detailed audio on each slide;&lt;/li&gt;
-&lt;li&gt;Figures must be included to support your narrative;&lt;/li&gt;
-&lt;li&gt;In an accessible format (e.g. PowerPoint, YouTube, HTML); and&lt;/li&gt;
-&lt;li&gt;Summarize your report.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Other Formats&lt;/strong&gt;. If you would like to explore an alternate format, please contact me and include a brief synopsis.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;These will need to be submitted as separate tasks on eCampus by December 8, 2020.&lt;/em&gt;
+&lt;div id=&#34;drawing-evaluations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Drawing Evaluations&lt;/h3&gt;
+&lt;p&gt;Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a post describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to “Evaluation”. If you drew a picture, scan your picture and attach it to your post. Post on the “Pictures of Evaluation” discussion board on Slack.
 :::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Highly recommended for those who do not have a purpose for conducting a survey beyond the scope of this course or for those who do not have any experience in the reporting of results.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;In the circumstances where a presentation is not allowable (e.g. embargos, ongoing research, protected groups, etc.), please contact me via email&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An Introduction to Surveys</title>
-      <link>/assignment/02-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#mulling-bad-survey-questions-solutions&#34;&gt;Mulling Bad Survey Questions Solutions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#qualtrics&#34;&gt;Qualtrics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;mulling-bad-survey-questions-solutions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Mulling Bad Survey Questions Solutions&lt;/h3&gt;
-&lt;p&gt;To follow up from last week, look over the possible solutions to the &lt;a href=&#34;/files/Week%202/Bad_Questions_Solutions.docx&#34; target=&#34;_blank&#34;&gt;Bad Questions document&lt;/a&gt;. If you found something that you disagree with or believe you’ve found a more egregious error, drop me a line.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;qualtrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Qualtrics&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Download the following:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/An_Introduction_to_Qualtrics.pdf&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics: An Introduction&lt;/a&gt; guide to doing basic things in Qualtrics.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%202/Exploratory_Survey_Design_Template.docx&#34; target=&#34;_blank&#34;&gt;Exploratory Draft Survey Design Template&lt;/a&gt; guide to doing the basics in Qualtrics.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Head over to &lt;a href=&#34;https://basecamp.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics XM basecamp&lt;/a&gt; and follow the directions in the walkthrough below to navigate to find some needed training videos
-&lt;center&gt;
-&lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;/videos/Qualtrics_Basecamp_Login.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
-&lt;/center&gt;&lt;/li&gt;
-&lt;li&gt;Think about an ideal group you would like to survey and what you would survey them about. I don’t care if they are real or imaginary - it doesn’t really matter.&lt;/li&gt;
-&lt;li&gt;Using the Exploratory Draft Survey Design Template, create a ten item survey in &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; following the guidelines provided in the document.&lt;/li&gt;
-&lt;li&gt;Follow the steps below to share your draft with me by typing in &lt;code&gt;aroy3#wvu&lt;/code&gt; in the appropriate field in lieu of the name shown in the video. Finally please select all of the items in the Collaboration menu.
-&lt;center&gt;
-&lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-&lt;source src=&#34;/videos/Qualtrics Collaboration.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
-&lt;/center&gt;
-After you have determined a sample and what you would like to assess, think about which items you think at this point in the term would be most appropriate in eliciting the best responses. Next week we’ll be addressing the structure of those individual items, and you will be asked to compare yours against established guidelines culminating in the submission of short assessment narratives on each.&lt;br&gt;
-:::&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Covering the Population and Selecting Who to Survey</title>
-      <link>/assignment/03-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/03-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#planning-selecting-a-population&#34;&gt;Planning: Selecting a Population&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;planning-selecting-a-population&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Planning: Selecting a Population&lt;/h3&gt;
-&lt;p&gt;In this class, you will &lt;strong&gt;plan&lt;/strong&gt;, design, pilot, distribute, analyze and report on a survey from start to finish. In this first step, consider an accessible population of people you would like to survey. While you’re not stuck with your choice, think hard about this because. Moving on to any stage beyond planning can mean hours if not days or weeks of work wasted.&lt;/p&gt;
-&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Submit&lt;/h4&gt;
-&lt;p&gt;A one to three page assessment&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of your target population including descriptions of the&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;population itself;&lt;/li&gt;
-&lt;li&gt;need for a survey;&lt;/li&gt;
-&lt;li&gt;type of sampling methodology and a justification(s);&lt;/li&gt;
-&lt;li&gt;anticipated pilot study;&lt;/li&gt;
-&lt;li&gt;expected response rate&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;; and&lt;/li&gt;
-&lt;li&gt;any additional information&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Your task is to convince a stakeholder that&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;there is a need to study your population;&lt;/li&gt;
-&lt;li&gt;your sample is accessible; and&lt;/li&gt;
-&lt;li&gt;your sampling method is feasible&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please submit this to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by Sunday at 11:59PM.&lt;br&gt;
-:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Front only, 12 point New Roman font, double-spaced, and follows all APA 7th edition guidelines.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;You simply need a baseline so take a guess if you don’t know much about your population.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Note: The best sampling method may not be the most doable!&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Aural Versus Visual Design of Questions and Questionnaires</title>
-      <link>/assignment/06-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/06-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#construction-designing-a-survey-draft&#34;&gt;Construction: Designing a Survey Draft&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;construction-designing-a-survey-draft&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Construction: Designing a Survey Draft&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, &lt;strong&gt;design&lt;/strong&gt;, distribute, analyze and report on a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
-&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Submit&lt;/h4&gt;
-&lt;p&gt;There are two different submissions for this task. Please be aware of what goes where and ask questions if needed.&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;A one paragraph narrative explaining the purpose of your survey including any overarching questions you need or want to answer submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A &lt;em&gt;draft&lt;/em&gt; form of your survey submitted in &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; and shared with me via the Collaborate feature on the site due on &lt;strong&gt;September 27&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. In this case a &lt;em&gt;draft&lt;/em&gt; does not simply mean throwing questions together and hoping for the best. You are responsible for ensuring that items are constructed properly as noted in last week’s &lt;a href=&#34;/lesson/04-lesson/#survey-design-1&#34;&gt;PowerPoint&lt;/a&gt; and in Chapters 4-6 of the text. Your earned score will reflect this.
-:::&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ordering Questions and Testing for Question Order Effects</title>
-      <link>/assignment/07-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/07-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pilot-study-ledger&#34;&gt;Pilot Study Ledger&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;pilot-study-ledger&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Pilot Study Ledger&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, design, &lt;strong&gt;pilot&lt;/strong&gt;, distribute, analyze and report on a survey from start to finish. After receiving a thumbs up from your planning task, in this second step you will create a draft survey that will eventually be administered in one form or another to your approved population.&lt;/p&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Process&lt;/h4&gt;
-&lt;p&gt;You may begin the pilot process as soon as you read this. Please be aware that the minimum standard for a pilot study are two iterations.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reduction-or-exemption&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Reduction or Exemption&lt;/h4&gt;
-&lt;p&gt;In rare circumstances, a reduction or in exemption from the iterations for the pilot are granted. If you believe that a sufficient case exists for either, please schedule an appointment to be taken place no later than &lt;strong&gt;October 7&lt;/strong&gt; by &lt;strong&gt;5:00 PM&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;submit&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Submit&lt;/h4&gt;
-&lt;p&gt;There is one submission for this task: A csv or excel document outlining the history of your changes and submitted to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by &lt;strong&gt;October 11&lt;/strong&gt; by &lt;strong&gt;11:59 PM&lt;/strong&gt;. You must account for every item within your survey in the order they appear in your online variant. This includes, but is not limited to the landing and gratitude pages. Please use the documents below to keep an accurate record as you will be using it to create a &lt;em&gt;skeleton&lt;/em&gt; of your survey.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger.csv&#34;&gt;pilot_ledger.csv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/files/Week%207/pilot_ledger_codebook.csv&#34;&gt;pilot_ledger_codebook.csv&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting to Know the Complex Sample Design</title>
-      <link>/assignment/09-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/09-assignment/</guid>
-      <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#final-survey-and-skeleton&#34;&gt;Final Survey and Skeleton&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;final-survey-and-skeleton&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Final Survey and Skeleton&lt;/h3&gt;
-&lt;p&gt;In this class, you will plan, design, pilot, &lt;strong&gt;distribute&lt;/strong&gt;, analyze and report on a survey from start to finish. The material below is highly recommended, especially for those who do not have a great deal of experience administering surveys as a primary investigator (PI).&lt;/p&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Process&lt;/h4&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Take this week to set up your survey for distribution and to check it thoroughly. If you would like me to look at it, simply send a request over Slack or email and I will be happy to do so.&lt;/li&gt;
-&lt;li&gt;Pick a &lt;a href=&#34;/example/09-example/#planning&#34;&gt;day and time&lt;/a&gt; for distribution.&lt;/li&gt;
-&lt;li&gt;Check the &lt;a href=&#34;/example/09-example/#an-overlooked-yet-extremely-important-option-1&#34;&gt;Survey Options&lt;/a&gt; panel.&lt;/li&gt;
-&lt;li&gt;Choose a &lt;a href=&#34;/example/09-example/#read&#34;&gt;distribution method&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Set up your &lt;a href=&#34;/example/09-example/#what-you-needyou-may-have-to-right-click-and-download-it-depending-on-your-browser-settings&#34;&gt;communications&lt;/a&gt; which consist of notifications (if applicable), solicitations and gratitude In the meantime, you will also receive feedback on your pilot ledger. Once approved, you may go ahead and administer it&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;(Optional) Set up a &lt;a href=&#34;https://calendly.com/nopiecharts/short30&#34;&gt;meeting&lt;/a&gt; if you would like assistance for a final check.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This process does not apply for those who have been granted an exception typically due to some external academic factor.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug; face-to-face only&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

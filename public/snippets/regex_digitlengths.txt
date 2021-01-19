@@ -1,0 +1,8 @@
+1. The validations are in the right panel.
+2. The one we want is Custom Validation. If you click on it a popup will appear.
+3. In the first dropdown, select this question number Q30 if it is not already the default.
+4. In the second column select the text associated with the question.
+5. In the third column select Matches Regex.
+6. Type or copy and past this: ^[0-9]{1,99}$
+7. Select a validation message on the bottom or create one where it states Choose an error message to display on failure: ^[0-9]{1,99}$. If you want to know how ti do this, that's a different conversation we should have. In any case, you can edit 1,2 which basically implies an integer of length 1 to 2 (I.e. single or double digit).
+8. You can also use the javascript command to edit the length of the text box without having to do it manually. I covered this way back in Week 3: https://edp619.theoreticalphysed.com/example/03-example/

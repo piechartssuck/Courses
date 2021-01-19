@@ -22,7 +22,7 @@ bio: I teach evaluation and data things.
 
 research:
 - Transference of Foundational Evaluation Concepts
-- Modeling using Machine Learning
+- Social Modeling using Machine Learning
 - Applications of Predictive Hierarchical Social Networks
 
 education:

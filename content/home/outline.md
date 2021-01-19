@@ -18,4 +18,4 @@ design:
 {{< courseinfo >}}
 
 
-{{< figure src="/img/gapminder_plot.png" alt="Gapminder Plot" >}}
+{{< figure src="/img/scatter.png" alt="Scatterish Plot" >}}

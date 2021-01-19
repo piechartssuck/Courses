@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "EDP 619"
+title: "EDP 617"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: course_hex.png
@@ -23,4 +23,4 @@ cta_note:
   label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
-**A simple course centering on survey design, development, and analysis with a focus on aesthetics.**
+**An introductory course in all things program evaluation.**

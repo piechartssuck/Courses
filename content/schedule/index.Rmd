@@ -6,8 +6,8 @@ slug: schedule
 Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage
 
 - [**Readings**](/readings/) (<i class="fas fa-book"></i>): This page contains the readings for the topic. Read these first each time you visit.
-- [**Lesson**](/lesson/) (<i class="fas fa-chalkboard"></i>): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.
-- [**Example**](/example/) (<i class="fas fa-lightbulb"></i>): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.
+- [**Lesson**](/lesson/) (<i class="fas fa-chalkboard"></i>): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after reading the content.
+- [**Example**](/example/) (<i class="fas fa-lightbulb"></i>): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post media that may be beneficial.
 - [**Assignment**](/assignment/) (<i class="fas fa-tasks"></i>): This page contains the instructions for all student related tasks including information about the tasks and the final.
 - [**Due**](/due/) (<i class="fas fa-folder-open"></i>): This page contains the instructions what to submit by week. **Assignments are due by Sunday at 11:59 PM or as noted.**
 
@@ -26,7 +26,7 @@ Every class session may be comprised of four important sections with tasks denot
 <i class="fas fa-folder-open"></i>
 </div>
 
-or in terms that aren't as [ambiguous as emojis](https://doi.org/10.1016/j.chb.2020.106361){target="_blank"}, follow this process: read the material, complete data camp with other possible items, and then use the example (if given) along with the assignment to help you with what is due.
+or in terms that aren't as [ambiguous as emojis](https://doi.org/10.1016/j.chb.2020.106361){target="_blank"}, follow this process: read the material, look over the example (if given) along with the assignment to help you with what is due.
 <br />
 :::
 

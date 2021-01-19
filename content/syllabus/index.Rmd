@@ -14,63 +14,71 @@ output:
 library(dplyr)
 library(tibble)
 library(pander)
+library(kableExtra)
 ```
 
 `r blogdown::shortcode("courseinfo")`
 
 ## Course objectives
 
-Students will become proficient and be able to describe in detail the following aspects:
+Students will be expected to develop the following knowledge, skills, and abilities, including but not limited to: 
 
-1. Administering surveys via the Internet.
-2. Constructing online surveys^[Sure paper surveys are important but they are rarely used barring small samples.].
-3. Creating aesthetically pleasing surveys using color theory and design techniques^[Pretty is good!].
-4. Determining how to assess survey reliability and validity of items and instruments.
-5. Enhancing the look and feel of surveys using programming techniques^[Before you run really far away, the expectation here is to apply chunks of code in places rather than learning how to code.]. 
-6. Evaluating what analysis technique to utilize for a given item, performing said analysis, and determining how best to report findings.
-7. Using R and RStudio to pull, analyze, and construct reports on survey data. 
+1. Acquiring knowledge of basic models and principles of program evaluation
+2. Developing an understanding of program evaluation practice by designing and conducting an evaluation of a program relevant to their degree and individual interests. 
+3. Learning how to write an evaluation report to meet stakeholder information and decision-making needs Explaining the different types and uses of variables in a research study.
+4. Gaining an understanding of ethical, social, political, and cultural issues confronted by program evaluators.
 
 ## FAQ
 
 ### Is the course content difficult?
 You've probably heard an answer like this before: *At times some of the material can be dense.* Well that isn't much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
 
-### Is R difficult?
-Learning R can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+### Is there a lot of theory?
+Evaluation is a practice based field so much of what you will come across will align with that notion. With that said, while I have tried to get rid of any and all theory, some basic concepts need an underlying construct or idea.
 
 ### What if I find a mistake?
 Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
 
 ## Course materials
-There are two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
+There are two texts, though you will receive some supplementary materials in the course as well.
 
 ### Texts
 
-We'll rely on the texts below:
+#### Required
 
-- Dillman, D.A., Smyth, J.D., and Christian, L.M. (2014). *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* (4th ed.). Wiley.
+We'll rely on the texts below. Both are available through the WVU library [WVU library](https://library.wvu.edu/){target="_blank"}:
 
-- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
+- Davidson, E. J. (2007). *Evaluation methodology basics: The nuts and bolts of sound evaluation* (1st ed.). SAGE.
+    - [Digital edition](https://libwvu.on.worldcat.org/oclc/646022580){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9780761729307
 
-There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). (ISBN:  978-1433832161)
+    - Spiral bound edition (not free though the WVU library have copies of the official [paperback variant](https://libwvu.on.worldcat.org/oclc/1111952681){target="_blank"} - ISBN: 978143383217
+    
+#### Optional
+- Mertens, D. M. (2018). *Mixed methods design in evaluation*. SAGE.
+
+There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.  
 
 ### Software
 
 #### Quatrics
 
-All survey design, construction and deployment will occur in [Qualtrics](https://wvu.qualtrics.com/){target="_blank"}. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at [304-293-4444](callto: 304-293-4444).
+You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/){target="_blank"} account. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at [304-293-4444](callto: 304-293-4444).
 
-#### R and RStudio
+#### R and RStudio (Optional)
 
-You will do all of your analysis with the open source (and free!) programming language [R](https://cran.r-project.org/){target="_blank"}. You will use [RStudio](https://www.rstudio.com/){target="_blank"} as the main program to access R. **Think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+***Again, this is totally optional but may interest some of you. If this is the case, please let me know and I will add you to the training modules.***
+
+While required for most of the methods courses I teach, you have the option in this course to learn about the open source (and free!)statistical platform [R](https://cran.r-project.org/){target="_blank"} via the software [RStudio](https://www.rstudio.com/){target="_blank"}. **You can think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 **you do not need to have any programming experience to use R**
 </div>
 
-R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free [RStudio.cloud](http://rstudio.cloud/){target="_blank"} service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.
+R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free [RStudio.cloud](http://rstudio.cloud/){target="_blank"} service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now or just wabt to test it out.
 
-The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you'll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.
+The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. As you learn more, you'll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.
 
 You can [find instructions for installing R, RStudio, and all the tidyverse packages here](/resource/install/).
 
@@ -80,7 +88,7 @@ Data science and statistical programming can be difficult. Computers are stupid 
 
 But there are multiple resources online to help.
 
-- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel like an uphill battle.
+- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel much like an uphill battle.
 
 - Second two of the most important are [StackOverflow](https://stackoverflow.com/){target="_blank"} (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/){target="_blank"} (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a [minimally reproducible example](https://stackoverflow.com/help/minimal-reproducible-example){target="_blank"}.
 
@@ -88,9 +96,9 @@ But there are multiple resources online to help.
 
 - Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter. 
 
-- Fifth we have a class chatroom at [Slack](2020edp619.slack.com){target="_blank"} where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare instances where I  keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+- Fifth we have a class chatroom at [Slack](2021edp617.slack.com){target="_blank"} where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
 
-- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 619 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
+- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 617 "the title of your email"** where the title of your email is given without the quotes. If you do email me, please include the following:
 
   - A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
   - A copy of your data set (if applicable).
@@ -102,23 +110,20 @@ You should absolutely expect to struggle at times, but there is no better and mo
 
 ## Assignments and Grades
 
-You can find descriptions for all the assignments on the [assignments page](/assignment/).
+You can find up to date descriptions for all the assignments on the [assignments page](/assignment/).
+
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
-  ~Points,  ~Assignment,
-  10 * 10, "Daily(ish) Tasks",
-  13 * 10, "Data Camp",
-  2 * 30, "Data Tasks",
-  10, "Selecting a Population",
-  25, "Survey Draft",
-  25, "Pilot Study Ledger",
-  25, "Final Survey and Skeleton",
-  100, "Survey Report",
-  25, "Presentation of Results" 
-) %>%
-  mutate(Percent = Points / sum(Points),
-         Percent = scales::percent(Percent, accuracy = 1))
+  ~Percent,  ~Assignment,
+  15, "Weekly Tasks",
+  15, "Synchronous Meetings",
+  5, "Evaluation Prospectus",
+  20, "Needs Assessment",
+  15, "Evaluation Proposal",
+  25, "Final Report",
+  5, "Presentation of Results"
+) 
 
 grading <- tribble(
   ~Grade, ~Range,
@@ -130,30 +135,45 @@ grading <- tribble(
 )
 ```
 
-
-<div class="centered-table">
+<center>
 
 ```{r show-assignments-table, echo=FALSE, results="asis"}
-assignments_total <- tibble(Assignment = "Total",
-                            Points = sum(assignments$Points),
-                            Percent = NA)
-
-bind_rows(assignments, assignments_total) %>% 
-  select(Assignment, Points, Percent) %>% 
-  pandoc.table(justify = "lcc", missing = "—")
+assignments %>%
+  kableExtra::kable(align='cl',
+               col.names = c("Percent", "Assignment"),
+      ) %>%
+  kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em")
 ```
-</div>
+
+</center>
 
 <br />
-<div class="centered-table">
+
+<center>
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  pandoc.table(justify = "lc", 
-               col.names = c("Grade", "Range"))
+  kableExtra::kable(align='cl',
+               col.names = c("Grade", "Range")) %>%
+   kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em")
 ```
 
-<div>
+</center>
+
 
 ### Your hours
 
@@ -163,15 +183,15 @@ Please watch this video:
 
 Your hours (formerly known as office hours) are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed. This is not just a local issue!](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/){target="_blank"}, which is the exact opposite of what they are for!]). This means that I will be ~~in my office~~ at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
 
-Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through either e-mail or Slack. 
+Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through the calendar, e-mail or Slack. 
 
 ### Class conduct and expectations
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
-- **Late work**: Barring the exams and quizzes, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
-- **Showing work**: On any submission, you must show all relevant work where applicable. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *not only is the Earth flat, but the core is actually made out of tiramisu and moscato*, the first question you should be asking is *what's your evidence?* possibly folled by *is the core delicious?*.
+- **Late work**: Barring the three main course tasks, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
 - **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.
+- **Justifications**: On any submission, you must justiofy any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *not only is the Earth flat, the core is actually made out of tiramisu and moscato*, the first question you should be asking is *what's your evidence?* possibly followed by *is the core delicious?*.
 - **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
   1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't often provided.
   2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
@@ -183,7 +203,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 - **My philosophy**:<br>
   1. Just assume that all submissions are formal and must be submitted with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider scrapbooking. If you care about data and learning highly marketable skills, you've come to the right place.
+  2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another class. If you care about data, fieldwork and learning a highly marketable practice, you've come to the right place.
   3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
@@ -193,7 +213,7 @@ When course objectives are written explicitly and clearly, they provide the info
 To save you from a long philosophical narrative on epistemology, in a nutshell we humans aren't that good at evaluating a person's knowledge mainly because its not a well-defined concept. With that said, we believe one indicator of knowledge is in a person's ability to successfully explain a high level concept in such a way that the lay person can understand it. Every so often, consider asking yourself this:
 
 <div class="text-center">
-Can I describe *whatever* using conversational language so that a child could understand it?
+Can I describe *whatever* using language so that anyone could understand it?
 </div>
 
 On top of what's noted above and I'm not sure how to articulate this any better - life sucks right now! It is likely by now you know people who have been hospitalized or passed away, lost their jobs, and/or tested positive for COVID-19. Additionally stresses in life are up. Given this, here is my promise to you:
@@ -303,8 +323,6 @@ Students need to have access to a computer for word processing, e-mail and acces
 5.	Download and install software
 6.	Consult software tutorials and other online sources as a method of learning software features
 7. Use syntax when necessary
-
-Notice that programming is not on here!
 
 ### Technical Support
 Technical support regarding your use of eCampus is available by contacting [304-293-4444](callto: 304-293-4444) (telephone), [1-877-327-9260](callto: 1-877-327-9260) (toll free number), [itshelp@mail.wvu.edu](mailto: itshelp@mail.wvu.edu) (email), and/or [http://it.wvu.edu](http://it.wvu.edu){target="_blank"} (website).
