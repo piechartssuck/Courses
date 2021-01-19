@@ -25,7 +25,7 @@ showtext_auto()
   position <- 1:n
   evaluand <- factor(rep(1:8, each=n/8))
   p.value <- runif(n)
-  emotib <- tibble(position = position, 
+  emotib <- tibble(Evaluation = position, 
                    Sentiment = evaluand, 
                    p.value = p.value,
                    Scale = log(p.value)^2) %>%
@@ -41,22 +41,25 @@ showtext_auto()
             ))
 
 scatter <- ggplot(emotib %>% mutate(log.p.value = -log(p.value)),
-         aes(x = position, 
+         aes(x = Evaluation, 
              y = log.p.value/pi^2*2, 
              color = Sentiment,
              fill = Sentiment,
              size = Scale)) +
-    geom_point(show.legend = FALSE) +
+    geom_point(show.legend = TRUE) +
     scale_color_viridis_d(option = "D",
                           alpha = 0.50) +
-    scale_fill_viridis_d(option = "D",
+    scale_fill_viridis_d(option = "E",
                          direction = -1) +
     coord_flip() +
     theme_void() +
- #   theme(legend.position = "bottom",
- #         legend.direction = "horizontal",
- #         text = element_text(family="Canela Text Medium")
- #        ) +
+    theme(legend.position = "bottom",
+    legend.direction = "horizontal",
+    text = element_text(family="Canela Text Bold"),
+    axis.title.y = element_text(family="Canela Text Medium",
+                                angle = 90, 
+                                vjust = 0.5)
+        ) +
     guides(size = FALSE,
            color = guide_legend(override.aes = list(size=3)))
 
