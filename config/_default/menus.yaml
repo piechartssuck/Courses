@@ -20,9 +20,9 @@ main:
   - name: Due?
     url: /due/
     weight: 7
-  - name: Resources
-    url: /resource/
-    weight: 8
+  # - name: Resources
+  #   url: /resource/
+  #   weight: 8
   - name: Professor
     url: /professor/
     weight: 9
@@ -68,8 +68,8 @@ assignment:
     weight: 6
   - name: Presentation of Results
     weight: 7
-resource:
-  - name: Resources
-    weight: 1
-  - name: Guides
-    weight: 2
+# resource:
+#   - name: Resources
+#     weight: 1
+#   - name: Guides
+#     weight: 2
