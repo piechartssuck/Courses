@@ -22,12 +22,18 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#review-the-rest&#34;&gt;Review the Rest&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#read-the-book&#34;&gt;Read the Book&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Timers Note&lt;/h2&gt;
+&lt;p&gt;You’ll see all class related readings posted here on a weekly basis. With that said, take a look at the items below:&lt;/p&gt;
 &lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Get Some Advice&lt;/h3&gt;
 &lt;p&gt;First things first:
@@ -44,6 +50,7 @@
 &lt;div id=&#34;read-the-book&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Read the Book&lt;/h3&gt;
 &lt;p&gt;There is nothing to read just yet!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
