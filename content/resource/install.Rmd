@@ -36,27 +36,27 @@ Here's how you install all these things
 First you need to install R itself (the engine).
 
 1. Go to the CRAN (Collective R Archive Network)^[It's a goofy name, but CRAN is where most R packages—and R itself—lives.] website: <https://cran.r-project.org/>
-2. Click on "Download R for `XXX`", where `XXX` is either Mac or Windows:
+2. Click on "Download R for `XXX`", where `XXX` is either Mac, Linux, or Windows:
 
     ```{r, echo=FALSE, out.width="60%"}
     include_graphics("/img/install/install-r-links.png", error = FALSE)
     ```
-
-    - If you use macOS, scroll down to the first `.pkg` file in the list of files (as of this writing, it's `R-4.0.0.pkg`; as of right now but download the most current version.
+    As of this writing, the current version of R is 4.0.3 (Bunny-Wunnies Freak Out - yup that's the name of the release because why not?) but if there is an update, please download tthat instead.
+    
+    - If you use macOS, scroll down to the first `.pkg` file in the list of files  
     
         ```{r, echo=FALSE, out.width="100%"}
         include_graphics("/img/install/install-r-mac.png", error = FALSE)
         ```
-    
-    - If you use Windows, click "base" (or click on the bolded "install R for the first time" link) and download it. 
+        - If you use Windows, click "base" (or click on the bolded "install R for the first time" link) and download it. 
     
         ```{r, echo=FALSE, out.width="100%"}
         include_graphics("/img/install/install-r-windows.png", error = FALSE)
         ```
 
-3. Double click on the downloaded file (check your `Downloads` folder). Click yes through all the prompts to install like any other program.
+3. Double click on the downloaded file and install as usual (check your `Downloads` folder if it does not open up for some reason). Click yes through all the prompts to install like any other program.
 
-4. If you use macOS, [download and install XQuartz](https://www.xquartz.org/){target="_blank"}. You do not need to do this on Windows.
+4. **This step is only for those with a Mac. If you have a Linux of Windows based machine, you can start installing RStudio**. macOS requires [download and install XQuartz](https://www.xquartz.org/){target="_blank"}. 
 
 
 ### Install RStudio

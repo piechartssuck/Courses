@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Assignments | Program Evaluation</title>
-    <link>/assignment/</link>
-      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp617.theoreticalphysed.com/assignment/</link>
+      <atom:link href="https://edp617.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp617.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>/assignment/</link>
+      <link>https://edp617.theoreticalphysed.com/assignment/</link>
     </image>
     
     <item>
       <title>Who Are You Really?</title>
-      <link>/assignment/01-assignment/</link>
+      <link>https://edp617.theoreticalphysed.com/assignment/01-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-assignment/</guid>
+      <guid>https://edp617.theoreticalphysed.com/assignment/01-assignment/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;

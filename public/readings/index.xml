@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About the Readings | Program Evaluation</title>
-    <link>/readings/</link>
-      <atom:link href="/readings/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp617.theoreticalphysed.com/readings/</link>
+      <atom:link href="https://edp617.theoreticalphysed.com/readings/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Readings</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp617.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Readings</title>
-      <link>/readings/</link>
+      <link>https://edp617.theoreticalphysed.com/readings/</link>
     </image>
     
     <item>
       <title>Who Are You Really?</title>
-      <link>/readings/01-readings/</link>
+      <link>https://edp617.theoreticalphysed.com/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/01-readings/</guid>
+      <guid>https://edp617.theoreticalphysed.com/readings/01-readings/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -39,13 +39,13 @@
 &lt;p&gt;First things first:
 &lt;br&gt;
 &lt;br&gt;
-&lt;iframe src=&#34;/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
 &lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp617.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;review-the-rest&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Review the Rest&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;/assigment/&#34;&gt;Assignments&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;Examples&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;Lessons&lt;/a&gt;, and &lt;a href=&#34;/schedule/&#34;&gt;Schedule&lt;/a&gt; pages for this class.&lt;/p&gt;
+&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;https://edp617.theoreticalphysed.com/assigment/&#34;&gt;Assignments&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/example/&#34;&gt;Examples&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/&#34;&gt;Lessons&lt;/a&gt;, and &lt;a href=&#34;https://edp617.theoreticalphysed.com/schedule/&#34;&gt;Schedule&lt;/a&gt; pages for this class.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;read-the-book&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Read the Book&lt;/h3&gt;
