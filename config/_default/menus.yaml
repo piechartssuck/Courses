@@ -20,14 +20,14 @@ main:
   - name: Due?
     url: /due/
     weight: 7
-  # - name: Resources
-  #   url: /resource/
-  #   weight: 8
+  - name: Resources
+    url: /resource/
+    weight: 8
   - name: Professor
     url: /professor/
     weight: 9
   - name: '<i class="fab fa-slack"></i>'
-    url: "https://2021edp617.slack.com"
+    url: "https://2021edp693c.slack.com"
     weight: 10
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://rstudio.cloud/"
@@ -58,18 +58,12 @@ assignment:
     weight: 1
   - name: Weekly Tasks
     weight: 2
-  - name: Evaluation Prospectus
+  - name: Data Camp
     weight: 3
-  - name: Needs Assessment
+  - name: Data Tasks
     weight: 4
-  - name: Evaluation Proposal
-    weight: 5
-  - name: Final Report
-    weight: 6
-  - name: Presentation of Results
-    weight: 7
-# resource:
-#   - name: Resources
-#     weight: 1
-#   - name: Guides
-#     weight: 2
+resource:
+  - name: Resources
+    weight: 1
+  - name: Guides
+    weight: 2

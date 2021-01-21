@@ -66,14 +66,14 @@ Next, you need to install RStudio, the nicer graphical user interface (GUI) for 
 1. Go to the free download location on RStudio's website: <https://www.rstudio.com/products/rstudio/download/#download>
 2. The website should automatically detect your operating system (macOS or Windows) and show a big download button for it:
 
-    ```{r, echo=FALSE, out.width="50%"}
-    include_graphics("/img/install/install-r-rstudio1.png", error = FALSE)
+    ```{r, echo=FALSE, out.width="75%"}
+    include_graphics("/img/install/install-r-rstudio-mac.png", error = FALSE)
     ```
     
     If not, scroll down a little to the large table and choose the version of RStudio that matches your operating system.
 
-    ```{r, echo=FALSE, out.width="100%"}
-    include_graphics("/img/install/install-r-rstudio2.png", error = FALSE)
+    ```{r, echo=FALSE, out.width="75%"}
+    include_graphics("/img/install/install-r-rstudio-windows.png", error = FALSE)
     ```
 
 3. Double click on the downloaded file (again, check your `Downloads` folder). Click yes through all the prompts to install like any other program.

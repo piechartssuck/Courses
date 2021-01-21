@@ -8,11 +8,8 @@ type: docs
 weight: 1
 ---
 
-## The Course Text
-Each class session has a set of required readings that you should complete ***before*** doing anything else. It also allows you to ask questions prior to moving on! With that said, think of the text as a reference, in that
-
-- it contains a lot of stuff that you may use but probably won't right now, and
-- it gives you a basis to ask intelligent questions. 
+## The Course Texts
+The course texts are generally for reference purposes. Please browse through the but know that in general, reading code is neither fun nor overtly beneficial. Instead you will learn by doing (and likely failing multiple times) but in the end and while it may sound silly, there is no better feeling than getting a piece of code to work correctly! 
 
 ## The Course Nontext
 Many of us are visual learners with me included, so a lot of what I provide outside of the text and created *in-house* is visually based. Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please go through them. Are they Hollywood? No because I'm a professor at a public university, have three children and drive a car with duct tape on it BUT they will be decent. I am always open to suggestions so if you have any, send them along!
@@ -23,5 +20,5 @@ Many of us are visual learners with me included, so a lot of what I provide outs
 - Peter Griffin
 
 ### Need Help?
-I always prefer a face to face meeting if possible. With that said, we have Zoom and a [Slack channel](https:/2021edp617.slack.com){target="_blank"} let's meet if you need help! 
+I always prefer a face to face meeting if possible. With that said, we have Zoom and a [Slack channel](https:/2021edp693e.slack.com){target="_blank"} let's meet if you need help! 
 

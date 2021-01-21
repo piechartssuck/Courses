@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Lessons | Program Evaluation</title>
-    <link>/lesson/</link>
-      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <title>About the Lessons | Data Visualization</title>
+    <link>https://edp693e.theoreticalphysed.com/lesson/</link>
+      <atom:link href="https://edp693e.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp693e.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Lessons</title>
-      <link>/lesson/</link>
+      <link>https://edp693e.theoreticalphysed.com/lesson/</link>
     </image>
     
     <item>
-      <title>Who Are You Really?</title>
-      <link>/lesson/01-lesson/</link>
+      <title>Friends Don&#39;t Let Friends Use Pie Charts</title>
+      <link>https://edp693e.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp693e.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#jane-davidsons-helpful-website&#34;&gt;Jane Davidson’s Helpful Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-camp&#34;&gt;Data Camp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-r-and-rstudio&#34;&gt;Installing R and RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;First Timers Note&lt;/h2&gt;
-&lt;p&gt;You’ll see class related task materials posted here on a weekly basis.&lt;/p&gt;
+&lt;p&gt;You’ll see R related walkthroughts and other possible course tasks posted here every week.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;jane-davidsons-helpful-website&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Jane Davidson’s Helpful Website&lt;/h2&gt;
-&lt;p&gt;Dr. Davidson is the author of the primary textbook in the course. She is an accomplished evaluator who has generally created a large impact within the field and has a &lt;a href=&#34;https://www.betterevaluation.org&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt; dedicated to the practice of evaluation full of resources. While not mandated, you may want to look around and bookmark the site.&lt;/p&gt;
+&lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Camp&lt;/h2&gt;
+&lt;p&gt;The purpose of these modules is not have you become a programmer! Rather these lay a foundation for a common language and software we’ll be using. Some are better than others and some are more technical than others as well. Just remember, this is not a programming class but you need to ask for help when needed! Falling behind on these can make some material we cover in the course inaccessible. If you get stuck, please search the Internet, ask your peers or me for help or worst case scenario, move on!&lt;/p&gt;
+&lt;p&gt;With that said, please go ahead and start the first module covering the basics of R on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. There is a lot on there and please refer to the &lt;a href=&#34;https://edp693e.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; for the grading policy regarding those tasks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-r-and-rstudio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing R and RStudio&lt;/h2&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://edp693e.theoreticalphysed.com/resource/install/&#34;&gt;Installing R, RStudio, and tidyverse&lt;/a&gt; page under Resources to get both R and RStudio installed on your system.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

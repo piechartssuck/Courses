@@ -1,6 +1,6 @@
 ---
-title: "Getting Familiar with the Course"
-linktitle: "Week 1: Getting Familiar with the Course"
+title: "Friends Don't Let Friends Use Pie Charts"
+linktitle: "Week 1: Friends Don't Let Friends Use Pie Charts"
 output:
   blogdown::html_page:
     toc: true
@@ -15,5 +15,7 @@ editor_options:
 ---
 
 ## First Timers Note
-You'll see class related tasks posted here on an at need basis but there's nothing to see here this week!
+You'll see extra examples of visualizations and full code chunks you can copy or download directly into RStudio to edit as you want. 
+
+
 

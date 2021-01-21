@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>So What&#39;s Due? | Program Evaluation</title>
-    <link>/due/</link>
-      <atom:link href="/due/index.xml" rel="self" type="application/rss+xml" />
+    <title>So What&#39;s Due? | Data Visualization</title>
+    <link>https://edp693e.theoreticalphysed.com/due/</link>
+      <atom:link href="https://edp693e.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp693e.theoreticalphysed.com/img/course_info.png</url>
       <title>So What&#39;s Due?</title>
-      <link>/due/</link>
+      <link>https://edp693e.theoreticalphysed.com/due/</link>
     </image>
     
     <item>
       <title>Getting Familiar with the Course</title>
-      <link>/due/01-due/</link>
+      <link>https://edp693e.theoreticalphysed.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/01-due/</guid>
+      <guid>https://edp693e.theoreticalphysed.com/due/01-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -64,7 +64,7 @@ Location
 Introduce yourself in Slack.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -82,7 +82,7 @@ Introduce yourself in Slack.
 Verify your Qualtrics account
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;/assignment/01-assignment/#verify-qualtrics-account-login-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#verify-qualtrics-account-login-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -100,7 +100,7 @@ Verify your Qualtrics account
 Review the website
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;/readings/01-readings/#review-the-rest-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/readings/01-readings/#review-the-rest-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -118,7 +118,7 @@ Review the website
 Draw an Evaluation
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;/assignment/01-assignment/#drawing-evaluations-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#drawing-evaluations-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

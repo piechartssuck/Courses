@@ -23,62 +23,68 @@ library(kableExtra)
 
 Students will be expected to develop the following knowledge, skills, and abilities, including but not limited to: 
 
-1. Acquiring knowledge of basic models and principles of program evaluation
-2. Developing an understanding of program evaluation practice by designing and conducting an evaluation of a program relevant to their degree and individual interests. 
-3. Learning how to write an evaluation report to meet stakeholder information and decision-making needs Explaining the different types and uses of variables in a research study.
-4. Gaining an understanding of ethical, social, political, and cultural issues confronted by program evaluators.
+1. Defining and understanding the purpose of visualization.
+2. Delineating between various types and classifications of visualization techniques.
+3. Demonstrating how to locate and utilize publicly available data sets.
+4. Explaining the history of data visualization.
+5. Outlining methods and techniques for establishing and evaluating reliability and validity of data sets.
+6. Obtaining an understanding of ethical, social, political, and cultural issues confronted by data scientists.
+7. Presenting and reporting findings to a diverse audience.
+8. Understanding how to construct data visualizations that present ideas effectively while being visually appealing and functional.
+
+9. utilizing evaluative criteria to assess proper outlets of free data.
+
 
 ## FAQ
 
 ### Is the course content difficult?
 You've probably heard an answer like this before: *At times some of the material can be dense.* Well that isn't much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
 
-### Is there a lot of theory?
-Evaluation is a practice based field so much of what you will come across will align with that notion. With that said, while I have tried to get rid of any and all theory, some basic concepts need an underlying construct or idea.
+### Is R difficult?
+Learning R can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
 
 ### What if I find a mistake?
 Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
 
 ## Course materials
-There are two texts, though you will receive some supplementary materials in the course as well.
+There are four optional texts and two software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
 
 ### Texts
 
-#### Required
+#### Optional Reference
 
-We'll rely on the texts below. Both are available through the WVU library [WVU library](https://library.wvu.edu/){target="_blank"}:
+We'll rely on the texts below. All are available through the WVU library [WVU library](https://library.wvu.edu/){target="_blank"} or in an online capacity:
 
-- Davidson, E. J. (2007). *Evaluation methodology basics: The nuts and bolts of sound evaluation* (1st ed.). SAGE.
-    - [Digital edition](https://libwvu.on.worldcat.org/oclc/646022580){target="_blank"} (free!)
-    - Hardcover edition (not free) - ISBN: 9780761729307
+- Wickham, H., Navarro, D. & Pedersen, T.L. (2021). *ggplot2: Elegant Graphics for Data Analysis* (2nd and 3rd eds.). Springer.
+    - [Digital editions](https://ggplot2-book.org/index.html){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9783319242750
 
-- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). (ISBN:  978-1433832161)
-    - Spiral bound edition (not free though the WVU library have copies of the official [paperback variant](https://libwvu.on.worldcat.org/oclc/1111952681){target="_blank"} - ISBN: 978143383217
+- Wickham, H. (2021). *Mastering Shiny* (1st ed.). O’Reilly Media.
+    - [Digital edition](https://mastering-shiny.org/){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9781492047384
     
-#### Optional
-- Mertens, D. M. (2018). *Mixed methods design in evaluation*. SAGE.
+- Wickham, H. (2021). *R for Data Science* (1st ed.). O’Reilly Media.
+    - [Digital edition (web)](https://r4ds.had.co.nz/){target="_blank"} (free!)
+    - [Digital edition (WVU libraries)](https://libwvu.on.worldcat.org/oclc/966429425){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9781491910399
+    
+- Sleeper, R. (2021). *Innovative Tableau: 100 More Tips, Tutorials, and Strategies* (1st ed.). O’Reilly Media.
+    - [Digital edition](https://libwvu.on.worldcat.org/oclc/1107798872){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9781492075653
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.  
 
-### Software
+#### R and RStudio
 
-#### Quatrics
-
-You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/){target="_blank"} account. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at [304-293-4444](callto: 304-293-4444).
-
-#### R and RStudio (Optional)
-
-***Again, this is totally optional but may interest some of you. If this is the case, please let me know and I will add you to the training modules.***
-
-While required for most of the methods courses I teach, you have the option in this course to learn about the open source (and free!)statistical platform [R](https://cran.r-project.org/){target="_blank"} via the software [RStudio](https://www.rstudio.com/){target="_blank"}. **You can think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+You will do all of your analysis with the open source (and free!) programming language [R](https://cran.r-project.org/){target="_blank"}. You will use [RStudio](https://www.rstudio.com/){target="_blank"} as the main program to access R. **Think of R as an engine and RStudio as a car dashboard** — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 **you do not need to have any programming experience to use R**
 </div>
 
-R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free [RStudio.cloud](http://rstudio.cloud/){target="_blank"} service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now or just wabt to test it out.
+R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free [RStudio.cloud](http://rstudio.cloud/){target="_blank"} service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.
 
-The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. As you learn more, you'll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.
+The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you'll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.
 
 You can [find instructions for installing R, RStudio, and all the tidyverse packages here](/resource/install/).
 
@@ -88,7 +94,7 @@ Data science and statistical programming can be difficult. Computers are stupid 
 
 But there are multiple resources online to help.
 
-- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel much like an uphill battle.
+- First you will have access to [Data Camp](https://www.datacamp.com/){target="_blank"} which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R's initial steep learning curve won't feel like an uphill battle.
 
 - Second two of the most important are [StackOverflow](https://stackoverflow.com/){target="_blank"} (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/){target="_blank"} (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a [minimally reproducible example](https://stackoverflow.com/help/minimal-reproducible-example){target="_blank"}.
 
@@ -96,9 +102,9 @@ But there are multiple resources online to help.
 
 - Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter. 
 
-- Fifth we have a class chatroom at [Slack](2021edp617.slack.com){target="_blank"} where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+- Fifth we have a class chatroom at [Slack](2020edp619.slack.com){target="_blank"} where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare instances where I  keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
 
-- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 617 "the title of your email"** where the title of your email is given without the quotes. If you do email me, please include the following:
+- Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 619 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
 
   - A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
   - A copy of your data set (if applicable).
@@ -110,20 +116,25 @@ You should absolutely expect to struggle at times, but there is no better and mo
 
 ## Assignments and Grades
 
-You can find up to date descriptions for all the assignments on the [assignments page](/assignment/).
-
+You can find descriptions for all the assignments on the [assignments page](/assignment/).
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
-  ~Percent,  ~Assignment,
-  15, "Weekly Tasks",
-  15, "Synchronous Meetings",
-  5, "Evaluation Prospectus",
-  20, "Needs Assessment",
-  15, "Evaluation Proposal",
-  25, "Final Report",
-  5, "Presentation of Results"
-) 
+  ~Points,  ~Assignment,
+  100, "In Class Tasks",
+  200, "Out of Class Tasks",
+  200, "Data Camp Assessments",
+  200, "R Project",
+  100, "R Presentation",
+  200, "Tableau Project",
+  100, "Tableau Presentation",
+  400, "Final Project Narrative",
+  100, "Final Project Presentation",
+  100, "Course Survey",
+  300, "Extra Tasks"
+) %>%
+  mutate(Percent = Points / sum(Points),
+         Percent = scales::percent(Percent, accuracy = 1))
 
 grading <- tribble(
   ~Grade, ~Range,
@@ -135,45 +146,30 @@ grading <- tribble(
 )
 ```
 
-<center>
+
+<div class="centered-table">
 
 ```{r show-assignments-table, echo=FALSE, results="asis"}
-assignments %>%
-  kableExtra::kable(align='cl',
-               col.names = c("Percent", "Assignment"),
-      ) %>%
-  kable_styling(position = "center",
-                bootstrap_options = c("striped", 
-                                      "hover", 
-                                      "condensed", 
-                                      "responsive"),
-                full_width = FALSE) %>%
-  column_spec(1, width = "5em") %>%
-  column_spec(2, width = "12em")
-```
+assignments_total <- tibble(Assignment = "Total",
+                            Points = sum(assignments$Points),
+                            Percent = NA)
 
-</center>
+bind_rows(assignments, assignments_total) %>% 
+  select(Assignment, Points, Percent) %>% 
+  pandoc.table(justify = "lcc", missing = "—")
+```
+</div>
 
 <br />
-
-<center>
+<div class="centered-table">
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  kableExtra::kable(align='cl',
-               col.names = c("Grade", "Range")) %>%
-   kable_styling(position = "center",
-                bootstrap_options = c("striped", 
-                                      "hover", 
-                                      "condensed", 
-                                      "responsive"),
-                full_width = FALSE) %>%
-  column_spec(1, width = "5em") %>%
-  column_spec(2, width = "12em")
+  pandoc.table(justify = "lc", 
+               col.names = c("Grade", "Range"))
 ```
 
-</center>
-
+<div>
 
 ### Your hours
 

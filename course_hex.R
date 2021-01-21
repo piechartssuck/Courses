@@ -8,6 +8,14 @@ rm(list = ls())
 
 # Libraries
 library(tidyverse)
+library(ggtext)
+library(cowplot)
+library(patchwork)
+library(showtext)
+library(showtextdb)
+library(glue)
+library(LaCroixColoR)
+library(tidyverse)
 library(RColorBrewer)
 library(hexSticker)
 library(showtext)
@@ -23,33 +31,89 @@ font_add("Canela Text Bold", "Canela-Bold.otf")
 font_add("Canela Text Black", "Canela-Black.otf")
 showtext_auto()
 
-# Wrangle ----
-spiral_data <- data.frame(date = seq.Date(from = as.Date("2018-01-01"), 
-                                     to = as.Date("2020-12-31"), 
-                                     by = 1),
-                     day_num = 1:1096,
-                     temp = rnorm(1096, 5, 5)) %>%
-                     mutate(inv_temp = 1/temp)
 
-spiral <- ggplot(spiral_data, aes(x = day_num %% 365, 
-                   y = 0.07*day_num + temp/2,
-                   height = temp,
-                   fill = temp, 
-                   color = inv_temp)) + 
-          geom_tile() + 
-          scale_y_continuous(limits = c(-20, NA)) +
-          scale_x_continuous(breaks = 100*0:11, 
-                             minor_breaks = NULL) +
-          coord_polar() + 
-          scale_fill_viridis_c(option = "B") + 
-          theme_void() +
-          guides(fill = FALSE,
-                 color = FALSE)
+#Read file
+data <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-10-20/beer_awards.csv')
 
+#Make some information
+data1 <- data %>%
+  filter(medal=="Gold") %>%
+  group_by(year, state) %>%
+  mutate(count = n()) %>%
+  distinct(year, state, count) %>%
+  filter(year > 1999) %>%
+  filter(count > 5)
+
+#Get toal gold medals
+data2 <- data %>%
+  filter(medal=="Gold" & year > 1999)%>%
+  group_by(year) %>%
+  mutate(count2 = n())%>%
+  distinct(year, state, count2)
+
+#Total medals
+data3 <- data %>%
+  filter(year >1999)%>%
+  filter(medal=="Gold")
+
+#Colors
+getPalette <- colorRampPalette(brewer.pal(11, "Spectral"))
+data1ColourCount = length(unique(data1$state))
+data2ColourCount = length(unique(data2$state))
+
+
+
+
+#Themes
+#ggplot
+p2 <- ggplot(data1, aes(x = year, y = count)) + 
+  geom_col(aes(fill=state),
+           alpha = 0.77,
+           width = 0.9,
+           show.legend = FALSE) + 
+  scale_fill_manual(values = getPalette(data1ColourCount)) +
+  coord_polar(theta = "y", start=0, clip="off")+
+  scale_x_continuous(limits = c(1995, 2023), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0, 80)) + 
+  theme_void()
+
+#Run it!
+p2
+
+p1 <- ggplot(data2, aes(x = year, 
+                        y = count2, 
+                        fill = factor(state))) + 
+  geom_bar(aes(), 
+           stat='identity',
+           width = 0.9,
+           alpha = 0.77,
+           show.legend = FALSE) +
+  scale_fill_manual(values = getPalette(data2ColourCount)) +
+  scale_size_continuous(range = c(1, 15)) +
+  scale_y_reverse(breaks=c(0,40,80), position = "right")+
+  coord_flip()+
+  theme_void()+
+  theme(
+    axis.text.x = element_blank(),
+    axis.title.x = element_blank(),
+    axis.line.x = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank())
+
+p1
+
+cur <- ggdraw(p2) + 
+  draw_plot(p1, 
+            x=-0.017, 
+            y=0.55, 
+            width = 0.54, 
+            height = 0.3285) 
+
+cur
 
 # Save the various types of hex ----
-sticker(spiral, 
-        package="EDP 617", 
+sticker(cur, 
+        package="EDP 693E", 
         p_size=7, 
         p_x = 1,
         p_y = 1.41,
@@ -62,7 +126,7 @@ sticker(spiral,
         p_family = "Canela Text Black",
         filename="course_hex.png")
 
-sticker(spiral, 
+sticker(cur, 
         package="EDP 617", 
         p_size=7, 
         p_x = 1,
@@ -76,7 +140,7 @@ sticker(spiral,
         p_family = "Canela Text Black",
         filename="hex.png")
 
-sticker(spiral, 
+sticker(cur, 
         package="", 
         s_x=1.0, 
         s_y=1.0, 
@@ -86,4 +150,4 @@ sticker(spiral,
         h_color="#293840",
         filename="icon.png")
 
-# init borrowed from https://stackoverflow.com/questions/52939337/how-to-create-a-time-series-spiral-graph-using-r
+# init adapted from https://github.com/silaarts/TidyTuesday/blob/master/TidyTuesday_Beerawards.R

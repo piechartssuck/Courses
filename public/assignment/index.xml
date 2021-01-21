@@ -1,69 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Assignments | Program Evaluation</title>
-    <link>/assignment/</link>
-      <atom:link href="/assignment/index.xml" rel="self" type="application/rss+xml" />
+    <title>About the Assignments | Data Visualization</title>
+    <link>https://edp693e.theoreticalphysed.com/assignment/</link>
+      <atom:link href="https://edp693e.theoreticalphysed.com/assignment/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Assignments</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp693e.theoreticalphysed.com/img/course_info.png</url>
       <title>About the Assignments</title>
-      <link>/assignment/</link>
+      <link>https://edp693e.theoreticalphysed.com/assignment/</link>
     </image>
-    
-    <item>
-      <title>Who Are You Really?</title>
-      <link>/assignment/01-assignment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-assignment/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#verify-qualtrics-account-login&#34;&gt;Verify Qualtrics Account Login&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#drawing-evaluations&#34;&gt;Drawing Evaluations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;First Timers Note&lt;/h2&gt;
-&lt;p&gt;You’ll see class related tasks posted here on a weekly basis.&lt;/p&gt;
-&lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
-&lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Go to the course &lt;a href=&#34;2021edp617.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
-&lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
-&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
-&lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization this term to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
-&lt;p&gt;You may end up using a survey in this course so its a good idea to go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible.&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;drawing-evaluations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Drawing Evaluations&lt;/h3&gt;
-&lt;p&gt;Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a post describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to “Evaluation”. If you drew a picture, scan your picture and attach it to your post. Post on the “Pictures of Evaluation” discussion board on Slack.
-:::&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Shameless plug; face-to-face only&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
     
   </channel>
 </rss>

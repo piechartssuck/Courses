@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "An introductory course for all things program evaluation."
+description: "A foundational course dealing with the communication of data through visuals with a strong focus on structure and the aesthetics."
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -92,15 +92,15 @@ edit_page:
 author: Abhik Roy
 
 course:
-  number: "EDP 617"
+  number: "EDP 693e"
   semester: "Spring 2021"
   days: "Forever (for the next 15 weeks)"
   time: "You pick!"
   location: "Online"
   dates: "January 19 - May 8"
-  github: piechartssuck/Courses/tree/edp617
+  github: piechartssuck/Courses/tree/edp693e
   copyrightYear: "2021"
-  slack: "https://2021edp617.slack.com"
+  slack: "https://2021edp693e.slack.com"
 
 instructor:
   name: Dr. Abhik Roy

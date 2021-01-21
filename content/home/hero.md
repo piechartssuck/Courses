@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "EDP 617"
+title: "EDP 693c"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: course_hex.png
@@ -20,7 +20,7 @@ design:
     text_color_light: true
 
 cta_note:
-  label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
+  label: Spring 2021<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
-**An introductory course in all things program evaluation.**
+**A foundational course in many things data visualization with a focus on structure and the aesthetics.**

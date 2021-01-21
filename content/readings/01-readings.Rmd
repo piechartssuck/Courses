@@ -1,6 +1,6 @@
 ---
-title: "Who Are You Really?"
-linktitle: "Week 1: Who Are You Really?"
+title: "Friends Don't Let Friends Use Pie Charts"
+linktitle: "Week 1: Friends Don't Let Friends Use Pie Charts"
 menu:
   content:
     parent: Readings
@@ -13,7 +13,6 @@ output:
   blogdown::html_page:
     toc: true
 ---
-
 
 ## First Timers Note
 You'll see all class related readings posted here on a weekly basis. With that said, take a look at the items below:
@@ -29,8 +28,14 @@ First things first:
 ### Review the Rest
 Review the overviews of the other areas as well:  [Assignments](/assigment/), [Examples](/example/), [Lessons](/lesson/), and [Schedule](/schedule/) pages for this class.
 
-### Read the Book
-There is nothing to read just yet!
+### Read Things
+Data visualization isn't just about making pretty pictures^[although that is very important!], rather it is done to convey a great deal of information in an efficient way. With that said, you have probably come across visualizations in the media, online, etc that simply don't make sense or are confusing. Can you recall one that was just terrible?  Think about that question as you go through this week's readings:
+
+1. WAINER, H. (1984). *How to Display Data Badly*. The American Statistician, 38(2), 137-147.
+2. Tufte, E. R. (2001). Graphical Excellence. *The visual display of quantitative information* (2nd ed., pp. 13-51). Graphics Press.
+3. Tufte, E. R. (2001). Graphical Integrity. *The visual display of quantitative information* (2nd ed., pp. 52-77). Graphics Press.
+
+You can download all of the readings via this [link](/readings/EDP693eWeek1Readings.zip).
 
 
 

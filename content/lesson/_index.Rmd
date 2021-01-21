@@ -9,7 +9,57 @@ weight: 1
 shiny: true
 ---
 
-Lessons are used to both introduce content not covered in the text and to supplement materials already addressed. Materials will be posted on a weekly basis. 
+### Description
+Each class session has an interactive lesson that you will work through ***after*** doing the readings and watching a lecture (if applicable). These lessons are a central part of the class—they will teach you how to use R and other packages eventually leading to the **tidyverse** family.
+
+Interactive training sections are provided on [Data Camp](https://www.datacamp.com/){target="_blank"}^[Please note that if you have (1) used Data Camp before and (2) are logged in with the same username, then any module that was successfully completed will not have to be done again.]. 
+
+### Advice
+Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
+
+### Grading
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don't mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you'll learn by doing. If you are a polar personality type when it comes to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear^[and curse my name if you have to], and ask peers or me for help. Your [grading] is predicated on putting in a solid effort, rather than getting it right because there is no such thing in data science. 
+
+### Data Camp Schedule
+(posting soon!)
+<!--
+A full schedule is given below. The **Course** and **Chapter** names represent Data Camp titles:
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+
+dc_schedule <- read_csv("dc.csv") %>% 
+                  as_tibble() %>%
+              mutate(Required = case_when(
+                Required == "checked" ~ as.character(fa("check-square", fill = "#242d34")),
+                Required == "unchecked" ~ as.character(fa("square", fill = "#242d34"))
+              )) %>%
+              select(-Group, -Chapters_long, -`Due by_short`) %>%
+              rename(`Due by` = `Due by_long`) %>%
+              rename(`Chapters covered` = Chapters_wide) %>%
+            filter_all(any_vars(!is.na(.))) %>%
+              replace(., is.na(.), "")
+```
+
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      escape = FALSE,
+      align = 'clccll') %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover")) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "15em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "30em") %>%
+  column_spec(6, width = "50em") 
+```
+-->
+
 
 ### Need Help?
-I always prefer a face to face meeting if possible. With that said, we have Zoom and a [Slack channel](https:/2021edp617.slack.com){target="_blank"} let's meet if you need help! 
+I always prefer a face to face meeting if possible. With that said, we have Zoom and a [Slack channel](https:/2021edp693e.slack.com){target="_blank"} let's meet if you need help! 
