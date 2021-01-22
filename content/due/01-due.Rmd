@@ -58,9 +58,9 @@ Description = c("Install Course Software",
                 "Complete Introduction to R"),
 
 Location = c("[Link](/resource/install/)",
-             "[Link](/readings/01-readings/#read-things-1)",
-             "[Link](/readings/01-readings/#review-the-rest-1)",
-             "[Link](/assignment/01-assignment/#class-slack-account-access-1)",
+             "[Link](/readings/01-readings/#read-things)",
+             "[Link](/readings/01-readings/#review-the-rest)",
+             "[Link](/assignment/01-assignment/#class-slack-account-access)",
              "[Link](/assignment/01-assignment/#find-a-bad-graphic)",
              "[Link](https://www.datacamp.com/){target='_blank'}"))
 ```
