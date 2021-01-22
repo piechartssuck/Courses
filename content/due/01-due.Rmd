@@ -57,9 +57,9 @@ Description = c("Install Course Software",
                 "Find a bad graphic",
                 "Complete Introduction to R"),
 
-Location = c("[Link](/assignment/01-assignment/#class-slack-account-access-1)",
-             "[Link](/assignment/01-assignment/#verify-qualtrics-account-login-1)",
+Location = c("[Link](/resource/install/)",
              "[Link](/readings/01-readings/#read-things-1)",
+             "[Link](/01-readings/#review-the-rest-1)",
              "[Link](/assignment/01-assignment/#class-slack-account-access-1)",
              "[Link](/assignment/01-assignment/#find-a-bad-graphic-1)",
              "[Link](https://www.datacamp.com/){target='_blank'}"))
@@ -80,5 +80,6 @@ kable(wk_post,
 ```
 </center>
 
+*Note: These tasks are provided in a recommended order.*
 
 
