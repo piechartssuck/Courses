@@ -59,12 +59,10 @@ Description = c("Install Course Software",
 
 Location = c("[Link](/assignment/01-assignment/#class-slack-account-access-1)",
              "[Link](/assignment/01-assignment/#verify-qualtrics-account-login-1)",
-             "[Link](/readings/01-readings/#review-the-rest-1)",
-             "[Link](/assignment/01-assignment/#class-slack-account-access-1",
+             "[Link](/readings/01-readings/#read-things-1)",
+             "[Link](/assignment/01-assignment/#class-slack-account-access-1)",
              "[Link](/assignment/01-assignment/#find-a-bad-graphic-1)",
-             "[Link](https://www.datacamp.com/")
-
-)
+             "[Link](https://www.datacamp.com/){target='_blank'}"))
 ```
 
 ### What's Due?
@@ -81,5 +79,6 @@ kable(wk_post,
   column_spec(5, width = "15em") 
 ```
 </center>
+
 
 
