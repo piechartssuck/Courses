@@ -189,9 +189,9 @@
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The website should automatically detect your operating system (macOS or Windows) and show a big download button for it:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio-mac.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;If not, scroll down a little to the large table and choose the version of RStudio that matches your operating system.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio2.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio-windows.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Double click on the downloaded file (again, check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Double click on RStudio to run it (check your applications folder or start menu).&lt;/p&gt;

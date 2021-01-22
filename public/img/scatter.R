@@ -7,7 +7,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 rm(list = ls())
  
 library(tidyverse)
-library(viridis)
+library(here)
 library(showtext)
 font_add("Jost* Light", "Jost-300-Light.otf")
 font_add("Jost* Medium", "Jost-500-Medium.otf")
@@ -21,54 +21,56 @@ font_add("Canela Text Bold", "Canela-Bold.otf")
 font_add("Canela Text Black", "Canela-Black.otf")
 showtext_auto()
 
-  n <- 9000 # number of participants
-  position <- 1:n
-  evaluand <- factor(rep(1:8, each=n/8))
-  p.value <- runif(n)
-  emotib <- tibble(Evaluation = position, 
-                   Sentiment = evaluand, 
-                   p.value = p.value,
-                   Scale = log(p.value)^2) %>%
-            mutate(Sentiment = case_when(
-              Sentiment == 8 ~ "Trust",
-              Sentiment == 7 ~ "Surprise",
-              Sentiment == 6 ~ "Sadness",
-              Sentiment == 5 ~ "Joy",
-              Sentiment == 4 ~ "Fear",
-              Sentiment == 3 ~ "Disgust",
-              Sentiment == 2 ~ "Anticipation",
-              Sentiment == 1 ~ "Anger"
-            ))
+bird_counts <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv")
 
-scatter <- ggplot(emotib %>% mutate(log.p.value = -log(p.value)),
-         aes(x = Evaluation, 
-             y = log.p.value/pi^2*2, 
-             color = Sentiment,
-             fill = Sentiment,
-             size = Scale)) +
-    geom_point(show.legend = TRUE) +
-    scale_color_viridis_d(option = "D",
-                          alpha = 0.50) +
-    scale_fill_viridis_d(option = "E",
-                         direction = -1) +
-    coord_flip() +
-    theme_void() +
-    theme(legend.position = "bottom",
-    legend.direction = "horizontal",
-    text = element_text(family="Canela Text Bold"),
-    axis.title.y = element_text(family="Canela Text Medium",
-                                angle = 90, 
-                                vjust = 0.5)
-        ) +
-    guides(size = FALSE,
-           color = guide_legend(override.aes = list(size=3)))
 
-scatter
+confused <- bird_counts %>%
+  mutate(
+    pair = case_when(
+      species == "Hairy Woodpecker" | 
+        species == "Downy Woodpecker" ~ "A",
+      species == "American Tree Sparrow" | 
+        species == "House Sparrow" ~ "B",
+      species == "Sharp-shinned Hawk" | 
+        species == "Cooper's Hawk" ~ "C",
+      TRUE ~ "")
+  ) %>%
+  filter(pair != 0)
 
-  ggsave("scatter.png",
-         scatter,
-         width = 210, 
-         height = 50, 
-         units = "mm")
+confusedSplit <- split(confused, f = confused$pair)
+
+confusedSplit$A %>%
+  filter(how_many_counted < 20)
+
+p1 <- confusedSplit$A %>%
+  filter(how_many_counted < 280) %>%
+  ggplot(aes(year, how_many_counted, group = species)) +
+  geom_area(aes(fill = species), alpha = 0.98, show.legend = FALSE) +
+  scale_y_continuous(position = "right", breaks = c(0, 20),
+                     expand = expansion(mult = 2.3)) +
+  scale_fill_manual(values = c("#0072cf", "#ffe71a")) +
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = "transparent",colour = NA),
+    plot.background = element_rect(fill = "transparent",colour = NA),
+    legend.position = "top",
+    legend.direction = "vertical",
+    panel.grid = element_blank(),
+    axis.line.x = element_line(size = rel(0.4)),
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.ticks = element_line(),
+    axis.ticks.length = unit(5, "points"),
+    panel.spacing = unit(3, "lines")
+  ) +
+  theme_void()
+
+p1
+
+ggsave("scatter.png", p1, bg = "transparent")
+
+# adapted from https://github.com/gkaramanis/tidytuesday/blob/master/week-25/xBirdCounts.R
   
   

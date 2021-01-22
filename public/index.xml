@@ -32,6 +32,244 @@
     
     <item>
       <title>Friends Don&#39;t Let Friends Use Pie Charts</title>
+      <link>https://edp693e.theoreticalphysed.com/assignment/01-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/assignment/01-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#class-slack-account-access&#34;&gt;Class Slack Account Access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#find-a-bad-graphic&#34;&gt;Find a bad graphic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Timers Note&lt;/h2&gt;
+&lt;p&gt;You’ll see class related tasks posted here on a weekly basis.&lt;/p&gt;
+&lt;div id=&#34;class-slack-account-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
+&lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Go to the course &lt;a href=&#34;2021edp693e.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;find-a-bad-graphic&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Find a bad graphic&lt;/h3&gt;
+&lt;p&gt;Find a bad plot in the media or online.&lt;br /&gt;
+Submit via eCampus a &lt;code&gt;.pdf&lt;/code&gt; or &lt;code&gt;.docx&lt;/code&gt; (Word) document that includes:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;A cover page with your name and a title in the upper left hand corner.&lt;/li&gt;
+&lt;li&gt;A copy of your plot.&lt;/li&gt;
+&lt;li&gt;Information on the source (a citation or webpage address).&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Short succinct answers to the following questions:
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;Is it bad because it is misleading, or because it is unclear or both?&lt;/li&gt;
+&lt;li&gt;How would you improve it?&lt;/li&gt;
+&lt;li&gt;What rules (from Wainer’s paper) does it follow and which principles (Chapter 2 in Tufte) does it violate?&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Please post a copy of your entire task to the Slack channel &lt;a href=&#34;https://2021edp693e.slack.com/archives/C01K23SKK1D&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#week1-class-task&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Friends Don&#39;t Let Friends Use Pie Charts</title>
+      <link>https://edp693e.theoreticalphysed.com/due/01-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/due/01-due/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Data Camp
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+R
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Slack
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Install Course Software
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/resource/install/&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Read a few things
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/readings/01-readings/#read-things&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Look over the website
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/readings/01-readings/#review-the-rest&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Get into the course Slack account
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Find a bad graphic
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#find-a-bad-graphic&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Complete Introduction to R
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
+&lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;em&gt;Note: These tasks are provided in a recommended order.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Friends Don&#39;t Let Friends Use Pie Charts</title>
       <link>https://edp693e.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp693e.theoreticalphysed.com/lesson/01-lesson/</guid>
@@ -113,122 +351,6 @@
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;although that is very important!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Familiar with the Course</title>
-      <link>https://edp693e.theoreticalphysed.com/due/01-due/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp693e.theoreticalphysed.com/due/01-due/</guid>
-      <description>
-&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What’s Due?&lt;/h3&gt;
-&lt;center&gt;
-&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
-eCampus
-&lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
-Slack
-&lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
-Description
-&lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
-Location
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Introduce yourself in Slack.
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Verify your Qualtrics account
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#verify-qualtrics-account-login-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Review the website
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp693e.theoreticalphysed.com/readings/01-readings/#review-the-rest-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Draw an Evaluation
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/01-assignment/#drawing-evaluations-1&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/center&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -413,9 +535,9 @@ Draw an Evaluation
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The website should automatically detect your operating system (macOS or Windows) and show a big download button for it:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio-mac.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;If not, scroll down a little to the large table and choose the version of RStudio that matches your operating system.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio2.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/img/install/install-r-rstudio-windows.png&#34; width=&#34;75%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Double click on the downloaded file (again, check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Double click on RStudio to run it (check your applications folder or start menu).&lt;/p&gt;
@@ -1509,9 +1631,7 @@ You can check out more about what I do here:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp693e.theoreticalphysed.com/syllabus/</guid>
       <description>
-&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/syllabus/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1519,13 +1639,12 @@ You can check out more about what I do here:
 &lt;li&gt;&lt;a href=&#34;#faq&#34;&gt;FAQ&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#is-the-course-content-difficult&#34;&gt;Is the course content difficult?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#is-there-a-lot-of-theory&#34;&gt;Is there a lot of theory?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#is-r-difficult&#34;&gt;Is R difficult?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-if-i-find-a-mistake&#34;&gt;What if I find a mistake?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#course-materials&#34;&gt;Course materials&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#texts&#34;&gt;Texts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#software&#34;&gt;Software&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#note-online-help&#34;&gt;Note: Online help&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assignments-and-grades&#34;&gt;Assignments and Grades&lt;/a&gt;
@@ -1590,10 +1709,15 @@ You can check out more about what I do here:
 &lt;h2&gt;Course objectives&lt;/h2&gt;
 &lt;p&gt;Students will be expected to develop the following knowledge, skills, and abilities, including but not limited to:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Acquiring knowledge of basic models and principles of program evaluation&lt;/li&gt;
-&lt;li&gt;Developing an understanding of program evaluation practice by designing and conducting an evaluation of a program relevant to their degree and individual interests.&lt;/li&gt;
-&lt;li&gt;Learning how to write an evaluation report to meet stakeholder information and decision-making needs Explaining the different types and uses of variables in a research study.&lt;/li&gt;
-&lt;li&gt;Gaining an understanding of ethical, social, political, and cultural issues confronted by program evaluators.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Defining and understanding the purpose of visualization.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Delineating between various types and classifications of visualization techniques.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Demonstrating how to locate and utilize publicly available data sets.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Explaining the history of data visualization.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Outlining methods and techniques for establishing and evaluating reliability and validity of data sets.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Obtaining an understanding of ethical, social, political, and cultural issues confronted by data scientists.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Presenting and reporting findings to a diverse audience.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Understanding how to construct data visualizations that present ideas effectively while being visually appealing and functional.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;utilizing evaluative criteria to assess proper outlets of free data.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;faq&#34; class=&#34;section level2&#34;&gt;
@@ -1602,9 +1726,9 @@ You can check out more about what I do here:
 &lt;h3&gt;Is the course content difficult?&lt;/h3&gt;
 &lt;p&gt;You’ve probably heard an answer like this before: &lt;em&gt;At times some of the material can be dense.&lt;/em&gt; Well that isn’t much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;is-there-a-lot-of-theory&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Is there a lot of theory?&lt;/h3&gt;
-&lt;p&gt;Evaluation is a practice based field so much of what you will come across will align with that notion. With that said, while I have tried to get rid of any and all theory, some basic concepts need an underlying construct or idea.&lt;/p&gt;
+&lt;div id=&#34;is-r-difficult&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Is R difficult?&lt;/h3&gt;
+&lt;p&gt;Learning R can be especially challenging at first—it’s akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated…and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-if-i-find-a-mistake&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What if I find a mistake?&lt;/h3&gt;
@@ -1613,47 +1737,45 @@ You can check out more about what I do here:
 &lt;/div&gt;
 &lt;div id=&#34;course-materials&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Course materials&lt;/h2&gt;
-&lt;p&gt;There are two texts, though you will receive some supplementary materials in the course as well.&lt;/p&gt;
+&lt;p&gt;There are four optional texts and two software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.&lt;/p&gt;
 &lt;div id=&#34;texts&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Texts&lt;/h3&gt;
-&lt;div id=&#34;required&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Required&lt;/h4&gt;
-&lt;p&gt;We’ll rely on the texts below. Both are available through the WVU library &lt;a href=&#34;https://library.wvu.edu/&#34; target=&#34;_blank&#34;&gt;WVU library&lt;/a&gt;:&lt;/p&gt;
+&lt;div id=&#34;optional-reference&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Optional Reference&lt;/h4&gt;
+&lt;p&gt;We’ll rely on the texts below. All are available through the WVU library &lt;a href=&#34;https://library.wvu.edu/&#34; target=&#34;_blank&#34;&gt;WVU library&lt;/a&gt; or in an online capacity:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Davidson, E. J. (2007). &lt;em&gt;Evaluation methodology basics: The nuts and bolts of sound evaluation&lt;/em&gt; (1st ed.). SAGE.
+&lt;li&gt;Wickham, H., Navarro, D. &amp;amp; Pedersen, T.L. (2021). &lt;em&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt; (2nd and 3rd eds.). Springer.
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://libwvu.on.worldcat.org/oclc/646022580&#34; target=&#34;_blank&#34;&gt;Digital edition&lt;/a&gt; (free!)&lt;/li&gt;
-&lt;li&gt;Hardcover edition (not free) - ISBN: 9780761729307&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ggplot2-book.org/index.html&#34; target=&#34;_blank&#34;&gt;Digital editions&lt;/a&gt; (free!)&lt;/li&gt;
+&lt;li&gt;Hardcover edition (not free) - ISBN: 9783319242750&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;American Psychological Association. (2020). &lt;em&gt;Publication manual of the American Psychological Association&lt;/em&gt; (7th ed.). (ISBN: 978-1433832161)
+&lt;li&gt;Wickham, H. (2021). &lt;em&gt;Mastering Shiny&lt;/em&gt; (1st ed.). O’Reilly Media.
 &lt;ul&gt;
-&lt;li&gt;Spiral bound edition (not free though the WVU library have copies of the official &lt;a href=&#34;https://libwvu.on.worldcat.org/oclc/1111952681&#34; target=&#34;_blank&#34;&gt;paperback variant&lt;/a&gt; - ISBN: 978143383217&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mastering-shiny.org/&#34; target=&#34;_blank&#34;&gt;Digital edition&lt;/a&gt; (free!)&lt;/li&gt;
+&lt;li&gt;Hardcover edition (not free) - ISBN: 9781492047384&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;optional&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Optional&lt;/h4&gt;
+&lt;li&gt;Wickham, H. (2021). &lt;em&gt;R for Data Science&lt;/em&gt; (1st ed.). O’Reilly Media.
 &lt;ul&gt;
-&lt;li&gt;Mertens, D. M. (2018). &lt;em&gt;Mixed methods design in evaluation&lt;/em&gt;. SAGE.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/&#34; target=&#34;_blank&#34;&gt;Digital edition (web)&lt;/a&gt; (free!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://libwvu.on.worldcat.org/oclc/966429425&#34; target=&#34;_blank&#34;&gt;Digital edition (WVU libraries)&lt;/a&gt; (free!)&lt;/li&gt;
+&lt;li&gt;Hardcover edition (not free) - ISBN: 9781491910399&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Sleeper, R. (2021). &lt;em&gt;Innovative Tableau: 100 More Tips, Tutorials, and Strategies&lt;/em&gt; (1st ed.). O’Reilly Media.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://libwvu.on.worldcat.org/oclc/1107798872&#34; target=&#34;_blank&#34;&gt;Digital edition&lt;/a&gt; (free!)&lt;/li&gt;
+&lt;li&gt;Hardcover edition (not free) - ISBN: 9781492075653&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;software&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Software&lt;/h3&gt;
-&lt;div id=&#34;quatrics&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Quatrics&lt;/h4&gt;
-&lt;p&gt;You will need access to your WVU &lt;a href=&#34;https://wvu.qualtrics.com/&#34; target=&#34;_blank&#34;&gt;Qualtrics&lt;/a&gt; account. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;callto:%20304-293-4444&#34;&gt;304-293-4444&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;r-and-rstudio-optional&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;R and RStudio (Optional)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Again, this is totally optional but may interest some of you. If this is the case, please let me know and I will add you to the training modules.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;While required for most of the methods courses I teach, you have the option in this course to learn about the open source (and free!)statistical platform &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; via the software &lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt;. &lt;strong&gt;You can think of R as an engine and RStudio as a car dashboard&lt;/strong&gt; — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that&lt;/p&gt;
+&lt;div id=&#34;r-and-rstudio&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;R and RStudio&lt;/h4&gt;
+&lt;p&gt;You will do all of your analysis with the open source (and free!) programming language &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt;. You will use &lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; as the main program to access R. &lt;strong&gt;Think of R as an engine and RStudio as a car dashboard&lt;/strong&gt; — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that&lt;/p&gt;
 &lt;div class=&#34;text-center&#34;&gt;
 &lt;p&gt;&lt;strong&gt;you do not need to have any programming experience to use R&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34; target=&#34;_blank&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now or just wabt to test it out.&lt;/p&gt;
-&lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. As you learn more, you’ll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.&lt;/p&gt;
+&lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34; target=&#34;_blank&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.&lt;/p&gt;
+&lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you’ll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.&lt;/p&gt;
 &lt;p&gt;You can &lt;a href=&#34;https://edp693e.theoreticalphysed.com/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1662,12 +1784,12 @@ You can check out more about what I do here:
 &lt;p&gt;Data science and statistical programming can be difficult. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!&lt;/p&gt;
 &lt;p&gt;But there are multiple resources online to help.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;First you will have access to &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R’s initial steep learning curve won’t feel much like an uphill battle.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;First you will have access to &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt; which allows you to relieve professional training that otherwise costs a lot of money. Is it perfect and flashy? Nope but it is interactive and if you pay attention, then R’s initial steep learning curve won’t feel like an uphill battle.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Second two of the most important are &lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34;&gt;StackOverflow&lt;/a&gt; (a Q&amp;amp;A site with hundreds of thousands of answers to all sorts of programming questions) and &lt;a href=&#34;https://community.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio Community&lt;/a&gt; (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)). I freely admit that StackOverflow has saved me multiple hours of frustration. Just note if you have a syntax or process issue, both sites require you to produce a &lt;a href=&#34;https://stackoverflow.com/help/minimal-reproducible-example&#34; target=&#34;_blank&#34;&gt;minimally reproducible example&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Third using Twitter you can post R-related questions and content with &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;. The community there is exceptionally generous and helpful.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Fifth we have a class chatroom at &lt;a href=&#34;2021edp617.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header &lt;strong&gt;EDP 617 “the title of your email”&lt;/strong&gt; where the title of your email is given without the quotes. If you do email me, please include the following:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Fifth we have a class chatroom at &lt;a href=&#34;2021edp693e.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; where you can poise a question. &lt;strong&gt;I will monitor Slack regularly and will respond quickly.&lt;/strong&gt; (This is a rare instances where I keep notifications on so please utilize it!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header &lt;strong&gt;EDP 693e “the title of your email”&lt;/strong&gt; where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).&lt;/li&gt;
 &lt;li&gt;A copy of your data set (if applicable).&lt;/li&gt;
@@ -1680,136 +1802,125 @@ You can check out more about what I do here:
 &lt;/div&gt;
 &lt;div id=&#34;assignments-and-grades&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Assignments and Grades&lt;/h2&gt;
-&lt;p&gt;You can find up to date descriptions for all the assignments on the &lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
-&lt;center&gt;
-&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;p&gt;You can find descriptions for all the assignments on the &lt;a href=&#34;https://edp693e.theoreticalphysed.com/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;centered-table&#34;&gt;
+&lt;table style=&#34;width:67%;&#34;&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;40%&#34; /&gt;
+&lt;col width=&#34;12%&#34; /&gt;
+&lt;col width=&#34;13%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
-Percent
-&lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
-Assignment
-&lt;/th&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Assignment&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Points&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Percent&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-15
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Weekly Tasks
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;In Class Tasks&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-15
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Synchronous Meetings
-&lt;/td&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Out of Class Tasks&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-5
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Evaluation Prospectus
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Data Camp Assessments&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-20
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Needs Assessment
-&lt;/td&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;R Project&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-15
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Evaluation Proposal
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;R Presentation&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-25
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Final Report
-&lt;/td&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tableau Project&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-5
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-Presentation of Results
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Tableau Presentation&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Final Project Narrative&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;400&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Final Project Presentation&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Course Survey&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;100&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Extra Tasks&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;300&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;15%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Total&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;—&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;center&gt;
-&lt;table class=&#34;table table-striped table-hover table-condensed table-responsive&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;div class=&#34;centered-table&#34;&gt;
+
+
+&lt;table style=&#34;width:25%;&#34;&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;11%&#34; /&gt;
+&lt;col width=&#34;13%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
-Grade
-&lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
-Range
-&lt;/th&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Grade&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Range&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-A
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-90–100%
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;90–100%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-B
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-80%-89%
-&lt;/td&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;80%-89%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-C
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-70–79%
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;70–79%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-D
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-60–69%
-&lt;/td&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;60–69%&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 5em; &#34;&gt;
-F
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 12em; &#34;&gt;
-&amp;lt; 60%
-&lt;/td&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;F&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt; 60%&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/center&gt;
+&lt;div&gt;
+
 &lt;div id=&#34;your-hours&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Your hours&lt;/h3&gt;
 &lt;p&gt;Please watch this video:&lt;/p&gt;
@@ -1824,7 +1935,7 @@ F
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Late work&lt;/strong&gt;: Barring the three main course tasks, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Participation&lt;/strong&gt;: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Justifications&lt;/strong&gt;: On any submission, you must justiofy any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that &lt;em&gt;not only is the Earth flat, the core is actually made out of tiramisu and moscato&lt;/em&gt;, the first question you should be asking is &lt;em&gt;what’s your evidence?&lt;/em&gt; possibly followed by &lt;em&gt;is the core delicious?&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Justifications&lt;/strong&gt;: On any submission, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that &lt;em&gt;not only is the Earth flat, the core is actually made out of tiramisu and moscato&lt;/em&gt;, the first question you should be asking is &lt;em&gt;what’s your evidence?&lt;/em&gt; possibly followed by &lt;em&gt;is the core delicious?&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Rubrics&lt;/strong&gt;: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:&lt;br&gt;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.&lt;/li&gt;
