@@ -150,4 +150,8 @@ sticker(cur,
         h_color="#293840",
         filename="icon.png")
 
+ggsave("slack_hex.png",
+       cur,
+       bg = "#293840")
+
 # init adapted from https://github.com/silaarts/TidyTuesday/blob/master/TidyTuesday_Beerawards.R
