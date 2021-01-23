@@ -46,6 +46,7 @@ spiral <- ggplot(spiral_data, aes(x = day_num %% 365,
           guides(fill = FALSE,
                  color = FALSE)
 
+spiral
 
 # Save the various types of hex ----
 sticker(spiral, 
@@ -85,5 +86,9 @@ sticker(spiral,
         h_fill="#292A30",
         h_color="#293840",
         filename="icon.png")
+
+ggsave("slack_hex.png",
+       spiral,
+       bg = "#293840")
 
 # init borrowed from https://stackoverflow.com/questions/52939337/how-to-create-a-time-series-spiral-graph-using-r
