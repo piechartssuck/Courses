@@ -156,9 +156,6 @@ assignments %>%
 
 <br />
 
-## Due Dates & Weekly Material
-All materials are due on a weekly basis by *Sunday at 11:59 PM* unless otherwise noted. New material will be posted on the course website by *Tuesday afternoon by 12:00 PM*. 
-
 <center>
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
@@ -177,6 +174,8 @@ grading %>%
 
 </center>
 
+<br>
+All materials are due on a weekly basis by *Sunday at 11:59 PM* unless otherwise noted. New material will be posted on the course website by *Tuesday afternoon by 12:00 PM*. 
 
 ### Your hours
 
