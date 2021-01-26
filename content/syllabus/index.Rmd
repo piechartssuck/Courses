@@ -104,14 +104,13 @@ But there are multiple resources online to help.
   - A copy of your data set (if applicable).
   - A copy of your script or Rmarkdown document with comments throughout so I know what you've tried historically leading up to the issue.
 
-I have a mail filter that will automatically bring your email to a top priority status.^ [In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
+I have a mail filter that will automatically bring your email to a top priority status.^[In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
 
 You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you're more likely to remember things you've figured out rather than those you've been shown or told. 
 
 ## Assignments and Grades
 
 You can find up to date descriptions for all the assignments on the [assignments page](/assignment/).
-
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(

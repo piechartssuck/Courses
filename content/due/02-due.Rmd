@@ -1,0 +1,72 @@
+---
+title: "Rethinking the Way You Think"
+linktitle: "Week 2: Rethinking the Way You Think"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+  
+"eCampus" = c(unchecked, 
+              unchecked, 
+              unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            checked,
+            checked,
+            checked,
+            checked),
+
+Description = c("Take the Considering Program Evaluation survey",
+                "Read two articles and create postings",
+                "Respond to a `#pictures-of-evaluation` post",
+                "Describe a definition of evaluation you identify with",
+                "Assess logistics when considering possible teammates"),
+
+Location = c("[Link](/assignment/02-assignment/#evaluation-teams)^[Unique link sent to your WVU Mix e-mail account.]",
+             "[Link](/readings/02-readings/#read-some-papers)",
+             "[Link](/lesson/02-lesson/#responses)",
+             "[Link](/lesson/02-lesson/#evaluation-definitions)",
+             "[Link](/assignment/02-assignment/#evaluation-teams)")
+
+)
+```
+
+### What's Due?
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "15em") 
+```
+</center>
+
+

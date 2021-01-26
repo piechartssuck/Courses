@@ -1,0 +1,24 @@
+---
+title: "Rethinking the Way You Think"
+linktitle: "Week 2: Rethinking the Way You Think"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Evaluation Phase
+We are currently in the pre-evaluation phase. This involves
+
+  - Gathering a team
+  - Thinking about potential programs
+  - Creating a prospectus
+
+For a look at what to consider when choosing teammates, take a look at [a] [Manager's guide to evaluation](https://www.betterevaluation.org/en/managers_guide){target="_blank"} by *Jane Davidson*.
