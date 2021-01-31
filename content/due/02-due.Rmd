@@ -50,7 +50,7 @@ Description = c("Read a couple papers",
                 "Complete two modules"),
 
 Location = c("[Link](/readings/02-readings/#read-things)",
-             "[Link](/assignment/02-assignment.knit/#create-plots-in-base-r)",
+             "[Link](/assignment/02-assignment/#create-plots-in-base-r-1)",
              "[Link](https://www.datacamp.com/){target='_blank'}")
 
 )
