@@ -1,0 +1,110 @@
+---
+title: "Base R is a Thing"
+linktitle: "Week 2: Base R is a Thing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#create-plots-in-base-r">Create Plots in Base R</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #733367;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="create-plots-in-base-r" class="section level3">
+<h3>Create Plots in Base R</h3>
+<p>Use the file <code>AlcoholConsumption.csv</code> to create three plots such that two are misleading or misrepresent the data while the other is indicative of what the data truly is. You are asked to stick to Base R even if you have working knowledge of <code>tidyverse</code> commands, though this is not a requirement. Please submit this as a single R script replacing only the areas that ask you to do so.</p>
+<pre class="r"><code># Replace this with your name 
+
+# Misleading/misrepresented 1 ----
+## Put your entire code for the plot under this line ----
+
+# ~ Replace this with a basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# Misleading/misrepresented 2 ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# True version ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----</code></pre>
+<a href="data:text/plain;base64,IyBSZXBsYWNlIHRoaXMgd2l0aCB5b3VyIG5hbWUgCgojIE1pc2xlYWRpbmcvbWlzcmVwcmVzZW50ZWQgMSAtLS0tCiMjIFB1dCB5b3VyIGVudGlyZSBjb2RlIGZvciB0aGUgcGxvdCB1bmRlciB0aGlzIGxpbmUgLS0tLQoKIyB+IFJlcGxhY2UgdGhpcyB3aXRoIGEgYmFzaWMgZXhwbGFuYXRpb24gb2Ygd2h5IGl0IGlzIG1pc2xlYWRpbmcgYW5kL29yIG1pc3JlcHJlc2VudGVkIC0tLS0KCiMgLS0KCiMgTWlzbGVhZGluZy9taXNyZXByZXNlbnRlZCAyIC0tLS0KIyMgIyMgUHV0IHlvdXIgZW50aXJlIGNvZGUgZm9yIHRoZSBwbG90IHVuZGVyIHRoaXMgbGluZSAtLS0tCgojIH4gQSBiYXNpYyBleHBsYW5hdGlvbiBvZiB3aHkgaXQgaXMgbWlzbGVhZGluZyBhbmQvb3IgbWlzcmVwcmVzZW50ZWQgLS0tLQoKCiMgLS0KCiMgVHJ1ZSB2ZXJzaW9uIC0tLS0KIyMgIyMgUHV0IHlvdXIgZW50aXJlIGNvZGUgZm9yIHRoZSBwbG90IHVuZGVyIHRoaXMgbGluZSAtLS0tCgojIH4gQSBiYXNpYyBleHBsYW5hdGlvbiBvZiB3aHkgaXQgaXMgbWlzbGVhZGluZyBhbmQvb3IgbWlzcmVwcmVzZW50ZWQgLS0tLQoKCgo=" download="Week 2 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+<a href="data:text/csv;base64,77u/UmVnaW9uLENvdW50cnksQ29uc3VtcHRpb24gaW4gYmlsbGlvbiBsaXRlcnMNCkFzaWEsQ2hpbmEsNTQuMjkNCk5vcnRoIEFtZXJpY2EsVW5pdGVkIFN0YXRlcywzMC41DQpTb3V0aCBBbWVyaWNhLEJyYXppbCwxNC4wNA0KRXVyb3BlLEdlcm1hbnksMTEuNTYNCkV1cmFzaWEsUnVzc2lhLDkuNQ0KQXNpYSxKYXBhbiw4Ljg5DQpDZW50cmFsIEFtZXJpY2EsTWV4aWNvLDguNjENCkV1cm9wZSxVbml0ZWQgS2luZ2RvbSw3LjQ3DQpBc2lhLEluZGlhLDYuMzENCkV1cm9wZSxTcGFpbiw1LjE0" download="AlcoholConsumption.csv">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Data</button>
+</a>
+<p><br>
+Notice that there are four dashes (<code>----</code>) after the text in every <code>#</code> except on the line where you should place your name. This provides a nested outline of your script that is easier to follow, especially if they get long.</p>
+<p>There are a few ways to get to your outline. As you transition from a dependence on your mouse/trackpad to the <em>old school</em> keyboard, having a working knowledge of shortcuts creates a less disruptive experience than say having to grab that mouse/trackpad everytime you want to do something other than typing. To access the outline of your sections and subsections within an R script, hold down the keys <kbd>control</kbd> <kbd>shift</kbd> <kbd>o</kbd><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>To learn more about nesting, take a look at this post titled <a href="%22https://blog.rstudio.com/2020/12/02/rstudio-v1-4-preview-little-things/%22" target="_blank">The Little Things</a>.</p>
+<p>Please submit your script to <a href="https://ecampus.wvu.edu/" target="_blank">eCampus</a> under <strong>Week 2 Out of Class Task</strong>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The letter <em>o</em> not zero.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

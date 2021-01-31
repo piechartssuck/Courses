@@ -1,0 +1,124 @@
+---
+title: "Base R is a Thing"
+linktitle: "Week 2: Base R is a Thing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #733367;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(downloadthis)
+library(here)
+```
+  
+### Create Plots in Base R
+Use the file `AlcoholConsumption.csv` to create three plots such that two are misleading or misrepresent the data while the other is indicative of what the data truly is. You are asked to stick to Base R even if you have working knowledge of `tidyverse` commands, though this is not a requirement. Please submit this as a single R script replacing only the areas that ask you to do so. 
+
+```{r, eval= FALSE}
+# Replace this with your name 
+
+# Misleading/misrepresented 1 ----
+## Put your entire code for the plot under this line ----
+
+# ~ Replace this with a basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# Misleading/misrepresented 2 ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# True version ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----
+
+```
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "exscripts", "week2outline.R"),
+  output_name = "Week 2 Script Outline",
+  button_label = "Download the Script",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "data", "AlcoholConsumption.csv"),
+  output_name = "AlcoholConsumption",
+  button_label = "Download the Data",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+<br>
+Notice that there are four dashes (`----`) after the text in every `#` except on the line where you should place your name. This provides a nested outline of your script that is easier to follow, especially if they get long. 
+
+There are a few ways to get to your outline. As you transition from a dependence on your mouse/trackpad to the *old school* keyboard, having a working knowledge of shortcuts creates a less disruptive experience than say having to grab that mouse/trackpad everytime you want to do something other than typing. To access the outline of your sections and subsections within an R script, hold down the keys <kbd>control</kbd> <kbd>shift</kbd> <kbd>o</kbd>^[The letter *o* not zero.]
+
+To learn more about nesting, take a look at this post titled [The Little Things]("https://blog.rstudio.com/2020/12/02/rstudio-v1-4-preview-little-things/"){target="_blank"}.
+
+Please submit your script to [eCampus](https://ecampus.wvu.edu/){target="_blank"} under **Week 2 Out of Class Task**.
+

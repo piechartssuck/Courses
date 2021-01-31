@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/piechartssuck/Courses/edp617'
+  repo_url: 'https://github.com/piechartssuck/Courses/edp693e'
   content_dir: ''
   repo_branch: master
   editable:
@@ -100,7 +100,7 @@ course:
   dates: "January 19 - May 8"
   github: piechartssuck/Courses/tree/edp693e
   copyrightYear: "2021"
-  slack: "https://2021edp693e.slack.com"
+  slack: "http://2021edp693e.slack.com"
 
 instructor:
   name: Dr. Abhik Roy

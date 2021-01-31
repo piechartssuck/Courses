@@ -40,6 +40,10 @@
   </url>
   
   <url>
+    <loc>https://edp693e.theoreticalphysed.com/example/01-example/</loc>
+  </url>
+  
+  <url>
     <loc>https://edp693e.theoreticalphysed.com/lesson/01-lesson/</loc>
   </url>
   
@@ -48,7 +52,23 @@
   </url>
   
   <url>
-    <loc>https://edp693e.theoreticalphysed.com/example/01-example/</loc>
+    <loc>https://edp693e.theoreticalphysed.com/assignment/02-assignment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp693e.theoreticalphysed.com/due/02-due/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp693e.theoreticalphysed.com/example/02-example/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp693e.theoreticalphysed.com/lesson/02-lesson/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp693e.theoreticalphysed.com/readings/02-readings/</loc>
   </url>
   
   <url>
@@ -98,6 +118,10 @@
   
   <url>
     <loc>https://edp693e.theoreticalphysed.com/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp693e.theoreticalphysed.com/lesson/basevisuals/</loc>
   </url>
   
   <url>

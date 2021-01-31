@@ -16,6 +16,4 @@ design:
 ---
 
 {{< courseinfo >}}
-
-
 {{< figure src="/img/scatter.png" alt="Scatterish Plot" >}}

@@ -23,7 +23,6 @@ showtext_auto()
 
 bird_counts <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv")
 
-
 confused <- bird_counts %>%
   mutate(
     pair = case_when(
@@ -48,7 +47,7 @@ p1 <- confusedSplit$A %>%
   geom_area(aes(fill = species), alpha = 0.98, show.legend = FALSE) +
   scale_y_continuous(position = "right", breaks = c(0, 20),
                      expand = expansion(mult = 2.3)) +
-  scale_fill_manual(values = c("#0072cf", "#ffe71a")) +
+  scale_fill_manual(values = c("#419873", "#edc951")) +
   theme(
     panel.grid.major = element_blank(), 
     panel.grid.minor = element_blank(),
@@ -65,11 +64,16 @@ p1 <- confusedSplit$A %>%
     axis.ticks.length = unit(5, "points"),
     panel.spacing = unit(3, "lines")
   ) +
-  theme_void()
+  theme_void() +
+  theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
 
 p1
 
-ggsave("scatter.png", p1, bg = "transparent")
+ggsave("scatter.png", 
+       p1, 
+       bg = "transparent",
+       width=11, 
+       height=8.5)
 
 # adapted from https://github.com/gkaramanis/tidytuesday/blob/master/week-25/xBirdCounts.R
   

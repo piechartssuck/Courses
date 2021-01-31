@@ -1,0 +1,24 @@
+---
+title: "Base R is a Thing"
+linktitle: "Week 2: Base R is a Thing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have two modules to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular these are
+
+- Introduction to Data in R
+- Data Visualization in R
+
+For more information about these, take a look at the tentative schedule.
+

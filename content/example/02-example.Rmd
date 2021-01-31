@@ -1,0 +1,939 @@
+---
+title: "Base R is a Thing"
+linktitle: "Week 2: Base R is a Thing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006d77;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r echo=FALSE, message=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+# Getting Prepped
+
+## First Things First! Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1. Open up a new script by going to `File > New File > R Script`.
+2. Save it in a preferably empty folder as whatever you want.
+3. Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
+
+## Download Data
+Grab a zipped file containing all of the data you'll need in this walkthrough.
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "data", "Week2DataSets.zip"),
+  output_name = "Week2DataSets",
+  button_label = "Download the Data",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Foundational Structures
+
+Akin to how atoms were viewed as the building blocks of life, these are the basic structures of R. 
+
+- *vector* - The very basic structure of R where one type of information can be stored. These are given by a single row or column of things that have to be the same data type.
+    ```{r}
+    nothing_vector <- c()
+        
+    nothing_vector
+    ```
+    
+    ```{r}
+    number_vector <- c(1,2,3,4,5)
+        
+    number_vector
+    ```
+    
+    ```{r}
+    character_vector <- 
+      c(
+        "Oban", 
+        "Macallan", 
+        "Pittyvaich", 
+        "Balblair", 
+        "Glenmorangie"
+        )
+        
+    character_vector
+    ```
+
+- *object* - These are the different ways you can structure your data to do something with it. All objects are made up of one or more vectors.
+
+## Data Types
+
+There are six types of data that R can read on its own without the help of any other piece of software. These are known as atomic vectors where *atomic* means the vector only holds data of a single type
+
+1. character: "a", "swc"
+2. numeric: 2, 15.5
+3. integer: 2L (the L tells R to store this as an integer)
+4. logical: TRUE, FALSE
+5. complex: 1+4i (complex numbers with real and imaginary parts)^[Remember Algebra?]
+6. raw: 01010010
+
+## Classes
+
+A *class* is the blueprint that helps to create an object. These are
+
+- *matrix* - A two-dimensional object made up of rows and columns. These are essentially a bunch of vectors stacked on top or beside each other that have to be the same data type.
+    ```{r}
+    some_matrix <- matrix(c(1,1,2,3,5,8), nrow = 2, ncol = 3)
+        
+    some_matrix 
+    ```
+
+- *array* - A three-dimensional object made up of a bunch of matrices that have to be the same data type.
+    ```{r}
+    some_array <- array(1, dim = c(2, 3, 3))
+            
+    some_array
+    ```
+  
+- *dataframe* - Similar to a matrix, BUT columns can vary by data type.
+
+    ```{r}
+    some_df <- data.frame(col1 = 1:3, 
+                     col2 = c("take", "a", "nap"), 
+                     col3 = c(TRUE, FALSE, TRUE), 
+                     col4 = c(1.5, 3.2, pi))
+            
+    some_df
+    ```
+
+- *list* - A set of objects.
+    ```{r}
+    some_list <-list(1,2,3,4,5)
+                
+    some_list
+    ```
+
+### Example: 100% Fake Data
+
+```{r}
+height <- c(145,167,176,123,150) 
+weight <- c(51,63,64,40,55)
+```
+
+Both `height` and `weight` are called *variables* because they have been assigned a bunch of stuff which in this case are integers. Well we have these, might as well do something with them.
+
+```{r dev='png'}
+height <- c(145, 167, 176, 123, 150)
+weight <- c(51, 63, 64, 40, 55)
+
+plot(height,weight)
+```
+
+Well that wasn't exciting at all was it? It'll get interesting soon.
+
+R provides many functions to examine features of vectors and other objects, for example
+
+1. `class()` - what kind of object is it (high-level)?
+2. `typeof()` - what is the object’s data type (low-level)?
+3. `length()` - how long is it? What about two dimensional objects?
+4. `attributes()` - does it have any metadata? (underlying set of data that describes and gives information about other data)
+
+```{r}
+class(weight) # Yup there are numbers so numeric makes sense.
+```
+
+```{r}
+typeof(weight) # You see the term 'double' here but you may also see 'single' or 'integer'. All this refers to is the precision of the number and you can assume they are all integers.
+```
+
+```{r}
+length(weight) # There are 5 objects in weight so length(weight) = 5 makes sense.
+```
+
+```{r}
+attributes(weight) # Null since there isn't any other information except for what you see.
+```
+
+# Data Frames - A Format You Absolutely Want
+We want all of our data to be in this form. A *data frame* is a table or a two-dimensional array-like structure in which each column contains values of one variable and each row contains one set of values from each column. Characteristics of a data frame are as follows and in no particular order:
+
+1. The column names should be non-empty.
+2. The row names should be unique.
+3. The data stored in a data frame can be of numeric, factor or character type.
+4. Each column should contain same number of data items.
+
+*NOTE: You can always check if a variable is a data frame by `is.data.frame(whatever)`*
+
+## Importing and Viewing Data
+
+Read in the file `USpop2010to2017.csv` that has data on US population estimates from 2010 to 2017. You can do this in multiple ways but for now and since you're getting used to menu. To bring in the file, go to the `Environment` tab in the upper right window and then `Import Dataset > From Text (readr) > Browse` to find your file and load it in. Before clicking on the `Import` button, name the variable `population` under `Import options`. You should get an output similar to the one shown below. 
+
+But know that we will be moving away from the idea of using a mouse/trackpad to do things because it wastes time and is generally disruptive. Instead we'll use the file's *relative path*, that is the locations of all other files in comparison to your script to bring in data. If the `USpop2010to2017.csv` data set is in the same folder as your script, then run the following command
+
+```{r echo=TRUE, eval=FALSE}
+population <- read.csv("USpop2010to2017.csv", 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) 
+```
+
+```{r echo=FALSE}
+population <- read.csv(here::here("static", "data", "USpop2010to2017.csv"))
+```
+
+Now take a look at the file by running 
+
+```{r}
+population
+```
+
+Well that is long and annoying. We can use the `head()` command to make it only display six lines.
+```{r}
+head(population)
+```
+
+or any number actually
+
+```{r}
+head(population, 4)
+```
+
+You can actually look at the entire dataset in a spreadsheet like window by using
+
+```{r, eval=FALSE}
+View(population)
+```
+
+If you want to know more about how a data set is made up you can use the command `str()` or `glimpse()`. This essentially asks R for information about the internal structure of any set of data.
+
+```{r}
+str(population)
+```
+
+```{r}
+glimpse(population)
+```
+
+This may seem like a mess but it actually tells you a lot. First thing you should notice is that all of the columns are laid out into lines to be "easily" readable but the structure of the data set does not change! Here is some other important things in no particular order:
+
+1. We have an 8 x 5 matrix (aka a data set with 8 columns and 5 rows)
+2. It is a data frame with variables given by `$`. More about this below.
+3. The first column is a character vector (made up only of strings of text).
+4. The remaining columns are integer vectors (made up only of numbers in the form of integers).
+5. You may be wondering why we skipped over the `factors` and `levels`. That's a bit complicated for this session but we will get to it because they play an important role in visualizing the data.
+
+## Looking at Variables in a Data Frame
+
+To call a variable in the dataframe, we use the `$` notation.
+
+```{r}
+population$Census_ID
+```
+
+Now try to use the same method for the other two columns. 
+
+<details>
+<summary>Solutions</summary>
+```{r}
+population$Collection_year
+```
+
+```{r}
+population$Total_Pop
+```
+
+```{r}
+population$Male_Pop
+```
+
+```{r}
+population$Female_Pop
+```
+</details>
+
+## Assigning Variables
+
+Now let's call these something because writing those out over and over is annoying
+
+```{r}
+census <- population$Census_ID
+
+census
+```
+
+or to do this quicker, use a semicolon `;`.
+
+```{r}
+census <- population$Census_ID; census
+```
+
+Now try to use the same method for the other columns by using the variables `year`, `total`, `male` and `female`, respectively. 
+
+<details>
+<summary>Solutions</summary>
+```{r}
+year <- population$Collection_year; year
+```
+
+```{r}
+total <- population$Total_Pop; total
+```
+
+```{r}
+male <- population$Male_Pop; male
+```
+
+```{r}
+female <- population$Female_Pop; female
+```
+</details>
+
+## Basic Visualizations
+
+Let's plot these
+
+```{r eval=FALSE}
+plot(year, total)
+# Notice that the x-axis variable goes first!
+```
+
+OK well that's better but it looks funny - the y-axis looks like the output on a mid 90s calculator that couldn't handle exponents. So we're going to divide and round. Since everything is in hundreds of millions in our data set, let's divide each column by one hundred million but keep the original figures.
+
+```{r}
+# We don't divide anything in census because it just contains the original variables
+census <- population$Census_ID 
+
+# We don't want to divide anything here because this column has data on years
+year <- population$Collection_year 
+
+# These are the actual data so that's where we'll reduce. 
+tinytotal <- population$Total_Pop/100000000 
+tinymale <- population$Male_Pop/100000000
+tinyfemale <- population$Female_Pop/100000000
+```
+
+Now that these are proportionally smaller, let's hope the visuals are more understandable
+
+```{r}
+plot(year, tinytotal) 
+```
+
+Looks much better but let's change the axis labels to be more descriptive.
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)") 
+```
+
+That's good but the size of the labels should be bigger.
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5) 
+```
+
+Well its bland so how about a little color?
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People(in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035", 
+     col="#7bc043")
+```
+
+Sure but those dots are difficult to see. Let's make them different.
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People(in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19)
+```
+
+No bigger!
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 1.5)
+```
+
+I said bigger dammit!
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 2)
+```
+
+And without that annoying box
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 2,
+     bty = "n")
+```
+
+Maybe a colorful title?
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 2,
+     bty = "n",
+     main = "United States Population Estimates (2010-2017)", 
+     cex.main = 1.5,
+     col.main = "#0392cf")
+```
+
+And a line
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 2,
+     bty = "n",
+     main = "United States Population Estimates (2010-2017)", 
+     cex.main = 1.5,
+     col.main = "#0392cf",
+     type = "o")
+```
+
+No that's too skinny!
+```{r}
+plot(year, tinytotal, 
+     xlab = "Years", 
+     ylab = "Number of People (in hundreds of millions)", 
+     cex.lab = 1.5, 
+     col.lab="#ee4035",
+     col="#7bc043", 
+     pch = 19, 
+     cex = 2,
+     bty = "n",
+     main = "United States Population Estimates (2010-2017)", 
+     cex.main = 1.5,
+     col.main = "#0392cf",
+     type = "o",
+     lwd = 3.5)
+```
+
+That'll do for now but that is a ton of work and a lot of not so obvious commands to memorize. So what's the big deal?
+
+# A Bit of Context
+Well what you just went through is the *OG* R which was released publicly in 1995. While nowadays it is commonly known as *Base R*, a majority of its functionality,  structure and syntax were derived from another piece of software called S-Plus which was a commercial product from 1988 primarily used only by statisticians. Regardless of the name, this would continue to be the case until the 2007 when [Hadley Wickham]("http://hadley.nz/"){target="_blank"} officially released an R add-on, or *package* called `ggplot2`. Little did anybody know that this would alter the future of data visualization. Starting next week, we'll move on from Base R to `ggplot` and its companion packages known as the `tidyverse`. If you want to get a preview, click on the image below
+
+<center>
+<div style="width:180px; height:180px">
+<a href="https://www.tidyverse.org/" target="_blank">![Tidyverse Hex](/img/logos/tidyverse.png)</a>
+</div>
+</center>
+<br>
+
+Now that's not to say there isn't value in knowing Base R. There are many commands that are quick and easy and don't need add-ons. In fact, some of the syntax has survived the transition to the *tidy* format we'll get to next week so for now, back to Base R! 
+
+# Basic Visualizations
+
+## Histograms
+For this part, we will use data on the number of users on facebook. Lets read the data into R like so
+
+```{r echo=TRUE, eval=FALSE}
+facebook <- read.csv("ActiveFacebookUsers.csv", 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) 
+```
+
+```{r echo=FALSE}
+facebook <- read.csv(here::here("static", "data", "ActiveFacebookUsers.csv"))
+```
+
+Take a look at the first six rows and get some information about the columns
+
+```{r}
+head(facebook)
+```
+
+```{r}
+str(facebook) 
+# Alternatively, you can use glimpse()
+```
+
+```{r}
+facebook$Quarter
+```
+
+```{r}
+facebook$Number.of.users.in.millions
+```
+
+Let's rename the columns
+
+```{r}
+users <- facebook$Number.of.users.in.millions
+quarter <- facebook$Quarter
+```
+
+We're going to use the `hist()` function to plot a basic histogram of the number of users and quarters
+
+```{r}
+hist(users) 
+# Hey its a normal distribution!
+```
+
+We can specify the number of cells for the histogram using the `breaks` option
+
+```{r}
+hist(users,
+     breaks = 40) 
+```
+
+This essentially breaks up the default way that the histogram is constructed. You can also do it within the range of the data set. First to see the minimum and maximum, we use `min()` and `max()`, respectively.
+
+```{r}
+min(users) 
+```
+
+```{r}
+max(users) 
+```
+
+So if I wanted to see how this histogram looks say broken into bars of 300, we can do
+
+```{r}
+(max(users) - min(users))/300
+```
+
+or better yet if we round up, we'll get the actual number of bars we need. To always round to the next integer, we can use the `ceiling()` function
+
+```{r}
+ceiling((max(users) - min(users))/300)
+```
+
+Now you can count in 300s and get the output you want
+
+```{r}
+hist(users, 
+     breaks = c(100,400,700,1000,1300,1600,1900,2100,2400))
+```
+
+
+but that's a lot of work and its a bit odd because our data aren't greater than the the maximum. We can still get the eight bars we want of even width if we let R do it for us using the `seq`, or sequence option with `length.out`, or the number of desired bars
+
+```{r}
+hist(users, 
+     breaks = seq(min(users), 
+                  max(users),  
+                  length.out=8))
+```
+
+Let's make it look decent
+
+```{r}
+hist(users, breaks = seq(min(users), 
+                         max(users),   
+                         length.out=8), 
+     xlab = "Active Users (in millions)", 
+     main = "Facebook utility worldwide as of 2nd quarter 2018",
+     col = c("#3b5998","#6d84b4", "#afbdd4", "#d8dfea", "#ffffff"), 
+     border = "#d8dfea", 
+     cex.lab = 1.1) 
+```
+
+Notice that you can define colors in a vector and the plot will simply repeat that layout.
+
+## Line Graph^[Now with 22% more linear regression] 
+
+Let's look at another population, but this time we'll use Twitter data
+
+```{r echo=TRUE, eval=FALSE}
+twitter <- read.csv("ActiveTwitterUsers.csv", 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) 
+```
+
+```{r echo=FALSE}
+twitter <- read.csv(here::here("static", "data", "ActiveTwitterUsers.csv"))
+```
+
+```{r}
+head(twitter)
+```
+
+```{r}
+str(twitter)
+```
+
+```{r}
+twitter$Quarter
+```
+
+```{r}
+twitter$Number.of.monthly.active.users.in.millions
+```
+
+Let's rename the columns
+
+```{r}
+tweeters <- twitter$Number.of.monthly.active.users.in.millions
+season <- twitter$Quarter
+```
+
+Let's first create a basic plot
+
+```{r}
+plot(season, tweeters)
+```
+
+There are several types of plot within the plot function which we can access by using the `type` option
+
+```{r}
+plot(season, tweeters,
+     type = "l")
+```
+
+Now try options "o", "p", and "b" on your own. Check the solutions below to see if your plot rendered correctly
+
+<details>
+<summary>Solutions</summary>
+```{r}
+plot(season, tweeters,
+     type = "o")
+```
+
+```{r}
+plot(season, tweeters,
+     type = "p")
+```
+
+```{r}
+plot(season, tweeters,
+     type = "b")
+```
+</details>
+
+We can also change the line type using the `lty` option
+
+```{r}
+plot(season, tweeters, 
+     type = "l", 
+     lty = "dashed")
+```
+
+```{r}
+plot(season, tweeters, 
+     type = "l", 
+     lty = "dotted")
+```
+
+Well it looks like the solid line is likely the best so we'll stick with it.
+
+```{r}
+plot(season, tweeters,
+     type = "l")
+```
+
+Black and white plots can be great but that's rarely true for data with ore information than two dimensions.
+
+```{r}
+plot(season, tweeters,
+     type = "l",
+     col = "#5cb85c")
+```
+
+You can also use a standard palette in R by using numbers 
+```{r}
+plot(season, tweeters,
+     type = "l",
+     col = 3)
+```
+
+That line is just too thin. We can make it thicker by using the `lwd` option
+```{r}
+plot(season, tweeters,
+     col = "#5cb85c", 
+     lwd = 3)
+```
+
+Finally, we can sort out the axes and plot titles
+```{r}
+plot(season, tweeters, 
+     type = "l", 
+     col = "#5cb85c", 
+     lwd = 3,
+     xlab = "Quarter",
+     ylab = "Tweeters (in millions)",
+     main = "Active Users on Twitter")
+```
+
+I did promise regression didn't I? OK well what if we wanted to know the answer to the question: *is the Twitter population increasing in size?*
+Well we can add a basic linear regression to the plot to estimate if that's true. First let's calculate the regression line...
+
+```{r}
+fit1 <- lm (tweeters ~ season, 
+            data = twitter) 
+
+summary(fit1)
+
+plot(fit1)
+```
+
+## Scatterplots
+
+Let's load a dataset of Flower characteristics in 3 species of Iris.
+
+```{r}
+data(iris)
+head(iris)
+```
+
+There is a lot of data here! Let's explore using the `pairs()` function
+
+```{r}
+pairs(iris)
+```
+
+This doesn't tell us much about the species differences. We can tell R to plot using a different color for the three species of iris
+
+```{r}
+pairs(iris, 
+      col = iris$Species)
+```
+
+Sepal.Length and Petal.Length look interesting! Let's start by looking at that
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species)
+```
+
+These points are difficult to see! Let's pick some different ones using the `pch` option
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 15)
+```
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = "A")
+```
+
+`pch` 21:25 also specify an edge color (col) and a background color (bg)
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 21, 
+     bg = "blue")
+```
+
+OK settling on solid circles...
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16)
+```
+
+...that need to be bigger
+
+```{r}
+plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16,
+     cex = 2)
+```
+
+## Boxplots
+
+We'll continue to use the Iris dataset for this section
+
+```{r}
+head(iris)
+```
+
+Lets first examine the distribution of Sepal Length for each species
+
+```{r}
+boxplot(iris$Sepal.Length ~ iris$Species)
+```
+
+f you wish to compare the medians of the boxplot, you can use the function "notch". If the notches of two plots do not overlap, this is 'strong evidence' that the two medians differ.
+
+```{r}
+boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T)
+```
+
+You may have noticed that the y-axis labels are always orientated to be perpendicular to the axis. We can rotate all axis labels using the `las` option.
+
+```{r}
+boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1) 
+```
+
+Now we can add in all the axis and plot labels...
+
+```{r}
+boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = "Species", 
+        ylab = "Sepal Length", 
+        main = "Sepal Length by Species in Iris") 
+```
+
+...and change sizes
+
+```{r}
+boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = "Species", 
+        ylab = "Sepal Length", 
+        main = "Sepal Length by Species in Iris",
+        cex.lab = 1.5,
+        cex.axis = 1.5,
+        cex.main = 2) 
+```
+
+# Plot Options
+
+## Rendering more than one plot in a window
+
+```{r}
+# number of rows, number of columns
+par(mfrow=c(1,2))
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = "Sepal vs Petal Length in Iris"
+     )      
+
+plot(
+    # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = "Sepal vs Petal Length in Iris"
+     )        
+```
+
+Adding the following sets the plot window back to normal
+```{r}
+par(mfrow=c(1,1))    
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = "Sepal vs Petal Length in Iris"
+     )   
+```
+
+or you can just clear the plot history by running
+```{r}
+dev.off()       
+```

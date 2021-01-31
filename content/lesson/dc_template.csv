@@ -1,0 +1,85 @@
+﻿Group,Exploration,Lesson Page,Due by_long,Due by_short,Required,Course or Project Name,Chapters_long,Chapters_wide
+1,1,[Week 1](/lesson/01-lesson/),1/27/20,1/27/20,checked,Introduction to R,Intro to basics,"Intro to basics, Vectors, Matrices, Factors, Data Frames, Lists"
+1,,,,,,,Vectors,
+1,,,,,,,Matrices,
+1,,,,,,,Factors,
+1,,,,,,,Data Frames,
+1,,,,,,,Lists,
+,,,,,,,,
+2,2,[Week 3](/lesson/03-lesson/),9/13/20,9/13/20,checked,Introduction to Data in R,Language of data,"Language of data, Study types and cautionary tales, Sampling strategies and experimental design, Case Study"
+2,,,,,,,Study types and cautionary tales,
+2,,,,,,,Sampling strategies and experimental design,
+2,,,,,,,Case Study,
+2,,,,,,,,
+2,,,9/13/20,,checked,Exploratory Data Analysis in R,Exploring Categorical Data,"Exploring Categorical Data, Exploring Numerical Data, Numerical Summaries, Case study"
+2,,,,,,,Exploring Numerical Data,
+2,,,,,,,Numerical Summaries,
+2,,,,,,,Case study,
+2,,,,,,,,
+2,,,9/13/20,,checked,Dr. Semmelweis and the Discovery of Handwashing,,
+2,,,,,,,,
+2,,,9/13/20,,checked,Modeling with Data in the Tidyverse,Introduction to Modeling,"Introduction to Modeling, Modeling with Basic Regression, Modeling with Multiple Regression, Model Assessment and Selection"
+2,,,,,,,Modeling with Basic Regression,
+2,,,,,,,Modeling with Multiple Regression,
+2,,,,,,,Model Assessment and Selection,
+,,,,,,,,
+3,3,[Week 4](/lesson/04-lesson/),10/18/20,10/18/20,checked,Introduction to Data in R,Language of data,"Language of data, Study types and cautionary tales, Sampling strategies and experimental design, Case Study"
+3,,,,,,,Study types and cautionary tales,
+3,,,,,,,Sampling strategies and experimental design,
+3,,,,,,,Case Study,
+3,,,,,,,,
+3,,,10/18/20,,checked,Exploratory Data Analysis in R,Exploring Categorical Data,"Exploring Categorical Data, Exploring Numerical Data, Numerical Summaries, Case study"
+3,,,,,,,Exploring Numerical Data,
+3,,,,,,,Numerical Summaries,
+3,,,,,,,Case study,
+3,,,,,,,,
+3,,,10/18/20,,checked,Modeling with Data in the Tidyverse,Introduction to Modeling,"Introduction to Modeling, Modeling with Basic Regression, Modeling with Multiple Regression, Modeling Assessment and Selection"
+3,,,,,,,Modeling with Basic Regression,
+3,,,,,,,Modeling with Multiple Regression,
+3,,,,,,,Modeling Assessment and Selection ,
+3,,,,,,,,
+3,,,10/18/20,,checked,Dealing with Missing Data in R,Why care about missing data?,"Why care about missing data?, Wrangling and tidying up missing values , Testing missing relationships , Connecting the dots (Imputation)"
+3,,,,,,,Wrangling and tidying up missing values ,
+3,,,,,,,Testing missing relationships ,
+3,,,,,,,Connecting the dots (Imputation) ,
+,,,,,,,,
+4,4,[Week 6](/lesson/06-lesson/),10/18/20,10/25/20,checked,Inference for Categorical Data in R,Inference for a single parameter ,"Inference for a single parameter , Proportions: testing and power, Comparing many parameters: independence, Comparing many parameters: goodness of fit"
+4,,,,,,,Proportions: testing and power,
+4,,,,,,,Comparing many parameters: independence,
+4,,,,,,,Comparing many parameters: goodness of fit,
+,,,,,,,,
+,,,,,,,,
+5,5,,10/25/20,11/1/20,checked,Categorical Data in the Tidyverse,Introduction to Factor Variables,"Introduction to Factor Variables, Manipulating Factor Variables, Creating Factor Variables, Case Study on Flight Etiquette"
+5,,,,,,,Manipulating Factor Variables,
+5,,,,,,,Creating Factor Variables,
+5,,,,,,,Case Study on Flight Etiquette,
+,,,,,,,,
+6,6,,11/1/20,11/8/20,checked,Survey and Measurement Development in R,Preparing to analyze survey data,"Preparing to analyze survey data, Exploratory factor analysis & survey development, Confirmatory factor analysis & construct validation, Criterion validity & replication"
+6,,,,,,,Exploratory factor analysis & survey development,
+6,,,,,,,Confirmatory factor analysis & construct validation,
+6,,,,,,,Criterion validity & replication,
+,,,,,,,,
+7,7,,11/8/20,11/15/20,checked,Analyzing Survey Data in R,Introduction to survey data,"Introduction to survey data, Exploring categorical data, Exploring quantitative data, Modeling quantitative data"
+7,,,,,,,Exploring categorical data,
+7,,,,,,,Exploring quantitative data,
+7,,,,,,,Modeling quantitative data,
+,,,,,,,,
+EC1,EC1,,11/25/20,11/25/20,unchecked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
+EC1,,,,,,,Aesthetics,
+EC1,,,,,,,Geometries,
+EC1,,,,,,,Themes,
+,,,,,,,,
+EC2,EC2,,12/1/20,12/1/20,unchecked,Visualizing Geospatial Data in R,Basic mapping with ggplot2 and ggmap,"Basic mapping with ggplot2 and ggmap, Point and polygon data, Raster data and color, Data import and projections"
+EC2,,,,,,,Point and polygon data,
+EC2,,,,,,,Raster data and color,
+EC2,,,,,,,Data import and projections,
+,,,,,,,,
+EC3,EC3,,12/1/20,,unchecked,Spatial Analysis with sf and raster in R,Vector and Raster Spatial Data in R,"Vector and Raster Spatial Data in R, Preparing layers for spatial analysis, Conducting spatial analysis with the sf and raster packages, Combine your new skills into a mini-analysis"
+EC3,,,,,,,Preparing layers for spatial analysis,
+EC3,,,,,,,Conducting spatial analysis with the sf and raster packages,
+EC3,,,,,,,Combine your new skills into a mini-analysis,
+,,,,,,,,
+EC4,EC4,,12/1/20,,unchecked,Analyzing US Census Data in R,Census data in R with tidycensus,"Census data in R with tidycensus, Wrangling US Census Data, US Census geographic data in R, Mapping US Census Data"
+EC4,,,,,,,Wrangling US Census Data,
+EC4,,,,,,,US Census geographic data in R,
+EC4,,,,,,,Mapping US Census Data,

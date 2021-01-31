@@ -1,85 +1,120 @@
 ﻿Group,Exploration,Lesson Page,Due by_long,Due by_short,Required,Course or Project Name,Chapters_long,Chapters_wide
-1,1,[Week 2](/lesson/02-lesson/),8/30/20,8/30/20,checked,Introduction to R,Intro to basics,"Intro to basics, Vectors, Matrices, Factors, Data Frames, Lists"
+1,1,[Week 1](/lesson/01-lesson/),1/27/21,1/27/21,checked,Introduction to R,Intro to Basics,"Intro to Basics, Vectors, Matrices, Factors, Data Frames, Lists"
 1,,,,,,,Vectors,
 1,,,,,,,Matrices,
 1,,,,,,,Factors,
 1,,,,,,,Data Frames,
 1,,,,,,,Lists,
 ,,,,,,,,
-2,2,[Week 3](/lesson/03-lesson/),9/13/20,9/13/20,checked,Introduction to the Tidyverse,Data wrangling,"Data wrangling, Data visualization, Grouping and summarizing, Types of visualizations"
-2,,,,,,,Data visualization,
-2,,,,,,,Grouping and summarizing,
-2,,,,,,,Types of visualizations,
+2,2,[Week 2](/lesson/02-lesson/),2/3/21,2/3/21,checked,Introduction to Data in R,Language of Data,"Language of Data, Study Types and Cautionary Tales, Sampling Strategies and Experimental Design, Case Study"
+2,,,,,,,Study Types and Cautionary Tales,
+2,,,,,,,Sampling Strategies and Experimental Design,
+2,,,,,,,Case Study,
 2,,,,,,,,
-2,,,9/13/20,,checked,Working with Data in the Tidyverse,Explore your data,"Explore your data, Tame your data, Tidy your data, Transform your data"
-2,,,,,,,Tame your data,
-2,,,,,,,Tidy your data,
-2,,,,,,,Transform your data,
-2,,,,,,,,
-2,,,9/13/20,,checked,Dr. Semmelweis and the Discovery of Handwashing,,
-2,,,,,,,,
-2,,,9/13/20,,checked,Modeling with Data in the Tidyverse,Introduction to Modeling,"Introduction to Modeling, Modeling with Basic Regression, Modeling with Multiple Regression, Model Assessment and Selection"
-2,,,,,,,Modeling with Basic Regression,
-2,,,,,,,Modeling with Multiple Regression,
-2,,,,,,,Model Assessment and Selection,
+2,,,2/3/21,,checked,Data Visualization in R,A Quick Introduction to Base R Graphics,"A Quick Introduction to Base R Graphics, Different Plot Types, Adding Details to Plots, How Much is Too Much?, Advanced Plot Customization and Beyond"
+2,,,,,,,Different Plot Types,
+2,,,,,,,Adding Details to Plots,
+2,,,,,,,How Much is Too Much?,
+2,,,,,,,Advanced Plot Customization and Beyond,
 ,,,,,,,,
-3,3,[Week 4](/lesson/04-lesson/),10/18/20,10/18/20,checked,Introduction to Data in R,Language of data,"Language of data, Study types and cautionary tales, Sampling strategies and experimental design, Case Study"
-3,,,,,,,Study types and cautionary tales,
-3,,,,,,,Sampling strategies and experimental design,
-3,,,,,,,Case Study,
-3,,,,,,,,
-3,,,10/18/20,,checked,Exploratory Data Analysis in R,Exploring Categorical Data,"Language of data, Study types and cautionary tales, Sampling strategies and experimental design, Case Study"
-3,,,,,,,Exploring Numerical Data,
-3,,,,,,,Numerical Summaries,
-3,,,,,,,Case study,
-3,,,,,,,,
-3,,,10/18/20,,checked,Modeling with Data in the Tidyverse,Introduction to Modeling,"Introduction to Modeling, Modeling with Basic Regression, Modeling with Multiple Regression, Modeling Assessment and Selection"
-3,,,,,,,Modeling with Basic Regression,
-3,,,,,,,Modeling with Multiple Regression,
-3,,,,,,,Modeling Assessment and Selection ,
-3,,,,,,,,
-3,,,10/18/20,,checked,Dealing with Missing Data in R,Why care about missing data?,"Why care about missing data?, Wrangling and tidying up missing values , Testing missing relationships , Connecting the dots (Imputation)"
-3,,,,,,,Wrangling and tidying up missing values ,
-3,,,,,,,Testing missing relationships ,
-3,,,,,,,Connecting the dots (Imputation) ,
+3,3,[Week 3](/lesson/03-lesson/),2/10/21,2/10/21,checked,Intermediate R,Conditionals and Control Flow,"Conditionals and Control Flow, Loops, Functions, The `apply` Family, Utilities"
+3,,,,,,,Loops,
+3,,,,,,,Functions,
+3,,,,,,,The `apply` Family,
+3,,,,,,,Utilities,
 ,,,,,,,,
-4,4,[Week 6](/lesson/06-lesson/),10/18/20,10/25/20,checked,Inference for Categorical Data in R,Inference for a single parameter ,"Inference for a single parameter , Proportions: testing and power, Comparing many parameters: independence, Comparing many parameters: goodness of fit"
-4,,,,,,,Proportions: testing and power,
-4,,,,,,,Comparing many parameters: independence,
-4,,,,,,,Comparing many parameters: goodness of fit,
+4,4,[Week 4](/lesson/04-lesson/),2/17/21,2/17/21,checked,Exploratory Data Analysis in R,Exploring Categorical Data,"Exploring Categorical Data, Exploring Numerical Data, Numerical Summaries, Case study"
+4,,,,,,,Exploring Numerical Data,
+4,,,,,,,Numerical Summaries,
+4,,,,,,,Case study,
+4,,,,,,,,
+4,,,2/17/21,,checked,Introduction to the Tidyverse,Data Wrangling,"Data Wrangling, Data Visualization, Grouping and Summarizing, Types of Visualizations"
+4,,,,,,,Data Visualization,
+4,,,,,,,Grouping and Summarizing,
+4,,,,,,,Types of Visualizations,
 ,,,,,,,,
+5,5,[Week 5](/lesson/05-lesson/),2/24/21,2/24/21,checked,Reporting with R Markdown,Getting Started with R Markdown,"Getting Started with R Markdown, Adding Analyses and Visualizations, Improving the Report, Customizing the Report"
+5,,,,,,,Adding Analyses and Visualizations,
+5,,,,,,,Improving the Report,
+5,,,,,,,Customizing the Report,
+5,,,,,,,,
+5,,,2/24/21,,checked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
+5,,,,,,,Aesthetics,
+5,,,,,,,Geometries,
+5,,,,,,,Themes,
 ,,,,,,,,
-5,5,,10/25/20,11/1/20,checked,Categorical Data in the Tidyverse,Introduction to Factor Variables,"Introduction to Factor Variables, Manipulating Factor Variables, Creating Factor Variables, Case Study on Flight Etiquette"
-5,,,,,,,Manipulating Factor Variables,
-5,,,,,,,Creating Factor Variables,
-5,,,,,,,Case Study on Flight Etiquette,
+6,6,[Week 6](/lesson/06-lesson/),3/3/21,3/3/21,checked,Intermediate Data Visualization with ggplot2,Statistics,"Statistics, Coordinates, Facets, Best Practices"
+6,,,,,,,Coordinates,
+6,,,,,,,Facets,
+6,,,,,,,Best Practices,
+6,,,,,,,,
+6,,,3/3/21,3/3/21,checked,Visualization Best Practices in R,Proportions of a Whole,"Proportions of a Whole, Point Data, Single Distributions, Comparing Distributions"
+6,,,,,,,Point Data,
+6,,,,,,,Single Distributions,
+6,,,,,,,Comparing Distributions,
 ,,,,,,,,
-6,6,,11/1/20,11/8/20,checked,Survey and Measurement Development in R,Preparing to analyze survey data,"Preparing to analyze survey data, Exploratory factor analysis & survey development, Confirmatory factor analysis & construct validation, Criterion validity & replication"
-6,,,,,,,Exploratory factor analysis & survey development,
-6,,,,,,,Confirmatory factor analysis & construct validation,
-6,,,,,,,Criterion validity & replication,
+7,7,[Week 7](/lesson/07-lesson/),3/17/21,3/17/21,checked,Analyzing US Census Data in R,Census Data in R with `tidycensus`,"Census Data in R with `tidycensus`, Wrangling US Census Data, US Census Geographic Fata in R, Mapping US Census Data"
+7,,,,,,,Wrangling US Census Data,
+7,,,,,,,US Census Geographic Data in R,
+7,,,,,,,Mapping US Census Data,
 ,,,,,,,,
-7,7,,11/8/20,11/15/20,checked,Analyzing Survey Data in R,Introduction to survey data,"Introduction to survey data, Exploring categorical data, Exploring quantitative data, Modeling quantitative data"
-7,,,,,,,Exploring categorical data,
-7,,,,,,,Exploring quantitative data,
-7,,,,,,,Modeling quantitative data,
+8,8,[Week 8](/lesson/08-lesson/),3/24/21,3/24/21,checked,Text Mining with Bag-of-Words in R,Jumping Into Text Mining with Bag Of Words,"Jumping Into Text Mining with Bag Of Words, Word Clouds and More Interesting Visuals, Adding to your `tm` Skills, Battle of the Tech Giants for Talent"
+8,,,,,,,Word Clouds and More Interesting Visuals,
+8,,,,,,,Adding to your `tm` Skills,
+8,,,,,,,Battle of the Tech Giants for Talent,
+8,,,,,,,,
+8,,,3/24/21,,checked,Sentiment Analysis in R,Fast & Dirty: Polarity Scoring,"Fast & Dirty: Polarity Scoring, Sentiment Analysis the Tidytext Way, Visualizing Sentiment, Case Study: Airbnb Reviews"
+8,,,,,,,Sentiment Analysis the Tidytext Way,
+8,,,,,,,Visualizing Sentiment,
+8,,,,,,,Case Study: Airbnb Reviews,
 ,,,,,,,,
-EC1,EC1,,11/25/20,11/25/20,unchecked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
-EC1,,,,,,,Aesthetics,
-EC1,,,,,,,Geometries,
-EC1,,,,,,,Themes,
+9,9,[Week 9](/lesson/09-lesson/),3/31/21,3/31/21,checked,Network Analysis in the Tidyverse,The Hubs of the Network,"The Hubs of the Network, In Its Weakness Lies Its Strength, Connection Patterns, Similarity Clusters"
+9,,,,,,,In Its Weakness Lies Its Strength,
+9,,,,,,,Connection Patterns,
+9,,,,,,,Similarity Clusters,
+9,,,,,,,,
+9,,,3/31/21,,checked,Visualizing Geospatial Data in R,Basic Mapping with `ggplot2` and `ggmap`,"Basic Mapping with `ggplot2` and `ggmap`, Point and Polygon Data, Raster Data and Color, Data Import and Projections"
+9,,,,,,,Point and Polygon Data,
+9,,,,,,,Raster Data and Color,
+9,,,,,,,Data Import and Projections,
 ,,,,,,,,
-EC2,EC2,,12/1/20,12/1/20,unchecked,Visualizing Geospatial Data in R,Basic mapping with ggplot2 and ggmap,"Basic mapping with ggplot2 and ggmap, Point and polygon data, Raster data and color, Data import and projections"
-EC2,,,,,,,Point and polygon data,
-EC2,,,,,,,Raster data and color,
-EC2,,,,,,,Data import and projections,
+10,10,[Week 10](/lesson/10-lesson/),4/7/21,4/7/21,checked,Building Web Applications with Shiny in R,Get Started with Shiny,"Get Started with Shiny, Inputs, Outputs, and Layouts, Reactive Programming, Build Shiny Apps"
+10,,,,,,,"Inputs, Outputs, and Layouts",
+10,,,,,,,Reactive Programming,
+10,,,,,,,Build Shiny Apps,
+10,,,,,,,,
+10,,,4/7/21,,checked,Case Studies: Building Web Applications with Shiny in R,Shiny Review,"Shiny Review, Make the Perfect Plot Using Shiny, Explore a Dataset Interactively With Shiny ,Create Your Own Word Cloud in Shiny"
+10,,,,,,,Make the Perfect Plot Using Shiny,
+10,,,,,,,Explore a Dataset Interactively With Shiny,
+10,,,,,,,Create Your Own Word Cloud in Shiny,
 ,,,,,,,,
-EC3,EC3,,12/1/20,,unchecked,Spatial Analysis with sf and raster in R,Vector and Raster Spatial Data in R,"Vector and Raster Spatial Data in R, Preparing layers for spatial analysis, Conducting spatial analysis with the sf and raster packages, Combine your new skills into a mini-analysis"
-EC3,,,,,,,Preparing layers for spatial analysis,
-EC3,,,,,,,Conducting spatial analysis with the sf and raster packages,
-EC3,,,,,,,Combine your new skills into a mini-analysis,
+11,11,[Week 11](/lesson/11-lesson/),4/14/21,4/14/21,checked,Introduction to Tableau,Getting Started with Tableau,"Getting Started with Tableau, Building and Customizing Visualizations, Digging Deeper, Presenting Your Data"
+11,,,,,,,Building and Customizing Visualizations,
+11,,,,,,,Digging Deeper,
+11,,,,,,,Presenting Your Data,
+11,,,,,,,,
+11,,,4/14/21,,checked,Connecting Data in Tableau,Combining and Saving Data,"Combining and Saving Data, Managing and Connecting Data"
+11,,,,,,,Managing and Connecting Data,
 ,,,,,,,,
-EC4,EC4,,12/1/20,,unchecked,Analyzing US Census Data in R,Census data in R with tidycensus,"Census data in R with tidycensus, Wrangling US Census Data, US Census geographic data in R, Mapping US Census Data"
-EC4,,,,,,,Wrangling US Census Data,
-EC4,,,,,,,US Census geographic data in R,
-EC4,,,,,,,Mapping US Census Data,
+12,12,[Week 12](/lesson/12-lesson/),4/21/21,4/21/21,checked,Analyzing Data in Tableau,Preparing for Analysis,"Preparing for Analysis, Exploring Visualizations, Mapping Analysis, Groups, Sets, and Parameters"
+12,,,,,,,Exploring Visualizations,
+12,,,,,,,Mapping Analysis,
+12,,,,,,,"Groups, Sets, and Parameters",
+,,,,,,,,
+13,12,[Week 13](/lesson/13-lesson/),4/28/21,4/28/21,checked,Creating Dashboards in Tableau,Getting Started With Dashboards,"Getting Started With Dashboards, Sharing Data Insights"
+13,,,,,,,Sharing Data Insights,
+,,,,,,,,
+EC1,EC1,[Week 14](/lesson/14-lesson/),5/3/21,5/3/21,unchecked,Analyzing Survey Data in R,Introduction to survey data,"Introduction to survey data, Exploring categorical data, Exploring quantitative data, Modeling quantitative data"
+EC1,,,,,,,Exploring categorical data,
+EC1,,,,,,,Exploring quantitative data,
+EC1,,,,,,,Modeling quantitative data,
+,,,,,,,,
+EC2,EC2,[Week 14](/lesson/14-lesson/),5/3/21,5/3/21,unchecked,Communicating with Data in the Tidyverse,Custom `ggplot2` Themes,"Building Static Dashboards, Building Dynamic Dashboards, Customizing Style, Case Study"
+EC2,,,,,,,Creating a Custom and Unique Visualization,
+EC2,,,,,,,Introduction to Rmarkdown,
+EC2,,,,,,,Customizing your RMarkdown Report,
+,,,,,,,,
+EC3,EC3,[Week 14](/lesson/14-lesson/),5/3/21,5/3/21,unchecked,Building Dashboards with `shinydashboard`,Building Static Dashboards,"Building Static Dashboards, Building Dynamic Dashboards, Customizing Style, Case Study"
+EC3,,,,,,,Building Dynamic Dashboards,
+EC3,,,,,,,Customizing Style,
+EC3,,,,,,,Case Study,

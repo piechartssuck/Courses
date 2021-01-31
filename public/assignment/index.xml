@@ -37,7 +37,7 @@
 &lt;h3&gt;Class Slack Account Access&lt;/h3&gt;
 &lt;p&gt;Most important task of the week - well to me at least - is to&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Go to the course &lt;a href=&#34;2021edp693e.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Go to the course &lt;a href=&#34;http://2021edp693e.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
 &lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -57,9 +57,112 @@ Submit via eCampus a &lt;code&gt;.pdf&lt;/code&gt; or &lt;code&gt;.docx&lt;/code
 &lt;li&gt;What rules (from Wainer’s paper) does it follow and which principles (Chapter 2 in Tufte) does it violate?&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Please post a copy of your entire task to the Slack channel &lt;a href=&#34;https://2021edp693e.slack.com/archives/C01K23SKK1D&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#week1-class-task&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please post a copy of your entire task to the Slack channel &lt;a href=&#34;http://2021edp693e.slack.com/archives/C01K23SKK1D&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#week1-class-task&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Base R is a Thing</title>
+      <link>https://edp693e.theoreticalphysed.com/assignment/02-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/assignment/02-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#create-plots-in-base-r&#34;&gt;Create Plots in Base R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #733367;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;create-plots-in-base-r&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Create Plots in Base R&lt;/h3&gt;
+&lt;p&gt;Use the file &lt;code&gt;AlcoholConsumption.csv&lt;/code&gt; to create three plots such that two are misleading or misrepresent the data while the other is indicative of what the data truly is. You are asked to stick to Base R even if you have working knowledge of &lt;code&gt;tidyverse&lt;/code&gt; commands, though this is not a requirement. Please submit this as a single R script replacing only the areas that ask you to do so.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Replace this with your name 
+
+# Misleading/misrepresented 1 ----
+## Put your entire code for the plot under this line ----
+
+# ~ Replace this with a basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# Misleading/misrepresented 2 ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----
+
+# --
+
+# True version ----
+## ## Put your entire code for the plot under this line ----
+
+# ~ A basic explanation of why it is misleading and/or misrepresented ----&lt;/code&gt;&lt;/pre&gt;
+&lt;a href=&#34;data:text/plain;base64,IyBSZXBsYWNlIHRoaXMgd2l0aCB5b3VyIG5hbWUgCgojIE1pc2xlYWRpbmcvbWlzcmVwcmVzZW50ZWQgMSAtLS0tCiMjIFB1dCB5b3VyIGVudGlyZSBjb2RlIGZvciB0aGUgcGxvdCB1bmRlciB0aGlzIGxpbmUgLS0tLQoKIyB+IFJlcGxhY2UgdGhpcyB3aXRoIGEgYmFzaWMgZXhwbGFuYXRpb24gb2Ygd2h5IGl0IGlzIG1pc2xlYWRpbmcgYW5kL29yIG1pc3JlcHJlc2VudGVkIC0tLS0KCiMgLS0KCiMgTWlzbGVhZGluZy9taXNyZXByZXNlbnRlZCAyIC0tLS0KIyMgIyMgUHV0IHlvdXIgZW50aXJlIGNvZGUgZm9yIHRoZSBwbG90IHVuZGVyIHRoaXMgbGluZSAtLS0tCgojIH4gQSBiYXNpYyBleHBsYW5hdGlvbiBvZiB3aHkgaXQgaXMgbWlzbGVhZGluZyBhbmQvb3IgbWlzcmVwcmVzZW50ZWQgLS0tLQoKCiMgLS0KCiMgVHJ1ZSB2ZXJzaW9uIC0tLS0KIyMgIyMgUHV0IHlvdXIgZW50aXJlIGNvZGUgZm9yIHRoZSBwbG90IHVuZGVyIHRoaXMgbGluZSAtLS0tCgojIH4gQSBiYXNpYyBleHBsYW5hdGlvbiBvZiB3aHkgaXQgaXMgbWlzbGVhZGluZyBhbmQvb3IgbWlzcmVwcmVzZW50ZWQgLS0tLQoKCgo=&#34; download=&#34;Week 2 Script Outline.R&#34;&gt;
+&lt;button class=&#34;btn btn-default hvr-sweep-to-left&#34;&gt;&lt;i class=&#34;fa fa-save&#34;&gt;&lt;/i&gt; Download the Script&lt;/button&gt;
+&lt;/a&gt;
+&lt;a href=&#34;data:text/csv;base64,77u/UmVnaW9uLENvdW50cnksQ29uc3VtcHRpb24gaW4gYmlsbGlvbiBsaXRlcnMNCkFzaWEsQ2hpbmEsNTQuMjkNCk5vcnRoIEFtZXJpY2EsVW5pdGVkIFN0YXRlcywzMC41DQpTb3V0aCBBbWVyaWNhLEJyYXppbCwxNC4wNA0KRXVyb3BlLEdlcm1hbnksMTEuNTYNCkV1cmFzaWEsUnVzc2lhLDkuNQ0KQXNpYSxKYXBhbiw4Ljg5DQpDZW50cmFsIEFtZXJpY2EsTWV4aWNvLDguNjENCkV1cm9wZSxVbml0ZWQgS2luZ2RvbSw3LjQ3DQpBc2lhLEluZGlhLDYuMzENCkV1cm9wZSxTcGFpbiw1LjE0&#34; download=&#34;AlcoholConsumption.csv&#34;&gt;
+&lt;button class=&#34;btn btn-default hvr-sweep-to-left&#34;&gt;&lt;i class=&#34;fa fa-save&#34;&gt;&lt;/i&gt; Download the Data&lt;/button&gt;
+&lt;/a&gt;
+&lt;p&gt;&lt;br&gt;
+Notice that there are four dashes (&lt;code&gt;----&lt;/code&gt;) after the text in every &lt;code&gt;#&lt;/code&gt; except on the line where you should place your name. This provides a nested outline of your script that is easier to follow, especially if they get long.&lt;/p&gt;
+&lt;p&gt;There are a few ways to get to your outline. As you transition from a dependence on your mouse/trackpad to the &lt;em&gt;old school&lt;/em&gt; keyboard, having a working knowledge of shortcuts creates a less disruptive experience than say having to grab that mouse/trackpad everytime you want to do something other than typing. To access the outline of your sections and subsections within an R script, hold down the keys &lt;kbd&gt;control&lt;/kbd&gt; &lt;kbd&gt;shift&lt;/kbd&gt; &lt;kbd&gt;o&lt;/kbd&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To learn more about nesting, take a look at this post titled &lt;a href=&#34;%22https://blog.rstudio.com/2020/12/02/rstudio-v1-4-preview-little-things/%22&#34; target=&#34;_blank&#34;&gt;The Little Things&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please submit your script to &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; under &lt;strong&gt;Week 2 Out of Class Task&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The letter &lt;em&gt;o&lt;/em&gt; not zero.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
