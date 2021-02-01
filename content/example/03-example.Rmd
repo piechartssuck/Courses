@@ -38,7 +38,7 @@ pre <- tibble(
   
   task = c("Gathering a team",
            "Thinking about potential programs",
-           "Subitting a prospectus"),
+           "Submitting a prospectus"),
   
   current <- c(checked,
                unchecked,
