@@ -45,7 +45,7 @@ tableofcontent <- tibble(
              "Here are interactive lessons, slides, and/or walkthroughs that helps with any content.",
              "Extra items that are picked or created to help you understand the current material exist on this page.",
              "Instructions for all student related tasks including information about the tasks and deliverables are provided in this location.",
-             "This page contains the instructions what to submit by week"
+             "This page contains instructions on what to submit by on a weekly basis."
              ),
   
   .name_repair = "minimal"
