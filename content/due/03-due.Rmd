@@ -21,6 +21,8 @@ library(knitr)
 library(kableExtra)
 ```
 
+<!--
+
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
 
@@ -75,3 +77,5 @@ kable(wk_post,
   row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
+
+-->
