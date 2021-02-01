@@ -1,6 +1,6 @@
 ---
-title: "Rethinking the Way You Think"
-linktitle: "Week 2: Rethinking the Way You Think"
+title: "Aims, Scope and Sequencing"
+linktitle: "Week 3: Aims, Scope and Sequencing"
 output:
   blogdown::html_page:
     toc: true
@@ -15,6 +15,8 @@ editor_options:
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -25,10 +27,79 @@ editor_options:
 <div id="evaluation-phase" class="section level2">
 <h2>Evaluation Phase</h2>
 <p>We are currently in the pre-evaluation phase. This involves</p>
-<ul>
-<li>Gathering a team</li>
-<li>Thinking about potential programs</li>
-<li>Creating a prospectus</li>
-</ul>
-<p>For a look at what to consider when choosing teammates, take a look at [a] <a href="https://www.betterevaluation.org/en/managers_guide" target="_blank">Manager’s guide to evaluation</a> by <em>Jane Davidson</em>.</p>
+<pre class="r"><code>unchecked &lt;- as.character(fontawesome::fa(&quot;circle&quot;, fill = &quot;#e4e4e4&quot;, height = &quot;15px&quot;))
+
+checked &lt;- as.character(fontawesome::fa(&quot;check-circle&quot;, fill = &quot;#428bca&quot;, height = &quot;15px&quot;))
+
+pre &lt;- tibble(
+  
+  phase = c(&quot;Pre-Evaluation&quot;,
+            &quot;&quot;,
+            &quot;&quot;),
+  
+  task = c(&quot;Gathering a team&quot;,
+           &quot;Thinking about potential programs&quot;,
+           &quot;Subitting a prospectus&quot;),
+  
+  current &lt;- c(checked,
+               unchecked,
+               unchecked)
+  
+)</code></pre>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+phase
+</th>
+<th style="text-align:left;">
+task
+</th>
+<th style="text-align:center;">
+current
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Pre-Evaluation
+</td>
+<td style="text-align:left;width: 10em; ">
+Gathering a team
+</td>
+<td style="text-align:center;width: 20em; ">
+<svg style="height:15px;fill:#428bca;" viewbox="0 0 512 512">
+<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+</svg>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Thinking about potential programs
+</td>
+<td style="text-align:center;width: 20em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+</td>
+<td style="text-align:left;width: 10em; ">
+Subitting a prospectus
+</td>
+<td style="text-align:center;width: 20em; ">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
 </div>

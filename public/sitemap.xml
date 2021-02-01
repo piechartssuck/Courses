@@ -64,10 +64,6 @@
   </url>
   
   <url>
-    <loc>https://edp617.theoreticalphysed.com/example/03-example/</loc>
-  </url>
-  
-  <url>
     <loc>https://edp617.theoreticalphysed.com/lesson/02-lesson/</loc>
   </url>
   
@@ -76,7 +72,11 @@
   </url>
   
   <url>
-    <loc>https://edp617.theoreticalphysed.com/readings/03-readings/</loc>
+    <loc>https://edp617.theoreticalphysed.com/due/03-due/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp617.theoreticalphysed.com/example/03-example/</loc>
   </url>
   
   <url>

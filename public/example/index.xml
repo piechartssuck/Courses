@@ -61,12 +61,14 @@
     </item>
     
     <item>
-      <title>Rethinking the Way You Think</title>
+      <title>Aims, Scope and Sequencing</title>
       <link>https://edp617.theoreticalphysed.com/example/03-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/example/03-example/</guid>
       <description>
 &lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -77,12 +79,81 @@
 &lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Evaluation Phase&lt;/h2&gt;
 &lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Gathering a team&lt;/li&gt;
-&lt;li&gt;Thinking about potential programs&lt;/li&gt;
-&lt;li&gt;Creating a prospectus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For a look at what to consider when choosing teammates, take a look at [a] &lt;a href=&#34;https://www.betterevaluation.org/en/managers_guide&#34; target=&#34;_blank&#34;&gt;Manager’s guide to evaluation&lt;/a&gt; by &lt;em&gt;Jane Davidson&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unchecked &amp;lt;- as.character(fontawesome::fa(&amp;quot;circle&amp;quot;, fill = &amp;quot;#e4e4e4&amp;quot;, height = &amp;quot;15px&amp;quot;))
+
+checked &amp;lt;- as.character(fontawesome::fa(&amp;quot;check-circle&amp;quot;, fill = &amp;quot;#428bca&amp;quot;, height = &amp;quot;15px&amp;quot;))
+
+pre &amp;lt;- tibble(
+  
+  phase = c(&amp;quot;Pre-Evaluation&amp;quot;,
+            &amp;quot;&amp;quot;,
+            &amp;quot;&amp;quot;),
+  
+  task = c(&amp;quot;Gathering a team&amp;quot;,
+           &amp;quot;Thinking about potential programs&amp;quot;,
+           &amp;quot;Subitting a prospectus&amp;quot;),
+  
+  current &amp;lt;- c(checked,
+               unchecked,
+               unchecked)
+  
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+phase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+task
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+current
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Pre-Evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Gathering a team
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+Thinking about potential programs
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 20em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+Subitting a prospectus
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
 &lt;/div&gt;
 </description>
     </item>

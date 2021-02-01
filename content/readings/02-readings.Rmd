@@ -15,18 +15,18 @@ output:
 ---
 
 <style>
-.hvr-sweep-to-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-}
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
 
 .hvr-sweep-to-left:before {
   content: "";
@@ -37,7 +37,7 @@ output:
   right: 0;
   bottom: 0;
   background: #175676;
-  -webkit-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
@@ -58,29 +58,32 @@ output:
   transform: scaleX(1);
 }
 </style>
-
+  
 ```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
 library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
 ```
 
-### Read Some Papers
+## Read Some Papers
 For each reading below, write a **single post** on Slack with the following:
-
+  
   - a reflection / reaction to the content *and*
   - a question about something specific
-  
+
 ```{r echo=FALSE}
 
-readings <- dplyr::tibble(
+readings <- tibble(
   
   paper <- c("Davidson, J. (2007). Editorial: Unlearning some of our social scientist habits. *Journal of MultiDisciplinary Evaluation 4*(8). 3-6.", 
-               "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
-               ),
+             "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
+  ),
   
   post <- c(
     "[`#davidson`](https://2021edp617.slack.com/archives/C01KV12ELKC){target='_blank'}",
-   "[`#mathison`](https://2021edp617.slack.com/archives/C01KV11R64S){target='_blank'}"                    
-                       ),
+    "[`#mathison`](https://2021edp617.slack.com/archives/C01KV11R64S){target='_blank'}"                    
+  ),
   
   .name_repair = "minimal"
   
@@ -91,51 +94,54 @@ readings <- dplyr::tibble(
 <center>
 ```{r, echo=FALSE}
 readings %>%
-  kableExtra::kbl(col.names = c("Reading", "Channel"), 
+  kbl(col.names = c("Reading", "Channel"), 
       "html", 
       escape = FALSE,
       align = 'lc') %>%
-  kableExtra::kable_styling(full_width = FALSE) %>%
-  kableExtra::column_spec(1, width = "30em") %>%
-  kableExtra::column_spec(2, width = "10em")
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em")
 ```
 </center>
-
-```{r echo=FALSE,eval=TRUE,message=FALSE}
-downloadthis::download_file(
-              path = here::here("static", "papers", "EDP612Week2Readings.zip"),
-              output_name = "Week 2 Readings",
-              button_label = "Download the Readings",
-              button_type = "default",
-              has_icon = TRUE,
-              icon = "fa fa-save",
-              class = "hvr-sweep-to-left"
-              )
-```
   
-#### Note about the posts 
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP617Week2Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 1 Readings",
+  button_label = "Download the Readings",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+
+### Note about the posts 
 **Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *initial posts*, but this is not a rubric. 
 
 ```{r echo=FALSE}
 
-plus <- as.character(fontawesome::fa("plus", fill = "#5cb85c", height = "25px"))
+plus <- as.character(fa("plus", fill = "#5cb85c", height = "25px"))
 
-check <- as.character(fontawesome::fa("check", fill = "#0275d8", height = "25px"))
+check <- as.character(fa("check", fill = "#0275d8", height = "25px"))
 
-minus <- as.character(fontawesome::fa("minus", fill = "#f0ad4e", height = "25px"))
+minus <- as.character(fa("minus", fill = "#f0ad4e", height = "25px"))
 
-not <- as.character(fontawesome::fa("exclamation", fill = "#d9534f", height = "25px"))
+not <- as.character(fa("exclamation", fill = "#d9534f", height = "25px"))
 
-empty <- as.character(fontawesome::fa("times", fill = "#292b2c", height = "25px"))
+empty <- as.character(fa("times", fill = "#292b2c", height = "25px"))
 
-initials <- dplyr::tibble(
+initials <- tibble(
   
   range <- c(plus, 
              check,
              minus, 
              not,
              empty
-               ),
+  ),
   
   worth <- c("*11.5*",
              "*10*",
@@ -145,20 +151,20 @@ initials <- dplyr::tibble(
   
   criteria <- c(
     
-"Posts are well defined that fully address and develop all aspects of the prompt such that they
+    "Posts are well defined that fully address and develop all aspects of the prompt such that they
 
 advance the discussion,<br>
 are factually correct,<br>
 are cited correctly when necessary, *and*<br>
 provide a clear, concise, reflective and substantive contribution",
-   
+
 "Posts are mostly well defined that tend to address all aspects of the prompt such that they
 
 generally advance the discussion,<br>
 are factually correct,<br>
 are cited correctly when applicable, *but*<br>
 lack clarity or full development of the concept(s)",
-   
+
 "Posts are undertsandable but are not cohesive such that they do lack 
 
 clarity *or*<br>
@@ -166,20 +172,20 @@ depth *or*<br>
 non-repetitiveness *or*<br>
 preparedness *or*<br>
 justification",
-   
+
 "Posts are generally incoherant or superficial such that they are
 
 repeated *or*<br>
 incorrect *or*<br>
 irrelevant *or*<br>
 off-topic",
-   
+
 "Posts are nonexistent or lack merit"
 
-),
-  
-  .name_repair = "minimal"
-  
+  ),
+
+.name_repair = "minimal"
+
 )
 
 ```
@@ -187,23 +193,23 @@ off-topic",
 <center>
 ```{r, echo=FALSE}
 initials %>%
-    kableExtra::kbl(
-        col.names = c("Marker", "Point Value", "Criteria"), 
-        "html", 
-        escape = FALSE,
-        align = 'ccl'
-        ) %>%
-    kableExtra::kable_styling(full_width = FALSE) %>%
-    kableExtra::column_spec(1, width = "10em") %>%
-    kableExtra::column_spec(2, width = "10em") %>%
-    kableExtra::column_spec(3, width = "30em") %>% 
-    kableExtra::column_spec(1, width = "10em") %>%
-    kableExtra::column_spec(2, width = "10em") %>%
-    kableExtra::row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
-    kableExtra::row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
-    kableExtra::row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
-    kableExtra::row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
-    kableExtra::row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
-    kableExtra::row_spec(5, extra_css = 'vertical-align: middle !important;') 
+  kbl(
+    col.names = c("Marker", "Point Value", "Criteria"), 
+    "html", 
+    escape = FALSE,
+    align = 'ccl'
+  ) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>% 
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>

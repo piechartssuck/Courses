@@ -1,0 +1,77 @@
+---
+title: "Aims, Scope and Sequencing"
+linktitle: "Week 3: Aims, Scope and Sequencing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+
+wk_post <- tibble(
+  
+"eCampus" = c(unchecked, 
+              unchecked, 
+              unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            checked,
+            checked,
+            checked,
+            checked),
+
+Description = c("Take the Considering Program Evaluation survey",
+                "Read two articles and create postings",
+                "Respond to the `#pictures-of-evaluation` post",
+                "Describe a definition of evaluation you identify with",
+                "Assess logistics when considering possible teammates"),
+
+Location = c("[Link](/assignment/02-assignment/#evaluation-teams)^[Unique link sent to your WVU Mix e-mail account.]",
+             "[Link](/readings/02-readings/#read-some-papers)",
+             "[Link](/lesson/02-lesson/#responses)",
+             "[Link](/lesson/02-lesson/#evaluation-definitions)",
+             "[Link](/assignment/02-assignment/#evaluation-teams)")
+
+)
+```
+
+### What's Due?
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "10em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
