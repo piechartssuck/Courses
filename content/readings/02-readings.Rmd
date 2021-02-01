@@ -59,23 +59,19 @@ output:
 }
 </style>
 
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
-library(downloadthis)
-library(here)
-library(tidyverse)
-library(knitr)
-library(kableExtra)
+```{r load_packages, message=FALSE, warning=FALSE}
+library(dplyr)
 ```
 
 ### Read Some Papers
-For each reading below, write a *single* post on Slack with the following:
+For each reading below, write a *singlepost on Slack with the following:
 
   - a reflection / reaction to the content *and*
   - a question about something specific
   
 ```{r echo=FALSE}
 
-readings <- tibble(
+readings <- dplyr::tibble(
   
   paper <- c("Davidson, J. (2007). Editorial: Unlearning some of our social scientist habits. *Journal of MultiDisciplinary Evaluation 4*(8). 3-6.", 
                "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
@@ -95,51 +91,119 @@ readings <- tibble(
 <center>
 ```{r, echo=FALSE}
 readings %>%
-  kbl(col.names = c("Reading", "Channel"), 
+  kableExtra::kbl(col.names = c("Reading", "Channel"), 
       "html", 
       escape = FALSE,
       align = 'lc') %>%
-  kable_styling(full_width = FALSE) %>%
-  column_spec(1, width = "30em") %>%
-  column_spec(2, width = "10em")
+  kableExtra::kable_styling(full_width = FALSE) %>%
+  kableExtra::column_spec(1, width = "30em") %>%
+  kableExtra::column_spec(2, width = "10em")
 ```
 </center>
 
-```{r echo=FALSE,eval=TRUE}
+```{r echo=FALSE,eval=TRUE,message=FALSE}
 downloadthis::download_file(
-  path = here::here("static", "papers", "EDP612Week2Readings.zip"),
-  output_name = "Week 2 Readings",
-  button_label = "Download the Readings",
-  button_type = "default",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-  )
+              path = here::here("static", "papers", "EDP612Week2Readings.zip"),
+              output_name = "Week 2 Readings",
+              button_label = "Download the Readings",
+              button_type = "default",
+              has_icon = TRUE,
+              icon = "fa fa-save",
+              class = "hvr-sweep-to-left"
+              )
 ```
   
 #### Note about the posts 
 **Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *initial posts*, but this is not a rubric. 
 
-- ✔+: (*11.5 points in gradebook*) Posts are well defined responses that fully address and develop all aspects of the prompt such that they
-  + advance the discussion, 
-  + are factually correct, 
-  + are cited correctly when necessary, *and*
-  + provide a clear, concise, reflective and substantive contribution.
-- ✔: (*10 points in gradebook*) Posts well defined responses that mostly address all aspects of the prompt such that they
-  + generally advances the discussion, 
-  + are factually correct, 
-  + are cited correctly when necessary, *but*
-  + lack clarity or full development of the concept(s). 
-- ✔−: (*5 points in gradebook*) Posts responses that address some aspects of the prompt where responses are
-  + not clear *or*
-  + ill-prepared *or*
-  + repetitive *or*
-  + superficial *or*
-  + unsubstantiated.
-- ✘: (*0 points in gradebook*) Posts responses that are
-  + non existent *or*
-  + incorrect *or*
-  + irrelevant to the discussion *or*
-  + off-topic.
+```{r echo=FALSE}
 
-Otherwise *0 points (0%) in gradebook*.
+checkcheck <- as.character(fontawesome::fa("check-double", fill = "#5cb85c", height = "25px"))
+
+check <- as.character(fontawesome::fa("check", fill = "#0275d8", height = "25px"))
+
+minus <- as.character(fontawesome::fa("minus", fill = "#f0ad4e", height = "25px"))
+
+not <- as.character(fontawesome::fa("exclamation", fill = "#d9534f", height = "25px"))
+
+empty <- as.character(fontawesome::fa("times", fill = "#292b2c", height = "25px"))
+
+initials <- dplyr::tibble(
+  
+  range <- c(checkcheck, 
+             check,
+             minus, 
+             not,
+             empty
+               ),
+  
+  worth <- c("*11.5*",
+             "*10*",
+             "*5*",
+             "*0*",
+             "*0*"),
+  
+  criteria <- c(
+    
+"Posts are well defined that fully address and develop all aspects of the prompt such that they
+
+advance the discussion,<br>
+are factually correct,<br>
+are cited correctly when necessary, *and*<br>
+provide a clear, concise, reflective and substantive contribution",
+   
+"Posts are mostly well defined that tend to address all aspects of the prompt such that they
+
+generally advance the discussion,<br>
+are factually correct,<br>
+are cited correctly when applicable, *but*<br>
+lack clarity or full development of the concept(s)",
+   
+"Posts are undertsandable but are not cohesive such that they do lack 
+
+clarity *or*<br>
+depth *or*<br>
+non-repetitiveness *or*<br>
+preparedness *or*<br>
+justification",
+   
+"Posts are generally incoherant or superficial such that they are
+
+repeated *or*<br>
+incorrect *or*<br>
+irrelevant *or*<br>
+off-topic",
+   
+"Posts are nonexistent or lack merit"
+
+),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+initials %>%
+    kableExtra::kbl(
+        col.names = c("Marker", "Point Value", "Criteria"), 
+        "html", 
+        escape = FALSE,
+        align = 'ccl'
+        ) %>%
+    kableExtra::kable_styling(full_width = FALSE) %>%
+    kableExtra::column_spec(1, width = "10em") %>%
+    kableExtra::column_spec(2, width = "10em") %>%
+    kableExtra::column_spec(3, width = "30em") %>% 
+    kableExtra::column_spec(1, width = "10em") %>%
+    kableExtra::column_spec(2, width = "10em") %>%
+    kableExtra::row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+    kableExtra::row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+    kableExtra::row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+    kableExtra::row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+    kableExtra::row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+    kableExtra::row_spec(5, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

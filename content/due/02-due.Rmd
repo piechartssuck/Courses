@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(fontawesome)
 library(knitr)
