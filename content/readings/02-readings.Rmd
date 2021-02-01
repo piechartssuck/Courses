@@ -118,7 +118,7 @@ downloadthis::download_file(
 
 ```{r echo=FALSE}
 
-checkcheck <- as.character(fontawesome::fa("check-double", fill = "#5cb85c", height = "25px"))
+plus <- as.character(fontawesome::fa("plus", fill = "#5cb85c", height = "25px"))
 
 check <- as.character(fontawesome::fa("check", fill = "#0275d8", height = "25px"))
 
@@ -130,7 +130,7 @@ empty <- as.character(fontawesome::fa("times", fill = "#292b2c", height = "25px"
 
 initials <- dplyr::tibble(
   
-  range <- c(checkcheck, 
+  range <- c(plus, 
              check,
              minus, 
              not,
