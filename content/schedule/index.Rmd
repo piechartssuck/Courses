@@ -10,7 +10,7 @@ library(kableExtra)
 library(fontawesome)
 ```
 
-Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage
+## Table of Contents
 
 ```{r icontibble, echo=FALSE, message=FALSE}
 
@@ -56,12 +56,21 @@ tableofcontent <- tibble(
 <center>
 ```{r, echo=FALSE}
 tableofcontent %>%
-  kbl(col.names = NULL, "html", escape = FALSE) 
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, 
+              bold = TRUE)
 ```
 </center>
 
-*Note: Assignments are due by* ***Sunday at 11:59 PM*** *unless otherwise noted.*
+<span style="font-size:17px">*Note: Assignments are due by* ***Sunday at 11:59 PM*** *unless otherwise noted.*</span>
+<br>
+<br>
 
-::: 
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+
+## Weekly Overview 
 
 `r blogdown::shortcode("schedule")`

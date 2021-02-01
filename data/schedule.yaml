@@ -1,5 +1,5 @@
 lessons:
-  - title: '<span class="fake-header-table">Concentration</span>'
+  - title: '<span style="font-weight:bold">Content</span>'
     header: True
 
   - title: 'Who Are You Really?'
