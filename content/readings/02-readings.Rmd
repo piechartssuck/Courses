@@ -59,12 +59,12 @@ output:
 }
 </style>
 
-```{r load_packages, message=FALSE, warning=FALSE}
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
 library(dplyr)
 ```
 
 ### Read Some Papers
-For each reading below, write a *singlepost on Slack with the following:
+For each reading below, write a **single post** on Slack with the following:
 
   - a reflection / reaction to the content *and*
   - a question about something specific
