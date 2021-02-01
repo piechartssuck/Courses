@@ -19,6 +19,7 @@
 
             {{- if .readings }}
             <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/readings/{{ .readings }}/">
+              <font color="739670">
                     <i class="fas fa-book fa-lg fa-fw"></i></a></td>
             {{- else }}
             <td align="center" style="width:10%;text-align:center">
@@ -29,6 +30,7 @@
 
             {{- if .lesson }}
             <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/lesson/{{ .lesson }}/">
+              <font color="76487">
                     <i class="fas fa-chalkboard fa-lg fa-fw"></i></a></td>
             {{- else }}
             <td align="center" style="width:10%;text-align:center">
@@ -39,6 +41,7 @@
 
             {{- if .example }}
             <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/example/{{ .example }}/">
+              <font color="eb7b59">
                     <i class="fas fa-lightbulb fa-lg fa-fw"></i></a></td>
             {{- else }}
             <td align="center" style="width:10%;text-align:center">
@@ -49,6 +52,7 @@
 
             {{- if .assignment }}
             <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}/">
+              <font color="cf4647">
                     <i class="fas fa-tasks fa-lg fa-fw"></i></a></td>
             {{- else }}
             <td align="center" style="width:10%;text-align:center">
@@ -59,7 +63,7 @@
 
             {{- if .due }}
             <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/due/{{ .due }}/">
-              <font color="008080">
+              <font color="2a6e84">
                     <i class="fas fa-folder-open fa-lg fa-fw"></i></a></td>
             {{- else }}
             <td align="center" style="width:10%;text-align:center">

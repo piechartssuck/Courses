@@ -9,15 +9,8 @@ rm(list = ls())
 library(tidyverse)
 library(viridis)
 library(showtext)
-font_add("Jost* Light", "Jost-300-Light.otf")
-font_add("Jost* Medium", "Jost-500-Medium.otf")
-font_add("Jost* Semi", "Jost-600-Semi.otf")
-font_add("Jost* Semi Italic", "Jost-600-SemiItalic.otf")
-font_add("Jost* Bold", "Jost-700-Bold.otf")
-font_add("Jost* Heavy", "Jost-800-Heavy.otf")
-font_add("Jost* Black", "Jost-900-Black.otf")
-font_add("Canela Text Medium", "Canela-Medium.otf")
-font_add("Canela Text Bold", "Canela-Bold.otf")
+font_add("Canela Medium Italic", "Canela-MediumItalic.otf")
+font_add("Canela Bold", "Canela-Bold.otf")
 font_add("Canela Text Black", "Canela-Black.otf")
 showtext_auto()
 
@@ -25,7 +18,7 @@ showtext_auto()
   position <- 1:n
   evaluand <- factor(rep(1:8, each=n/8))
   p.value <- runif(n)
-  emotib <- tibble(Evaluation = position, 
+  emotib <- tibble(`Sentiment Evaluation` = position, 
                    Sentiment = evaluand, 
                    p.value = p.value,
                    Scale = log(p.value)^2) %>%
@@ -39,36 +32,32 @@ showtext_auto()
               Sentiment == 2 ~ "Anticipation",
               Sentiment == 1 ~ "Anger"
             ))
+  
 
-scatter <- ggplot(emotib %>% mutate(log.p.value = -log(p.value)),
-         aes(x = Evaluation, 
-             y = log.p.value/pi^2*2, 
-             color = Sentiment,
+scatter <- ggplot(emotib %>% mutate(Strength = -log(p.value)/pi^2*2),
+         aes(x = reorder(Sentiment, desc(Sentiment)),
+             y = Strength, 
+             color = Strength,
              fill = Sentiment,
-             size = Scale)) +
-    geom_point(show.legend = TRUE) +
-    scale_color_viridis_d(option = "D",
-                          alpha = 0.50) +
-    scale_fill_viridis_d(option = "E",
-                         direction = -1) +
-    coord_flip() +
+             size = 0.5/Strength*10)) +
+    geom_point(shape = 21, 
+               show.legend = FALSE, 
+               alpha = 1, 
+               stroke = 0.2,
+               color = "white") +
+    scale_fill_manual(values =c("#02416a", "#e64a21", "#770301",
+                                "#722d61", "#008080", "5e576e",
+                                "#7e90ac", "#006699")) +
+  scale_y_reverse(expand = expansion(add = c(0.2, 0.4))) +
     theme_void() +
-    theme(legend.position = "bottom",
-    legend.direction = "horizontal",
-    text = element_text(family="Canela Text Bold"),
-    axis.title.y = element_text(family="Canela Text Medium",
-                                angle = 90, 
-                                vjust = 0.5)
-        ) +
-    guides(size = FALSE,
-           color = guide_legend(override.aes = list(size=3)))
+  theme(plot.margin = unit(c(-0.2,1,-0.35,1), "cm"))
 
 scatter
 
   ggsave("scatter.png",
          scatter,
-         width = 210, 
-         height = 50, 
+         width = 80, 
+         height = 40, 
          units = "mm")
   
   

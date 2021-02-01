@@ -20,15 +20,15 @@ lessons:
     assignment: "02-assignment"
     due: "02-due"
 
-  # - title: 'Aims, Scope and Sequencing'
-  #   session: 3
-  #   date: "September 6, 2020"
-  #   readings: "03-readings"
-  #   lesson: "03-lesson"
-  #   example: "03-example"
-  #   assignment: "03-assignment"
-  #   due: "03-due"
-  #
+  - title: 'Aims, Scope and Sequencing'
+    session: 3
+    date: "September 6, 2020"
+    readings: "03-readings"
+    lesson: "03-lesson"
+    example: "03-example"
+    assignment: "03-assignment"
+    due: "03-due"
+
   # - title: 'Causation and Criteria'
   #   session: 4
   #   date: "September 13, 2020"

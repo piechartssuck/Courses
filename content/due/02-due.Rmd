@@ -22,9 +22,10 @@ library(kableExtra)
 ```
 
 ```{r eval = TRUE, echo = FALSE}
-unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
 
-checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
 
 wk_post <- tibble(
   
@@ -42,7 +43,7 @@ wk_post <- tibble(
 
 Description = c("Take the Considering Program Evaluation survey",
                 "Read two articles and create postings",
-                "Respond to a `#pictures-of-evaluation` post",
+                "Respond to the `#pictures-of-evaluation` post",
                 "Describe a definition of evaluation you identify with",
                 "Assess logistics when considering possible teammates"),
 
@@ -64,9 +65,13 @@ kable(wk_post,
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "10em") %>%
-  column_spec(3, width = "10em") %>%
-  column_spec(4, width = "15em") 
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "10em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
-
-

@@ -52,91 +52,91 @@
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 eCampus
 &lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 Slack
 &lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;th style=&#34;text-align:left;vertical-align: middle !important;&#34;&gt;
 Description
 &lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 Location
 &lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Introduce yourself in Slack.
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Introduce yourself in Slack under &lt;code&gt;#introduce-yourself&lt;/code&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Verify your Qualtrics account
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#verify-qualtrics-account-login-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#verify-qualtrics-account-login&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Review the website
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/01-readings/#review-the-rest-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/01-readings/#review-the-rest&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
 Draw an Evaluation
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#drawing-evaluations-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#drawing-evaluations&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -174,20 +174,22 @@ Draw an Evaluation
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Go to the course &lt;a href=&#34;2021edp617.slack.com&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; account&lt;/li&gt;
 &lt;li&gt;Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.&lt;/li&gt;
-&lt;li&gt;Head to to the channel #introduce-yourself and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
+&lt;li&gt;Head to to the channel &lt;a href=&#34;https://2021edp617.slack.com/archives/C01K4D3HJBU&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#introduce-yourself&lt;/code&gt;&lt;/a&gt; and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
 &lt;br&gt;
-&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693C: Data Visualization this term to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!&lt;br&gt;&lt;/li&gt;
+&lt;em&gt;I teach data visualization BUT I am also about 40% colorblind! How do I know what color to use? Take EDP 693E: Data Visualization this term to find out!&lt;/em&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
+&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;verify-qualtrics-account-login&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Verify Qualtrics Account Login&lt;/h3&gt;
-&lt;p&gt;You may end up using a survey in this course so its a good idea to go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;You may end up using a survey in this course so its a good idea to go to the &lt;a href=&#34;https://wvu.qualtrics.com&#34; target=&#34;_blank&#34;&gt;WVU Qualtrics login page&lt;/a&gt; and simply make sure you can login. If you are unable to do so, please submit a &lt;a href=&#34;https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102&#34; target=&#34;_blank&#34;&gt;ticket to IT&lt;/a&gt; or give them a ring at &lt;a href=&#34;tel:3042934444&#34;&gt;304-293-4444&lt;/a&gt; as soon as possible.
+&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;drawing-evaluations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Drawing Evaluations&lt;/h3&gt;
-&lt;p&gt;Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a post describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to “Evaluation”. If you drew a picture, scan your picture and attach it to your post. Post on the “Pictures of Evaluation” discussion board on Slack.
-:::&lt;/p&gt;
+&lt;p&gt;Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a post describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to “Evaluation”. If you drew a picture, scan your picture and attach it to your post. Post on the &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KL7W6H6V&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#pictures-of-evaluation&lt;/code&gt;&lt;/a&gt; discussion board on Slack.&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -290,50 +292,7 @@ Draw an Evaluation
     </item>
     
     <item>
-      <title>Who Are You Really?</title>
-      <link>https://edp617.theoreticalphysed.com/readings/02-readings-copy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp617.theoreticalphysed.com/readings/02-readings-copy/</guid>
-      <description>
-&lt;script src=&#34;02-readings copy_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#review-the-rest&#34;&gt;Review the Rest&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#read-the-book&#34;&gt;Read the Book&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;First Timers Note&lt;/h2&gt;
-&lt;p&gt;You’ll see all class related readings posted here on a weekly basis. With that said, take a look at the items below:&lt;/p&gt;
-&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get Some Advice&lt;/h3&gt;
-&lt;p&gt;First things first:
-&lt;br&gt;
-&lt;br&gt;
-&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
-&lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp617.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;review-the-rest&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Review the Rest&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;https://edp617.theoreticalphysed.com/assigment/&#34;&gt;Assignments&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/example/&#34;&gt;Examples&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/&#34;&gt;Lessons&lt;/a&gt;, and &lt;a href=&#34;https://edp617.theoreticalphysed.com/schedule/&#34;&gt;Schedule&lt;/a&gt; pages for this class.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;read-the-book&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Read the Book&lt;/h3&gt;
-&lt;p&gt;There is nothing to read just yet!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/assignment/02-assignment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/assignment/02-assignment/</guid>
@@ -348,14 +307,14 @@ Draw an Evaluation
 
 &lt;div id=&#34;evaluation-teams&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Evaluation Teams&lt;/h2&gt;
-&lt;p&gt;It is time to start thinking about your evaluation team. These are groups of 3-4 people that will work with each other through the entire real world evaluations that will be conducted in the course. Go to the &lt;code&gt;talk-about-logistics&lt;/code&gt; discussion board and post timeslots you might be available to engage in group chat room discussions on a weekly basis. Read through others’ postings to find people who you could potentially be in a group with. You will have until the end of Week 3 to finalize your group membership. Instructions for finalizing the team will be posted next week!&lt;/p&gt;
+&lt;p&gt;It is time to start thinking about your evaluation team. These are groups of 3-4 people that will work with each other through the entire real world evaluations that will be conducted in the course. Go to the &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV9GPGRZ&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#talk-about-logistics&lt;/code&gt;&lt;/a&gt; discussion board and post timeslots you might be available to engage in group chat room discussions on a weekly basis. Read through others’ postings to find people who you could potentially be in a group with. You will have until the end of Week 3 to finalize your group membership. Instructions for finalizing the team will be posted next week!&lt;/p&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/due/02-due/</guid>
@@ -376,102 +335,126 @@ Draw an Evaluation
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 eCampus
 &lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 Slack
 &lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;th style=&#34;text-align:left;vertical-align: middle !important;&#34;&gt;
 Description
 &lt;/th&gt;
-&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
 Location
 &lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Take the Considering Program Evaluation survey
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#class-slack-account-access-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/02-assignment/#evaluation-teams&#34;&gt;Link&lt;/a&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Read two articles and create postings
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/#verify-qualtrics-account-login-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/02-readings/#read-some-papers&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Respond to the &lt;code&gt;#pictures-of-evaluation&lt;/code&gt; post
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/#responses&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Describe a definition of evaluation you identify with
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/01-readings/#review-the-rest-1&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/#evaluation-definitions&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg style=&#34;height:0.8em;top:.04em;position:relative;fill:steelblue;&#34; viewbox=&#34;0 0 448 512&#34;&gt;
-&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
 Assess logistics when considering possible teammates
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 15em; &#34;&gt;
-Unique link sent to your Mix account
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/02-assignment/#evaluation-teams&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/center&gt;
 &lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Unique link sent to your WVU Mix e-mail account.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/example/02-example/</guid>
@@ -480,22 +463,52 @@ Unique link sent to your Mix account
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#phase&#34;&gt;Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;phase&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Phase&lt;/h2&gt;
-&lt;p&gt;We are currently in the pre-evaluation phase. This involves
-- Gathering a team
-- Selecting a program
-- Creating a prospectus&lt;/p&gt;
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gathering a team&lt;/li&gt;
+&lt;li&gt;Thinking about potential programs&lt;/li&gt;
+&lt;li&gt;Creating a prospectus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a look at what to consider when choosing teammates, take a look at [a] &lt;a href=&#34;https://www.betterevaluation.org/en/managers_guide&#34; target=&#34;_blank&#34;&gt;Manager’s guide to evaluation&lt;/a&gt; by &lt;em&gt;Jane Davidson&lt;/em&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
+      <link>https://edp617.theoreticalphysed.com/example/03-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/03-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gathering a team&lt;/li&gt;
+&lt;li&gt;Thinking about potential programs&lt;/li&gt;
+&lt;li&gt;Creating a prospectus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a look at what to consider when choosing teammates, take a look at [a] &lt;a href=&#34;https://www.betterevaluation.org/en/managers_guide&#34; target=&#34;_blank&#34;&gt;Manager’s guide to evaluation&lt;/a&gt; by &lt;em&gt;Jane Davidson&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/lesson/02-lesson/</guid>
@@ -506,23 +519,28 @@ Unique link sent to your Mix account
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#responses&#34;&gt;Responses&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#evaluation-definitions&#34;&gt;Evaluation Definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#considering-program-evaluation&#34;&gt;Considering Program Evaluation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;responses&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Responses&lt;/h2&gt;
-&lt;p&gt;Read through posts on &lt;code&gt;#pictures-of-evaluation&lt;/code&gt; and comment on at least one posting using the &lt;a href=&#34;https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-&#34; target=&#34;_blank&#34;&gt;Reply in thread&lt;/a&gt; option foo &lt;img src=&#34;https://edp617.theoreticalphysed.com/img/lesson/slack_pop_menu.png&#34; /&gt;.&lt;/p&gt;
+&lt;p&gt;Read through posts on &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KL7W6H6V&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#pictures-of-evaluation&lt;/code&gt;&lt;/a&gt; and comment on at least one posting using the &lt;a href=&#34;https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-&#34; target=&#34;_blank&#34;&gt;Reply in thread&lt;/a&gt; option as pictured below: &lt;img src=&#34;https://edp617.theoreticalphysed.com/img/lesson/slack_pop_menu.png&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;evaluation-definitions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Evaluation Definitions&lt;/h2&gt;
-&lt;p&gt;Look through the &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Evaluation%20Definitions.pdf&#34;&gt;evaluation definitions&lt;/a&gt; document.
-Think about which of those definitions fits best with your own view of evaluation, or if there are components of your view that are not addressed by any of those definitions. Then write a single post on &lt;code&gt;#evaluation-definitions&lt;/code&gt; describing your view of evaluation and how it connects with any or all (or none) of the definitions described.&lt;/p&gt;
+&lt;p&gt;Look through the &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Evaluation%20Definitions.pdf&#34; target=&#34;_blank&#34;&gt;evaluation definitions&lt;/a&gt; document.
+Think about which of those definitions fits best with your own view of evaluation, or if there are components of your view that are not addressed by any of those definitions. Then write a single post on &lt;a href=&#34;https://2021edp617.slack.com/archives/C01L18T7NR2&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#evaluation-definitions&lt;/code&gt;&lt;/a&gt; describing your view of evaluation and how it connects with any or all (or none) of the definitions described.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;considering-program-evaluation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Considering Program Evaluation&lt;/h2&gt;
+&lt;p&gt;Please take and complete the survey &lt;strong&gt;&lt;em&gt;Considering Program Evaluation&lt;/em&gt;&lt;/strong&gt; that has been sent to your e-mail. While I ask that you please fill it out truthfully, please note there is no right or wrong answer. This is just an initial assessment of what you may or may not know or be aware of within the field of evaluation and provides me with an initial benchmark for the class. If you did not receive an invite, please let me know as soon as possible!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/readings/02-readings/</guid>
@@ -537,42 +555,111 @@ Think about which of those definitions fits best with your own view of evaluatio
 
 &lt;div id=&#34;read-some-papers&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Read Some Papers&lt;/h3&gt;
-&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:
-* a reflection / reaction to the content
-* a question about something specific
-+ &lt;a href=&#34;%22/papers/Week%202/Davidson%20(2007).pdf%22&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;code&gt;#davidson&lt;/code&gt;
-+ &lt;a href=&#34;%22/papers/Week%202/Mathison%20(2007).pdf%22&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;code&gt;#mathison&lt;/code&gt;&lt;/p&gt;
-&lt;div id=&#34;note-about-posts&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Note about posts&lt;/h4&gt;
-&lt;p&gt;The following scaling will be used in general when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but do not consider it a rubric. &lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Everything should be in APA 7th Edition formatting unless otherwise noted.&lt;/p&gt;
+&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a reflection / reaction to the content &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a question about something specific&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Davison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV12ELKC&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#davidson&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Mathison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV11R64S&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#mathison&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;note-about-the-posts&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Note about the posts&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but this is not a rubric.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;✔+: (&lt;em&gt;11.5 points in gradebook&lt;/em&gt;) Posts are well defined responses that fully address and develop all aspects of the prompt such that they
 &lt;ul&gt;
 &lt;li&gt;advance the discussion,&lt;/li&gt;
 &lt;li&gt;are factually correct,&lt;/li&gt;
-&lt;li&gt;are cited correctly when necessary, and&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;provide a clear, concise, reflective and substantive contribution.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✔: (&lt;em&gt;10 points in gradebook&lt;/em&gt;) Posts well defined responses that mostly address all aspects of the prompt such that they
 &lt;ul&gt;
 &lt;li&gt;generally advances the discussion,&lt;/li&gt;
 &lt;li&gt;are factually correct,&lt;/li&gt;
-&lt;li&gt;are cited correctly when necessary, but&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;but&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;lack clarity or full development of the concept(s).&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✔−: (&lt;em&gt;5 points in gradebook&lt;/em&gt;) Posts responses that address some aspects of the prompt where responses are
 &lt;ul&gt;
-&lt;li&gt;not clear or&lt;/li&gt;
-&lt;li&gt;ill-prepared or&lt;/li&gt;
-&lt;li&gt;repetitive or&lt;/li&gt;
-&lt;li&gt;superficial or&lt;/li&gt;
+&lt;li&gt;not clear &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ill-prepared &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repetitive &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;superficial &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;unsubstantiated.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✘: (&lt;em&gt;0 points in gradebook&lt;/em&gt;) Posts responses that are
 &lt;ul&gt;
-&lt;li&gt;non existent or&lt;/li&gt;
-&lt;li&gt;incorrect or&lt;/li&gt;
-&lt;li&gt;irrelevant to the discussion or&lt;/li&gt;
+&lt;li&gt;non existent &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;incorrect &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;irrelevant to the discussion &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;off-topic.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Otherwise &lt;em&gt;0 points (0%) in gradebook&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rethinking the Way You Think</title>
+      <link>https://edp617.theoreticalphysed.com/readings/03-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/readings/03-readings/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read-some-papers&#34;&gt;Read Some Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;read-some-papers&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Read Some Papers&lt;/h3&gt;
+&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a reflection / reaction to the content &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a question about something specific&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Davison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV12ELKC&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#davidson&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Mathison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV11R64S&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#mathison&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;note-about-the-posts&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Note about the posts&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but this is not a rubric.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✔+: (&lt;em&gt;11.5 points in gradebook&lt;/em&gt;) Posts are well defined responses that fully address and develop all aspects of the prompt such that they
+&lt;ul&gt;
+&lt;li&gt;advance the discussion,&lt;/li&gt;
+&lt;li&gt;are factually correct,&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;provide a clear, concise, reflective and substantive contribution.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✔: (&lt;em&gt;10 points in gradebook&lt;/em&gt;) Posts well defined responses that mostly address all aspects of the prompt such that they
+&lt;ul&gt;
+&lt;li&gt;generally advances the discussion,&lt;/li&gt;
+&lt;li&gt;are factually correct,&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;but&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;lack clarity or full development of the concept(s).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✔−: (&lt;em&gt;5 points in gradebook&lt;/em&gt;) Posts responses that address some aspects of the prompt where responses are
+&lt;ul&gt;
+&lt;li&gt;not clear &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ill-prepared &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repetitive &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;superficial &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;unsubstantiated.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✘: (&lt;em&gt;0 points in gradebook&lt;/em&gt;) Posts responses that are
+&lt;ul&gt;
+&lt;li&gt;non existent &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;incorrect &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;irrelevant to the discussion &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;off-topic.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1779,33 +1866,100 @@ You can check out more about what I do here:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/schedule/</guid>
       <description>
-&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/schedule/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/schedule/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/schedule/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;p&gt;Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after reading the content.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post media that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Sunday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;::: note &lt;br/&gt;
-&lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
-&lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-plus&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-long-arrow-alt-right&#34;&gt;&lt;/i&gt; 
-&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;or in terms that aren’t as &lt;a href=&#34;https://doi.org/10.1016/j.chb.2020.106361&#34; target=&#34;_blank&#34;&gt;ambiguous as emojis&lt;/a&gt;, follow this process: read the material, look over the example (if given) along with the assignment to help you with what is due.
-&lt;br /&gt;
-:::&lt;/p&gt;
+&lt;center&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Readings
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/&#34;&gt;Go&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;svg style=&#34;height:17px;fill:#739670;&#34; viewBox=&#34;0 0 448 512&#34;&gt;
+&lt;path d=&#34;M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+This page contains the readings for the topic which should be the first place you go to.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Lesson
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/&#34;&gt;Go&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;svg style=&#34;height:17px;fill:#764874;&#34; viewBox=&#34;0 0 640 512&#34;&gt;
+&lt;path d=&#34;M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Here are interactive lessons, slides, and/or walkthroughs that helps with any content.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Example
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/&#34;&gt;Go&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;svg style=&#34;height:17px;fill:#eb7b59;&#34; viewBox=&#34;0 0 352 512&#34;&gt;
+&lt;path d=&#34;M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Extra items that are picked or created to help you understand the current material exist on this page.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Assignment
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/&#34;&gt;Go&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;svg style=&#34;height:17px;fill:#cf4647;&#34; viewBox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Instructions for all student related tasks including information about the tasks and deliverables are provided in this location.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Due
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/&#34;&gt;Go&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;svg style=&#34;height:17px;fill:#2a6e84;&#34; viewBox=&#34;0 0 576 512&#34;&gt;
+&lt;path d=&#34;M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+This page contains the instructions what to submit by week
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;em&gt;Note: Assignments are due by Sunday at 11:59 PM unless otherwise noted.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
 &lt;p&gt;&lt;table class=&#34;table schedule&#34; style=&#34;max-width:100%&#34;&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
@@ -1830,6 +1984,36 @@ You can check out more about what I do here:
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/01-assignment/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/01-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;Jan 26, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Rethinking the Way You Think&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/02-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/02-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/02-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/02-due/&#34;&gt;
+              &lt;font color=&#34;008080&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;September 6, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Aims, Scope and Sequencing&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/03-readings/&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/03-lesson/&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/03-example/&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/03-assignment/&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/03-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

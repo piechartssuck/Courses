@@ -13,8 +13,8 @@ hero_media: course_hex.png
 design:
   background:
     # Background gradient
-    gradient_start: '#526189'
-    gradient_end: '#5a8fa9'
+    gradient_start: '#106281'
+    gradient_end: '#533747'
 
     # Text color (true=light or false=dark).
     text_color_light: true
@@ -23,4 +23,4 @@ cta_note:
   label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
-**An introductory course in all things program evaluation.**
+**An introductory course in all things program evaluation**

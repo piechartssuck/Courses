@@ -29,8 +29,8 @@ main:
   - name: '<i class="fab fa-slack"></i>'
     url: "https://2021edp617.slack.com"
     weight: 10
-  - name: '<i class="fab fa-r-project"></i>'
-    url: "https://rstudio.cloud/"
+  - name: Created using <i class="fab fa-r-project"></i>
+    url: "https://rstudio.com/"
     weight: 11
 
 readings:

@@ -56,50 +56,7 @@
     </item>
     
     <item>
-      <title>Who Are You Really?</title>
-      <link>https://edp617.theoreticalphysed.com/readings/02-readings-copy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edp617.theoreticalphysed.com/readings/02-readings-copy/</guid>
-      <description>
-&lt;script src=&#34;02-readings copy_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#first-timers-note&#34;&gt;First Timers Note&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#review-the-rest&#34;&gt;Review the Rest&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#read-the-book&#34;&gt;Read the Book&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;first-timers-note&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;First Timers Note&lt;/h2&gt;
-&lt;p&gt;You’ll see all class related readings posted here on a weekly basis. With that said, take a look at the items below:&lt;/p&gt;
-&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get Some Advice&lt;/h3&gt;
-&lt;p&gt;First things first:
-&lt;br&gt;
-&lt;br&gt;
-&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
-&lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp617.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;review-the-rest&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Review the Rest&lt;/h3&gt;
-&lt;p&gt;Review the overviews of the other areas as well: &lt;a href=&#34;https://edp617.theoreticalphysed.com/assigment/&#34;&gt;Assignments&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/example/&#34;&gt;Examples&lt;/a&gt;, &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/&#34;&gt;Lessons&lt;/a&gt;, and &lt;a href=&#34;https://edp617.theoreticalphysed.com/schedule/&#34;&gt;Schedule&lt;/a&gt; pages for this class.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;read-the-book&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Read the Book&lt;/h3&gt;
-&lt;p&gt;There is nothing to read just yet!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/readings/02-readings/</guid>
@@ -114,42 +71,111 @@
 
 &lt;div id=&#34;read-some-papers&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Read Some Papers&lt;/h3&gt;
-&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:
-* a reflection / reaction to the content
-* a question about something specific
-+ &lt;a href=&#34;%22/papers/Week%202/Davidson%20(2007).pdf%22&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;code&gt;#davidson&lt;/code&gt;
-+ &lt;a href=&#34;%22/papers/Week%202/Mathison%20(2007).pdf%22&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;code&gt;#mathison&lt;/code&gt;&lt;/p&gt;
-&lt;div id=&#34;note-about-posts&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Note about posts&lt;/h4&gt;
-&lt;p&gt;The following scaling will be used in general when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but do not consider it a rubric. &lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Everything should be in APA 7th Edition formatting unless otherwise noted.&lt;/p&gt;
+&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a reflection / reaction to the content &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a question about something specific&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Davison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV12ELKC&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#davidson&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Mathison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV11R64S&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#mathison&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;note-about-the-posts&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Note about the posts&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but this is not a rubric.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;✔+: (&lt;em&gt;11.5 points in gradebook&lt;/em&gt;) Posts are well defined responses that fully address and develop all aspects of the prompt such that they
 &lt;ul&gt;
 &lt;li&gt;advance the discussion,&lt;/li&gt;
 &lt;li&gt;are factually correct,&lt;/li&gt;
-&lt;li&gt;are cited correctly when necessary, and&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;provide a clear, concise, reflective and substantive contribution.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✔: (&lt;em&gt;10 points in gradebook&lt;/em&gt;) Posts well defined responses that mostly address all aspects of the prompt such that they
 &lt;ul&gt;
 &lt;li&gt;generally advances the discussion,&lt;/li&gt;
 &lt;li&gt;are factually correct,&lt;/li&gt;
-&lt;li&gt;are cited correctly when necessary, but&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;but&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;lack clarity or full development of the concept(s).&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✔−: (&lt;em&gt;5 points in gradebook&lt;/em&gt;) Posts responses that address some aspects of the prompt where responses are
 &lt;ul&gt;
-&lt;li&gt;not clear or&lt;/li&gt;
-&lt;li&gt;ill-prepared or&lt;/li&gt;
-&lt;li&gt;repetitive or&lt;/li&gt;
-&lt;li&gt;superficial or&lt;/li&gt;
+&lt;li&gt;not clear &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ill-prepared &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repetitive &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;superficial &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;unsubstantiated.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;✘: (&lt;em&gt;0 points in gradebook&lt;/em&gt;) Posts responses that are
 &lt;ul&gt;
-&lt;li&gt;non existent or&lt;/li&gt;
-&lt;li&gt;incorrect or&lt;/li&gt;
-&lt;li&gt;irrelevant to the discussion or&lt;/li&gt;
+&lt;li&gt;non existent &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;incorrect &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;irrelevant to the discussion &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;off-topic.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Otherwise &lt;em&gt;0 points (0%) in gradebook&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rethinking the Way You Think</title>
+      <link>https://edp617.theoreticalphysed.com/readings/03-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/readings/03-readings/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read-some-papers&#34;&gt;Read Some Papers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;read-some-papers&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Read Some Papers&lt;/h3&gt;
+&lt;p&gt;For each reading below, write a &lt;em&gt;single&lt;/em&gt; post on Slack with the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a reflection / reaction to the content &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a question about something specific&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Davison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Davidson (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV12ELKC&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#davidson&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/papers/Week%202/Mathison%20(2007).pdf&#34; target=&#34;_blank&#34;&gt;Mathison (2007)&lt;/a&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV11R64S&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#mathison&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;note-about-the-posts&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Note about the posts&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Remember this is a graduate level class and your writing should reflect that&lt;/strong&gt;. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your &lt;em&gt;initial posts&lt;/em&gt;, but this is not a rubric.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✔+: (&lt;em&gt;11.5 points in gradebook&lt;/em&gt;) Posts are well defined responses that fully address and develop all aspects of the prompt such that they
+&lt;ul&gt;
+&lt;li&gt;advance the discussion,&lt;/li&gt;
+&lt;li&gt;are factually correct,&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;and&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;provide a clear, concise, reflective and substantive contribution.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✔: (&lt;em&gt;10 points in gradebook&lt;/em&gt;) Posts well defined responses that mostly address all aspects of the prompt such that they
+&lt;ul&gt;
+&lt;li&gt;generally advances the discussion,&lt;/li&gt;
+&lt;li&gt;are factually correct,&lt;/li&gt;
+&lt;li&gt;are cited correctly when necessary, &lt;em&gt;but&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;lack clarity or full development of the concept(s).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✔−: (&lt;em&gt;5 points in gradebook&lt;/em&gt;) Posts responses that address some aspects of the prompt where responses are
+&lt;ul&gt;
+&lt;li&gt;not clear &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;ill-prepared &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repetitive &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;superficial &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;unsubstantiated.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;✘: (&lt;em&gt;0 points in gradebook&lt;/em&gt;) Posts responses that are
+&lt;ul&gt;
+&lt;li&gt;non existent &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;incorrect &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;irrelevant to the discussion &lt;em&gt;or&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;off-topic.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;

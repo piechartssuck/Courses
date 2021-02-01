@@ -34,7 +34,7 @@
     </item>
     
     <item>
-      <title>Defining Evaluation</title>
+      <title>Rethinking the Way You Think</title>
       <link>https://edp617.theoreticalphysed.com/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/example/02-example/</guid>
@@ -43,16 +43,46 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#phase&#34;&gt;Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;phase&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Phase&lt;/h2&gt;
-&lt;p&gt;We are currently in the pre-evaluation phase. This involves
-- Gathering a team
-- Selecting a program
-- Creating a prospectus&lt;/p&gt;
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gathering a team&lt;/li&gt;
+&lt;li&gt;Thinking about potential programs&lt;/li&gt;
+&lt;li&gt;Creating a prospectus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a look at what to consider when choosing teammates, take a look at [a] &lt;a href=&#34;https://www.betterevaluation.org/en/managers_guide&#34; target=&#34;_blank&#34;&gt;Manager’s guide to evaluation&lt;/a&gt; by &lt;em&gt;Jane Davidson&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rethinking the Way You Think</title>
+      <link>https://edp617.theoreticalphysed.com/example/03-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/03-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gathering a team&lt;/li&gt;
+&lt;li&gt;Thinking about potential programs&lt;/li&gt;
+&lt;li&gt;Creating a prospectus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a look at what to consider when choosing teammates, take a look at [a] &lt;a href=&#34;https://www.betterevaluation.org/en/managers_guide&#34; target=&#34;_blank&#34;&gt;Manager’s guide to evaluation&lt;/a&gt; by &lt;em&gt;Jane Davidson&lt;/em&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
