@@ -141,9 +141,11 @@ Also please name your group. Feel free to be serious or have fun with it!
 Pick one person to email me with the filled out `.csv` and the name of your group as the file name.
 
 ## Learning About Criteria
-We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators*. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to the Criterial and Interpretive Evaluation slideshow. 
+We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators*. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to the **Criterial and Interpretive Evaluation** slideshow. You can also download a [PDF](/slides/Criterial and Interpretive Evaluation/Criterial and Interpretive Evaluation.pdf){target="_blank"} of the presentation. 
 
-(posting later tonight!)
+```{r echo = FALSE}
+knitr::include_url("/slides/Criterial and Interpretive Evaluation/Criterial-and-Interpretive-Evaluation.html")
+```
 
 You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to jump to the slide, or press <kbd>O</kbd> to exit tile view.
 
