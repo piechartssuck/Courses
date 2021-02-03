@@ -79,25 +79,6 @@
 &lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Evaluation Phase&lt;/h2&gt;
 &lt;p&gt;We are currently in the pre-evaluation phase. This involves&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unchecked &amp;lt;- as.character(fontawesome::fa(&amp;quot;circle&amp;quot;, fill = &amp;quot;#e4e4e4&amp;quot;, height = &amp;quot;15px&amp;quot;))
-
-checked &amp;lt;- as.character(fontawesome::fa(&amp;quot;check-circle&amp;quot;, fill = &amp;quot;#428bca&amp;quot;, height = &amp;quot;15px&amp;quot;))
-
-pre &amp;lt;- tibble(
-  
-  phase = c(&amp;quot;Pre-Evaluation&amp;quot;,
-            &amp;quot;&amp;quot;,
-            &amp;quot;&amp;quot;),
-  
-  task = c(&amp;quot;Gathering a team&amp;quot;,
-           &amp;quot;Thinking about potential programs&amp;quot;,
-           &amp;quot;Subitting a prospectus&amp;quot;),
-  
-  current &amp;lt;- c(checked,
-               unchecked,
-               unchecked)
-  
-)&lt;/code&gt;&lt;/pre&gt;
 &lt;center&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
@@ -143,7 +124,7 @@ Thinking about potential programs
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
-Subitting a prospectus
+Submitting a prospectus
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
 &lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;

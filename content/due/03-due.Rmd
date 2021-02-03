@@ -7,7 +7,7 @@ output:
 menu:
   due:
     parent: Due?
-    weight: 2
+    weight: 3
 type: docs
 weight: 1
 editor_options: 
@@ -21,7 +21,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-<!--
+
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
@@ -32,21 +32,18 @@ checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height
 wk_post <- tibble(
   
 "eCampus" = c(unchecked, 
-              unchecked, 
               unchecked,
               unchecked,
               unchecked),
 
-"Slack" = c(unchecked,
-            checked,
+"Slack" = c(checked,
             checked,
             checked,
             checked),
 
-Description = c("Take the Considering Program Evaluation survey",
-                "Read two articles and create postings",
+Description = c("Read three chapters in your book",
                 "Respond to the `#pictures-of-evaluation` post",
-                "Describe a definition of evaluation you identify with",
+                "Respond to the `#pictures-of-evaluation` post",
                 "Assess logistics when considering possible teammates"),
 
 Location = c("[Link](/assignment/02-assignment/#evaluation-teams)^[Unique link sent to your WVU Mix e-mail account.]",
@@ -78,4 +75,3 @@ kable(wk_post,
 ```
 </center>
 
--->

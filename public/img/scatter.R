@@ -61,3 +61,29 @@ scatter
          units = "mm")
   
   
+  scatter_zoom <- ggplot(emotib %>% mutate(Strength = -log(p.value)/pi^2*2),
+                    aes(x = reorder(Sentiment, desc(Sentiment)),
+                        y = Strength, 
+                        color = Strength,
+                        fill = Sentiment,
+                        size = Strength*10)) +
+    geom_point(shape = 21, 
+               show.legend = FALSE, 
+               alpha = 0.5, 
+               stroke = 0.2,
+               color = "white") +
+    scale_fill_viridis_d() +
+    scale_y_reverse(expand = expansion(add = c(0.2, 1))) +
+    coord_polar(start =0.90*pi,
+                theta = "y") +
+    theme_void() +
+    theme(plot.margin = unit(c(-1.8,1,0.2,1), "cm"))
+  
+  scatter_zoom
+  
+  ggsave("scatter_zoom.pdf",
+         scatter_zoom,
+         width = 297, 
+         height = 210,
+         units = "mm")
+  

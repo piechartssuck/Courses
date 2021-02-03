@@ -1,0 +1,210 @@
+---
+title: ' Criterial and Interpretive Evaluation'
+subtitle: 'Key Concepts, Discussion Points, and Group Activities'
+author: Abhik Roy
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+```{r echo = FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#6ac4cd",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+```{r setup, echo = FALSE}
+html_tag_audio <- function(file, type = c("wav")) {
+  type <- match.arg(type)
+  htmltools::tags$audio(
+    controls = "",
+    htmltools::tags$source(
+      src = file,
+      type = glue::glue("audio/{type}", type = type)
+    )
+  )
+}
+```
+
+# Defining Evaluations 
+
+.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+**Evaluation** is the act or process of determining the ***merit***, ***worth***, or ***significance*** of something or the product of that process.
+]
+
+---
+
+# Explaining it to Everyone Else 
+
+.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+**Evaluation** answers ***if it works?*** and ***why does it work?***
+]
+
+We typically leave the ***if it works?*** to people with grounded knowledge in a partocular area called *content experts*. 
+
+---
+
+#  Merit, Worth & Significance 
+
++ What do ***merit***, ***worth***,and ***significance*** mean to you both separately and combined?
+
++ Can you think of real world examples of each?
+
+---
+
+#  Evaluation 
+
++ Evaluation is the act or process of determining the *merit* (***quality***), *worth* (***value***), or *significance* (***importance***) of something or the product of that process.
+
+---
+#  Evalu… 
+
+Evaluand
+This is not always as obvious to define in practice as it may seem. Where are the boundaries of a particular program? Do the evaluator, their employer, and various other stakeholders agree on those boundaries?
+Evaluator
+Who you are matters… more on this later
+![](assets/img/image1.png)
+
+---
+#  Criteria, Standard, and Indicator 
+
+In addition to defining these for ourselves, what are examples from everyday?
+Which of the three is harder to identify? Why?
+![](assets/img/image1.png)
+
+---
+#  Purposes of Evaluation - Primary 
+
+Formative
+Conducted with the intent to improve
+Summative
+Conducted with the intent to inform decision making and/or determine judgement
+![](assets/img/image1.png)
+
+---
+#  Purposes of Evaluation – Secondary 
+
+Developmental
+To help develop an intervention or program.
+Accountability
+To hold accountable
+Monitoring
+To assess implementation and gauge progress toward a desired end
+Knowledge Generation
+To generate knowledge about general patterns of effectiveness
+Ascriptive
+Merely for the sake of knowing
+![](assets/img/image1.png)
+
+---
+#  MQP 
+
+https:// www.youtube.com/watch?v=Wg3IL-XjmuM
+.pull-left[![](assets/img/image2.png)]
+
+.pull-right[![](assets/img/image1.png)]
+[https://](https://www.youtube.com/watch?v=Wg3IL-XjmuM)
+[www.youtube.com/watch?v=Wg3IL-XjmuM](https://www.youtube.com/watch?v=Wg3IL-XjmuM)
+
+---
+#  A bit more on Developmental Evaluation 
+
+Patton (2006)
+.pull-left[![](assets/img/image3.gif)]
+
+.pull-right[![](assets/img/image1.png)]
+
+---
+
+
+```{r tbl10, echo = FALSE}
+tbl10 <- tibble::tribble(
+~` `, ~`What might the purpose of the evaluation be?`, ~`What questions might the evaluation try to answer?`,
+"Formative Evaluation"," "," ",
+"The program has been designed and piloted with a group of 20 principals. What kind of evaluative feedback should the ASDC seek?"," "," ",
+"Summative Evaluation"," "," ",
+"The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
+)
+
+kableExtra::kable_styling(knitr::kable(tbl10), font_size = 18)
+```
+![](assets/img/image1.png)
+
+---
+#  Introduction to Roles and Styles 
+
+Define
+Independent- 			Topical-
+ External- Internal-
+Discuss
+What are some benefits and drawbacks to each role?
+How does role influence evaluation stance/practice?
+Does it really matter?
+![](assets/img/image1.png)
+
+---
+#  Defining Culture 
+
+What is culture? How do we recognize it ?
+“ Culture can be defined as the shared experiences of people, including their languages, values, customs, beliefs, and more. It also includes worldviews, ways of knowing, and ways of communicating. Culturally significant factors encompass, but are not limited to, race/ethnicity, religion, social class, language, disability, sexual orientation, age, and gender.” (AEA, 2011).
+![](assets/img/image1.png)
+
+---
+
+.pull-left[![](assets/img/image4.png)]
+
+.pull-right[![](assets/img/image1.png)]
+
+---
+#  Markus & Kitayama (1991) 
+
+.pull-left[![](assets/img/image5.png)]
+
+.pull-right[![](assets/img/image1.png)]
+
+---
+#  Cultural Influences Activity 
+
+How might each of the following influence an evaluation’s design and implementation?
+Language of participants
+Role of food and eating
+Evaluators attire when interacting with participants
+Concept of time
+Communication styles
+Importance of family relationships
+Values/norms re: individualism, independence, conflict
+Understanding of social structure
+![](assets/img/image1.png)
+
+---
+#  Increasing your cultural sensitivity 
+
+Assess your own attitudes, beliefs, values
+Incorporate culturally diverse groups and perspectives throughout evaluation process
+Build in sufficient time to negotiate access and build trust in community / organization
+Demystify evaluation, avoid jargon, build buy-in
+Be flexible in choice of evaluation methods, use multiple data sources, multiple data collection methods, multiple perspectives
+![](assets/img/image1.png)
+
+---
+#  Meta-evaluation 
+
+Formal
+Extra, external study to authenticate the process or product of the evaluation.
+Informal
+Evaluating your own evaluation.
+![](assets/img/image1.png)
+
+---
+#  Final Thoughts? 
+
+What made sense or connected well for you in the things we focus on this week?
+What didn’t quite fit together or make sense in your mind?
+Anything in the reading you wondered about that we didn’t address?
+Any remaining questions about the course, syllabus, assignments, etc.?
+![](assets/img/image1.png)
