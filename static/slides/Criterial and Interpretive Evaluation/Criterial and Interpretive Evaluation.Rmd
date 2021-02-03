@@ -309,7 +309,7 @@ What is culture? How do we recognize it ?
 
 # The Iceberg
 
-<img src="/img/iceberg.png" height="350px" width="350px" class="center"/>
+<img src="iceberg.png" height="350px" width="350px" class="center"/>
 
 </audio>
 </center>
@@ -325,7 +325,7 @@ What is culture? How do we recognize it ?
 
 #  Markus & Kitayama (1991) 
 
-<img src="/img/eastvwest.png" height="350px" width="500px" class="center"/>
+<img src="eastvwest.png" height="350px" width="500px" class="center"/>
 
 </audio>
 </center>
