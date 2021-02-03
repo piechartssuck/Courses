@@ -34,26 +34,35 @@ wk_post <- tibble(
 "eCampus" = c(unchecked, 
               unchecked,
               unchecked,
+              unchecked,
+              unchecked,
               unchecked),
 
 "Slack" = c(checked,
             checked,
+            unchecked,
+            unchecked,
             checked,
-            checked),
+            unchecked),
 
-Description = c("Read three chapters in your book",
-                "Respond to the `#pictures-of-evaluation` post",
-                "Respond to the `#pictures-of-evaluation` post",
-                "Assess logistics when considering possible teammates"),
+Description = c("Respond to the posts on `#davidson` and `#mathison`",
+                "Respond to the posts on `#evaluation-definitions`",
+                "Read three chapters in your book",
+                "Go through a slideshow",
+                "Post on evaluation `#criteria`",
+                "Finalize and submit your evaluation teams"),
 
-Location = c("[Link](/assignment/02-assignment/#evaluation-teams)^[Unique link sent to your WVU Mix e-mail account.]",
-             "[Link](/readings/02-readings/#read-some-papers)",
-             "[Link](/lesson/02-lesson/#responses)",
-             "[Link](/lesson/02-lesson/#evaluation-definitions)",
-             "[Link](/assignment/02-assignment/#evaluation-teams)")
+Location = c("[Link](/readings/03-readings/#respond-to-posts)",
+             "[Link](/lesson/03-lesson/#respond-to-posts)",
+             "[Link](/readings/03-readings/#read-the-book)",
+             "[Link](/lesson/03-lesson/#learning-about-criteria)",
+             "[Link](/readings/03-readings/#read-the-book)",
+             "[Link](/lesson/03-lesson/#creating-evaluation-teams)"
+    )
 
 )
 ```
+
 
 ### What's Due?
 <center>
@@ -74,4 +83,3 @@ kable(wk_post,
   row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
-

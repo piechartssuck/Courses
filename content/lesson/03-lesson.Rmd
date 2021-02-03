@@ -66,14 +66,19 @@ library(knitr)
 library(kableExtra)
 ```
 
-## Responses
-Read through posts on [`#evaluation-definitions`](https://2021edp617.slack.com/archives/C01L18T7NR2){target="_blank"} and comment on at least one posting using the [Reply in thread](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-){target="_blank"} option as pictured below: ![](/img/lesson/slack_pop_menu.png)
+## Respond to Posts
+Please create **one response** for the post below on Slack. 
 
-## Evaluation Definitions
+- [`#evaluation-definitions`](https://2021edp617.slack.com/archives/C01L18T7NR2){target="_blank"}
+
+### Note about the responding to posts 
+Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the `Reply in thread` option when replying! If you need a reminder on how to do this, please click [here](/lesson/02-lesson/#responses).
+
+## Evaluation Approaches
 Look through the CDC's [Types of Evaluations](/handouts/Types of Evaluation.pdf){target="_blank"} document to get yourself familiarized with various approaches to conducting evaluations. It is important to note that *summative evaluations* are not listed.
 
 ## Creating Evaluation Teams
-Finalize your evaluation teams that must consist of two to four members. Then talk among yourselves to figure out three possible weekly meetings times/days that you can get together to discuss materials about the course and the eventual evaluation. To begin, I will join you on a biweekly basis to discuss items and to answer any questions you may have. If the team appears to be on track as we progress, I will reduce my participation unless needed.
+Finalize your evaluation teams that must consist of three to four members. Then talk among yourselves to figure out three possible weekly meetings times/days that you can get together to discuss materials about the course and the eventual evaluation. To begin, I will join you on a biweekly basis to discuss items and to answer any questions you may have. If the team appears to be on track as we progress, I will reduce my participation unless needed.
 
 Please fill out the necessary columns in the csv file addressing
 
@@ -130,11 +135,15 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+<br>
+Also please name your group. Feel free to be serious or have fun with it!
+
+Pick one person to email me with the filled out `.csv` and the name of your group as the file name.
 
 ## Learning About Criteria
 We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators*. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to the Criterial and Interpretive Evaluation slideshow. 
 
-(posting soon!)
+(posting later tonight!)
 
 You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to jump to the slide, or press <kbd>O</kbd> to exit tile view.
 

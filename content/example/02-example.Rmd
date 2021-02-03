@@ -22,9 +22,10 @@ library(kableExtra)
 ```
 
 ## Evaluation Phase
+
 We are currently in the pre-evaluation phase. This involves
 
-```{r}
+```{r echo = FALSE}
 
 unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
 
@@ -38,7 +39,7 @@ pre <- tibble(
   
   task = c("Gathering a team",
            "Thinking about potential programs",
-           "Subitting a prospectus"),
+           "Submitting a prospectus"),
   
   current <- c(unchecked,
                unchecked,

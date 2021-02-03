@@ -270,5 +270,133 @@ Posts are nonexistent or lack merit
 </description>
     </item>
     
+    <item>
+      <title>Aims, Scope and Sequencing</title>
+      <link>https://edp617.theoreticalphysed.com/readings/03-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/readings/03-readings/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read-the-book&#34;&gt;Read the Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#respond-to-posts&#34;&gt;Respond to Posts&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#note-about-the-responding-to-posts&#34;&gt;Note about the responding to posts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;read-the-book&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read the Book&lt;/h2&gt;
+&lt;p&gt;Please read&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+Chapter
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+What is Evaluation?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+1
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Defining the Purpose of Evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+2
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Identifying Evaluative Criteria
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+3
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;p&gt;Then go through the &lt;em&gt;Criterial and Interpretive Evaluation&lt;/em&gt; slideshow. Finally create a &lt;strong&gt;single post&lt;/strong&gt; under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01M4PL1R5X&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#criteria&lt;/code&gt;&lt;/a&gt; that addresses the following&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;what general steps would you take to assess criteria for a program you have been selected to evaluate? and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;question about something specific in any of the chapters.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;respond-to-posts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Respond to Posts&lt;/h2&gt;
+&lt;p&gt;Please create &lt;strong&gt;two responses&lt;/strong&gt; for each of the posts below on Slack.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV12ELKC&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#davidson&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://2021edp617.slack.com/archives/C01KV11R64S&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#mathison&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;note-about-the-responding-to-posts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Note about the responding to posts&lt;/h3&gt;
+&lt;p&gt;Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the &lt;code&gt;Reply in thread&lt;/code&gt; option when replying! If you need a reminder on how to do this, please click &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/#responses&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
