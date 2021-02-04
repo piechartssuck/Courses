@@ -200,8 +200,10 @@ Now listen to these
 
 #  Developmental vs Formative Evaluation
 
+
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Wg3IL-XjmuM" frameborder="0" allowfullscreen></iframe>
+<iframe width="670.2" height="330.6" src="https://www.youtube.com/embed/Wg3IL-XjmuM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 </center>
 
 ---
@@ -309,7 +311,9 @@ What is culture? How do we recognize it ?
 
 # The Iceberg
 
-<img src="iceberg.png" height="350px" width="350px" class="center"/>
+```{r, out.width='50%', fig.align='center', echo=FALSE}
+knitr::include_graphics('pics/iceberg.png')
+```
 
 </audio>
 </center>
@@ -325,7 +329,9 @@ What is culture? How do we recognize it ?
 
 #  Markus & Kitayama (1991) 
 
-<img src="eastvwest.png" height="350px" width="500px" class="center"/>
+```{r, out.width='60%', fig.align='center', echo=FALSE}
+knitr::include_graphics('pics/eastvwest.png')
+```
 
 </audio>
 </center>

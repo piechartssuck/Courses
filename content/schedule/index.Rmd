@@ -13,7 +13,6 @@ library(fontawesome)
 ## Table of Contents
 
 ```{r icontibble, echo=FALSE, message=FALSE}
-
 faread <-  as.character(fa("book", fill = "#739670", height = "17px"))
 falesson <-  as.character(fa("chalkboard", fill = "#764874", height = "17px"))
 faexample <-  as.character(fa("lightbulb", fill = "#eb7b59", height = "17px"))
