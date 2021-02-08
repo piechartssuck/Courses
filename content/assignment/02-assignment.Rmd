@@ -102,6 +102,7 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
   path = here::here("static", "data", "AlcoholConsumption.csv"),

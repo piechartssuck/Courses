@@ -35,7 +35,7 @@ editor_options:
   left: 0;
   right: 0;
   bottom: 0;
-  background: #006d77;
+  background:	#003277;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -58,7 +58,7 @@ editor_options:
 }
 </style>
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE, purl=FALSE}
 library(knitr)
 library(kableExtra)
 library(tidyverse)
@@ -76,14 +76,15 @@ Your *working directory* is simply where your script will look for anything it n
 2. Save it in a preferably empty folder as whatever you want.
 3. Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
 
-## Download Data
-Grab a zipped file containing all of the data you'll need in this walkthrough.
+## Download the script
+
+Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
-  path = here::here("static", "data", "Week2DataSets.zip"),
-  output_name = "Week2DataSets",
-  button_label = "Download the Data",
+  path = here::here("content", "example", "02-example.R"),
+  output_name = "Week 2 Script Outline",
+  button_label = "Download the Script",
   button_type = "default",
   has_icon = TRUE,
   icon = "fa fa-save",
@@ -233,7 +234,7 @@ population <- read.csv("USpop2010to2017.csv",
                        stringsAsFactors = TRUE) 
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, purl=FALSE}
 population <- read.csv(here::here("static", "data", "USpop2010to2017.csv"))
 ```
 
@@ -523,7 +524,7 @@ facebook <- read.csv("ActiveFacebookUsers.csv",
                        stringsAsFactors = TRUE) 
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, purl=FALSE}
 facebook <- read.csv(here::here("static", "data", "ActiveFacebookUsers.csv"))
 ```
 
@@ -631,7 +632,7 @@ twitter <- read.csv("ActiveTwitterUsers.csv",
                        stringsAsFactors = TRUE) 
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, purl=FALSE}
 twitter <- read.csv(here::here("static", "data", "ActiveTwitterUsers.csv"))
 ```
 

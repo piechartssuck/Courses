@@ -13,6 +13,7 @@ weight: 1
 editor_options: 
   chunk_output_type: console
 ---
+
 <style>
 .hvr-sweep-to-left {
   display: inline-block;
@@ -35,7 +36,7 @@ editor_options:
   left: 0;
   right: 0;
   bottom: 0;
-  background: #006d77;
+  background:	#003277;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -58,7 +59,7 @@ editor_options:
 }
 </style>
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE, purl=FALSE}
 library(knitr)
 library(kableExtra)
 library(tidyverse)
@@ -66,19 +67,33 @@ library(downloadthis)
 library(here)
 ```
 
-```{r img_loc, echo=FALSE}
-figs <- here::here("static", "img", "examples")
-```
 # Getting Prepped
 
 ## First Things First! Set your Working Directory
 
 Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
 
-1. Open up a new script by going to `File > New File > R Script`.
-2. Save it in a preferably empty folder as whatever you want.
-3. Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
+1.  Open up a new script by going to `File > New File > R Script`.
+2.  Save it in a preferably empty folder as whatever you want.
+3.  Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
 
+## Download the script
+
+Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("content", "example", "03-example.R"),
+  output_name = "Week 3 Script Outline",
+  button_label = "Download the Script",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Load Up Some Libraries
 Please go ahead and download the libraries below you don't have and load them up
 
 ```{r}
@@ -93,7 +108,7 @@ library(RColorBrewer)
 ![](/example/03-example_files/ggplothavelayers.png)
 </center>
 
-ggplot runs on layers^[Much like Adobe Photoshop for those of you who may be familiar with that software.]
+ggplot runs on layers^\[Much like Adobe Photoshop for those of you who may be familiar with that software.\]
 
 We'll work on this throughout the term, but here is a basic picture of the framework
 
@@ -127,11 +142,11 @@ ggplot(data = diamonds,
 ```
 
 You can get *lazy* about arguments, in that *x* and *y* are always the first arguments to `aes` so we often drop the argument names
-  
+
 ```{r}
 ggplot(diamonds, aes(carat, price)) +
   geom_point()
-```  
+```
 
 ## Another Example: Bar Plots
 
@@ -164,9 +179,9 @@ View(data)
 
 The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns Prop and Perc, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!
 
-Ok now let's look at a barplot of the data using 
+Ok now let's look at a barplot of the data using
 
-1. **Base R**
+1.  **Base R**
 
 ```{r}
 barplot(data$Perc, 
@@ -175,7 +190,7 @@ barplot(data$Perc,
         ylab="Proportion")
 ```
 
-2. **ggplot**
+1.  **ggplot**
 
 ```{r}
 ggplot(data, aes(x=Perc, y=Prop)) + 
@@ -205,7 +220,7 @@ library(ggplot2)        # for generating the visualizations
 library(viridis)        # because colors are fun!
 ```
 
-We'll use the mtcars data set. It is a standard example set that comprises  fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+We'll use the mtcars data set. It is a standard example set that comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
 
 ```{r}
 head(mtcars)
@@ -225,26 +240,29 @@ p2 <- ggplot(mtcars, aes(x = factor(cyl))) +
   ggtitle("Fig B: x-axis as a discrete (factor) variable")
 ```
 
-Not we'll display the results in two ways
+*We'll see how to deal with the cut off text later*
 
-1. Using the **gridExtra** package
+We'll display the results in two ways
+
+1.  Using the **gridExtra** package
 
 ```{r}
 grid.arrange(p1, p2, ncol = 2)
 ```
 
-2. Using the **patchwork** package
+1.  Using the **patchwork** package
 
 ```{r}
 p1 + p2
 ```
 
-Although the default width of the bars is aesthetically pleasing, you do have the ability to adjust this attribute by setting the width in `geom_bar()`. The default width is 0.9; 
+Although the default width of the bars is aesthetically pleasing, you do have the ability to adjust this attribute by setting the width in `geom_bar()`. The default width is 0.9;
 
-1. smaller values (min width of 0) make the bars narrower and 
-2. larger values (max width of 1) make the bars wider.
+1.  smaller values (min width of 0) make the bars narrower and
+2.  larger values (max width of 1) make the bars wider.
 
-Here are some examples 
+Here are some examples
+
 ```{r}
 e1 <- ggplot(mtcars, aes(x = factor(cyl))) +
   geom_bar(width = .5) +
@@ -275,7 +293,7 @@ e1 + e2 + e3 + e4 + plot_layout(ncol = 1)
 e1 + e2 + e3 + e4 + plot_layout(nrow = 1)
 ```
 
-Take a look at some more examples over at the **patchwork** [vignette](# https://patchwork.data-imaginist.com/articles/guides/assembly.html){target="_blank"}.
+Take a look at some more examples over at the **patchwork** [vignette](#%20https://patchwork.data-imaginist.com/articles/guides/assembly.html){target="\_blank"}.
 
 We can also adjust the fill and outline colors of the bars along with the opacity by applying `fill`, `color`, and `alpha` arguments respectively in the `geom_bar()` function.
 
@@ -324,13 +342,13 @@ r1 + r2 + plot_layout(nrow = 1)
 
 ## Comparisons Using Bar Charts
 
-Sometimes we want to compare different groups across the categorical variables of interest. This is primarily done via color, side-by-side bars, or stacked bars. To add a color dimension we simply add a fill argument to our first line of code to tell R what variable we want to use to color our bars. 
+Sometimes we want to compare different groups across the categorical variables of interest. This is primarily done via color, side-by-side bars, or stacked bars. To add a color dimension we simply add a fill argument to our first line of code to tell R what variable we want to use to color our bars.
 
-In this example we compare mpg across all the vehicles but also color the vehicles based on number of cylinders. R will use default color codings but you can 
+In this example we compare mpg across all the vehicles but also color the vehicles based on number of cylinders. R will use default color codings but you can
 
-1. set the colors manually using scale_fill_manual as in the second plot you'll do. But you can also
-2. use `scale_fill_brewer` to color with preset color schemes (see more about ColorBrewer [here](http://colorbrewer2.org){target="_blank"}) and
-3. many others! (if you type `scale_fill` into your RStudio Help search field you will see all the possibilities)
+1.  set the colors manually using scale_fill_manual as in the second plot you'll do. But you can also
+2.  use `scale_fill_brewer` to color with preset color schemes (see more about ColorBrewer [here](http://colorbrewer2.org){target="\_blank"}) and
+3.  many others! (if you type `scale_fill` into your RStudio Help search field you will see all the possibilities)
 
 Let's compare mpg across all cars and color based on cyl
 
@@ -352,7 +370,7 @@ m2 <- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = fa
 m1 + m2 + plot_layout(ncol = 2)
 ```
 
-We can also use side-by-side bars to make comparisons. Say we want to compare the average mpg for cars across the different 4, 6, and 8 cylinder categories but also assess the impact that transmission (variable am where 0 = automatic, 1 = manual) has. we apply the fill argument to color bars based on transmission type then include the `position = "dodge"` in the `geom_bar()` function. This tells R to have two bars for each cylinder type, color fill each bar based on the type of transmission and then adjust (aka “dodge”) the position of the bars so that they are side-by-side.
+We can also use side-by-side bars to make comparisons. Say we want to compare the average mpg for cars across the different 4, 6, and 8 cylinder categories but also assess the impact that transmission (variable am where 0 = automatic, 1 = manual) has. we apply the fill argument to color bars based on transmission type then include the `position = "dodge"` in the `geom_bar()` function. This tells R to have two bars for each cylinder type, color fill each bar based on the type of transmission and then adjust (aka "dodge") the position of the bars so that they are side-by-side.
 
 ```{r}
 t1 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
@@ -462,7 +480,7 @@ p2 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
 p1 + p2 + plot_layout(ncol = 2)
 ```
 
-You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an [example](https://www.color-hex.com/){target="_blank"}. In this case, we'll be usingthe [viridis color set](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html){target="_blank"}.
+You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an [example](https://www.color-hex.com/){target="\_blank"}. In this case, we'll be usingthe [viridis color set](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html){target="\_blank"}.
 
 ```{r eval=FALSE}
 p1 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
@@ -480,11 +498,11 @@ p2 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
 p2
 ```
 
-*Uh oh! Did you see something that said `## Error: Discrete value supplied to continuous scale`?
+\*Uh oh! Did you see something that said `## Error: Discrete value supplied to continuous scale`?
 
 The error says that we tried to add a continuous scale to discrete values! Well we could use this by either
 
-1. Getting rid of the factor
+1.  Getting rid of the factor
 
 ```{r}
 p2 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = am)) +
@@ -497,7 +515,8 @@ p2 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = am)) +
 p2
 ```
 
-2. Changing the type of scaling
+1.  Changing the type of scaling
+
 ```{r}
 p2 <- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
   geom_bar(stat = "identity", position = "dodge") +
@@ -510,3 +529,6 @@ p2
 ```
 
 Notice that the plots are different! Your fill and color variables define how the plot will look!
+
+
+
