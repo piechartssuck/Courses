@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download Data Foundational Structures Data Types Classes  Example: 100% Fake Data   Data Frames - A Format You Absolutely Want  Importing and Viewing Data Looking at Variables in a Data Frame Assigning Variables Basic Visualizations  A Bit of Context Basic Visualizations  Histograms     .">
+  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download Data Foundational Structures Data Types Classes  Example: 100% Fake Data   Data Frames - A Format You Absolutely Want  Importing and Viewing Data Looking at Variables in a Data Frame Assigning Variables Basic Visualizations  A Bit of Context Basic Visualizations  Histograms Line Graph Scatterplots Boxplots  Plot Options  Rendering more than one plot in a window     .">
 
   
   <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/02-example/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/02-example/">
   <meta property="og:title" content="Base R is a Thing | Data Visualization">
-  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download Data Foundational Structures Data Types Classes  Example: 100% Fake Data   Data Frames - A Format You Absolutely Want  Importing and Viewing Data Looking at Variables in a Data Frame Assigning Variables Basic Visualizations  A Bit of Context Basic Visualizations  Histograms     ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download Data Foundational Structures Data Types Classes  Example: 100% Fake Data   Data Frames - A Format You Absolutely Want  Importing and Viewing Data Looking at Variables in a Data Frame Assigning Variables Basic Visualizations  A Bit of Context Basic Visualizations  Histograms Line Graph Scatterplots Boxplots  Plot Options  Rendering more than one plot in a window     ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -585,7 +585,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="http://2021edp693c.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
         </li>
 
         
@@ -692,6 +692,10 @@
         <a href="/example/02-example/">Week 2: Base R is a Thing</a>
       </li>
       
+      <li >
+        <a href="/example/03-example/">Week 3: ggplotting</a>
+      </li>
+      
     </ul>
     
 
@@ -746,6 +750,13 @@
 <li><a href="#basic-visualizations-1">Basic Visualizations</a>
 <ul>
 <li><a href="#histograms">Histograms</a></li>
+<li><a href="#line-graph">Line Graph</a></li>
+<li><a href="#scatterplots">Scatterplots</a></li>
+<li><a href="#boxplots">Boxplots</a></li>
+</ul></li>
+<li><a href="#plot-options">Plot Options</a>
+<ul>
+<li><a href="#rendering-more-than-one-plot-in-a-window">Rendering more than one plot in a window</a></li>
 </ul></li>
 </ul>
 </div>
@@ -1227,7 +1238,7 @@ tinyfemale &lt;- population$Female_Pop/100000000</code></pre>
 <pre><code>## &#39;data.frame&#39;:    39 obs. of  2 variables:
 ##  $ Quarter                    : chr  &quot;Q3 &#39;08&quot; &quot;Q1 &#39;09&quot; &quot;Q2 &#39;09&quot; &quot;Q3 &#39;09&quot; ...
 ##  $ Number.of.users.in.millions: int  100 197 242 305 360 431 482 550 608 680 ...</code></pre>
-<pre class="r"><code># Alternatively, you can use glimpse()S</code></pre>
+<pre class="r"><code># Alternatively, you can use glimpse()</code></pre>
 <pre class="r"><code>facebook$Quarter</code></pre>
 <pre><code>##  [1] &quot;Q3 &#39;08&quot; &quot;Q1 &#39;09&quot; &quot;Q2 &#39;09&quot; &quot;Q3 &#39;09&quot; &quot;Q4 &#39;09&quot; &quot;Q1 &#39;10&quot; &quot;Q2 &#39;10&quot; &quot;Q3 &#39;10&quot;
 ##  [9] &quot;Q4 &#39;10&quot; &quot;Q1 &#39;11&quot; &quot;Q2 &#39;11&quot; &quot;Q3 &#39;11&quot; &quot;Q4 &#39;11&quot; &quot;Q1 &#39;12&quot; &quot;Q2 &#39;12&quot; &quot;Q3 &#39;12&quot;
@@ -1264,16 +1275,295 @@ quarter &lt;- facebook$Quarter</code></pre>
 <pre class="r"><code>hist(users, 
      breaks = c(100,400,700,1000,1300,1600,1900,2100,2400))</code></pre>
 <p><img src="/example/02-example_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
-<p>but that’s a lot of work! We can let R do it for us using the <code>seq</code> option which stands for <em>sequence</em></p>
+<p>but that’s a lot of work and its a bit odd because our data aren’t greater than the the maximum. We can still get the eight bars we want of even width if we let R do it for us using the <code>seq</code>, or sequence option with <code>length.out</code>, or the number of desired bars</p>
 <pre class="r"><code>hist(users, 
-     breaks = seq(min(users), max(users),  length.out=8))</code></pre>
+     breaks = seq(min(users), 
+                  max(users),  
+                  length.out=8))</code></pre>
 <p><img src="/example/02-example_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p>Let’s make it look decent</p>
+<pre class="r"><code>hist(users, breaks = seq(min(users), 
+                         max(users),   
+                         length.out=8), 
+     xlab = &quot;Active Users (in millions)&quot;, 
+     main = &quot;Facebook utility worldwide as of 2nd quarter 2018&quot;,
+     col = c(&quot;#3b5998&quot;,&quot;#6d84b4&quot;, &quot;#afbdd4&quot;, &quot;#d8dfea&quot;, &quot;#ffffff&quot;), 
+     border = &quot;#d8dfea&quot;, 
+     cex.lab = 1.1) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p>Notice that you can define colors in a vector and the plot will simply repeat that layout.</p>
+</div>
+<div id="line-graph" class="section level2">
+<h2>Line Graph<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></h2>
+<p>Let’s look at another population, but this time we’ll use Twitter data</p>
+<pre class="r"><code>twitter &lt;- read.csv(&quot;ActiveTwitterUsers.csv&quot;, 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) </code></pre>
+<pre class="r"><code>head(twitter)</code></pre>
+<pre><code>##   Quarter Number.of.monthly.active.users.in.millions
+## 1   20101                                         30
+## 2   20102                                         40
+## 3   20103                                         49
+## 4   20104                                         54
+## 5   20111                                         68
+## 6   20112                                         85</code></pre>
+<pre class="r"><code>str(twitter)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    37 obs. of  2 variables:
+##  $ Quarter                                   : int  20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 ...
+##  $ Number.of.monthly.active.users.in.millions: num  30 40 49 54 68 85 101 117 138 151 ...</code></pre>
+<pre class="r"><code>twitter$Quarter</code></pre>
+<pre><code>##  [1] 20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 20123 20124
+## [13] 20131 20132 20133 20134 20141 20142 20143 20144 20151 20152 20153 20154
+## [25] 20161 20162 20163 20164 20171 20172 20173 20174 20181 20182 20183 20184
+## [37] 20191</code></pre>
+<pre class="r"><code>twitter$Number.of.monthly.active.users.in.millions</code></pre>
+<pre><code>##  [1]  30.0  40.0  49.0  54.0  68.0  85.0 101.0 117.0 138.0 151.0 167.0 185.0
+## [13] 204.0 218.0 231.7 241.0 255.0 271.0 284.0 288.0 302.0 304.0 307.0 305.0
+## [25] 310.0 313.0 317.0 318.0 327.0 326.0 330.0 330.0 336.0 335.0 326.0 321.0
+## [37] 330.0</code></pre>
+<p>Let’s rename the columns</p>
+<pre class="r"><code>tweeters &lt;- twitter$Number.of.monthly.active.users.in.millions
+season &lt;- twitter$Quarter</code></pre>
+<p>Let’s first create a basic plot</p>
+<pre class="r"><code>plot(season, tweeters)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>There are several types of plot within the plot function which we can access by using the <code>type</code> option</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p>Now try options “o”, “p”, and “b” on your own. Check the solutions below to see if your plot rendered correctly</p>
+<details>
+<summary>
+Solutions
+</summary>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;o&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;p&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;b&quot;)</code></pre>
+<img src="/example/02-example_files/figure-html/unnamed-chunk-75-1.png" width="672" />
+</details>
+<p>We can also change the line type using the <code>lty</code> option</p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     lty = &quot;dashed&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     lty = &quot;dotted&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>Well it looks like the solid line is likely the best so we’ll stick with it.</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p>Black and white plots can be great but that’s rarely true for data with ore information than two dimensions.</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;,
+     col = &quot;#5cb85c&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p>You can also use a standard palette in R by using numbers</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;,
+     col = 3)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p>That line is just too thin. We can make it thicker by using the <code>lwd</code> option</p>
+<pre class="r"><code>plot(season, tweeters,
+     col = &quot;#5cb85c&quot;, 
+     lwd = 3)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p>Finally, we can sort out the axes and plot titles</p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     col = &quot;#5cb85c&quot;, 
+     lwd = 3,
+     xlab = &quot;Quarter&quot;,
+     ylab = &quot;Tweeters (in millions)&quot;,
+     main = &quot;Active Users on Twitter&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<p>I did promise regression didn’t I? OK well what if we wanted to know the answer to the question: <em>is the Twitter population increasing in size?</em>
+Well we can add a basic linear regression to the plot to estimate if that’s true. First let’s calculate the regression line…</p>
+<pre class="r"><code>fit1 &lt;- lm (tweeters ~ season, 
+            data = twitter) 
+
+summary(fit1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = tweeters ~ season, data = twitter)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -72.465 -33.476  -3.424  32.275  54.490 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -7.218e+04  4.468e+03  -16.15   &lt;2e-16 ***
+## season       3.595e+00  2.218e-01   16.21   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 36 on 35 degrees of freedom
+## Multiple R-squared:  0.8824, Adjusted R-squared:  0.879 
+## F-statistic: 262.6 on 1 and 35 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(fit1)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-83-1.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-2.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-3.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-4.png" width="672" /></p>
+</div>
+<div id="scatterplots" class="section level2">
+<h2>Scatterplots</h2>
+<p>Let’s load a dataset of Flower characteristics in 3 species of Iris.</p>
+<pre class="r"><code>data(iris)
+head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>There is a lot of data here! Let’s explore using the <code>pairs()</code> function</p>
+<pre class="r"><code>pairs(iris)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p>This doesn’t tell us much about the species differences. We can tell R to plot using a different color for the three species of iris</p>
+<pre class="r"><code>pairs(iris, 
+      col = iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p>Sepal.Length and Petal.Length look interesting! Let’s start by looking at that</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p>These points are difficult to see! Let’s pick some different ones using the <code>pch</code> option</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 15)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = &quot;A&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+<p><code>pch</code> 21:25 also specify an edge color (col) and a background color (bg)</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 21, 
+     bg = &quot;blue&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p>OK settling on solid circles…</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<p>…that need to be bigger</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16,
+     cex = 2)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+</div>
+<div id="boxplots" class="section level2">
+<h2>Boxplots</h2>
+<p>We’ll continue to use the Iris dataset for this section</p>
+<pre class="r"><code>head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>Lets first examine the distribution of Sepal Length for each species</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<p>f you wish to compare the medians of the boxplot, you can use the function “notch”. If the notches of two plots do not overlap, this is ‘strong evidence’ that the two medians differ.</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<p>You may have noticed that the y-axis labels are always orientated to be perpendicular to the axis. We can rotate all axis labels using the <code>las</code> option.</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+<p>Now we can add in all the axis and plot labels…</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &quot;Species&quot;, 
+        ylab = &quot;Sepal Length&quot;, 
+        main = &quot;Sepal Length by Species in Iris&quot;) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<p>…and change sizes</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &quot;Species&quot;, 
+        ylab = &quot;Sepal Length&quot;, 
+        main = &quot;Sepal Length by Species in Iris&quot;,
+        cex.lab = 1.5,
+        cex.axis = 1.5,
+        cex.main = 2) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+</div>
+</div>
+<div id="plot-options" class="section level1">
+<h1>Plot Options</h1>
+<div id="rendering-more-than-one-plot-in-a-window" class="section level2">
+<h2>Rendering more than one plot in a window</h2>
+<pre class="r"><code># number of rows, number of columns
+par(mfrow=c(1,2))
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )      
+
+plot(
+    # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )        </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p>Adding the following sets the plot window back to normal</p>
+<pre class="r"><code>par(mfrow=c(1,1))    
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )   </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+<p>or you can just clear the plot history by running</p>
+<pre class="r"><code>dev.off()       </code></pre>
+<pre><code>## null device 
+##           1</code></pre>
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>Remember Algebra?<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Now with 22% more linear regression<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 

@@ -1,0 +1,114 @@
+---
+title: "ggplotting"
+linktitle: "Week 3: ggplotting"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#whats-due">What’s Due?</a></li>
+</ul>
+</div>
+
+<div id="whats-due" class="section level3">
+<h3>What’s Due?</h3>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;vertical-align: middle !important;">
+Data Camp
+</th>
+<th style="text-align:center;vertical-align: middle !important;">
+eCampus
+</th>
+<th style="text-align:center;vertical-align: middle !important;">
+R
+</th>
+<th style="text-align:center;vertical-align: middle !important;">
+Slack
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+Description
+</th>
+<th style="text-align:center;vertical-align: middle !important;">
+Location
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#428bca;" viewbox="0 0 512 512">
+<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#428bca;" viewbox="0 0 512 512">
+<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+</svg>
+</td>
+<td style="text-align:left;width: 15em; vertical-align: middle !important;">
+Create five plots in ggplot
+</td>
+<td style="text-align:center;vertical-align: middle !important;">
+<a href="/assignment/03-assignment/#create-plots-in-ggplt">Link</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#428bca;" viewbox="0 0 512 512">
+<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#428bca;" viewbox="0 0 512 512">
+<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+</svg>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<svg style="height:15px;fill:#e4e4e4;" viewbox="0 0 512 512">
+<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+</svg>
+</td>
+<td style="text-align:left;width: 15em; vertical-align: middle !important;">
+Complete one module
+</td>
+<td style="text-align:center;vertical-align: middle !important;">
+<a href="https://www.datacamp.com/" target="_blank">Link</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><em>Note: These tasks are provided in a recommended order.</em></p>
+</div>

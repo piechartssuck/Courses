@@ -66,6 +66,13 @@
 &lt;li&gt;&lt;a href=&#34;#basic-visualizations-1&#34;&gt;Basic Visualizations&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#histograms&#34;&gt;Histograms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#line-graph&#34;&gt;Line Graph&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scatterplots&#34;&gt;Scatterplots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#boxplots&#34;&gt;Boxplots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-options&#34;&gt;Plot Options&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rendering-more-than-one-plot-in-a-window&#34;&gt;Rendering more than one plot in a window&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -547,7 +554,7 @@ tinyfemale &amp;lt;- population$Female_Pop/100000000&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    39 obs. of  2 variables:
 ##  $ Quarter                    : chr  &amp;quot;Q3 &amp;#39;08&amp;quot; &amp;quot;Q1 &amp;#39;09&amp;quot; &amp;quot;Q2 &amp;#39;09&amp;quot; &amp;quot;Q3 &amp;#39;09&amp;quot; ...
 ##  $ Number.of.users.in.millions: int  100 197 242 305 360 431 482 550 608 680 ...&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Alternatively, you can use glimpse()S&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Alternatively, you can use glimpse()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;facebook$Quarter&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Q3 &amp;#39;08&amp;quot; &amp;quot;Q1 &amp;#39;09&amp;quot; &amp;quot;Q2 &amp;#39;09&amp;quot; &amp;quot;Q3 &amp;#39;09&amp;quot; &amp;quot;Q4 &amp;#39;09&amp;quot; &amp;quot;Q1 &amp;#39;10&amp;quot; &amp;quot;Q2 &amp;#39;10&amp;quot; &amp;quot;Q3 &amp;#39;10&amp;quot;
 ##  [9] &amp;quot;Q4 &amp;#39;10&amp;quot; &amp;quot;Q1 &amp;#39;11&amp;quot; &amp;quot;Q2 &amp;#39;11&amp;quot; &amp;quot;Q3 &amp;#39;11&amp;quot; &amp;quot;Q4 &amp;#39;11&amp;quot; &amp;quot;Q1 &amp;#39;12&amp;quot; &amp;quot;Q2 &amp;#39;12&amp;quot; &amp;quot;Q3 &amp;#39;12&amp;quot;
@@ -584,16 +591,730 @@ quarter &amp;lt;- facebook$Quarter&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(users, 
      breaks = c(100,400,700,1000,1300,1600,1900,2100,2400))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-61-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;but that’s a lot of work! We can let R do it for us using the &lt;code&gt;seq&lt;/code&gt; option which stands for &lt;em&gt;sequence&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;but that’s a lot of work and its a bit odd because our data aren’t greater than the the maximum. We can still get the eight bars we want of even width if we let R do it for us using the &lt;code&gt;seq&lt;/code&gt;, or sequence option with &lt;code&gt;length.out&lt;/code&gt;, or the number of desired bars&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(users, 
-     breaks = seq(min(users), max(users),  length.out=8))&lt;/code&gt;&lt;/pre&gt;
+     breaks = seq(min(users), 
+                  max(users),  
+                  length.out=8))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-62-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Let’s make it look decent&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(users, breaks = seq(min(users), 
+                         max(users),   
+                         length.out=8), 
+     xlab = &amp;quot;Active Users (in millions)&amp;quot;, 
+     main = &amp;quot;Facebook utility worldwide as of 2nd quarter 2018&amp;quot;,
+     col = c(&amp;quot;#3b5998&amp;quot;,&amp;quot;#6d84b4&amp;quot;, &amp;quot;#afbdd4&amp;quot;, &amp;quot;#d8dfea&amp;quot;, &amp;quot;#ffffff&amp;quot;), 
+     border = &amp;quot;#d8dfea&amp;quot;, 
+     cex.lab = 1.1) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-63-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice that you can define colors in a vector and the plot will simply repeat that layout.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;line-graph&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Line Graph&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Let’s look at another population, but this time we’ll use Twitter data&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;twitter &amp;lt;- read.csv(&amp;quot;ActiveTwitterUsers.csv&amp;quot;, 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(twitter)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Quarter Number.of.monthly.active.users.in.millions
+## 1   20101                                         30
+## 2   20102                                         40
+## 3   20103                                         49
+## 4   20104                                         54
+## 5   20111                                         68
+## 6   20112                                         85&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(twitter)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    37 obs. of  2 variables:
+##  $ Quarter                                   : int  20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 ...
+##  $ Number.of.monthly.active.users.in.millions: num  30 40 49 54 68 85 101 117 138 151 ...&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;twitter$Quarter&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 20123 20124
+## [13] 20131 20132 20133 20134 20141 20142 20143 20144 20151 20152 20153 20154
+## [25] 20161 20162 20163 20164 20171 20172 20173 20174 20181 20182 20183 20184
+## [37] 20191&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;twitter$Number.of.monthly.active.users.in.millions&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  30.0  40.0  49.0  54.0  68.0  85.0 101.0 117.0 138.0 151.0 167.0 185.0
+## [13] 204.0 218.0 231.7 241.0 255.0 271.0 284.0 288.0 302.0 304.0 307.0 305.0
+## [25] 310.0 313.0 317.0 318.0 327.0 326.0 330.0 330.0 336.0 335.0 326.0 321.0
+## [37] 330.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s rename the columns&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweeters &amp;lt;- twitter$Number.of.monthly.active.users.in.millions
+season &amp;lt;- twitter$Quarter&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s first create a basic plot&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-71-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are several types of plot within the plot function which we can access by using the &lt;code&gt;type&lt;/code&gt; option&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-72-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now try options “o”, “p”, and “b” on your own. Check the solutions below to see if your plot rendered correctly&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Solutions
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;o&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-73-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;p&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-74-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;b&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-75-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/details&gt;
+&lt;p&gt;We can also change the line type using the &lt;code&gt;lty&lt;/code&gt; option&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters, 
+     type = &amp;quot;l&amp;quot;, 
+     lty = &amp;quot;dashed&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-76-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters, 
+     type = &amp;quot;l&amp;quot;, 
+     lty = &amp;quot;dotted&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-77-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well it looks like the solid line is likely the best so we’ll stick with it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-78-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Black and white plots can be great but that’s rarely true for data with ore information than two dimensions.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;l&amp;quot;,
+     col = &amp;quot;#5cb85c&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-79-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can also use a standard palette in R by using numbers&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     type = &amp;quot;l&amp;quot;,
+     col = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-80-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That line is just too thin. We can make it thicker by using the &lt;code&gt;lwd&lt;/code&gt; option&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters,
+     col = &amp;quot;#5cb85c&amp;quot;, 
+     lwd = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-81-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, we can sort out the axes and plot titles&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(season, tweeters, 
+     type = &amp;quot;l&amp;quot;, 
+     col = &amp;quot;#5cb85c&amp;quot;, 
+     lwd = 3,
+     xlab = &amp;quot;Quarter&amp;quot;,
+     ylab = &amp;quot;Tweeters (in millions)&amp;quot;,
+     main = &amp;quot;Active Users on Twitter&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-82-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I did promise regression didn’t I? OK well what if we wanted to know the answer to the question: &lt;em&gt;is the Twitter population increasing in size?&lt;/em&gt;
+Well we can add a basic linear regression to the plot to estimate if that’s true. First let’s calculate the regression line…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fit1 &amp;lt;- lm (tweeters ~ season, 
+            data = twitter) 
+
+summary(fit1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = tweeters ~ season, data = twitter)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -72.465 -33.476  -3.424  32.275  54.490 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) -7.218e+04  4.468e+03  -16.15   &amp;lt;2e-16 ***
+## season       3.595e+00  2.218e-01   16.21   &amp;lt;2e-16 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 36 on 35 degrees of freedom
+## Multiple R-squared:  0.8824, Adjusted R-squared:  0.879 
+## F-statistic: 262.6 on 1 and 35 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(fit1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-83-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-83-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-83-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-83-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scatterplots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Scatterplots&lt;/h2&gt;
+&lt;p&gt;Let’s load a dataset of Flower characteristics in 3 species of Iris.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(iris)
+head(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is a lot of data here! Let’s explore using the &lt;code&gt;pairs()&lt;/code&gt; function&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pairs(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-85-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This doesn’t tell us much about the species differences. We can tell R to plot using a different color for the three species of iris&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pairs(iris, 
+      col = iris$Species)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-86-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Sepal.Length and Petal.Length look interesting! Let’s start by looking at that&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-87-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;These points are difficult to see! Let’s pick some different ones using the &lt;code&gt;pch&lt;/code&gt; option&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 15)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-88-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = &amp;quot;A&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-89-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pch&lt;/code&gt; 21:25 also specify an edge color (col) and a background color (bg)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 21, 
+     bg = &amp;quot;blue&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-90-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;OK settling on solid circles…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-91-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;…that need to be bigger&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16,
+     cex = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-92-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;boxplots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Boxplots&lt;/h2&gt;
+&lt;p&gt;We’ll continue to use the Iris dataset for this section&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lets first examine the distribution of Sepal Length for each species&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boxplot(iris$Sepal.Length ~ iris$Species)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-94-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;f you wish to compare the medians of the boxplot, you can use the function “notch”. If the notches of two plots do not overlap, this is ‘strong evidence’ that the two medians differ.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-95-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You may have noticed that the y-axis labels are always orientated to be perpendicular to the axis. We can rotate all axis labels using the &lt;code&gt;las&lt;/code&gt; option.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-96-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we can add in all the axis and plot labels…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &amp;quot;Species&amp;quot;, 
+        ylab = &amp;quot;Sepal Length&amp;quot;, 
+        main = &amp;quot;Sepal Length by Species in Iris&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-97-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;…and change sizes&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &amp;quot;Species&amp;quot;, 
+        ylab = &amp;quot;Sepal Length&amp;quot;, 
+        main = &amp;quot;Sepal Length by Species in Iris&amp;quot;,
+        cex.lab = 1.5,
+        cex.axis = 1.5,
+        cex.main = 2) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-98-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-options&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Plot Options&lt;/h1&gt;
+&lt;div id=&#34;rendering-more-than-one-plot-in-a-window&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Rendering more than one plot in a window&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# number of rows, number of columns
+par(mfrow=c(1,2))
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &amp;quot;Sepal vs Petal Length in Iris&amp;quot;
+     )      
+
+plot(
+    # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &amp;quot;Sepal vs Petal Length in Iris&amp;quot;
+     )        &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-99-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Adding the following sets the plot window back to normal&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,1))    
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &amp;quot;Sepal vs Petal Length in Iris&amp;quot;
+     )   &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/02-example_files/figure-html/unnamed-chunk-100-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;or you can just clear the plot history by running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dev.off()       &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## null device 
+##           1&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Remember Algebra?&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Now with 22% more linear regression&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ggplotting</title>
+      <link>https://edp693e.theoreticalphysed.com/example/03-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/example/03-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-prepped&#34;&gt;Getting Prepped&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-things-first-set-your-working-directory&#34;&gt;First Things First! Set your Working Directory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#its-all-about-layers&#34;&gt;Its All About Layers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#example-diamonds&#34;&gt;Example: Diamonds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#another-example-bar-plots&#34;&gt;Another Example: Bar Plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#yet-another-example-more-bar-plots&#34;&gt;Yet Another Example: More Bar Plots!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comparisons-using-bar-charts&#34;&gt;Comparisons Using Bar Charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adding-values&#34;&gt;Adding Values&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006d77;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;getting-prepped&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Getting Prepped&lt;/h1&gt;
+&lt;div id=&#34;first-things-first-set-your-working-directory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Things First! Set your Working Directory&lt;/h2&gt;
+&lt;p&gt;Your &lt;em&gt;working directory&lt;/em&gt; is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Open up a new script by going to &lt;code&gt;File &amp;gt; New File &amp;gt; R Script&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save it in a preferably empty folder as whatever you want.&lt;/li&gt;
+&lt;li&gt;Go to the menu bar and select &lt;code&gt;Session &amp;gt; Set Working Directory &amp;gt; To Source File Location&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Please go ahead and download the libraries below you don’t have and load them up&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(cowplot)
+library(RColorBrewer)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;its-all-about-layers&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Its All About Layers&lt;/h1&gt;
+&lt;center&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/ggplothavelayers.png&#34; /&gt;
+&lt;/center&gt;
+&lt;p&gt;ggplot runs on layers&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We’ll work on this throughout the term, but here is a basic picture of the framework&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/ggplot_layers.png&#34; title=&#34;fig:&#34; alt=&#34;layers of ggplot2&#34; /&gt;
+&lt;/center&gt;
+&lt;div id=&#34;example-diamonds&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Example: Diamonds&lt;/h2&gt;
+&lt;p&gt;We’ll use the &lt;em&gt;diamonds&lt;/em&gt; data set that’s included in &lt;code&gt;ggplot&lt;/code&gt;, in particular we’ll start with this plot with a bunch of foundational commands&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() +
+  layer(
+    data = diamonds, 
+    mapping = aes(x = carat, y = price),
+    geom = &amp;quot;point&amp;quot;,  
+    stat = &amp;quot;identity&amp;quot;, 
+    position = &amp;quot;identity&amp;quot; ) +
+  scale_y_continuous() +
+  scale_x_continuous() +
+  coord_cartesian()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;which can be condensed to&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = diamonds, 
+  mapping = aes(x = carat, y = price)) +
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can get &lt;em&gt;lazy&lt;/em&gt; about arguments, in that &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt; are always the first arguments to &lt;code&gt;aes&lt;/code&gt; so we often drop the argument names&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(diamonds, aes(carat, price)) +
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;another-example-bar-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Another Example: Bar Plots&lt;/h2&gt;
+&lt;p&gt;First we’ll make up a totally fake data set. Please pay close attention to the structure and what everything means.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data &amp;lt;- structure(list(V1 = c(34.88372093, 
+                              35.07751938, 
+                              35.27131783, 
+                              35.46511628, 
+                              35.65891473, 
+                              35.85271318), 
+                       V2 = c(0.00029997, 
+                              0.00019998, 
+                              0.00029997, 
+                              0.00029997, 
+                              0.00069993, 
+                              0.00069993)), 
+                      .Names = c(&amp;quot;Perc&amp;quot;, &amp;quot;Prop&amp;quot;), 
+                  row.names = c(NA, 6L), 
+                  class = &amp;quot;data.frame&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and view it!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns Prop and Perc, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!&lt;/p&gt;
+&lt;p&gt;Ok now let’s look at a barplot of the data using&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Base R&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(data$Perc, 
+        data$Perc, 
+        xlab=&amp;quot;Percentage&amp;quot;, 
+        ylab=&amp;quot;Proportion&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;ggplot&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x=Perc, y=Prop)) + 
+  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
+  labs(x=&amp;quot;Percentage&amp;quot;, y=&amp;quot;Proportion&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now let’s try colors by using the &lt;em&gt;Perc&lt;/em&gt; column&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x=Perc, y=Prop, fill = Perc)) + 
+  geom_bar(stat=&amp;quot;identity&amp;quot;) + 
+  labs(x=&amp;quot;Percentage&amp;quot;, y=&amp;quot;Proportion&amp;quot;) +
+  scale_color_brewer()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;yet-another-example-more-bar-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Yet Another Example: More Bar Plots!&lt;/h2&gt;
+&lt;p&gt;Please download the libraries below you don’t have and load them up&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(xlsx)           # for reading in Excel data
+library(magrittr)       # for easier syntax in one or two areas
+library(gridExtra)      # old method for generating some comparison plots
+library(patchwork)      # new method for generating some comparison plots
+library(ggplot2)        # for generating the visualizations
+library(viridis)        # because colors are fun!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We’ll use the mtcars data set. It is a standard example set that comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mtcars)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we wanted to get the count of vehicles that have 4, 6 and 8 cylinders we can simply identify the &lt;em&gt;x&lt;/em&gt;-axis variable and apply &lt;code&gt;geom_bar()&lt;/code&gt;. This, by default will plot the count of 4, 6, and 8 cylinder vehicles in the data set. However, note that if the variable is numeric it may be interpreted as a continuous variable. This is the case in the first plot you will do below which is why the x-axis is continuous in nature. However, we can force the cylinder variable to a categorical (factor) variable by applying &lt;code&gt;x = factor(cyl)&lt;/code&gt; using the second plot you will do below which produces a discrete &lt;em&gt;x&lt;/em&gt;-axis.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# x-axis as continuous
+p1 &amp;lt;- ggplot(mtcars, aes(x = cyl)) +
+  geom_bar() +
+  ggtitle(&amp;quot;Fig. A: x-axis as a continuous variable&amp;quot;)
+
+# x-axis as discrete
+p2 &amp;lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar() +
+  ggtitle(&amp;quot;Fig B: x-axis as a discrete (factor) variable&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Not we’ll display the results in two ways&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Using the &lt;strong&gt;gridExtra&lt;/strong&gt; package&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;grid.arrange(p1, p2, ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Using the &lt;strong&gt;patchwork&lt;/strong&gt; package&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 + p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Although the default width of the bars is aesthetically pleasing, you do have the ability to adjust this attribute by setting the width in &lt;code&gt;geom_bar()&lt;/code&gt;. The default width is 0.9;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;smaller values (min width of 0) make the bars narrower and&lt;/li&gt;
+&lt;li&gt;larger values (max width of 1) make the bars wider.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here are some examples&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;e1 &amp;lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .5) +
+  ggtitle(&amp;quot;bar width = 0.5&amp;quot;)
+
+e2 &amp;lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .75) +
+  ggtitle(&amp;quot;bar width = 0.75&amp;quot;)
+
+e3 &amp;lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .9) +
+  ggtitle(&amp;quot;bar width = 0.9&amp;quot;)
+
+e4 &amp;lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .99) +
+  ggtitle(&amp;quot;bar width = 0.99&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;e1 + e2 + e3 + e4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;e1 + e2 + e3 + e4 + plot_layout(ncol = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;e1 + e2 + e3 + e4 + plot_layout(nrow = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Take a look at some more examples over at the &lt;strong&gt;patchwork&lt;/strong&gt; &lt;a href=&#34;#%20https://patchwork.data-imaginist.com/articles/guides/assembly.html&#34; target=&#34;_blank&#34;&gt;vignette&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We can also adjust the fill and outline colors of the bars along with the opacity by applying &lt;code&gt;fill&lt;/code&gt;, &lt;code&gt;color&lt;/code&gt;, and &lt;code&gt;alpha&lt;/code&gt; arguments respectively in the &lt;code&gt;geom_bar()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(fill = &amp;quot;dodgerblue&amp;quot;, 
+           color = &amp;quot;grey40&amp;quot;, 
+           alpha = 0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are also times when we want to plot many categories along the x-axis and the length of the names make it difficult to read. One approach to resolving this issue is to use &lt;code&gt;axis.text.x&lt;/code&gt; argument within the &lt;code&gt;theme()&lt;/code&gt; function to rotate the text.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t1 &amp;lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  ggtitle(&amp;quot;Fig. A: Default x-axis&amp;quot;)
+
+t1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t2 &amp;lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = .5)) +
+  ggtitle(&amp;quot;Fig. B: Rotated x-axis&amp;quot;)
+
+t2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-21-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t1 + t2 + plot_layout(ncol = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-21-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;However, you may hate to read rotated x-axis labels since it can be difficult. In cases like these rotated bar charts are far more appealing. We can rotate the axes by applying the &lt;code&gt;coord_flip()&lt;/code&gt; function, which flips the &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt; coordinates. To make this even easier to digest we can order the vehicles based on their &lt;em&gt;mpg&lt;/em&gt; values as illustrated in the second plot you’ll do below. To do this just reorder the &lt;em&gt;x&lt;/em&gt; variable by applying the &lt;code&gt;reorder()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r1 &amp;lt;- ggplot(mtcars, aes(x = row.names(mtcars), mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  ggtitle(&amp;quot;Fig. A: Default rotated x-axis&amp;quot;)
+
+# order bars
+r2 &amp;lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  ggtitle(&amp;quot;Fig. B: Rotated ordered x-axis&amp;quot;)
+
+r1 + r2 + plot_layout(nrow = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;comparisons-using-bar-charts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Comparisons Using Bar Charts&lt;/h2&gt;
+&lt;p&gt;Sometimes we want to compare different groups across the categorical variables of interest. This is primarily done via color, side-by-side bars, or stacked bars. To add a color dimension we simply add a fill argument to our first line of code to tell R what variable we want to use to color our bars.&lt;/p&gt;
+&lt;p&gt;In this example we compare mpg across all the vehicles but also color the vehicles based on number of cylinders. R will use default color codings but you can&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;set the colors manually using scale_fill_manual as in the second plot you’ll do. But you can also&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;scale_fill_brewer&lt;/code&gt; to color with preset color schemes (see more about ColorBrewer &lt;a href=&#34;http://colorbrewer2.org&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;) and&lt;/li&gt;
+&lt;li&gt;many others! (if you type &lt;code&gt;scale_fill&lt;/code&gt; into your RStudio Help search field you will see all the possibilities)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let’s compare mpg across all cars and color based on cyl&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;m1 &amp;lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&amp;quot;Fig. A: Default fill colors&amp;quot;)
+
+m2 &amp;lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  scale_fill_manual(values = c(&amp;quot;#e5f5e0&amp;quot;, &amp;quot;#a1d99b&amp;quot;, &amp;quot;#31a354&amp;quot;)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&amp;quot;Fig. B: Manually set fill colors&amp;quot;)
+
+
+m1 + m2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also use side-by-side bars to make comparisons. Say we want to compare the average mpg for cars across the different 4, 6, and 8 cylinder categories but also assess the impact that transmission (variable am where 0 = automatic, 1 = manual) has. we apply the fill argument to color bars based on transmission type then include the &lt;code&gt;position = &#34;dodge&#34;&lt;/code&gt; in the &lt;code&gt;geom_bar()&lt;/code&gt; function. This tells R to have two bars for each cylinder type, color fill each bar based on the type of transmission and then adjust (aka “dodge”) the position of the bars so that they are side-by-side.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  ggtitle(&amp;quot;Default color comparison&amp;quot;)
+
+# more pleasing colors
+t2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  scale_fill_brewer(palette = &amp;quot;Pastel1&amp;quot;) +
+  ggtitle(&amp;quot;Adjusted color comparison&amp;quot;)
+
+t1 + t2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can adjust the dodge width by incorporating the &lt;code&gt;position = position_dodge(width = x)&lt;/code&gt; argument in the &lt;code&gt;geom_bar()&lt;/code&gt; function. By default, the width is 0.90 and a lower value will create overlap of your side-by-side bars and a larger value will create spacing between the bars.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  ggtitle(&amp;quot;Default dodge positioning&amp;quot;) +
+  theme(legend.position = &amp;quot;none&amp;quot;)
+
+l2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = position_dodge(width = .5)) +
+  ggtitle(&amp;quot;Overlap of side-by-side bars&amp;quot;) +
+  theme(legend.position = &amp;quot;none&amp;quot;)
+
+l3 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = position_dodge(width = 1)) +
+  ggtitle(&amp;quot;Spacing between side-by-side bars&amp;quot;) +
+  labs(fill = &amp;quot;AM&amp;quot;) +
+  theme(legend.position = c(1,1), legend.justification = c(1,1),
+        legend.background = element_blank())
+
+
+l1 + l2 + l3 + plot_layout(ncol = 3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Stacked bars are the third common approach to compare groups with bar charts. By default, when you introduce a variable to color fill with in the first line, if you enter no other arguments ggplot will produce a stacked bar chart.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Unfortunately, the way ggplot color codes the bars is opposite to how the colors are displayed in the legend. We can resolve this two different ways; either reverse the legend with the arguments displayed in the guides() function in your first plotbelow. or specify the direction of the levels when transforming the transmission (am) variable into a factor as displayed in the first line of code in Fig B. Both will align the legend color coding layout to the color coding of the stacked bars but each option also helps determine which color is top versus on the bottom.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# reverse legend color coding layout
+q1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(fill = &amp;quot;am&amp;quot;) +
+  ggtitle(&amp;quot;Fig A: Reverse legend&amp;quot;)
+
+# or reverse stacking order by changing the factor levels
+q2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  labs(fill = &amp;quot;am&amp;quot;) +
+  ggtitle(&amp;quot;Fig B: Specify levels&amp;quot;)
+
+q1 + q2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As before we can change the color of our stacked bars by incorporating one of the many &lt;code&gt;scale_fill_xxxx&lt;/code&gt; arguments. Here I manually specify the colors to apply with &lt;code&gt;scale_fill_manual()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  scale_fill_manual(values = c(&amp;quot;#a1d99b&amp;quot;, &amp;quot;#31a354&amp;quot;)) +
+  labs(fill = &amp;quot;AM&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-values&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Adding Values&lt;/h2&gt;
+&lt;p&gt;Often, it is helpful to provide labels/markers on the bar charts to help the reader interpret the results correctly or just to make it easier to read the graphic. For instance, we can add the actual mpg value to the following vertical bar chart by incorporating the &lt;code&gt;geom_text()&lt;/code&gt; function and telling the function to label each bar with the mpg value. I can also tell ggplot to nudge the values left or right sit within or outside the bar and also color the text.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = 2)
+
+p2 &amp;lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = -2, color = &amp;quot;white&amp;quot;)
+
+p1 + p2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Labelling grouped bars is similar, however, we need to add a &lt;code&gt;position = position_dodge(0.9)&lt;/code&gt; argument to the &lt;code&gt;geom_text()&lt;/code&gt; function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a &lt;code&gt;vjust = 0.5&lt;/code&gt; argument or adjust the text to within the bar with &lt;code&gt;vjust = 1.5&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&amp;quot;Fig A: Default text alignment&amp;quot;)
+
+p2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &amp;quot;white&amp;quot;) +
+  ggtitle(&amp;quot;Fig B: Adjusted text alignment&amp;quot;)
+
+p1 + p2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an &lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;. In this case, we’ll be usingthe &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34; target=&#34;_blank&#34;&gt;viridis color set&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&amp;quot;Fig A: Default text alignment&amp;quot;)
+
+p2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  scale_fill_viridis_c(option = &amp;quot;D&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &amp;quot;white&amp;quot;) +
+  ggtitle(&amp;quot;Fig B: Adjusted text alignment&amp;quot;)
+
+p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;*Uh oh! Did you see something that said &lt;code&gt;## Error: Discrete value supplied to continuous scale&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;The error says that we tried to add a continuous scale to discrete values! Well we could use this by either&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Getting rid of the factor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = am)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  scale_fill_viridis_c(option = &amp;quot;D&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &amp;quot;white&amp;quot;) +
+  ggtitle(&amp;quot;Fig B: Adjusted text alignment&amp;quot;)
+
+p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Changing the type of scaling&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+  scale_fill_viridis_d(option = &amp;quot;D&amp;quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &amp;quot;white&amp;quot;) +
+  ggtitle(&amp;quot;Fig B: Adjusted text alignment&amp;quot;)
+
+p2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice that the plots are different! Your fill and color variables define how the plot will look!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Much like Adobe Photoshop for those of you who may be familiar with that software.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

@@ -59,10 +59,6 @@ output:
 }
 </style>
 
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
-library(downloadthis)
-library(here)
-```
 
 ### Read Things
 We'll be transitioning out of Base R to the Tidyverse. To get an idea of what that looks like by reading a couple of articles from Hadley Wickham:

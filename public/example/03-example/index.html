@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory  Its All About Layers  Example: Diamonds Another Example: Bar Plots Yet Another Example: More Bar Plots!">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/03-example/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://edp693e.theoreticalphysed.com/example/03-example/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/03-example/">
+  <meta property="og:title" content="ggplotting | Data Visualization">
+  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory  Its All About Layers  Example: Diamonds Another Example: Bar Plots Yet Another Example: More Bar Plots!"><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
+
+<script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
+<link rel="shortcut icon" href="https://edp693e.theoreticalphysed.com/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp693e.theoreticalphysed.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp693e.theoreticalphysed.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp693e.theoreticalphysed.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp693e.theoreticalphysed.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp693e.theoreticalphysed.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp693e.theoreticalphysed.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp693e.theoreticalphysed.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp693e.theoreticalphysed.com/img/android-icon-192x192.png" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="96x96" />
+<meta name="application-name" content="EDP 693e: Data Visualization" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
+
+
+  <title>ggplotting | Data Visualization</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/readings/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/due/"><span>Due?</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/professor/"><span>Professor</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/">About the Examples</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/01-example/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/01-example/">Week 1: Friends Don&#39;t Let Friends Use Pie Charts</a>
+      </li>
+      
+      <li >
+        <a href="/example/02-example/">Week 2: Base R is a Thing</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/03-example/">Week 3: ggplotting</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>ggplotting</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+</ul></li>
+<li><a href="#its-all-about-layers">Its All About Layers</a>
+<ul>
+<li><a href="#example-diamonds">Example: Diamonds</a></li>
+<li><a href="#another-example-bar-plots">Another Example: Bar Plots</a></li>
+<li><a href="#yet-another-example-more-bar-plots">Yet Another Example: More Bar Plots!</a></li>
+<li><a href="#comparisons-using-bar-charts">Comparisons Using Bar Charts</a></li>
+<li><a href="#adding-values">Adding Values</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006d77;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(ggplot2)
+library(cowplot)
+library(RColorBrewer)</code></pre>
+</div>
+</div>
+<div id="its-all-about-layers" class="section level1">
+<h1>Its All About Layers</h1>
+<center>
+<img src="/example/03-example_files/ggplothavelayers.png" />
+</center>
+<p>ggplot runs on layers<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>We’ll work on this throughout the term, but here is a basic picture of the framework</p>
+<center>
+<img src="/example/03-example_files/ggplot_layers.png" title="fig:" alt="layers of ggplot2" />
+</center>
+<div id="example-diamonds" class="section level2">
+<h2>Example: Diamonds</h2>
+<p>We’ll use the <em>diamonds</em> data set that’s included in <code>ggplot</code>, in particular we’ll start with this plot with a bunch of foundational commands</p>
+<pre class="r"><code>ggplot() +
+  layer(
+    data = diamonds, 
+    mapping = aes(x = carat, y = price),
+    geom = &quot;point&quot;,  
+    stat = &quot;identity&quot;, 
+    position = &quot;identity&quot; ) +
+  scale_y_continuous() +
+  scale_x_continuous() +
+  coord_cartesian()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>which can be condensed to</p>
+<pre class="r"><code>ggplot(data = diamonds, 
+  mapping = aes(x = carat, y = price)) +
+  geom_point()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>You can get <em>lazy</em> about arguments, in that <em>x</em> and <em>y</em> are always the first arguments to <code>aes</code> so we often drop the argument names</p>
+<pre class="r"><code>ggplot(diamonds, aes(carat, price)) +
+  geom_point()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="another-example-bar-plots" class="section level2">
+<h2>Another Example: Bar Plots</h2>
+<p>First we’ll make up a totally fake data set. Please pay close attention to the structure and what everything means.</p>
+<pre class="r"><code>data &lt;- structure(list(V1 = c(34.88372093, 
+                              35.07751938, 
+                              35.27131783, 
+                              35.46511628, 
+                              35.65891473, 
+                              35.85271318), 
+                       V2 = c(0.00029997, 
+                              0.00019998, 
+                              0.00029997, 
+                              0.00029997, 
+                              0.00069993, 
+                              0.00069993)), 
+                      .Names = c(&quot;Perc&quot;, &quot;Prop&quot;), 
+                  row.names = c(NA, 6L), 
+                  class = &quot;data.frame&quot;)</code></pre>
+<p>and view it!</p>
+<pre class="r"><code>View(data)</code></pre>
+<p>The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns Prop and Perc, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!</p>
+<p>Ok now let’s look at a barplot of the data using</p>
+<ol style="list-style-type: decimal">
+<li><strong>Base R</strong></li>
+</ol>
+<pre class="r"><code>barplot(data$Perc, 
+        data$Perc, 
+        xlab=&quot;Percentage&quot;, 
+        ylab=&quot;Proportion&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>ggplot</strong></li>
+</ol>
+<pre class="r"><code>ggplot(data, aes(x=Perc, y=Prop)) + 
+  geom_bar(stat=&quot;identity&quot;) + 
+  labs(x=&quot;Percentage&quot;, y=&quot;Proportion&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Now let’s try colors by using the <em>Perc</em> column</p>
+<pre class="r"><code>ggplot(data, aes(x=Perc, y=Prop, fill = Perc)) + 
+  geom_bar(stat=&quot;identity&quot;) + 
+  labs(x=&quot;Percentage&quot;, y=&quot;Proportion&quot;) +
+  scale_color_brewer()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="yet-another-example-more-bar-plots" class="section level2">
+<h2>Yet Another Example: More Bar Plots!</h2>
+<p>Please download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(xlsx)           # for reading in Excel data
+library(magrittr)       # for easier syntax in one or two areas
+library(gridExtra)      # old method for generating some comparison plots
+library(patchwork)      # new method for generating some comparison plots
+library(ggplot2)        # for generating the visualizations
+library(viridis)        # because colors are fun!</code></pre>
+<p>We’ll use the mtcars data set. It is a standard example set that comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.</p>
+<pre class="r"><code>head(mtcars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p>If we wanted to get the count of vehicles that have 4, 6 and 8 cylinders we can simply identify the <em>x</em>-axis variable and apply <code>geom_bar()</code>. This, by default will plot the count of 4, 6, and 8 cylinder vehicles in the data set. However, note that if the variable is numeric it may be interpreted as a continuous variable. This is the case in the first plot you will do below which is why the x-axis is continuous in nature. However, we can force the cylinder variable to a categorical (factor) variable by applying <code>x = factor(cyl)</code> using the second plot you will do below which produces a discrete <em>x</em>-axis.</p>
+<pre class="r"><code># x-axis as continuous
+p1 &lt;- ggplot(mtcars, aes(x = cyl)) +
+  geom_bar() +
+  ggtitle(&quot;Fig. A: x-axis as a continuous variable&quot;)
+
+# x-axis as discrete
+p2 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar() +
+  ggtitle(&quot;Fig B: x-axis as a discrete (factor) variable&quot;)</code></pre>
+<p>Not we’ll display the results in two ways</p>
+<ol style="list-style-type: decimal">
+<li>Using the <strong>gridExtra</strong> package</li>
+</ol>
+<pre class="r"><code>grid.arrange(p1, p2, ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Using the <strong>patchwork</strong> package</li>
+</ol>
+<pre class="r"><code>p1 + p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Although the default width of the bars is aesthetically pleasing, you do have the ability to adjust this attribute by setting the width in <code>geom_bar()</code>. The default width is 0.9;</p>
+<ol style="list-style-type: decimal">
+<li>smaller values (min width of 0) make the bars narrower and</li>
+<li>larger values (max width of 1) make the bars wider.</li>
+</ol>
+<p>Here are some examples</p>
+<pre class="r"><code>e1 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .5) +
+  ggtitle(&quot;bar width = 0.5&quot;)
+
+e2 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .75) +
+  ggtitle(&quot;bar width = 0.75&quot;)
+
+e3 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .9) +
+  ggtitle(&quot;bar width = 0.9&quot;)
+
+e4 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .99) +
+  ggtitle(&quot;bar width = 0.99&quot;)</code></pre>
+<pre class="r"><code>e1 + e2 + e3 + e4</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>e1 + e2 + e3 + e4 + plot_layout(ncol = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<pre class="r"><code>e1 + e2 + e3 + e4 + plot_layout(nrow = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Take a look at some more examples over at the <strong>patchwork</strong> <a href="#%20https://patchwork.data-imaginist.com/articles/guides/assembly.html" target="_blank">vignette</a>.</p>
+<p>We can also adjust the fill and outline colors of the bars along with the opacity by applying <code>fill</code>, <code>color</code>, and <code>alpha</code> arguments respectively in the <code>geom_bar()</code> function.</p>
+<pre class="r"><code>ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(fill = &quot;dodgerblue&quot;, 
+           color = &quot;grey40&quot;, 
+           alpha = 0.5)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>There are also times when we want to plot many categories along the x-axis and the length of the names make it difficult to read. One approach to resolving this issue is to use <code>axis.text.x</code> argument within the <code>theme()</code> function to rotate the text.</p>
+<pre class="r"><code>t1 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  ggtitle(&quot;Fig. A: Default x-axis&quot;)
+
+t1</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<pre class="r"><code>t2 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = .5)) +
+  ggtitle(&quot;Fig. B: Rotated x-axis&quot;)
+
+t2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-21-2.png" width="672" /></p>
+<pre class="r"><code>t1 + t2 + plot_layout(ncol = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-21-3.png" width="672" /></p>
+<p>However, you may hate to read rotated x-axis labels since it can be difficult. In cases like these rotated bar charts are far more appealing. We can rotate the axes by applying the <code>coord_flip()</code> function, which flips the <em>x</em> and <em>y</em> coordinates. To make this even easier to digest we can order the vehicles based on their <em>mpg</em> values as illustrated in the second plot you’ll do below. To do this just reorder the <em>x</em> variable by applying the <code>reorder()</code> function.</p>
+<pre class="r"><code>r1 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  ggtitle(&quot;Fig. A: Default rotated x-axis&quot;)
+
+# order bars
+r2 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  ggtitle(&quot;Fig. B: Rotated ordered x-axis&quot;)
+
+r1 + r2 + plot_layout(nrow = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+<div id="comparisons-using-bar-charts" class="section level2">
+<h2>Comparisons Using Bar Charts</h2>
+<p>Sometimes we want to compare different groups across the categorical variables of interest. This is primarily done via color, side-by-side bars, or stacked bars. To add a color dimension we simply add a fill argument to our first line of code to tell R what variable we want to use to color our bars.</p>
+<p>In this example we compare mpg across all the vehicles but also color the vehicles based on number of cylinders. R will use default color codings but you can</p>
+<ol style="list-style-type: decimal">
+<li>set the colors manually using scale_fill_manual as in the second plot you’ll do. But you can also</li>
+<li>use <code>scale_fill_brewer</code> to color with preset color schemes (see more about ColorBrewer <a href="http://colorbrewer2.org" target="_blank">here</a>) and</li>
+<li>many others! (if you type <code>scale_fill</code> into your RStudio Help search field you will see all the possibilities)</li>
+</ol>
+<p>Let’s compare mpg across all cars and color based on cyl</p>
+<pre class="r"><code>m1 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&quot;Fig. A: Default fill colors&quot;)
+
+m2 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  scale_fill_manual(values = c(&quot;#e5f5e0&quot;, &quot;#a1d99b&quot;, &quot;#31a354&quot;)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&quot;Fig. B: Manually set fill colors&quot;)
+
+
+m1 + m2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>We can also use side-by-side bars to make comparisons. Say we want to compare the average mpg for cars across the different 4, 6, and 8 cylinder categories but also assess the impact that transmission (variable am where 0 = automatic, 1 = manual) has. we apply the fill argument to color bars based on transmission type then include the <code>position = "dodge"</code> in the <code>geom_bar()</code> function. This tells R to have two bars for each cylinder type, color fill each bar based on the type of transmission and then adjust (aka “dodge”) the position of the bars so that they are side-by-side.</p>
+<pre class="r"><code>t1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  ggtitle(&quot;Default color comparison&quot;)
+
+# more pleasing colors
+t2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_brewer(palette = &quot;Pastel1&quot;) +
+  ggtitle(&quot;Adjusted color comparison&quot;)
+
+t1 + t2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>You can adjust the dodge width by incorporating the <code>position = position_dodge(width = x)</code> argument in the <code>geom_bar()</code> function. By default, the width is 0.90 and a lower value will create overlap of your side-by-side bars and a larger value will create spacing between the bars.</p>
+<pre class="r"><code>l1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  ggtitle(&quot;Default dodge positioning&quot;) +
+  theme(legend.position = &quot;none&quot;)
+
+l2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = position_dodge(width = .5)) +
+  ggtitle(&quot;Overlap of side-by-side bars&quot;) +
+  theme(legend.position = &quot;none&quot;)
+
+l3 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = position_dodge(width = 1)) +
+  ggtitle(&quot;Spacing between side-by-side bars&quot;) +
+  labs(fill = &quot;AM&quot;) +
+  theme(legend.position = c(1,1), legend.justification = c(1,1),
+        legend.background = element_blank())
+
+
+l1 + l2 + l3 + plot_layout(ncol = 3)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>Stacked bars are the third common approach to compare groups with bar charts. By default, when you introduce a variable to color fill with in the first line, if you enter no other arguments ggplot will produce a stacked bar chart.</p>
+<pre class="r"><code>ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Unfortunately, the way ggplot color codes the bars is opposite to how the colors are displayed in the legend. We can resolve this two different ways; either reverse the legend with the arguments displayed in the guides() function in your first plotbelow. or specify the direction of the levels when transforming the transmission (am) variable into a factor as displayed in the first line of code in Fig B. Both will align the legend color coding layout to the color coding of the stacked bars but each option also helps determine which color is top versus on the bottom.</p>
+<pre class="r"><code># reverse legend color coding layout
+q1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(fill = &quot;am&quot;) +
+  ggtitle(&quot;Fig A: Reverse legend&quot;)
+
+# or reverse stacking order by changing the factor levels
+q2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  labs(fill = &quot;am&quot;) +
+  ggtitle(&quot;Fig B: Specify levels&quot;)
+
+q1 + q2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>As before we can change the color of our stacked bars by incorporating one of the many <code>scale_fill_xxxx</code> arguments. Here I manually specify the colors to apply with <code>scale_fill_manual()</code>.</p>
+<pre class="r"><code>ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  scale_fill_manual(values = c(&quot;#a1d99b&quot;, &quot;#31a354&quot;)) +
+  labs(fill = &quot;AM&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<div id="adding-values" class="section level2">
+<h2>Adding Values</h2>
+<p>Often, it is helpful to provide labels/markers on the bar charts to help the reader interpret the results correctly or just to make it easier to read the graphic. For instance, we can add the actual mpg value to the following vertical bar chart by incorporating the <code>geom_text()</code> function and telling the function to label each bar with the mpg value. I can also tell ggplot to nudge the values left or right sit within or outside the bar and also color the text.</p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = 2)
+
+p2 &lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = -2, color = &quot;white&quot;)
+
+p1 + p2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Labelling grouped bars is similar, however, we need to add a <code>position = position_dodge(0.9)</code> argument to the <code>geom_text()</code> function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a <code>vjust = 0.5</code> argument or adjust the text to within the bar with <code>vjust = 1.5</code></p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&quot;Fig A: Default text alignment&quot;)
+
+p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p1 + p2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an <a href="https://www.color-hex.com/" target="_blank">example</a>. In this case, we’ll be usingthe <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">viridis color set</a>.</p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&quot;Fig A: Default text alignment&quot;)
+
+p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_c(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p>*Uh oh! Did you see something that said <code>## Error: Discrete value supplied to continuous scale</code>?</p>
+<p>The error says that we tried to add a continuous scale to discrete values! Well we could use this by either</p>
+<ol style="list-style-type: decimal">
+<li>Getting rid of the factor</li>
+</ol>
+<pre class="r"><code>p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = am)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_c(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Changing the type of scaling</li>
+</ol>
+<pre class="r"><code>p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_d(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>Notice that the plots are different! Your fill and color variables define how the plot will look!</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Much like Adobe Photoshop for those of you who may be familiar with that software.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/Courses/edp693e/edit/master/content/example/03-example.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 693e: Data Visualization (Spring 2021)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://counselingandlearningsci.wvu.edu/" target="_blank" rel="noopener">Counseling &amp; Learning Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope fa-fw"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next 15 weeks) &emsp;&emsp;
+                <i class="far fa-clock fa-fw"></i> You pick!
+                <br><i class="fas fa-university fa-fw"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2021 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+
+            <p>This site was created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with customizations heavily influenced by Dr. Andrew Heiss'<a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> site<a/>. </p>
+
+            <p><a href="https://github.com/piechartssuck/Courses/tree/edp693e" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.cbb55fd8eafa574bce72dcb94f65cd2c.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
