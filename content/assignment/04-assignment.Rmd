@@ -1,0 +1,43 @@
+---
+title: "Causation and Criteria"
+linktitle: "Week 4: Causation and Criteria"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em;
+}
+</style>
+
+## Evaluation Prospectus
+
+This task assumes that very little, if any groundwork has been completed in identifying a suitable program to evaluate. At this point, you should treat this as a thought experiment, in that *if you were given a choice, what program would you wish to evaluate?*^[No matter the size or scope. This task should be submitted on an individual basis.]. 
+
+Discuss your individual interests and given a choice on possible programs, list *at least* two choices. For each, provide a brief description of the following^[Please note this is not a list, rather criteria that you should address within a narrative]:
+
+1. A name and brief description of the program.
+2. The reason you believe an evaluation needs to occur.
+3. What type of primary and/or secondary evaluation you would implement and why.
+
+This submission should be no longer than one to two pages in length, double spaced in 12 point Times New Roman font adhering to APA 7th edition guidelines barring the following:
+
+1. A cover page with your name
+2. No running head
+3. Filename in *either* of the following formats
+
+- `yourlastname_prospectus.docx` 
+
+- `yourlastname_prospectus.pdf`
+
+:::
