@@ -58,7 +58,7 @@ Location = c("[Link](/readings/04-readings/#respond-to-posts)",
              "[Link](/readings/04-readings/#read-the-book)",
              "[Link](/lesson/04-lesson/#key-evaluation-checklist-kec)",
              "[Link](/lesson/04-lesson/#meeting)",
-             "[Link](/readings/assignment/04-assignment/#evaluation-prospectus)",
+             "[Link](/assignment/04-evaluation-prospectus/)",
              "[Link](/example/04-example/#causal-models-in-evaluation)"
     )
 

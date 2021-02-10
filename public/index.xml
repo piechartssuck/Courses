@@ -1348,7 +1348,14 @@ Identifying Evaluative Criteria
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#evaluation-prospectus&#34;&gt;Evaluation Prospectus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-prospectus&#34;&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Prospectus&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type&#34;&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#criteria&#34;&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#structure&#34;&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1358,14 +1365,30 @@ ul {
 }
 &lt;/style&gt;
 &lt;div id=&#34;evaluation-prospectus&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Evaluation Prospectus&lt;/h2&gt;
-&lt;p&gt;This task assumes that very little, if any groundwork has been completed in identifying a suitable program to evaluate. At this point, you should treat this as a thought experiment, in that &lt;em&gt;if you were given a choice, what program would you wish to evaluate?&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Discuss your individual interests and given a choice on possible programs, list &lt;em&gt;at least&lt;/em&gt; two choices. For each, provide a brief description of the following&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;h2&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Prospectus&lt;/span&gt;&lt;/h2&gt;
+&lt;div id=&#34;submission&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ecampus.wvu.edu&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;type&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Individual&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This task assumes that very little, if any groundwork has been completed in identifying a suitable program to evaluate. At this point, you should treat this as a thought experiment, in that &lt;em&gt;if you were given a choice, what program would you wish to evaluate?&lt;/em&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;criteria&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Discuss your individual interests and given a choice on possible programs, list &lt;em&gt;at least&lt;/em&gt; two choices. For each, provide a brief description of the following&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;A name and brief description of the program.&lt;/li&gt;
 &lt;li&gt;The reason you believe an evaluation needs to occur.&lt;/li&gt;
 &lt;li&gt;What type of primary and/or secondary evaluation you would implement and why.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;structure&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;This submission should be no longer than one to two pages in length, double spaced in 12 point Times New Roman font adhering to APA 7th edition guidelines barring the following:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;A cover page with your name&lt;/li&gt;
@@ -1378,11 +1401,13 @@ ul {
 &lt;/ul&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;No matter the size or scope. This task should be submitted on an individual basis.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Please note this is not a list, rather criteria that you should address within a narrative&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Each student in the course must write their own narrative and should treat this as an individual submission. All remaining submissions will be team based unless otherwise noted.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;No matter the size or scope. This task should be submitted on an individual basis.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Please note this is not a list, rather criteria that you should address within a narrative&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -2957,7 +2982,7 @@ mpg %&amp;gt;%
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp617.theoreticalphysed.com/professor/</guid>
       <description>
-&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/professor/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -3008,6 +3033,11 @@ You can check out more about what I do here:
 &lt;i class=&#34;fab fa-orcid fa-fw&#34;&gt;&lt;/i&gt; 
 &lt;/span&gt;
 &lt;a href=&#34;https://orcid.org/0000-0002-7085-8964&#34; target=&#34;_blank&#34;&gt;ORCID&lt;/a&gt;
+&lt;br&gt;
+&lt;span style=&#34;font-size: 1.0em; color: #ff8000;&#34;&gt;
+  &lt;i class=&#34;ai ai-researcherid ai-1x&#34;&gt;&lt;/i&gt;   
+&lt;/span&gt;
+&lt;a href=&#34;https://publons.com/researcher/4243335/abhik-roy/&#34; target=&#34;_blank&#34;&gt;ResearcherID&lt;/a&gt; (via &lt;span style=&#34;font-size: 1.0em; color: #406595; vertical-align: -5.5px; margin-right: -3px; margin-left: -3.5px&#34;&gt;&lt;i class=&#34;ai ai-publons ai-1x&#34;&gt;&lt;/i&gt;&lt;/span&gt;ublons)
 &lt;br&gt;
 &lt;span style=&#34;font-size: 1.0em; color: #24292e;&#34;&gt;
 &lt;i class=&#34;fab fa-github fa-fw&#34;&gt;&lt;/i&gt; 
