@@ -3,31 +3,73 @@ title: "Schedule"
 slug: schedule
 ---
 
-Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage
+```{r echo=FALSE,message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+```
 
-- [**Readings**](/readings/) (<i class="fas fa-book"></i>): This page contains the readings for the topic. Read these first each time you visit.
-- [**Lesson**](/lesson/) (<i class="fas fa-chalkboard"></i>): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after reading the content.
-- [**Example**](/example/) (<i class="fas fa-lightbulb"></i>): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post media that may be beneficial.
-- [**Assignment**](/assignment/) (<i class="fas fa-tasks"></i>): This page contains the instructions for all student related tasks including information about the tasks and the final.
-- [**Due**](/due/) (<i class="fas fa-folder-open"></i>): This page contains the instructions what to submit by week. **Assignments are due by Sunday at 11:59 PM or as noted.**
+## Table of Contents
 
-::: note <br/>
-**tl;dr**: I recommend that you follow these lessons in the following order:
+```{r icontibble, echo=FALSE, message=FALSE}
+faread <-  as.character(fa("book", fill = "#739670", height = "17px"))
+falesson <-  as.character(fa("chalkboard", fill = "#764874", height = "17px"))
+faexample <-  as.character(fa("lightbulb", fill = "#eb7b59", height = "17px"))
+faass <- as.character(fa("tasks", fill = "#cf4647", height = "17px"))
+fadue <- as.character(fa("folder-open", fill = "#2a6e84", height = "17px"))
 
-<div class="text-center">
-<i class="fas fa-book"></i>&nbsp;
-<i class="fas fa-long-arrow-alt-right"></i>&nbsp;
-<i class="fas fa-chalkboard"></i>&nbsp;
-<i class="fas fa-long-arrow-alt-right"></i>&nbsp;
-<i class="fas fa-lightbulb"></i>&nbsp;
-<i class="fas fa-plus"></i>&nbsp;
-<i class="fas fa-tasks"></i>&nbsp;
-<i class="fas fa-long-arrow-alt-right"></i>&nbsp;
-<i class="fas fa-folder-open"></i>
-</div>
 
-or in terms that aren't as [ambiguous as emojis](https://doi.org/10.1016/j.chb.2020.106361){target="_blank"}, follow this process: read the material, look over the example (if given) along with the assignment to help you with what is due.
-<br />
-:::
+tableofcontent <- tibble(
+  
+  type <- c("Readings", 
+            "Lesson",
+            "Example",
+            "Assignment",
+            "Due"),
+  
+  location <- c("[Go](/readings/)",
+                "[Go](/lesson/)",
+                "[Go](/example/)",
+                "[Go](/assignment/)",
+                "[Go](/due/)"),
+  
+  icon <- c(faread,
+            falesson,
+            faexample,
+            faass,
+            fadue),
+  
+  descr <- c("This page contains the readings for the topic which should be the first place you go to.",
+             "Here are interactive lessons, slides, and/or walkthroughs that helps with any content.",
+             "Extra items that are picked or created to help you understand the current material exist on this page.",
+             "Instructions for all student related tasks including information about the tasks and deliverables are provided in this location.",
+             "This page contains instructions on what to submit by on a weekly basis."
+             ),
+  
+  .name_repair = "minimal"
+
+  ) 
+```
+
+<center>
+```{r, echo=FALSE}
+tableofcontent %>%
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, 
+              bold = TRUE)
+```
+</center>
+
+<span style="font-size:17px">*Note: Assignments are due by* ***Wednesday at 11:59 PM*** *unless otherwise noted.*</span>
+<br>
+<br>
+
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+
+## Weekly Overview 
 
 `r blogdown::shortcode("schedule")`
