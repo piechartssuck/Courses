@@ -1,0 +1,686 @@
+---
+title: "Tidy Themes"
+linktitle: "Week 4: Tidy Themes"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+# Getting Prepped
+
+## First Things First! Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1.  Open up a new script by going to `File > New File > R Script`.
+2.  Save it in a preferably empty folder as whatever you want.
+3.  Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
+
+## Download the script
+
+Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+downloadthis::download_file(
+  path = here::here("content", "example", "04-example.R"),
+  output_name = "Week 4 Script Outline",
+  button_label = "Download the Script",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Load Up Some Libraries
+Please go ahead and download the libraries below you don't have and load them up
+
+```{r, message=FALSE}
+library(tidyverse)
+library(viridis)
+library(RColorBrewer)
+library(ggthemes)
+library(ggtext)
+```
+
+# Using Themes in ggwhatever
+One of the nice aspects of `ggplot` is in the fact that you can edit most of the aesthetics. While `aes()` let's you define where those aesthetics lie and the `scale` family of commands allows for coloring and how the data is represented, how a plot is displayed is found by `theme`. 
+
+You can do this either manually or using a *prepackaged* approach where theme options are already defined. In certain situations you can even use both.
+
+## Manual Approach
+
+Let's use a cleaned version of the income data set. 
+
+```{r echo=TRUE, eval=FALSE}
+income_data <- read_csv("income.csv")
+```
+
+```{r echo=FALSE, eval=TRUE, purl=FALSE}
+income_data <- read_csv(here::here("static", "data", "income.csv"))
+```
+
+### Always Inspect your Data!^[This includes opening up the data set and viewing a corresponding codebook if available.]
+We can inspect the column names using the `names()` command
+
+```{r}
+names(income_data)
+```
+
+and what type they are using `str()` or `glimpse()`
+
+```{r}
+glimpse(income_data)
+```
+
+Well 229 rows is a ton of data and a bar plot would look terrible!
+
+```{r}
+ggplot(income_data, aes(x = Location, 
+                        y = Lower_2000, 
+                        fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       xlab("City and State") +
+       ylab("Average Income in 2000 Lower Class")
+```
+
+### Wrangling Data by Reduction^[While you've likely heard it before many many many times, it is generally unethical, not to mention statistically destructive to throw out any data without using proper methodology and reasoning]
+
+For simplicity sakes, let's try just looking at the top 10 *highest values* in the **Lower_2000** column using `slice_max()`^[or you can use `slice_min()` for the *lowest values*] command.
+
+```{r}
+not_top10_income_data <- income_data %>%
+                         select(Location, Lower_2000) %>%
+                         slice_max(Lower_2000, n = 10); not_top10_income_data
+```
+
+Now please note that this is ***not*** equivalent to another function we've gone over: `head()` which would only return the top 10 *rows*, ***not*** the top 10 *highest values*.
+
+```{r}
+top10_income_data <- income_data %>%
+                     select(Location, Lower_2000) %>%
+                     head(10); top10_income_data
+```
+
+Now let's plot the wrangled data set
+
+```{r}
+ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+
+That looks good but it could be better. Recall with a `scale` command you can color the bars
+
+```{r}
+ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       scale_fill_viridis_c() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+
+Well the colors are arguably better, though there are [other palettes](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) the `viridis` package provides. We can also reorder the bars from greatest to least or vice versa using the `reorder()` command^[We can actually do this in many ways. This particular method is called the `data.table` approach.]
+
+<center>
+<div class="tabs">
+  <input name="tabs" type="radio" id="tab-1" class="input"/>
+  <label for="tab-1" class="label">Bars from Greatest to Least</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       scale_fill_viridis_c() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+  
+ <input name="tabs" type="radio" id="tab-2" class="input"/>
+  <label for="tab-2" class="label">Bars from Least to Greatest</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       scale_fill_viridis_c() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+ </div>
+</div>
+</center>
+
+Well that's great but with the grey background, overlapping text on the axis, etc., its certainly not really presentation worthy. Luckily we can use the `theme()` option to edit it!
+
+### Being a Control Freak
+To get a feel for what options you have, try running the following
+
+```{r echo=TRUE, eval=FALSE}
+?theme
+```
+
+Scroll down to **Usage** to see the commands and **Arguments** to see a description of each. If you don't like the tiny Help window or find it convoluted, try giving the [`tidyverse` Reference](https://ggplot2.tidyverse.org/reference/theme.html){target="\_blank"} site a look. It has some additional examples as well, though they may or may not be helpful depending on your needs.
+
+In the following, we'll use the descending data set and `themes()` to fix it up a bit
+
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       scale_fill_viridis_c() +
+       theme(axis.text.x = element_text(angle = 33,
+                                        face = "bold",
+                                        vjust = 0.5),
+             axis.title = element_text(size = 14,
+                                       face = "bold"),
+             legend.position = "right",
+             legend.direction = "vertical",
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+
+Well that's slightly better but its certainly flawed. For example, it is not immediately clear which values on the *x*-axis goes where. We can do a lot more and we'll get to it in a bit.
+
+If you would like to have more of a drag and drop experience while learning themes in `ggplot2`, consider downloading and running the package [`esquisse`](https://github.com/dreamRs/esquisse){target="\_blank"}.
+
+### Letting Someone Else Be a Control Freak
+It may be that you don't like the default `ggplot` output but would rather not go through the process of editing every little thing. In these cases you can use [predefined themes within `ggplot2`](https://ggplot2.tidyverse.org/reference/ggtheme.html){target="\_blank"} or [`ggthemes` package](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/){target="\_blank"}, though there are others. You can see how the the original `top10_income_data` set looks with these themes.
+
+#### Default in `ggplot2`
+<center>
+<div class="tabs">
+  <input name="tabs" type="radio" id="tab-3" checked="checked" class="input"/>
+    <label for="tab-3" class="label"> Grey Theme</label>
+      <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_grey() + # or theme_gray()
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+  
+<input name="tabs" type="radio" id="tab-4" class="input"/>
+        <label for="tab-4" class="label">Black and White Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_bw() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+
+<input name="tabs" type="radio" id="tab-5" class="input"/>
+        <label for="tab-5" class="label">Linedraw Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_linedraw() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-6" class="input"/>
+        <label for="tab-6" class="label">Light Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_light() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+       
+<input name="tabs" type="radio" id="tab-7" class="input"/>
+        <label for="tab-7" class="label">Dark Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_dark() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+
+<input name="tabs" type="radio" id="tab-8" class="input"/>
+        <label for="tab-8" class="label">Minimal Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_minimal() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-9" class="input"/>
+        <label for="tab-9" class="label">Classic Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_classic() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+
+<input name="tabs" type="radio" id="tab-10" class="input"/>
+        <label for="tab-10" class="label">Void Theme</label>
+        <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_void() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+#### Using `ggthemes`
+<center>
+<div class="tabs">
+  <input name="tabs" type="radio" id="tab-11" class="input"/>
+  <label for="tab-11" class="label">Few Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_few() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+
+  <input name="tabs" type="radio" id="tab-12" class="input"/>
+  <label for="tab-12" class="label">Five Thirty Eight Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_fivethirtyeight() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+ <input name="tabs" type="radio" id="tab-13" class="input"/>
+  <label for="tab-13" class="label">Google Docs Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_gdocs() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+<center>
+<div class="tabs">
+ <input name="tabs" type="radio" id="tab-14" class="input"/>
+  <label for="tab-14" class="label">Highcharts JS Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_hc() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+ <input name="tabs" type="radio" id="tab-15" class="input"/>
+  <label for="tab-15" class="label">Inverse Grey Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_igray() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+<div>
+</center>
+
+<center>
+<div class="tabs">
+ <input name="tabs" type="radio" id="tab-16" class="input"/>
+  <label for="tab-16" class="label">Solarized Palette Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_solarized() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+<input name="tabs" type="radio" id="tab-17" class="input"/>
+  <label for="tab-17" class="label">Solid Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_solid() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+<input name="tabs" type="radio" id="tab-18" class="input"/>
+  <label for="tab-18" class="label">Stata Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_tufte() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+<center>
+<div class="tabs">
+ <input name="tabs" type="radio" id="tab-19" class="input"/>
+  <label for="tab-19" class="label">Tufte Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_tufte() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+ <input name="tabs" type="radio" id="tab-20" class="input"/>
+  <label for="tab-20" class="label">Wall Street Journal Theme</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_wsj() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+</div>
+
+ <input name="tabs" type="radio" id="tab-21" class="input"/>
+  <label for="tab-21" class="label">Excel Theme^[For some reason]</label>
+  <div class="panel">
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = "identity") +
+       theme_excel() +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class")
+```
+  </div>
+</div>
+</center>
+
+### Everyone Gets to Be a Control Freak
+You can in many circumstances combine manual and prepackages themes together. The extent to which you can do this often varies by theme. In any case, let's see the `fivethirtyeight` theme with some manual edits.
+
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = 'dodge',
+                stat = "identity") +
+       scale_fill_viridis_c() +
+       theme_fivethirtyeight() +
+       theme(axis.text.x = element_text(angle = 45,
+                                        vjust = 0.5),
+             legend.position = "right",
+             legend.direction = "vertical") +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class") +       
+       guides(fill=guide_legend(title="Income"))
+```
+
+Or sometimes controlling the text itself is nice too but we'll cover that soon. In the meantime, here's a preview
+
+```{r}
+ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = 'dodge',
+                width = 0.9,
+                stat = "identity",
+                color = "#FFFFFF") +
+       geom_richtext(aes(label = Location),
+                     color = "#FFFFFF",
+                     position = position_dodge(width = 0.9), 
+                     hjust = 0,
+                     vjust = -0.1,
+                     angle = 45,
+                     fontface = "bold",
+                     show.legend = FALSE) +
+       scale_fill_gradient(low = "#52bf90",
+                           high = "#317256") +
+       theme_minimal() +
+       theme(axis.text.x = element_blank(),
+             axis.title = element_text(size = 14,
+                                       face = "bold"),
+             legend.position = "right",
+             legend.direction = "vertical",
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab("Top 10 Cities and States") +
+       ylab("Average Income in 2000 Lower Class") +       
+       guides(fill = guide_legend(title = "Income",
+                                  reverse = TRUE)) + 
+       expand_limits(x=c(0,14), 
+                     y=c(0, 60))
+
+```
+

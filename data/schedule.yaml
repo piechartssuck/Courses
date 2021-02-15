@@ -27,14 +27,11 @@ lessons:
     assignment: "03-assignment"
     due: "03-due"
 
-  # - title: 'Causation and Criteria'
-  #   session: 4
-  #   date: "September 13, 2020"
-  #   readings: "04-readings"
-  #   lesson: "04-lesson"
-  #   example: "04-example"
-  #   due: "04-due"
-  #
+  - title: 'Tidy Themes'
+    session: 4
+    date: "February 11, 2022"
+    example: "04-example"
+
   # - title: 'Valuable Valued Values'
   #   session: 5
   #   date: "September 20, 2020"

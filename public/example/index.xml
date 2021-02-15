@@ -988,7 +988,7 @@ library(RColorBrewer)&lt;/code&gt;&lt;/pre&gt;
 &lt;center&gt;
 &lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/ggplothavelayers.png&#34; /&gt;
 &lt;/center&gt;
-&lt;p&gt;ggplot runs on layers^&lt;span class=&#34;math display&#34;&gt;\[Much like Adobe Photoshop for those of you who may be familiar with that software.\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;ggplot runs on layers&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We’ll work on this throughout the term, but here is a basic picture of the framework&lt;/p&gt;
 &lt;center&gt;
 &lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/ggplot_layers.png&#34; title=&#34;fig:&#34; alt=&#34;layers of ggplot2&#34; /&gt;
@@ -1037,8 +1037,8 @@ library(RColorBrewer)&lt;/code&gt;&lt;/pre&gt;
                   class = &amp;quot;data.frame&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and view it!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(data)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns Prop and Perc, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!&lt;/p&gt;
-&lt;p&gt;Ok now let’s look at a barplot of the data using&lt;/p&gt;
+&lt;p&gt;The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns &lt;strong&gt;Prop&lt;/strong&gt; and &lt;strong&gt;Perc&lt;/strong&gt;, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!&lt;/p&gt;
+&lt;p&gt;Now let’s look at a barplot of the data using&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Base R&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1268,7 +1268,7 @@ p2 &amp;lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
 
 p1 + p2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Labelling grouped bars is similar, however, we need to add a &lt;code&gt;position = position_dodge(0.9)&lt;/code&gt; argument to the &lt;code&gt;geom_text()&lt;/code&gt; function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a &lt;code&gt;vjust = 0.5&lt;/code&gt; argument or adjust the text to within the bar with &lt;code&gt;vjust = 1.5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Labeling grouped bars is similar, however, we need to add a &lt;code&gt;position = position_dodge(0.9)&lt;/code&gt; argument to the &lt;code&gt;geom_text()&lt;/code&gt; function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a &lt;code&gt;vjust = 0.5&lt;/code&gt; argument or adjust the text to within the bar with &lt;code&gt;vjust = 1.5&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
   geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
   geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
@@ -1282,7 +1282,7 @@ p2 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
 
 p1 + p2 + plot_layout(ncol = 2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an &lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;. In this case, we’ll be usingthe &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34; target=&#34;_blank&#34;&gt;viridis color set&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an &lt;a href=&#34;https://www.color-hex.com/&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;. In this case, we’ll be using the &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34; target=&#34;_blank&#34;&gt;viridis color set&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p1 &amp;lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
   geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
   geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
@@ -1324,6 +1324,673 @@ p2&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/03-example_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice that the plots are different! Your fill and color variables define how the plot will look!&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Much like Adobe Photoshop for those of you who may be familiar with that software.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tidy Themes</title>
+      <link>https://edp693e.theoreticalphysed.com/example/04-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/example/04-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-prepped&#34;&gt;Getting Prepped&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-things-first-set-your-working-directory&#34;&gt;First Things First! Set your Working Directory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#download-the-script&#34;&gt;Download the script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#load-up-some-libraries&#34;&gt;Load Up Some Libraries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#using-themes-in-ggwhatever&#34;&gt;Using Themes in ggwhatever&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#manual-approach&#34;&gt;Manual Approach&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#always-inspect-your-data&#34;&gt;Always Inspect your Data!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#wrangling-data-by-reduction&#34;&gt;Wrangling Data by Reduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#being-a-control-freak&#34;&gt;Being a Control Freak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#letting-someone-else-be-a-control-freak&#34;&gt;Letting Someone Else Be a Control Freak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#everyone-gets-to-be-a-control-freak&#34;&gt;Everyone Gets to Be a Control Freak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+&lt;/style&gt;
+&lt;div id=&#34;getting-prepped&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Getting Prepped&lt;/h1&gt;
+&lt;div id=&#34;first-things-first-set-your-working-directory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Things First! Set your Working Directory&lt;/h2&gt;
+&lt;p&gt;Your &lt;em&gt;working directory&lt;/em&gt; is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Open up a new script by going to &lt;code&gt;File &amp;gt; New File &amp;gt; R Script&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save it in a preferably empty folder as whatever you want.&lt;/li&gt;
+&lt;li&gt;Go to the menu bar and select &lt;code&gt;Session &amp;gt; Set Working Directory &amp;gt; To Source File Location&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;download-the-script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Download the script&lt;/h2&gt;
+&lt;p&gt;Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.&lt;/p&gt;
+&lt;a href=&#34;data:text/plain;base64,IyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbGlicmFyeShnZ3Bsb3QyKQpsaWJyYXJ5KGNvd3Bsb3QpCmxpYnJhcnkoUkNvbG9yQnJld2VyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdCgpICsKICBsYXllcigKICAgIGRhdGEgPSBkaWFtb25kcywgCiAgICBtYXBwaW5nID0gYWVzKHggPSBjYXJhdCwgeSA9IHByaWNlKSwKICAgIGdlb20gPSAicG9pbnQiLCAgCiAgICBzdGF0ID0gImlkZW50aXR5IiwgCiAgICBwb3NpdGlvbiA9ICJpZGVudGl0eSIgKSArCiAgc2NhbGVfeV9jb250aW51b3VzKCkgKwogIHNjYWxlX3hfY29udGludW91cygpICsKICBjb29yZF9jYXJ0ZXNpYW4oKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChkYXRhID0gZGlhbW9uZHMsIAogIG1hcHBpbmcgPSBhZXMoeCA9IGNhcmF0LCB5ID0gcHJpY2UpKSArCiAgZ2VvbV9wb2ludCgpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KGRpYW1vbmRzLCBhZXMoY2FyYXQsIHByaWNlKSkgKwogIGdlb21fcG9pbnQoKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRhdGEgPC0gc3RydWN0dXJlKGxpc3QoVjEgPSBjKDM0Ljg4MzcyMDkzLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzUuMDc3NTE5MzgsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzNS4yNzEzMTc4MywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDM1LjQ2NTExNjI4LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzUuNjU4OTE0NzMsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzNS44NTI3MTMxOCksIAogICAgICAgICAgICAgICAgICAgICAgIFYyID0gYygwLjAwMDI5OTk3LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMC4wMDAxOTk5OCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAuMDAwMjk5OTcsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwLjAwMDI5OTk3LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMC4wMDA2OTk5MywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAuMDAwNjk5OTMpKSwgCiAgICAgICAgICAgICAgICAgICAgICAuTmFtZXMgPSBjKCJQZXJjIiwgIlByb3AiKSwgCiAgICAgICAgICAgICAgICAgIHJvdy5uYW1lcyA9IGMoTkEsIDZMKSwgCiAgICAgICAgICAgICAgICAgIGNsYXNzID0gImRhdGEuZnJhbWUiKQoKCgojIyAtLS0tZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyBWaWV3KGRhdGEpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYmFycGxvdChkYXRhJFBlcmMsIAogICAgICAgIGRhdGEkUGVyYywgCiAgICAgICAgeGxhYj0iUGVyY2VudGFnZSIsIAogICAgICAgIHlsYWI9IlByb3BvcnRpb24iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChkYXRhLCBhZXMoeD1QZXJjLCB5PVByb3ApKSArIAogIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikgKyAKICBsYWJzKHg9IlBlcmNlbnRhZ2UiLCB5PSJQcm9wb3J0aW9uIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZ3Bsb3QoZGF0YSwgYWVzKHg9UGVyYywgeT1Qcm9wLCBmaWxsID0gUGVyYykpICsgCiAgZ2VvbV9iYXIoc3RhdD0iaWRlbnRpdHkiKSArIAogIGxhYnMoeD0iUGVyY2VudGFnZSIsIHk9IlByb3BvcnRpb24iKSArCiAgc2NhbGVfY29sb3JfYnJld2VyKCkKCgojIyAtLS0tbWVzc2FnZT1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpsaWJyYXJ5KHhsc3gpICAgICAgICAgICAjIGZvciByZWFkaW5nIGluIEV4Y2VsIGRhdGEKbGlicmFyeShtYWdyaXR0cikgICAgICAgIyBmb3IgZWFzaWVyIHN5bnRheCBpbiBvbmUgb3IgdHdvIGFyZWFzCmxpYnJhcnkoZ3JpZEV4dHJhKSAgICAgICMgb2xkIG1ldGhvZCBmb3IgZ2VuZXJhdGluZyBzb21lIGNvbXBhcmlzb24gcGxvdHMKbGlicmFyeShwYXRjaHdvcmspICAgICAgIyBuZXcgbWV0aG9kIGZvciBnZW5lcmF0aW5nIHNvbWUgY29tcGFyaXNvbiBwbG90cwpsaWJyYXJ5KGdncGxvdDIpICAgICAgICAjIGZvciBnZW5lcmF0aW5nIHRoZSB2aXN1YWxpemF0aW9ucwpsaWJyYXJ5KHZpcmlkaXMpICAgICAgICAjIGJlY2F1c2UgY29sb3JzIGFyZSBmdW4hCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChtdGNhcnMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyB4LWF4aXMgYXMgY29udGludW91cwpwMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGN5bCkpICsKICBnZW9tX2JhcigpICsKICBnZ3RpdGxlKCJGaWcuIEE6IHgtYXhpcyBhcyBhIGNvbnRpbnVvdXMgdmFyaWFibGUiKQoKIyB4LWF4aXMgYXMgZGlzY3JldGUKcDIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2JhcigpICsKICBnZ3RpdGxlKCJGaWcgQjogeC1heGlzIGFzIGEgZGlzY3JldGUgKGZhY3RvcikgdmFyaWFibGUiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdyaWQuYXJyYW5nZShwMSwgcDIsIG5jb2wgPSAyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAxICsgcDIKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQplMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKHdpZHRoID0gLjUpICsKICBnZ3RpdGxlKCJiYXIgd2lkdGggPSAwLjUiKQoKZTIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2Jhcih3aWR0aCA9IC43NSkgKwogIGdndGl0bGUoImJhciB3aWR0aCA9IDAuNzUiKQoKZTMgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2Jhcih3aWR0aCA9IC45KSArCiAgZ2d0aXRsZSgiYmFyIHdpZHRoID0gMC45IikKCmU0IDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gZmFjdG9yKGN5bCkpKSArCiAgZ2VvbV9iYXIod2lkdGggPSAuOTkpICsKICBnZ3RpdGxlKCJiYXIgd2lkdGggPSAwLjk5IikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQplMSArIGUyICsgZTMgKyBlNAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmUxICsgZTIgKyBlMyArIGU0ICsgcGxvdF9sYXlvdXQobmNvbCA9IDEpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZTEgKyBlMiArIGUzICsgZTQgKyBwbG90X2xheW91dChucm93ID0gMSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKGZpbGwgPSAiZG9kZ2VyYmx1ZSIsIAogICAgICAgICAgIGNvbG9yID0gImdyZXk0MCIsIAogICAgICAgICAgIGFscGhhID0gMC41KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQxIDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gcm93Lm5hbWVzKG10Y2FycyksIHkgPSBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBnZ3RpdGxlKCJGaWcuIEE6IERlZmF1bHQgeC1heGlzIikKCnQxCgp0MiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJvdy5uYW1lcyhtdGNhcnMpLCB5ID0gbXBnKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X3RleHQoYW5nbGUgPSA5MCwgaGp1c3QgPSAxLCB2anVzdCA9IC41KSkgKwogIGdndGl0bGUoIkZpZy4gQjogUm90YXRlZCB4LWF4aXMiKQoKdDIKCnQxICsgdDIgKyBwbG90X2xheW91dChuY29sID0gMSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpyMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdndGl0bGUoIkZpZy4gQTogRGVmYXVsdCByb3RhdGVkIHgtYXhpcyIpCgojIG9yZGVyIGJhcnMKcjIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSByZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCB5ID0gbXBnKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgY29vcmRfZmxpcCgpICsKICBnZ3RpdGxlKCJGaWcuIEI6IFJvdGF0ZWQgb3JkZXJlZCB4LWF4aXMiKQoKcjEgKyByMiArIHBsb3RfbGF5b3V0KG5yb3cgPSAxKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCm0xIDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gcmVvcmRlcihyb3cubmFtZXMobXRjYXJzKSwgbXBnKSwgeSA9IG1wZywgZmlsbCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgY29vcmRfZmxpcCgpICsKICB0aGVtZV9taW5pbWFsKCkgKwogIGdndGl0bGUoIkZpZy4gQTogRGVmYXVsdCBmaWxsIGNvbG9ycyIpCgptMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJlb3JkZXIocm93Lm5hbWVzKG10Y2FycyksIG1wZyksIHkgPSBtcGcsIGZpbGwgPSBmYWN0b3IoY3lsKSkpICsKICBzY2FsZV9maWxsX21hbnVhbCh2YWx1ZXMgPSBjKCIjZTVmNWUwIiwgIiNhMWQ5OWIiLCAiIzMxYTM1NCIpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIHRoZW1lX21pbmltYWwoKSArCiAgZ2d0aXRsZSgiRmlnLiBCOiBNYW51YWxseSBzZXQgZmlsbCBjb2xvcnMiKQoKCm0xICsgbTIgKyBwbG90X2xheW91dChuY29sID0gMikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0MSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gImRvZGdlIikgKwogIGdndGl0bGUoIkRlZmF1bHQgY29sb3IgY29tcGFyaXNvbiIpCgojIG1vcmUgcGxlYXNpbmcgY29sb3JzCnQyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgc2NhbGVfZmlsbF9icmV3ZXIocGFsZXR0ZSA9ICJQYXN0ZWwxIikgKwogIGdndGl0bGUoIkFkanVzdGVkIGNvbG9yIGNvbXBhcmlzb24iKQoKdDEgKyB0MiArIHBsb3RfbGF5b3V0KG5jb2wgPSAyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmwxIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgZ2d0aXRsZSgiRGVmYXVsdCBkb2RnZSBwb3NpdGlvbmluZyIpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAibm9uZSIpCgpsMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2Uod2lkdGggPSAuNSkpICsKICBnZ3RpdGxlKCJPdmVybGFwIG9mIHNpZGUtYnktc2lkZSBiYXJzIikgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikKCmwzIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSBwb3NpdGlvbl9kb2RnZSh3aWR0aCA9IDEpKSArCiAgZ2d0aXRsZSgiU3BhY2luZyBiZXR3ZWVuIHNpZGUtYnktc2lkZSBiYXJzIikgKwogIGxhYnMoZmlsbCA9ICJBTSIpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSBjKDEsMSksIGxlZ2VuZC5qdXN0aWZpY2F0aW9uID0gYygxLDEpLAogICAgICAgIGxlZ2VuZC5iYWNrZ3JvdW5kID0gZWxlbWVudF9ibGFuaygpKQoKCmwxICsgbDIgKyBsMyArIHBsb3RfbGF5b3V0KG5jb2wgPSAzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIHJldmVyc2UgbGVnZW5kIGNvbG9yIGNvZGluZyBsYXlvdXQKcTEgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgZ3VpZGVzKGZpbGwgPSBndWlkZV9sZWdlbmQocmV2ZXJzZSA9IFRSVUUpKSArCiAgbGFicyhmaWxsID0gImFtIikgKwogIGdndGl0bGUoIkZpZyBBOiBSZXZlcnNlIGxlZ2VuZCIpCgojIG9yIHJldmVyc2Ugc3RhY2tpbmcgb3JkZXIgYnkgY2hhbmdpbmcgdGhlIGZhY3RvciBsZXZlbHMKcTIgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0sIGxldmVscyA9IGMoMSwgMCkpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgbGFicyhmaWxsID0gImFtIikgKwogIGdndGl0bGUoIkZpZyBCOiBTcGVjaWZ5IGxldmVscyIpCgpxMSArIHEyICsgcGxvdF9sYXlvdXQobmNvbCA9IDIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0sIGxldmVscyA9IGMoMSwgMCkpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgc2NhbGVfZmlsbF9tYW51YWwodmFsdWVzID0gYygiI2ExZDk5YiIsICIjMzFhMzU0IikpICsKICBsYWJzKGZpbGwgPSAiQU0iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAxIDwtIGdncGxvdChtdGNhcnMsIGFlcyhyZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSBtcGcpLCBudWRnZV95ID0gMikKCnAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhyZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSBtcGcpLCBudWRnZV95ID0gLTIsIGNvbG9yID0gIndoaXRlIikKCnAxICsgcDIgKyBwbG90X2xheW91dChuY29sID0gMikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gImRvZGdlIikgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSByb3VuZChtcGcsIDEpKSwgcG9zaXRpb24gPSBwb3NpdGlvbl9kb2RnZSgwLjkpKSArCiAgZ2d0aXRsZSgiRmlnIEE6IERlZmF1bHQgdGV4dCBhbGlnbm1lbnQiKQoKcDIgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSwKICAgICAgICAgICAgdmp1c3QgPSAxLjUsIGNvbG9yID0gIndoaXRlIikgKwogIGdndGl0bGUoIkZpZyBCOiBBZGp1c3RlZCB0ZXh0IGFsaWdubWVudCIpCgpwMSArIHAyICsgcGxvdF9sYXlvdXQobmNvbCA9IDIpCgoKIyMgLS0tLWV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgcDEgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwojIyAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKIyMgICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSkgKwojIyAgIGdndGl0bGUoIkZpZyBBOiBEZWZhdWx0IHRleHQgYWxpZ25tZW50IikKIyMgCiMjIHAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKIyMgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiMjICAgc2NhbGVfZmlsbF92aXJpZGlzX2Mob3B0aW9uID0gIkQiKSArCiMjICAgZ2VvbV90ZXh0KGFlcyhsYWJlbCA9IHJvdW5kKG1wZywgMSkpLCBwb3NpdGlvbiA9IHBvc2l0aW9uX2RvZGdlKDAuOSksCiMjICAgICAgICAgICAgIHZqdXN0ID0gMS41LCBjb2xvciA9ICJ3aGl0ZSIpICsKIyMgICBnZ3RpdGxlKCJGaWcgQjogQWRqdXN0ZWQgdGV4dCBhbGlnbm1lbnQiKQojIyAKIyMgcDIKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGFtKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKICBzY2FsZV9maWxsX3ZpcmlkaXNfYyhvcHRpb24gPSAiRCIpICsKICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSwKICAgICAgICAgICAgdmp1c3QgPSAxLjUsIGNvbG9yID0gIndoaXRlIikgKwogIGdndGl0bGUoIkZpZyBCOiBBZGp1c3RlZCB0ZXh0IGFsaWdubWVudCIpCgpwMgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgc2NhbGVfZmlsbF92aXJpZGlzX2Qob3B0aW9uID0gIkQiKSArCiAgZ2VvbV90ZXh0KGFlcyhsYWJlbCA9IHJvdW5kKG1wZywgMSkpLCBwb3NpdGlvbiA9IHBvc2l0aW9uX2RvZGdlKDAuOSksCiAgICAgICAgICAgIHZqdXN0ID0gMS41LCBjb2xvciA9ICJ3aGl0ZSIpICsKICBnZ3RpdGxlKCJGaWcgQjogQWRqdXN0ZWQgdGV4dCBhbGlnbm1lbnQiKQoKcDIKCg==&#34; download=&#34;Week 4 Script Outline.R&#34;&gt;
+&lt;button class=&#34;btn btn-default hvr-sweep-to-left&#34;&gt;&lt;i class=&#34;fa fa-save&#34;&gt;&lt;/i&gt; Download the Script&lt;/button&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-up-some-libraries&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Load Up Some Libraries&lt;/h2&gt;
+&lt;p&gt;Please go ahead and download the libraries below you don’t have and load them up&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(viridis)
+library(RColorBrewer)
+library(ggthemes)
+library(ggtext)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-themes-in-ggwhatever&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Using Themes in ggwhatever&lt;/h1&gt;
+&lt;p&gt;One of the nice aspects of &lt;code&gt;ggplot&lt;/code&gt; is in the fact that you can edit most of the aesthetics. While &lt;code&gt;aes()&lt;/code&gt; let’s you define where those aesthetics lie and the &lt;code&gt;scale&lt;/code&gt; family of commands allows for coloring and how the data is represented, how a plot is displayed is found by &lt;code&gt;theme&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can do this either manually or using a &lt;em&gt;prepackaged&lt;/em&gt; approach where theme options are already defined. In certain situations you can even use both.&lt;/p&gt;
+&lt;div id=&#34;manual-approach&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Manual Approach&lt;/h2&gt;
+&lt;p&gt;Let’s use a cleaned version of the income data set.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;income_data &amp;lt;- read_csv(&amp;quot;income.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Location = col_character(),
+##   Lower_2000 = col_double(),
+##   Middle_2000 = col_double(),
+##   Upper_2000 = col_double(),
+##   Lower_2014 = col_double(),
+##   Middle_2014 = col_double(),
+##   Upper_2014 = col_double()
+## )&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;always-inspect-your-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Always Inspect your Data!&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;We can inspect the column names using the &lt;code&gt;names()&lt;/code&gt; command&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(income_data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Location&amp;quot;    &amp;quot;Lower_2000&amp;quot;  &amp;quot;Middle_2000&amp;quot; &amp;quot;Upper_2000&amp;quot;  &amp;quot;Lower_2014&amp;quot; 
+## [6] &amp;quot;Middle_2014&amp;quot; &amp;quot;Upper_2014&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and what type they are using &lt;code&gt;str()&lt;/code&gt; or &lt;code&gt;glimpse()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(income_data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 229
+## Columns: 7
+## $ Location    &amp;lt;chr&amp;gt; &amp;quot;Akron, OH&amp;quot;, &amp;quot;Albany-Schenectady-Troy, NY&amp;quot;, &amp;quot;Albuquerque,…
+## $ Lower_2000  &amp;lt;dbl&amp;gt; 19.9, 22.1, 28.6, 23.0, 32.3, 22.0, 21.9, 33.0, 20.0, 29.…
+## $ Middle_2000 &amp;lt;dbl&amp;gt; 59.8, 60.1, 55.4, 60.7, 54.7, 58.2, 51.2, 54.6, 56.0, 59.…
+## $ Upper_2000  &amp;lt;dbl&amp;gt; 20.3, 17.8, 16.0, 16.2, 13.0, 19.8, 26.9, 12.4, 23.9, 11.…
+## $ Lower_2014  &amp;lt;dbl&amp;gt; 24.5, 20.2, 33.0, 25.2, 27.4, 20.3, 25.6, 33.6, 27.0, 30.…
+## $ Middle_2014 &amp;lt;dbl&amp;gt; 54.6, 55.1, 50.7, 55.7, 52.6, 55.5, 49.3, 50.5, 50.5, 52.…
+## $ Upper_2014  &amp;lt;dbl&amp;gt; 20.9, 24.8, 16.3, 19.1, 20.0, 24.2, 25.1, 16.0, 22.6, 17.…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well 229 rows is a ton of data and a bar plot would look terrible!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(income_data, aes(x = Location, 
+                        y = Lower_2000, 
+                        fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       xlab(&amp;quot;City and State&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrangling-data-by-reduction&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrangling Data by Reduction&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For simplicity sakes, let’s try just looking at the top 10 &lt;em&gt;highest values&lt;/em&gt; in the &lt;strong&gt;Lower_2000&lt;/strong&gt; column using &lt;code&gt;slice_max()&lt;/code&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; command.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;not_top10_income_data &amp;lt;- income_data %&amp;gt;%
+                         select(Location, Lower_2000) %&amp;gt;%
+                         slice_max(Lower_2000, n = 10); not_top10_income_data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    Location                     Lower_2000
+##    &amp;lt;chr&amp;gt;                             &amp;lt;dbl&amp;gt;
+##  1 McAllen-Edinburg-Mission, TX       53.4
+##  2 Laredo, TX                         50.9
+##  3 Brownsville-Harlingen, TX          49.8
+##  4 Las Cruces, NM                     45.2
+##  5 El Centro, CA                      43.9
+##  6 Visalia-Porterville, CA            42.9
+##  7 El Paso, TX                        42.7
+##  8 Madera, CA                         42.5
+##  9 Merced, CA                         41.9
+## 10 Yuma, AZ                           41.8&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now please note that this is &lt;strong&gt;&lt;em&gt;not&lt;/em&gt;&lt;/strong&gt; equivalent to another function we’ve gone over: &lt;code&gt;head()&lt;/code&gt; which would only return the top 10 &lt;em&gt;rows&lt;/em&gt;, &lt;strong&gt;&lt;em&gt;not&lt;/em&gt;&lt;/strong&gt; the top 10 &lt;em&gt;highest values&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;top10_income_data &amp;lt;- income_data %&amp;gt;%
+                     select(Location, Lower_2000) %&amp;gt;%
+                     head(10); top10_income_data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    Location                          Lower_2000
+##    &amp;lt;chr&amp;gt;                                  &amp;lt;dbl&amp;gt;
+##  1 Akron, OH                               19.9
+##  2 Albany-Schenectady-Troy, NY             22.1
+##  3 Albuquerque, NM                         28.6
+##  4 Allentown-Bethlehem-Easton, PA-NJ       23  
+##  5 Amarillo, TX                            32.3
+##  6 Anchorage, AK                           22  
+##  7 Ann Arbor, MI                           21.9
+##  8 Anniston-Oxford-Jacksonville, AL        33  
+##  9 Atlanta-Sandy Springs-Roswell, GA       20  
+## 10 Atlantic City-Hammonton, NJ             29.3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let’s plot the wrangled data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That looks good but it could be better. Recall with a &lt;code&gt;scale&lt;/code&gt; command you can color the bars&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       scale_fill_viridis_c() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well the colors are arguably better, though there are &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34;&gt;other palettes&lt;/a&gt; the &lt;code&gt;viridis&lt;/code&gt; package provides. We can also reorder the bars from greatest to least or vice versa using the &lt;code&gt;reorder()&lt;/code&gt; command&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-1&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-1&#34; class=&#34;label&#34;&gt;Bars from Greatest to Least&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       scale_fill_viridis_c() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-2&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-2&#34; class=&#34;label&#34;&gt;Bars from Least to Greatest&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       scale_fill_viridis_c() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;p&gt;Well that’s great but with the grey background, overlapping text on the axis, etc., its certainly not really presentation worthy. Luckily we can use the &lt;code&gt;theme()&lt;/code&gt; option to edit it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;being-a-control-freak&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Being a Control Freak&lt;/h3&gt;
+&lt;p&gt;To get a feel for what options you have, try running the following&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;?theme&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Scroll down to &lt;strong&gt;Usage&lt;/strong&gt; to see the commands and &lt;strong&gt;Arguments&lt;/strong&gt; to see a description of each. If you don’t like the tiny Help window or find it convoluted, try giving the &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/theme.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;tidyverse&lt;/code&gt; Reference&lt;/a&gt; site a look. It has some additional examples as well, though they may or may not be helpful depending on your needs.&lt;/p&gt;
+&lt;p&gt;In the following, we’ll use the descending data set and &lt;code&gt;themes()&lt;/code&gt; to fix it up a bit&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       scale_fill_viridis_c() +
+       theme(axis.text.x = element_text(angle = 33,
+                                        face = &amp;quot;bold&amp;quot;,
+                                        vjust = 0.25),
+             axis.title = element_text(size = 14,
+                                       face = &amp;quot;bold&amp;quot;),
+             legend.position = &amp;quot;right&amp;quot;,
+             legend.direction = &amp;quot;vertical&amp;quot;,
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;letting-someone-else-be-a-control-freak&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Letting Someone Else Be a Control Freak&lt;/h3&gt;
+&lt;p&gt;It may be that you don’t like the default &lt;code&gt;ggplot&lt;/code&gt; output but would rather not go through the process of editing every little thing. In these cases you can use &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/ggtheme.html&#34; target=&#34;_blank&#34;&gt;predefined themes within &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ggthemes&lt;/code&gt; package&lt;/a&gt;, though there are others. You can see how the the original &lt;code&gt;top10_income_data&lt;/code&gt; set looks with these themes.&lt;/p&gt;
+&lt;div id=&#34;default-in-ggplot2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Default in &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h4&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-3&#34; checked=&#34;checked&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-3&#34; class=&#34;label&#34;&gt; Grey Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_grey() + # or theme_gray()
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-4&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-4&#34; class=&#34;label&#34;&gt;Black and White Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_bw() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-5&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-5&#34; class=&#34;label&#34;&gt;Linedraw Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_linedraw() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-6&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-6&#34; class=&#34;label&#34;&gt;Light Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_light() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-7&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-7&#34; class=&#34;label&#34;&gt;Dark Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_dark() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-8&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-8&#34; class=&#34;label&#34;&gt;Minimal Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_minimal() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-9&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-9&#34; class=&#34;label&#34;&gt;Classic Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_classic() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-10&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-10&#34; class=&#34;label&#34;&gt;Void Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_void() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-ggthemes&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Using &lt;code&gt;ggthemes&lt;/code&gt;&lt;/h4&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-11&#34; checked=&#34;checked&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-11&#34; class=&#34;label&#34;&gt;Few Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_few() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-12&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-12&#34; class=&#34;label&#34;&gt;Five Thirty Eight Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_fivethirtyeight() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-13&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-13&#34; class=&#34;label&#34;&gt;Google Docs Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_gdocs() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-14&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-14&#34; class=&#34;label&#34;&gt;Highcharts JS Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_hc() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-15&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-15&#34; class=&#34;label&#34;&gt;Inverse Grey Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_igray() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-16&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-16&#34; class=&#34;label&#34;&gt;Solarized Palette Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_solarized() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-17&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-17&#34; class=&#34;label&#34;&gt;Solid Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_solid() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-18&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-18&#34; class=&#34;label&#34;&gt;Stata Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_tufte() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;div class=&#34;tabs&#34;&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-19&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-19&#34; class=&#34;label&#34;&gt;Tufte Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_tufte() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-20&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-20&#34; class=&#34;label&#34;&gt;Wall Street Journal Theme&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_wsj() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;input name=&#34;tabs&#34; type=&#34;radio&#34; id=&#34;tab-21&#34; class=&#34;input&#34;/&gt;
+&lt;label for=&#34;tab-21&#34; class=&#34;label&#34;&gt;Excel Theme&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/label&gt;
+&lt;div class=&#34;panel&#34;&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &amp;quot;identity&amp;quot;) +
+       theme_excel() +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;everyone-gets-to-be-a-control-freak&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Everyone Gets to Be a Control Freak&lt;/h3&gt;
+&lt;p&gt;You can in many circumstances combine manual and prepackages themes together. The extent to which you can do this often varies by theme. In any case, let’s see the &lt;code&gt;fivethirtyeight&lt;/code&gt; theme with some manual edits.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = &amp;#39;dodge&amp;#39;,
+                stat = &amp;quot;identity&amp;quot;) +
+       scale_fill_viridis_c() +
+       theme_fivethirtyeight() +
+       theme(axis.text.x = element_text(angle = 45,
+                                        vjust = 0.5),
+             legend.position = &amp;quot;right&amp;quot;,
+             legend.direction = &amp;quot;vertical&amp;quot;) +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;) +       
+       guides(fill=guide_legend(title=&amp;quot;Income&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-36-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Or sometimes controlling the text itself is nice too but we’ll cover that soon. In the meantime, here’s a preview&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = &amp;#39;dodge&amp;#39;,
+                width = 0.9,
+                stat = &amp;quot;identity&amp;quot;,
+                color = &amp;quot;#FFFFFF&amp;quot;) +
+       geom_richtext(aes(label = Location),
+                     color = &amp;quot;#FFFFFF&amp;quot;,
+                     position = position_dodge(width = 0.9), 
+                     hjust = 0,
+                     vjust = -0.1,
+                     angle = 45,
+                     fontface = &amp;quot;bold&amp;quot;,
+                     show.legend = FALSE) +
+       scale_fill_gradient(low = &amp;quot;#52bf90&amp;quot;,
+                           high = &amp;quot;#317256&amp;quot;) +
+       theme_minimal() +
+       theme(axis.text.x = element_blank(),
+             axis.title = element_text(size = 14,
+                                       face = &amp;quot;bold&amp;quot;),
+             legend.position = &amp;quot;right&amp;quot;,
+             legend.direction = &amp;quot;vertical&amp;quot;,
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab(&amp;quot;Top 10 Cities and States&amp;quot;) +
+       ylab(&amp;quot;Average Income in 2000 Lower Class&amp;quot;) +       
+       guides(fill = guide_legend(title = &amp;quot;Income&amp;quot;,
+                                  reverse = TRUE)) + 
+       expand_limits(x=c(0,14), 
+                     y=c(0, 60))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-37-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This includes opening up the data set and viewing a corresponding codebook if available.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;While you’ve likely heard it before many many many times, it is generally unethical, not to mention statistically destructive to throw out any data without using proper methodology and reasoning&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;or you can use &lt;code&gt;slice_min()&lt;/code&gt; for the &lt;em&gt;lowest values&lt;/em&gt;&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;We can actually do this in many ways. This particular method is called the &lt;code&gt;data.table&lt;/code&gt; approach.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;For some reason&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>

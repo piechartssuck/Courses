@@ -111,7 +111,7 @@ library(RColorBrewer)</code></pre>
 <center>
 <img src="/example/03-example_files/ggplothavelayers.png" />
 </center>
-<p>ggplot runs on layers^<span class="math display">\[Much like Adobe Photoshop for those of you who may be familiar with that software.\]</span></p>
+<p>ggplot runs on layers<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p>We’ll work on this throughout the term, but here is a basic picture of the framework</p>
 <center>
 <img src="/example/03-example_files/ggplot_layers.png" title="fig:" alt="layers of ggplot2" />
@@ -160,8 +160,8 @@ library(RColorBrewer)</code></pre>
                   class = &quot;data.frame&quot;)</code></pre>
 <p>and view it!</p>
 <pre class="r"><code>View(data)</code></pre>
-<p>The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns Prop and Perc, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!</p>
-<p>Ok now let’s look at a barplot of the data using</p>
+<p>The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns <strong>Prop</strong> and <strong>Perc</strong>, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!</p>
+<p>Now let’s look at a barplot of the data using</p>
 <ol style="list-style-type: decimal">
 <li><strong>Base R</strong></li>
 </ol>
@@ -391,7 +391,7 @@ p2 &lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
 
 p1 + p2 + plot_layout(ncol = 2)</code></pre>
 <p><img src="/example/03-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<p>Labelling grouped bars is similar, however, we need to add a <code>position = position_dodge(0.9)</code> argument to the <code>geom_text()</code> function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a <code>vjust = 0.5</code> argument or adjust the text to within the bar with <code>vjust = 1.5</code></p>
+<p>Labeling grouped bars is similar, however, we need to add a <code>position = position_dodge(0.9)</code> argument to the <code>geom_text()</code> function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a <code>vjust = 0.5</code> argument or adjust the text to within the bar with <code>vjust = 1.5</code></p>
 <pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
@@ -405,7 +405,7 @@ p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
 
 p1 + p2 + plot_layout(ncol = 2)</code></pre>
 <p><img src="/example/03-example_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
-<p>You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an <a href="https://www.color-hex.com/" target="_blank">example</a>. In this case, we’ll be usingthe <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">viridis color set</a>.</p>
+<p>You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an <a href="https://www.color-hex.com/" target="_blank">example</a>. In this case, we’ll be using the <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">viridis color set</a>.</p>
 <pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
@@ -447,4 +447,10 @@ p2</code></pre>
 <p><img src="/example/03-example_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
 <p>Notice that the plots are different! Your fill and color variables define how the plot will look!</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Much like Adobe Photoshop for those of you who may be familiar with that software.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>

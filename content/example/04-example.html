@@ -1,0 +1,670 @@
+---
+title: "Tidy Themes"
+linktitle: "Week 4: Tidy Themes"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
+</ul></li>
+<li><a href="#using-themes-in-ggwhatever">Using Themes in ggwhatever</a>
+<ul>
+<li><a href="#manual-approach">Manual Approach</a>
+<ul>
+<li><a href="#always-inspect-your-data">Always Inspect your Data!</a></li>
+<li><a href="#wrangling-data-by-reduction">Wrangling Data by Reduction</a></li>
+<li><a href="#being-a-control-freak">Being a Control Freak</a></li>
+<li><a href="#letting-someone-else-be-a-control-freak">Letting Someone Else Be a Control Freak</a></li>
+<li><a href="#everyone-gets-to-be-a-control-freak">Everyone Gets to Be a Control Freak</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,IyMgLS0tLSAKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodmlyaWRpcykKbGlicmFyeShSQ29sb3JCcmV3ZXIpCmxpYnJhcnkoZ2d0aGVtZXMpCmxpYnJhcnkoZ2d0ZXh0KQoKCiMjIC0tLS0KIyMgaW5jb21lX2RhdGEgPC0gcmVhZF9jc3YoImluY29tZS5jc3YiKQoKCgoKIyMgLS0tLQpuYW1lcyhpbmNvbWVfZGF0YSkKCgojIyAtLS0tCmdsaW1wc2UoaW5jb21lX2RhdGEpCgoKIyMgLS0tLQpnZ3Bsb3QoaW5jb21lX2RhdGEsIGFlcyh4ID0gTG9jYXRpb24sIAogICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHhsYWIoIkNpdHkgYW5kIFN0YXRlIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpub3RfdG9wMTBfaW5jb21lX2RhdGEgPC0gaW5jb21lX2RhdGEgJT4lCiAgICAgICAgICAgICAgICAgICAgICAgICBzZWxlY3QoTG9jYXRpb24sIExvd2VyXzIwMDApICU+JQogICAgICAgICAgICAgICAgICAgICAgICAgc2xpY2VfbWF4KExvd2VyXzIwMDAsIG4gPSAxMCk7IG5vdF90b3AxMF9pbmNvbWVfZGF0YQoKCiMjIC0tLS0KdG9wMTBfaW5jb21lX2RhdGEgPC0gaW5jb21lX2RhdGEgJT4lCiAgICAgICAgICAgICAgICAgICAgIHNlbGVjdChMb2NhdGlvbiwgTG93ZXJfMjAwMCkgJT4lCiAgICAgICAgICAgICAgICAgICAgIGhlYWQoMTApOyB0b3AxMF9pbmNvbWVfZGF0YQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IExvY2F0aW9uLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSBMb2NhdGlvbiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCBMb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICBzY2FsZV9maWxsX3ZpcmlkaXNfYygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KIyMgP3RoZW1lCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHNjYWxlX2ZpbGxfdmlyaWRpc19jKCkgKwogICAgICAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X3RleHQoYW5nbGUgPSAzMywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2anVzdCA9IDAuNSksCiAgICAgICAgICAgICBheGlzLnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAxNCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFjZSA9ICJib2xkIiksCiAgICAgICAgICAgICBsZWdlbmQucG9zaXRpb24gPSAicmlnaHQiLAogICAgICAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICJ2ZXJ0aWNhbCIsCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1pbm9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1pbm9yLnkgPSBlbGVtZW50X2xpbmUoKSwKICAgICAgICAgICAgIHBhbmVsLmdyaWQubWFqb3IueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICAgICAgIHBhbmVsLmdyaWQubWFqb3IueSA9IGVsZW1lbnRfbGluZSgpKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZ3JleSgpICsgIyBvciB0aGVtZV9ncmF5KCkKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9idygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9saW5lZHJhdygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9saWdodCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9kYXJrKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX21pbmltYWwoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfY2xhc3NpYygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV92b2lkKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2ZldygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9maXZldGhpcnR5ZWlnaHQoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZ2RvY3MoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfaGMoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfaWdyYXkoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfc29sYXJpemVkKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3NvbGlkKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3R1ZnRlKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3R1ZnRlKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3dzaigpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9leGNlbCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHBvc2l0aW9uID0gJ2RvZGdlJywKICAgICAgICAgICAgICAgIHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICBzY2FsZV9maWxsX3ZpcmlkaXNfYygpICsKICAgICAgIHRoZW1lX2ZpdmV0aGlydHllaWdodCgpICsKICAgICAgIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gNDUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2anVzdCA9IDAuNSksCiAgICAgICAgICAgICBsZWdlbmQucG9zaXRpb24gPSAicmlnaHQiLAogICAgICAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICJ2ZXJ0aWNhbCIpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKSArICAgICAgIAogICAgICAgZ3VpZGVzKGZpbGw9Z3VpZGVfbGVnZW5kKHRpdGxlPSJJbmNvbWUiKSkKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2Jhcihwb3NpdGlvbiA9ICdkb2RnZScsCiAgICAgICAgICAgICAgICB3aWR0aCA9IDAuOSwKICAgICAgICAgICAgICAgIHN0YXQgPSAiaWRlbnRpdHkiLAogICAgICAgICAgICAgICAgY29sb3IgPSAiI0ZGRkZGRiIpICsKICAgICAgIGdlb21fcmljaHRleHQoYWVzKGxhYmVsID0gTG9jYXRpb24pLAogICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICIjRkZGRkZGIiwKICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb24gPSBwb3NpdGlvbl9kb2RnZSh3aWR0aCA9IDAuOSksIAogICAgICAgICAgICAgICAgICAgICBoanVzdCA9IDAsCiAgICAgICAgICAgICAgICAgICAgIHZqdXN0ID0gLTAuMSwKICAgICAgICAgICAgICAgICAgICAgYW5nbGUgPSA0NSwKICAgICAgICAgICAgICAgICAgICAgZm9udGZhY2UgPSAiYm9sZCIsCiAgICAgICAgICAgICAgICAgICAgIHNob3cubGVnZW5kID0gRkFMU0UpICsKICAgICAgIHNjYWxlX2ZpbGxfZ3JhZGllbnQobG93ID0gIiM1MmJmOTAiLAogICAgICAgICAgICAgICAgICAgICAgICAgICBoaWdoID0gIiMzMTcyNTYiKSArCiAgICAgICB0aGVtZV9taW5pbWFsKCkgKwogICAgICAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBheGlzLnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAxNCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFjZSA9ICJib2xkIiksCiAgICAgICAgICAgICBsZWdlbmQucG9zaXRpb24gPSAicmlnaHQiLAogICAgICAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICJ2ZXJ0aWNhbCIsCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1pbm9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1pbm9yLnkgPSBlbGVtZW50X2xpbmUoKSwKICAgICAgICAgICAgIHBhbmVsLmdyaWQubWFqb3IueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICAgICAgIHBhbmVsLmdyaWQubWFqb3IueSA9IGVsZW1lbnRfbGluZSgpKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikgKyAgICAgICAKICAgICAgIGd1aWRlcyhmaWxsID0gZ3VpZGVfbGVnZW5kKHRpdGxlID0gIkluY29tZSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXZlcnNlID0gVFJVRSkpICsgCiAgICAgICBleHBhbmRfbGltaXRzKHg9YygwLDE0KSwgCiAgICAgICAgICAgICAgICAgICAgIHk9YygwLCA2MCkpCgo=" download="Week 4 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="load-up-some-libraries" class="section level2">
+<h2>Load Up Some Libraries</h2>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(tidyverse)
+library(viridis)
+library(RColorBrewer)
+library(ggthemes)
+library(ggtext)</code></pre>
+</div>
+</div>
+<div id="using-themes-in-ggwhatever" class="section level1">
+<h1>Using Themes in ggwhatever</h1>
+<p>One of the nice aspects of <code>ggplot</code> is in the fact that you can edit most of the aesthetics. While <code>aes()</code> let’s you define where those aesthetics lie and the <code>scale</code> family of commands allows for coloring and how the data is represented, how a plot is displayed is found by <code>theme</code>.</p>
+<p>You can do this either manually or using a <em>prepackaged</em> approach where theme options are already defined. In certain situations you can even use both.</p>
+<div id="manual-approach" class="section level2">
+<h2>Manual Approach</h2>
+<p>Let’s use a cleaned version of the income data set.</p>
+<pre class="r"><code>income_data &lt;- read_csv(&quot;income.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Location = col_character(),
+##   Lower_2000 = col_double(),
+##   Middle_2000 = col_double(),
+##   Upper_2000 = col_double(),
+##   Lower_2014 = col_double(),
+##   Middle_2014 = col_double(),
+##   Upper_2014 = col_double()
+## )</code></pre>
+<div id="always-inspect-your-data" class="section level3">
+<h3>Always Inspect your Data!<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h3>
+<p>We can inspect the column names using the <code>names()</code> command</p>
+<pre class="r"><code>names(income_data)</code></pre>
+<pre><code>## [1] &quot;Location&quot;    &quot;Lower_2000&quot;  &quot;Middle_2000&quot; &quot;Upper_2000&quot;  &quot;Lower_2014&quot; 
+## [6] &quot;Middle_2014&quot; &quot;Upper_2014&quot;</code></pre>
+<p>and what type they are using <code>str()</code> or <code>glimpse()</code></p>
+<pre class="r"><code>glimpse(income_data)</code></pre>
+<pre><code>## Rows: 229
+## Columns: 7
+## $ Location    &lt;chr&gt; &quot;Akron, OH&quot;, &quot;Albany-Schenectady-Troy, NY&quot;, &quot;Albuquerque,…
+## $ Lower_2000  &lt;dbl&gt; 19.9, 22.1, 28.6, 23.0, 32.3, 22.0, 21.9, 33.0, 20.0, 29.…
+## $ Middle_2000 &lt;dbl&gt; 59.8, 60.1, 55.4, 60.7, 54.7, 58.2, 51.2, 54.6, 56.0, 59.…
+## $ Upper_2000  &lt;dbl&gt; 20.3, 17.8, 16.0, 16.2, 13.0, 19.8, 26.9, 12.4, 23.9, 11.…
+## $ Lower_2014  &lt;dbl&gt; 24.5, 20.2, 33.0, 25.2, 27.4, 20.3, 25.6, 33.6, 27.0, 30.…
+## $ Middle_2014 &lt;dbl&gt; 54.6, 55.1, 50.7, 55.7, 52.6, 55.5, 49.3, 50.5, 50.5, 52.…
+## $ Upper_2014  &lt;dbl&gt; 20.9, 24.8, 16.3, 19.1, 20.0, 24.2, 25.1, 16.0, 22.6, 17.…</code></pre>
+<p>Well 229 rows is a ton of data and a bar plot would look terrible!</p>
+<pre class="r"><code>ggplot(income_data, aes(x = Location, 
+                        y = Lower_2000, 
+                        fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       xlab(&quot;City and State&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="wrangling-data-by-reduction" class="section level3">
+<h3>Wrangling Data by Reduction<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></h3>
+<p>For simplicity sakes, let’s try just looking at the top 10 <em>highest values</em> in the <strong>Lower_2000</strong> column using <code>slice_max()</code><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> command.</p>
+<pre class="r"><code>not_top10_income_data &lt;- income_data %&gt;%
+                         select(Location, Lower_2000) %&gt;%
+                         slice_max(Lower_2000, n = 10); not_top10_income_data</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    Location                     Lower_2000
+##    &lt;chr&gt;                             &lt;dbl&gt;
+##  1 McAllen-Edinburg-Mission, TX       53.4
+##  2 Laredo, TX                         50.9
+##  3 Brownsville-Harlingen, TX          49.8
+##  4 Las Cruces, NM                     45.2
+##  5 El Centro, CA                      43.9
+##  6 Visalia-Porterville, CA            42.9
+##  7 El Paso, TX                        42.7
+##  8 Madera, CA                         42.5
+##  9 Merced, CA                         41.9
+## 10 Yuma, AZ                           41.8</code></pre>
+<p>Now please note that this is <strong><em>not</em></strong> equivalent to another function we’ve gone over: <code>head()</code> which would only return the top 10 <em>rows</em>, <strong><em>not</em></strong> the top 10 <em>highest values</em>.</p>
+<pre class="r"><code>top10_income_data &lt;- income_data %&gt;%
+                     select(Location, Lower_2000) %&gt;%
+                     head(10); top10_income_data</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    Location                          Lower_2000
+##    &lt;chr&gt;                                  &lt;dbl&gt;
+##  1 Akron, OH                               19.9
+##  2 Albany-Schenectady-Troy, NY             22.1
+##  3 Albuquerque, NM                         28.6
+##  4 Allentown-Bethlehem-Easton, PA-NJ       23  
+##  5 Amarillo, TX                            32.3
+##  6 Anchorage, AK                           22  
+##  7 Ann Arbor, MI                           21.9
+##  8 Anniston-Oxford-Jacksonville, AL        33  
+##  9 Atlanta-Sandy Springs-Roswell, GA       20  
+## 10 Atlantic City-Hammonton, NJ             29.3</code></pre>
+<p>Now let’s plot the wrangled data set</p>
+<pre class="r"><code>ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>That looks good but it could be better. Recall with a <code>scale</code> command you can color the bars</p>
+<pre class="r"><code>ggplot(top10_income_data, aes(x = Location, 
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       scale_fill_viridis_c() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Well the colors are arguably better, though there are <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">other palettes</a> the <code>viridis</code> package provides. We can also reorder the bars from greatest to least or vice versa using the <code>reorder()</code> command<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-1" class="input"/>
+<label for="tab-1" class="label">Bars from Greatest to Least</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       scale_fill_viridis_c() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-2" class="input"/>
+<label for="tab-2" class="label">Bars from Least to Greatest</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       scale_fill_viridis_c() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+</div>
+</div>
+</center>
+<p>Well that’s great but with the grey background, overlapping text on the axis, etc., its certainly not really presentation worthy. Luckily we can use the <code>theme()</code> option to edit it!</p>
+</div>
+<div id="being-a-control-freak" class="section level3">
+<h3>Being a Control Freak</h3>
+<p>To get a feel for what options you have, try running the following</p>
+<pre class="r"><code>?theme</code></pre>
+<p>Scroll down to <strong>Usage</strong> to see the commands and <strong>Arguments</strong> to see a description of each. If you don’t like the tiny Help window or find it convoluted, try giving the <a href="https://ggplot2.tidyverse.org/reference/theme.html" target="_blank"><code>tidyverse</code> Reference</a> site a look. It has some additional examples as well, though they may or may not be helpful depending on your needs.</p>
+<p>In the following, we’ll use the descending data set and <code>themes()</code> to fix it up a bit</p>
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       scale_fill_viridis_c() +
+       theme(axis.text.x = element_text(angle = 33,
+                                        face = &quot;bold&quot;,
+                                        vjust = 0.5),
+             axis.title = element_text(size = 14,
+                                       face = &quot;bold&quot;),
+             legend.position = &quot;right&quot;,
+             legend.direction = &quot;vertical&quot;,
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Well that’s slightly better but its certainly flawed. For example, it is not immediately clear which values on the <em>x</em>-axis goes where. We can do a lot more and we’ll get to it in a bit.</p>
+<p>If you would like to have more of a drag and drop experience while learning themes in <code>ggplot2</code>, consider downloading and running the package <a href="https://github.com/dreamRs/esquisse" target="_blank"><code>esquisse</code></a>.</p>
+</div>
+<div id="letting-someone-else-be-a-control-freak" class="section level3">
+<h3>Letting Someone Else Be a Control Freak</h3>
+<p>It may be that you don’t like the default <code>ggplot</code> output but would rather not go through the process of editing every little thing. In these cases you can use <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank">predefined themes within <code>ggplot2</code></a> or <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/" target="_blank"><code>ggthemes</code> package</a>, though there are others. You can see how the the original <code>top10_income_data</code> set looks with these themes.</p>
+<div id="default-in-ggplot2" class="section level4">
+<h4>Default in <code>ggplot2</code></h4>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-3" checked="checked" class="input"/>
+<label for="tab-3" class="label"> Grey Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_grey() + # or theme_gray()
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-4" class="input"/>
+<label for="tab-4" class="label">Black and White Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_bw() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-5" class="input"/>
+<label for="tab-5" class="label">Linedraw Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_linedraw() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-19-1.png" width="672" />
+</div>
+</div>
+</center>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-6" class="input"/>
+<label for="tab-6" class="label">Light Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_light() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-7" class="input"/>
+<label for="tab-7" class="label">Dark Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_dark() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-21-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-8" class="input"/>
+<label for="tab-8" class="label">Minimal Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_minimal() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-22-1.png" width="672" />
+</div>
+</div>
+</center>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-9" class="input"/>
+<label for="tab-9" class="label">Classic Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_classic() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-23-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-10" class="input"/>
+<label for="tab-10" class="label">Void Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_void() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-24-1.png" width="672" />
+</div>
+</div>
+</center>
+</div>
+<div id="using-ggthemes" class="section level4">
+<h4>Using <code>ggthemes</code></h4>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-11" class="input"/>
+<label for="tab-11" class="label">Few Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_few() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-25-1.png" width="672" />
+</div>
+<input name="tabs" type="radio" id="tab-12" class="input"/>
+<label for="tab-12" class="label">Five Thirty Eight Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_fivethirtyeight() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-13" class="input"/>
+<label for="tab-13" class="label">Google Docs Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_gdocs() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-27-1.png" width="672" />
+</div>
+</div>
+</center>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-14" class="input"/>
+<label for="tab-14" class="label">Highcharts JS Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_hc() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-15" class="input"/>
+<label for="tab-15" class="label">Inverse Grey Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_igray() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+</div>
+<div>
+</center>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-16" class="input"/>
+<label for="tab-16" class="label">Solarized Palette Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_solarized() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-17" class="input"/>
+<label for="tab-17" class="label">Solid Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_solid() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-18" class="input"/>
+<label for="tab-18" class="label">Stata Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_tufte() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-32-1.png" width="672" />
+</div>
+</div>
+</center>
+<center>
+<div class="tabs">
+<input name="tabs" type="radio" id="tab-19" class="input"/>
+<label for="tab-19" class="label">Tufte Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_tufte() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-20" class="input"/>
+<label for="tab-20" class="label">Wall Street Journal Theme</label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_wsj() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<input name="tabs" type="radio" id="tab-21" class="input"/>
+<label for="tab-21" class="label">Excel Theme<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></label>
+<div class="panel">
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(stat = &quot;identity&quot;) +
+       theme_excel() +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;)</code></pre>
+<img src="/example/04-example_files/figure-html/unnamed-chunk-35-1.png" width="672" />
+</div>
+</div>
+</center>
+</div>
+</div>
+<div id="everyone-gets-to-be-a-control-freak" class="section level3">
+<h3>Everyone Gets to Be a Control Freak</h3>
+<p>You can in many circumstances combine manual and prepackages themes together. The extent to which you can do this often varies by theme. In any case, let’s see the <code>fivethirtyeight</code> theme with some manual edits.</p>
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = &#39;dodge&#39;,
+                stat = &quot;identity&quot;) +
+       scale_fill_viridis_c() +
+       theme_fivethirtyeight() +
+       theme(axis.text.x = element_text(angle = 45,
+                                        vjust = 0.5),
+             legend.position = &quot;right&quot;,
+             legend.direction = &quot;vertical&quot;) +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;) +       
+       guides(fill=guide_legend(title=&quot;Income&quot;))</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Or sometimes controlling the text itself is nice too but we’ll cover that soon. In the meantime, here’s a preview</p>
+<pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
+                              y = Lower_2000, 
+                              fill = Lower_2000)) +
+       geom_bar(position = &#39;dodge&#39;,
+                width = 0.9,
+                stat = &quot;identity&quot;,
+                color = &quot;#FFFFFF&quot;) +
+       geom_richtext(aes(label = Location),
+                     color = &quot;#FFFFFF&quot;,
+                     position = position_dodge(width = 0.9), 
+                     hjust = 0,
+                     vjust = -0.1,
+                     angle = 45,
+                     fontface = &quot;bold&quot;,
+                     show.legend = FALSE) +
+       scale_fill_gradient(low = &quot;#52bf90&quot;,
+                           high = &quot;#317256&quot;) +
+       theme_minimal() +
+       theme(axis.text.x = element_blank(),
+             axis.title = element_text(size = 14,
+                                       face = &quot;bold&quot;),
+             legend.position = &quot;right&quot;,
+             legend.direction = &quot;vertical&quot;,
+             panel.grid.minor.x = element_blank(),
+             panel.grid.minor.y = element_line(),
+             panel.grid.major.x = element_blank(),
+             panel.grid.major.y = element_line()) +
+       xlab(&quot;Top 10 Cities and States&quot;) +
+       ylab(&quot;Average Income in 2000 Lower Class&quot;) +       
+       guides(fill = guide_legend(title = &quot;Income&quot;,
+                                  reverse = TRUE)) + 
+       expand_limits(x=c(0,14), 
+                     y=c(0, 60))</code></pre>
+<p><img src="/example/04-example_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This includes opening up the data set and viewing a corresponding codebook if available.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>While you’ve likely heard it before many many many times, it is generally unethical, not to mention statistically destructive to throw out any data without using proper methodology and reasoning<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>or you can use <code>slice_min()</code> for the <em>lowest values</em><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>We can actually do this in many ways. This particular method is called the <code>data.table</code> approach.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>For some reason<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
