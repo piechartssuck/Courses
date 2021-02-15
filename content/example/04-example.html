@@ -27,14 +27,14 @@ editor_options:
 </ul></li>
 <li><a href="#using-themes-in-ggwhatever">Using Themes in ggwhatever</a>
 <ul>
-<li><a href="#manual-approach">Manual Approach</a>
+<li><a href="#cleaning-and-inspecting-data">Cleaning and Inspecting Data</a>
 <ul>
 <li><a href="#always-inspect-your-data">Always Inspect your Data!</a></li>
 <li><a href="#wrangling-data-by-reduction">Wrangling Data by Reduction</a></li>
-<li><a href="#being-a-control-freak">Being a Control Freak</a></li>
-<li><a href="#letting-someone-else-be-a-control-freak">Letting Someone Else Be a Control Freak</a></li>
-<li><a href="#everyone-gets-to-be-a-control-freak">Everyone Gets to Be a Control Freak</a></li>
 </ul></li>
+<li><a href="#manual-approach">Manual Approach</a></li>
+<li><a href="#prepackaged-approach"><em>Prepackaged</em> Approach</a></li>
+<li><a href="#the-nearly-everyone-does-this-approach">The Nearly Everyone Does This Approach</a></li>
 </ul></li>
 </ul>
 </div>
@@ -183,8 +183,8 @@ library(ggtext)</code></pre>
 <h1>Using Themes in ggwhatever</h1>
 <p>One of the nice aspects of <code>ggplot</code> is in the fact that you can edit most of the aesthetics. While <code>aes()</code> let’s you define where those aesthetics lie and the <code>scale</code> family of commands allows for coloring and how the data is represented, how a plot is displayed is found by <code>theme</code>.</p>
 <p>You can do this either manually or using a <em>prepackaged</em> approach where theme options are already defined. In certain situations you can even use both.</p>
-<div id="manual-approach" class="section level2">
-<h2>Manual Approach</h2>
+<div id="cleaning-and-inspecting-data" class="section level2">
+<h2>Cleaning and Inspecting Data</h2>
 <p>Let’s use a cleaned version of the income data set.</p>
 <pre class="r"><code>income_data &lt;- read_csv(&quot;income.csv&quot;)</code></pre>
 <pre><code>## 
@@ -308,8 +308,10 @@ library(ggtext)</code></pre>
 </center>
 <p>Well that’s great but with the grey background, overlapping text on the axis, etc., its certainly not really presentation worthy. Luckily we can use the <code>theme()</code> option to edit it!</p>
 </div>
-<div id="being-a-control-freak" class="section level3">
-<h3>Being a Control Freak</h3>
+</div>
+<div id="manual-approach" class="section level2">
+<h2>Manual Approach</h2>
+<p>If you like controlling every little aspect of an experience, then you may be a <em>ggplot control freak</em> and the manual approach is perfect!</p>
 <p>To get a feel for what options you have, try running the following</p>
 <pre class="r"><code>?theme</code></pre>
 <p>Scroll down to <strong>Usage</strong> to see the commands and <strong>Arguments</strong> to see a description of each. If you don’t like the tiny Help window or find it convoluted, try giving the <a href="https://ggplot2.tidyverse.org/reference/theme.html" target="_blank"><code>tidyverse</code> Reference</a> site a look. It has some additional examples as well, though they may or may not be helpful depending on your needs.</p>
@@ -336,8 +338,9 @@ library(ggtext)</code></pre>
 <p>Well that’s slightly better but its certainly flawed. For example, it is not immediately clear which values on the <em>x</em>-axis goes where. We can do a lot more and we’ll get to it in a bit.</p>
 <p>If you would like to have more of a drag and drop experience while learning themes in <code>ggplot2</code>, consider downloading and running the package <a href="https://github.com/dreamRs/esquisse" target="_blank"><code>esquisse</code></a>.</p>
 </div>
-<div id="letting-someone-else-be-a-control-freak" class="section level3">
-<h3>Letting Someone Else Be a Control Freak</h3>
+<div id="prepackaged-approach" class="section level2">
+<h2><em>Prepackaged</em> Approach</h2>
+<p>If you fine with having someone else mostly control an experience allowing you to tinker here and there, then you may be a <em>ggplot doodler</em> and the prepackaged approach is likely a great fit!</p>
 <p>It may be that you don’t like the default <code>ggplot</code> output but would rather not go through the process of editing every little thing. In these cases you can use <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" target="_blank">predefined themes within <code>ggplot2</code></a> or <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/" target="_blank"><code>ggthemes</code> package</a>, though there are others. You can see how the the original <code>top10_income_data</code> set looks with these themes.</p>
 <div id="default-in-ggplot2" class="section level4">
 <h4>Default in <code>ggplot2</code></h4>
@@ -602,9 +605,10 @@ library(ggtext)</code></pre>
 </center>
 </div>
 </div>
-<div id="everyone-gets-to-be-a-control-freak" class="section level3">
-<h3>Everyone Gets to Be a Control Freak</h3>
-<p>You can in many circumstances combine manual and prepackages themes together. The extent to which you can do this often varies by theme. In any case, let’s see the <code>fivethirtyeight</code> theme with some manual edits.</p>
+<div id="the-nearly-everyone-does-this-approach" class="section level2">
+<h2>The Nearly Everyone Does This Approach</h2>
+<p>If you are great with controlling when needed and allowing others to control an experience, then the traditional path of least resistance outlook on ggplot will do just fine!</p>
+<p>You can in many circumstances combine manual and <em>prepackaged</em> themes together. The extent to which you can do this often varies by theme. In any case, let’s see the <code>fivethirtyeight</code> theme with some manual edits.</p>
 <pre class="r"><code>ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
                               y = Lower_2000, 
                               fill = Lower_2000)) +
@@ -655,7 +659,6 @@ library(ggtext)</code></pre>
        expand_limits(x=c(0,14), 
                      y=c(0, 60))</code></pre>
 <p><img src="/example/04-example_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
-</div>
 </div>
 </div>
 <div class="footnotes">

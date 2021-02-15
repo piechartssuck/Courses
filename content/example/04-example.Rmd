@@ -175,9 +175,9 @@ library(ggtext)
 # Using Themes in ggwhatever
 One of the nice aspects of `ggplot` is in the fact that you can edit most of the aesthetics. While `aes()` let's you define where those aesthetics lie and the `scale` family of commands allows for coloring and how the data is represented, how a plot is displayed is found by `theme`. 
 
-You can do this either manually or using a *prepackaged* approach where theme options are already defined. In certain situations you can even use both.
+You can do this either manually or using a *prepackaged* approach where theme options are already defined. In certain situations you can even use both. 
 
-## Manual Approach
+## Cleaning and Inspecting Data
 
 Let's use a cleaned version of the income data set. 
 
@@ -290,7 +290,10 @@ ggplot(top10_income_data, aes(x = reorder(Location, Lower_2000),
 
 Well that's great but with the grey background, overlapping text on the axis, etc., its certainly not really presentation worthy. Luckily we can use the `theme()` option to edit it!
 
-### Being a Control Freak
+## Manual Approach 
+
+If you like controlling every little aspect of an experience, then you may be a *ggplot control freak* and the manual approach is perfect!
+
 To get a feel for what options you have, try running the following
 
 ```{r echo=TRUE, eval=FALSE}
@@ -326,7 +329,10 @@ Well that's slightly better but its certainly flawed. For example, it is not imm
 
 If you would like to have more of a drag and drop experience while learning themes in `ggplot2`, consider downloading and running the package [`esquisse`](https://github.com/dreamRs/esquisse){target="\_blank"}.
 
-### Letting Someone Else Be a Control Freak
+## *Prepackaged* Approach
+
+If you fine with having someone else mostly control an experience allowing you to tinker here and there, then you may be a *ggplot doodler* and the prepackaged approach is likely a great fit!
+
 It may be that you don't like the default `ggplot` output but would rather not go through the process of editing every little thing. In these cases you can use [predefined themes within `ggplot2`](https://ggplot2.tidyverse.org/reference/ggtheme.html){target="\_blank"} or [`ggthemes` package](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/){target="\_blank"}, though there are others. You can see how the the original `top10_income_data` set looks with these themes.
 
 #### Default in `ggplot2`
@@ -625,8 +631,11 @@ ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
 </div>
 </center>
 
-### Everyone Gets to Be a Control Freak
-You can in many circumstances combine manual and prepackages themes together. The extent to which you can do this often varies by theme. In any case, let's see the `fivethirtyeight` theme with some manual edits.
+## The Nearly Everyone Does This Approach
+
+If you are great with controlling when needed and allowing others to control an experience, then the traditional path of least resistance outlook on ggplot will do just fine!
+
+You can in many circumstances combine manual and *prepackaged* themes together. The extent to which you can do this often varies by theme. In any case, let's see the `fivethirtyeight` theme with some manual edits.
 
 ```{r}
 ggplot(top10_income_data, aes(x = reorder(Location, -Lower_2000),
