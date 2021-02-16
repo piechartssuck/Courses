@@ -24,7 +24,7 @@ Many people have created many useful tools for selecting the correct chart type 
 - [**From Data to Viz**](https://www.data-to-viz.com/){target="_blank"}: A decision tree for dozens of chart types with links to R and Python code.
 - [**The Data Visualisation Catalogue**](http://www.datavizcatalogue.com/){target="_blank"}: Descriptions, explanations, examples, and tools for creating 60 different types of visualizations.
 - [**The Data Viz Project**](http://datavizproject.com/){target="_blank"}: Descriptions and examples for 150 different types of visualizations. Also allows you to search by data shape and chart function (comparison, correlation, distribution, geographical, part to whole, trend over time, etc.).
-- [**R Graph Catalog**](http://shinyapps.stat.ubc.ca/r-graph-catalog/):{target="_blank"} R code for 124 ggplot graphs.
+- [**R Graph Catalog**](http://shinyapps.stat.ubc.ca/r-graph-catalog/){target="_blank"}: R code for 124 ggplot graphs.
 
 
 ## General resources
@@ -37,7 +37,7 @@ Many people have created many useful tools for selecting the correct chart type 
 - [**Info We Trust**](http://infowetrust.com/){target="_blank"}: Detailed explorations of visualizations by [RJ Andrews](https://twitter.com/infowetrust){target="_blank"}, including a [beautiful visual history of the field](http://infowetrust.com/history/){target="_blank"}.
 - [**Information is Beautiful**](http://www.informationisbeautiful.net/){target="_blank"}: Blog by [David McCandless](https://twitter.com/mccandelish){target="_blank"}.
 - [**PolicyViz**](https://policyviz.com/): Regular podcast and site full of helpful resources by [Jon Schwabisch](https://twitter.com/jschwabish){target="_blank"}.
-- [**Visualising Data**](http://www.visualisingdata.com/):{target="_blank"} Fantastic collection of visualization resources, articles, and tutorials by [Andy Kirk](https://twitter.com/visualisingdata){target="_blank"}.
+- [**Visualising Data**](http://www.visualisingdata.com/){target="_blank"}: Fantastic collection of visualization resources, articles, and tutorials by [Andy Kirk](https://twitter.com/visualisingdata){target="_blank"}.
 - [**Storytelling with Data**](http://www.storytellingwithdata.com/): Blog and site full of resources by Cole Nussbaumer Knaflic.
 - [**Junk Charts**](http://junkcharts.typepad.com/){target="_blank"}: Blog by [Kaiser Fung](https://twitter.com/junkcharts){target="_blank"}.
 - [**WTF Visualizations**](http://viz.wtf/){target="_blank"}: Visualizations that make you ask "wtf?"

@@ -10,8 +10,6 @@ library(ggtext)
 ## income_data <- read_csv("income.csv")
 
 
-
-
 ## ----
 names(income_data)
 
