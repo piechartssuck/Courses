@@ -62,12 +62,12 @@ Description = c("Respond to the posts on `#ranking-criteria` and `#causality-con
 Location = c("[Link](/readings/05-readings/#respond-to-posts)",
              "[Link](/readings/05-readings/#read-the-book)",
              "[Link](/readings/05-readings/#read-a-paper)",
-             "[Link](/readings/05-readings/#respond-to-posts)",
+             "[Link](/readings/05-readings/#read-the-book)",
              "[Link](/lesson/05-lesson/#meeting)",
              "[Link](/lesson/05-lesson/#evaluation-values-criteria-checklist-evcc)",
-             "[Link](lesson/05-lesson/#learning-about-surveys)",
+             "[Link](/lesson/05-lesson/#learning-about-surveys)",
              "[Link](/assignment/05-needs-assessment/)",
-             "[Link](/example/05-example/#the-evaluation-toolbox)"
+             "[Link](/example/05-example/#the-evaluators-toolbox)"
     )
 
 )
