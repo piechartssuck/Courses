@@ -639,7 +639,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Respond to the posts on &lt;code&gt;#criteria&lt;/code&gt;
+Respond to the posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#causality-conundrum&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#respond-to-posts&#34;&gt;Link&lt;/a&gt;
@@ -657,7 +657,7 @@ Respond to the posts on &lt;code&gt;#criteria&lt;/code&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Read two chapters in your book
+Read a chapter in your book
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-the-book&#34;&gt;Link&lt;/a&gt;
@@ -670,12 +670,12 @@ Read two chapters in your book
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
-&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Write two posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#causality-conundrum&lt;/code&gt;
+Read a paper
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-a-paper&#34;&gt;Link&lt;/a&gt;
@@ -693,10 +693,10 @@ Write two posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#c
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Meet up this or next week
+Write two posts on &lt;code&gt;#which-values&lt;/code&gt; and &lt;code&gt;#evaluation-politicization&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/04-lesson/#key-evaluation-checklist-kec&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-the-book&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -711,27 +711,63 @@ Meet up this or next week
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Skim over the KEC
+If we haven’t met up, let’s do it this week
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/04-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Skim over the EVCC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#evaluation-values-criteria-checklist-evcc&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Go through a slideshow in survey design
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#learning-about-surveys&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
 &lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
 &lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Write and submit a prospectus
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Write and submit a needs assessment in &lt;strong&gt;&lt;em&gt;two weeks&lt;/em&gt;&lt;/strong&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/05-needs-assessment/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -750,7 +786,7 @@ Write and submit a prospectus
 Take a look at some &lt;em&gt;optional&lt;/em&gt; material
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/05-example/#the-evaluation-toolbox&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/05-example/#the-evaluators-toolbox&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

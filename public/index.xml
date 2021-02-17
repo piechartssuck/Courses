@@ -1899,6 +1899,135 @@ ul {
     </item>
     
     <item>
+      <title>Needs Assessment</title>
+      <link>https://edp617.theoreticalphysed.com/assignment/05-needs-assessment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/assignment/05-needs-assessment/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#needs-assessment&#34;&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Needs Assessment&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type&#34;&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#criteria&#34;&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#structure&#34;&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+ul {
+    margin-left: 1.5em;
+}
+&lt;/style&gt;
+&lt;div id=&#34;needs-assessment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Needs Assessment&lt;/span&gt;&lt;/h2&gt;
+&lt;div id=&#34;submission&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ecampus.wvu.edu&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;type&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Teams&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;At this point you should begin to contact programs and possibly narrow your list.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;criteria&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;As soon as you and your group have identified a program to evaluate, you can begin working on this assignment. Based on that program and the context within which it operates, answer the questions listed below. To do this, you will need to conduct at least one &lt;em&gt;interview&lt;/em&gt; and/or &lt;em&gt;focus group&lt;/em&gt; (face-to-face, telephone, or synchronous chat).&lt;/p&gt;
+&lt;p&gt;The intent of the meeting is be to help you answer the questions and better meet stakeholder information and decision-making needs. Therefore, you should be interviewing a key stakeholder or (focus) group of stakeholders. You have options in how to conduct this&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If done face-to-face or telephone, you should tape (audio or video&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;) your interview / focus group and transcribe the recording.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If done electronically utilizing synchronous (e.g., chat room) technology, then often the transcription is done for you. For example, Zoom has this ability via their &lt;a href=&#34;https://support.zoom.us/hc/en-us/articles/115004794983-Using-audio-transcription-for-cloud-recordings-&#34; target=&#34;_blank&#34;&gt;Cloud Service&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;structure&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This submission is due in &lt;strong&gt;two weeks&lt;/strong&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; and The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document . Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;A cover page with your name&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Every group member’s name in the upper left-hand corner in alphabetical order in accordance to their last name. For those teams that have assigned internal roles, please include those titles in parentheses.&lt;/li&gt;
+&lt;li&gt;The title of this task – &lt;strong&gt;Needs Assessment&lt;/strong&gt; – in the middle of the page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;No running head&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A Table of Contents&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The Body fulfilling the requirements described below&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A references section&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Appendix describing Analysis Technique as described below.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Filename in &lt;em&gt;either&lt;/em&gt; of the following formats&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;teamname_needsassessent.docx&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;teamname_needsassessent.pdf&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;body&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Body&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;As you construct this, you must use the questions as your subheadings and answers must be up formally. Your answers should be brief and to the point. This assignment usually fills five (5) to 10 pages double spaced not including the appendix. That section includes a brief description of your analysis technique (please see below).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Who did you interview?&lt;/li&gt;
+&lt;li&gt;What is their role in the program?&lt;/li&gt;
+&lt;li&gt;What are the goals and objectives for the program you will evaluate?&lt;/li&gt;
+&lt;li&gt;Describe what you discovered about the merit, worth, and significance of the program?&lt;/li&gt;
+&lt;li&gt;What specific values were described in the interview? Which ones do you believe are feasible to study and why?&lt;/li&gt;
+&lt;li&gt;Who is the program designed to serve? Include as much demographic detail as possible (age, gender, ethnicity, etc.) for each group impacted by the program (e.g., students, parents, clients, etc.). Give your best estimates if precise demographic information is not available.&lt;/li&gt;
+&lt;li&gt;What are the means through which program goals and objectives are expected to be met? What activities does the program utilize to serve its clientele?&lt;/li&gt;
+&lt;li&gt;What is the history of this program? How long has it been in existence? How has it changed over time? What evaluation work, if any, has occurred in the past?&lt;/li&gt;
+&lt;li&gt;What data currently exists relative to goals, objectives, and activities of this program? Describe the data you believe exists even if you don’t currently have access to that data.&lt;/li&gt;
+&lt;li&gt;Did you learn anything from any non-verbal cues? If so, what were they and did they affect your decision on potential avenues to pursue?&lt;/li&gt;
+&lt;li&gt;Is there anything else not covered in the items above?&lt;/li&gt;
+&lt;li&gt;If you had to perform the interview again, would there be anything you change? Please be honest. While it any sound silly to some, a reflection on the process and approaches taken will most likely help you perform in future interviews. Rather than writing a narrative here, I suggest that you provide a table with one column dedicated to what occurred, the second outlining what you would change, and the third with a very brief description as to why.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis-technique&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Analysis Technique&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;In past renditions of this course, students were required to transcribe the entire interview. While that is still recommended , it is not required. Should you choose to do so, there are many free ways to go about this. Some students have paid a service to do it for them – which is fine as it is common practice in evaluation – while most have used free online and offline services. If a transcription is an avenue you wish to pursue and do not wish to spend any money, services such as &lt;a href=&#34;https://cloud.google.com/speech-to-text&#34; target=&#34;_blank&#34;&gt;Google Cloud&lt;/a&gt; and &lt;a href=&#34;https://speechtext.ai/&#34; target=&#34;_blank&#34;&gt;SpeechText.AI&lt;/a&gt; use grounded artificial intelligence approaches to transcribe audio. Regardless of your decision regarding the above, please follow the steps below to analyze your recording:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Each member should independently listen to the recording in its entirety while jotting down notes regrading particular items of interest and themes that may occur. Should you have the benefit of having a video recording, consider adding notes about non-verbal cues and points of inflection. Make sure to note the timestamp or the next step will be extremely difficult!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;After everyone has accomplished the task above, meet as a group and discuss your findings. Come to an agreement as to what may be potential themes and avenues to consider for an evaluation. From this, you have two choices for justification:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quantitative approach&lt;/strong&gt;. Consider using an agreement scaling like a &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Kappa%20Statistic.pdf&#34; target=&#34;_blank&#34;&gt;Kappa Statistic&lt;/a&gt; as your justification. Then provide a clear and concise narrative on your process, your agreement threshold and what criteria were used (i.e. please just don’t simply say we agreed on theme X because we felt like it, rather provide actual criteria for agreement). Please submit the final agreement measures delineated by theme in addition to the aggregated agreement score and description. To clarify, you will be required to submit the following in the appendix:
+&lt;ul&gt;
+&lt;li&gt;A table of all themes and corresponding agreement rating by theme. Please rearrange the themes by agreement rating going from greatest to least.&lt;/li&gt;
+&lt;li&gt;An aggregated and specific list of criteria used for agreement. If some of these are theme specific, please note that.&lt;/li&gt;
+&lt;li&gt;A short and concise narrative explain the process, criteria, and benchmarks for agreement. Include the final agreement score and what scaling you used.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Qualitative approach&lt;/strong&gt;. Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your appendix. Read over Shenton (2004) and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
+&lt;ul&gt;
+&lt;li&gt;A table of all themes regardless of agreement.&lt;/li&gt;
+&lt;li&gt;A detailed and explicit narrative regarding how credibility, transferability, dependability, and confirmability were satisfied or an argument as to why it could not.&lt;/li&gt;
+&lt;li&gt;A through narrative further delineating credibility by addressing multiple provisions provided in &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Shenton%20(2004).pdf&#34; target=&#34;_blank&#34;&gt;Shenton (2004)&lt;/a&gt; and how these were accomplished.&lt;/li&gt;
+&lt;li&gt;A short and concise narrative on how triangulation and saturation were fully addressed. Make sure to be very specific in addressing what criteria were used and how each was satisfied.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Students in the course must participate in the writing process in a group oriented setting.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Better for reviewing purposes.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Please check eCampus for the exact due date.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;If necessary&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Optional&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Who&#39;s Values Are Valuable?</title>
       <link>https://edp617.theoreticalphysed.com/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1947,7 +2076,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Respond to the posts on &lt;code&gt;#criteria&lt;/code&gt;
+Respond to the posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#causality-conundrum&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#respond-to-posts&#34;&gt;Link&lt;/a&gt;
@@ -1965,7 +2094,7 @@ Respond to the posts on &lt;code&gt;#criteria&lt;/code&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Read two chapters in your book
+Read a chapter in your book
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-the-book&#34;&gt;Link&lt;/a&gt;
@@ -1978,12 +2107,12 @@ Read two chapters in your book
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
-&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Write two posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#causality-conundrum&lt;/code&gt;
+Read a paper
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-a-paper&#34;&gt;Link&lt;/a&gt;
@@ -2001,10 +2130,10 @@ Write two posts on &lt;code&gt;#ranking-criteria&lt;/code&gt; and &lt;code&gt;#c
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Meet up this or next week
+Write two posts on &lt;code&gt;#which-values&lt;/code&gt; and &lt;code&gt;#evaluation-politicization&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/04-lesson/#key-evaluation-checklist-kec&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/#read-the-book&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -2019,27 +2148,63 @@ Meet up this or next week
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Skim over the KEC
+If we haven’t met up, let’s do it this week
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/04-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Skim over the EVCC
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#evaluation-values-criteria-checklist-evcc&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Go through a slideshow in survey design
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/05-lesson/#learning-about-surveys&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
 &lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
 &lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
-Write and submit a prospectus
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Write and submit a needs assessment in &lt;strong&gt;&lt;em&gt;two weeks&lt;/em&gt;&lt;/strong&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 &lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/05-needs-assessment/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
@@ -2058,7 +2223,7 @@ Write and submit a prospectus
 Take a look at some &lt;em&gt;optional&lt;/em&gt; material
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/05-example/#the-evaluation-toolbox&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/05-example/#the-evaluators-toolbox&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -2166,6 +2331,7 @@ Submitting a prospectus
 &lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#evaluation-values-criteria-checklist-evcc&#34;&gt;Evaluation Values Criteria Checklist (EVCC)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#cipp-model&#34;&gt;CIPP Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#learning-about-surveys&#34;&gt;Learning About Surveys&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -2224,6 +2390,19 @@ Submitting a prospectus
 &lt;div id=&#34;cipp-model&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;CIPP Model&lt;/h2&gt;
 &lt;p&gt;I tend not to teach a model-based approach to evaluation. Similar to a viewpoint on statistics and methodology in general, this view can create situations where practitioners try to pigeonhole an evaluation to fit some predefined framework. Evaluation is not a &lt;em&gt;these models fit all&lt;/em&gt; kind of field. However, one of the most utilized frameworks - the &lt;a href=&#34;https://poorvucenter.yale.edu/Evaluating-Programs&#34; target=&#34;_blank&#34;&gt;CIPP Model&lt;/a&gt; - is mentioned in the EVCC and should you perform any evaluation work in the future, it is likely that you will at least hear it being mentioned. With that said, its not a bad idea to have a look.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learning-about-surveys&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Learning About Surveys&lt;/h2&gt;
+&lt;p&gt;Some of you will no doubt be utilizing survey instruments within your evaluation. However constructing meaningful surveys can be quite difficult and response rates can be affected by anything from wording to distribution times to aesthetics. While this is certainly not a survey development course, please view and listen to the &lt;strong&gt;Survey Design&lt;/strong&gt; slideshow. You can also download a &lt;a href=&#34;https://edp617.theoreticalphysed.com/slides/Survey%20Design/Survey_Design.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/p&gt;
+&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/slides/Survey Design/Survey_Design.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can move back and forth using &lt;kbd&gt;←&lt;/kbd&gt; and &lt;kbd&gt;→&lt;/kbd&gt; and toggle fullscreen by pressing &lt;kbd&gt;F&lt;/kbd&gt;. Just press &lt;kbd&gt;O&lt;/kbd&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press &lt;kbd&gt;O&lt;/kbd&gt; to exit tile view.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For &lt;strong&gt;O&lt;/strong&gt;verview&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -3785,7 +3964,7 @@ This page contains instructions on what to submit by on a weekly basis.
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;February 16, 2021&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Who Values What&amp;rsquo;s Valuable&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Who&amp;rsquo;s Values Are Valuable?&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/05-readings/&#34;&gt;
               &lt;font color=&#34;739670&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;

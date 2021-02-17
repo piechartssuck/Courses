@@ -4,7 +4,7 @@ subtitle: 'A Short But Not So Short Overview of Crafting Good Questions'
 author: Dr. Abhik Roy
 output: 
  xaringan::moon_reader:
-   css: xaringan-themer.css
+   css: ['custom.css', 'xaringan-themer.css']
 ---
 
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
@@ -13,6 +13,7 @@ library(fontawesome)
 library(knitr)
 library(kableExtra)
 library(here)
+library(xaringanthemer)
 ```
 
 ```{r echo = FALSE}
@@ -22,6 +23,7 @@ xaringanthemer::style_duo(
   header_font_google = xaringanthemer::google_font("Jost", "600"),
   text_font_google   = xaringanthemer::google_font("Jost", "400")
 )
+
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
@@ -738,8 +740,16 @@ Randomize response options if there is concern about order effects
 
 If you are interested in a fairly light yet comprehensive read on how to create or conduct surveys, try reading ***Internet, Phone, Mail, and Mixed-Modes Surveys: The Tailored Design*** Method by *Dillman*, *Smyth* and *Christian*. The Library has an [eBook version of the text](https://libwvu.on.worldcat.org/oclc/878301194) you can access right now with your WVU login.
 
-I also use the text in my [EDP 619: Survey Research Methods](https://edp619.theoreticalphysed.com/) course. Much like this class, the content is free to anyone for personal use.
+I also use the text in my [EDP 619: Survey Research Methods](https://edp619.theoreticalphysed.com/) course. Much like this class, the content is free to anyone for personal use. For more information, please look at the licensing information provided below.
 
 I hope this crash course was helpful. If you have any questions, please feel free to reach out.
 
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
 
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>
