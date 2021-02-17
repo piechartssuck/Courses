@@ -1,0 +1,181 @@
+---
+title: "Who's Values Are Valuable?"
+linktitle: "Week 5: Who's Values Are Valuable?"
+menu:
+  content:
+    parent: Readings
+    weight: 5
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+```
+
+## Read the Book
+
+Please read and address the following questions using a single post
+
+```{r echo=FALSE}
+
+readings <- tibble(
+  
+  title <- c('"Values" in Evaluation'
+  ),
+  
+  number <- c(
+    "6"
+  ),
+  
+  question <- c(
+    "Say you are an evaluator in a scenario where there are multiple sponsors all of equal importance. Each sponsor wants you to evaluate something specific but all of the evaluands are mutually exclusive and independent. With a limited timeframe, you cannot possibly study everything all of the stakeholders want. How do you prioritize what gets sone while still being able to develop a case that your evaluation was valuable?"
+  ),
+  
+  
+  hashtag <- c(
+    "[#which-values](https://2021edp617.slack.com/messages/which-values){target='_blank'}"
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Title", "Chapter", "Question", "Channel"), 
+      "html", 
+      escape = FALSE,
+      align = 'lcll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") 
+```
+</center>
+
+## Read a Paper
+
+```{r echo=FALSE}
+
+papers <- tibble(
+  
+  title <- c('Valuing, Evaluation Methods, and the
+Politicization of the Evaluation Process'
+  ),
+  
+  Citation <- c(
+    "Chelimsky (2012)"
+  ),
+  
+  question <- c(
+    "Assume that there is some level of politicization of the evaluative process in government. How egregious do you think this is? Provide some evidence in your narrative regarding  specific programs and how you currently see/ have seen this politicization in action."
+  ),
+  
+  hashtag <- c(
+    "[#evaluation-politicization](https://2021edp617.slack.com/messages/evaluation-politicization){target='_blank'}"
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+papers %>%
+  kbl(col.names = c("Title", "Chapter", "Question", "Channel"), 
+      "html", 
+      escape = FALSE,
+      align = 'lcll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") 
+```
+</center>
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "Chelimsky (2012).pdf")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Chelimsky (2012)",
+  button_label = "Download the Paper",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Respond to Posts
+Please create **two responses** apiece for the post below on Slack. 
+
+- [`#ranking-criteria`](https://2021edp617.slack.com/messages/ranking-criteria){target='_blank'}
+
+- [`#causality-conundrum`](https://2021edp617.slack.com/messages/causality-conundrum){target='_blank'}
+
+### Note about the responding to posts 
+Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the `Reply in thread` option when replying! If you need a reminder on how to do this, please click [here](/lesson/02-lesson/#responses).
+

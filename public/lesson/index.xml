@@ -304,11 +304,86 @@ Also please name your group. Feel free to be serious or have fun with it!&lt;/p&
 &lt;/style&gt;
 &lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Meeting&lt;/h2&gt;
-&lt;p&gt;As soon as your tea populates their room on Slack, I will send a time and day request for our first meeting via Zoom. Plan on having this occur either this or next week. We’ll set a tentative schedule at that time as well.&lt;/p&gt;
+&lt;p&gt;As soon as your team populates their room on Slack, I will send a time and day request for our first meeting via Zoom. Plan on having this occur either this or next week. We’ll set a tentative schedule at that time as well.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;key-evaluation-checklist-kec&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Key Evaluation Checklist (KEC)&lt;/h2&gt;
 &lt;p&gt;Skim through the Look through the &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/KEC.pdf&#34; target=&#34;_blank&#34;&gt;Key Evaluation Checklist&lt;/a&gt; document to get yourself familiarized with a wide array of criteria needed to ensure a &lt;em&gt;good&lt;/em&gt; evaluation.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Who&#39;s Values Are Valuable?</title>
+      <link>https://edp617.theoreticalphysed.com/lesson/05-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/lesson/05-lesson/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-values-criteria-checklist-evcc&#34;&gt;Evaluation Values Criteria Checklist (EVCC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cipp-model&#34;&gt;CIPP Model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meeting&lt;/h2&gt;
+&lt;p&gt;We should by now have a team meeting set up. If this is not the case, please contact me asap.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-values-criteria-checklist-evcc&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Values Criteria Checklist (EVCC)&lt;/h2&gt;
+&lt;p&gt;Skim through the Look through the &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/EVCC.pdf&#34; target=&#34;_blank&#34;&gt;Evaluation Values Criteria Checklist&lt;/a&gt; document to get yourself familiarized with a wide array of values based criteria that is grounded in stakeholder .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cipp-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;CIPP Model&lt;/h2&gt;
+&lt;p&gt;I tend not to teach a model-based approach to evaluation. Similar to a viewpoint on statistics and methodology in general, this view can create situations where practitioners try to pigeonhole an evaluation to fit some predefined framework. Evaluation is not a &lt;em&gt;these models fit all&lt;/em&gt; kind of field. However, one of the most utilized frameworks - the &lt;a href=&#34;https://poorvucenter.yale.edu/Evaluating-Programs&#34; target=&#34;_blank&#34;&gt;CIPP Model&lt;/a&gt; - is mentioned in the EVCC and should you perform any evaluation work in the future, it is likely that you will at least hear it being mentioned. With that said, its not a bad idea to have a look.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

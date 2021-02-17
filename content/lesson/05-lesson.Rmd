@@ -1,0 +1,86 @@
+---
+title: "Who's Values Are Valuable?"
+linktitle: "Week 5: Who's Values Are Valuable?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Meeting
+We should by now have a team meeting set up. If this is not the case, please contact me asap.
+
+## Evaluation Values Criteria Checklist (EVCC)
+Skim through the Look through the [Evaluation Values Criteria Checklist](/handouts/EVCC.pdf){target="_blank"} document to get yourself familiarized with a wide array of values based criteria that is grounded in stakeholder .
+
+## CIPP Model
+I tend not to teach a model-based approach to evaluation. Similar to a viewpoint on statistics and methodology in general, this view can create situations where practitioners try to pigeonhole an evaluation to fit some predefined framework. Evaluation is not a *these models fit all* kind of field. However, one of the most utilized frameworks - the [CIPP Model](https://poorvucenter.yale.edu/Evaluating-Programs){target="_blank"} - is mentioned in the EVCC and should you perform any evaluation work in the future, it is likely that you will at least hear it being mentioned. With that said, its not a bad idea to have a look.
+
+## Learning About Surveys
+Some of you will no doubt be utilizing survey instruments within your evaluation. However constructing meaningful surveys can be quite difficult and response rates can be affected by anything from wording to distribution times to aesthetics. While this is certainly not a survey development course, please view and listen to the **Survey Design** slideshow. You can also download a [PDF](/slides/Survey Design/Survey_Design.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Survey Design/Survey_Design.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view.
+

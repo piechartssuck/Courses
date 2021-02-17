@@ -1,0 +1,96 @@
+---
+title: "Who's Values Are Valuable?"
+linktitle: "Week 5: Who's Values Are Valuable?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+
+wk_post <- tibble(
+  
+"eCampus" = c(unchecked, 
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              checked,
+              unchecked),
+
+"Slack" = c(checked,
+            unchecked,
+            unchecked,
+            checked,
+            unchecked,
+            unchecked,
+            unchecked,
+            unchecked,
+            unchecked),
+
+Description = c("Respond to the posts on `#ranking-criteria` and `#causality-conundrum`",
+                "Read a chapter in your book",
+                "Read a paper",
+                "Write two posts on `#which-values` and `#evaluation-politicization`",
+                "If we haven't met up, let's do it this week",
+                "Skim over the EVCC",
+                "Go through a slideshow in survey design",
+                "Write and submit a needs assessment in ***two weeks***",
+                "Take a look at some *optional* material"),
+
+Location = c("[Link](/readings/05-readings/#respond-to-posts)",
+             "[Link](/readings/05-readings/#read-the-book)",
+             "[Link](/readings/05-readings/#read-a-paper)",
+             "[Link](/readings/05-readings/#respond-to-posts)",
+             "[Link](/lesson/05-lesson/#meeting)",
+             "[Link](/lesson/05-lesson/#evaluation-values-criteria-checklist-evcc)",
+             "[Link](lesson/05-lesson/#learning-about-surveys)",
+             "[Link](/assignment/05-needs-assessment/)",
+             "[Link](/example/05-example/#the-evaluation-toolbox)"
+    )
+
+)
+```
+
+
+### What's Due?
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "10em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(6, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

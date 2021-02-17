@@ -1,0 +1,68 @@
+---
+title: "Who's Values Are Valuable?"
+linktitle: "Week 5: Who's Values Are Valuable?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the pre-evaluation phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+pre <- tibble(
+  
+  phase = c("Pre-Evaluation",
+            "",
+            ""),
+  
+  task = c("Gathering a team",
+           "Thinking about potential programs",
+           "Submitting a prospectus"),
+  
+  current <- c(unchecked,
+               unchecked,
+               checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  pre %>%
+  kbl(escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## The Evaluators Toolbox
+
+The [Center for Community Health and Development](http://communityhealth.ku.edu/){target="_blank"} at the University of Kansas has a very comprehensive guide on developing an evaluation plan, identifying stakeholders interests, and conducting a participatory evaluation.
+
+As you begin to plan your evaluation, look over their suggested [framework](https://ctb.ku.edu/en/table-of-contents/evaluate/evaluation/framework-for-evaluation/main){target="_blank"}. 

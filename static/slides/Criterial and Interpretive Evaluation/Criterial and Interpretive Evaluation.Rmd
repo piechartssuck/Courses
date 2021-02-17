@@ -311,9 +311,7 @@ What is culture? How do we recognize it ?
 
 # The Iceberg
 
-```{r, out.width='50%', fig.align='center', echo=FALSE}
-knitr::include_graphics('pics/iceberg.png')
-```
+![:scale 50%](img/iceberg.png)
 
 </audio>
 </center>
@@ -329,9 +327,7 @@ knitr::include_graphics('pics/iceberg.png')
 
 #  Markus & Kitayama (1991) 
 
-```{r, out.width='60%', fig.align='center', echo=FALSE}
-knitr::include_graphics('pics/eastvwest.png')
-```
+![:scale 60%](img/eastvwest.png)
 
 </audio>
 </center>
@@ -371,7 +367,7 @@ How might each of the following influence an evaluation’s design and implement
 ---
 
 # Increasing your cultural sensitivity 
-
+atom://welcome/welcome
 Try to
 - Assess your own attitudes, beliefs, values
 - Incorporate culturally diverse groups and perspectives throughout evaluation process

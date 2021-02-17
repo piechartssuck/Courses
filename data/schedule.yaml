@@ -4,7 +4,7 @@ lessons:
 
   - title: 'Who Are You Really?'
     session: 1
-    date: "Jan 19, 2020"
+    date: "Jan 19, 2021"
     readings: "01-readings"
     lesson: "01-lesson"
     example: "01-example"
@@ -13,7 +13,7 @@ lessons:
 
   - title: 'Rethinking the Way You Think'
     session: 2
-    date: "Jan 26, 2020"
+    date: "Jan 26, 2021"
     readings: "02-readings"
     lesson: "02-lesson"
     example: "02-example"
@@ -22,7 +22,7 @@ lessons:
 
   - title: 'Aims, Scope and Sequencing'
     session: 3
-    date: "September 6, 2020"
+    date: "February 2, 2021"
     readings: "03-readings"
     lesson: "03-lesson"
     assignment: "03-assignment"
@@ -30,22 +30,22 @@ lessons:
 
   - title: 'Causation and Criteria'
     session: 4
-    date: "September 13, 2020"
+    date: "February 9, 2021"
     readings: "04-readings"
     lesson: "04-lesson"
     example: "04-example"
     assignment: "04-assignment"
     due: "04-due"
 
-  # - title: 'Valuable Valued Values'
-  #   session: 5
-  #   date: "September 20, 2020"
-  #   readings: "05-readings"
-  #   lesson: "05-lesson"
-  #   example: "05-example"
-  #   assignment: "05-assignment"
-  #   due: "05-due"
-  #
+  - title: "Who Values What's Valuable"
+    session: 5
+    date: "February 16, 2021"
+    readings: "05-readings"
+    lesson: "05-lesson"
+    example: "05-example"
+    assignment: "05-assignment"
+    due: "05-due"
+
   # - title: 'The Importance of Knowing What's Important'
   #   session: 6
   #   date: "September 27, 2020"

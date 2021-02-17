@@ -67,7 +67,7 @@ library(kableExtra)
 ```
 
 ## Meeting
-As soon as your tea populates their room on Slack, I will send a time and day request for our first meeting via Zoom. Plan on having this occur either this or next week. We'll set a tentative schedule at that time as well.
+As soon as your team populates their room on Slack, I will send a time and day request for our first meeting via Zoom. Plan on having this occur either this or next week. We'll set a tentative schedule at that time as well.
 
 ## Key Evaluation Checklist (KEC)
 Skim through the Look through the [Key Evaluation Checklist](/handouts/KEC.pdf){target="_blank"} document to get yourself familiarized with a wide array of criteria needed to ensure a *good* evaluation.
