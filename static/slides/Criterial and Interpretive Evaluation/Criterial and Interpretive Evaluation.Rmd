@@ -4,7 +4,7 @@ subtitle: 'Key Concepts, Discussion Points, and Group Activities'
 author: Dr. Abhik Roy
 output: 
  xaringan::moon_reader:
-   css: xaringan-themer.css
+   css: ['custom.css', 'xaringan-themer.css']
 ---
 
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
@@ -423,4 +423,14 @@ Any remaining questions about the course, syllabus, assignments, etc.?
   <source src="audio/criteria/S19_Final.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
 </audio>
+</center>
+
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
 </center>
