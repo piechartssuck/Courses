@@ -22,7 +22,6 @@ xaringanthemer::style_duo(
   header_font_google = xaringanthemer::google_font("Jost", "600"),
   text_font_google   = xaringanthemer::google_font("Jost", "400")
 )
-
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
@@ -242,7 +241,6 @@ tbl10 <- tibble::tribble(
 "***Summative Evaluation***"," "," ",
 "The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
 )
-
 kableExtra::kable_styling(knitr::kable(tbl10, escape = FALSE), font_size = 18) %>%
   row_spec(0, color = "white", background = "#212121") %>%
   row_spec(2, color = "white", background = "#212121") %>%
@@ -311,7 +309,9 @@ What is culture? How do we recognize it ?
 
 # The Iceberg
 
-![:scale 50%](img/iceberg.png)
+```{r, out.width='50%', fig.align='center', echo=FALSE}
+knitr::include_graphics('img/iceberg.png')
+```
 
 </audio>
 </center>
@@ -327,7 +327,9 @@ What is culture? How do we recognize it ?
 
 #  Markus & Kitayama (1991) 
 
-![:scale 60%](img/eastvwest.png)
+```{r, out.width='60%', fig.align='center', echo=FALSE}
+knitr::include_graphics('img/eastvwest.png')
+```
 
 </audio>
 </center>
@@ -367,7 +369,7 @@ How might each of the following influence an evaluation’s design and implement
 ---
 
 # Increasing your cultural sensitivity 
-atom://welcome/welcome
+
 Try to
 - Assess your own attitudes, beliefs, values
 - Incorporate culturally diverse groups and perspectives throughout evaluation process
@@ -393,7 +395,7 @@ Try to
 
 - There are two main types
   - *Formal* - Extra, external study to authenticate the process or product of the evaluation.
-  
+
   - *Informal* - Evaluating your own evaluation.
 
 </audio>
@@ -401,7 +403,7 @@ Try to
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="audio/criteria/S18_Meta_Evaluation.mp3.mp3" type="audio/mpeg">
+  <source src="audio/criteria/S18_Meta_Evaluation.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
 </audio>
 </center>
@@ -426,7 +428,7 @@ Any remaining questions about the course, syllabus, assignments, etc.?
 </center>
 
 <center>
-<br><br>
+<br><br><br>
 <div class="fade_rule"></div>  
 <br><br>
 </center>
