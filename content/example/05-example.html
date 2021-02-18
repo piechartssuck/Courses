@@ -1,0 +1,551 @@
+---
+title: "Making Copies"
+linktitle: "Week 5: Making Copies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#read-the-submission-directions">Read the Submission Directions</a></li>
+<li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
+</ul></li>
+<li><a href="#part-1-more-ggplotting">Part 1: More ggplotting</a>
+<ul>
+<li><a href="#finding-variables">Finding variables</a></li>
+<li><a href="#getting-counts">Getting counts</a></li>
+<li><a href="#example-using-r-to-test-hypotheses">Example: Using R to Test Hypotheses</a>
+<ul>
+<li><a href="#hypothesis">Hypothesis</a></li>
+<li><a href="#exploring-the-data">Exploring the Data</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#part-2-aesthetics">Part 2: Aesthetics</a></li>
+<li><a href="#part-3-grouping">Part 3: Grouping</a></li>
+<li><a href="#part-4-facets">Part 4: Facets</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,bGlicmFyeSh0aWR5dmVyc2UpCgoKCnVuaXF1ZShtcGckbWFudWZhY3R1cmVyKQoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZGlzdGluY3QoKQoKCgpnbGltcHNlKG1wZykKCgoKZ2dwbG90KG1wZywgYWVzKHggPSBtYW51ZmFjdHVyZXIsIGZpbGwgPSBtYW51ZmFjdHVyZXIpKSArCiAgZ2VvbV9iYXIoKSArCiAgZ2VvbV90ZXh0KHN0YXQgPSAnY291bnQnLCAKICAgICAgICAgICAgIGFlcyhsYWJlbCA9IGFmdGVyX3N0YXQoY291bnQpKSwgCiAgICAgICAgICAgICB2anVzdCA9IC0wLjUpICsKICB0aGVtZV9taW5pbWFsKCkgKwogIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gNDUsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZqdXN0ID0gMS4zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhqdXN0ID0gMSkpIAogIAoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZ3JvdXBfYnkobWFudWZhY3R1cmVyKSAlPiUKICB0YWxseSgpICU+JQogIHVuZ3JvdXAoKQoKCiMjIC0tLS0gZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyBHZXQgdGhlIGBtcGdgIHRpYmJsZSAlPiUKIyMgICBPbmx5IHNob3cgbWUgdGhlIGNvbHVtbiBgbWFudWZhY3R1cmVyYCAlPiUKIyMgICAgUGVyZm9ybSBhbnkgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIENvdW50IGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIERvbnQgZG8gYW55IG1vcmUgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIKCgoKbXBnICU+JQogIHNlbGVjdChtYW51ZmFjdHVyZXIpICU+JQogIHRhbGx5KCkgCgoKCm5hbWVzKG1wZykKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcykpIAoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBzaXplID0gY2xhc3MpKSAKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgYWxwaGEgPSBjbGFzcykpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIHNoYXBlID0gY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSwgY29sb3IgPSAiYmx1ZSIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpLCBjb2xvciA9ICIjMDAyODU1IikKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LAojIyAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICJibHVlIikpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSksCiMjICAgICAgICAgICAgICBjb2xvciA9IGMoIiMzNDczOGYiLCAiIzEyMmYzZCIsICIjYmUzZTJiIiwgIiNlZDhhNDUiLCAiI2Y2ZGU2YyIpKQoKCgptcGckY2xhc3MKCgoKdW5pcXVlKG1wZyRjbGFzcykKCgoKbGVuZ3RoKHVuaXF1ZShtcGckY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBjb2xvciA9IGNsYXNzKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gY2xhc3MpKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpCiMjICsgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKIGZhY2V0X3dyYXAofiBjbGFzcywgbnJvdyA9IDIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKICBmYWNldF9ncmlkKGRydiB+IGN5bCkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkgKwogIGZhY2V0X2dyaWQoLiB+IGN5bCkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRydiwgeSA9IGN5bCkpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKGRydiB+IC4pCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKC4gfiBjeWwpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF93cmFwKH4gY2xhc3MsIG5yb3cgPSAyKQoK" download="Week 5 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="read-the-submission-directions" class="section level2">
+<h2>Read the Submission Directions</h2>
+<p>On a separate document (WORD or PDF), answer the questions in parts 1, 2, and 4. You may work alone of together in groups of up to three people and submit one task on <a href="https://ecampus.wvu.edu/" target="_blank">eCampus</a> by the end of class today.</p>
+</div>
+<div id="load-up-some-libraries" class="section level2">
+<h2>Load Up Some Libraries</h2>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+</div>
+</div>
+<div id="part-1-more-ggplotting" class="section level1">
+<h1>Part 1: More ggplotting</h1>
+<p>Scenario: Do cars with big engines use more fuel than cars with small engines?</p>
+<p>OK so you probably know the answer but let’s make the justification as precise as possible.</p>
+<p>Let’s use the <code>mpg</code> data frame found in <code>ggplot2</code>.
+The data frame contains observations collected by the US Environment Protection Agency on 38 car models. To see all of the unique values, we can run</p>
+<pre class="r"><code>unique(mpg$manufacturer)</code></pre>
+<pre><code>##  [1] &quot;audi&quot;       &quot;chevrolet&quot;  &quot;dodge&quot;      &quot;ford&quot;       &quot;honda&quot;     
+##  [6] &quot;hyundai&quot;    &quot;jeep&quot;       &quot;land rover&quot; &quot;lincoln&quot;    &quot;mercury&quot;   
+## [11] &quot;nissan&quot;     &quot;pontiac&quot;    &quot;subaru&quot;     &quot;toyota&quot;     &quot;volkswagen&quot;</code></pre>
+<p>which is equivalent to the following as a <code>tibble</code></p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  distinct()</code></pre>
+<pre><code>## # A tibble: 15 x 1
+##    manufacturer
+##    &lt;chr&gt;       
+##  1 audi        
+##  2 chevrolet   
+##  3 dodge       
+##  4 ford        
+##  5 honda       
+##  6 hyundai     
+##  7 jeep        
+##  8 land rover  
+##  9 lincoln     
+## 10 mercury     
+## 11 nissan      
+## 12 pontiac     
+## 13 subaru      
+## 14 toyota      
+## 15 volkswagen</code></pre>
+<div id="finding-variables" class="section level2">
+<h2>Finding variables</h2>
+<p>We can use <code>glimpse</code> to see more about each variable</p>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, …
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, …
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2…
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 20…
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8,…
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;aut…
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;…
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, …
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, …
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;…
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;…</code></pre>
+</div>
+<div id="getting-counts" class="section level2">
+<h2>Getting counts</h2>
+<p>We can use a quick(ish) plot of the manufacturers and how many of each is represented in the data set<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<pre class="r"><code>ggplot(mpg, aes(x = manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  geom_text(stat = &#39;count&#39;, 
+             aes(label = after_stat(count)), 
+             vjust = -0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, 
+                                   vjust = 1.3,
+                                   hjust = 1)) </code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>but sometimes its just easier to use <code>dplyr</code></p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  group_by(manufacturer) %&gt;%
+  tally() %&gt;%
+  ungroup()</code></pre>
+<pre><code>## # A tibble: 15 x 2
+##    manufacturer     n
+##  * &lt;chr&gt;        &lt;int&gt;
+##  1 audi            18
+##  2 chevrolet       19
+##  3 dodge           37
+##  4 ford            25
+##  5 honda            9
+##  6 hyundai         14
+##  7 jeep             8
+##  8 land rover       4
+##  9 lincoln          3
+## 10 mercury          4
+## 11 nissan          13
+## 12 pontiac          5
+## 13 subaru          14
+## 14 toyota          34
+## 15 volkswagen      27</code></pre>
+<p>which is basically saying</p>
+<pre class="r"><code>Get the `mpg` tibble %&gt;%
+  Only show me the column `manufacturer` %&gt;%
+   Perform any wrangling by car manufacturer %&gt;%
+   Count by car manufacturer %&gt;%
+   Dont do any more wrangling by car manufacturer</code></pre>
+<p>The last step is somewhat important. R remembers certain things and grouping is one of them so its a good idea to <code>ungroup()</code> columns unless you know that is needed.</p>
+<p>So what would happen if we didn’t group? Well let’s see</p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  tally() </code></pre>
+<pre><code>## # A tibble: 1 x 1
+##       n
+##   &lt;int&gt;
+## 1   234</code></pre>
+<p>It just gave us a full count of all cars. So grouping is a lifesaver if you want to perform any operations by the values in a column.</p>
+</div>
+<div id="example-using-r-to-test-hypotheses" class="section level2">
+<h2>Example: Using R to Test Hypotheses</h2>
+<p>Notice from the output</p>
+<pre class="r"><code>names(mpg)</code></pre>
+<pre><code>##  [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;displ&quot;        &quot;year&quot;         &quot;cyl&quot;         
+##  [6] &quot;trans&quot;        &quot;drv&quot;          &quot;cty&quot;          &quot;hwy&quot;          &quot;fl&quot;          
+## [11] &quot;class&quot;</code></pre>
+<p>that</p>
+<ol style="list-style-type: decimal">
+<li><code>displ</code>: a car’s engine size in liters.</li>
+<li><code>hwy</code>: a car’s fuel efficiency on the highway, in miles per gallon (mpg).</li>
+</ol>
+<div id="hypothesis" class="section level3">
+<h3>Hypothesis</h3>
+<p>In all cases, a car with a low fuel efficiency consumes more fuel than a car with a high fuel efficiency when they travel the same distance.</p>
+</div>
+<div id="exploring-the-data" class="section level3">
+<h3>Exploring the Data</h3>
+<p>Let’s take the variables <code>displ</code> and <code>hwy</code> and try to use them in plots</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(aes(x = displ, y = hwy))</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>So what happened here? Well we simply put <code>displ</code> on the <em>x</em>-axis and hwy on the <em>y</em>-axis to compare them using points. The plot shows a negative relationship between engine size (displ) and fuel efficiency (hwy). In other words, cars with big engines use more fuel. Does this confirm or refute the hypothesis about fuel efficiency and engine size?</p>
+<div id="part-1-questions-for-you-to-turn-in" class="section level4">
+<h4>Part 1 Questions for You to Turn In</h4>
+<ol style="list-style-type: decimal">
+<li>Run <code>ggplot(data = mpg)</code>. What do you see and why is it that way?</li>
+<li>How many rows are in mpg? How many columns?</li>
+<li>What does the drv variable describe?</li>
+<li>Make a scatterplot of <code>hwy</code> vs <code>cyl.</code></li>
+<li>What happens if you make a scatterplot of <code>class</code> vs <code>drv</code>? Is the plot useful? Why or why not?</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="part-2-aesthetics" class="section level1">
+<h1>Part 2: Aesthetics</h1>
+<p>Aesthetics are more than just coloring a plot, you can define directions, shapes, sizes, types, and provide a useful way to bring in a third variable into a static two dimensional image.</p>
+<p>So how is this done? Well in a nutshell you can add a third variable to a two dimensional scatterplot by mapping it to an aesthetic. Recall that an <strong>aesthetic</strong> is a <em>visual property of the objects in your plot</em>.</p>
+<p>You can convey information about your data by mapping the aesthetics in your plot to the variables in your dataset. For example, you can map the colors of your points to the class variable to reveal the class of each car.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) </code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+<em>or if you like British English, <code>colour</code> can be used interchangeably</em></p>
+<p>As a reminder, to map an aesthetic to a variable, associate the name of the aesthetic to the name of the variable inside <code>aes()</code>. <code>ggplot2</code> will automatically assign a unique level of the aesthetic - here a unique color - to each unique value of the variable, a process known as scaling.</p>
+<p><code>ggplot2</code> will also add a legend that explains which levels correspond to which values but you can turn that off as well.</p>
+<p>With that said, we mapped class to the color aesthetic, and though pretty<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> that may not be the best method since the graphic is a bit hard to decipher immediately. Instead, we could have mapped class to the size aesthetic in the same way.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class)) </code></pre>
+<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>So what’s up with the warning? In this case, the exact size of each point would reveal its class affiliation. So the warning is telling us that mapping an unordered variable (<em>class</em>) to an ordered aesthetic (<em>size</em>) is not a good idea.</p>
+<p>Basically you are trying to plot a categorical variable - the manufacturers of cars - against a continuous variable - a vehicle’s fuel efficiency on the highway - and its telling you that you probably shouldn’t do that<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
+<p>Ok well let’s try something else to distinguish the types of vehicles.</p>
+<p>What about the <em>alpha</em> level better known as <strong>transparency</strong>, or <em>how much of the color can you see through</em>?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))</code></pre>
+<pre><code>## Warning: Using alpha for a discrete variable is not advised.</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>No? Maybe the shape then</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))</code></pre>
+<pre><code>## Warning: The shape palette can deal with a maximum of 6 discrete values because
+## more than 6 becomes difficult to discriminate; you have 7. Consider
+## specifying shapes manually if you must have them.</code></pre>
+<pre><code>## Warning: Removed 62 rows containing missing values (geom_point).</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Uh oh. Something is missing from the plot! So what happened to the SUVs? <code>ggplot2</code> will only use <em>six shapes</em> at a time. By default, additional groups will go unplotted when you use the shape aesthetic so remember this and you’ll save yourself from throwing a computer.</p>
+<p>If you are a controlling person, you can also set the aesthetic properties of your geom manually. For example, we can make all of the points in our plot blue</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = &quot;blue&quot;)</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>or even <a href="https://universityrelations.wvu.edu/brand-guide/color" target="_blank">WVU Blue</a></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = &quot;#002855&quot;)</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<div id="part-2-questions-for-you-to-turn-in" class="section level4">
+<h4>Part 2 Questions for You to Turn In</h4>
+<ol style="list-style-type: decimal">
+<li>Run the following:</li>
+</ol>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, 
+                           color = &quot;blue&quot;))</code></pre>
+<p>Why are the points not blue? What has gone wrong with this code and what is it actually doing?</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Which variables in <code>mpg</code> are</li>
+</ol>
+<ul>
+<li>categorical?</li>
+<li>continuous?</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Map a continuous variable to <em>color</em>, <em>size</em>, and <em>shape.</em> How do these aesthetics behave differently for categorical vs. continuous variables?</p></li>
+<li><p>Briefly describe happens if you map the same variable to multiple aesthetics?</p></li>
+<li><p>What does the stroke aesthetic do? What shapes does it work with? (Hint: you could use <code>?geom_point</code>)</p></li>
+<li><p>What happens if you map an aesthetic to something other than a variable name, like <code>aes(colour = displ &lt; 5)</code>?</p></li>
+</ol>
+</div>
+</div>
+<div id="part-3-grouping" class="section level1">
+<h1>Part 3: Grouping</h1>
+<p>Maybe you’d like to use multiple colors. Let try something fun based off of this <a href="http://www.color-hex.com/color-palette/65496" target="_blank">palette</a></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), 
+             color = c(&quot;#34738f&quot;, &quot;#122f3d&quot;, &quot;#be3e2b&quot;, &quot;#ed8a45&quot;, &quot;#f6de6c&quot;))</code></pre>
+<p>Uh oh. That didn’t work. Why not?</p>
+<p>Well to <code>ggplot</code> there are 234 different data points and it doesn’t know how you want that color palette distributed. By the power of mathematics, 5 &lt; 234 so you get an error. To fix it, you either assign 1 color to every data point or 234 different colors. Neither of these sound great. So what can we do?</p>
+<p>Well we can group by category. That may help. If you run</p>
+<pre class="r"><code>mpg$class</code></pre>
+<pre><code>##   [1] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+##   [6] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+##  [11] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+##  [16] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;suv&quot;        &quot;suv&quot;       
+##  [21] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;2seater&quot;    &quot;2seater&quot;   
+##  [26] &quot;2seater&quot;    &quot;2seater&quot;    &quot;2seater&quot;    &quot;suv&quot;        &quot;suv&quot;       
+##  [31] &quot;suv&quot;        &quot;suv&quot;        &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+##  [36] &quot;midsize&quot;    &quot;midsize&quot;    &quot;minivan&quot;    &quot;minivan&quot;    &quot;minivan&quot;   
+##  [41] &quot;minivan&quot;    &quot;minivan&quot;    &quot;minivan&quot;    &quot;minivan&quot;    &quot;minivan&quot;   
+##  [46] &quot;minivan&quot;    &quot;minivan&quot;    &quot;minivan&quot;    &quot;pickup&quot;     &quot;pickup&quot;    
+##  [51] &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;    
+##  [56] &quot;pickup&quot;     &quot;pickup&quot;     &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+##  [61] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;pickup&quot;    
+##  [66] &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;    
+##  [71] &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;suv&quot;       
+##  [76] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+##  [81] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;pickup&quot;     &quot;pickup&quot;    
+##  [86] &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;    
+##  [91] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot;
+##  [96] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot;
+## [101] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot;
+## [106] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;midsize&quot;    &quot;midsize&quot;   
+## [111] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+## [116] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot;
+## [121] &quot;subcompact&quot; &quot;subcompact&quot; &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+## [126] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+## [131] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+## [136] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+## [141] &quot;suv&quot;        &quot;compact&quot;    &quot;compact&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+## [146] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+## [151] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;midsize&quot;   
+## [156] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;suv&quot;       
+## [161] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;       
+## [166] &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;compact&quot;   
+## [171] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;suv&quot;        &quot;suv&quot;       
+## [176] &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;suv&quot;        &quot;midsize&quot;   
+## [181] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+## [186] &quot;midsize&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+## [191] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+## [196] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;suv&quot;        &quot;suv&quot;       
+## [201] &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;     &quot;pickup&quot;    
+## [206] &quot;pickup&quot;     &quot;pickup&quot;     &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+## [211] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+## [216] &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;    &quot;compact&quot;   
+## [221] &quot;compact&quot;    &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot; &quot;subcompact&quot;
+## [226] &quot;subcompact&quot; &quot;subcompact&quot; &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;   
+## [231] &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;    &quot;midsize&quot;</code></pre>
+<p>that doesn’t help you much in figuring out the types of vehicles we have (yes we did find it before by plotting but assume we hadn’t). Unless you like to clean this type of mess, we simply want to find the unique values and moreover, for coloring purposes, how many we have.</p>
+<p>Again to find a list of unique values, we can run</p>
+<pre class="r"><code>unique(mpg$class)</code></pre>
+<pre><code>## [1] &quot;compact&quot;    &quot;midsize&quot;    &quot;suv&quot;        &quot;2seater&quot;    &quot;minivan&quot;   
+## [6] &quot;pickup&quot;     &quot;subcompact&quot;</code></pre>
+<p>Well that’s better but I’m lazy and don’t want to count so let’s find the number of unique values</p>
+<pre class="r"><code>length(unique(mpg$class))</code></pre>
+<pre><code>## [1] 7</code></pre>
+<p>Oh good! There are 7 so that implies when we plot by class (type of vehicle), we need to have seven colors.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>which we did earlier. But to fill it with what we want, we need to override the default colors</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, 
+                           color = class)) +
+  scale_color_manual(values = c(&quot;#490A3D&quot;, &quot;#BD1550&quot;, &quot;#E97F02&quot;, &quot;#F8CA00&quot;, &quot;#8A9B0F&quot;, &quot;#95C7D8&quot;, &quot;#FFBFF5&quot;))</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>Note that since the class variable (type of vehicle) is discrete, we can use <code>scale_color_manual()</code>. Other discrete scales in ggplot can be found <a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" target="_blank">here</a></p>
+<p>Continuous variables use other scales and you can fins more about that and other scales can be found <a href="https://ggplot2.tidyverse.org/reference/#section-scales" target="_blank">here</a></p>
+<p>Now those dots are pretty small. Let’s make them bigger.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&quot;#490A3D&quot;, &quot;#BD1550&quot;, &quot;#E97F02&quot;, &quot;#F8CA00&quot;, &quot;#8A9B0F&quot;, &quot;#95C7D8&quot;, &quot;#FFBFF5&quot;))</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>That does look better but why is the size now within the geom_point aesthetic? If you don’t know, that’s ok! We’ll
+get to that later but for now, think about it.</p>
+<div id="note" class="section level5">
+<h5>NOTE</h5>
+<p>You’re writing code so you will get errors! But one common problem when creating ggplot2 graphics is to put the <code>+</code> in the wrong place:</p>
+<p>It has to come at the end of the line, not the start. In other words, make sure you haven’t accidentally written code like this</p>
+<pre class="r"><code>ggplot(data = mpg) 
++ geom_point(mapping = aes(x = displ, y = hwy))</code></pre>
+<p>If you’re still stuck, try the help. You can get help about any R function by running <code>?function_name</code> in the console, or selecting the function name and pressing F1 in RStudio. Don’t worry if the help doesn’t seem that helpful - instead skip down to the examples and look for examples that may match what you’re trying to do. For the aesthetics, run</p>
+<p><code>?aes</code></p>
+</div>
+</div>
+<div id="part-4-facets" class="section level1">
+<h1>Part 4: Facets</h1>
+<p>Another way to add additional variables is with aesthetics. Another way, particularly useful for categorical variables, is to split your plot into facets, subplots that each display one subset of the data set.</p>
+<p>To facet your plot by a single variable, you can use <code>facet_wrap()</code> or <code>facet_grid()</code>. Let’s fow now just concentrate on wrapping the data set.</p>
+<p>The first argument of <code>facet_wrap()</code> should be a formula, which you create with <code>~</code> followed by a variable name - here “formula” is the name of a data structure in R, not a synonym for an “equation”.</p>
+<p>The variable that you pass to <code>facet_wrap()</code> should be discrete so it can essentially be split apart.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&quot;#490A3D&quot;, &quot;#BD1550&quot;, &quot;#E97F02&quot;, &quot;#F8CA00&quot;, &quot;#8A9B0F&quot;, &quot;#95C7D8&quot;, &quot;#FFBFF5&quot;)) +
+ facet_wrap(~ class, nrow = 2)</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>To facet your plot on the combination of two variables, use <code>facet_grid()</code> to your plot The first argument
+of this is also a formula. This time the formula should contain two variable names separated by a <code>~</code>.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&quot;#490A3D&quot;, &quot;#BD1550&quot;, &quot;#E97F02&quot;, &quot;#F8CA00&quot;, &quot;#8A9B0F&quot;, &quot;#95C7D8&quot;, &quot;#FFBFF5&quot;)) +
+  facet_grid(drv ~ cyl)</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>If you prefer to not facet particular rows or columns, you can just use a <code>.</code> instead of a variable name to imply the entire data set</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&quot;#490A3D&quot;, &quot;#BD1550&quot;, &quot;#E97F02&quot;, &quot;#F8CA00&quot;, &quot;#8A9B0F&quot;, &quot;#95C7D8&quot;, &quot;#FFBFF5&quot;)) +
+  facet_grid(. ~ cyl)</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<div id="part-4-questions-for-you-to-turn-in" class="section level4">
+<h4>Part 4 Questions for You to Turn In</h4>
+<ol style="list-style-type: decimal">
+<li><p>What happens if you facet on a continuous variable?</p></li>
+<li><p>What do the empty cells in plot with <code>facet_grid(drv ~ cyl)</code> mean? How do they relate to this plot?</p></li>
+</ol>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>What plots does the following code make? What does . do?</li>
+</ol>
+<ul>
+<li>Plot 1</li>
+</ul>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)</code></pre>
+<ul>
+<li>Plot 2</li>
+</ul>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Take the faceted plot below and compare it to the one with color you did earlier</li>
+</ol>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)</code></pre>
+<p>What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Read <code>?facet_wrap</code>. What does <code>nrow</code> do? What does <code>ncol</code> do? What other options control the layout of the individual panels? Why doesn’t <code>facet_grid()</code> have <code>nrow</code> and <code>ncol</code> arguments (aka options)?</p></li>
+<li><p>When using <code>facet_grid()</code> you should usually put the variable with more unique levels in the columns. Why?</p></li>
+</ol>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Take some time to change the values in the <code>ggplot</code> to see how it changes.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>I think<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>but never say never!<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Load Up Some Libraries  Part 1: More ggplotting  Finding variables Getting counts Example: Using R to Test Hypotheses  Hypothesis Exploring the Data   Part 2: Aesthetics    .">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/05-example/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://edp693e.theoreticalphysed.com/example/05-example/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/05-example/">
+  <meta property="og:title" content="Making Copies | Data Visualization">
+  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Load Up Some Libraries  Part 1: More ggplotting  Finding variables Getting counts Example: Using R to Test Hypotheses  Hypothesis Exploring the Data   Part 2: Aesthetics    ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
+
+<script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
+<link rel="shortcut icon" href="https://edp693e.theoreticalphysed.com/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp693e.theoreticalphysed.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp693e.theoreticalphysed.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp693e.theoreticalphysed.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp693e.theoreticalphysed.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp693e.theoreticalphysed.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp693e.theoreticalphysed.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp693e.theoreticalphysed.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp693e.theoreticalphysed.com/img/android-icon-192x192.png" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="96x96" />
+<meta name="application-name" content="EDP 693e: Data Visualization" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
+
+
+  <title>Making Copies | Data Visualization</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/readings/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/due/"><span>Due?</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/professor/"><span>Professor</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/">About the Examples</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/01-example/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/01-example/">Week 1: Friends Don&#39;t Let Friends Use Pie Charts</a>
+      </li>
+      
+      <li >
+        <a href="/example/02-example/">Week 2: Base R is a Thing</a>
+      </li>
+      
+      <li >
+        <a href="/example/03-example/">Week 3: ggplotting</a>
+      </li>
+      
+      <li >
+        <a href="/example/04-example/">Week 4: Tidy Themes</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/05-example/">Week 5: Making Copies</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Making Copies</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
+</ul></li>
+<li><a href="#part-1-more-ggplotting">Part 1: More ggplotting</a>
+<ul>
+<li><a href="#finding-variables">Finding variables</a></li>
+<li><a href="#getting-counts">Getting counts</a></li>
+<li><a href="#example-using-r-to-test-hypotheses">Example: Using R to Test Hypotheses</a>
+<ul>
+<li><a href="#hypothesis">Hypothesis</a></li>
+<li><a href="#exploring-the-data">Exploring the Data</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#part-2-aesthetics">Part 2: Aesthetics</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,IyMgLS0tLSAKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodmlyaWRpcykKbGlicmFyeShSQ29sb3JCcmV3ZXIpCmxpYnJhcnkoZ2d0aGVtZXMpCmxpYnJhcnkoZ2d0ZXh0KQoKCiMjIC0tLS0KIyMgaW5jb21lX2RhdGEgPC0gcmVhZF9jc3YoImluY29tZS5jc3YiKQoKCiMjIC0tLS0KbmFtZXMoaW5jb21lX2RhdGEpCgoKIyMgLS0tLQpnbGltcHNlKGluY29tZV9kYXRhKQoKCiMjIC0tLS0KZ2dwbG90KGluY29tZV9kYXRhLCBhZXMoeCA9IExvY2F0aW9uLCAKICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB4bGFiKCJDaXR5IGFuZCBTdGF0ZSIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0Kbm90X3RvcDEwX2luY29tZV9kYXRhIDwtIGluY29tZV9kYXRhICU+JQogICAgICAgICAgICAgICAgICAgICAgICAgc2VsZWN0KExvY2F0aW9uLCBMb3dlcl8yMDAwKSAlPiUKICAgICAgICAgICAgICAgICAgICAgICAgIHNsaWNlX21heChMb3dlcl8yMDAwLCBuID0gMTApOyBub3RfdG9wMTBfaW5jb21lX2RhdGEKCgojIyAtLS0tCnRvcDEwX2luY29tZV9kYXRhIDwtIGluY29tZV9kYXRhICU+JQogICAgICAgICAgICAgICAgICAgICBzZWxlY3QoTG9jYXRpb24sIExvd2VyXzIwMDApICU+JQogICAgICAgICAgICAgICAgICAgICBoZWFkKDEwKTsgdG9wMTBfaW5jb21lX2RhdGEKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSBMb2NhdGlvbiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gTG9jYXRpb24sIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHNjYWxlX2ZpbGxfdmlyaWRpc19jKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHNjYWxlX2ZpbGxfdmlyaWRpc19jKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCiMjID90aGVtZQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICBzY2FsZV9maWxsX3ZpcmlkaXNfYygpICsKICAgICAgIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gMzMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmYWNlID0gImJvbGQiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAwLjUpLAogICAgICAgICAgICAgYXhpcy50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci55ID0gZWxlbWVudF9saW5lKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnkgPSBlbGVtZW50X2xpbmUoKSkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2dyZXkoKSArICMgb3IgdGhlbWVfZ3JheSgpCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfYncoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfbGluZWRyYXcoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfbGlnaHQoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZGFyaygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9taW5pbWFsKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2NsYXNzaWMoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfdm9pZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9mZXcoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZml2ZXRoaXJ0eWVpZ2h0KCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2dkb2NzKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2hjKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2lncmF5KCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3NvbGFyaXplZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9zb2xpZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV90dWZ0ZSgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV90dWZ0ZSgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV93c2ooKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZXhjZWwoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2Jhcihwb3NpdGlvbiA9ICdkb2RnZScsCiAgICAgICAgICAgICAgICBzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB0aGVtZV9maXZldGhpcnR5ZWlnaHQoKSArCiAgICAgICB0aGVtZShheGlzLnRleHQueCA9IGVsZW1lbnRfdGV4dChhbmdsZSA9IDQ1LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAwLjUpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikgKyAgICAgICAKICAgICAgIGd1aWRlcyhmaWxsPWd1aWRlX2xlZ2VuZCh0aXRsZT0iSW5jb21lIikpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIocG9zaXRpb24gPSAnZG9kZ2UnLAogICAgICAgICAgICAgICAgd2lkdGggPSAwLjksCiAgICAgICAgICAgICAgICBzdGF0ID0gImlkZW50aXR5IiwKICAgICAgICAgICAgICAgIGNvbG9yID0gIiNGRkZGRkYiKSArCiAgICAgICBnZW9tX3JpY2h0ZXh0KGFlcyhsYWJlbCA9IExvY2F0aW9uKSwKICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiI0ZGRkZGRiIsCiAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2Uod2lkdGggPSAwLjkpLCAKICAgICAgICAgICAgICAgICAgICAgaGp1c3QgPSAwLAogICAgICAgICAgICAgICAgICAgICB2anVzdCA9IC0wLjEsCiAgICAgICAgICAgICAgICAgICAgIGFuZ2xlID0gNDUsCiAgICAgICAgICAgICAgICAgICAgIGZvbnRmYWNlID0gImJvbGQiLAogICAgICAgICAgICAgICAgICAgICBzaG93LmxlZ2VuZCA9IEZBTFNFKSArCiAgICAgICBzY2FsZV9maWxsX2dyYWRpZW50KGxvdyA9ICIjNTJiZjkwIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgaGlnaCA9ICIjMzE3MjU2IikgKwogICAgICAgdGhlbWVfbWluaW1hbCgpICsKICAgICAgIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgYXhpcy50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci55ID0gZWxlbWVudF9saW5lKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnkgPSBlbGVtZW50X2xpbmUoKSkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpICsgICAgICAgCiAgICAgICBndWlkZXMoZmlsbCA9IGd1aWRlX2xlZ2VuZCh0aXRsZSA9ICJJbmNvbWUiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV2ZXJzZSA9IFRSVUUpKSArIAogICAgICAgZXhwYW5kX2xpbWl0cyh4PWMoMCwxNCksIAogICAgICAgICAgICAgICAgICAgICB5PWMoMCwgNjApKQoK" download="Week 4 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="load-up-some-libraries" class="section level2">
+<h2>Load Up Some Libraries</h2>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+</div>
+</div>
+<div id="part-1-more-ggplotting" class="section level1">
+<h1>Part 1: More ggplotting</h1>
+<p>Scenario: Do cars with big engines use more fuel than cars with small engines?</p>
+<p>OK so you probably know the answer but let’s make the justification as precise as possible.</p>
+<p>Let’s use the <code>mpg</code> data frame found in <code>ggplot2</code>.
+The data frame contains observations collected by the US Environment Protection Agency on 38 car models. To see all of the unique values, we can run</p>
+<pre class="r"><code>unique(mpg$manufacturer)</code></pre>
+<pre><code>##  [1] &quot;audi&quot;       &quot;chevrolet&quot;  &quot;dodge&quot;      &quot;ford&quot;       &quot;honda&quot;     
+##  [6] &quot;hyundai&quot;    &quot;jeep&quot;       &quot;land rover&quot; &quot;lincoln&quot;    &quot;mercury&quot;   
+## [11] &quot;nissan&quot;     &quot;pontiac&quot;    &quot;subaru&quot;     &quot;toyota&quot;     &quot;volkswagen&quot;</code></pre>
+<p>which is equivalent to the following as a <code>tibble</code></p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  distinct()</code></pre>
+<pre><code>## # A tibble: 15 x 1
+##    manufacturer
+##    &lt;chr&gt;       
+##  1 audi        
+##  2 chevrolet   
+##  3 dodge       
+##  4 ford        
+##  5 honda       
+##  6 hyundai     
+##  7 jeep        
+##  8 land rover  
+##  9 lincoln     
+## 10 mercury     
+## 11 nissan      
+## 12 pontiac     
+## 13 subaru      
+## 14 toyota      
+## 15 volkswagen</code></pre>
+<div id="finding-variables" class="section level2">
+<h2>Finding variables</h2>
+<p>We can use <code>glimpse</code> to see more about each variable</p>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, …
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, …
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2…
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 20…
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8,…
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;aut…
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;…
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, …
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, …
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;…
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;…</code></pre>
+</div>
+<div id="getting-counts" class="section level2">
+<h2>Getting counts</h2>
+<p>We can use a quick(ish) plot of the manufacturers and how many of each is represented in the data set<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<pre class="r"><code>ggplot(mpg, aes(x = manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  geom_text(stat = &#39;count&#39;, 
+             aes(label = after_stat(count)), 
+             vjust = -0.5) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, 
+                                   vjust = 1.3,
+                                   hjust = 1)) </code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>but sometimes its just easier to use <code>dplyr</code></p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  group_by(manufacturer) %&gt;%
+  tally() %&gt;%
+  ungroup()</code></pre>
+<pre><code>## # A tibble: 15 x 2
+##    manufacturer     n
+##  * &lt;chr&gt;        &lt;int&gt;
+##  1 audi            18
+##  2 chevrolet       19
+##  3 dodge           37
+##  4 ford            25
+##  5 honda            9
+##  6 hyundai         14
+##  7 jeep             8
+##  8 land rover       4
+##  9 lincoln          3
+## 10 mercury          4
+## 11 nissan          13
+## 12 pontiac          5
+## 13 subaru          14
+## 14 toyota          34
+## 15 volkswagen      27</code></pre>
+<p>which is basically saying</p>
+<pre class="r"><code>Get the `mpg` tibble %&gt;%
+  Only show me the column `manufacturer` %&gt;%
+   Perform any wrangling by car manufacturer %&gt;%
+   Count by car manufacturer %&gt;%
+   Dont do any more wrangling by car manufacturer</code></pre>
+<p>The last step is somewhat important. R remembers certain things and grouping is one of them so its a good idea to <code>ungroup()</code> columns unless you know that is needed.</p>
+<p>So what would happen if we didn’t group? Well let’s see</p>
+<pre class="r"><code>mpg %&gt;%
+  select(manufacturer) %&gt;%
+  tally() </code></pre>
+<pre><code>## # A tibble: 1 x 1
+##       n
+##   &lt;int&gt;
+## 1   234</code></pre>
+<p>It just gave us a full count of all cars. So grouping is a lifesaver if you want to perform any operations by the values in a column.</p>
+</div>
+<div id="example-using-r-to-test-hypotheses" class="section level2">
+<h2>Example: Using R to Test Hypotheses</h2>
+<p>Notice from the output</p>
+<pre class="r"><code>names(mpg)</code></pre>
+<pre><code>##  [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;displ&quot;        &quot;year&quot;         &quot;cyl&quot;         
+##  [6] &quot;trans&quot;        &quot;drv&quot;          &quot;cty&quot;          &quot;hwy&quot;          &quot;fl&quot;          
+## [11] &quot;class&quot;</code></pre>
+<p>that</p>
+<ol style="list-style-type: decimal">
+<li><code>displ</code>: a car’s engine size in liters.</li>
+<li><code>hwy</code>: a car’s fuel efficiency on the highway, in miles per gallon (mpg).</li>
+</ol>
+<div id="hypothesis" class="section level3">
+<h3>Hypothesis</h3>
+<p>In all cases, a car with a low fuel efficiency consumes more fuel than a car with a high fuel efficiency when they travel the same distance.</p>
+</div>
+<div id="exploring-the-data" class="section level3">
+<h3>Exploring the Data</h3>
+<p>Let’s take the variables <code>displ</code> and <code>hwy</code> and try to use them in plots</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(aes(x = displ, y = hwy))</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>So what happened here? Well we simply put <code>displ</code> on the <em>x</em>-axis and hwy on the <em>y</em>-axis to compare them using points. The plot shows a negative relationship between engine size (displ) and fuel efficiency (hwy). In other words, cars with big engines use more fuel. Does this confirm or refute the hypothesis about fuel efficiency and engine size?</p>
+<div id="part-1-questions-for-you-to-turn-in" class="section level4">
+<h4>Part 1 Questions for You to Turn In</h4>
+<ol style="list-style-type: decimal">
+<li>Run <code>ggplot(data = mpg)</code>. What do you see and why is it that way?</li>
+<li>How many rows are in mpg? How many columns?</li>
+<li>What does the drv variable describe?</li>
+<li>Make a scatterplot of <code>hwy</code> vs <code>cyl.</code></li>
+<li>What happens if you make a scatterplot of <code>class</code> vs <code>drv</code>? Is the plot useful? Why or why not?</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="part-2-aesthetics" class="section level1">
+<h1>Part 2: Aesthetics</h1>
+<p>Aesthetics are more than just coloring a plot, you can define directions, shapes, sizes, types, and provide a useful way to bring in a third variable into a static two dimensional image.</p>
+<p>So how is this done? Well in a nutshell you can add a third variable to a two dimensional scatterplot by mapping it to an aesthetic. Recall that an <strong>aesthetic</strong> is a <em>visual property of the objects in your plot</em>.</p>
+<p>You can convey information about your data by mapping the aesthetics in your plot to the variables in your dataset. For example, you can map the colors of your points to the class variable to reveal the class of each car.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) </code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+<em>or if you like British English, <code>colour</code> can be used interchangeably</em></p>
+<p>As a reminder, to map an aesthetic to a variable, associate the name of the aesthetic to the name of the variable inside <code>aes()</code>. <code>ggplot2</code> will automatically assign a unique level of the aesthetic - here a unique color - to each unique value of the variable, a process known as scaling.</p>
+<p><code>ggplot2</code> will also add a legend that explains which levels correspond to which values but you can turn that off as well.</p>
+<p>With that said, we mapped class to the color aesthetic, and though pretty<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> that may not be the best method since the graphic is a bit hard to decipher immediately. Instead, we could have mapped class to the size aesthetic in the same way.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class)) </code></pre>
+<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/example/05-example_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Take some time to change the values in the <code>ggplot</code> to see how it changes.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>I think<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/Courses/edp693e/edit/master/content/example/05-example.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 693e: Data Visualization (Spring 2021)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://counselingandlearningsci.wvu.edu/" target="_blank" rel="noopener">Counseling &amp; Learning Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope fa-fw"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next 15 weeks) &emsp;&emsp;
+                <i class="far fa-clock fa-fw"></i> You pick!
+                <br><i class="fas fa-university fa-fw"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2021 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+
+            <p>This site was created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with customizations heavily influenced by Dr. Andrew Heiss'<a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> site<a/>. </p>
+
+            <p><a href="https://github.com/piechartssuck/Courses/tree/edp693e" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.cbb55fd8eafa574bce72dcb94f65cd2c.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
