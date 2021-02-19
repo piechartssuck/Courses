@@ -41,6 +41,7 @@ Many people have created many useful tools for selecting the correct chart type 
 - [**Storytelling with Data**](http://www.storytellingwithdata.com/): Blog and site full of resources by Cole Nussbaumer Knaflic.
 - [**Junk Charts**](http://junkcharts.typepad.com/){target="_blank"}: Blog by [Kaiser Fung](https://twitter.com/junkcharts){target="_blank"}.
 - [**WTF Visualizations**](http://viz.wtf/){target="_blank"}: Visualizations that make you ask "wtf?"
+- [**R Psychologist**](https://rpsychologist.com/viz/){target="_blank"}: A fantastic collection of interactive applications of statistical concepts by [Kristoffer Magnusson](https://twitter.com/krstoffr){target="_blank"}
 - [**Seeing Data**](http://seeingdata.org/){target="_blank"}: A series of research projects about perceptions and visualizations.
 
 
