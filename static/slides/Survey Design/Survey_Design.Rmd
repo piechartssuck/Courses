@@ -33,9 +33,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S0_Introduction.mp3" type="audio/mpeg">
+  <source src="audio/survey/S0_Introduction.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -49,16 +49,16 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S1_TDM_A.mp3" type="audio/mpeg">
+  <source src="audio/survey/S1_TDM_A.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S1_TDM_B.mp3" type="audio/mpeg">
+  <source src="audio/survey/S1_TDM_B.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -78,9 +78,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S2_IncreasingBenefits.mp3" type="audio/mpeg">
+  <source src="audio/survey/S2_IncreasingBenefits.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -96,9 +96,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S3_Decreasing Costs.mp3" type="audio/mpeg">
+  <source src="audio/survey/S3_Decreasing Costs.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -113,9 +113,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S4_EstiablishingTrust.mp3" type="audio/mpeg">
+  <source src="audio/survey/S4_EstiablishingTrust.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -125,9 +125,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 ***Things to think about***
 
 <audio controls preload="auto">
-  <source src="/audio/survey/S5_GeneralGuidelines.mp3" type="audio/mpeg">
+  <source src="audio/survey/S5_GeneralGuidelines.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 
 ---
 
@@ -188,9 +188,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S6_DoubleBarrel.mp3" type="audio/mpeg">
+  <source src="audio/survey/S6_DoubleBarrel.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -226,9 +226,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S7_Nominal.mp3" type="audio/mpeg">
+  <source src="audio/survey/S7_Nominal.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 <br>
@@ -246,9 +246,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S8_NominalDich.mp3" type="audio/mpeg">
+  <source src="audio/survey/S8_NominalDich.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -261,9 +261,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S9_Ordinal.mp3" type="audio/mpeg">
+  <source src="audio/survey/S9_Ordinal.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 <br>
@@ -280,9 +280,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S8_NominalDich.mp3" type="audio/mpeg">
+  <source src="audio/survey/S8_NominalDich.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -291,9 +291,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S10_OrdinalorNominal.mp3" type="audio/mpeg">
+  <source src="audio/survey/S10_OrdinalorNominal.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 <br>
 <center>
@@ -310,9 +310,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S11_SemanticDiff.mp3" type="audio/mpeg">
+  <source src="audio/survey/S11_SemanticDiff.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -326,9 +326,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S12_VisualAnalogs.mp3" type="audio/mpeg">
+  <source src="audio/survey/S12_VisualAnalogs.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -341,9 +341,9 @@ Some information about the audio files. Again, I'm no Morgan Freeman but most pa
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S13_GuttmanScaling.mp3" type="audio/mpeg">
+  <source src="audio/survey/S13_GuttmanScaling.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -362,9 +362,9 @@ Comes in many names:
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S15_SkipLogic.mp3" type="audio/mpeg">
+  <source src="audio/survey/S15_SkipLogic.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -373,9 +373,9 @@ Comes in many names:
 
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S16_ClosedEnded.mp3" type="audio/mpeg">
+  <source src="audio/survey/S16_ClosedEnded.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -401,9 +401,9 @@ Comes in many names:
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S17_PosNegStem.mp3" type="audio/mpeg">
+  <source src="audio/survey/S17_PosNegStem.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -425,9 +425,9 @@ Comes in many names:
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S18_ExhaustiveAndME.mp3" type="audio/mpeg">
+  <source src="audio/survey/S18_ExhaustiveAndME.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -441,9 +441,9 @@ Comes in many names:
 <br>
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S19_Spacing.mp3" type="audio/mpeg">
+  <source src="audio/survey/S19_Spacing.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -466,9 +466,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S20_Unordered.mp3" type="audio/mpeg">
+  <source src="audio/survey/S20_Unordered.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -485,9 +485,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S21_Comparisons.mp3" type="audio/mpeg">
+  <source src="audio/survey/S21_Comparisons.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -504,9 +504,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S22_ForcedChoice.mp3" type="audio/mpeg">
+  <source src="audio/survey/S22_ForcedChoice.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -523,9 +523,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S23_SingleMultipleChoice.mp3" type="audio/mpeg">
+  <source src="audio/survey/S23_SingleMultipleChoice.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -562,9 +562,9 @@ Randomize response options if there is concern about order effects
 .pull-right[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S24_Scalar.mp3" type="audio/mpeg">
+  <source src="audio/survey/S24_Scalar.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -592,9 +592,9 @@ Randomize response options if there is concern about order effects
 .pull-right[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S25_Align.mp3" type="audio/mpeg">
+  <source src="audio/survey/S25_Align.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -610,9 +610,9 @@ Randomize response options if there is concern about order effects
 
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S26_OpenEnded.mp3" type="audio/mpeg">
+  <source src="audio/survey/S26_OpenEnded.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -632,9 +632,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S27_Numerical.mp3" type="audio/mpeg">
+  <source src="audio/survey/S27_Numerical.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -661,9 +661,9 @@ Randomize response options if there is concern about order effects
 .pull-right[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S28_Lists.mp3" type="audio/mpeg">
+  <source src="audio/survey/S28_Lists.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -692,9 +692,9 @@ Randomize response options if there is concern about order effects
 .pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S29_Explanatory.mp3" type="audio/mpeg">
+  <source src="audio/survey/S29_Explanatory.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
@@ -710,9 +710,9 @@ Randomize response options if there is concern about order effects
 
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S30_PartiallyClosed.mp3" type="audio/mpeg">
+  <source src="audio/survey/S30_PartiallyClosed.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -722,9 +722,9 @@ Randomize response options if there is concern about order effects
 .pull-right[
 <center>
 <audio controls preload="auto">
-  <source src="/audio/survey/S31_PartiallyClosedNominal.mp3" type="audio/mpeg">
+  <source src="audio/survey/S31_PartiallyClosedNominal.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 ]
 
