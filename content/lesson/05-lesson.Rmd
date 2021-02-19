@@ -1,0 +1,25 @@
+---
+title: "Making Copies"
+linktitle: "Week 5: Making Copies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have two modules to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Reporting with R Markdown 
+
+- Introduction to Data Visualization with ggplot2
+
+For more information about these, take a look at the tentative schedule.
+

@@ -2015,6 +2015,7 @@ library(ggtext)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#first-things-first-set-your-working-directory&#34;&gt;First Things First! Set your Working Directory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#download-the-script&#34;&gt;Download the script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#read-the-submission-directions&#34;&gt;Read the Submission Directions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#load-up-some-libraries&#34;&gt;Load Up Some Libraries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#part-1-more-ggplotting&#34;&gt;Part 1: More ggplotting&lt;/a&gt;
@@ -2028,6 +2029,8 @@ library(ggtext)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#part-2-aesthetics&#34;&gt;Part 2: Aesthetics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-3-grouping&#34;&gt;Part 3: Grouping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-4-facets&#34;&gt;Part 4: Facets&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -2157,9 +2160,13 @@ library(ggtext)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;download-the-script&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Download the script&lt;/h2&gt;
 &lt;p&gt;Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.&lt;/p&gt;
-&lt;a href=&#34;data:text/plain;base64,IyMgLS0tLSAKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodmlyaWRpcykKbGlicmFyeShSQ29sb3JCcmV3ZXIpCmxpYnJhcnkoZ2d0aGVtZXMpCmxpYnJhcnkoZ2d0ZXh0KQoKCiMjIC0tLS0KIyMgaW5jb21lX2RhdGEgPC0gcmVhZF9jc3YoImluY29tZS5jc3YiKQoKCiMjIC0tLS0KbmFtZXMoaW5jb21lX2RhdGEpCgoKIyMgLS0tLQpnbGltcHNlKGluY29tZV9kYXRhKQoKCiMjIC0tLS0KZ2dwbG90KGluY29tZV9kYXRhLCBhZXMoeCA9IExvY2F0aW9uLCAKICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB4bGFiKCJDaXR5IGFuZCBTdGF0ZSIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0Kbm90X3RvcDEwX2luY29tZV9kYXRhIDwtIGluY29tZV9kYXRhICU+JQogICAgICAgICAgICAgICAgICAgICAgICAgc2VsZWN0KExvY2F0aW9uLCBMb3dlcl8yMDAwKSAlPiUKICAgICAgICAgICAgICAgICAgICAgICAgIHNsaWNlX21heChMb3dlcl8yMDAwLCBuID0gMTApOyBub3RfdG9wMTBfaW5jb21lX2RhdGEKCgojIyAtLS0tCnRvcDEwX2luY29tZV9kYXRhIDwtIGluY29tZV9kYXRhICU+JQogICAgICAgICAgICAgICAgICAgICBzZWxlY3QoTG9jYXRpb24sIExvd2VyXzIwMDApICU+JQogICAgICAgICAgICAgICAgICAgICBoZWFkKDEwKTsgdG9wMTBfaW5jb21lX2RhdGEKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSBMb2NhdGlvbiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gTG9jYXRpb24sIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHNjYWxlX2ZpbGxfdmlyaWRpc19jKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHNjYWxlX2ZpbGxfdmlyaWRpc19jKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCiMjID90aGVtZQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICBzY2FsZV9maWxsX3ZpcmlkaXNfYygpICsKICAgICAgIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gMzMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmYWNlID0gImJvbGQiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAwLjUpLAogICAgICAgICAgICAgYXhpcy50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci55ID0gZWxlbWVudF9saW5lKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnkgPSBlbGVtZW50X2xpbmUoKSkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2dyZXkoKSArICMgb3IgdGhlbWVfZ3JheSgpCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfYncoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfbGluZWRyYXcoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfbGlnaHQoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZGFyaygpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9taW5pbWFsKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2NsYXNzaWMoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfdm9pZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9mZXcoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZml2ZXRoaXJ0eWVpZ2h0KCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2dkb2NzKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2hjKCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX2lncmF5KCkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICAgICAgIHRoZW1lX3NvbGFyaXplZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV9zb2xpZCgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV90dWZ0ZSgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV90dWZ0ZSgpICsKICAgICAgIHhsYWIoIlRvcCAxMCBDaXRpZXMgYW5kIFN0YXRlcyIpICsKICAgICAgIHlsYWIoIkF2ZXJhZ2UgSW5jb21lIGluIDIwMDAgTG93ZXIgQ2xhc3MiKQoKCiMjIC0tLS0KZ2dwbG90KHRvcDEwX2luY29tZV9kYXRhLCBhZXMoeCA9IHJlb3JkZXIoTG9jYXRpb24sIC1Mb3dlcl8yMDAwKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IExvd2VyXzIwMDAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmaWxsID0gTG93ZXJfMjAwMCkpICsKICAgICAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgICAgICB0aGVtZV93c2ooKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgdGhlbWVfZXhjZWwoKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikKCgojIyAtLS0tCmdncGxvdCh0b3AxMF9pbmNvbWVfZGF0YSwgYWVzKHggPSByZW9yZGVyKExvY2F0aW9uLCAtTG93ZXJfMjAwMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBMb3dlcl8yMDAwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsbCA9IExvd2VyXzIwMDApKSArCiAgICAgICBnZW9tX2Jhcihwb3NpdGlvbiA9ICdkb2RnZScsCiAgICAgICAgICAgICAgICBzdGF0ID0gImlkZW50aXR5IikgKwogICAgICAgc2NhbGVfZmlsbF92aXJpZGlzX2MoKSArCiAgICAgICB0aGVtZV9maXZldGhpcnR5ZWlnaHQoKSArCiAgICAgICB0aGVtZShheGlzLnRleHQueCA9IGVsZW1lbnRfdGV4dChhbmdsZSA9IDQ1LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAwLjUpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiKSArCiAgICAgICB4bGFiKCJUb3AgMTAgQ2l0aWVzIGFuZCBTdGF0ZXMiKSArCiAgICAgICB5bGFiKCJBdmVyYWdlIEluY29tZSBpbiAyMDAwIExvd2VyIENsYXNzIikgKyAgICAgICAKICAgICAgIGd1aWRlcyhmaWxsPWd1aWRlX2xlZ2VuZCh0aXRsZT0iSW5jb21lIikpCgoKIyMgLS0tLQpnZ3Bsb3QodG9wMTBfaW5jb21lX2RhdGEsIGFlcyh4ID0gcmVvcmRlcihMb2NhdGlvbiwgLUxvd2VyXzIwMDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gTG93ZXJfMjAwMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBMb3dlcl8yMDAwKSkgKwogICAgICAgZ2VvbV9iYXIocG9zaXRpb24gPSAnZG9kZ2UnLAogICAgICAgICAgICAgICAgd2lkdGggPSAwLjksCiAgICAgICAgICAgICAgICBzdGF0ID0gImlkZW50aXR5IiwKICAgICAgICAgICAgICAgIGNvbG9yID0gIiNGRkZGRkYiKSArCiAgICAgICBnZW9tX3JpY2h0ZXh0KGFlcyhsYWJlbCA9IExvY2F0aW9uKSwKICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiI0ZGRkZGRiIsCiAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2Uod2lkdGggPSAwLjkpLCAKICAgICAgICAgICAgICAgICAgICAgaGp1c3QgPSAwLAogICAgICAgICAgICAgICAgICAgICB2anVzdCA9IC0wLjEsCiAgICAgICAgICAgICAgICAgICAgIGFuZ2xlID0gNDUsCiAgICAgICAgICAgICAgICAgICAgIGZvbnRmYWNlID0gImJvbGQiLAogICAgICAgICAgICAgICAgICAgICBzaG93LmxlZ2VuZCA9IEZBTFNFKSArCiAgICAgICBzY2FsZV9maWxsX2dyYWRpZW50KGxvdyA9ICIjNTJiZjkwIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgaGlnaCA9ICIjMzE3MjU2IikgKwogICAgICAgdGhlbWVfbWluaW1hbCgpICsKICAgICAgIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgYXhpcy50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIpLAogICAgICAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gInJpZ2h0IiwKICAgICAgICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAidmVydGljYWwiLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgICAgICAgcGFuZWwuZ3JpZC5taW5vci55ID0gZWxlbWVudF9saW5lKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnkgPSBlbGVtZW50X2xpbmUoKSkgKwogICAgICAgeGxhYigiVG9wIDEwIENpdGllcyBhbmQgU3RhdGVzIikgKwogICAgICAgeWxhYigiQXZlcmFnZSBJbmNvbWUgaW4gMjAwMCBMb3dlciBDbGFzcyIpICsgICAgICAgCiAgICAgICBndWlkZXMoZmlsbCA9IGd1aWRlX2xlZ2VuZCh0aXRsZSA9ICJJbmNvbWUiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV2ZXJzZSA9IFRSVUUpKSArIAogICAgICAgZXhwYW5kX2xpbWl0cyh4PWMoMCwxNCksIAogICAgICAgICAgICAgICAgICAgICB5PWMoMCwgNjApKQoK&#34; download=&#34;Week 4 Script Outline.R&#34;&gt;
+&lt;a href=&#34;data:text/plain;base64,bGlicmFyeSh0aWR5dmVyc2UpCgoKCnVuaXF1ZShtcGckbWFudWZhY3R1cmVyKQoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZGlzdGluY3QoKQoKCgpnbGltcHNlKG1wZykKCgoKZ2dwbG90KG1wZywgYWVzKHggPSBtYW51ZmFjdHVyZXIsIGZpbGwgPSBtYW51ZmFjdHVyZXIpKSArCiAgZ2VvbV9iYXIoKSArCiAgZ2VvbV90ZXh0KHN0YXQgPSAnY291bnQnLCAKICAgICAgICAgICAgIGFlcyhsYWJlbCA9IGFmdGVyX3N0YXQoY291bnQpKSwgCiAgICAgICAgICAgICB2anVzdCA9IC0wLjUpICsKICB0aGVtZV9taW5pbWFsKCkgKwogIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gNDUsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZqdXN0ID0gMS4zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhqdXN0ID0gMSkpIAogIAoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZ3JvdXBfYnkobWFudWZhY3R1cmVyKSAlPiUKICB0YWxseSgpICU+JQogIHVuZ3JvdXAoKQoKCiMjIC0tLS0gZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyBHZXQgdGhlIGBtcGdgIHRpYmJsZSAlPiUKIyMgICBPbmx5IHNob3cgbWUgdGhlIGNvbHVtbiBgbWFudWZhY3R1cmVyYCAlPiUKIyMgICAgUGVyZm9ybSBhbnkgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIENvdW50IGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIERvbnQgZG8gYW55IG1vcmUgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIKCgoKbXBnICU+JQogIHNlbGVjdChtYW51ZmFjdHVyZXIpICU+JQogIHRhbGx5KCkgCgoKCm5hbWVzKG1wZykKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcykpIAoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBzaXplID0gY2xhc3MpKSAKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgYWxwaGEgPSBjbGFzcykpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIHNoYXBlID0gY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSwgY29sb3IgPSAiYmx1ZSIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpLCBjb2xvciA9ICIjMDAyODU1IikKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LAojIyAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICJibHVlIikpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSksCiMjICAgICAgICAgICAgICBjb2xvciA9IGMoIiMzNDczOGYiLCAiIzEyMmYzZCIsICIjYmUzZTJiIiwgIiNlZDhhNDUiLCAiI2Y2ZGU2YyIpKQoKCgptcGckY2xhc3MKCgoKdW5pcXVlKG1wZyRjbGFzcykKCgoKbGVuZ3RoKHVuaXF1ZShtcGckY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBjb2xvciA9IGNsYXNzKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gY2xhc3MpKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpCiMjICsgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKIGZhY2V0X3dyYXAofiBjbGFzcywgbnJvdyA9IDIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKICBmYWNldF9ncmlkKGRydiB+IGN5bCkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkgKwogIGZhY2V0X2dyaWQoLiB+IGN5bCkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRydiwgeSA9IGN5bCkpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKGRydiB+IC4pCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKC4gfiBjeWwpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF93cmFwKH4gY2xhc3MsIG5yb3cgPSAyKQoK&#34; download=&#34;Week 5 Script Outline.R&#34;&gt;
 &lt;button class=&#34;btn btn-default hvr-sweep-to-left&#34;&gt;&lt;i class=&#34;fa fa-save&#34;&gt;&lt;/i&gt; Download the Script&lt;/button&gt;
 &lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&#34;read-the-submission-directions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read the Submission Directions&lt;/h2&gt;
+&lt;p&gt;On a separate document (WORD or PDF), answer the questions in parts 1, 2, and 4. You may work alone of together in groups of up to three people and submit one task on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; by the end of class today.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;load-up-some-libraries&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Load Up Some Libraries&lt;/h2&gt;
@@ -2323,12 +2330,215 @@ The data frame contains observations collected by the US Environment Protection 
   geom_point(mapping = aes(x = displ, y = hwy, size = class)) &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Using size for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So what’s up with the warning? In this case, the exact size of each point would reveal its class affiliation. So the warning is telling us that mapping an unordered variable (&lt;em&gt;class&lt;/em&gt;) to an ordered aesthetic (&lt;em&gt;size&lt;/em&gt;) is not a good idea.&lt;/p&gt;
+&lt;p&gt;Basically you are trying to plot a categorical variable - the manufacturers of cars - against a continuous variable - a vehicle’s fuel efficiency on the highway - and its telling you that you probably shouldn’t do that&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ok well let’s try something else to distinguish the types of vehicles.&lt;/p&gt;
+&lt;p&gt;What about the &lt;em&gt;alpha&lt;/em&gt; level better known as &lt;strong&gt;transparency&lt;/strong&gt;, or &lt;em&gt;how much of the color can you see through&lt;/em&gt;?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Using alpha for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;No? Maybe the shape then&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: The shape palette can deal with a maximum of 6 discrete values because
+## more than 6 becomes difficult to discriminate; you have 7. Consider
+## specifying shapes manually if you must have them.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 62 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Uh oh. Something is missing from the plot! So what happened to the SUVs? &lt;code&gt;ggplot2&lt;/code&gt; will only use &lt;em&gt;six shapes&lt;/em&gt; at a time. By default, additional groups will go unplotted when you use the shape aesthetic so remember this and you’ll save yourself from throwing a computer.&lt;/p&gt;
+&lt;p&gt;If you are a controlling person, you can also set the aesthetic properties of your geom manually. For example, we can make all of the points in our plot blue&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = &amp;quot;blue&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;or even &lt;a href=&#34;https://universityrelations.wvu.edu/brand-guide/color&#34; target=&#34;_blank&#34;&gt;WVU Blue&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = &amp;quot;#002855&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;part-2-questions-for-you-to-turn-in&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Part 2 Questions for You to Turn In&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Run the following:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, 
+                           color = &amp;quot;blue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why are the points not blue? What has gone wrong with this code and what is it actually doing?&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Which variables in &lt;code&gt;mpg&lt;/code&gt; are&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;categorical?&lt;/li&gt;
+&lt;li&gt;continuous?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Map a continuous variable to &lt;em&gt;color&lt;/em&gt;, &lt;em&gt;size&lt;/em&gt;, and &lt;em&gt;shape.&lt;/em&gt; How do these aesthetics behave differently for categorical vs. continuous variables?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Briefly describe happens if you map the same variable to multiple aesthetics?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What does the stroke aesthetic do? What shapes does it work with? (Hint: you could use &lt;code&gt;?geom_point&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What happens if you map an aesthetic to something other than a variable name, like &lt;code&gt;aes(colour = displ &amp;lt; 5)&lt;/code&gt;?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-3-grouping&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Part 3: Grouping&lt;/h1&gt;
+&lt;p&gt;Maybe you’d like to use multiple colors. Let try something fun based off of this &lt;a href=&#34;http://www.color-hex.com/color-palette/65496&#34; target=&#34;_blank&#34;&gt;palette&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), 
+             color = c(&amp;quot;#34738f&amp;quot;, &amp;quot;#122f3d&amp;quot;, &amp;quot;#be3e2b&amp;quot;, &amp;quot;#ed8a45&amp;quot;, &amp;quot;#f6de6c&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Uh oh. That didn’t work. Why not?&lt;/p&gt;
+&lt;p&gt;Well to &lt;code&gt;ggplot&lt;/code&gt; there are 234 different data points and it doesn’t know how you want that color palette distributed. By the power of mathematics, 5 &amp;lt; 234 so you get an error. To fix it, you either assign 1 color to every data point or 234 different colors. Neither of these sound great. So what can we do?&lt;/p&gt;
+&lt;p&gt;Well we can group by category. That may help. If you run&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mpg$class&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+##   [6] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+##  [11] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+##  [16] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+##  [21] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;2seater&amp;quot;    &amp;quot;2seater&amp;quot;   
+##  [26] &amp;quot;2seater&amp;quot;    &amp;quot;2seater&amp;quot;    &amp;quot;2seater&amp;quot;    &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+##  [31] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+##  [36] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;   
+##  [41] &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;   
+##  [46] &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;minivan&amp;quot;    &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+##  [51] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+##  [56] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+##  [61] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;pickup&amp;quot;    
+##  [66] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+##  [71] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;suv&amp;quot;       
+##  [76] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+##  [81] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+##  [86] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+##  [91] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot;
+##  [96] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot;
+## [101] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot;
+## [106] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [111] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [116] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot;
+## [121] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [126] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [131] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [136] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [141] &amp;quot;suv&amp;quot;        &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [146] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [151] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;midsize&amp;quot;   
+## [156] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;suv&amp;quot;       
+## [161] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [166] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;compact&amp;quot;   
+## [171] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [176] &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;        &amp;quot;midsize&amp;quot;   
+## [181] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [186] &amp;quot;midsize&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+## [191] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+## [196] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;suv&amp;quot;        &amp;quot;suv&amp;quot;       
+## [201] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;    
+## [206] &amp;quot;pickup&amp;quot;     &amp;quot;pickup&amp;quot;     &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+## [211] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+## [216] &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;    &amp;quot;compact&amp;quot;   
+## [221] &amp;quot;compact&amp;quot;    &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot;
+## [226] &amp;quot;subcompact&amp;quot; &amp;quot;subcompact&amp;quot; &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;   
+## [231] &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;midsize&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;that doesn’t help you much in figuring out the types of vehicles we have (yes we did find it before by plotting but assume we hadn’t). Unless you like to clean this type of mess, we simply want to find the unique values and moreover, for coloring purposes, how many we have.&lt;/p&gt;
+&lt;p&gt;Again to find a list of unique values, we can run&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unique(mpg$class)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;compact&amp;quot;    &amp;quot;midsize&amp;quot;    &amp;quot;suv&amp;quot;        &amp;quot;2seater&amp;quot;    &amp;quot;minivan&amp;quot;   
+## [6] &amp;quot;pickup&amp;quot;     &amp;quot;subcompact&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well that’s better but I’m lazy and don’t want to count so let’s find the number of unique values&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;length(unique(mpg$class))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Oh good! There are 7 so that implies when we plot by class (type of vehicle), we need to have seven colors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;which we did earlier. But to fill it with what we want, we need to override the default colors&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, 
+                           color = class)) +
+  scale_color_manual(values = c(&amp;quot;#490A3D&amp;quot;, &amp;quot;#BD1550&amp;quot;, &amp;quot;#E97F02&amp;quot;, &amp;quot;#F8CA00&amp;quot;, &amp;quot;#8A9B0F&amp;quot;, &amp;quot;#95C7D8&amp;quot;, &amp;quot;#FFBFF5&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that since the class variable (type of vehicle) is discrete, we can use &lt;code&gt;scale_color_manual()&lt;/code&gt;. Other discrete scales in ggplot can be found &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/scale_manual.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Continuous variables use other scales and you can fins more about that and other scales can be found &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/#section-scales&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now those dots are pretty small. Let’s make them bigger.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&amp;quot;#490A3D&amp;quot;, &amp;quot;#BD1550&amp;quot;, &amp;quot;#E97F02&amp;quot;, &amp;quot;#F8CA00&amp;quot;, &amp;quot;#8A9B0F&amp;quot;, &amp;quot;#95C7D8&amp;quot;, &amp;quot;#FFBFF5&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That does look better but why is the size now within the geom_point aesthetic? If you don’t know, that’s ok! We’ll
+get to that later but for now, think about it.&lt;/p&gt;
+&lt;div id=&#34;note&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;NOTE&lt;/h5&gt;
+&lt;p&gt;You’re writing code so you will get errors! But one common problem when creating ggplot2 graphics is to put the &lt;code&gt;+&lt;/code&gt; in the wrong place:&lt;/p&gt;
+&lt;p&gt;It has to come at the end of the line, not the start. In other words, make sure you haven’t accidentally written code like this&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) 
++ geom_point(mapping = aes(x = displ, y = hwy))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you’re still stuck, try the help. You can get help about any R function by running &lt;code&gt;?function_name&lt;/code&gt; in the console, or selecting the function name and pressing F1 in RStudio. Don’t worry if the help doesn’t seem that helpful - instead skip down to the examples and look for examples that may match what you’re trying to do. For the aesthetics, run&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?aes&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-4-facets&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Part 4: Facets&lt;/h1&gt;
+&lt;p&gt;Another way to add additional variables is with aesthetics. Another way, particularly useful for categorical variables, is to split your plot into facets, subplots that each display one subset of the data set.&lt;/p&gt;
+&lt;p&gt;To facet your plot by a single variable, you can use &lt;code&gt;facet_wrap()&lt;/code&gt; or &lt;code&gt;facet_grid()&lt;/code&gt;. Let’s fow now just concentrate on wrapping the data set.&lt;/p&gt;
+&lt;p&gt;The first argument of &lt;code&gt;facet_wrap()&lt;/code&gt; should be a formula, which you create with &lt;code&gt;~&lt;/code&gt; followed by a variable name - here “formula” is the name of a data structure in R, not a synonym for an “equation”.&lt;/p&gt;
+&lt;p&gt;The variable that you pass to &lt;code&gt;facet_wrap()&lt;/code&gt; should be discrete so it can essentially be split apart.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&amp;quot;#490A3D&amp;quot;, &amp;quot;#BD1550&amp;quot;, &amp;quot;#E97F02&amp;quot;, &amp;quot;#F8CA00&amp;quot;, &amp;quot;#8A9B0F&amp;quot;, &amp;quot;#95C7D8&amp;quot;, &amp;quot;#FFBFF5&amp;quot;)) +
+ facet_wrap(~ class, nrow = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To facet your plot on the combination of two variables, use &lt;code&gt;facet_grid()&lt;/code&gt; to your plot The first argument
+of this is also a formula. This time the formula should contain two variable names separated by a &lt;code&gt;~&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&amp;quot;#490A3D&amp;quot;, &amp;quot;#BD1550&amp;quot;, &amp;quot;#E97F02&amp;quot;, &amp;quot;#F8CA00&amp;quot;, &amp;quot;#8A9B0F&amp;quot;, &amp;quot;#95C7D8&amp;quot;, &amp;quot;#FFBFF5&amp;quot;)) +
+  facet_grid(drv ~ cyl)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;If you prefer to not facet particular rows or columns, you can just use a &lt;code&gt;.&lt;/code&gt; instead of a variable name to imply the entire data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), size = 2) +
+  scale_color_manual(values = c(&amp;quot;#490A3D&amp;quot;, &amp;quot;#BD1550&amp;quot;, &amp;quot;#E97F02&amp;quot;, &amp;quot;#F8CA00&amp;quot;, &amp;quot;#8A9B0F&amp;quot;, &amp;quot;#95C7D8&amp;quot;, &amp;quot;#FFBFF5&amp;quot;)) +
+  facet_grid(. ~ cyl)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;part-4-questions-for-you-to-turn-in&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Part 4 Questions for You to Turn In&lt;/h4&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;What happens if you facet on a continuous variable?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What do the empty cells in plot with &lt;code&gt;facet_grid(drv ~ cyl)&lt;/code&gt; mean? How do they relate to this plot?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;What plots does the following code make? What does . do?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Plot 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Plot 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Take the faceted plot below and compare it to the one with color you did earlier&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Read &lt;code&gt;?facet_wrap&lt;/code&gt;. What does &lt;code&gt;nrow&lt;/code&gt; do? What does &lt;code&gt;ncol&lt;/code&gt; do? What other options control the layout of the individual panels? Why doesn’t &lt;code&gt;facet_grid()&lt;/code&gt; have &lt;code&gt;nrow&lt;/code&gt; and &lt;code&gt;ncol&lt;/code&gt; arguments (aka options)?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When using &lt;code&gt;facet_grid()&lt;/code&gt; you should usually put the variable with more unique levels in the columns. Why?&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Take some time to change the values in the &lt;code&gt;ggplot&lt;/code&gt; to see how it changes.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;I think&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;but never say never!&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

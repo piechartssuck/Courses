@@ -1,0 +1,60 @@
+---
+title: "Replication"
+author: "You are the Author!"
+date: "2/18/2021"
+output: pdf_document
+---
+
+This is what we call an Rmarkdown document. Think of it as the Microsoft Word of the R World, but not terrible. In a nutshell it differs from a script because you can define where R code needs to show up and it renders for you.
+
+We'll learn more about Rmarkdown in the following weeks but for now, let's start slow! Please follow the steps below to submit your Week 5 out of class task.
+
+Firstly please make sure you run `Help > Check for Updates` in the menu to make sure you have the most up to date version of R. If you do not have at least 1.4, then some of the directions below won't make sense. Then please select `Tools > Check for Package Updates` and install all of them. If it asks you to "install using source", just agree. Some of the package updates may fail using this option but that's not a problem. Ok now let's begin the steps. Now set your source by going to `Session > Set Working Directory > To Source File Location`.
+
+0.  Go to the top of this document and change the author: and date: areas.
+
+1.  Please please please do all of your data wrangling in a separate R script first! In general, Rmarkdown is not a place to test things out, rather its for reporting purposes. I strongly advise that you keep your testing script and this Rmarkdown file in the same folder.
+
+2.  Everytime you see the highlighted sections below, that is where R code goes. This is called a chunk and you can think of them as spaces where parts of your script can go.
+
+```{r}
+# Put any R code here.
+```
+
+3.  With that said, leave the nonsense below alone for now and likely forever. This is a common header in many R documents and won't be an issue unless you drink the Rmarkdown Kool Aid.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+4.  Copy your library or libraries into the chunk below. Note that naming a chunk is good practice which allows you to bring those in later, but its certainly not necessary.
+
+```{r libraries}
+
+```
+
+# Plots
+
+Hashtags work the same within a chunk as they do in a script. However outside of a chunk, they indicate different header levels with a single hashtag representing the lrgest title.
+
+## Replcation plot
+
+5.  Please include the code for your replication plot below.
+
+```{r replication_plot}
+
+```
+
+## Alternative plot
+
+6.  Please include the code for your replication plot below.
+
+```{r alternative_plot}
+
+```
+
+Want to see how you're doing? Look at the very top right corner of this window and you should see a compass. Click that and you'll get a preview of the Rmarkdown document. If you like the preview area better, then you can stay there BUT please know that it is experimental at this time and you may incur quirks or missing functionality.
+
+7.  Find the compass again. Now move your eyes to the left until you see a ball of yarn with the word Knit. Avoid the down arrow and and click that button. If everything goes well, you should see a PDF of consisting of most text on this page, your R code and corresponding plots. This is called knitting.
+
+8.  If everything looks good in the PDF preview, please delete all of the descriptive text and leave only the plot headers and your code chunks associated with the plots. Then **knit it again**. Feel free to include your own statements or narratives if you wish. Your PDF should be in the same place as this file.

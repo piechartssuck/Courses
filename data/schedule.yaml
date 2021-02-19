@@ -29,18 +29,18 @@ lessons:
 
   - title: 'Tidy Themes'
     session: 4
-    date: "February 11, 2022"
+    date: "February 11, 2021"
     example: "04-example"
 
-  # - title: 'Valuable Valued Values'
-  #   session: 5
-  #   date: "September 20, 2020"
-  #   readings: "05-readings"
-  #   lesson: "05-lesson"
-  #   example: "05-example"
-  #   assignment: "05-assignment"
-  #   due: "05-due"
-  #
+  - title: 'Making Copies'
+    session: 5
+    date: "February 18, 2021"
+    readings: "05-readings"
+    lesson: "05-lesson"
+    example: "05-example"
+    assignment: "05-assignment"
+    due: "05-due"
+
   # - title: 'The Importance of Knowing What's Important'
   #   session: 6
   #   date: "September 27, 2020"

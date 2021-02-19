@@ -1,0 +1,25 @@
+---
+title: "Tidy Themes"
+linktitle: "Week 4: Tidy Themes"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have twos module to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Exploratory Data Analysis in R
+
+- Introduction to the Tidyverse
+
+For more information about these, take a look at the tentative schedule.
+
