@@ -84,6 +84,8 @@ This graphic was published in the [New York Times](https://archive.nytimes.com/s
 ![](/assignment/05-assignment_files/Choice1.png)
 </center>
 
+[Download the visual](/visuals/Choice1.png)
+
 Locate the data set `divided.csv` to construct this visualization.
 
 ### Choice 2: Surface Temperatures
@@ -93,6 +95,8 @@ You are looking at the surface temperature Dec 2001 on a very coarse 24 by 24 gr
 <center>
 ![](/assignment/05-assignment_files/Choice2.png)
 </center>
+
+[Download the visual](/visuals/Choice2.png)
 
 To get the data, run the following in your script and Rmarkdown document:
 
@@ -113,6 +117,8 @@ This data set for the following plot includes the average mean, minimum, and max
 ![](/assignment/05-assignment_files/Choice3.png)
 </center>
 
+[Download the visual](/visuals/Choice3.png)
+
 Locate the data set `corv.csv` to construct this visualization.
 
 ### Choice 4: Baseball
@@ -122,6 +128,8 @@ This graphic was published in the [New York Times](https://archive.nytimes.com/w
 <center>
 ![](/assignment/05-assignment_files/Choice4.png)
 </center>
+
+[Download the visual](/visuals/Choice1.png)
 
 To get the data, run the following in your script and Rmarkdown document:
 
@@ -152,7 +160,7 @@ avg_so_by_year  <- so_by_team %>%
 
 4.  Submit your PDF output to [\#wk-5-replications](https://2021edp693e.slack.com/archives/C01NJ8H33V3){target="\_blank"}
 
-You can download all of the example plots, data scripts and `Replications.rmd` by clicking below
+You can download all of the scripts to fetch data, `Relications_Practice_Script.R` and `Replications.rmd` by clicking below
 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
