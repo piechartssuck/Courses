@@ -58,10 +58,6 @@ assignment:
     weight: 1
   - name: Weekly Tasks
     weight: 2
-  - name: Data Camp
-    weight: 3
-  - name: Data Tasks
-    weight: 4
 resource:
   - name: Resources
     weight: 1

@@ -80,23 +80,19 @@ In this task, you are asked to do three things:
 ### Choice 1: Government Data
 This graphic was published in the [New York Times](https://archive.nytimes.com/screenshots/www.nytimes.com/interactive/2012/11/23/us/state-government-control-since-1938.jpg){target="\_blank"} back in 2012. You are tasked to replicate and construct an alternative for it.
 
-<center>
 ![](/assignment/05-assignment_files/Choice1.png)
-</center>
 
-[Download the visual](/visuals/Choice1.png)
+Download the [visual](/visuals/Choice1.png)
 
-Locate the data set `divided.csv` to construct this visualization.
+Download the data set [`divided.csv`](/data/divided.csv) to construct this visualization.
 
 ### Choice 2: Surface Temperatures
 
 You are looking at the surface temperature Dec 2001 on a very coarse 24 by 24 grid covering Central America. You are tasked to replicate and construct an alternative for it (Hint: use `geom_tile()`)
 
-<center>
 ![](/assignment/05-assignment_files/Choice2.png)
-</center>
 
-[Download the visual](/visuals/Choice2.png)
+[Download the visual](/visuals/Choice2.png){width=70%}
 
 To get the data, run the following in your script and Rmarkdown document:
 
@@ -113,23 +109,19 @@ jan2001 <- subset(atmos, year == 2000 & month == 1)
 
 This data set for the following plot includes the average mean, minimum, and maximum daily temperature in Corvallis, Oregon based on a ten year span. You are tasked to replicate and construct an alternative for it: (Hint: use `geom_pointrange()`)
 
-<center>
 ![](/assignment/05-assignment_files/Choice3.png)
-</center>
 
-[Download the visual](/visuals/Choice3.png)
+Download the [visual](/visuals/Choice3.png)
 
-Locate the data set `corv.csv` to construct this visualization.
+Download the data set [`corv.csv`](/data/corv.csv) to construct this visualization.
 
 ### Choice 4: Baseball
 
 This graphic was published in the [New York Times](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball){target="\_blank"} back in 2013. You are tasked to replicate and construct an alternative for it.
 
-<center>
 ![](/assignment/05-assignment_files/Choice4.png)
-</center>
 
-[Download the visual](/visuals/Choice1.png)
+[Download the visual](/visuals/Choice4.png)
 
 To get the data, run the following in your script and Rmarkdown document:
 
