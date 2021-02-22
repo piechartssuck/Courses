@@ -350,7 +350,7 @@ jan2001 &amp;lt;- subset(atmos, year == 2000 &amp;amp; month == 1)&lt;/code&gt;&
 &lt;h3&gt;Choice 4: Baseball&lt;/h3&gt;
 &lt;p&gt;This graphic was published in the &lt;a href=&#34;https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball&#34; target=&#34;_blank&#34;&gt;New York Times&lt;/a&gt; back in 2013. You are tasked to replicate and construct an alternative for it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/05-assignment_files/Choice4.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://edp693e.theoreticalphysed.com/visuals/Choice1.png&#34;&gt;Download the visual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://edp693e.theoreticalphysed.com/visuals/Choice4.png&#34;&gt;Download the visual&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To get the data, run the following in your script and Rmarkdown document:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(Lahman)
 library(Lahman)  

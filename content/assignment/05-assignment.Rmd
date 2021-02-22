@@ -150,7 +150,7 @@ avg_so_by_year  <- so_by_team %>%
 
 3.  Follow the directions and copy the appropriate parts over. Make sure to compile the document!
 
-4.  Submit your PDF output to [\#wk-5-replications](https://2021edp693e.slack.com/archives/C01NJ8H33V3){target="\_blank"}
+4.  Submit the PDF output of the Rmarkdown to [\#wk-5-replications](https://2021edp693e.slack.com/archives/C01NJ8H33V3){target="\_blank"}
 
 You can download all of the scripts to fetch data, `Relications_Practice_Script.R` and `Replications.rmd` by clicking below
 
