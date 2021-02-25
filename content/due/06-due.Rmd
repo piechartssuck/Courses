@@ -52,7 +52,7 @@ wk_post <- tibble(
 Description = c("Respond to the posts on `#evaluation-politicization` and `#which-values`",
                 "Read two chapters in your book",
                 "Write two posts on `#important-criteria` and `#merit-disagreement`",
-                "Remember to meet before your interview",
+                "Remember to meet with me before your interview",
                 "Skim over the JCSEE Program Evaluation Standards",
                 "Learn more about required logic models",
                 "Write and submit a needs assessment in ***one week***",
