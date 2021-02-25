@@ -1,0 +1,65 @@
+---
+title: "The Importance of Knowing What's Important"
+linktitle: "Week 6: The Importance of Knowing What's Important"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the evaluation planning phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+plan <- tibble(
+  
+  phase = c("Planning",
+            ""),
+  
+  task = c("Discovering needs",
+           "Suggesting a course of action"),
+  
+  current <- c(checked,
+               unchecked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  plan %>%
+  kbl(escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## More Logic Models
+
+The [Division of Extension](https://fyi.extension.wisc.edu/programdevelopment/){target="_blank"} have a lot of resources covering program development and evaluation.
+
+As you begin to think about a logic model, you need not stick the one provided. You can look around for others and one comprehensive resource is their repository of [logic models](https://fyi.extension.wisc.edu/programdevelopment/logic-models/){target="_blank"}. 

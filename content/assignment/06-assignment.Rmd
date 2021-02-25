@@ -1,0 +1,19 @@
+---
+title: "The Importance of Knowing What's Important"
+linktitle: "Week 6: The Importance of Knowing What's Important"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+Please head over to the [Evaluation Proposal](/assignment/06-evaluation-proposal/) page to get a preview of what is due right after the Needs Assessment.
+
+:::

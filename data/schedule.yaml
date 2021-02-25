@@ -46,15 +46,15 @@ lessons:
     assignment: "05-assignment"
     due: "05-due"
 
-  # - title: 'The Importance of Knowing What's Important'
-  #   session: 6
-  #   date: "September 27, 2020"
-  #   readings: "06-readings"
-  #   lesson: "06-lesson"
-  #   example: "06-example"
-  #   assignment: "06-assignment"
-  #   due: "06-due"
-  #
+  - title: "The Importance of Knowing What's Important"
+    session: 6
+    date: "February 23, 2021"
+    readings: "06-readings"
+    lesson: "06-lesson"
+    example: "06-example"
+    assignment: "06-assignment"
+    due: "06-due"
+
   # - title: 'Making Sense Even if You Have Some Nonsense'
   #   session: 7
   #   date: "October 4, 2020"

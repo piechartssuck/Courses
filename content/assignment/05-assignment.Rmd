@@ -1,0 +1,19 @@
+---
+title: "Causation and Criteria"
+linktitle: "Week 4: Causation and Criteria"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+Please head over to the [Needs Assessment](/assignment/05-needs-assessment/) page to get a preview of what is due in a little over two weeks.
+
+:::

@@ -1,0 +1,94 @@
+---
+title: "The Importance of Knowing What's Important"
+linktitle: "Week 6: The Importance of Knowing What's Important"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Meeting
+Please make sure to meet with me **prior** to conducting your needs assessment.
+
+## Program Evaluation Standards
+Take a look at a list of [standards](https://jcsee.org/program/){target="_blank"} that were created by the Joint Committee on Standards for Educational Evaluation. These will likely be updated soon. 
+
+## Evaluation Reports
+If you're interested in seeing some examples of evaluation reports, you can download a few here [here](/handouts/example_reports.zip). 
+
+A fairly comprehensive guide on creating a report was created by the CDC and can be downloaded using this [link](/handouts/cdc-developing-eval-report.pdf){target="_blank"}. 
+
+## Logic Model
+
+You will be required to submit a logic model in the proposal and final report. Read [this](/handouts/introducing-logic-models.pdf) document over to get an idea of what they are and how you can use and construct one. You also have access to a [simple model](/handouts/blank-logic-model.zip) and but feel free to use others like those mentioned on this week's [Example](/example/06-example/#more-logic-models) page.
+
+<!--
+## Standards Based Evaluation
+Posting soon
+To get an idea of how standards can be written including those related to evaluation questions and purposes, please view and listen to the **Standards-Based Evaluation** slideshow. You can also download a [PDF](/slides/Standards-Based Evaluation/Standards_Based_Evaluation.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Standards-Based Evaluation/Standards_Based_Evaluation.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+-->
