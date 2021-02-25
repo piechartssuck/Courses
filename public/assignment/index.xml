@@ -396,5 +396,810 @@ avg_so_by_year  &amp;lt;- so_by_team %&amp;gt;%
 </description>
     </item>
     
+    <item>
+      <title>I&#39;m the Map</title>
+      <link>https://edp693e.theoreticalphysed.com/assignment/06-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/assignment/06-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-prepped&#34;&gt;Getting Prepped&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#first-things-first-set-your-working-directory&#34;&gt;First Things First! Set your Working Directory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#download-the-script&#34;&gt;Download the script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#read-the-submission-directions&#34;&gt;Read the Submission Directions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#load-up-some-libraries&#34;&gt;Load Up Some Libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#save-and-declare-your-census-api&#34;&gt;Save and declare your Census API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-i-the-map&#34;&gt;PART I: The Map&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#country-level-data&#34;&gt;Country Level Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#state-level-data&#34;&gt;State Level Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#county-level-data&#34;&gt;County Level Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-ii-the-us-census&#34;&gt;PART II: The US Census&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gathering-and-making-important-decisions&#34;&gt;Gathering and Making Important Decisions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scraping-the-web-using-r&#34;&gt;Scraping the Web using R&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-the-data-you-want&#34;&gt;Getting the Data You Want&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#part-iii-plotting&#34;&gt;PART III: Plotting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+&lt;/style&gt;
+&lt;div id=&#34;getting-prepped&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Getting Prepped&lt;/h1&gt;
+&lt;div id=&#34;first-things-first-set-your-working-directory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;First Things First! Set your Working Directory&lt;/h2&gt;
+&lt;p&gt;Your &lt;em&gt;working directory&lt;/em&gt; is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Open up a new script by going to &lt;code&gt;File &amp;gt; New File &amp;gt; R Script&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save it in a preferably empty folder as whatever you want.&lt;/li&gt;
+&lt;li&gt;Go to the menu bar and select &lt;code&gt;Session &amp;gt; Set Working Directory &amp;gt; To Source File Location&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;download-the-script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Download the script&lt;/h2&gt;
+&lt;p&gt;Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.&lt;/p&gt;
+&lt;a href=&#34;data:text/plain;base64,IyMgLS0tLXNldHVwLCBpbmNsdWRlPUZBTFNFLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKCgoKCiMjIC0tLS1tZXNzYWdlPUZBTFNFLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpsaWJyYXJ5KGdnbWFwKSAjIFByb3ZpZGVzIHRoZSBhYmlsaXR5IHRvIHZpc3VhbGl6ZSBzcGF0aWFsIGRhdGEKbGlicmFyeShtYXBzKSAjIENvbXB1dGVzIHRoZSBhcmVhcyBvZiByZWdpb25zIGluIGEgcHJvamVjdGVkIG1hcApsaWJyYXJ5KG1hcGRhdGEpICMgUHJvdmlkaW5nIGJvdGggbGFyZ2VyIGFuZCBoaWdoZXItcmVzb2x1dGlvbiBkYXRhYmFzZXMuCmxpYnJhcnkocmdkYWwpICMgQmluZGluZ3MgZm9yIHRoZSBHZW9zcGF0aWFsIERhdGEgQWJzdHJhY3Rpb24gTGlicmFyeSAKICAgICAgICAgICAgICAgIyAoaHR0cHM6Ly93d3cuZ2RhbC5vcmcvKQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeSh0b29scykgIyBDb3JlIHBhY2thZ2UgZm9yIFIgYW5kIGlzIHdvcnRoIG5vdGluZwpsaWJyYXJ5KHZpcmlkaXMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmxpYnJhcnkoY2Vuc3VzYXBpKQoKCgoKIyMgLS0tLWV2YWw9RkFMU0UsIGVjaG89VFJVRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMjIFN5cy5zZXRlbnYoQ0VOU1VTX0tFWT0iWU9VUiBBUEkgS0VZIEhFUkUiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpyZWFkUmVudmlyb24oIn4vLlJlbnZpcm9uIikgIyBZb3UgbWF5IGdldCBhIHdhcm5pbmcuLi5pZ25vcmUgaXQKCgojIyAtLS0tIGV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgU3lzLmdldGVudigiQ0VOU1VTX0tFWSIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnVzYSA8LSBtYXBfZGF0YSgidXNhIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGltKHVzYSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZCh1c2EpIAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0YWlsKHVzYSkgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdCgpICsgCiAgZ2VvbV9wb2x5Z29uKGRhdGEgPSB1c2EsIAogICAgICAgICAgICAgICBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwKSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHVzYSwgCiAgICAgICAgICAgICAgIGFlcyh4PWxvbmcsIHkgPSBsYXQsIGdyb3VwID0gZ3JvdXApKSArIAogIGNvb3JkX2ZpeGVkKDEuMykgIyAxLjMgaXMgYSBkZWNlbnQgc3RhbmRhcmQgZXN0aW1hdGUKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHVzYSwgYWVzKHg9bG9uZywgeSA9IGxhdCwgZ3JvdXAgPSBncm91cCksIGNvbG9yID0gIiMxYjg1YjgiLCAKICAgICAgICAgICAgICAgZmlsbCA9ICIjNTU5ZTgzIikgKyAKICBjb29yZF9maXhlZCgxLjMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnN0YXRlIDwtIG1hcF9kYXRhKCJzdGF0ZSIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCkNhbGlmb3JuaWEgPC0gbWFwX2RhdGEoInN0YXRlIiwgcmVnaW9uID0gIkNBIikKCgojIyAtLS0tIGVycm9yID0gVFJVRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KS2Fuc2FzIDwtIG1hcF9kYXRhKCJzdGF0ZSIsIHJlZ2lvbiA9ICJLUyIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCk1pY2hpZ2FuIDwtIG1hcF9kYXRhKCJzdGF0ZSIsIHJlZ2lvbiA9ICJNSSIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnVuaXF1ZShNaWNoaWdhbiRyZWdpb24pCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCk1pY2hpZ2FuIDwtIG1hcF9kYXRhKCJzdGF0ZSIsIAogICAgICAgICAgICAgICAgICAgICByZWdpb24gPSAiTWljaGlnYW4iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp1bmlxdWUoTWljaGlnYW4kcmVnaW9uKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQptaSA8LSBzdWJzZXQoc3RhdGUsIAogICAgICAgICAgICAgcmVnaW9uPT0ibWljaGlnYW4iKQoKCiMjIC0tLS0gb3V0LndpZHRoID0gIjQ3JSItLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZ3Bsb3QoKSArIAogIGdlb21fcG9seWdvbihkYXRhID0gbWksIAogICAgICAgICAgICAgICAgICAgICAgICBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwKSkgKyAKICBjb29yZF9maXhlZCgxLjMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdCgpICsgCiAgZ2VvbV9wb2x5Z29uKGRhdGEgPSBtaSwgYWVzKHg9bG9uZywgeSA9IGxhdCwgZ3JvdXAgPSBncm91cCwgZmlsbD1yZWdpb24pKSArCiAgc2NhbGVfZmlsbF9tYW51YWwodmFsdWVzPWMoIiM2QTAwMzIiKSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KY291bnR5IDwtIG1hcF9kYXRhKCJjb3VudHkiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQptaV9jb3VudCA8LSBzdWJzZXQoY291bnR5LCByZWdpb249PSJtaWNoaWdhbiIpCgoKIyMgLS0tLSBpbmNsdWRlID0gRkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBhcihtYXIgPSBjKDEyLCA2LCA0LCAyKSArIDAuMSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IG1pX2NvdW50LCBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwLCBmaWxsPXN1YnJlZ2lvbiksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjRkZGRkZGIikgKwogIHNjYWxlX2ZpbGxfdmlyaWRpcyhkaXNjcmV0ZSA9IFRSVUUsIAogICAgICAgICAgICAgICAgICAgICBhbHBoYT0wLjcsIAogICAgICAgICAgICAgICAgICAgICBvcHRpb249ImluZmVybm8iKSArCiAgdGhlbWVfYncoKSArCiAgdGhlbWUocGxvdC50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMjYsIGNvbG9yID0iIzEwNTQ1NiIsICB2anVzdCA9IC0xKSwKICAgICAgICBsZWdlbmQucG9zaXRpb24gPSJib3R0b20iLAogICAgICAgIGxlZ2VuZC5kaXJlY3Rpb24gPSAndmVydGljYWwnLAogICAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemU9MTUsIGNvbG9yID0gIiM1OTU5NUIiKSwKICAgICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduID0gMC41LAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnggPSB1bml0KDAuNSwgImNtIiksIAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnkgPSB1bml0KDAuNSwgImNtIiksCiAgICAgICAgbGVnZW5kLmJhY2tncm91bmQgPSBlbGVtZW50X3JlY3QobGluZXR5cGUgPSAwLCBzaXplID0gMC41LCBjb2xvdXIgPSAxKSwKICAgICAgICBwYW5lbC5iYWNrZ3JvdW5kID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpdGxlLnkgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aWNrcyA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRleHQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuYm9yZGVyID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIAogICAgICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCkpICsKICBjb29yZF9maXhlZCgxLjMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdCgpICsgCiAgZ2VvbV9wb2x5Z29uKGRhdGEgPSBtaV9jb3VudCwgYWVzKHg9bG9uZywgeSA9IGxhdCwgZ3JvdXAgPSBncm91cCwgZmlsbD1zdWJyZWdpb24pLCAKICAgICAgICAgICAgICAgY29sb3IgPSAiI0ZGRkZGRiIpICsKICBzY2FsZV9maWxsX3ZpcmlkaXMoZGlzY3JldGUgPSBUUlVFLCAKICAgICAgICAgICAgICAgICAgICAgYWxwaGE9MC43LCAKICAgICAgICAgICAgICAgICAgICAgb3B0aW9uPSJpbmZlcm5vIiwgCiAgICAgICAgICAgICAgICAgICAgIGd1aWRlID0gRkFMU0UpICsgI0hFUkUgSVQgSVMKICB0aGVtZV9idygpICsKICB0aGVtZShwbG90LnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAyNiwgY29sb3IgPSIjMTA1NDU2IiwgIHZqdXN0ID0gLTEpLAogICAgICAgIGxlZ2VuZC5wb3NpdGlvbiA9ImJvdHRvbSIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICd2ZXJ0aWNhbCcsCiAgICAgICAgbGVnZW5kLnRleHQgPSBlbGVtZW50X3RleHQoc2l6ZT0xNSwgY29sb3IgPSAiIzU5NTk1QiIpLAogICAgICAgIGxlZ2VuZC50aXRsZSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBsZWdlbmQudGl0bGUuYWxpZ24gPSAwLjUsCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueCA9IHVuaXQoMC41LCAiY20iKSwgCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueSA9IHVuaXQoMC41LCAiY20iKSwKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChsaW5ldHlwZSA9IDAsIHNpemUgPSAwLjUsIGNvbG91ciA9IDEpLAogICAgICAgIHBhbmVsLmJhY2tncm91bmQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpY2tzID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSkgKwojIGd1aWRlcyhjb2xvcj1GQUxTRSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYXBpcyA8LSBsaXN0Q2Vuc3VzQXBpcygpCgoKIyMgLS0tLSBlY2hvPVRSVUUsZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMjIFZpZXcoYXBpcykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYWNzMjAxN192YXJzIDwtIGxpc3RDZW5zdXNNZXRhZGF0YShuYW1lID0gIjIwMTcvcGVwL3BvcHVsYXRpb24vIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGUgPSAidmFyaWFibGVzIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChhY3MyMDE3X3ZhcnMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmFjczIwMTdfZ2VvcyA8LSBsaXN0Q2Vuc3VzTWV0YWRhdGEobmFtZSA9ICIyMDE3L3BlcC9wb3B1bGF0aW9uLyIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGUgPSAiZ2VvZ3JhcGh5IikKCgojIyAtLS0tZWNobz1UUlVFLGV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgVmlldyhhY3MyMDE3X2dlb3MpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmxpYnJhcnkocnZlc3QpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCndlYnBhZ2UgPC0gcmVhZF9odG1sKCJodHRwczovL2FwaS5jZW5zdXMuZ292L2RhdGEvMjAxNy9wZXAvcG9wdWxhdGlvbi92YXJpYWJsZXMuaHRtbCIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnRibHMgPC0gaHRtbF9ub2Rlcyh3ZWJwYWdlLCAidGFibGUiKSAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdGJscyAjIG9yIGlmIHRoZXJlIGFyZSBtdWx0aXBsZSB0YWJsZXMsIGNvbnNpZGVyIHVzaW5nIGhlYWQodGJscykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdGJsc19scyA8LSB3ZWJwYWdlICU+JQogICAgICAgIGh0bWxfbm9kZXMoInRhYmxlIikgJT4lICMgQ3JlYXRlcyBhIG11bHRpZGltZW5zaW9uYWwgbGlzdCAoaS5lLiBhIGxpc3QgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyB3aXRoIGxheWVycyBhbmQgZGVwdGggYWtpbiB0byBmb2xkZXJzIHdpdGhpbiAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGZvbGRlcnMgd2l0aGluIGZvbGRlcnMsIGVjdC4pCiAgICAgICAgLlsxXSAlPiUgIyBXZSBvbmx5IGhhdmUgdGFibGUgc28gd2UgcHV0LlsxXSBoZXJlLiBJZiB3ZSBoYWQgbXVsdGlwbGUgCiAgICAgICAgICAgICAgICAgIyB0YWJsZXMgYW5kIHdlIHdhbnRlZCBzYXkgdGhlIGZpcnN0IHRocmVlLCB3ZSBjb3VsZCBoYXZlIAogICAgICAgICAgICAgICAgICMgdXNlZCAuWzE6M10KICAgICAgICBodG1sX3RhYmxlKGZpbGwgPSBUUlVFKSAjIENvbnZlcnQgdGhlIGRhdGEgdG8gYSB0YWJsZSBmb3JtYXQgYW5kIHBvcHVsYXRlIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgdGhlIGVudHJpZXMKCgojIyAtLS0tIGVjaG89VFJVRSxldmFsPUZBTFNFLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgVmlldyh0YmxzX2xzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0YmxzX2xzIDwtIGRvLmNhbGwocmJpbmQuZGF0YS5mcmFtZSwgdGJsc19scykgIyBDb25jYXRlbmF0ZXMgYSBsaXN0IG9mIGRhdGEgZnJhbWVzIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBpbnRvIGEgc2luZ2xlIGRhdGEgZnJhbWUKCgojIyAtLS0tZWNobz1UUlVFLGV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgVmlldyh0YmxzX2xzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpmaWx0ZXJlZF90YmxzX2xzIDwtIHRibHNfbHNbdGJsc19scyRSZXF1aXJlZCA9PSAiZGVmYXVsdCBkaXNwbGF5ZWQiLCBdIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgRmlsdGVyIG91dCB0aGUgcm93cyB0aGF0CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBkb24ndCBoYXZlIGBkZWZhdWx0IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZGlzcGxheWVkYCB1bmRlciB0aGUgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBjb2x1bW4gKipSZXF1aXJlZCoqCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmZpbHRlcmVkX3RibHNfbHMkTmFtZSAjIEp1c3Qgc2hvd3MgdGhlIE5hbWVzIG9mIHRoZSByZXF1aXJlZCB2YXJpYWJsZXMKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbGlicmFyeShydmVzdCkKCnJlYWRfaHRtbCgiaHR0cHM6Ly9hcGkuY2Vuc3VzLmdvdi9kYXRhLzIwMTcvcGVwL3BvcHVsYXRpb24vdmFyaWFibGVzLmh0bWwiKSAlPiUKaHRtbF9ub2RlcygidGFibGUiKSAgJT4lICMgQ3JlYXRlcyBhIG11bHRpZGltZW5zaW9uYWwgbGlzdCAoaS5lLiBhIGxpc3Qgd2l0aCBsYXllcnMgCiAgICAgICAgICAgICAgICAgICAgICAgICAjIGFuZCBkZXB0aCBha2luIHRvIGZvbGRlcnMgd2l0aGluIGZvbGRlcnMgd2l0aGluIGZvbGRlcnMsIAogICAgICAgICAgICAgICAgICAgICAgICAgIyBlY3QuKQogIC5bMV0gJT4lICMgV2Ugb25seSBoYXZlIHRhYmxlIHNvIHdlIHB1dC5bMV0gaGVyZS4gSWYgd2UgaGFkIG11bHRpcGxlIHRhYmxlcyBhbmQgCiAgICAgICAgICAgIyB3ZSB3YW50ZWQgc2F5IHRoZSBmaXJzdCB0aHJlZSwgd2UgY291bGQgaGF2ZSB1c2VkIC5bMTozXQogIGh0bWxfdGFibGUoZmlsbCA9IFRSVUUpICU+JSAjIENvbnZlcnQgdGhlIGRhdGEgdG8gYSB0YWJsZSBmb3JtYXQgYW5kIHBvcHVsYXRlIHRoZSAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBlbnRyaWVzCiAgYmluZF9yb3dzKCkgJT4lICMgQ29uY2F0ZW5hdGVzIGEgbGlzdCBvZiBkYXRhIGZyYW1lcyBpbnRvIGEgc2luZ2xlIGRhdGEgZnJhbWUKICBmaWx0ZXIoUmVxdWlyZWQgPT0gImRlZmF1bHQgZGlzcGxheWVkIikgJT4lICMgRmlsdGVyIG91dCB0aGUgcm93cyB0aGF0IGRvbid0IGhhdmUKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgYGRlZmF1bHQgZGlzcGxheWVkYCB1bmRlciB0aGUgY29sdW1uIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyAqKlJlcXVpcmVkKioKICBzZWxlY3QoTmFtZSkgIyBKdXN0IHNob3dzIHRoZSBOYW1lcyBvZiB0aGUgcmVxdWlyZWQgdmFyaWFibGVzCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnRibHNfbHMkTmFtZQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpyZWFkX2h0bWwoImh0dHBzOi8vYXBpLmNlbnN1cy5nb3YvZGF0YS8yMDE3L3BlcC9wb3B1bGF0aW9uL3ZhcmlhYmxlcy5odG1sIikgJT4lCiAgaHRtbF9ub2RlcygidGFibGUiKSAgJT4lICMgVGhpcyBpcyBhIG11bHRpZGltZW5zaW9uYWwgbGlzdCAoaS5lLiBhIGxpc3Qgd2l0aCBsYXllcnMpCiAgLlsxXSAlPiUgCiAgaHRtbF90YWJsZShmaWxsID0gVFJVRSkgJT4lCiAgYmluZF9yb3dzKCkgJT4lIAogIHNlbGVjdChOYW1lKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZXRDZW5zdXMobmFtZSA9ICIyMDE3L3BlcC9wb3B1bGF0aW9uIiwKICAgICAgICAgIHZhcnMgPSBjKCJERU5TSVRZIiksIAogICAgICAgICAgcmVnaW9uID0gInN0YXRlOjI2IikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KVGlnZXJzIDwtIGdldENlbnN1cyhuYW1lID0gIjIwMTcvcGVwL3BvcHVsYXRpb24iLAogICAgICAgICAgICAgICAgICAgICAgICAgdmFycyA9IGMoIkdFT05BTUUiLCAiQ09VTlRZIiwgIkRFTlNJVFkiKSwgCiAgICAgICAgICAgICAgICAgICAgICAgICByZWdpb24gPSAiY291bnR5OioiLAogICAgICAgICAgICAgICAgICAgICAgICAgcmVnaW9uaW4gPSAic3RhdGU6MjYiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoZWFkKFRpZ2Vycywgbj0xNUwpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRyb3BzIDwtIGMoInN0YXRlIiwgImNvdW50eSIsICJDT1VOVFkiKSAjIEFzc2lnbnMgY29sdW1uIG5hbWVzIHRvIGJlIGRyb3BwZWQKVGlnZXJzIDwtIFRpZ2Vyc1sgLCAhKG5hbWVzKFRpZ2VycykgJWluJSBkcm9wcyldICMgRHJvcHMgdGhvc2UgY29sdW1ucyAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChUaWdlcnMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQobWlfY291bnQpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tClRpZ2VycyA8LSBUaWdlcnMgJT4lIAogIHNlcGFyYXRlKEdFT05BTUUsIGludG8gPSBwYXN0ZTAoJ3RoaW5nJywgMToyKSwgc2VwID0gJ1ssXScpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQoVGlnZXJzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpUaWdlcnMgPC0gc2V0TmFtZXMoVGlnZXJzLCBjKCJDb3VudHkiLCJTdGF0ZSIsIkRlbnNpdHkiKSkgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQoVGlnZXJzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpUaWdlcnMkQ291bnR5IDwtIHN0cl9yZXBsYWNlX2FsbChUaWdlcnMkQ291bnR5LCAiIENvdW50eSIsICIiKSAKIyBGaW5kIHRoZSB0ZXJtIENvdW50eSBpbiB0aGUgQ291bnR5IGNvbHVtbiBhbmQgcmVwbGFjZSBpdCBub3RoaW5nIChnaXZlbiBieSAiIikuIE5vdGljZSAKIyB0aGF0IHRoZXJlIGlzIGEgc3BhY2UgYmV0d2VlbiB0aGUgZmlyc3QgcXVvdGUgYW5kIHRoZSB0ZXJtIENvdW50eSB0byBhY2NvdW50IGZvciB0aGUgCiMgc3BhY2UgYmV0d2VlbiB0aGUgdHdvIHdvcmRzLgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkcm9wRnJvbUNlbnN1cyA8LSBjKCJTdGF0ZSIpClRpZ2VycyA8LSBUaWdlcnNbICwgIShuYW1lcyhUaWdlcnMpICVpbiUgZHJvcEZyb21DZW5zdXMpXSAjIERyb3BzIHRob3NlIGNvbHVtbnMKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChUaWdlcnMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQobWlfY291bnQpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRyb3BGcm9tTWFwRGF0YSA8LSBjKCJncm91cCIsICJvcmRlciIsICJyZWdpb24iKQptaV9jb3VudCA8LSBtaV9jb3VudFsgLCAhKG5hbWVzKG1pX2NvdW50KSAlaW4lIGRyb3BGcm9tTWFwRGF0YSldICMgRHJvcHMgdGhvc2UgY29sdW1ucwpoZWFkKG1pX2NvdW50KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQptaV9jb3VudCA8LSBzZXROYW1lcyhtaV9jb3VudCwgYygibG9uZyIsImxhdCIsIkNvdW50eSIpKSAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChtaV9jb3VudCkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbWlfY291bnQkQ291bnR5IDwtIHN0cl90b190aXRsZShtaV9jb3VudCRDb3VudHkpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQobWlfY291bnQpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQoVGlnZXJzKQpoZWFkKG1pX2NvdW50KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0b3RhbF90aGluZyA8LSBsZWZ0X2pvaW4obWlfY291bnQsIFRpZ2VycywgYnkgPSBjKCJDb3VudHkiKSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChtaV9jb3VudCkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHRvdGFsX3RoaW5nLCBhZXMoeD1sb25nLCB5ID0gbGF0LCBmaWxsPURlbnNpdHksIGdyb3VwPUNvdW50eSksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjZjhmOGZhIiwgc2l6ZSA9IDAuMjUsIHNob3cubGVnZW5kID0gVCkgKwogIHNjYWxlX2NvbG9yX3ZpcmlkaXMoYWxwaGE9MSwgb3B0aW9uPSJ2aXJpZGlzIikgKyAjIGNvbG9yIHRlbGxzIFIgdG8gbG9vayBmb3IgZGlzY3JldGUgZGF0YSB0byBjb2xvcgogIHRoZW1lX2J3KCkgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDI2LGNvbG9yID0iIzEwNTQ1NiIsICB2anVzdCA9IC0xKSwKICAgICAgICBsZWdlbmQucG9zaXRpb24gPSJyaWdodCIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICd2ZXJ0aWNhbCcsCiAgICAgICAgbGVnZW5kLmtleSA9IGVsZW1lbnRfcmVjdChzaXplID0gNSwgY29sb3IgPSBOQSksCiAgICAgICAgbGVnZW5kLmtleS5zaXplID0gdW5pdCgxLjUsICdsaW5lcycpLAogICAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemU9MTUsIGNvbG9yID0gIiM1OTU5NUIiKSwKICAgICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduID0gMC41LAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnggPSB1bml0KDAuNSwgImNtIiksIAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnkgPSB1bml0KDAuNSwgImNtIiksCiAgICAgICAgIyBsZWdlbmQuYm94Lm1hcmdpbiA9IHVuaXQoYygwLDAsMCwwKSwiY20iKSwKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChsaW5ldHlwZSA9IDAsIHNpemUgPSAwLjUsIGNvbG91ciA9IDEpLAogICAgICAgIHBhbmVsLmJhY2tncm91bmQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpY2tzID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdG90YWxfdGhpbmckRGVuc2l0eSA8LSBhcy5udW1lcmljKGFzLmNoYXJhY3Rlcih0b3RhbF90aGluZyREZW5zaXR5KSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHRvdGFsX3RoaW5nLCBhZXMoeD1sb25nLCB5ID0gbGF0LCBmaWxsPURlbnNpdHksIGdyb3VwPUNvdW50eSksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjZjhmOGZhIiwgc2l6ZSA9IDAuMjUsIHNob3cubGVnZW5kID0gVCkgKwogIHNjYWxlX2ZpbGxfdmlyaWRpcyhhbHBoYT0xLCBvcHRpb249InZpcmlkaXMiKSArICMgZmlsbCB0ZWxscyBSIHRvIGxvb2sgZm9yIGNvbnRpbnVvdXMgZGF0YSB0byBjb2xvcgogIHRoZW1lX2J3KCkgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDI2LGNvbG9yID0iIzEwNTQ1NiIsICB2anVzdCA9IC0xKSwKICAgICAgICBsZWdlbmQucG9zaXRpb24gPSJyaWdodCIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICd2ZXJ0aWNhbCcsCiAgICAgICAgbGVnZW5kLmtleSA9IGVsZW1lbnRfcmVjdChzaXplID0gNSwgY29sb3IgPSBOQSksCiAgICAgICAgbGVnZW5kLmtleS5zaXplID0gdW5pdCgxLjUsICdsaW5lcycpLAogICAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemU9MTUsIGNvbG9yID0gIiM1OTU5NUIiKSwKICAgICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduID0gMC41LAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnggPSB1bml0KDAuNSwgImNtIiksIAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnkgPSB1bml0KDAuNSwgImNtIiksCiAgICAgICAgIyBsZWdlbmQuYm94Lm1hcmdpbiA9IHVuaXQoYygwLDAsMCwwKSwiY20iKSwKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChsaW5ldHlwZSA9IDAsIHNpemUgPSAwLjUsIGNvbG91ciA9IDEpLAogICAgICAgIHBhbmVsLmJhY2tncm91bmQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpY2tzID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCg==&#34; download=&#34;Week 6 Assignment Script Outline.R&#34;&gt;
+&lt;button class=&#34;btn btn-default hvr-sweep-to-left&#34;&gt;&lt;i class=&#34;fa fa-save&#34;&gt;&lt;/i&gt; Download the Script&lt;/button&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&#34;read-the-submission-directions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read the Submission Directions&lt;/h2&gt;
+&lt;p&gt;Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, &lt;a href=&#34;https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf&#34; target=&#34;_blank&#34;&gt;region&lt;/a&gt;, and national levels to &lt;a href=&#34;https://2021edp693e.slack.com/archives/C01PB0Z18FP&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; for the out of class task.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-up-some-libraries&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Load Up Some Libraries&lt;/h2&gt;
+&lt;p&gt;Please go ahead and download the libraries below you don’t have and load them up&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggmap) # Provides the ability to visualize spatial data
+library(maps) # Computes the areas of regions in a projected map
+library(mapdata) # Providing both larger and higher-resolution databases.
+library(rgdal) # Bindings for the Geospatial Data Abstraction Library 
+               # (https://www.gdal.org/)
+library(tidyverse)
+library(tools) # Core package for R and is worth noting
+library(viridis)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;save-and-declare-your-census-api&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Save and declare your Census API&lt;/h2&gt;
+&lt;p&gt;There are a few things you need to do when grabbing Census data.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;You must have a key from &lt;a href=&#34;https://api.census.gov/data/key_signup.html&#34; target=&#34;_blank&#34;&gt;https://api.census.gov/data/key_signup.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Load up (or install and then load up) the library &lt;code&gt;censusapi&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(censusapi)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;censusapi&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:methods&amp;#39;:
+## 
+##     getFunction&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Add key to the .Renviron (the place in the &lt;code&gt;censusapi&lt;/code&gt; where your unique identifier, or key, is stored)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.setenv(CENSUS_KEY=&amp;quot;YOUR API KEY HERE&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Reload the .Renviron&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;readRenviron(&amp;quot;~/.Renviron&amp;quot;) # You may get a warning...ignore it&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Check to see that your key stored within R&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.getenv(&amp;quot;CENSUS_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;## [1] &#34;YOUR UNIQUE IDENTIFIER HERE&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-i-the-map&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PART I: The Map&lt;/h2&gt;
+&lt;div id=&#34;country-level-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Country Level Data&lt;/h3&gt;
+&lt;p&gt;Load some United States demographic data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;usa &amp;lt;- map_data(&amp;quot;usa&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before you look at it by running &lt;code&gt;usa&lt;/code&gt;, Census data sets are typically huge for obvious reasons. Let’s see how big the file actually is.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dim(usa)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7243    6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With 43,458 entries, that’s pretty big! Maybe we shouldn’t load it up (even in &lt;code&gt;View()&lt;/code&gt; it takes awhile). Let’s instead just see the first and last six rows to get an idea of what it looks like to get an idea.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(usa) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        long      lat group order region subregion
+## 1 -101.4078 29.74224     1     1   main      &amp;lt;NA&amp;gt;
+## 2 -101.3906 29.74224     1     2   main      &amp;lt;NA&amp;gt;
+## 3 -101.3620 29.65056     1     3   main      &amp;lt;NA&amp;gt;
+## 4 -101.3505 29.63911     1     4   main      &amp;lt;NA&amp;gt;
+## 5 -101.3219 29.63338     1     5   main      &amp;lt;NA&amp;gt;
+## 6 -101.3047 29.64484     1     6   main      &amp;lt;NA&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tail(usa) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##           long      lat group order         region subregion
+## 7247 -122.6187 48.37482    10  7247 whidbey island      &amp;lt;NA&amp;gt;
+## 7248 -122.6359 48.35764    10  7248 whidbey island      &amp;lt;NA&amp;gt;
+## 7249 -122.6703 48.31180    10  7249 whidbey island      &amp;lt;NA&amp;gt;
+## 7250 -122.7218 48.23732    10  7250 whidbey island      &amp;lt;NA&amp;gt;
+## 7251 -122.7104 48.21440    10  7251 whidbey island      &amp;lt;NA&amp;gt;
+## 7252 -122.6703 48.17429    10  7252 whidbey island      &amp;lt;NA&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have columns that can be used! The most obvious choice for map data is using the coordinates for longitude and latitude. So let’s plot using the longitudinal (&lt;code&gt;long&lt;/code&gt;) and latitudinal (&lt;code&gt;lat&lt;/code&gt;) columns.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called &lt;code&gt;coord_fixed&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3) # 1.3 is a decent standard estimate&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &amp;quot;#1b85b8&amp;quot;, 
+               fill = &amp;quot;#559e83&amp;quot;) + 
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Its looking better but something is missing. Hmmm….Oh I know. Its the “S” part of “USA” - To get that, we need to look at state level data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;state-level-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;State Level Data&lt;/h3&gt;
+&lt;p&gt;We have two choices: we can either bring in a particular state or bring them all in and then filter later. Unless you specifically know which state you want, its a good rule of thumb to bring in all state level data.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;state &amp;lt;- map_data(&amp;quot;state&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As a side note, if you know which state you want to look at, then just do the following. I’ll use California as an example.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;California &amp;lt;- map_data(&amp;quot;state&amp;quot;, region = &amp;quot;CA&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A good thing to note is that &lt;code&gt;region =&lt;/code&gt; is a bit misleading. At first you may think that it is a state’s abbreviation but it is not. In fact, you can’t even use abbreviations in that field. For example, if we use the abbreviation for Kansas, you’ll get nonsense&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Kansas &amp;lt;- map_data(&amp;quot;state&amp;quot;, region = &amp;quot;KS&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Error in map.poly(database, regions, exact, xlim, ylim, boundary, interior, : no recognized region names&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(Yes the output is going off the page and no I can’t do anything about it)&lt;br /&gt;
+&lt;br&gt;
+The command &lt;code&gt;region =&lt;/code&gt; is actually a filter so you need to put as much information as you can to ensure that you only get the state you want. For example, let’s see what happens when I do the following&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Michigan &amp;lt;- map_data(&amp;quot;state&amp;quot;, region = &amp;quot;MI&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well MI is certainly the standard abbreviation for Michigan but again, that is not what the command is doing. Other states have those letters:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unique(Michigan$region)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;michigan&amp;quot;    &amp;quot;minnesota&amp;quot;   &amp;quot;mississippi&amp;quot; &amp;quot;missouri&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That is not what we wanted so please make sure you use the region filter correctly. In a worst case scenario or if you don’t mind the extra effort, just type in the name of the state.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Michigan &amp;lt;- map_data(&amp;quot;state&amp;quot;, 
+                     region = &amp;quot;Michigan&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;unique(Michigan$region)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;michigan&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s much better! OK back to mapping. I’m actually going to stick with Michigan. Notice here that I am using the entire state data set and filtering Michigan out with the command &lt;code&gt;subset&lt;/code&gt; and the &lt;code&gt;==&lt;/code&gt; (double equals sign).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mi &amp;lt;- subset(state, 
+             region==&amp;quot;michigan&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For a basic plot, we do the following:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = mi, 
+                        aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;47%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
+  scale_fill_manual(values=c(&amp;quot;#6A0032&amp;quot;)) +
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Not bad but we can get even more granular. Let’s look at county level data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;county-level-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;County Level Data&lt;/h3&gt;
+&lt;p&gt;Much like before, we’re going to pull in all of the county level data,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;county &amp;lt;- map_data(&amp;quot;county&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then we’ll filter it for Michigan,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mi_count &amp;lt;- subset(county, region==&amp;quot;michigan&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and finally we’ll plot it.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &amp;quot;#FFFFFF&amp;quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&amp;quot;inferno&amp;quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&amp;quot;#105456&amp;quot;,  vjust = -1),
+        legend.position =&amp;quot;bottom&amp;quot;,
+        legend.direction = &amp;#39;vertical&amp;#39;,
+        legend.text = element_text(size=15, color = &amp;quot;#59595B&amp;quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &amp;quot;cm&amp;quot;), 
+        legend.spacing.y = unit(0.5, &amp;quot;cm&amp;quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Your output may look a little different depending on your system settings.&lt;/em&gt;&lt;br /&gt;
+&lt;br&gt;
+That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with &lt;code&gt;guide = FALSE&lt;/code&gt; within &lt;code&gt;scale_fill_viridis&lt;/code&gt; to get rid of that particular one or to turn all &lt;code&gt;fill&lt;/code&gt; legends off, you can use &lt;code&gt;guides(fill=FALSE)&lt;/code&gt; which is switch off in the plot above. In the example below, let’s try the one with &lt;code&gt;guide = FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &amp;quot;#FFFFFF&amp;quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&amp;quot;inferno&amp;quot;, 
+                     guide = FALSE) + #HERE IT IS
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&amp;quot;#105456&amp;quot;,  vjust = -1),
+        legend.position =&amp;quot;bottom&amp;quot;,
+        legend.direction = &amp;#39;vertical&amp;#39;,
+        legend.text = element_text(size=15, color = &amp;quot;#59595B&amp;quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &amp;quot;cm&amp;quot;), 
+        legend.spacing.y = unit(0.5, &amp;quot;cm&amp;quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+# guides(color=FALSE) +
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well now we definitely have county level data for Michigan.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.&lt;/strong&gt;&lt;br /&gt;
+&lt;br&gt;
+OK now we should probably do something with this map. Let get some Census data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-ii-the-us-census&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PART II: The US Census&lt;/h2&gt;
+&lt;div id=&#34;gathering-and-making-important-decisions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Gathering and Making Important Decisions&lt;/h3&gt;
+&lt;p&gt;Choose an endpoint &lt;em&gt;aka a set of data&lt;/em&gt; that you want.&lt;/p&gt;
+&lt;p&gt;At this point it is completely understandable if you are wondering what an API is. Without getting overtly technical, an API is the acronym for &lt;strong&gt;Application Programming Interface&lt;/strong&gt;. This is essentially a text based software that allows two applications to talk to each other. Why text based? Well its really the only aspect that all computers share. In fact, each time you use an app like YouTube, send a text message, or check the weather on your phone, etc. from any device worldwide, you’re using an API. As an example, take a look at the Twitter API &lt;a href=&#34;https://developer.twitter.com/en/docs/tweets/search/api-reference.html&#34; target=&#34;_blank&#34;&gt;https://developer.twitter.com/en/docs/tweets/search/api-reference.html&lt;/a&gt; that we’ll be using later in the term to perform some network data visualizations.&lt;br /&gt;
+&lt;br&gt;
+Now when looking at our endpoint, what should we choose? As of 2018, there are over 200 Census API endpoints are available, including the Decennial Census, American Community Survey, Poverty Statistics, and Population Estimates. You can find a list here: &lt;a href=&#34;https://api.census.gov/data.html&#34; target=&#34;_blank&#34;&gt;https://api.census.gov/data.html&lt;/a&gt;. Please look them over!&lt;br /&gt;
+&lt;br&gt;
+The &lt;code&gt;censusapi&lt;/code&gt; package is designed to let you get data from all of those APIs using the same main function &lt;code&gt;getCensus&lt;/code&gt; and the same syntax for each data set. In this example case, let’s look at the 2017 Density Estimates (variables can be found here: &lt;a href=&#34;https://api.census.gov/data/2017/pep/population/variables.html&#34; target=&#34;_blank&#34;&gt;https://api.census.gov/data/2017/pep/population/variables.html&lt;/a&gt;) for all states within the US. Alternatively you can get that information directly through the API we have been using:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;apis &amp;lt;- listCensusApis()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(apis)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now certain repositories require certain basic variables to be run (for example if years are a factor). To get an idea, the 2017 American Community Survey which is used to update some data within the primary Census.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Here are the available variables&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;acs2017_vars &amp;lt;- listCensusMetadata(name = &amp;quot;2017/pep/population/&amp;quot;, 
+                                 type = &amp;quot;variables&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(acs2017_vars)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      name                          label                concept predicateType
+## 1    MDIV     Metropolitan Division code Selectable Geographies           int
+## 2  COUSUB Minor Civil Division FIPS code              Estimates           int
+## 3  SUMLEV                  Summary Level              Estimates          &amp;lt;NA&amp;gt;
+## 4   STATE                State FIPS code              Estimates          &amp;lt;NA&amp;gt;
+## 5 GEONAME                Geographic Name              Estimates          &amp;lt;NA&amp;gt;
+## 6   DATE_                           Date              Estimates           int
+##   group limit          required
+## 1   N/A     0              &amp;lt;NA&amp;gt;
+## 2   N/A     0              &amp;lt;NA&amp;gt;
+## 3   N/A     0              &amp;lt;NA&amp;gt;
+## 4   N/A     0              &amp;lt;NA&amp;gt;
+## 5   N/A     0              &amp;lt;NA&amp;gt;
+## 6   N/A     0 default displayed&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Here are the available geographies&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;acs2017_geos &amp;lt;- listCensusMetadata(name = &amp;quot;2017/pep/population/&amp;quot;, 
+                                   type = &amp;quot;geography&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(acs2017_geos)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to see which variables are required for mapping, then there is a problem and that is actually due to bad luck as a result of timing. The Census is going through a new update with a new API format that was supposed to go live two weeks ago. It has, however, been pushed back to October 31. Until then, you will have to utilize the website. However if you are adamant about using R for the whole process as I typically am, then you can get table, aka tabular data from any website. If this interests you, please seethe section below. Otherwise move on to the next section.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scraping-the-web-using-r&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Scraping the Web using R&lt;/h3&gt;
+&lt;p&gt;In order to grab data off of the web, you will need to several things. At first it may seem arduous but having lengthy tables as data within R can be very beneficial, especially when filtering or if you just don’t want to manually load or type in entries. Included are steps to get the data you need in a usable form within R.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Download and run the &lt;code&gt;rvest&lt;/code&gt; package (though there are others like a package called &lt;code&gt;XML&lt;/code&gt; that may be useful in other circumstances)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: xml2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;rvest&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:purrr&amp;#39;:
+## 
+##     pluck&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following object is masked from &amp;#39;package:readr&amp;#39;:
+## 
+##     guess_encoding&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Define the website you want to pull the data from&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;webpage &amp;lt;- read_html(&amp;quot;https://api.census.gov/data/2017/pep/population/variables.html&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Tell &lt;code&gt;rvest&lt;/code&gt; that you want the tables using the command &lt;code&gt;html_nodes&lt;/code&gt;. This does a lot of things but in a nutshell, it recognizes if a page is a webpage by scanning the HTML code and then finds what you need. In our case, we’re asking it to recognize the Census webpage from above and to identify the HTML codes where the term &lt;code&gt;table&lt;/code&gt; exists.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tbls &amp;lt;- html_nodes(webpage, &amp;quot;table&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;See information regarding all of the tables&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tbls # or if there are multiple tables, consider using head(tbls)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## {xml_nodeset (1)}
+## [1] &amp;lt;table&amp;gt;\n&amp;lt;caption&amp;gt;Census Data API: Variables in /data/2017/pep/population ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By the output, we only have one table which is indicated by &lt;code&gt;[1]&lt;/code&gt;.&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Now do some piping via &lt;code&gt;dplyr&lt;/code&gt; to get a list of everything within that table&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tbls_ls &amp;lt;- webpage %&amp;gt;%
+        html_nodes(&amp;quot;table&amp;quot;) %&amp;gt;% # Creates a multidimensional list (i.e. a list 
+                                # with layers and depth akin to folders within 
+                                # folders within folders, ect.)
+        .[1] %&amp;gt;% # We only have table so we put.[1] here. If we had multiple 
+                 # tables and we wanted say the first three, we could have 
+                 # used .[1:3]
+        html_table(fill = TRUE) # Convert the data to a table format and populate 
+                                # the entries&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;See the result&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(tbls_ls)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that its a list and can go pretty deep down the rabbit hole depending on how many tables you are looking at. In this case, we have one so ts pretty simple.&lt;/p&gt;
+&lt;ol start=&#34;7&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Now narrow down the results. Say you only wanted the ones that were required. You can figure that out by filtering for the term &lt;code&gt;default displayed&lt;/code&gt; under the column &lt;strong&gt;Required&lt;/strong&gt;. To do this, we first run the following which splits up all of the tables and then attaches them together by corresponding entries.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tbls_ls &amp;lt;- do.call(rbind.data.frame, tbls_ls) # Concatenates a list of data frames 
+                                              # into a single data frame&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;(Optional) Take a look to see that it looks like an actual table&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;View(tbls_ls)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;9&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Now we get rid of the rows that that don’t have &lt;code&gt;default displayed&lt;/code&gt; under &lt;strong&gt;Required&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filtered_tbls_ls &amp;lt;- tbls_ls[tbls_ls$Required == &amp;quot;default displayed&amp;quot;, ] 
+                                                              # Filter out the rows that
+                                                              # don&amp;#39;t have `default 
+                                                              # displayed` under the 
+                                                              # column **Required**&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;10&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Just show the names of the required variables&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filtered_tbls_ls$Name # Just shows the Names of the required variables&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;DATE_&amp;quot;    &amp;quot;UNIVERSE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So here we see that the variables DATE and UNIVERSE are required.&lt;/p&gt;
+&lt;p&gt;Alternatively and if you understand the above, you can simply use the following in one fell swoop using &lt;code&gt;dplyr&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+
+read_html(&amp;quot;https://api.census.gov/data/2017/pep/population/variables.html&amp;quot;) %&amp;gt;%
+html_nodes(&amp;quot;table&amp;quot;)  %&amp;gt;% # Creates a multidimensional list (i.e. a list with layers 
+                         # and depth akin to folders within folders within folders, 
+                         # ect.)
+  .[1] %&amp;gt;% # We only have table so we put.[1] here. If we had multiple tables and 
+           # we wanted say the first three, we could have used .[1:3]
+  html_table(fill = TRUE) %&amp;gt;% # Convert the data to a table format and populate the 
+                              # entries
+  bind_rows() %&amp;gt;% # Concatenates a list of data frames into a single data frame
+  filter(Required == &amp;quot;default displayed&amp;quot;) %&amp;gt;% # Filter out the rows that don&amp;#39;t have
+                                              # `default displayed` under the column 
+                                              # **Required**
+  select(Name) # Just shows the Names of the required variables&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## New names:
+## * NA -&amp;gt; ...9&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       Name
+## 1    DATE_
+## 2 UNIVERSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Life is much easier with pipes! Note that this and the other method should work with many of the Census web tables but may not for all, especially for older tables that may have not been updated and do not have the column &lt;strong&gt;Required&lt;/strong&gt;. Part of understanding what is going on in each line affords you the ability to change commands and variables as necessary.&lt;br /&gt;
+&lt;br&gt;
+OK now back to the mapping!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-the-data-you-want&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting the Data You Want&lt;/h2&gt;
+&lt;p&gt;Backtracking on the two methods presented above, if we wanted to figure out which variables are available in general, we could&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go back to step 9 and run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tbls_ls$Name&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;23 variables&amp;quot; &amp;quot;CBSA&amp;quot;         &amp;quot;CONCIT&amp;quot;       &amp;quot;COUNTY&amp;quot;       &amp;quot;COUSUB&amp;quot;      
+##  [6] &amp;quot;CSA&amp;quot;          &amp;quot;DATE_&amp;quot;        &amp;quot;DATE_DESC&amp;quot;    &amp;quot;DENSITY&amp;quot;      &amp;quot;DIVISION&amp;quot;    
+## [11] &amp;quot;for&amp;quot;          &amp;quot;FUNCSTAT&amp;quot;     &amp;quot;GEONAME&amp;quot;      &amp;quot;in&amp;quot;           &amp;quot;LASTUPDATE&amp;quot;  
+## [16] &amp;quot;MDIV&amp;quot;         &amp;quot;NATION&amp;quot;       &amp;quot;PLACE&amp;quot;        &amp;quot;POP&amp;quot;          &amp;quot;PRIMGEOFLAG&amp;quot; 
+## [21] &amp;quot;REGION&amp;quot;       &amp;quot;STATE&amp;quot;        &amp;quot;SUMLEV&amp;quot;       &amp;quot;UNIVERSE&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;OR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rerun parts of the piping system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;read_html(&amp;quot;https://api.census.gov/data/2017/pep/population/variables.html&amp;quot;) %&amp;gt;%
+  html_nodes(&amp;quot;table&amp;quot;)  %&amp;gt;% # This is a multidimensional list (i.e. a list with layers)
+  .[1] %&amp;gt;% 
+  html_table(fill = TRUE) %&amp;gt;%
+  bind_rows() %&amp;gt;% 
+  select(Name)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## New names:
+## * NA -&amp;gt; ...9&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            Name
+## 1  23 variables
+## 2          CBSA
+## 3        CONCIT
+## 4        COUNTY
+## 5        COUSUB
+## 6           CSA
+## 7         DATE_
+## 8     DATE_DESC
+## 9       DENSITY
+## 10     DIVISION
+## 11          for
+## 12     FUNCSTAT
+## 13      GEONAME
+## 14           in
+## 15   LASTUPDATE
+## 16         MDIV
+## 17       NATION
+## 18        PLACE
+## 19          POP
+## 20  PRIMGEOFLAG
+## 21       REGION
+## 22        STATE
+## 23       SUMLEV
+## 24     UNIVERSE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternative if you are pretty sure that a variable is already in a Census table and want verification, you cab check for it. For example, let’s see if the variable DENSITY exists in the 2017 Density Estimates (I bet it does since the word Density is right in the title) for the state of Michigan.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;getCensus(name = &amp;quot;2017/pep/population&amp;quot;,
+          vars = c(&amp;quot;DENSITY&amp;quot;), 
+          region = &amp;quot;state:26&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   state DENSITY
+## 1    26 176.139&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Yup its available but right now you may be wondering how I got that number 26. Well the Census assigns a number (called a &lt;strong&gt;FIPS state code&lt;/strong&gt;) to every territory the US controls. You can find grouped listings here &lt;a href=&#34;https://www.census.gov/geo/reference/ansi_statetables.html&#34; target=&#34;_blank&#34;&gt;https://www.census.gov/geo/reference/ansi_statetables.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well let’s get county and state level data and run it!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Tigers &amp;lt;- getCensus(name = &amp;quot;2017/pep/population&amp;quot;,
+                         vars = c(&amp;quot;GEONAME&amp;quot;, &amp;quot;COUNTY&amp;quot;, &amp;quot;DENSITY&amp;quot;), 
+                         region = &amp;quot;county:*&amp;quot;,
+                         regionin = &amp;quot;state:26&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now take a peek at the first 15 entries in the Michigan list.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers, n=15L)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    state county                     GEONAME COUNTY     DENSITY
+## 1     26    073   Isabella County, Michigan    073  124.088901
+## 2     26    075    Jackson County, Michigan    075  226.080702
+## 3     26    077  Kalamazoo County, Michigan    077  467.780995
+## 4     26    079   Kalkaska County, Michigan    079   31.504614
+## 5     26    081       Kent County, Michigan    081  765.161412
+## 6     26    083   Keweenaw County, Michigan    083    3.897341
+## 7     26    085       Lake County, Michigan    085   21.165346
+## 8     26    087     Lapeer County, Michigan    087  136.875440
+## 9     26    089   Leelanau County, Michigan    089   62.378722
+## 10    26    091    Lenawee County, Michigan    091  131.575529
+## 11    26    093 Livingston County, Michigan    093  335.585145
+## 12    26    095       Luce County, Michigan    095    7.071703
+## 13    26    097   Mackinac County, Michigan    097   10.482856
+## 14    26    099     Macomb County, Michigan    099 1818.397780
+## 15    26    101   Manistee County, Michigan    101   45.041218&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that we can get rid of the columns &lt;code&gt;state&lt;/code&gt;, &lt;code&gt;county&lt;/code&gt;, and &lt;code&gt;COUNTY&lt;/code&gt; since we only need the columns &lt;code&gt;GEOMNAME&lt;/code&gt; and &lt;code&gt;DENSITY&lt;/code&gt;. We can do this by running the following&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drops &amp;lt;- c(&amp;quot;state&amp;quot;, &amp;quot;county&amp;quot;, &amp;quot;COUNTY&amp;quot;) # Assigns column names to be dropped
+Tigers &amp;lt;- Tigers[ , !(names(Tigers) %in% drops)] # Drops those columns &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is actually one of the few times that Base R is easier to use than a tidy approach. Anyway now let’s take a look at the Census data set now.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                      GEONAME    DENSITY
+## 1  Isabella County, Michigan 124.088901
+## 2   Jackson County, Michigan 226.080702
+## 3 Kalamazoo County, Michigan 467.780995
+## 4  Kalkaska County, Michigan  31.504614
+## 5      Kent County, Michigan 765.161412
+## 6  Keweenaw County, Michigan   3.897341&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Recall that our map data looks like this&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have to merge both of these sets so that the Census data and map data line up. We have a bit of work to do but its all about identifying what we need. Now I should note that the process below is just one way to get there. Steps are provided for convenience, but again they are contingent on your own table.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The column &lt;code&gt;GEONAME&lt;/code&gt; is a concatenation of county and state level data. Let’s split them up using the &lt;code&gt;,&lt;/code&gt; (comma) as the delimiter…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Tigers &amp;lt;- Tigers %&amp;gt;% 
+  separate(GEONAME, into = paste0(&amp;#39;thing&amp;#39;, 1:2), sep = &amp;#39;[,]&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and then take a look at the results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             thing1    thing2    DENSITY
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Notice that the columns have been split and renamed &lt;code&gt;thing1&lt;/code&gt; and &lt;code&gt;thing2&lt;/code&gt;. But we want the column names to be representative of what they are. So we can rename them in order of appearance from left to right&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Tigers &amp;lt;- setNames(Tigers, c(&amp;quot;County&amp;quot;,&amp;quot;State&amp;quot;,&amp;quot;Density&amp;quot;)) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and then take a look at the results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             County     State    Density
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Now notice that the term &lt;strong&gt;County&lt;/strong&gt; appears perpetually with the &lt;strong&gt;County&lt;/strong&gt; columns and does not appear in the &lt;code&gt;mi_count&lt;/code&gt; set. So we have a choice in that we can either leave it be here and add the term County to &lt;code&gt;mi_count&lt;/code&gt; or drop the term from this set. I like to have less clutter so choosing the latter makes sense. However, you could just as well do the other and the intended outcome that columns look the same would work all the same.&lt;br /&gt;
+&lt;br&gt;
+Now there are many ways to attack this. Similar to the process above, you could just split the column again based on the space and then delete one of the resulting columns with the term &lt;strong&gt;County&lt;/strong&gt; in it. However, since you have already been exposed to the &lt;code&gt;stringr&lt;/code&gt; package, let’s use that.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Tigers$County &amp;lt;- str_replace_all(Tigers$County, &amp;quot; County&amp;quot;, &amp;quot;&amp;quot;) 
+# Find the term County in the County column and replace it nothing (given by &amp;quot;&amp;quot;). Notice 
+# that there is a space between the first quote and the term County to account for the 
+# space between the two words.&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Finally we certainly know that we’re in Michigan so let’s get rid of that column&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dropFromCensus &amp;lt;- c(&amp;quot;State&amp;quot;)
+Tigers &amp;lt;- Tigers[ , !(names(Tigers) %in% dropFromCensus)] # Drops those columns&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;OK we are done with the Census data for now. Moving on the map data, lets compare both again&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are &lt;code&gt;group&lt;/code&gt;, &lt;code&gt;order&lt;/code&gt;, and &lt;code&gt;region&lt;/code&gt;. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there’s nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in &lt;code&gt;mi_count&lt;/code&gt; by stating &lt;code&gt;mi_count[some operation here , ]&lt;/code&gt;. Alternatively, I can also tell R that I want to do something to the columns in &lt;code&gt;mi_count&lt;/code&gt; by stating &lt;code&gt;mi_count[ , some operation here ]&lt;/code&gt; which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;names(mi_count)&lt;/code&gt; tells R the to look at the names of the columns in &lt;code&gt;mi_count&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;names(mi_count) %in% dropFromMapData&lt;/code&gt; tells R to take the names of the columns in &lt;code&gt;mi_count&lt;/code&gt; and look for them in the vector &lt;code&gt;dropFromMapData&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;!(names(mi_count) %in% dropFromMapData)&lt;/code&gt; tells R to take those names from &lt;code&gt;dropFromMapData&lt;/code&gt; that are also in &lt;code&gt;mi_count&lt;/code&gt; and to not use them (aka to drop them).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dropFromMapData &amp;lt;- c(&amp;quot;group&amp;quot;, &amp;quot;order&amp;quot;, &amp;quot;region&amp;quot;)
+mi_count &amp;lt;- mi_count[ , !(names(mi_count) %in% dropFromMapData)] # Drops those columns
+head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat subregion
+## 38512 -83.88675 44.85686    alcona
+## 38513 -83.36536 44.86832    alcona
+## 38514 -83.33098 44.83968    alcona
+## 38515 -83.30806 44.80530    alcona
+## 38516 -83.30233 44.77665    alcona
+## 38517 -83.28515 44.72509    alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Looking at the code as whole is often overwhelming. Remember you are learning a new language so first view its most basic parts and then build up.&lt;/p&gt;
+&lt;ol start=&#34;7&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Then rename the column we’re going to merge one which in this case means renaming &lt;code&gt;subregion&lt;/code&gt; to &lt;code&gt;County&lt;/code&gt; while maintaining the others as is.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mi_count &amp;lt;- setNames(mi_count, c(&amp;quot;long&amp;quot;,&amp;quot;lat&amp;quot;,&amp;quot;County&amp;quot;)) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and take a look.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat County
+## 38512 -83.88675 44.85686 alcona
+## 38513 -83.36536 44.86832 alcona
+## 38514 -83.33098 44.83968 alcona
+## 38515 -83.30806 44.80530 alcona
+## 38516 -83.30233 44.77665 alcona
+## 38517 -83.28515 44.72509 alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;And finally, let’s capitalize the column &lt;code&gt;county&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mi_count$County &amp;lt;- str_to_title(mi_count$County)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and take a look.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In fact, let’s look it both to make sure they’re structurally similar&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(Tigers)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Yes! Now you might be thinking that &lt;code&gt;mi_count&lt;/code&gt; is full of repeated county names. Well that’s good because (1) its the file that will inform ggplot of county borders and (2) we simply need the terms and column titles to look the same; they can differ in length (aka number of rows or how many times any entry repeats).&lt;br /&gt;
+&lt;br&gt;
+We’re going to use joins which is basically a fancy way of using logic derived from a computer language called SQL. Take a look at the data-wrangling-cheatsheet PDF file or go to &lt;a href=&#34;http://stat545.com/bit001_dplyr-cheatsheet.html&#34;&gt;http://stat545.com/bit001_dplyr-cheatsheet.html&lt;/a&gt; to see detailed examples.&lt;br /&gt;
+&lt;br&gt;
+In each situation, you have to think about the end product and the data set that will get you there. Foremost, we want a county map of Michigan with Census density data. Which one is more important? Well logic would dictate that I can’t really draw density data without a map, or in research (and Algebraic) terms, density data is &lt;em&gt;dependent&lt;/em&gt; on the map. So with that idea, we need the map data (from &lt;code&gt;mi_count&lt;/code&gt;) as our primary source to merge on. The command &lt;code&gt;left_join&lt;/code&gt; will work here as long as &lt;code&gt;mi_count&lt;/code&gt; is literally to the left of the other data set: &lt;code&gt;Tigers&lt;/code&gt;. Below you can see this and also that we’re merging, or joining on the common column &lt;code&gt;County&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;total_thing &amp;lt;- left_join(mi_count, Tigers, by = c(&amp;quot;County&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…and take a look.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(mi_count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nice! it worked! Now let’s try to plot it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;part-iii-plotting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PART III: Plotting&lt;/h2&gt;
+&lt;p&gt;Well let’s give it a go!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &amp;quot;#f8f8fa&amp;quot;, size = 0.25, show.legend = T) +
+  scale_color_viridis(alpha=1, option=&amp;quot;viridis&amp;quot;) + # color tells R to look for discrete data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&amp;quot;#105456&amp;quot;,  vjust = -1),
+        legend.position =&amp;quot;right&amp;quot;,
+        legend.direction = &amp;#39;vertical&amp;#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &amp;#39;lines&amp;#39;),
+        legend.text = element_text(size=15, color = &amp;quot;#59595B&amp;quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &amp;quot;cm&amp;quot;), 
+        legend.spacing.y = unit(0.5, &amp;quot;cm&amp;quot;),
+        # legend.box.margin = unit(c(0,0,0,0),&amp;quot;cm&amp;quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-72-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;total_thing$Density &amp;lt;- as.numeric(as.character(total_thing$Density))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;OK so let’s try again:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &amp;quot;#f8f8fa&amp;quot;, size = 0.25, show.legend = T) +
+  scale_fill_viridis(alpha=1, option=&amp;quot;viridis&amp;quot;) + # fill tells R to look for continuous data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&amp;quot;#105456&amp;quot;,  vjust = -1),
+        legend.position =&amp;quot;right&amp;quot;,
+        legend.direction = &amp;#39;vertical&amp;#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &amp;#39;lines&amp;#39;),
+        legend.text = element_text(size=15, color = &amp;quot;#59595B&amp;quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &amp;quot;cm&amp;quot;), 
+        legend.spacing.y = unit(0.5, &amp;quot;cm&amp;quot;),
+        # legend.box.margin = unit(c(0,0,0,0),&amp;quot;cm&amp;quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://catalog.data.gov/dataset&#34; target=&#34;_blank&#34;&gt;https://catalog.data.gov/dataset&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

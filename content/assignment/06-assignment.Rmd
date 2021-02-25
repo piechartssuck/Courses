@@ -166,7 +166,8 @@ downloadthis::download_file(
 ```
 
 ## Read the Submission Directions
-Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, [region](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf){target="_blank"}, and national levels to [Slack](https://2021edp693e.slack.com/archives/C01PB0Z18FP){target="_blank"} for the out of class task. 
+Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, [region](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf){target="_blank"}, and national levels to [Slack](https://2021edp693e.slack.com/archives/C01PB0Z18FP){target="_blank"} for the out of class task.
+
 ## Load Up Some Libraries
 Please go ahead and download the libraries below you don't have and load them up
 
