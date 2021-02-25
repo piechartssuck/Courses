@@ -155,7 +155,7 @@ Copying and pasting syntax from a browser can cause problems. To avoid this issu
 
 ```{r echo=FALSE,eval=TRUE,purl=FALSE}
 downloadthis::download_file(
-  path = here::here("content", "example", "06-assignment.R"),
+  path = here::here("content", "assignment", "06-assignment.R"),
   output_name = "Week 6 Assignment Script Outline",
   button_label = "Download the Script",
   button_type = "default",
