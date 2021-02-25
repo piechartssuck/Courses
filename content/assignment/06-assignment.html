@@ -1,0 +1,809 @@
+---
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#read-the-submission-directions">Read the Submission Directions</a></li>
+<li><a href="#save-and-declare-your-census-api">Save and declare your Census API</a></li>
+<li><a href="#part-i-the-map">PART I: The Map</a>
+<ul>
+<li><a href="#country-level-data">Country Level Data</a></li>
+<li><a href="#state-level-data">State Level Data</a></li>
+<li><a href="#county-level-data">County Level Data</a></li>
+</ul></li>
+<li><a href="#part-ii-the-us-census">PART II: The US Census</a>
+<ul>
+<li><a href="#gathering-and-making-important-decisions">Gathering and Making Important Decisions</a></li>
+<li><a href="#scraping-the-web-using-r">Scraping the Web using R</a></li>
+</ul></li>
+<li><a href="#getting-the-data-you-want">Getting the Data You Want</a></li>
+<li><a href="#part-iii-plotting">PART III: Plotting</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,bGlicmFyeSh0aWR5dmVyc2UpCgoKCnVuaXF1ZShtcGckbWFudWZhY3R1cmVyKQoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZGlzdGluY3QoKQoKCgpnbGltcHNlKG1wZykKCgoKZ2dwbG90KG1wZywgYWVzKHggPSBtYW51ZmFjdHVyZXIsIGZpbGwgPSBtYW51ZmFjdHVyZXIpKSArCiAgZ2VvbV9iYXIoKSArCiAgZ2VvbV90ZXh0KHN0YXQgPSAnY291bnQnLCAKICAgICAgICAgICAgIGFlcyhsYWJlbCA9IGFmdGVyX3N0YXQoY291bnQpKSwgCiAgICAgICAgICAgICB2anVzdCA9IC0wLjUpICsKICB0aGVtZV9taW5pbWFsKCkgKwogIHRoZW1lKGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGFuZ2xlID0gNDUsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZqdXN0ID0gMS4zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhqdXN0ID0gMSkpIAogIAoKCgptcGcgJT4lCiAgc2VsZWN0KG1hbnVmYWN0dXJlcikgJT4lCiAgZ3JvdXBfYnkobWFudWZhY3R1cmVyKSAlPiUKICB0YWxseSgpICU+JQogIHVuZ3JvdXAoKQoKCiMjIC0tLS0gZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyBHZXQgdGhlIGBtcGdgIHRpYmJsZSAlPiUKIyMgICBPbmx5IHNob3cgbWUgdGhlIGNvbHVtbiBgbWFudWZhY3R1cmVyYCAlPiUKIyMgICAgUGVyZm9ybSBhbnkgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIENvdW50IGJ5IGNhciBtYW51ZmFjdHVyZXIgJT4lCiMjICAgIERvbnQgZG8gYW55IG1vcmUgd3JhbmdsaW5nIGJ5IGNhciBtYW51ZmFjdHVyZXIKCgoKbXBnICU+JQogIHNlbGVjdChtYW51ZmFjdHVyZXIpICU+JQogIHRhbGx5KCkgCgoKCm5hbWVzKG1wZykKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcykpIAoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBzaXplID0gY2xhc3MpKSAKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgYWxwaGEgPSBjbGFzcykpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIHNoYXBlID0gY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSwgY29sb3IgPSAiYmx1ZSIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpLCBjb2xvciA9ICIjMDAyODU1IikKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LAojIyAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICJibHVlIikpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSksCiMjICAgICAgICAgICAgICBjb2xvciA9IGMoIiMzNDczOGYiLCAiIzEyMmYzZCIsICIjYmUzZTJiIiwgIiNlZDhhNDUiLCAiI2Y2ZGU2YyIpKQoKCgptcGckY2xhc3MKCgoKdW5pcXVlKG1wZyRjbGFzcykKCgoKbGVuZ3RoKHVuaXF1ZShtcGckY2xhc3MpKQoKCgpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBjb2xvciA9IGNsYXNzKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gY2xhc3MpKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpCiMjICsgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKIGZhY2V0X3dyYXAofiBjbGFzcywgbnJvdyA9IDIpCgoKCmdncGxvdChkYXRhID0gbXBnKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG9yID0gY2xhc3MpLCBzaXplID0gMikgKwogIHNjYWxlX2NvbG9yX21hbnVhbCh2YWx1ZXMgPSBjKCIjNDkwQTNEIiwgIiNCRDE1NTAiLCAiI0U5N0YwMiIsICIjRjhDQTAwIiwgIiM4QTlCMEYiLCAiIzk1QzdEOCIsICIjRkZCRkY1IikpICsKICBmYWNldF9ncmlkKGRydiB+IGN5bCkKCgoKZ2dwbG90KGRhdGEgPSBtcGcpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBjbGFzcyksIHNpemUgPSAyKSArCiAgc2NhbGVfY29sb3JfbWFudWFsKHZhbHVlcyA9IGMoIiM0OTBBM0QiLCAiI0JEMTU1MCIsICIjRTk3RjAyIiwgIiNGOENBMDAiLCAiIzhBOUIwRiIsICIjOTVDN0Q4IiwgIiNGRkJGRjUiKSkgKwogIGZhY2V0X2dyaWQoLiB+IGN5bCkKCgoKIyMgZ2dwbG90KGRhdGEgPSBtcGcpICsKIyMgICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRydiwgeSA9IGN5bCkpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKGRydiB+IC4pCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF9ncmlkKC4gfiBjeWwpCgoKCiMjIGdncGxvdChkYXRhID0gbXBnKSArCiMjICAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsKIyMgICBmYWNldF93cmFwKH4gY2xhc3MsIG5yb3cgPSAyKQoK" download="Week 5 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="read-the-submission-directions" class="section level2">
+<h2>Read the Submission Directions</h2>
+<p>Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf" target="_blank">region</a>, and national levels to <a href="https://2021edp693e.slack.com/archives/C01PB0Z18FP" target="_blank">Slack</a> for the out of class task.
+## Load Up Some Libraries
+Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(ggmap) # Provides the ability to visualize spatial data
+library(maps) # Computes the areas of regions in a projected map
+library(mapdata) # Providing both larger and higher-resolution databases.
+library(rgdal) # Bindings for the Geospatial Data Abstraction Library 
+               # (https://www.gdal.org/)
+library(tidyverse)
+library(tools) # Core package for R and is worth noting
+library(viridis)</code></pre>
+</div>
+<div id="save-and-declare-your-census-api" class="section level2">
+<h2>Save and declare your Census API</h2>
+<p>There are a few things you need to do when grabbing Census data.</p>
+<ol style="list-style-type: decimal">
+<li><p>You must have a key from <a href="https://api.census.gov/data/key_signup.html" target="_blank">https://api.census.gov/data/key_signup.html</a></p></li>
+<li><p>Load up (or install and then load up) the library <code>censusapi</code></p></li>
+</ol>
+<pre class="r"><code>library(censusapi)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;censusapi&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:methods&#39;:
+## 
+##     getFunction</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Add key to the .Renviron (the place in the <code>censusapi</code> where your unique identifier, or key, is stored)</li>
+</ol>
+<pre class="r"><code>Sys.setenv(CENSUS_KEY=&quot;YOUR API KEY HERE&quot;)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Reload the .Renviron</li>
+</ol>
+<pre class="r"><code>readRenviron(&quot;~/.Renviron&quot;) # You may get a warning...ignore it</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Check to see that your key stored within R</li>
+</ol>
+<pre class="r"><code>Sys.getenv(&quot;CENSUS_KEY&quot;)</code></pre>
+<p><code>## [1] "YOUR UNIQUE IDENTIFIER HERE"</code></p>
+</div>
+<div id="part-i-the-map" class="section level2">
+<h2>PART I: The Map</h2>
+<div id="country-level-data" class="section level3">
+<h3>Country Level Data</h3>
+<p>Load some United States demographic data.</p>
+<pre class="r"><code>usa &lt;- map_data(&quot;usa&quot;)</code></pre>
+<p>Before you look at it by running <code>usa</code>, Census data sets are typically huge for obvious reasons. Let’s see how big the file actually is.</p>
+<pre class="r"><code>dim(usa)</code></pre>
+<pre><code>## [1] 7243    6</code></pre>
+<p>With 43,458 entries, that’s pretty big! Maybe we shouldn’t load it up (even in <code>View()</code> it takes awhile). Let’s instead just see the first and last six rows to get an idea of what it looks like to get an idea.</p>
+<pre class="r"><code>head(usa) </code></pre>
+<pre><code>##        long      lat group order region subregion
+## 1 -101.4078 29.74224     1     1   main      &lt;NA&gt;
+## 2 -101.3906 29.74224     1     2   main      &lt;NA&gt;
+## 3 -101.3620 29.65056     1     3   main      &lt;NA&gt;
+## 4 -101.3505 29.63911     1     4   main      &lt;NA&gt;
+## 5 -101.3219 29.63338     1     5   main      &lt;NA&gt;
+## 6 -101.3047 29.64484     1     6   main      &lt;NA&gt;</code></pre>
+<pre class="r"><code>tail(usa) </code></pre>
+<pre><code>##           long      lat group order         region subregion
+## 7247 -122.6187 48.37482    10  7247 whidbey island      &lt;NA&gt;
+## 7248 -122.6359 48.35764    10  7248 whidbey island      &lt;NA&gt;
+## 7249 -122.6703 48.31180    10  7249 whidbey island      &lt;NA&gt;
+## 7250 -122.7218 48.23732    10  7250 whidbey island      &lt;NA&gt;
+## 7251 -122.7104 48.21440    10  7251 whidbey island      &lt;NA&gt;
+## 7252 -122.6703 48.17429    10  7252 whidbey island      &lt;NA&gt;</code></pre>
+<p>We have columns that can be used! The most obvious choice for map data is using the coordinates for longitude and latitude. So let’s plot using the longitudinal (<code>long</code>) and latitudinal (<code>lat</code>) columns.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group))</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called <code>coord_fixed</code></p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3) # 1.3 is a decent standard estimate</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &quot;#1b85b8&quot;, 
+               fill = &quot;#559e83&quot;) + 
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Its looking better but something is missing. Hmmm….Oh I know. Its the “S” part of “USA” - To get that, we need to look at state level data.</p>
+</div>
+<div id="state-level-data" class="section level3">
+<h3>State Level Data</h3>
+<p>We have two choices: we can either bring in a particular state or bring them all in and then filter later. Unless you specifically know which state you want, its a good rule of thumb to bring in all state level data.</p>
+<pre class="r"><code>state &lt;- map_data(&quot;state&quot;)</code></pre>
+<p>As a side note, if you know which state you want to look at, then just do the following. I’ll use California as an example.</p>
+<pre class="r"><code>California &lt;- map_data(&quot;state&quot;, region = &quot;CA&quot;)</code></pre>
+<p>A good thing to note is that <code>region =</code> is a bit misleading. At first you may think that it is a state’s abbreviation but it is not. In fact, you can’t even use abbreviations in that field. For example, if we use the abbreviation for Kansas, you’ll get nonsense</p>
+<pre class="r"><code>Kansas &lt;- map_data(&quot;state&quot;, region = &quot;KS&quot;)</code></pre>
+<pre><code>## Error in map.poly(database, regions, exact, xlim, ylim, boundary, interior, : no recognized region names</code></pre>
+<p>(Yes the output is going off the page and no I can’t do anything about it)<br />
+<br>
+The command <code>region =</code> is actually a filter so you need to put as much information as you can to ensure that you only get the state you want. For example, let’s see what happens when I do the following</p>
+<pre class="r"><code>Michigan &lt;- map_data(&quot;state&quot;, region = &quot;MI&quot;)</code></pre>
+<p>Well MI is certainly the standard abbreviation for Michigan but again, that is not what the command is doing. Other states have those letters:</p>
+<pre class="r"><code>unique(Michigan$region)</code></pre>
+<pre><code>## [1] &quot;michigan&quot;    &quot;minnesota&quot;   &quot;mississippi&quot; &quot;missouri&quot;</code></pre>
+<p>That is not what we wanted so please make sure you use the region filter correctly. In a worst case scenario or if you don’t mind the extra effort, just type in the name of the state.</p>
+<pre class="r"><code>Michigan &lt;- map_data(&quot;state&quot;, 
+                     region = &quot;Michigan&quot;)</code></pre>
+<pre class="r"><code>unique(Michigan$region)</code></pre>
+<pre><code>## [1] &quot;michigan&quot;</code></pre>
+<p>That’s much better! OK back to mapping. I’m actually going to stick with Michigan. Notice here that I am using the entire state data set and filtering Michigan out with the command <code>subset</code> and the <code>==</code> (double equals sign).</p>
+<pre class="r"><code>mi &lt;- subset(state, 
+             region==&quot;michigan&quot;)</code></pre>
+<p>For a basic plot, we do the following:</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi, 
+                        aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-24-1.png" width="47%" /></p>
+<p>Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
+  scale_fill_manual(values=c(&quot;#6A0032&quot;)) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>Not bad but we can get even more granular. Let’s look at county level data.</p>
+</div>
+<div id="county-level-data" class="section level3">
+<h3>County Level Data</h3>
+<p>Much like before, we’re going to pull in all of the county level data,</p>
+<pre class="r"><code>county &lt;- map_data(&quot;county&quot;)</code></pre>
+<p>then we’ll filter it for Michigan,</p>
+<pre class="r"><code>mi_count &lt;- subset(county, region==&quot;michigan&quot;)</code></pre>
+<p>and finally we’ll plot it.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &quot;#FFFFFF&quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&quot;inferno&quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;bottom&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><em>Your output may look a little different depending on your system settings.</em><br />
+<br>
+That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with <code>guide = FALSE</code> within <code>scale_fill_viridis</code> to get rid of that particular one or to turn all <code>fill</code> legends off, you can use <code>guides(fill=FALSE)</code> which is switch off in the plot above. In the example below, let’s try the one with <code>guide = FALSE</code>.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &quot;#FFFFFF&quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&quot;inferno&quot;, 
+                     guide = FALSE) + #HERE IT IS
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;bottom&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+# guides(color=FALSE) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Well now we definitely have county level data for Michigan.</p>
+<p><strong>Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.</strong><br />
+<br>
+OK now we should probably do something with this map. Let get some Census data.</p>
+</div>
+</div>
+<div id="part-ii-the-us-census" class="section level2">
+<h2>PART II: The US Census</h2>
+<div id="gathering-and-making-important-decisions" class="section level3">
+<h3>Gathering and Making Important Decisions</h3>
+<p>Choose an endpoint <em>aka a set of data</em> that you want.</p>
+<p>At this point it is completely understandable if you are wondering what an API is. Without getting overtly technical, an API is the acronym for <strong>Application Programming Interface</strong>. This is essentially a text based software that allows two applications to talk to each other. Why text based? Well its really the only aspect that all computers share. In fact, each time you use an app like YouTube, send a text message, or check the weather on your phone, etc. from any device worldwide, you’re using an API. As an example, take a look at the Twitter API <a href="https://developer.twitter.com/en/docs/tweets/search/api-reference.html" target="_blank">https://developer.twitter.com/en/docs/tweets/search/api-reference.html</a> that we’ll be using later in the term to perform some network data visualizations.<br />
+<br>
+Now when looking at our endpoint, what should we choose? As of 2018, there are over 200 Census API endpoints are available, including the Decennial Census, American Community Survey, Poverty Statistics, and Population Estimates. You can find a list here: <a href="https://api.census.gov/data.html" target="_blank">https://api.census.gov/data.html</a>. Please look them over!<br />
+<br>
+The <code>censusapi</code> package is designed to let you get data from all of those APIs using the same main function <code>getCensus</code> and the same syntax for each data set. In this example case, let’s look at the 2017 Density Estimates (variables can be found here: <a href="https://api.census.gov/data/2017/pep/population/variables.html" target="_blank">https://api.census.gov/data/2017/pep/population/variables.html</a>) for all states within the US. Alternatively you can get that information directly through the API we have been using:</p>
+<pre class="r"><code>apis &lt;- listCensusApis()</code></pre>
+<pre class="r"><code>View(apis)</code></pre>
+<p>Now certain repositories require certain basic variables to be run (for example if years are a factor). To get an idea, the 2017 American Community Survey which is used to update some data within the primary Census.</p>
+<ol style="list-style-type: decimal">
+<li>Here are the available variables</li>
+</ol>
+<pre class="r"><code>acs2017_vars &lt;- listCensusMetadata(name = &quot;2017/pep/population/&quot;, 
+                                 type = &quot;variables&quot;)</code></pre>
+<pre class="r"><code>head(acs2017_vars)</code></pre>
+<pre><code>##      name                          label                concept predicateType
+## 1    MDIV     Metropolitan Division code Selectable Geographies           int
+## 2  COUSUB Minor Civil Division FIPS code              Estimates           int
+## 3  SUMLEV                  Summary Level              Estimates          &lt;NA&gt;
+## 4   STATE                State FIPS code              Estimates          &lt;NA&gt;
+## 5 GEONAME                Geographic Name              Estimates          &lt;NA&gt;
+## 6   DATE_                           Date              Estimates           int
+##   group limit          required
+## 1   N/A     0              &lt;NA&gt;
+## 2   N/A     0              &lt;NA&gt;
+## 3   N/A     0              &lt;NA&gt;
+## 4   N/A     0              &lt;NA&gt;
+## 5   N/A     0              &lt;NA&gt;
+## 6   N/A     0 default displayed</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Here are the available geographies</li>
+</ol>
+<pre class="r"><code>acs2017_geos &lt;- listCensusMetadata(name = &quot;2017/pep/population/&quot;, 
+                                   type = &quot;geography&quot;)</code></pre>
+<pre class="r"><code>View(acs2017_geos)</code></pre>
+<p>If you want to see which variables are required for mapping, then there is a problem and that is actually due to bad luck as a result of timing. The Census is going through a new update with a new API format that was supposed to go live two weeks ago. It has, however, been pushed back to October 31. Until then, you will have to utilize the website. However if you are adamant about using R for the whole process as I typically am, then you can get table, aka tabular data from any website. If this interests you, please seethe section below. Otherwise move on to the next section.</p>
+</div>
+<div id="scraping-the-web-using-r" class="section level3">
+<h3>Scraping the Web using R</h3>
+<p>In order to grab data off of the web, you will need to several things. At first it may seem arduous but having lengthy tables as data within R can be very beneficial, especially when filtering or if you just don’t want to manually load or type in entries. Included are steps to get the data you need in a usable form within R.</p>
+<ol style="list-style-type: decimal">
+<li>Download and run the <code>rvest</code> package (though there are others like a package called <code>XML</code> that may be useful in other circumstances)</li>
+</ol>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## Loading required package: xml2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rvest&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     pluck</code></pre>
+<pre><code>## The following object is masked from &#39;package:readr&#39;:
+## 
+##     guess_encoding</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Define the website you want to pull the data from</li>
+</ol>
+<pre class="r"><code>webpage &lt;- read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Tell <code>rvest</code> that you want the tables using the command <code>html_nodes</code>. This does a lot of things but in a nutshell, it recognizes if a page is a webpage by scanning the HTML code and then finds what you need. In our case, we’re asking it to recognize the Census webpage from above and to identify the HTML codes where the term <code>table</code> exists.</li>
+</ol>
+<pre class="r"><code>tbls &lt;- html_nodes(webpage, &quot;table&quot;) </code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>See information regarding all of the tables</li>
+</ol>
+<pre class="r"><code>tbls # or if there are multiple tables, consider using head(tbls)</code></pre>
+<pre><code>## {xml_nodeset (1)}
+## [1] &lt;table&gt;\n&lt;caption&gt;Census Data API: Variables in /data/2017/pep/population ...</code></pre>
+<p>By the output, we only have one table which is indicated by <code>[1]</code>.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Now do some piping via <code>dplyr</code> to get a list of everything within that table</li>
+</ol>
+<pre class="r"><code>tbls_ls &lt;- webpage %&gt;%
+        html_nodes(&quot;table&quot;) %&gt;% # Creates a multidimensional list (i.e. a list 
+                                # with layers and depth akin to folders within 
+                                # folders within folders, ect.)
+        .[1] %&gt;% # We only have table so we put.[1] here. If we had multiple 
+                 # tables and we wanted say the first three, we could have 
+                 # used .[1:3]
+        html_table(fill = TRUE) # Convert the data to a table format and populate 
+                                # the entries</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>See the result</li>
+</ol>
+<pre class="r"><code>View(tbls_ls)</code></pre>
+<p>Notice that its a list and can go pretty deep down the rabbit hole depending on how many tables you are looking at. In this case, we have one so ts pretty simple.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Now narrow down the results. Say you only wanted the ones that were required. You can figure that out by filtering for the term <code>default displayed</code> under the column <strong>Required</strong>. To do this, we first run the following which splits up all of the tables and then attaches them together by corresponding entries.</li>
+</ol>
+<pre class="r"><code>tbls_ls &lt;- do.call(rbind.data.frame, tbls_ls) # Concatenates a list of data frames 
+                                              # into a single data frame</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>(Optional) Take a look to see that it looks like an actual table</li>
+</ol>
+<pre class="r"><code>View(tbls_ls)</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Now we get rid of the rows that that don’t have <code>default displayed</code> under <strong>Required</strong></li>
+</ol>
+<pre class="r"><code>filtered_tbls_ls &lt;- tbls_ls[tbls_ls$Required == &quot;default displayed&quot;, ] 
+                                                              # Filter out the rows that
+                                                              # don&#39;t have `default 
+                                                              # displayed` under the 
+                                                              # column **Required**</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>Just show the names of the required variables</li>
+</ol>
+<pre class="r"><code>filtered_tbls_ls$Name # Just shows the Names of the required variables</code></pre>
+<pre><code>## [1] &quot;DATE_&quot;    &quot;UNIVERSE&quot;</code></pre>
+<p>So here we see that the variables DATE and UNIVERSE are required.</p>
+<p>Alternatively and if you understand the above, you can simply use the following in one fell swoop using <code>dplyr</code>:</p>
+<pre class="r"><code>library(rvest)
+
+read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;) %&gt;%
+html_nodes(&quot;table&quot;)  %&gt;% # Creates a multidimensional list (i.e. a list with layers 
+                         # and depth akin to folders within folders within folders, 
+                         # ect.)
+  .[1] %&gt;% # We only have table so we put.[1] here. If we had multiple tables and 
+           # we wanted say the first three, we could have used .[1:3]
+  html_table(fill = TRUE) %&gt;% # Convert the data to a table format and populate the 
+                              # entries
+  bind_rows() %&gt;% # Concatenates a list of data frames into a single data frame
+  filter(Required == &quot;default displayed&quot;) %&gt;% # Filter out the rows that don&#39;t have
+                                              # `default displayed` under the column 
+                                              # **Required**
+  select(Name) # Just shows the Names of the required variables</code></pre>
+<pre><code>## New names:
+## * NA -&gt; ...9</code></pre>
+<pre><code>##       Name
+## 1    DATE_
+## 2 UNIVERSE</code></pre>
+<p>Life is much easier with pipes! Note that this and the other method should work with many of the Census web tables but may not for all, especially for older tables that may have not been updated and do not have the column <strong>Required</strong>. Part of understanding what is going on in each line affords you the ability to change commands and variables as necessary.<br />
+<br>
+OK now back to the mapping!</p>
+</div>
+</div>
+<div id="getting-the-data-you-want" class="section level2">
+<h2>Getting the Data You Want</h2>
+<p>Backtracking on the two methods presented above, if we wanted to figure out which variables are available in general, we could</p>
+<ul>
+<li>Go back to step 9 and run</li>
+</ul>
+<pre class="r"><code>tbls_ls$Name</code></pre>
+<pre><code>##  [1] &quot;23 variables&quot; &quot;CBSA&quot;         &quot;CONCIT&quot;       &quot;COUNTY&quot;       &quot;COUSUB&quot;      
+##  [6] &quot;CSA&quot;          &quot;DATE_&quot;        &quot;DATE_DESC&quot;    &quot;DENSITY&quot;      &quot;DIVISION&quot;    
+## [11] &quot;for&quot;          &quot;FUNCSTAT&quot;     &quot;GEONAME&quot;      &quot;in&quot;           &quot;LASTUPDATE&quot;  
+## [16] &quot;MDIV&quot;         &quot;NATION&quot;       &quot;PLACE&quot;        &quot;POP&quot;          &quot;PRIMGEOFLAG&quot; 
+## [21] &quot;REGION&quot;       &quot;STATE&quot;        &quot;SUMLEV&quot;       &quot;UNIVERSE&quot;</code></pre>
+<p>OR</p>
+<ul>
+<li>Rerun parts of the piping system</li>
+</ul>
+<pre class="r"><code>read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;) %&gt;%
+  html_nodes(&quot;table&quot;)  %&gt;% # This is a multidimensional list (i.e. a list with layers)
+  .[1] %&gt;% 
+  html_table(fill = TRUE) %&gt;%
+  bind_rows() %&gt;% 
+  select(Name)</code></pre>
+<pre><code>## New names:
+## * NA -&gt; ...9</code></pre>
+<pre><code>##            Name
+## 1  23 variables
+## 2          CBSA
+## 3        CONCIT
+## 4        COUNTY
+## 5        COUSUB
+## 6           CSA
+## 7         DATE_
+## 8     DATE_DESC
+## 9       DENSITY
+## 10     DIVISION
+## 11          for
+## 12     FUNCSTAT
+## 13      GEONAME
+## 14           in
+## 15   LASTUPDATE
+## 16         MDIV
+## 17       NATION
+## 18        PLACE
+## 19          POP
+## 20  PRIMGEOFLAG
+## 21       REGION
+## 22        STATE
+## 23       SUMLEV
+## 24     UNIVERSE</code></pre>
+<p>Alternative if you are pretty sure that a variable is already in a Census table and want verification, you cab check for it. For example, let’s see if the variable DENSITY exists in the 2017 Density Estimates (I bet it does since the word Density is right in the title) for the state of Michigan.</p>
+<pre class="r"><code>getCensus(name = &quot;2017/pep/population&quot;,
+          vars = c(&quot;DENSITY&quot;), 
+          region = &quot;state:26&quot;)</code></pre>
+<pre><code>##   state DENSITY
+## 1    26 176.139</code></pre>
+<p>Yup its available but right now you may be wondering how I got that number 26. Well the Census assigns a number (called a <strong>FIPS state code</strong>) to every territory the US controls. You can find grouped listings here <a href="https://www.census.gov/geo/reference/ansi_statetables.html" target="_blank">https://www.census.gov/geo/reference/ansi_statetables.html</a>.</p>
+<p>Well let’s get county and state level data and run it!</p>
+<pre class="r"><code>Tigers &lt;- getCensus(name = &quot;2017/pep/population&quot;,
+                         vars = c(&quot;GEONAME&quot;, &quot;COUNTY&quot;, &quot;DENSITY&quot;), 
+                         region = &quot;county:*&quot;,
+                         regionin = &quot;state:26&quot;)</code></pre>
+<p>Now take a peek at the first 15 entries in the Michigan list.</p>
+<pre class="r"><code>head(Tigers, n=15L)</code></pre>
+<pre><code>##    state county                     GEONAME COUNTY     DENSITY
+## 1     26    073   Isabella County, Michigan    073  124.088901
+## 2     26    075    Jackson County, Michigan    075  226.080702
+## 3     26    077  Kalamazoo County, Michigan    077  467.780995
+## 4     26    079   Kalkaska County, Michigan    079   31.504614
+## 5     26    081       Kent County, Michigan    081  765.161412
+## 6     26    083   Keweenaw County, Michigan    083    3.897341
+## 7     26    085       Lake County, Michigan    085   21.165346
+## 8     26    087     Lapeer County, Michigan    087  136.875440
+## 9     26    089   Leelanau County, Michigan    089   62.378722
+## 10    26    091    Lenawee County, Michigan    091  131.575529
+## 11    26    093 Livingston County, Michigan    093  335.585145
+## 12    26    095       Luce County, Michigan    095    7.071703
+## 13    26    097   Mackinac County, Michigan    097   10.482856
+## 14    26    099     Macomb County, Michigan    099 1818.397780
+## 15    26    101   Manistee County, Michigan    101   45.041218</code></pre>
+<p>Notice that we can get rid of the columns <code>state</code>, <code>county</code>, and <code>COUNTY</code> since we only need the columns <code>GEOMNAME</code> and <code>DENSITY</code>. We can do this by running the following</p>
+<pre class="r"><code>drops &lt;- c(&quot;state&quot;, &quot;county&quot;, &quot;COUNTY&quot;) # Assigns column names to be dropped
+Tigers &lt;- Tigers[ , !(names(Tigers) %in% drops)] # Drops those columns </code></pre>
+<p>This is actually one of the few times that Base R is easier to use than a tidy approach. Anyway now let’s take a look at the Census data set now.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##                      GEONAME    DENSITY
+## 1  Isabella County, Michigan 124.088901
+## 2   Jackson County, Michigan 226.080702
+## 3 Kalamazoo County, Michigan 467.780995
+## 4  Kalkaska County, Michigan  31.504614
+## 5      Kent County, Michigan 765.161412
+## 6  Keweenaw County, Michigan   3.897341</code></pre>
+<p>Recall that our map data looks like this</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona</code></pre>
+<p>We have to merge both of these sets so that the Census data and map data line up. We have a bit of work to do but its all about identifying what we need. Now I should note that the process below is just one way to get there. Steps are provided for convenience, but again they are contingent on your own table.</p>
+<ol style="list-style-type: decimal">
+<li>The column <code>GEONAME</code> is a concatenation of county and state level data. Let’s split them up using the <code>,</code> (comma) as the delimiter…</li>
+</ol>
+<pre class="r"><code>Tigers &lt;- Tigers %&gt;% 
+  separate(GEONAME, into = paste0(&#39;thing&#39;, 1:2), sep = &#39;[,]&#39;)</code></pre>
+<p>…and then take a look at the results.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##             thing1    thing2    DENSITY
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Notice that the columns have been split and renamed <code>thing1</code> and <code>thing2</code>. But we want the column names to be representative of what they are. So we can rename them in order of appearance from left to right</li>
+</ol>
+<pre class="r"><code>Tigers &lt;- setNames(Tigers, c(&quot;County&quot;,&quot;State&quot;,&quot;Density&quot;)) </code></pre>
+<p>…and then take a look at the results.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##             County     State    Density
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now notice that the term <strong>County</strong> appears perpetually with the <strong>County</strong> columns and does not appear in the <code>mi_count</code> set. So we have a choice in that we can either leave it be here and add the term County to <code>mi_count</code> or drop the term from this set. I like to have less clutter so choosing the latter makes sense. However, you could just as well do the other and the intended outcome that columns look the same would work all the same.<br />
+<br>
+Now there are many ways to attack this. Similar to the process above, you could just split the column again based on the space and then delete one of the resulting columns with the term <strong>County</strong> in it. However, since you have already been exposed to the <code>stringr</code> package, let’s use that.</li>
+</ol>
+<pre class="r"><code>Tigers$County &lt;- str_replace_all(Tigers$County, &quot; County&quot;, &quot;&quot;) 
+# Find the term County in the County column and replace it nothing (given by &quot;&quot;). Notice 
+# that there is a space between the first quote and the term County to account for the 
+# space between the two words.</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Finally we certainly know that we’re in Michigan so let’s get rid of that column</li>
+</ol>
+<pre class="r"><code>dropFromCensus &lt;- c(&quot;State&quot;)
+Tigers &lt;- Tigers[ , !(names(Tigers) %in% dropFromCensus)] # Drops those columns</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>OK we are done with the Census data for now. Moving on the map data, lets compare both again</li>
+</ol>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341</code></pre>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li><p>First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are <code>group</code>, <code>order</code>, and <code>region</code>. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there’s nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in <code>mi_count</code> by stating <code>mi_count[some operation here , ]</code>. Alternatively, I can also tell R that I want to do something to the columns in <code>mi_count</code> by stating <code>mi_count[ , some operation here ]</code> which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:</p></li>
+<li><p><code>names(mi_count)</code> tells R the to look at the names of the columns in <code>mi_count</code>.</p></li>
+<li><p><code>names(mi_count) %in% dropFromMapData</code> tells R to take the names of the columns in <code>mi_count</code> and look for them in the vector <code>dropFromMapData</code>.</p></li>
+<li><p><code>!(names(mi_count) %in% dropFromMapData)</code> tells R to take those names from <code>dropFromMapData</code> that are also in <code>mi_count</code> and to not use them (aka to drop them).</p></li>
+</ol>
+<pre class="r"><code>dropFromMapData &lt;- c(&quot;group&quot;, &quot;order&quot;, &quot;region&quot;)
+mi_count &lt;- mi_count[ , !(names(mi_count) %in% dropFromMapData)] # Drops those columns
+head(mi_count)</code></pre>
+<pre><code>##            long      lat subregion
+## 38512 -83.88675 44.85686    alcona
+## 38513 -83.36536 44.86832    alcona
+## 38514 -83.33098 44.83968    alcona
+## 38515 -83.30806 44.80530    alcona
+## 38516 -83.30233 44.77665    alcona
+## 38517 -83.28515 44.72509    alcona</code></pre>
+<p>Looking at the code as whole is often overwhelming. Remember you are learning a new language so first view its most basic parts and then build up.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Then rename the column we’re going to merge one which in this case means renaming <code>subregion</code> to <code>County</code> while maintaining the others as is.</li>
+</ol>
+<pre class="r"><code>mi_count &lt;- setNames(mi_count, c(&quot;long&quot;,&quot;lat&quot;,&quot;County&quot;)) </code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 alcona
+## 38513 -83.36536 44.86832 alcona
+## 38514 -83.33098 44.83968 alcona
+## 38515 -83.30806 44.80530 alcona
+## 38516 -83.30233 44.77665 alcona
+## 38517 -83.28515 44.72509 alcona</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>And finally, let’s capitalize the column <code>county</code>.</li>
+</ol>
+<pre class="r"><code>mi_count$County &lt;- str_to_title(mi_count$County)</code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>In fact, let’s look it both to make sure they’re structurally similar</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341</code></pre>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>Yes! Now you might be thinking that <code>mi_count</code> is full of repeated county names. Well that’s good because (1) its the file that will inform ggplot of county borders and (2) we simply need the terms and column titles to look the same; they can differ in length (aka number of rows or how many times any entry repeats).<br />
+<br>
+We’re going to use joins which is basically a fancy way of using logic derived from a computer language called SQL. Take a look at the data-wrangling-cheatsheet PDF file or go to <a href="http://stat545.com/bit001_dplyr-cheatsheet.html">http://stat545.com/bit001_dplyr-cheatsheet.html</a> to see detailed examples.<br />
+<br>
+In each situation, you have to think about the end product and the data set that will get you there. Foremost, we want a county map of Michigan with Census density data. Which one is more important? Well logic would dictate that I can’t really draw density data without a map, or in research (and Algebraic) terms, density data is <em>dependent</em> on the map. So with that idea, we need the map data (from <code>mi_count</code>) as our primary source to merge on. The command <code>left_join</code> will work here as long as <code>mi_count</code> is literally to the left of the other data set: <code>Tigers</code>. Below you can see this and also that we’re merging, or joining on the common column <code>County</code>.</p>
+<pre class="r"><code>total_thing &lt;- left_join(mi_count, Tigers, by = c(&quot;County&quot;))</code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>Nice! it worked! Now let’s try to plot it.</p>
+</div>
+<div id="part-iii-plotting" class="section level2">
+<h2>PART III: Plotting</h2>
+<p>Well let’s give it a go!</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &quot;#f8f8fa&quot;, size = 0.25, show.legend = T) +
+  scale_color_viridis(alpha=1, option=&quot;viridis&quot;) + # color tells R to look for discrete data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;right&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &#39;lines&#39;),
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        # legend.box.margin = unit(c(0,0,0,0),&quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p>Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)</p>
+<pre class="r"><code>total_thing$Density &lt;- as.numeric(as.character(total_thing$Density))</code></pre>
+<p>OK so let’s try again:</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &quot;#f8f8fa&quot;, size = 0.25, show.legend = T) +
+  scale_fill_viridis(alpha=1, option=&quot;viridis&quot;) + # fill tells R to look for continuous data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;right&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &#39;lines&#39;),
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        # legend.box.margin = unit(c(0,0,0,0),&quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p>And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
+<br></p>
+<p><a href="https://catalog.data.gov/dataset" target="_blank">https://catalog.data.gov/dataset</a></p>
+</div>
+</div>

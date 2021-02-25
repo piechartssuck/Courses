@@ -1,0 +1,798 @@
+---
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting Prepped
+
+## First Things First! Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1.  Open up a new script by going to `File > New File > R Script`.
+2.  Save it in a preferably empty folder as whatever you want.
+3.  Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
+
+## Download the script
+
+Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+downloadthis::download_file(
+  path = here::here("content", "example", "06-assignment.R"),
+  output_name = "Week 6 Assignment Script Outline",
+  button_label = "Download the Script",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Read the Submission Directions
+Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, [region](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf){target="_blank"}, and national levels to [Slack](https://2021edp693e.slack.com/archives/C01PB0Z18FP){target="_blank"} for the out of class task. 
+## Load Up Some Libraries
+Please go ahead and download the libraries below you don't have and load them up
+
+```{r message=FALSE}
+library(ggmap) # Provides the ability to visualize spatial data
+library(maps) # Computes the areas of regions in a projected map
+library(mapdata) # Providing both larger and higher-resolution databases.
+library(rgdal) # Bindings for the Geospatial Data Abstraction Library 
+               # (https://www.gdal.org/)
+library(tidyverse)
+library(tools) # Core package for R and is worth noting
+library(viridis)
+```
+
+## Save and declare your Census API
+
+There are a few things you need to do when grabbing Census data. 
+
+1. You must have a key from [https://api.census.gov/data/key_signup.html](https://api.census.gov/data/key_signup.html){target="_blank"} 
+
+2. Load up (or install and then load up) the library `censusapi`
+```{r}
+library(censusapi)
+```
+
+3. Add key to the .Renviron (the place in the `censusapi` where your unique identifier, or key, is stored)
+```{r eval=TRUE, echo=FALSE, purl=FALSE}
+Sys.setenv(CENSUS_KEY="1dea0fbe280aeab3e04993bee543979a4dc36790")
+```
+
+```{r eval=FALSE, echo=TRUE}
+Sys.setenv(CENSUS_KEY="YOUR API KEY HERE")
+```
+
+4. Reload the .Renviron
+```{r}
+readRenviron("~/.Renviron") # You may get a warning...ignore it
+```
+
+5. Check to see that your key stored within R
+```{r, eval=FALSE}
+Sys.getenv("CENSUS_KEY")
+```
+`## [1] "YOUR UNIQUE IDENTIFIER HERE"`
+
+## PART I: The Map  
+
+### Country Level Data
+
+Load some United States demographic data.
+```{r}
+usa <- map_data("usa")
+```
+
+Before you look at it by running `usa`, Census data sets are typically huge for obvious reasons. Let's see how big the file actually is.
+```{r}
+dim(usa)
+```
+
+With 43,458 entries, that's pretty big! Maybe we shouldn't load it up (even in `View()` it takes awhile). Let's instead just see the first and last six rows to get an idea of what it looks like to get an idea.
+```{r}
+head(usa) 
+```
+
+
+
+```{r}
+tail(usa) 
+```
+
+We have columns that can be used! The most obvious choice for map data is using the coordinates for longitude and latitude. So let's plot using the longitudinal (`long`) and latitudinal (`lat`) columns.
+
+```{r}
+ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group))
+```
+
+Well that looks terrible. So what's happening here? In a nutshell, it's plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called `coord_fixed`
+```{r}
+ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3) # 1.3 is a decent standard estimate
+```
+
+There we go. That looks better but of course its just a grey silhouette. Let's first try adding some base color.
+```{r}
+ggplot() + 
+  geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = "#1b85b8", 
+               fill = "#559e83") + 
+  coord_fixed(1.3)
+```
+
+Its looking better but something is missing. Hmmm....Oh I know. Its the "S" part of "USA" - To get that, we need to look at state level data.
+
+### State Level Data
+
+We have two choices: we can either bring in a particular state or bring them all in and then filter later. Unless you specifically know which state you want, its a good rule of thumb to bring in all state level data.
+```{r}
+state <- map_data("state")
+```
+
+As a side note, if you know which state you want to look at, then just do the following. I'll use California as an example.
+```{r}
+California <- map_data("state", region = "CA")
+```
+
+A good thing to note is that `region = ` is a bit misleading. At first you may think that it is a state's abbreviation but it is not. In fact, you can't even use abbreviations in that field. For example, if we use the abbreviation for Kansas, you'll get nonsense
+
+```{r, error = TRUE}
+Kansas <- map_data("state", region = "KS")
+```
+(Yes the output is going off the page and no I can't do anything about it)  
+<br>
+The command `region = ` is actually a filter so you need to put as much information as you can to ensure that you only get the state you want. For example, let's see what happens when I do the following
+
+```{r}
+Michigan <- map_data("state", region = "MI")
+```
+
+Well MI is certainly the standard abbreviation for Michigan but again, that is not what the command is doing. Other states have those letters:
+```{r}
+unique(Michigan$region)
+```
+
+That is not what we wanted so please make sure you use the region filter correctly. In a worst case scenario or if you don't mind the extra effort, just type in the name of the state.
+
+```{r}
+Michigan <- map_data("state", 
+                     region = "Michigan")
+```
+
+```{r}
+unique(Michigan$region)
+```
+
+That's much better! OK back to mapping. I'm actually going to stick with Michigan. Notice here that I am using the entire state data set and filtering Michigan out with the command `subset` and the `==` (double equals sign).
+```{r}
+mi <- subset(state, 
+             region=="michigan")
+```
+
+For a basic plot, we do the following:
+```{r, out.width = "47%"}
+ggplot() + 
+  geom_polygon(data = mi, 
+                        aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3)
+```
+
+ 
+
+Michigan's shape is pretty unique and that sure looks like it but the plot is pretty bland. Let's give it some color and a legend.
+```{r}
+ggplot() + 
+  geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
+  scale_fill_manual(values=c("#6A0032")) +
+  coord_fixed(1.3)
+```
+
+Not bad but we can get even more granular. Let's look at county level data.
+
+### County Level Data
+
+Much like before, we're going to pull in all of the county level data,
+```{r}
+county <- map_data("county")
+```
+
+then we'll filter it for Michigan,
+```{r}
+mi_count <- subset(county, region=="michigan")
+```
+
+
+```{r, include = FALSE}
+par(mar = c(12, 6, 4, 2) + 0.1)
+```
+
+and finally we'll plot it.
+```{r}
+ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = "#FFFFFF") +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option="inferno") +
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color ="#105456",  vjust = -1),
+        legend.position ="bottom",
+        legend.direction = 'vertical',
+        legend.text = element_text(size=15, color = "#59595B"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)
+```
+
+*Your output may look a little different depending on your system settings.*  
+<br>
+That legend is taking up way too much space AND we don't need the counties color coded by their names. Let's get rid of it with `guide = FALSE` within `scale_fill_viridis` to get rid of that particular one or to turn all `fill` legends off, you can use `guides(fill=FALSE)` which is switch off in the plot above. In the example below, let's try the one with `guide = FALSE`.
+
+```{r}
+ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = "#FFFFFF") +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option="inferno", 
+                     guide = FALSE) + #HERE IT IS
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color ="#105456",  vjust = -1),
+        legend.position ="bottom",
+        legend.direction = 'vertical',
+        legend.text = element_text(size=15, color = "#59595B"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+# guides(color=FALSE) +
+  coord_fixed(1.3)
+```
+
+Well now we definitely have county level data for Michigan. 
+
+**Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.**  
+<br>
+OK now we should probably do something with this map. Let get some Census data.
+
+## PART II: The US Census
+
+### Gathering and Making Important Decisions 
+
+Choose an endpoint *aka a set of data* that you want. 
+
+At this point it is completely understandable if you are wondering what an API is. Without getting overtly technical, an API is the acronym for **Application Programming Interface**.  This is essentially a text based software that allows two applications to talk to each other. Why text based? Well its really the only aspect that all computers share. In fact, each time you use an app like YouTube, send a text message, or check the weather on your phone, etc. from any device worldwide, you’re using an API. As an example, take a look at the Twitter API [https://developer.twitter.com/en/docs/tweets/search/api-reference.html](https://developer.twitter.com/en/docs/tweets/search/api-reference.html){target="_blank"} that we'll be using later in the term to perform some network data visualizations.  
+<br>
+Now when looking at our endpoint, what should we choose? As of 2018, there are over 200 Census API endpoints are available, including the Decennial Census, American Community Survey, Poverty Statistics, and Population Estimates. You can find a list here: [https://api.census.gov/data.html](https://api.census.gov/data.html){target="_blank"}. Please look them over!  
+<br>
+The `censusapi` package is designed to let you get data from all of those APIs using the same main function `getCensus` and the same syntax for each data set. In this example case, let's look at the 2017 Density Estimates (variables can be found here: [https://api.census.gov/data/2017/pep/population/variables.html](https://api.census.gov/data/2017/pep/population/variables.html){target="_blank"}) for all states within the US. Alternatively you can get that information directly through the API we have been using:
+
+```{r}
+apis <- listCensusApis()
+```
+
+```{r, echo=TRUE,eval=FALSE}
+View(apis)
+```
+
+Now certain repositories require certain basic variables to be run (for example if years are a factor). To get an idea, the 2017 American Community Survey which is used to update some data within the primary Census.  
+
+
+
+1. Here are the available variables
+```{r}
+acs2017_vars <- listCensusMetadata(name = "2017/pep/population/", 
+                                 type = "variables")
+```
+
+```{r}
+head(acs2017_vars)
+```
+
+
+2. Here are the available geographies 
+```{r}
+acs2017_geos <- listCensusMetadata(name = "2017/pep/population/", 
+                                   type = "geography")
+```
+
+```{r,echo=TRUE,eval=FALSE}
+View(acs2017_geos)
+```
+
+If you want to see which variables are required for mapping, then there is a problem and that is actually due to bad luck as a result of timing. The Census is going through a new update with a new API format that was supposed to go live two weeks ago. It has, however, been pushed back to October 31. Until then, you will have to utilize the website. However if you are adamant about using R for the whole process as I typically am, then you can get table, aka tabular data from any website. If this interests you, please seethe section below. Otherwise move on to the next section.
+
+### Scraping the Web using R
+
+In order to grab data off of the web, you will need to several things. At first it may seem arduous but having lengthy tables as data within R can be very beneficial, especially when filtering or if you just don't want to manually load or type in entries. Included are steps to get the data you need in a usable form within R.
+
+1. Download and run the `rvest` package (though there are others like a package called `XML` that may be useful in other circumstances)
+```{r}
+library(rvest)
+```
+
+2. Define the website you want to pull the data from
+```{r}
+webpage <- read_html("https://api.census.gov/data/2017/pep/population/variables.html")
+```
+
+3. Tell `rvest` that you want the tables using the command `html_nodes`. This does a lot of things but in a nutshell, it recognizes if a page is a webpage by scanning the HTML code and then finds what you need. In our case, we're asking it to recognize the Census webpage from above and to identify the HTML codes where the term `table` exists.
+```{r}
+tbls <- html_nodes(webpage, "table") 
+```
+
+4. See information regarding all of the tables
+```{r}
+tbls # or if there are multiple tables, consider using head(tbls)
+```
+By the output, we only have one table which is indicated by `[1]`. 
+
+5. Now do some piping via `dplyr` to get a list of everything within that table
+```{r}
+tbls_ls <- webpage %>%
+        html_nodes("table") %>% # Creates a multidimensional list (i.e. a list 
+                                # with layers and depth akin to folders within 
+                                # folders within folders, ect.)
+        .[1] %>% # We only have table so we put.[1] here. If we had multiple 
+                 # tables and we wanted say the first three, we could have 
+                 # used .[1:3]
+        html_table(fill = TRUE) # Convert the data to a table format and populate 
+                                # the entries
+```
+
+6. See the result
+```{r, echo=TRUE,eval=FALSE}
+View(tbls_ls)
+```
+Notice that its a list and can go pretty deep down the rabbit hole depending on how many tables you are looking at. In this case, we have one so ts pretty simple.
+
+7. Now narrow down the results. Say you only wanted the ones that were required. You can figure that out by filtering for the term `default displayed` under the column **Required**. To do this, we first run the following which splits up all of the tables and then attaches them together by corresponding entries.
+```{r}
+tbls_ls <- do.call(rbind.data.frame, tbls_ls) # Concatenates a list of data frames 
+                                              # into a single data frame
+```
+
+8. (Optional) Take a look to see that it looks like an actual table
+```{r echo=TRUE,eval=FALSE}
+View(tbls_ls)
+```
+
+9. Now we get rid of the rows that that don't have `default displayed` under **Required**
+```{r}
+filtered_tbls_ls <- tbls_ls[tbls_ls$Required == "default displayed", ] 
+                                                              # Filter out the rows that
+                                                              # don't have `default 
+                                                              # displayed` under the 
+                                                              # column **Required**
+```
+
+10. Just show the names of the required variables
+```{r}
+filtered_tbls_ls$Name # Just shows the Names of the required variables
+```
+
+So here we see that the variables DATE and UNIVERSE are required. 
+
+
+Alternatively and if you understand the above, you can simply use the following in one fell swoop using `dplyr`:
+```{r}
+library(rvest)
+
+read_html("https://api.census.gov/data/2017/pep/population/variables.html") %>%
+html_nodes("table")  %>% # Creates a multidimensional list (i.e. a list with layers 
+                         # and depth akin to folders within folders within folders, 
+                         # ect.)
+  .[1] %>% # We only have table so we put.[1] here. If we had multiple tables and 
+           # we wanted say the first three, we could have used .[1:3]
+  html_table(fill = TRUE) %>% # Convert the data to a table format and populate the 
+                              # entries
+  bind_rows() %>% # Concatenates a list of data frames into a single data frame
+  filter(Required == "default displayed") %>% # Filter out the rows that don't have
+                                              # `default displayed` under the column 
+                                              # **Required**
+  select(Name) # Just shows the Names of the required variables
+```
+Life is much easier with pipes! Note that this and the other method should work with many of the Census web tables but may not for all, especially for older tables that may have not been updated and do not have the column **Required**. Part of understanding what is going on in each line affords you the ability to change commands and variables as necessary.  
+<br>
+OK now back to the mapping!
+
+
+## Getting the Data You Want
+
+Backtracking on the two methods presented above, if we wanted to figure out which variables are available in general, we could
+
+* Go back to step 9 and run
+```{r}
+tbls_ls$Name
+```
+
+OR
+
+* Rerun parts of the piping system
+```{r}
+read_html("https://api.census.gov/data/2017/pep/population/variables.html") %>%
+  html_nodes("table")  %>% # This is a multidimensional list (i.e. a list with layers)
+  .[1] %>% 
+  html_table(fill = TRUE) %>%
+  bind_rows() %>% 
+  select(Name)
+```
+
+Alternative if you are pretty sure that a variable is already in a Census table and want verification, you cab check for it. For example, let's see if the variable DENSITY exists in the 2017 Density Estimates (I bet it does since the word Density is right in the title) for the state of Michigan.
+```{r}
+getCensus(name = "2017/pep/population",
+          vars = c("DENSITY"), 
+          region = "state:26")
+```
+Yup its available but right now you may be wondering how I got that number 26. Well the Census assigns a number (called a **FIPS state code**) to every territory the US controls. You can find grouped listings here [https://www.census.gov/geo/reference/ansi_statetables.html](https://www.census.gov/geo/reference/ansi_statetables.html){target="_blank"}. 
+
+Well let's get county and state level data and run it!
+```{r}
+Tigers <- getCensus(name = "2017/pep/population",
+                         vars = c("GEONAME", "COUNTY", "DENSITY"), 
+                         region = "county:*",
+                         regionin = "state:26")
+```
+
+ 
+Now take a peek at the first 15 entries in the Michigan list.
+```{r}
+head(Tigers, n=15L)
+```
+
+Notice that we can get rid of the columns `state`, `county`, and `COUNTY` since we only need the columns `GEOMNAME` and `DENSITY`. We can do this by running the following 
+
+```{r}
+drops <- c("state", "county", "COUNTY") # Assigns column names to be dropped
+Tigers <- Tigers[ , !(names(Tigers) %in% drops)] # Drops those columns 
+```
+
+This is actually one of the few times that Base R is easier to use than a tidy approach. Anyway now let's take a look at the Census data set now.
+
+```{r}
+head(Tigers)
+```
+
+Recall that our map data looks like this
+```{r}
+head(mi_count)
+```
+
+We have to merge both of these sets so that the Census data and map data line up. We have a bit of work to do but its all about identifying what we need. Now I should note that the process below is just one way to get there. Steps are provided for convenience, but again they are contingent on your own table.
+
+1. The column `GEONAME` is a concatenation of county and state level data. Let's split them up using the `,` (comma) as the delimiter...
+```{r}
+Tigers <- Tigers %>% 
+  separate(GEONAME, into = paste0('thing', 1:2), sep = '[,]')
+```
+
+...and then take a look at the results.
+```{r}
+head(Tigers)
+```
+
+2. Notice that the columns have been split and renamed `thing1` and `thing2`. But we want the column names to be representative of what they are. So we can rename them in order of appearance from left to right
+```{r}
+Tigers <- setNames(Tigers, c("County","State","Density")) 
+```
+
+...and then take a look at the results.
+```{r}
+head(Tigers)
+```
+
+3. Now notice that the term **County** appears perpetually with the **County** columns and does not appear in the `mi_count` set. So we have a choice in that we can either leave it be here and add the term County to `mi_count` or drop the term from this set. I like to have less clutter so choosing the latter makes sense. However, you could just as well do the other and the intended outcome that columns look the same would work all the same.  
+<br>
+Now there are many ways to attack this. Similar to the process above, you could just split the column again based on the space and then delete one of the resulting columns with the term **County** in it. However, since you have already been exposed to the `stringr` package, let's use that.
+```{r}
+Tigers$County <- str_replace_all(Tigers$County, " County", "") 
+# Find the term County in the County column and replace it nothing (given by ""). Notice 
+# that there is a space between the first quote and the term County to account for the 
+# space between the two words.
+```
+
+4. Finally we certainly know that we're in Michigan so let's get rid of that column
+```{r}
+dropFromCensus <- c("State")
+Tigers <- Tigers[ , !(names(Tigers) %in% dropFromCensus)] # Drops those columns
+```
+
+
+5. OK we are done with the Census data for now. Moving on the map data, lets compare both again
+```{r}
+head(Tigers)
+```
+
+```{r}
+head(mi_count)
+```
+
+6. First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are `group`, `order`, and `region`. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there's nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in `mi_count` by stating `mi_count[some operation here , ]`. Alternatively, I can also tell R that I want to do something to the columns in `mi_count` by stating `mi_count[ , some operation here ]` which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:
+
+1. `names(mi_count)` tells R the to look at the names of the columns in `mi_count`.
+
+2. `names(mi_count) %in% dropFromMapData` tells R to take the names of the columns in `mi_count` and look for them in the vector `dropFromMapData`.
+
+3. `!(names(mi_count) %in% dropFromMapData)` tells R to take those names from `dropFromMapData` that are also in `mi_count` and to not use them (aka to drop them).
+```{r}
+dropFromMapData <- c("group", "order", "region")
+mi_count <- mi_count[ , !(names(mi_count) %in% dropFromMapData)] # Drops those columns
+head(mi_count)
+```
+Looking at the code as whole is often overwhelming. Remember you are learning a new language so first view its most basic parts and then build up.
+
+
+7. Then rename the column we're going to merge one which in this case means renaming `subregion` to `County` while maintaining the others as is.
+```{r}
+mi_count <- setNames(mi_count, c("long","lat","County")) 
+```
+
+...and take a look.
+```{r}
+head(mi_count)
+```
+
+8. And finally, let's capitalize the column `county`.
+```{r}
+mi_count$County <- str_to_title(mi_count$County)
+```
+
+...and take a look.
+```{r}
+head(mi_count)
+```
+
+In fact, let's look it both to make sure they're structurally similar
+```{r}
+head(Tigers)
+head(mi_count)
+```
+Yes! Now you might be thinking that `mi_count` is full of repeated county names. Well that's good because (1) its the file that will inform ggplot of county borders and (2) we simply need the terms and column titles to look the same; they can differ in length (aka number of rows or how many times any entry repeats).  
+<br>
+We're going to use joins which is basically a fancy way of using logic derived from a computer language called SQL. Take a look at the data-wrangling-cheatsheet PDF file or go to [http://stat545.com/bit001_dplyr-cheatsheet.html](http://stat545.com/bit001_dplyr-cheatsheet.html) to see detailed examples.  
+<br>
+In each situation, you have to think about the end product and the data set that will get you there. Foremost, we want a county map of Michigan with Census density data. Which one is more important? Well logic would dictate that I can't really draw density data without a map, or in research (and Algebraic) terms, density data is *dependent* on the map. So with that idea, we need the map data (from `mi_count`) as our primary source to merge on. The command `left_join` will work here as long as `mi_count` is literally to the left of the other data set: `Tigers`. Below you can see this and also that we're merging, or joining on the common column `County`.
+```{r}
+total_thing <- left_join(mi_count, Tigers, by = c("County"))
+```
+
+...and take a look.
+```{r}
+head(mi_count)
+```
+Nice! it worked! Now let's try to plot it.
+
+
+## PART III: Plotting
+
+Well let's give it a go!
+```{r}
+ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = "#f8f8fa", size = 0.25, show.legend = T) +
+  scale_color_viridis(alpha=1, option="viridis") + # color tells R to look for discrete data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color ="#105456",  vjust = -1),
+        legend.position ="right",
+        legend.direction = 'vertical',
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, 'lines'),
+        legend.text = element_text(size=15, color = "#59595B"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        # legend.box.margin = unit(c(0,0,0,0),"cm"),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)
+```
+
+Clearly there's a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don't want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!) 
+```{r}
+total_thing$Density <- as.numeric(as.character(total_thing$Density))
+```
+
+ 
+OK so let's try again:
+```{r}
+ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = "#f8f8fa", size = 0.25, show.legend = T) +
+  scale_fill_viridis(alpha=1, option="viridis") + # fill tells R to look for continuous data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color ="#105456",  vjust = -1),
+        legend.position ="right",
+        legend.direction = 'vertical',
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, 'lines'),
+        legend.text = element_text(size=15, color = "#59595B"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        # legend.box.margin = unit(c(0,0,0,0),"cm"),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)
+```
+
+And we've got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some  repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here: 
+<br>
+
+[https://catalog.data.gov/dataset](https://catalog.data.gov/dataset){target="_blank"}
