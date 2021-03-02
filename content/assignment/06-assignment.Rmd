@@ -832,7 +832,7 @@ head(mon) %>%
   kable()
 ```
 
-Now we can create a custom continuous color palette. In this case we'll use the `wesanderson` palette but feel free to use your own.
+Now we can create a custom continuous color palette. In this case we'll use the [`wesanderson`](https://github.com/karthik/wesanderson){target="_blank"} palette but please feel free to use your own.
 
 Here is the discrete scale with five colors...
 ```{r out.width = '50%'}
