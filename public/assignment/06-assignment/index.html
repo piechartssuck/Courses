@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Single Map Faceting Map      .">
+  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Getting Census Tract Level Data Single Map Faceting Map      .">
 
   
   <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/assignment/06-assignment/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/assignment/06-assignment/">
   <meta property="og:title" content="I&#39;m the Map | Data Visualization">
-  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Single Map Faceting Map      ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Getting Census Tract Level Data Single Map Faceting Map      ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -733,6 +733,8 @@
                         
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -758,6 +760,7 @@
 <li><a href="#part-iii-plotting">PART III: Plotting</a></li>
 <li><a href="#example-tract-data">Example: Tract Data</a>
 <ul>
+<li><a href="#getting-census-tract-level-data">Getting Census Tract Level Data</a></li>
 <li><a href="#single-map">Single Map</a></li>
 <li><a href="#faceting-map">Faceting Map</a></li>
 </ul></li>
@@ -902,14 +905,134 @@
 <div id="load-up-some-libraries" class="section level2">
 <h2>Load Up Some Libraries</h2>
 <p>Please go ahead and download the libraries below you don’t have and load them up</p>
-<pre class="r"><code>library(ggmap) # Provides the ability to visualize spatial data
-library(maps) # Computes the areas of regions in a projected map
-library(mapdata) # Providing both larger and higher-resolution databases.
-library(rgdal) # Bindings for the Geospatial Data Abstraction Library 
-               # (https://www.gdal.org/)
+<pre class="r"><code>library(ggmap)
+library(maps)
+library(mapdata)
+library(rgdal) 
 library(tidyverse)
-library(tools) # Core package for R and is worth noting
+library(tools)
 library(viridis)</code></pre>
+<p>There are a lot of mapping and support packages in R so we should first take a look at the ones being used here</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>ggmap</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Gives the ability to visualize spatial data
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/dkahle/ggmap" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/ggmapCheatsheet.pdf" target="_blank">Cheatsheet</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>maps</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Computes the areas of regions in a projected map
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/adeckmyn/maps" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>mapdata</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Provides both larger and higher-resolution databases
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/cran/mapdata" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.r-graph-gallery.com/278-the-maps-library.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>rgdal</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Bindings for the <a href="https://www.gdal.org/" target="_blank">Geospatial Data Abstraction Library</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/OSGeo/gdal" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.r-graph-gallery.com/168-load-a-shape-file-into-r.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nope
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.tidyverse.org/" target="_blank">Homepage</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tools</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Used to manipulating R packages and their documentation
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.rdocumentation.org/packages/tools/versions/3.6.2" target="_blank">None<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540" target="_blank">StackOverflow</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>viridis</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Viridis color and fill palette
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/sjmgarnier/viridis" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">Vignette</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
 </div>
 <div id="save-and-declare-your-census-api" class="section level2">
 <h2>Save and declare your Census API</h2>
@@ -968,19 +1091,19 @@ library(viridis)</code></pre>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group))</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called <code>coord_fixed</code></p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3) # 1.3 is a decent standard estimate</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.</p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &quot;#1b85b8&quot;, 
                fill = &quot;#559e83&quot;) + 
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>Its looking better but something is missing. Hmmm….Oh!…Its the “S” part of “USA” - To get that, we need to look at state level data.</p>
 </div>
 <div id="state-level-data" class="section level3">
@@ -1012,13 +1135,13 @@ The command <code>region =</code> is actually a filter so you need to put as muc
   geom_polygon(data = mi, 
                         aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-24-1.png" width="47%" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-26-1.png" width="47%" /></p>
 <p>Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.</p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
   scale_fill_manual(values=c(&quot;#6A0032&quot;)) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 <p>Not bad but we can get even more granular. Let’s look at county level data.</p>
 </div>
 <div id="county-level-data" class="section level3">
@@ -1053,7 +1176,7 @@ The command <code>region =</code> is actually a filter so you need to put as muc
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p><em>Your output may look a little different depending on your system settings.</em><br />
 <br>
 That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with <code>guide = FALSE</code> within <code>scale_fill_viridis</code> to get rid of that particular one or to turn all <code>fill</code> legends off, you can use <code>guides(fill=FALSE)</code> which is switch off in the plot above. In the example below, let’s try the one with <code>guide = FALSE</code>.</p>
@@ -1084,7 +1207,7 @@ That legend is taking up way too much space AND we don’t need the counties col
         panel.grid.minor = element_blank()) +
 # guides(color=FALSE) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>Well now we definitely have county level data for Michigan.</p>
 <p><strong>Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.</strong><br />
 <br>
@@ -1495,7 +1618,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 <p>Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)</p>
 <pre class="r"><code>total_thing$Density &lt;- as.numeric(as.character(total_thing$Density))</code></pre>
 <p>OK so let’s try again:</p>
@@ -1524,7 +1647,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
 <p>And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
 <br></p>
 <p><a href="https://catalog.data.gov/dataset" target="_blank">https://catalog.data.gov/dataset</a></p>
@@ -1534,21 +1657,144 @@ In each situation, you have to think about the end product and the data set that
 <p>For this example, you’ll need the following packages</p>
 <pre class="r"><code>library(tidycensus)
 library(tidyverse)
-library(DT)
-library(tools)
-library(leaflet) 
-library(sf) </code></pre>
+library(tools) 
+library(sf)</code></pre>
 <pre><code>## Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1</code></pre>
-<pre class="r"><code>library(ggthemes)
+<pre class="r"><code># For ore information on sf: https://r-spatial.github.io/sf/articles/sf1.html
+library(DT) 
+library(ggthemes)
 library(wesanderson)
-options(tigris_use_cache = TRUE) # Keeps map shapefiles on your hard drive rather than having to download them each time</code></pre>
-<p>Let’s first get some tract data, in particular the median household income from the 2015-2019 ACS in Monongalia County, WV.</p>
+options(tigris_use_cache = TRUE) </code></pre>
+<p>Like before, let’s take a look at the packages so you get an idea what each does</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidycensus</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Another census package. You can actually use any of the others but this is included to give you variety
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/walkerke/tidycensus" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://walker-data.com/tidycensus/articles/basic-usage.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Nope
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://www.tidyverse.org/" target="_blank">Homepage</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tools</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Used to manipulating R packages and their documentation
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.rdocumentation.org/packages/tools/versions/3.6.2" target="_blank">None<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540" target="_blank">StackOverflow</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>sf</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Package that houses spatial geometries and provides a relatively easy way to convert data frames to map objects
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/r-spatial/sf" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://r-spatial.github.io/sf/articles/sf1.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>DT</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nice package to see data frames in a more interactive display
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/rstudio/DT" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://rstudio.github.io/DT/" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>ggthemes</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Additional ggplot themes you can use
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/jrnold/ggthemes" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://mran.microsoft.com/snapshot/2017-02-04/web/packages/ggthemes/vignettes/ggthemes.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>wesanderson</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Palette based on Wes Anderson movies
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/karthik/wesanderson" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://apreshill.github.io/data-vis-labs-2018/03-colors.html#95_built-in_discrete_palettes" target="_blank">Walkthrough</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<div id="getting-census-tract-level-data" class="section level3">
+<h3>Getting Census Tract Level Data</h3>
+<p>Its not so obvious to get tract data sets. While there are multiple approaches, the easiest is to just ask for it. Here we’ll use the median household income from the 2015-2019 ACS in Monongalia County, WV.</p>
 <pre class="r"><code>mon &lt;- get_acs(state = &quot;WV&quot;, 
                county = &quot;Monongalia&quot;, 
                geography = &quot;tract&quot;, 
                variables = &quot;B19013_001&quot;, 
                geometry = TRUE)</code></pre>
-<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar top what is shown below but with more functionality.</p>
+<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.</p>
 <pre class="r"><code>datatable(mon)</code></pre>
 <table>
 <thead>
@@ -1696,14 +1942,15 @@ MULTIPOLYGON (((-79.96288 3…
 </tr>
 </tbody>
 </table>
-<p>Now we can create a custom continuous color palette. In this case we’ll use the <code>wesanderson</code> palette but feel free to use your own.</p>
+<p>Now we can create a custom continuous color palette. In this case we’ll use the <a href="https://github.com/karthik/wesanderson" target="_blank"><code>wesanderson</code></a> palette but please feel free to use your own.</p>
 <p>Here is the discrete scale with five colors…</p>
 <pre class="r"><code>wes_palette(&quot;Rushmore1&quot;)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
-<p>…that has been converted to a continuous scale with <code>{r} max(mon$estimate)</code> colors.</p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-83-1.png" width="50%" /></p>
+<p>…that has been converted to a continuous scale with 105,474 colors.</p>
 <pre class="r"><code>pal &lt;- wes_palette(&quot;Rushmore1&quot;, 
                    max(mon$estimate), 
                    type = &quot;continuous&quot;)</code></pre>
+</div>
 <div id="single-map" class="section level3">
 <h3>Single Map</h3>
 <p>We can plot the median household income using</p>
@@ -1712,7 +1959,7 @@ MULTIPOLYGON (((-79.96288 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
 </div>
 <div id="faceting-map" class="section level3">
 <h3>Faceting Map</h3>
@@ -1882,7 +2129,7 @@ MULTIPOLYGON (((-79.95593 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 <p>Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling. In particular using a logarithmic transformation via <code>trans="log10"</code> when within a <code>scale_</code> is sufficient. Remember that maps are generally considered to be approximations of the actual data, rather than an exact representation.</p>
 <pre class="r"><code>mon_race %&gt;%
   mutate(pct = 100 * (value / summary_value)) %&gt;%
@@ -1892,9 +2139,16 @@ MULTIPOLYGON (((-79.95593 3…
   scale_fill_gradientn(colors = pal,
                        trans=&quot;log10&quot;) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Documentation provided<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Documentation provided<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
                     </div>

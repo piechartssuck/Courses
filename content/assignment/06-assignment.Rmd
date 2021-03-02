@@ -172,15 +172,78 @@ Please submit a PDF out using an Rmarkdown file of five different maps using the
 Please go ahead and download the libraries below you don't have and load them up
 
 ```{r message=FALSE}
-library(ggmap) # Provides the ability to visualize spatial data
-library(maps) # Computes the areas of regions in a projected map
-library(mapdata) # Providing both larger and higher-resolution databases.
-library(rgdal) # Bindings for the Geospatial Data Abstraction Library 
-               # (https://www.gdal.org/)
+library(ggmap)
+library(maps)
+library(mapdata)
+library(rgdal) 
 library(tidyverse)
-library(tools) # Core package for R and is worth noting
+library(tools)
 library(viridis)
 ```
+
+There are a lot of mapping and support packages in R so we should first take a look at the ones being used here
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_walk <- 
+  
+  tibble(
+   
+    name <- c("`ggmap`",
+              "`maps`",
+              "`mapdata`",
+              "`rgdal`",
+              "`tidyverse`",
+              "`tools`",
+              "`viridis`"),
+    
+    description <- c("Gives the ability to visualize spatial data",
+                     "Computes the areas of regions in a projected map",
+                     "Provides both larger and higher-resolution databases",
+                     "Bindings for the [Geospatial Data Abstraction Library](https://www.gdal.org/){target='_blank'}",
+                     "Nope",
+                     "Used to manipulating R packages and their documentation",
+                     "Viridis color and fill palette"
+                     ),
+    
+    github <- c("[Github](https://github.com/dkahle/ggmap){target='_blank'}",
+                "[Github](https://github.com/adeckmyn/maps){target='_blank'}",
+                "[Github](https://github.com/cran/mapdata){target='_blank'}",
+                "[Github](https://github.com/OSGeo/gdal){target='_blank'}",
+                "[Github](https://github.com/tidyverse/tidyverse){target='_blank'}",
+                "[None^[Documentation provided]](https://www.rdocumentation.org/packages/tools/versions/3.6.2){target='_blank'}",
+                "[Github](https://github.com/sjmgarnier/viridis){target='_blank'}"
+                ),
+    
+    example <- c("[Cheatsheet](https://www.nceas.ucsb.edu/sites/default/files/2020-04/ggmapCheatsheet.pdf){target='_blank'}",
+                 "[Walkthrough](https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html){target='_blank'}",
+                "[Walkthrough](https://www.r-graph-gallery.com/278-the-maps-library.html){target='_blank'}",
+                "[Walkthrough](https://www.r-graph-gallery.com/168-load-a-shape-file-into-r.html){target='_blank'}",
+                "[Homepage](https://www.tidyverse.org/){target='_blank'}",                
+                "[StackOverflow](https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540){target='_blank'}",
+                "[Vignette](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html){target='_blank'}"
+                
+                ),
+    
+    .name_repair = "minimal"
+    
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_walk %>%
+  kbl(col.names = c("Library", "Description", "Repository", "Example"),
+      "html",
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>% 
+  column_spec(4, width = "10em") %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
 
 ## Save and declare your Census API
 
@@ -802,16 +865,80 @@ For this example, you'll need the following packages
 ```{r}
 library(tidycensus)
 library(tidyverse)
-library(DT)
-library(tools)
-library(leaflet) 
-library(sf) 
+library(tools) 
+library(sf)
+# For ore information on sf: https://r-spatial.github.io/sf/articles/sf1.html
+library(DT) 
 library(ggthemes)
 library(wesanderson)
-options(tigris_use_cache = TRUE) # Keeps map shapefiles on your hard drive rather than having to download them each time
+options(tigris_use_cache = TRUE) 
 ```
 
-Let's first get some tract data, in particular the median household income from the 2015-2019 ACS in Monongalia County, WV.
+Like before, let's take a look at the packages so you get an idea what each does
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_tract <- 
+  
+  tibble(
+   
+    name <- c("`tidycensus`",
+              "`tidyverse`",
+              "`tools`",
+              "`sf`",
+              "`DT`",
+              "`ggthemes`",
+              "`wesanderson`"),
+    
+    description <- c("Another census package. You can actually use any of the others but this is included to give you variety",
+                     "Nope",
+                     "Used to manipulating R packages and their documentation",
+                     "Package that houses spatial geometries and provides a relatively easy way to convert data frames to map objects",
+                     "Nice package to see data frames in a more interactive display",
+                     "Additional ggplot themes you can use",
+                     "Palette based on Wes Anderson movies"
+                     ),
+    
+    github <- c("[Github](https://github.com/walkerke/tidycensus){target='_blank'}",
+                "[Github](https://github.com/tidyverse/tidyverse){target='_blank'}",
+                "[None^[Documentation provided]](https://www.rdocumentation.org/packages/tools/versions/3.6.2){target='_blank'}",
+                "[Github](https://github.com/r-spatial/sf){target='_blank'}",
+                "[Github](https://github.com/rstudio/DT){target='_blank'}",
+                "[Github](https://github.com/jrnold/ggthemes){target='_blank'}",
+                "[Github](https://github.com/karthik/wesanderson){target='_blank'}"
+                ),
+    
+    example <- c("[Vignette](https://walker-data.com/tidycensus/articles/basic-usage.html){target='_blank'}",
+                "[Homepage](https://www.tidyverse.org/){target='_blank'}",
+                "[StackOverflow](https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540){target='_blank'}",
+                "[Vignette](https://r-spatial.github.io/sf/articles/sf1.html){target='_blank'}",
+                "[Vignette](https://rstudio.github.io/DT/){target='_blank'}",
+                "[Walkthrough](https://mran.microsoft.com/snapshot/2017-02-04/web/packages/ggthemes/vignettes/ggthemes.html){target='_blank'}",
+                "[Walkthrough](https://apreshill.github.io/data-vis-labs-2018/03-colors.html#95_built-in_discrete_palettes){target='_blank'}"
+                ),
+    
+    .name_repair = "minimal"
+    
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_tract %>%
+  kbl(col.names = c("Library", "Description", "Repository", "Example"),
+      "html",
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>% 
+  column_spec(4, width = "10em") %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+### Getting Census Tract Level Data 
+Its not so obvious to get tract data sets. While there are multiple approaches, the easiest is to just ask for it. Here we'll use the median household income from the 2015-2019 ACS in Monongalia County, WV.
 
 ```{r message=FALSE}
 mon <- get_acs(state = "WV", 
@@ -821,7 +948,7 @@ mon <- get_acs(state = "WV",
                geometry = TRUE)
 ```
 
-You can use the `datatable()` command from the `DT` package to see an better view of the output. Yours will look similar top what is shown below but with more functionality.
+You can use the `datatable()` command from the `DT` package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.
 
 ```{r eval=FALSE}
 datatable(mon)
