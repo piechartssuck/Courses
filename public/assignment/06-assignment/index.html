@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting     .">
+  <meta name="description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Single Map Faceting Map      .">
 
   
   <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/assignment/06-assignment/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/assignment/06-assignment/">
   <meta property="og:title" content="I&#39;m the Map | Data Visualization">
-  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting     ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="og:description" content="Getting Prepped  First Things First! Set your Working Directory Download the script Read the Submission Directions Load Up Some Libraries Save and declare your Census API PART I: The Map  Country Level Data State Level Data County Level Data  PART II: The US Census  Gathering and Making Important Decisions Scraping the Web using R  Getting the Data You Want PART III: Plotting Example: Tract Data  Single Map Faceting Map      ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -756,6 +756,11 @@
 </ul></li>
 <li><a href="#getting-the-data-you-want">Getting the Data You Want</a></li>
 <li><a href="#part-iii-plotting">PART III: Plotting</a></li>
+<li><a href="#example-tract-data">Example: Tract Data</a>
+<ul>
+<li><a href="#single-map">Single Map</a></li>
+<li><a href="#faceting-map">Faceting Map</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -1385,8 +1390,8 @@ Tigers &lt;- Tigers[ , !(names(Tigers) %in% dropFromCensus)] # Drops those colum
 ## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
 ## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
 ## 38517 -83.28515 44.72509  1198 38517 michigan    alcona</code></pre>
-<ol start="6" style="list-style-type: decimal">
-<li><p>First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are <code>group</code>, <code>order</code>, and <code>region</code>. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there’s nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in <code>mi_count</code> by stating <code>mi_count[some operation here , ]</code>. Alternatively, I can also tell R that I want to do something to the columns in <code>mi_count</code> by stating <code>mi_count[ , some operation here ]</code> which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:</p></li>
+<p>First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are <code>group</code>, <code>order</code>, and <code>region</code>. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there’s nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in <code>mi_count</code> by stating <code>mi_count[some operation here , ]</code>. Alternatively, I can also tell R that I want to do something to the columns in <code>mi_count</code> by stating <code>mi_count[ , some operation here ]</code> which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:</p>
+<ol style="list-style-type: decimal">
 <li><p><code>names(mi_count)</code> tells R the to look at the names of the columns in <code>mi_count</code>.</p></li>
 <li><p><code>names(mi_count) %in% dropFromMapData</code> tells R to take the names of the columns in <code>mi_count</code> and look for them in the vector <code>dropFromMapData</code>.</p></li>
 <li><p><code>!(names(mi_count) %in% dropFromMapData)</code> tells R to take those names from <code>dropFromMapData</code> that are also in <code>mi_count</code> and to not use them (aka to drop them).</p></li>
@@ -1480,7 +1485,6 @@ In each situation, you have to think about the end product and the data set that
         legend.title.align = 0.5,
         legend.spacing.x = unit(0.5, &quot;cm&quot;), 
         legend.spacing.y = unit(0.5, &quot;cm&quot;),
-        # legend.box.margin = unit(c(0,0,0,0),&quot;cm&quot;),
         legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
         panel.background = element_blank(),
         axis.title.x = element_blank(),
@@ -1510,7 +1514,6 @@ In each situation, you have to think about the end product and the data set that
         legend.title.align = 0.5,
         legend.spacing.x = unit(0.5, &quot;cm&quot;), 
         legend.spacing.y = unit(0.5, &quot;cm&quot;),
-        # legend.box.margin = unit(c(0,0,0,0),&quot;cm&quot;),
         legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
         panel.background = element_blank(),
         axis.title.x = element_blank(),
@@ -1525,6 +1528,372 @@ In each situation, you have to think about the end product and the data set that
 <p>And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
 <br></p>
 <p><a href="https://catalog.data.gov/dataset" target="_blank">https://catalog.data.gov/dataset</a></p>
+</div>
+<div id="example-tract-data" class="section level2">
+<h2>Example: Tract Data</h2>
+<p>For this example, you’ll need the following packages</p>
+<pre class="r"><code>library(tidycensus)
+library(tidyverse)
+library(DT)
+library(tools)
+library(leaflet) 
+library(sf) </code></pre>
+<pre><code>## Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1</code></pre>
+<pre class="r"><code>library(ggthemes)
+library(wesanderson)
+options(tigris_use_cache = TRUE) # Keeps map shapefiles on your hard drive rather than having to download them each time</code></pre>
+<p>Let’s first get some tract data, in particular the median household income from the 2015-2019 ACS in Monongalia County, WV.</p>
+<pre class="r"><code>mon &lt;- get_acs(state = &quot;WV&quot;, 
+               county = &quot;Monongalia&quot;, 
+               geography = &quot;tract&quot;, 
+               variables = &quot;B19013_001&quot;, 
+               geometry = TRUE)</code></pre>
+<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar top what is shown below but with more functionality.</p>
+<pre class="r"><code>datatable(mon)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+GEOID
+</th>
+<th style="text-align:left;">
+NAME
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+moe
+</th>
+<th style="text-align:left;">
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+16184
+</td>
+<td style="text-align:right;">
+12299
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95389 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061012000
+</td>
+<td style="text-align:left;">
+Census Tract 120, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+75667
+</td>
+<td style="text-align:right;">
+18721
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.97551 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010102
+</td>
+<td style="text-align:left;">
+Census Tract 101.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+13352
+</td>
+<td style="text-align:right;">
+9778
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.96402 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061011300
+</td>
+<td style="text-align:left;">
+Census Tract 113, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+58900
+</td>
+<td style="text-align:right;">
+6618
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-80.17178 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061011900
+</td>
+<td style="text-align:left;">
+Census Tract 119, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+88967
+</td>
+<td style="text-align:right;">
+18567
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-80.08072 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010901
+</td>
+<td style="text-align:left;">
+Census Tract 109.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+43986
+</td>
+<td style="text-align:right;">
+7240
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.96288 3…
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now we can create a custom continuous color palette. In this case we’ll use the <code>wesanderson</code> palette but feel free to use your own.</p>
+<p>Here is the discrete scale with five colors…</p>
+<pre class="r"><code>wes_palette(&quot;Rushmore1&quot;)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p>…that has been converted to a continuous scale with <code>{r} max(mon$estimate)</code> colors.</p>
+<pre class="r"><code>pal &lt;- wes_palette(&quot;Rushmore1&quot;, 
+                   max(mon$estimate), 
+                   type = &quot;continuous&quot;)</code></pre>
+<div id="single-map" class="section level3">
+<h3>Single Map</h3>
+<p>We can plot the median household income using</p>
+<pre class="r"><code>mon %&gt;%
+  ggplot(aes(fill = estimate)) + 
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+</div>
+<div id="faceting-map" class="section level3">
+<h3>Faceting Map</h3>
+<p>We can also break down a map using <code>facet_wrap()</code>. For example, let’s pull data for race, in particular for White, Black, Asian and Hispanic Populations.</p>
+<pre class="r"><code>racevars &lt;- c(White = &quot;P005003&quot;, 
+              Black = &quot;P005004&quot;, 
+              Asian = &quot;P005006&quot;, 
+              Hispanic = &quot;P004003&quot;)</code></pre>
+<pre class="r"><code>mon_race &lt;- get_decennial(geography = &quot;tract&quot;,
+                          variables = racevars,
+                          state = &quot;WV&quot;, 
+                          county = &quot;Monongalia County&quot;, 
+                          geometry = TRUE,
+                          summary_var = &quot;P001001&quot;) </code></pre>
+<p>Again we can use the <code>datatable()</code> command from the <code>DT</code> package to see an interactive view of the output</p>
+<pre class="r"><code>datatable(mon_race)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+GEOID
+</th>
+<th style="text-align:left;">
+NAME
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+value
+</th>
+<th style="text-align:right;">
+summary_value
+</th>
+<th style="text-align:left;">
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+1257
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Asian
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Hispanic
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010202
+</td>
+<td style="text-align:left;">
+Census Tract 102.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+3424
+</td>
+<td style="text-align:right;">
+3823
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95593 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010202
+</td>
+<td style="text-align:left;">
+Census Tract 102.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+3823
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95593 3…
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>mon_race %&gt;%
+  mutate(pct = 100 * (value / summary_value)) %&gt;%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p>Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling.</p>
+<pre class="r"><code>mon_race %&gt;%
+  mutate(pct = 100 * (value / summary_value)) %&gt;%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal,
+                       trans=&quot;log10&quot;) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+</div>
 </div>
 </div>
 

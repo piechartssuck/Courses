@@ -135,7 +135,7 @@ library(downloadthis)
 library(here)
 ```
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -669,7 +669,7 @@ head(Tigers)
 head(mi_count)
 ```
 
-6. First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are `group`, `order`, and `region`. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there's nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in `mi_count` by stating `mi_count[some operation here , ]`. Alternatively, I can also tell R that I want to do something to the columns in `mi_count` by stating `mi_count[ , some operation here ]` which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:
+First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are `group`, `order`, and `region`. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there's nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in `mi_count` by stating `mi_count[some operation here , ]`. Alternatively, I can also tell R that I want to do something to the columns in `mi_count` by stating `mi_count[ , some operation here ]` which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:
 
 1. `names(mi_count)` tells R the to look at the names of the columns in `mi_count`.
 
@@ -744,7 +744,6 @@ ggplot() +
         legend.title.align = 0.5,
         legend.spacing.x = unit(0.5, "cm"), 
         legend.spacing.y = unit(0.5, "cm"),
-        # legend.box.margin = unit(c(0,0,0,0),"cm"),
         legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
         panel.background = element_blank(),
         axis.title.x = element_blank(),
@@ -762,7 +761,6 @@ Clearly there's a problem here. It looks like R is plotting the densities indivi
 total_thing$Density <- as.numeric(as.character(total_thing$Density))
 ```
 
- 
 OK so let's try again:
 ```{r}
 ggplot() + 
@@ -780,7 +778,6 @@ ggplot() +
         legend.title.align = 0.5,
         legend.spacing.x = unit(0.5, "cm"), 
         legend.spacing.y = unit(0.5, "cm"),
-        # legend.box.margin = unit(c(0,0,0,0),"cm"),
         legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
         panel.background = element_blank(),
         axis.title.x = element_blank(),
@@ -797,3 +794,123 @@ And we've got it! Was that a pain? Certainly! But you also have a powerful tool 
 <br>
 
 [https://catalog.data.gov/dataset](https://catalog.data.gov/dataset){target="_blank"}
+
+## Example: Tract Data
+
+For this example, you'll need the following packages
+
+```{r}
+library(tidycensus)
+library(tidyverse)
+library(DT)
+library(tools)
+library(leaflet) 
+library(sf) 
+library(ggthemes)
+library(wesanderson)
+options(tigris_use_cache = TRUE) # Keeps map shapefiles on your hard drive rather than having to download them each time
+```
+
+Let's first get some tract data, in particular the median household income from the 2015-2019 ACS in Monongalia County, WV.
+
+```{r message=FALSE}
+mon <- get_acs(state = "WV", 
+               county = "Monongalia", 
+               geography = "tract", 
+               variables = "B19013_001", 
+               geometry = TRUE)
+```
+
+You can use the `datatable()` command from the `DT` package to see an better view of the output. Yours will look similar top what is shown below but with more functionality.
+
+```{r eval=FALSE}
+datatable(mon)
+```
+
+```{r echo=FALSE}
+head(mon) %>%
+  kable()
+```
+
+Now we can create a custom continuous color palette. In this case we'll use the `wesanderson` palette but feel free to use your own.
+
+Here is the discrete scale with five colors...
+```{r}
+wes_palette("Rushmore1")
+```
+
+...that has been converted to a continuous scale with ```{r} max(mon$estimate)``` colors.
+
+```{r}
+pal <- wes_palette("Rushmore1", 
+                   max(mon$estimate), 
+                   type = "continuous")
+```
+
+### Single Map
+
+We can plot the median household income using 
+
+```{r}
+mon %>%
+  ggplot(aes(fill = estimate)) + 
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() 
+```
+
+### Faceting Map
+
+We can also break down a map using `facet_wrap()`. For example, let's pull data for race, in particular for White, Black, Asian and Hispanic Populations.
+
+```{r}
+racevars <- c(White = "P005003", 
+              Black = "P005004", 
+              Asian = "P005006", 
+              Hispanic = "P004003")
+```
+
+```{r message=FALSE}
+mon_race <- get_decennial(geography = "tract",
+                          variables = racevars,
+                          state = "WV", 
+                          county = "Monongalia County", 
+                          geometry = TRUE,
+                          summary_var = "P001001") 
+```
+
+Again we can use the `datatable()` command from the `DT` package to see an interactive view of the output
+
+```{r eval=FALSE}
+datatable(mon_race)
+```
+
+```{r echo=FALSE}
+head(mon_race) %>%
+        kable()
+```
+
+```{r}
+mon_race %>%
+  mutate(pct = 100 * (value / summary_value)) %>%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() 
+```
+
+Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling. In particular using a logarithmic transformation via `trans="log10"` when within a `scale_` is sufficient. Remember that maps are generally considered to be approximations of the actual data, rather than an exact representation.
+
+```{r}
+mon_race %>%
+  mutate(pct = 100 * (value / summary_value)) %>%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal,
+                       trans="log10") +
+  theme_map() 
+```
+
+
