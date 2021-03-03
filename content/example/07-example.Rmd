@@ -1,0 +1,65 @@
+---
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 7
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the evaluation planning phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+plan <- tibble(
+  
+  phase = c("Planning",
+            ""),
+  
+  task = c("Discovering needs",
+           "Suggesting a course of action"),
+  
+  current <- c(unchecked,
+               checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  plan %>%
+  kbl(escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## More Needs Assessment
+
+If you are interested in *needs assessments* or simply want more information, consider downloading the text [*A Guide to Assessing Needs*](https://openknowledge.worldbank.org/bitstream/handle/10986/2231/663920PUB0EPI00essing09780821388686.pdf?sequence=1&isAllowed=y){target="_blank"} written by Ryan Watkins, Maurya West Meiers and Yusra Laila Visser for the World Bank.
+
+The authors provide a very detailed breakdown of needs assessments and how to conduct varying types of analyses. While in-depth quantitative or qualitative analyses of your needs assessment is likely the scope of this course, future highly structured approaches may warrant these methods. The text really does a good job of breaking what to do where and when.

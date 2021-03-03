@@ -55,14 +55,15 @@ lessons:
     assignment: "06-assignment"
     due: "06-due"
 
-  # - title: 'Making Sense Even if You Have Some Nonsense'
-  #   session: 7
-  #   date: "October 4, 2020"
-  #   readings: "07-readings"
-  #   lesson: "07-lesson"
-  #   example: "07-example"
-  #   due: "07-due"
-  #
+  - title: 'Making Sense and Interpreting Nonsense'
+    session: 7
+    date: "March 2, 2021"
+    readings: "07-readings"
+    lesson: "07-lesson"
+    example: "07-example"
+    assignment: "07-assignment"
+    due: "07-due"
+
   # - title: 'Who Evaluates the Evaluators?'
   #   session: 8
   #   date: "October 11, 2020"
