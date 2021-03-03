@@ -415,7 +415,10 @@ avg_so_by_year  &amp;lt;- so_by_team %&amp;gt;%
 &lt;li&gt;&lt;a href=&#34;#download-the-script&#34;&gt;Download the script&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#read-the-submission-directions&#34;&gt;Read the Submission Directions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#load-up-some-libraries&#34;&gt;Load Up Some Libraries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#save-and-declare-your-census-api&#34;&gt;Save and declare your Census API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-an-api&#34;&gt;What’s an API?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#api-credentials&#34;&gt;API Credentials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-census-api&#34;&gt;The Census API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#selecting-the-proper-census-data-sets&#34;&gt;Selecting The Proper Census Data Sets&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#part-i-the-map&#34;&gt;PART I: The Map&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#country-level-data&#34;&gt;Country Level Data&lt;/a&gt;&lt;/li&gt;
@@ -434,6 +437,13 @@ avg_so_by_year  &amp;lt;- so_by_team %&amp;gt;%
 &lt;li&gt;&lt;a href=&#34;#getting-census-tract-level-data&#34;&gt;Getting Census Tract Level Data&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#single-map&#34;&gt;Single Map&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#faceting-map&#34;&gt;Faceting Map&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-alternate-projections&#34;&gt;Example: Alternate Projections&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-census-state-and-county-level-data&#34;&gt;Getting Census State and County Level Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#wrangling&#34;&gt;Wrangling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mapping-using-estimated-curvatures&#34;&gt;Mapping Using Estimated Curvatures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#saving&#34;&gt;Saving&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -705,8 +715,14 @@ Viridis color and fill palette
 &lt;/table&gt;
 &lt;/center&gt;
 &lt;/div&gt;
-&lt;div id=&#34;save-and-declare-your-census-api&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Save and declare your Census API&lt;/h2&gt;
+&lt;div id=&#34;whats-an-api&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What’s an API?&lt;/h2&gt;
+&lt;p&gt;API stands for &lt;em&gt;Application Programming Interface&lt;/em&gt; which is essentially a fancy name for a program that acts as a middleman between two services with sets of instructions.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/API.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We’ll be using the &lt;a href=&#34;https://www.census.gov/data/developers.html&#34; target=&#34;_blank&#34;&gt;U.S. Census API&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;api-credentials&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;API Credentials&lt;/h2&gt;
 &lt;p&gt;There are a few things you need to do when grabbing Census data.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;You must have a key from &lt;a href=&#34;https://api.census.gov/data/key_signup.html&#34; target=&#34;_blank&#34;&gt;https://api.census.gov/data/key_signup.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -719,11 +735,11 @@ Viridis color and fill palette
 ## 
 ##     getFunction&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Add key to the .Renviron (the place in the &lt;code&gt;censusapi&lt;/code&gt; where your unique identifier, or key, is stored)&lt;/li&gt;
+&lt;li&gt;Add key to the &lt;code&gt;.Renviron&lt;/code&gt; (the place in the &lt;code&gt;censusapi&lt;/code&gt; where your unique identifier, or key, is stored)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.setenv(CENSUS_KEY=&amp;quot;YOUR API KEY HERE&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Reload the .Renviron&lt;/li&gt;
+&lt;li&gt;Reload the &lt;code&gt;.Renviron&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;readRenviron(&amp;quot;~/.Renviron&amp;quot;) # You may get a warning...ignore it&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
@@ -731,6 +747,563 @@ Viridis color and fill palette
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.getenv(&amp;quot;CENSUS_KEY&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;## [1] &#34;YOUR UNIQUE IDENTIFIER HERE&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-census-api&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Census API&lt;/h2&gt;
+&lt;p&gt;Let’s a list of &lt;em&gt;all&lt;/em&gt; data sets associated with the US Census through their API.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;availableapis &amp;lt;- listCensusApis()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can use the &lt;code&gt;datatable()&lt;/code&gt; command from the &lt;code&gt;DT&lt;/code&gt; package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;datatable(availableapis)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+vintage
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+url
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+isTimeseries
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+temporal
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+modified
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+449
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscb
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2017
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2017/abscb&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2017/abscb&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-04-30 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+543
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscb
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2018
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2018/abscb&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2018/abscb&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-10-26 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+453
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscbo
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2017
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2017/abscbo&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2017/abscbo&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-04-30 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+544
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscbo
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2018
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2018/abscbo&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2018/abscbo&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-10-26 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+455
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscs
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2017
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2017/abscs&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2017/abscs&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-04-30 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+545
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Economic Surveys: Annual Business Survey
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+abscs
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2018
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;a href=&#34;https://api.census.gov/data/2018/abscs&#34; class=&#34;uri&#34;&gt;https://api.census.gov/data/2018/abscs&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+unidentified
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;amp;D and Innovation Survey (BRDI-S). &lt;a href=&#34;https://www.census.gov/programs-surveys/abs.html&#34; class=&#34;uri&#34;&gt;https://www.census.gov/programs-surveys/abs.html&lt;/a&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+2020-10-26 00:00:00.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The Census APIs have over 550 different data repositories, each with numerous data sets within those.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nrow(availableapis)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 553&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Trying to locate what you want can be difficult but there are ways to reduce the time needed. Say I wanted any data set where income is mentioned anywhere…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;availableapis %&amp;gt;%
+  filter_all(any_vars(grepl(&amp;quot;income&amp;quot;, .))) %&amp;gt;%
+  datatable()&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+vintage
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+url
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+isTimeseries
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+temporal
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+modified
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;… or I could just narrow and search just the &lt;code&gt;description&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;availableapis %&amp;gt;%
+  filter(str_detect(description, &amp;#39;income&amp;#39;)) %&amp;gt;%
+  datatable()&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+vintage
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+url
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+isTimeseries
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+temporal
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+modified
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I could also arrange the set filtering the descriptions by geography and demographics. There are a lot of ways go about doing this. Here’s one&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;availableapis %&amp;gt;%                                     
+  filter(str_detect(description, c(&amp;#39;geo&amp;#39;))) %&amp;gt;% 
+  filter(str_detect(description, c(&amp;#39;demo&amp;#39;))) %&amp;gt;%
+  drop_na(vintage) %&amp;gt;% 
+  arrange(-vintage) %&amp;gt;%  
+  datatable()&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+vintage
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+url
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+isTimeseries
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+temporal
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+modified
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;which translates to&lt;/p&gt;
+&lt;p&gt;refer to the data set we need &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;br&gt;we need geographic data but the description could also say geography, geographical, etc so we search by the term stem &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;br&gt;same idea as above for demographical information &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;br&gt;drop the rows that have &lt;code&gt;NA&lt;/code&gt; for years &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;br&gt;arrange the years from most recent going backwards &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;br&gt;show this in a &lt;code&gt;datatable()&lt;/code&gt; format&lt;/p&gt;
+&lt;p&gt;Assume I want to look at the 2018 American Community Survey: 5-Year Estimates which is described as &lt;em&gt;an ongoing survey that provides data every year – giving communities the current information they need to plan investments and services. The ACS covers a broad range of topics about social, economic, demographic, and housing characteristics of the U.S. population. The Comparison Profiles include the following geographies: nation, all states (including DC and Puerto Rico), all metropolitan areas, all congressional districts, all counties, all places and all tracts. Comparison Profiles contain broad social, economic, housing, and demographic information. The data are presented as both counts and percentages.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are over 2,400 variables in this dataset! You can find out more from the &lt;a href=&#34;https://api.census.gov/data/2018/acs/acs5/profile.html&#34; target=&#34;_blank&#34;&gt;Census ACS API page&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selecting-the-proper-census-data-sets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Selecting The Proper Census Data Sets&lt;/h2&gt;
+&lt;p&gt;We need to check for geographic data in the ACS because not everything in the Census API has geographical information&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;listCensusMetadata(name = &amp;quot;acs/acs5/profile&amp;quot;, 
+                   vintage = 2018,
+                   type = &amp;quot;geography&amp;quot;) %&amp;gt;%
+  as_tibble() %&amp;gt;%
+  unnest(cols = c()) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 53 x 6
+##    name        geoLevelDisplay referenceDate requires  wildcard optionalWithWCF…
+##    &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;         &amp;lt;list&amp;gt;    &amp;lt;list&amp;gt;   &amp;lt;chr&amp;gt;           
+##  1 us          010             2018-01-01    &amp;lt;NULL&amp;gt;    &amp;lt;NULL&amp;gt;   &amp;lt;NA&amp;gt;            
+##  2 region      020             2018-01-01    &amp;lt;NULL&amp;gt;    &amp;lt;NULL&amp;gt;   &amp;lt;NA&amp;gt;            
+##  3 division    030             2018-01-01    &amp;lt;NULL&amp;gt;    &amp;lt;NULL&amp;gt;   &amp;lt;NA&amp;gt;            
+##  4 state       040             2018-01-01    &amp;lt;NULL&amp;gt;    &amp;lt;NULL&amp;gt;   &amp;lt;NA&amp;gt;            
+##  5 county      050             2018-01-01    &amp;lt;chr [1]&amp;gt; &amp;lt;chr [1… state           
+##  6 county sub… 060             2018-01-01    &amp;lt;chr [2]&amp;gt; &amp;lt;chr [1… county          
+##  7 subminor c… 067             2018-01-01    &amp;lt;chr [3]&amp;gt; &amp;lt;NULL&amp;gt;   &amp;lt;NA&amp;gt;            
+##  8 tract       140             2018-01-01    &amp;lt;chr [2]&amp;gt; &amp;lt;chr [1… county          
+##  9 place       160             2018-01-01    &amp;lt;chr [1]&amp;gt; &amp;lt;chr [1… state           
+## 10 consolidat… 170             2018-01-01    &amp;lt;chr [1]&amp;gt; &amp;lt;chr [1… state           
+## # … with 43 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Good! This API has a lot of geographies including: us, region, division, state, county, etc.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vars &amp;lt;- listCensusMetadata(name = &amp;quot;acs/acs5/profile&amp;quot;,
+                           vintage = 2018, 
+                           type = &amp;quot;variables&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vars %&amp;gt;%
+  as_tibble() %&amp;gt;%
+    datatable()&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+label
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+concept
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+predicateType
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+group
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+limit
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+attributes
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+required
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02_0126E
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Estimate!!ANCESTRY!!Total population!!Danish
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SELECTED SOCIAL CHARACTERISTICS IN THE UNITED STATES
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+int
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02_0126EA,DP02_0126M,DP02_0126MA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP05_0050PE
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Percent Estimate!!RACE!!Total population!!One race!!Asian!!Vietnamese
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ACS DEMOGRAPHIC AND HOUSING ESTIMATES
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+float
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP05
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP05_0050PM,DP05_0050PMA,DP05_0050PEA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04_0047E
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Estimate!!HOUSING TENURE!!Occupied housing units!!Renter-occupied
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SELECTED HOUSING CHARACTERISTICS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+int
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04_0047M,DP04_0047MA,DP04_0047EA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR_0083PE
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Percent Estimate!!RESIDENCE 1 YEAR AGO!!Population 1 year and over!!Different house in Puerto Rico or the U.S.!!In Puerto Rico!!Different municipio
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+float
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR_0083PM,DP02PR_0083PMA,DP02PR_0083PEA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR_0106PE
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Percent Estimate!!WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Africa
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+float
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP02PR_0106PM,DP02PR_0106PMA,DP02PR_0106PEA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04_0046E
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Estimate!!HOUSING TENURE!!Occupied housing units!!Owner-occupied
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+SELECTED HOUSING CHARACTERISTICS
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+int
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DP04_0046M,DP04_0046MA,DP04_0046EA
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+NA
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;div id=&#34;part-i-the-map&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;PART I: The Map&lt;/h2&gt;
@@ -762,19 +1335,19 @@ Viridis color and fill palette
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called &lt;code&gt;coord_fixed&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3) # 1.3 is a decent standard estimate&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &amp;quot;#1b85b8&amp;quot;, 
                fill = &amp;quot;#559e83&amp;quot;) + 
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Its looking better but something is missing. Hmmm….Oh!…Its the “S” part of “USA” - To get that, we need to look at state level data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;state-level-data&#34; class=&#34;section level3&#34;&gt;
@@ -806,13 +1379,13 @@ The command &lt;code&gt;region =&lt;/code&gt; is actually a filter so you need t
   geom_polygon(data = mi, 
                         aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;47%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-40-1.png&#34; width=&#34;47%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
   scale_fill_manual(values=c(&amp;quot;#6A0032&amp;quot;)) +
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-41-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Not bad but we can get even more granular. Let’s look at county level data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;county-level-data&#34; class=&#34;section level3&#34;&gt;
@@ -847,7 +1420,7 @@ The command &lt;code&gt;region =&lt;/code&gt; is actually a filter so you need t
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-45-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Your output may look a little different depending on your system settings.&lt;/em&gt;&lt;br /&gt;
 &lt;br&gt;
 That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with &lt;code&gt;guide = FALSE&lt;/code&gt; within &lt;code&gt;scale_fill_viridis&lt;/code&gt; to get rid of that particular one or to turn all &lt;code&gt;fill&lt;/code&gt; legends off, you can use &lt;code&gt;guides(fill=FALSE)&lt;/code&gt; which is switch off in the plot above. In the example below, let’s try the one with &lt;code&gt;guide = FALSE&lt;/code&gt;.&lt;/p&gt;
@@ -876,9 +1449,8 @@ That legend is taking up way too much space AND we don’t need the counties col
         panel.border = element_blank(),
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
-# guides(color=FALSE) +
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-46-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Well now we definitely have county level data for Michigan.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.&lt;/strong&gt;&lt;br /&gt;
 &lt;br&gt;
@@ -1289,7 +1861,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-88-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;total_thing$Density &amp;lt;- as.numeric(as.character(total_thing$Density))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;OK so let’s try again:&lt;/p&gt;
@@ -1318,7 +1890,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-76-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://catalog.data.gov/dataset&#34; target=&#34;_blank&#34;&gt;https://catalog.data.gov/dataset&lt;/a&gt;&lt;/p&gt;
@@ -1465,7 +2037,6 @@ Palette based on Wes Anderson movies
                geography = &amp;quot;tract&amp;quot;, 
                variables = &amp;quot;B19013_001&amp;quot;, 
                geometry = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can use the &lt;code&gt;datatable()&lt;/code&gt; command from the &lt;code&gt;DT&lt;/code&gt; package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;datatable(mon)&lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1616,7 +2187,7 @@ MULTIPOLYGON (((-79.96288 3…
 &lt;p&gt;Now we can create a custom continuous color palette. In this case we’ll use the &lt;a href=&#34;https://github.com/karthik/wesanderson&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;wesanderson&lt;/code&gt;&lt;/a&gt; palette but please feel free to use your own.&lt;/p&gt;
 &lt;p&gt;Here is the discrete scale with five colors…&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;wes_palette(&amp;quot;Rushmore1&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-83-1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-97-1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;…that has been converted to a continuous scale with 105,474 colors.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pal &amp;lt;- wes_palette(&amp;quot;Rushmore1&amp;quot;, 
                    max(mon$estimate), 
@@ -1630,7 +2201,7 @@ MULTIPOLYGON (((-79.96288 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-85-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-99-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;faceting-map&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Faceting Map&lt;/h3&gt;
@@ -1800,7 +2371,7 @@ MULTIPOLYGON (((-79.95593 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-104-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling. In particular using a logarithmic transformation via &lt;code&gt;trans=&#34;log10&#34;&lt;/code&gt; when within a &lt;code&gt;scale_&lt;/code&gt; is sufficient. Remember that maps are generally considered to be approximations of the actual data, rather than an exact representation.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mon_race %&amp;gt;%
   mutate(pct = 100 * (value / summary_value)) %&amp;gt;%
@@ -1810,7 +2381,291 @@ MULTIPOLYGON (((-79.95593 3…
   scale_fill_gradientn(colors = pal,
                        trans=&amp;quot;log10&amp;quot;) +
   theme_map() &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-91-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-105-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example-alternate-projections&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Example: Alternate Projections&lt;/h2&gt;
+&lt;p&gt;We can use different &lt;em&gt;representations&lt;/em&gt;, or &lt;em&gt;projections&lt;/em&gt; of maps. To explore this, let’s take a look at the available variables. Hopefully one is interesting&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vars &amp;lt;- listCensusMetadata(name = &amp;quot;acs/acs5/profile&amp;quot;,
+                           vintage = 2018, 
+                           type = &amp;quot;variables&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vars %&amp;gt;%
+  as_tibble() %&amp;gt;%
+    filter(str_detect(label, &amp;quot;relate&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+name
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+label
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+concept
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+predicateType
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+group
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+limit
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+attributes
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+required
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From that let’s use the variable &lt;code&gt;DP03_0126PE&lt;/code&gt;, that is a &lt;em&gt;2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years&lt;/em&gt;.&lt;/p&gt;
+&lt;div id=&#34;getting-census-state-and-county-level-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting Census State and County Level Data&lt;/h3&gt;
+&lt;p&gt;We need to first grab the data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;poverty_data &amp;lt;- getCensus(name = &amp;quot;acs/acs5/profile&amp;quot;, # same as above
+                          vintage = 2018,
+                          vars = c(&amp;quot;NAME&amp;quot;, &amp;quot;DP03_0126PE&amp;quot;), # column/variable name
+                          key = Sys.getenv(&amp;quot;CENSUS_KEY&amp;quot;), # using the census key from before
+                          region = &amp;quot;county:*&amp;quot;,# any county
+                          regionin = &amp;quot;state:*&amp;quot;) # any state&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrangling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrangling&lt;/h3&gt;
+&lt;p&gt;A majority of your time is spent actually wrangling data. This often includes cleaning and restructuring it into a form you can us. For this example, we’ll do just that&lt;/p&gt;
+&lt;p&gt;First we’ll clean the data set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;poverty_data_cleaned &amp;lt;- poverty_data %&amp;gt;%
+                        separate(NAME, into = paste0(&amp;#39;thing&amp;#39;, 1:2), sep = &amp;#39;[,]&amp;#39;) %&amp;gt;%
+                        mutate(thing1 = str_replace_all(thing1, &amp;quot; County&amp;quot;, &amp;quot;&amp;quot;)) %&amp;gt;% # Remove the term County (with a space in front) 
+                        mutate(thing2 = str_squish(thing2)) %&amp;gt;%
+                        select(-c(state, county)) %&amp;gt;% # Get rid of these because we&amp;#39;ll be using state and county names to merge
+                        rename(county = thing1, 
+                               state = thing2,
+                               poverty_percentage = DP03_0126PE) %&amp;gt;%
+                        mutate(poverty_percentage = replace(poverty_percentage,
+                                                            which(poverty_percentage &amp;lt;= 0),
+                                                            NA)) %&amp;gt;%
+                        arrange(state, county)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s take a look&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;poverty_data_cleaned %&amp;gt;% 
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    county   state poverty_percentage
+## 1 Autauga Alabama               52.3
+## 2 Baldwin Alabama               35.0
+## 3 Barbour Alabama               60.6
+## 4    Bibb Alabama               50.6
+## 5  Blount Alabama               46.1
+## 6 Bullock Alabama               66.5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So now that we have the figures, we need data about the mapping.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;county_data &amp;lt;- map_data(&amp;quot;county&amp;quot;) %&amp;gt;% 
+               rename(state = region, # rename because we&amp;#39;ll use this to merge with the income_data_cleaned set
+                      county = subregion) %&amp;gt;% # rename because we&amp;#39;ll use this to merge with the income_data_cleaned set
+               mutate(state = str_to_title(state)) %&amp;gt;% # make into a title case
+               mutate(county = str_to_title(county)) # make into a title case &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, let’s take a look&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;county_data %&amp;gt;% 
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        long      lat group order   state  county
+## 1 -86.50517 32.34920     1     1 Alabama Autauga
+## 2 -86.53382 32.35493     1     2 Alabama Autauga
+## 3 -86.54527 32.36639     1     3 Alabama Autauga
+## 4 -86.55673 32.37785     1     4 Alabama Autauga
+## 5 -86.57966 32.38357     1     5 Alabama Autauga
+## 6 -86.59111 32.37785     1     6 Alabama Autauga&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can merge them together using &lt;code&gt;joins&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;map_data &amp;lt;- left_join(county_data, 
+                      poverty_data_cleaned, 
+                      by = c(&amp;quot;state&amp;quot;,&amp;quot;county&amp;quot;)) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;map_data %&amp;gt;% 
+  head()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        long      lat group order   state  county poverty_percentage
+## 1 -86.50517 32.34920     1     1 Alabama Autauga               52.3
+## 2 -86.53382 32.35493     1     2 Alabama Autauga               52.3
+## 3 -86.54527 32.36639     1     3 Alabama Autauga               52.3
+## 4 -86.55673 32.37785     1     4 Alabama Autauga               52.3
+## 5 -86.57966 32.38357     1     5 Alabama Autauga               52.3
+## 6 -86.59111 32.37785     1     6 Alabama Autauga               52.3&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mapping-using-estimated-curvatures&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mapping Using Estimated Curvatures&lt;/h3&gt;
+&lt;p&gt;Let’s go ahead and map the data&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map &amp;lt;- 
+  ggplot() + 
+  geom_polygon(data = map_data, aes(x = long, 
+                                    y = lat, 
+                                    fill = poverty_percentage, 
+                                    group = group),
+               color = &amp;quot;#f8f8fa&amp;quot;, 
+               size = 0.20, 
+               show.legend = TRUE) +
+  geom_polygon(data=subset(map_data(&amp;quot;state&amp;quot;)), 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               size = 0.5,
+               color=&amp;quot;white&amp;quot;, 
+               fill = NA) +
+  scale_fill_gradient(name=&amp;quot;Estimates&amp;quot;, 
+                      low = &amp;quot;#fa9fb5&amp;quot;, 
+                      high = &amp;quot;#7a0177&amp;quot;,
+                      breaks = c(0, 25, 50, 75, 100),
+                      limits = c(0,100), 
+                      na.value = &amp;quot;#c9d3d9&amp;quot;,
+                      labels = c(str_wrap(&amp;quot;0.00% - 24.99%&amp;quot;, 10), 
+                                 str_wrap(&amp;quot;25.00 - 49.99%&amp;quot;, 10),
+                                 str_wrap(&amp;quot;50.00% - 74.99%&amp;quot;, 10),
+                                 str_wrap(&amp;quot;75.00% - 99.99%&amp;quot;, 10),
+                                 &amp;quot;100%&amp;quot;),
+                      guide = &amp;quot;legend&amp;quot;) +
+  theme(plot.title = element_text(size = 13,
+                                  color =&amp;quot;#4682b4&amp;quot;, 
+                                  vjust = -1,
+                                  hjust = 0.5,
+                                  face = &amp;quot;bold&amp;quot;),
+        plot.caption = element_text(size = 8,
+                                    color =&amp;quot;#4682b4&amp;quot;,
+                                    face = &amp;quot;italic&amp;quot;,
+                                    margin = margin(t = 1, 
+                                                    unit = &amp;quot;cm&amp;quot;)),
+        legend.position = &amp;quot;bottom&amp;quot;,
+        legend.direction = &amp;quot;horizontal&amp;quot;,
+        legend.key = element_rect(size = 5, 
+                                  color = NA),
+        legend.key.width = unit(2, 
+                               &amp;quot;cm&amp;quot;),
+        legend.key.height = unit(0.3, 
+                               &amp;quot;cm&amp;quot;),
+        legend.text = element_text(size = 8, 
+                                   color = &amp;quot;#4682b4&amp;quot;),
+        legend.title.align = 0.5,
+        legend.title = element_text(size = 10, 
+                                    color = &amp;quot;#4682b4&amp;quot;),
+        legend.background = element_rect(linetype = 0, 
+                                         size = 0.5, 
+                                         color = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  labs(title = str_to_title(str_wrap(&amp;quot;2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years&amp;quot;, 50)),
+       caption = &amp;quot;Source: 2018 American Community Survey: 5-Year Estimates&amp;quot;) +
+  guides(fill = guide_legend(title.position = &amp;quot;top&amp;quot;,
+                             label.position = &amp;quot;bottom&amp;quot;, 
+                             label.hjust = 0.5)) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-117-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Well that’s the default map projection and its just terrible. You can fool around with the &lt;em&gt;representation&lt;/em&gt;, or &lt;em&gt;projection&lt;/em&gt; of the map using any number of coordinate systems via &lt;code&gt;coord_map()&lt;/code&gt;. Below are just a few but a full list can be found on the &lt;a href=&#34;https://rdrr.io/cran/mapproj/man/mapproject.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;mapproj CRAN site&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Albers projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;albers&amp;quot;, 
+            lat0 = 39, 
+            lat1 = 45)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-118-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+projection with an approximated aspect ratio
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_quickmap()&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-119-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Lambert azimuthal equal-area projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;azequalarea&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-120-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Bonne projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;bonne&amp;quot;, 
+            lat0 = 50)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-121-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+cylindrical projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;cylindrical&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-122-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Gilbert projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;gilbert&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-123-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+LaGrange projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;lagrange&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-124-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+Mercator projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;mercator&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-125-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;em&gt;Note: This is the default projection so you can just run&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map()&lt;/code&gt;&lt;/pre&gt;
+&lt;em&gt;to get the same result.&lt;/em&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+orthographic projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;orthographic&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-127-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+stereographic projection
+&lt;/summary&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;estimate_map + 
+  coord_map(&amp;quot;stereographic&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://edp693e.theoreticalphysed.com/assignment/06-assignment_files/figure-html/unnamed-chunk-128-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+&lt;div id=&#34;saving&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Saving&lt;/h3&gt;
+&lt;p&gt;You can even save any of the plots as a pdf on standard A4 paper in landscape mode&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;poverty_estimates_albers &amp;lt;- estimate_map + 
+                            coord_map(&amp;quot;mercator&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsave(&amp;quot;poverty_estimates.pdf&amp;quot;,
+       poverty_estimates_albers,
+       width = 297, 
+       height = 210, 
+       units = &amp;quot;mm&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

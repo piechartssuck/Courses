@@ -27,7 +27,10 @@ editor_options:
 <li><a href="#download-the-script">Download the script</a></li>
 <li><a href="#read-the-submission-directions">Read the Submission Directions</a></li>
 <li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
-<li><a href="#save-and-declare-your-census-api">Save and declare your Census API</a></li>
+<li><a href="#whats-an-api">What’s an API?</a></li>
+<li><a href="#api-credentials">API Credentials</a></li>
+<li><a href="#the-census-api">The Census API</a></li>
+<li><a href="#selecting-the-proper-census-data-sets">Selecting The Proper Census Data Sets</a></li>
 <li><a href="#part-i-the-map">PART I: The Map</a>
 <ul>
 <li><a href="#country-level-data">Country Level Data</a></li>
@@ -46,6 +49,13 @@ editor_options:
 <li><a href="#getting-census-tract-level-data">Getting Census Tract Level Data</a></li>
 <li><a href="#single-map">Single Map</a></li>
 <li><a href="#faceting-map">Faceting Map</a></li>
+</ul></li>
+<li><a href="#example-alternate-projections">Example: Alternate Projections</a>
+<ul>
+<li><a href="#getting-census-state-and-county-level-data">Getting Census State and County Level Data</a></li>
+<li><a href="#wrangling">Wrangling</a></li>
+<li><a href="#mapping-using-estimated-curvatures">Mapping Using Estimated Curvatures</a></li>
+<li><a href="#saving">Saving</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -317,8 +327,14 @@ Viridis color and fill palette
 </table>
 </center>
 </div>
-<div id="save-and-declare-your-census-api" class="section level2">
-<h2>Save and declare your Census API</h2>
+<div id="whats-an-api" class="section level2">
+<h2>What’s an API?</h2>
+<p>API stands for <em>Application Programming Interface</em> which is essentially a fancy name for a program that acts as a middleman between two services with sets of instructions.</p>
+<p><img src="/assignment/06-assignment_files/API.png" /></p>
+<p>We’ll be using the <a href="https://www.census.gov/data/developers.html" target="_blank">U.S. Census API</a>.</p>
+</div>
+<div id="api-credentials" class="section level2">
+<h2>API Credentials</h2>
 <p>There are a few things you need to do when grabbing Census data.</p>
 <ol style="list-style-type: decimal">
 <li><p>You must have a key from <a href="https://api.census.gov/data/key_signup.html" target="_blank">https://api.census.gov/data/key_signup.html</a></p></li>
@@ -331,11 +347,11 @@ Viridis color and fill palette
 ## 
 ##     getFunction</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li>Add key to the .Renviron (the place in the <code>censusapi</code> where your unique identifier, or key, is stored)</li>
+<li>Add key to the <code>.Renviron</code> (the place in the <code>censusapi</code> where your unique identifier, or key, is stored)</li>
 </ol>
 <pre class="r"><code>Sys.setenv(CENSUS_KEY=&quot;YOUR API KEY HERE&quot;)</code></pre>
 <ol start="4" style="list-style-type: decimal">
-<li>Reload the .Renviron</li>
+<li>Reload the <code>.Renviron</code></li>
 </ol>
 <pre class="r"><code>readRenviron(&quot;~/.Renviron&quot;) # You may get a warning...ignore it</code></pre>
 <ol start="5" style="list-style-type: decimal">
@@ -343,6 +359,563 @@ Viridis color and fill palette
 </ol>
 <pre class="r"><code>Sys.getenv(&quot;CENSUS_KEY&quot;)</code></pre>
 <p><code>## [1] "YOUR UNIQUE IDENTIFIER HERE"</code></p>
+</div>
+<div id="the-census-api" class="section level2">
+<h2>The Census API</h2>
+<p>Let’s a list of <em>all</em> data sets associated with the US Census through their API.</p>
+<pre class="r"><code>availableapis &lt;- listCensusApis()</code></pre>
+<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.</p>
+<pre class="r"><code>datatable(availableapis)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+449
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscb
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscb" class="uri">https://api.census.gov/data/2017/abscb</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+543
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscb
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscb" class="uri">https://api.census.gov/data/2018/abscb</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+453
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscbo
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscbo" class="uri">https://api.census.gov/data/2017/abscbo</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+544
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscbo
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscbo" class="uri">https://api.census.gov/data/2018/abscbo</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+455
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscs
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscs" class="uri">https://api.census.gov/data/2017/abscs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+545
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscs
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscs" class="uri">https://api.census.gov/data/2018/abscs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Census APIs have over 550 different data repositories, each with numerous data sets within those.</p>
+<pre class="r"><code>nrow(availableapis)</code></pre>
+<pre><code>## [1] 553</code></pre>
+<p>Trying to locate what you want can be difficult but there are ways to reduce the time needed. Say I wanted any data set where income is mentioned anywhere…</p>
+<pre class="r"><code>availableapis %&gt;%
+  filter_all(any_vars(grepl(&quot;income&quot;, .))) %&gt;%
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>… or I could just narrow and search just the <code>description</code></p>
+<pre class="r"><code>availableapis %&gt;%
+  filter(str_detect(description, &#39;income&#39;)) %&gt;%
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>I could also arrange the set filtering the descriptions by geography and demographics. There are a lot of ways go about doing this. Here’s one</p>
+<pre class="r"><code>availableapis %&gt;%                                     
+  filter(str_detect(description, c(&#39;geo&#39;))) %&gt;% 
+  filter(str_detect(description, c(&#39;demo&#39;))) %&gt;%
+  drop_na(vintage) %&gt;% 
+  arrange(-vintage) %&gt;%  
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>which translates to</p>
+<p>refer to the data set we need <code>%&gt;%</code><br>we need geographic data but the description could also say geography, geographical, etc so we search by the term stem <code>%&gt;%</code><br>same idea as above for demographical information <code>%&gt;%</code><br>drop the rows that have <code>NA</code> for years <code>%&gt;%</code><br>arrange the years from most recent going backwards <code>%&gt;%</code><br>show this in a <code>datatable()</code> format</p>
+<p>Assume I want to look at the 2018 American Community Survey: 5-Year Estimates which is described as <em>an ongoing survey that provides data every year – giving communities the current information they need to plan investments and services. The ACS covers a broad range of topics about social, economic, demographic, and housing characteristics of the U.S. population. The Comparison Profiles include the following geographies: nation, all states (including DC and Puerto Rico), all metropolitan areas, all congressional districts, all counties, all places and all tracts. Comparison Profiles contain broad social, economic, housing, and demographic information. The data are presented as both counts and percentages.</em></p>
+<p>There are over 2,400 variables in this dataset! You can find out more from the <a href="https://api.census.gov/data/2018/acs/acs5/profile.html" target="_blank">Census ACS API page</a>.</p>
+</div>
+<div id="selecting-the-proper-census-data-sets" class="section level2">
+<h2>Selecting The Proper Census Data Sets</h2>
+<p>We need to check for geographic data in the ACS because not everything in the Census API has geographical information</p>
+<pre class="r"><code>listCensusMetadata(name = &quot;acs/acs5/profile&quot;, 
+                   vintage = 2018,
+                   type = &quot;geography&quot;) %&gt;%
+  as_tibble() %&gt;%
+  unnest(cols = c()) </code></pre>
+<pre><code>## # A tibble: 53 x 6
+##    name        geoLevelDisplay referenceDate requires  wildcard optionalWithWCF…
+##    &lt;chr&gt;       &lt;chr&gt;           &lt;chr&gt;         &lt;list&gt;    &lt;list&gt;   &lt;chr&gt;           
+##  1 us          010             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  2 region      020             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  3 division    030             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  4 state       040             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  5 county      050             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+##  6 county sub… 060             2018-01-01    &lt;chr [2]&gt; &lt;chr [1… county          
+##  7 subminor c… 067             2018-01-01    &lt;chr [3]&gt; &lt;NULL&gt;   &lt;NA&gt;            
+##  8 tract       140             2018-01-01    &lt;chr [2]&gt; &lt;chr [1… county          
+##  9 place       160             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+## 10 consolidat… 170             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+## # … with 43 more rows</code></pre>
+<p>Good! This API has a lot of geographies including: us, region, division, state, county, etc.</p>
+<pre class="r"><code>vars &lt;- listCensusMetadata(name = &quot;acs/acs5/profile&quot;,
+                           vintage = 2018, 
+                           type = &quot;variables&quot;) </code></pre>
+<pre class="r"><code>vars %&gt;%
+  as_tibble() %&gt;%
+    datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+label
+</th>
+<th style="text-align:left;">
+concept
+</th>
+<th style="text-align:left;">
+predicateType
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:left;">
+limit
+</th>
+<th style="text-align:left;">
+attributes
+</th>
+<th style="text-align:left;">
+required
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+DP02_0126E
+</td>
+<td style="text-align:left;">
+Estimate!!ANCESTRY!!Total population!!Danish
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN THE UNITED STATES
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP02
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02_0126EA,DP02_0126M,DP02_0126MA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP05_0050PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!RACE!!Total population!!One race!!Asian!!Vietnamese
+</td>
+<td style="text-align:left;">
+ACS DEMOGRAPHIC AND HOUSING ESTIMATES
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP05
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP05_0050PM,DP05_0050PMA,DP05_0050PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP04_0047E
+</td>
+<td style="text-align:left;">
+Estimate!!HOUSING TENURE!!Occupied housing units!!Renter-occupied
+</td>
+<td style="text-align:left;">
+SELECTED HOUSING CHARACTERISTICS
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP04
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP04_0047M,DP04_0047MA,DP04_0047EA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP02PR_0083PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!RESIDENCE 1 YEAR AGO!!Population 1 year and over!!Different house in Puerto Rico or the U.S.!!In Puerto Rico!!Different municipio
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP02PR
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02PR_0083PM,DP02PR_0083PMA,DP02PR_0083PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP02PR_0106PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Africa
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP02PR
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02PR_0106PM,DP02PR_0106PMA,DP02PR_0106PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP04_0046E
+</td>
+<td style="text-align:left;">
+Estimate!!HOUSING TENURE!!Occupied housing units!!Owner-occupied
+</td>
+<td style="text-align:left;">
+SELECTED HOUSING CHARACTERISTICS
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP04
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP04_0046M,DP04_0046MA,DP04_0046EA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="part-i-the-map" class="section level2">
 <h2>PART I: The Map</h2>
@@ -374,19 +947,19 @@ Viridis color and fill palette
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group))</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called <code>coord_fixed</code></p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, 
                aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3) # 1.3 is a decent standard estimate</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.</p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &quot;#1b85b8&quot;, 
                fill = &quot;#559e83&quot;) + 
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p>Its looking better but something is missing. Hmmm….Oh!…Its the “S” part of “USA” - To get that, we need to look at state level data.</p>
 </div>
 <div id="state-level-data" class="section level3">
@@ -418,13 +991,13 @@ The command <code>region =</code> is actually a filter so you need to put as muc
   geom_polygon(data = mi, 
                         aes(x=long, y = lat, group = group)) + 
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-26-1.png" width="47%" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-40-1.png" width="47%" /></p>
 <p>Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.</p>
 <pre class="r"><code>ggplot() + 
   geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
   scale_fill_manual(values=c(&quot;#6A0032&quot;)) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
 <p>Not bad but we can get even more granular. Let’s look at county level data.</p>
 </div>
 <div id="county-level-data" class="section level3">
@@ -459,7 +1032,7 @@ The command <code>region =</code> is actually a filter so you need to put as muc
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <p><em>Your output may look a little different depending on your system settings.</em><br />
 <br>
 That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with <code>guide = FALSE</code> within <code>scale_fill_viridis</code> to get rid of that particular one or to turn all <code>fill</code> legends off, you can use <code>guides(fill=FALSE)</code> which is switch off in the plot above. In the example below, let’s try the one with <code>guide = FALSE</code>.</p>
@@ -488,9 +1061,8 @@ That legend is taking up way too much space AND we don’t need the counties col
         panel.border = element_blank(),
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
-# guides(color=FALSE) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 <p>Well now we definitely have county level data for Michigan.</p>
 <p><strong>Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.</strong><br />
 <br>
@@ -901,7 +1473,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
 <p>Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)</p>
 <pre class="r"><code>total_thing$Density &lt;- as.numeric(as.character(total_thing$Density))</code></pre>
 <p>OK so let’s try again:</p>
@@ -930,7 +1502,7 @@ In each situation, you have to think about the end product and the data set that
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
   coord_fixed(1.3)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 <p>And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
 <br></p>
 <p><a href="https://catalog.data.gov/dataset" target="_blank">https://catalog.data.gov/dataset</a></p>
@@ -1077,7 +1649,6 @@ Palette based on Wes Anderson movies
                geography = &quot;tract&quot;, 
                variables = &quot;B19013_001&quot;, 
                geometry = TRUE)</code></pre>
-<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.</p>
 <pre class="r"><code>datatable(mon)</code></pre>
 <table>
 <thead>
@@ -1228,7 +1799,7 @@ MULTIPOLYGON (((-79.96288 3…
 <p>Now we can create a custom continuous color palette. In this case we’ll use the <a href="https://github.com/karthik/wesanderson" target="_blank"><code>wesanderson</code></a> palette but please feel free to use your own.</p>
 <p>Here is the discrete scale with five colors…</p>
 <pre class="r"><code>wes_palette(&quot;Rushmore1&quot;)</code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-83-1.png" width="50%" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-97-1.png" width="50%" /></p>
 <p>…that has been converted to a continuous scale with 105,474 colors.</p>
 <pre class="r"><code>pal &lt;- wes_palette(&quot;Rushmore1&quot;, 
                    max(mon$estimate), 
@@ -1242,7 +1813,7 @@ MULTIPOLYGON (((-79.96288 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
 </div>
 <div id="faceting-map" class="section level3">
 <h3>Faceting Map</h3>
@@ -1412,7 +1983,7 @@ MULTIPOLYGON (((-79.95593 3…
   geom_sf(color = NA) + 
   scale_fill_gradientn(colors = pal) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
 <p>Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling. In particular using a logarithmic transformation via <code>trans="log10"</code> when within a <code>scale_</code> is sufficient. Remember that maps are generally considered to be approximations of the actual data, rather than an exact representation.</p>
 <pre class="r"><code>mon_race %&gt;%
   mutate(pct = 100 * (value / summary_value)) %&gt;%
@@ -1422,7 +1993,291 @@ MULTIPOLYGON (((-79.95593 3…
   scale_fill_gradientn(colors = pal,
                        trans=&quot;log10&quot;) +
   theme_map() </code></pre>
-<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
+</div>
+</div>
+<div id="example-alternate-projections" class="section level2">
+<h2>Example: Alternate Projections</h2>
+<p>We can use different <em>representations</em>, or <em>projections</em> of maps. To explore this, let’s take a look at the available variables. Hopefully one is interesting</p>
+<pre class="r"><code>vars &lt;- listCensusMetadata(name = &quot;acs/acs5/profile&quot;,
+                           vintage = 2018, 
+                           type = &quot;variables&quot;) </code></pre>
+<pre class="r"><code>vars %&gt;%
+  as_tibble() %&gt;%
+    filter(str_detect(label, &quot;relate&quot;))</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+label
+</th>
+<th style="text-align:left;">
+concept
+</th>
+<th style="text-align:left;">
+predicateType
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:left;">
+limit
+</th>
+<th style="text-align:left;">
+attributes
+</th>
+<th style="text-align:left;">
+required
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>From that let’s use the variable <code>DP03_0126PE</code>, that is a <em>2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years</em>.</p>
+<div id="getting-census-state-and-county-level-data" class="section level3">
+<h3>Getting Census State and County Level Data</h3>
+<p>We need to first grab the data set</p>
+<pre class="r"><code>poverty_data &lt;- getCensus(name = &quot;acs/acs5/profile&quot;, # same as above
+                          vintage = 2018,
+                          vars = c(&quot;NAME&quot;, &quot;DP03_0126PE&quot;), # column/variable name
+                          key = Sys.getenv(&quot;CENSUS_KEY&quot;), # using the census key from before
+                          region = &quot;county:*&quot;,# any county
+                          regionin = &quot;state:*&quot;) # any state</code></pre>
+</div>
+<div id="wrangling" class="section level3">
+<h3>Wrangling</h3>
+<p>A majority of your time is spent actually wrangling data. This often includes cleaning and restructuring it into a form you can us. For this example, we’ll do just that</p>
+<p>First we’ll clean the data set</p>
+<pre class="r"><code>poverty_data_cleaned &lt;- poverty_data %&gt;%
+                        separate(NAME, into = paste0(&#39;thing&#39;, 1:2), sep = &#39;[,]&#39;) %&gt;%
+                        mutate(thing1 = str_replace_all(thing1, &quot; County&quot;, &quot;&quot;)) %&gt;% # Remove the term County (with a space in front) 
+                        mutate(thing2 = str_squish(thing2)) %&gt;%
+                        select(-c(state, county)) %&gt;% # Get rid of these because we&#39;ll be using state and county names to merge
+                        rename(county = thing1, 
+                               state = thing2,
+                               poverty_percentage = DP03_0126PE) %&gt;%
+                        mutate(poverty_percentage = replace(poverty_percentage,
+                                                            which(poverty_percentage &lt;= 0),
+                                                            NA)) %&gt;%
+                        arrange(state, county)</code></pre>
+<p>Let’s take a look</p>
+<pre class="r"><code>poverty_data_cleaned %&gt;% 
+  head()</code></pre>
+<pre><code>##    county   state poverty_percentage
+## 1 Autauga Alabama               52.3
+## 2 Baldwin Alabama               35.0
+## 3 Barbour Alabama               60.6
+## 4    Bibb Alabama               50.6
+## 5  Blount Alabama               46.1
+## 6 Bullock Alabama               66.5</code></pre>
+<p>So now that we have the figures, we need data about the mapping.</p>
+<pre class="r"><code>county_data &lt;- map_data(&quot;county&quot;) %&gt;% 
+               rename(state = region, # rename because we&#39;ll use this to merge with the income_data_cleaned set
+                      county = subregion) %&gt;% # rename because we&#39;ll use this to merge with the income_data_cleaned set
+               mutate(state = str_to_title(state)) %&gt;% # make into a title case
+               mutate(county = str_to_title(county)) # make into a title case </code></pre>
+<p>Again, let’s take a look</p>
+<pre class="r"><code>county_data %&gt;% 
+  head()</code></pre>
+<pre><code>##        long      lat group order   state  county
+## 1 -86.50517 32.34920     1     1 Alabama Autauga
+## 2 -86.53382 32.35493     1     2 Alabama Autauga
+## 3 -86.54527 32.36639     1     3 Alabama Autauga
+## 4 -86.55673 32.37785     1     4 Alabama Autauga
+## 5 -86.57966 32.38357     1     5 Alabama Autauga
+## 6 -86.59111 32.37785     1     6 Alabama Autauga</code></pre>
+<p>Now we can merge them together using <code>joins</code></p>
+<pre class="r"><code>map_data &lt;- left_join(county_data, 
+                      poverty_data_cleaned, 
+                      by = c(&quot;state&quot;,&quot;county&quot;)) </code></pre>
+<pre class="r"><code>map_data %&gt;% 
+  head()</code></pre>
+<pre><code>##        long      lat group order   state  county poverty_percentage
+## 1 -86.50517 32.34920     1     1 Alabama Autauga               52.3
+## 2 -86.53382 32.35493     1     2 Alabama Autauga               52.3
+## 3 -86.54527 32.36639     1     3 Alabama Autauga               52.3
+## 4 -86.55673 32.37785     1     4 Alabama Autauga               52.3
+## 5 -86.57966 32.38357     1     5 Alabama Autauga               52.3
+## 6 -86.59111 32.37785     1     6 Alabama Autauga               52.3</code></pre>
+</div>
+<div id="mapping-using-estimated-curvatures" class="section level3">
+<h3>Mapping Using Estimated Curvatures</h3>
+<p>Let’s go ahead and map the data</p>
+<pre class="r"><code>estimate_map &lt;- 
+  ggplot() + 
+  geom_polygon(data = map_data, aes(x = long, 
+                                    y = lat, 
+                                    fill = poverty_percentage, 
+                                    group = group),
+               color = &quot;#f8f8fa&quot;, 
+               size = 0.20, 
+               show.legend = TRUE) +
+  geom_polygon(data=subset(map_data(&quot;state&quot;)), 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               size = 0.5,
+               color=&quot;white&quot;, 
+               fill = NA) +
+  scale_fill_gradient(name=&quot;Estimates&quot;, 
+                      low = &quot;#fa9fb5&quot;, 
+                      high = &quot;#7a0177&quot;,
+                      breaks = c(0, 25, 50, 75, 100),
+                      limits = c(0,100), 
+                      na.value = &quot;#c9d3d9&quot;,
+                      labels = c(str_wrap(&quot;0.00% - 24.99%&quot;, 10), 
+                                 str_wrap(&quot;25.00 - 49.99%&quot;, 10),
+                                 str_wrap(&quot;50.00% - 74.99%&quot;, 10),
+                                 str_wrap(&quot;75.00% - 99.99%&quot;, 10),
+                                 &quot;100%&quot;),
+                      guide = &quot;legend&quot;) +
+  theme(plot.title = element_text(size = 13,
+                                  color =&quot;#4682b4&quot;, 
+                                  vjust = -1,
+                                  hjust = 0.5,
+                                  face = &quot;bold&quot;),
+        plot.caption = element_text(size = 8,
+                                    color =&quot;#4682b4&quot;,
+                                    face = &quot;italic&quot;,
+                                    margin = margin(t = 1, 
+                                                    unit = &quot;cm&quot;)),
+        legend.position = &quot;bottom&quot;,
+        legend.direction = &quot;horizontal&quot;,
+        legend.key = element_rect(size = 5, 
+                                  color = NA),
+        legend.key.width = unit(2, 
+                               &quot;cm&quot;),
+        legend.key.height = unit(0.3, 
+                               &quot;cm&quot;),
+        legend.text = element_text(size = 8, 
+                                   color = &quot;#4682b4&quot;),
+        legend.title.align = 0.5,
+        legend.title = element_text(size = 10, 
+                                    color = &quot;#4682b4&quot;),
+        legend.background = element_rect(linetype = 0, 
+                                         size = 0.5, 
+                                         color = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  labs(title = str_to_title(str_wrap(&quot;2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years&quot;, 50)),
+       caption = &quot;Source: 2018 American Community Survey: 5-Year Estimates&quot;) +
+  guides(fill = guide_legend(title.position = &quot;top&quot;,
+                             label.position = &quot;bottom&quot;, 
+                             label.hjust = 0.5)) </code></pre>
+<pre class="r"><code>estimate_map</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-117-1.png" width="100%" /></p>
+<p>Well that’s the default map projection and its just terrible. You can fool around with the <em>representation</em>, or <em>projection</em> of the map using any number of coordinate systems via <code>coord_map()</code>. Below are just a few but a full list can be found on the <a href="https://rdrr.io/cran/mapproj/man/mapproject.html" target="_blank"><code>mapproj CRAN site</code></a>.</p>
+<details>
+<summary>
+Albers projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;albers&quot;, 
+            lat0 = 39, 
+            lat1 = 45)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-118-1.png" width="100%" />
+</details>
+<details>
+<summary>
+projection with an approximated aspect ratio
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_quickmap()</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-119-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Lambert azimuthal equal-area projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;azequalarea&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-120-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Bonne projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;bonne&quot;, 
+            lat0 = 50)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-121-1.png" width="100%" />
+</details>
+<details>
+<summary>
+cylindrical projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;cylindrical&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-122-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Gilbert projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;gilbert&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-123-1.png" width="100%" />
+</details>
+<details>
+<summary>
+LaGrange projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;lagrange&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-124-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Mercator projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;mercator&quot;)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-125-1.png" width="100%" />
+<em>Note: This is the default projection so you can just run</em></p>
+<pre class="r"><code>estimate_map + 
+  coord_map()</code></pre>
+<em>to get the same result.</em>
+</details>
+<details>
+<summary>
+orthographic projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;orthographic&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-127-1.png" width="100%" />
+</details>
+<details>
+<summary>
+stereographic projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;stereographic&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-128-1.png" width="100%" />
+</details>
+</div>
+<div id="saving" class="section level3">
+<h3>Saving</h3>
+<p>You can even save any of the plots as a pdf on standard A4 paper in landscape mode</p>
+<pre class="r"><code>poverty_estimates_albers &lt;- estimate_map + 
+                            coord_map(&quot;mercator&quot;)</code></pre>
+<pre class="r"><code>ggsave(&quot;poverty_estimates.pdf&quot;,
+       poverty_estimates_albers,
+       width = 297, 
+       height = 210, 
+       units = &quot;mm&quot;)</code></pre>
+<p>:::</p>
 </div>
 </div>
 </div>

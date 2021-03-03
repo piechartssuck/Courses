@@ -245,8 +245,15 @@ packages_list_walk %>%
 ```
 </center>
 
-## Save and declare your Census API
+## What's an API?
 
+API stands for *Application Programming Interface* which is essentially a fancy name for a program that acts as a middleman between two services with sets of instructions.
+
+![](/assignment/06-assignment_files/API.png)
+
+We'll be using the [U.S. Census API](https://www.census.gov/data/developers.html){target="_blank"}.
+
+## API Credentials
 There are a few things you need to do when grabbing Census data. 
 
 1. You must have a key from [https://api.census.gov/data/key_signup.html](https://api.census.gov/data/key_signup.html){target="_blank"} 
@@ -256,7 +263,7 @@ There are a few things you need to do when grabbing Census data.
 library(censusapi)
 ```
 
-3. Add key to the .Renviron (the place in the `censusapi` where your unique identifier, or key, is stored)
+3. Add key to the `.Renviron` (the place in the `censusapi` where your unique identifier, or key, is stored)
 ```{r eval=TRUE, echo=FALSE, purl=FALSE}
 Sys.setenv(CENSUS_KEY="1dea0fbe280aeab3e04993bee543979a4dc36790")
 ```
@@ -265,7 +272,7 @@ Sys.setenv(CENSUS_KEY="1dea0fbe280aeab3e04993bee543979a4dc36790")
 Sys.setenv(CENSUS_KEY="YOUR API KEY HERE")
 ```
 
-4. Reload the .Renviron
+4. Reload the `.Renviron`
 ```{r}
 readRenviron("~/.Renviron") # You may get a warning...ignore it
 ```
@@ -275,6 +282,116 @@ readRenviron("~/.Renviron") # You may get a warning...ignore it
 Sys.getenv("CENSUS_KEY")
 ```
 `## [1] "YOUR UNIQUE IDENTIFIER HERE"`
+
+## The Census API
+Let's a list of *all* data sets associated with the US Census through their API. 
+
+```{r}
+availableapis <- listCensusApis()
+```
+
+You can use the `datatable()` command from the `DT` package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.
+
+```{r eval=FALSE}
+datatable(availableapis)
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(availableapis) %>%
+        kable()
+```
+
+The Census APIs have over 550 different data repositories, each with numerous data sets within those.
+
+```{r}
+nrow(availableapis)
+```
+
+Trying to locate what you want can be difficult but there are ways to reduce the time needed. Say I wanted any data set where income is mentioned anywhere...
+
+```{r eval=FALSE}
+availableapis %>%
+  filter_all(any_vars(grepl("income", .))) %>%
+  datatable()
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(availableapis) %>%
+  filter_all(any_vars(grepl("income", .))) %>%
+        kable()
+```
+
+... or I could just narrow and search just the `description`
+
+```{r eval=FALSE}
+availableapis %>%
+  filter(str_detect(description, 'income')) %>%
+  datatable()
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(availableapis) %>%
+  filter(str_detect(description, 'income')) %>%
+        kable()
+```
+
+I could also arrange the set filtering the descriptions by geography and demographics. There are a lot of ways go about doing this. Here's one
+
+```{r eval=FALSE}
+availableapis %>%                                     
+  filter(str_detect(description, c('geo'))) %>% 
+  filter(str_detect(description, c('demo'))) %>%
+  drop_na(vintage) %>% 
+  arrange(-vintage) %>%  
+  datatable()
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(availableapis) %>%
+  filter(str_detect(description, c('geo'))) %>% 
+  filter(str_detect(description, c('demo'))) %>%
+  drop_na(vintage) %>% 
+  arrange(-vintage) %>%
+  kable()
+```
+
+which translates to
+
+refer to the data set we need `%>%`<br>we need geographic data but the description could also say geography, geographical, etc so we search by the term stem `%>%`<br>same idea as above for demographical information `%>%`<br>drop the rows that have `NA` for years `%>%`<br>arrange the years from most recent going backwards `%>%`<br>show this in a `datatable()` format
+
+Assume I want to look at the 2018 American Community Survey: 5-Year Estimates which is described as *an ongoing survey that provides data every year -- giving communities the current information they need to plan investments and services. The ACS covers a broad range of topics about social, economic, demographic, and housing characteristics of the U.S. population. The Comparison Profiles include the following geographies: nation, all states (including DC and Puerto Rico), all metropolitan areas, all congressional districts, all counties, all places and all tracts. Comparison Profiles contain broad social, economic, housing, and demographic information. The data are presented as both counts and percentages.* 
+
+There are over 2,400 variables in this dataset! You can find out more from the [Census ACS API page](https://api.census.gov/data/2018/acs/acs5/profile.html){target="_blank"}.
+
+## Selecting The Proper Census Data Sets
+We need to check for geographic data in the ACS because not everything in the Census API has geographical information
+
+```{r}
+listCensusMetadata(name = "acs/acs5/profile", 
+                   vintage = 2018,
+                   type = "geography") %>%
+  as_tibble() %>%
+  unnest(cols = c()) 
+```
+
+Good! This API has a lot of geographies including: us, region, division, state, county, etc. 
+
+```{r}
+vars <- listCensusMetadata(name = "acs/acs5/profile",
+                           vintage = 2018, 
+                           type = "variables") 
+```
+
+```{r eval=FALSE}
+vars %>%
+  as_tibble() %>%
+    datatable()
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(vars) %>%
+  kable()
+```
 
 ## PART I: The Map  
 
@@ -470,7 +587,6 @@ ggplot() +
         panel.border = element_blank(),
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank()) +
-# guides(color=FALSE) +
   coord_fixed(1.3)
 ```
 
@@ -948,8 +1064,6 @@ mon <- get_acs(state = "WV",
                geometry = TRUE)
 ```
 
-You can use the `datatable()` command from the `DT` package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.
-
 ```{r eval=FALSE}
 datatable(mon)
 ```
@@ -1040,3 +1154,285 @@ mon_race %>%
   theme_map() 
 ```
 
+## Example: Alternate Projections
+
+We can use different *representations*, or *projections* of maps. To explore this, let's take a look at the available variables. Hopefully one is interesting
+
+```{r}
+vars <- listCensusMetadata(name = "acs/acs5/profile",
+                           vintage = 2018, 
+                           type = "variables") 
+```
+
+```{r eval=FALSE}
+vars %>%
+  as_tibble() %>%
+    filter(str_detect(label, "relate"))
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(vars) %>%
+  filter(str_detect(label, "relate")) %>%
+  kable()
+```
+
+From that let's use the variable `DP03_0126PE`, that is a *2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years*.
+
+### Getting Census State and County Level Data 
+
+We need to first grab the data set
+
+```{r}
+poverty_data <- getCensus(name = "acs/acs5/profile", # same as above
+                          vintage = 2018,
+                          vars = c("NAME", "DP03_0126PE"), # column/variable name
+                          key = Sys.getenv("CENSUS_KEY"), # using the census key from before
+                          region = "county:*",# any county
+                          regionin = "state:*") # any state
+```
+
+### Wrangling
+
+A majority of your time is spent actually wrangling data. This often includes cleaning and restructuring it into a form you can us. For this example, we'll do just that
+
+First we'll clean the data set
+
+```{r}
+poverty_data_cleaned <- poverty_data %>%
+                        separate(NAME, into = paste0('thing', 1:2), sep = '[,]') %>%
+                        mutate(thing1 = str_replace_all(thing1, " County", "")) %>% # Remove the term County (with a space in front) 
+                        mutate(thing2 = str_squish(thing2)) %>%
+                        select(-c(state, county)) %>% # Get rid of these because we'll be using state and county names to merge
+                        rename(county = thing1, 
+                               state = thing2,
+                               poverty_percentage = DP03_0126PE) %>%
+                        mutate(poverty_percentage = replace(poverty_percentage,
+                                                            which(poverty_percentage <= 0),
+                                                            NA)) %>%
+                        arrange(state, county)
+```
+
+Let's take a look
+
+```{r}
+poverty_data_cleaned %>% 
+  head()
+```
+
+So now that we have the figures, we need data about the mapping.
+
+```{r}
+county_data <- map_data("county") %>% 
+               rename(state = region, # rename because we'll use this to merge with the income_data_cleaned set
+                      county = subregion) %>% # rename because we'll use this to merge with the income_data_cleaned set
+               mutate(state = str_to_title(state)) %>% # make into a title case
+               mutate(county = str_to_title(county)) # make into a title case 
+```
+
+Again, let's take a look
+
+```{r}
+county_data %>% 
+  head()
+```
+
+Now we can merge them together using `joins`
+
+```{r}
+map_data <- left_join(county_data, 
+                      poverty_data_cleaned, 
+                      by = c("state","county")) 
+```
+
+```{r}
+map_data %>% 
+  head()
+```
+
+### Mapping Using Estimated Curvatures
+
+Let's go ahead and map the data
+
+```{r}
+estimate_map <- 
+  ggplot() + 
+  geom_polygon(data = map_data, aes(x = long, 
+                                    y = lat, 
+                                    fill = poverty_percentage, 
+                                    group = group),
+               color = "#f8f8fa", 
+               size = 0.20, 
+               show.legend = TRUE) +
+  geom_polygon(data=subset(map_data("state")), 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               size = 0.5,
+               color="white", 
+               fill = NA) +
+  scale_fill_gradient(name="Estimates", 
+                      low = "#fa9fb5", 
+                      high = "#7a0177",
+                      breaks = c(0, 25, 50, 75, 100),
+                      limits = c(0,100), 
+                      na.value = "#c9d3d9",
+                      labels = c(str_wrap("0.00% - 24.99%", 10), 
+                                 str_wrap("25.00 - 49.99%", 10),
+                                 str_wrap("50.00% - 74.99%", 10),
+                                 str_wrap("75.00% - 99.99%", 10),
+                                 "100%"),
+                      guide = "legend") +
+  theme(plot.title = element_text(size = 13,
+                                  color ="#4682b4", 
+                                  vjust = -1,
+                                  hjust = 0.5,
+                                  face = "bold"),
+        plot.caption = element_text(size = 8,
+                                    color ="#4682b4",
+                                    face = "italic",
+                                    margin = margin(t = 1, 
+                                                    unit = "cm")),
+        legend.position = "bottom",
+        legend.direction = "horizontal",
+        legend.key = element_rect(size = 5, 
+                                  color = NA),
+        legend.key.width = unit(2, 
+                               "cm"),
+        legend.key.height = unit(0.3, 
+                               "cm"),
+        legend.text = element_text(size = 8, 
+                                   color = "#4682b4"),
+        legend.title.align = 0.5,
+        legend.title = element_text(size = 10, 
+                                    color = "#4682b4"),
+        legend.background = element_rect(linetype = 0, 
+                                         size = 0.5, 
+                                         color = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  labs(title = str_to_title(str_wrap("2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years", 50)),
+       caption = "Source: 2018 American Community Survey: 5-Year Estimates") +
+  guides(fill = guide_legend(title.position = "top",
+                             label.position = "bottom", 
+                             label.hjust = 0.5)) 
+```   
+
+```{r out.width='100%'}
+estimate_map
+```
+
+Well that's the default map projection and its just terrible. You can fool around with the *representation*, or *projection* of the map using any number of coordinate systems via `coord_map()`. Below are just a few but a full list can be found on the [`mapproj CRAN site`](https://rdrr.io/cran/mapproj/man/mapproject.html){target="_blank"}.
+
+<details>
+  <summary>Albers projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("albers", 
+            lat0 = 39, 
+            lat1 = 45)
+```
+</details>
+
+<details>
+  <summary>projection with an approximated aspect ratio</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_quickmap()
+```
+</details>
+
+<details>
+  <summary>Lambert azimuthal equal-area projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("azequalarea")
+```
+</details>
+
+<details>
+  <summary>Bonne projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("bonne", 
+            lat0 = 50)
+```
+</details>
+
+<details>
+  <summary>cylindrical projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("cylindrical")
+```
+</details>
+
+<details>
+  <summary>Gilbert projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("gilbert")
+```
+</details>
+
+<details>
+  <summary>LaGrange projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("lagrange")
+```
+</details>
+
+<details>
+  <summary>Mercator projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("mercator")
+```
+*Note: This is the default projection so you can just run* 
+```{r eval=FALSE}
+estimate_map + 
+  coord_map()
+```
+*to get the same result.*
+</details>
+
+
+<details>
+  <summary>orthographic projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("orthographic")
+```
+</details>
+
+<details>
+  <summary>stereographic projection</summary>
+```{r out.width='100%'}
+estimate_map + 
+  coord_map("stereographic")
+```
+</details>
+
+### Saving
+You can even save any of the plots as a pdf on standard A4 paper in landscape mode
+
+```{r eval=FALSE}
+poverty_estimates_albers <- estimate_map + 
+                            coord_map("mercator")
+```
+
+```{r eval=FALSE}
+ggsave("poverty_estimates.pdf",
+       poverty_estimates_albers,
+       width = 297, 
+       height = 210, 
+       units = "mm")
+```
+
+:::
