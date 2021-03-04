@@ -36,7 +36,7 @@ This is a deeper exploration of mapping with a purpose. In this case, we are goi
 
 Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
 
-[Week 7 materials](/data/Week7materials.zip)
+[Week 7 materials](/example/07-example_files/Week7materials.zip)
 
 ##  Set your Working Directory
 
@@ -52,9 +52,9 @@ Your *working directory* is simply where your script will look for anything it n
 Go ahead and load these or install and then load them.
 ```{r message=FALSE}
 library(tidyverse)
-library(patchwork) # Used to plot things in a grid
-library(RColorBrewer) # A coloring package with multiple palettes
-library(scales) # Used to manipulate applications of colors
+library(patchwork) 
+library(RColorBrewer) 
+library(scales)
 library(ggpubr)
 ```
 
@@ -129,11 +129,13 @@ We'll be using the file `election2016.Rdata`. To load it up, run the following
 load(election2016.RData)
 ```
 
-```{r echo=FALSE, eval=TRUE}
+```{r echo=FALSE, eval=TRUE, purl=TRUE}
 election2016_rdata <- here("static", "data", "election2016.RData")
 
 load(election2016_rdata)
 ```
+
+If that does not work, go to the actual data set, right click and open it with RStudio.
 
 Again if you have familiarity with the structure of your directory, then use the appropriate path. Notice that you don't have to say something like `variable <- load("/data/election2016.RData")` because you aren't just loading up a data set!
 
