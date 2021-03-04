@@ -142,7 +142,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Read the Submission Directions
 Please submit a PDF out using an Rmarkdown file for this task^[If you use an external file for your data, please submit that as well.]. <br><br> You may use the data set provided in this week's walkthrough or any other valid set *with citations* to address the following criteria regarding **both the 2016 and 2020 general elections**.<br><br>For each election year, do the following:
 
-1. The differences between the popular and electoral college votes by census tract, county, and state. For each, show both the flat standard representation and where votes counts and/or percentages are displayed by size. For a example of a state level representation of this, please look [here](http://www-personal.umich.edu/~mejn/election/2016/){target="_blank"}.
+1. The differences between the popular and electoral college votes by *census tract*, *county*, and *state*. For each, show both the flat standard representation and where votes counts and/or percentages are displayed by size. For a example of a state level representation of this, please look [here](http://www-personal.umich.edu/~mejn/election/2016/){target="_blank"}.
 
 2. How differing demographical subgroups voted. You should include at minimum *age*, *race* and *sex*^[Please use the applicable [U.S Census standard](https://www.census.gov/topics/population.html){target="_blank"} for these demographics.] and *at least three others of your choice*^[Need not be a criteria reported in the U.S. Census].
 
