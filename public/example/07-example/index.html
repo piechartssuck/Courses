@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction Preliminary Items  First Things First! Download the script and data set Set your Working Directory Loading libraries Loading files Left field reminder to save your API key  Walkthrough  Notes Getting Ready Part I: Lollipops  Side Quest  Part II: Choropleths Part III: Choropleths with Blocks  The RColorBrewer package Statebins  Part IV: Augmenting Maps    Introduction This is a deeper exploration of mapping with a purpose.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/07-example/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://edp693e.theoreticalphysed.com/example/07-example/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/07-example/">
+  <meta property="og:title" content="Mapping the Past | Data Visualization">
+  <meta property="og:description" content="Introduction Preliminary Items  First Things First! Download the script and data set Set your Working Directory Loading libraries Loading files Left field reminder to save your API key  Walkthrough  Notes Getting Ready Part I: Lollipops  Side Quest  Part II: Choropleths Part III: Choropleths with Blocks  The RColorBrewer package Statebins  Part IV: Augmenting Maps    Introduction This is a deeper exploration of mapping with a purpose."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
+
+<script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
+<link rel="shortcut icon" href="https://edp693e.theoreticalphysed.com/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp693e.theoreticalphysed.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp693e.theoreticalphysed.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp693e.theoreticalphysed.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp693e.theoreticalphysed.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp693e.theoreticalphysed.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp693e.theoreticalphysed.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp693e.theoreticalphysed.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp693e.theoreticalphysed.com/img/android-icon-192x192.png" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="96x96" />
+<meta name="application-name" content="EDP 693e: Data Visualization" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
+
+
+  <title>Mapping the Past | Data Visualization</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/readings/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/due/"><span>Due?</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/professor/"><span>Professor</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/">About the Examples</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/01-example/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/01-example/">Week 1: Friends Don&#39;t Let Friends Use Pie Charts</a>
+      </li>
+      
+      <li >
+        <a href="/example/02-example/">Week 2: Base R is a Thing</a>
+      </li>
+      
+      <li >
+        <a href="/example/03-example/">Week 3: ggplotting</a>
+      </li>
+      
+      <li >
+        <a href="/example/04-example/">Week 4: Tidy Themes</a>
+      </li>
+      
+      <li >
+        <a href="/example/05-example/">Week 5: Making Copies</a>
+      </li>
+      
+      <li >
+        <a href="/example/06-example/">Week 6: I&#39;m the Map</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/07-example/">Week 7: Mapping the Past</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Mapping the Past</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#preliminary-items">Preliminary Items</a>
+<ul>
+<li><a href="#first-things-first-download-the-script-and-data-set">First Things First! Download the script and data set</a></li>
+<li><a href="#set-your-working-directory">Set your Working Directory</a></li>
+<li><a href="#loading-libraries">Loading libraries</a></li>
+<li><a href="#loading-files">Loading files</a></li>
+<li><a href="#left-field-reminder-to-save-your-api-key">Left field reminder to save your API key</a></li>
+</ul></li>
+<li><a href="#walkthrough">Walkthrough</a>
+<ul>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#getting-ready">Getting Ready</a></li>
+<li><a href="#part-i-lollipops">Part I: Lollipops</a>
+<ul>
+<li><a href="#side-quest">Side Quest</a></li>
+</ul></li>
+<li><a href="#part-ii-choropleths">Part II: Choropleths</a></li>
+<li><a href="#part-iii-choropleths-with-blocks">Part III: Choropleths with Blocks</a>
+<ul>
+<li><a href="#the-rcolorbrewer-package">The RColorBrewer package</a></li>
+<li><a href="#statebins">Statebins</a></li>
+</ul></li>
+<li><a href="#part-iv-augmenting-maps">Part IV: Augmenting Maps</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is a deeper exploration of mapping with a purpose. In this case, we are going to map the results of the 2016 Presidential Election. For a look at the maps we are going to do, take a look at this <a href="http://www.washingtonpost.com/wp-srv/special/business/states-most-threatened-by-trade/" target="_blank">Washington Post article</a>.</p>
+</div>
+<div id="preliminary-items" class="section level1">
+<h1>Preliminary Items</h1>
+<div id="first-things-first-download-the-script-and-data-set" class="section level2">
+<h2>First Things First! Download the script and data set</h2>
+<p>Please download a all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
+</div>
+<div id="set-your-working-directory" class="section level2">
+<h2>Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up the included script by going to <code>File &gt; Open File</code> or double click the file itself if RStudio is your default program for opening <code>.R</code> files.</li>
+<li>To set your working directory:</li>
+</ol>
+<ul>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code> OR</li>
+<li>run <code>setwd(dirname(rstudioapi::getActiveDocumentContext()$path))</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+</ul>
+</div>
+<div id="loading-libraries" class="section level2">
+<h2>Loading libraries</h2>
+<p>Go ahead and load these or install and then load them.</p>
+<pre class="r"><code>library(tidyverse)
+library(patchwork) # Used to plot things in a grid
+library(RColorBrewer) # A coloring package with multiple palettes
+library(scales) # Used to manipulate applications of colors
+library(ggpubr)</code></pre>
+<p>We should first take a look at the new ones being used here</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nope
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.datacamp.com/community/tutorials/tidyverse-tutorial-r" target="_blank">Tutorial</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>patchwork</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Allows for the differing layouts of completed visualizations
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/thomasp85/patchwork" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://patchwork.data-imaginist.com/" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>RColorBrewer</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Predefined palette originally based on map drawings
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/cran/RColorBrewer" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3" target="_blank">Interactive</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>scales</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Provides greater functionality to manipulate scales within plots
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/r-lib/scales" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://scales.r-lib.org/" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>ggpubr</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Gives predefined settings for publication quality plots
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/kassambara/ggpubr" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://rpkgs.datanovia.com/ggpubr/" target="_blank">Vignette</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="loading-files" class="section level2">
+<h2>Loading files</h2>
+<p>We’ll be using a R data file which for historical reasons either ends with <code>.rdata</code> or <code>.rda</code>. The nice aspect of using this format in lieu of a regular data set is that objects and full global environments can be saved. Generally this ensures that you or someone else is able to pick up in a screen exactly as it was before with all of the packages, variables, etc. ready to go. Think of it as a snapshot of exactly what an RStudio session looked like when it was saved as the data file.</p>
+<p>To avoid any conflicts, let’s empty and refresh your <code>Global Environment</code> which you can access by clicking the <code>Environment</code> tab in the top window on the right. Now if there is something in there you absolutely need and cannot get back, then skip this step. If not, please clean it out using</p>
+<pre class="r"><code>rm(list = ls())</code></pre>
+<p>We’ll be using the file <code>election2016.Rdata</code>. To load it up, run the following</p>
+<pre class="r"><code>load(election2016.RData)</code></pre>
+<p>Again if you have familiarity with the structure of your directory, then use the appropriate path. Notice that you don’t have to say something like <code>variable &lt;- load("/data/election2016.RData")</code> because you aren’t just loading up a data set!</p>
+</div>
+<div id="left-field-reminder-to-save-your-api-key" class="section level2">
+<h2>Left field reminder to save your API key</h2>
+<p>We will not be using the Census API this time around but please save your key for future data pulls. You’ll likely receive a prompt to save it using</p>
+<pre class="r"><code># Input your Census key
+census_api_key(&quot;YOUR CENSUS API KEY&quot;, install = TRUE)
+
+# Reload the .Renviron marker
+readRenviron(&quot;~/.Renviron&quot;)</code></pre>
+</div>
+</div>
+<div id="walkthrough" class="section level1">
+<h1>Walkthrough</h1>
+<div id="notes" class="section level3">
+<h3>Notes</h3>
+<ol style="list-style-type: decimal">
+<li><p>The very first thing to mention here is that the states of Maine and Nebraska split electoral college votes. In 2016, Trump took all 5 of Nebraska’s votes while Maine was split with 3 for Clinton and 1 for Trump. As of result, the difference is used in the data set.</p></li>
+<li><p>The columns that are used within the data set were pulled from the <a href="https://api.open.fec.gov/developers/" target="_blank">Federal Election Commission (FEC) API</a>. Generally if you know how to use one API, most others follow the same structure so the FEC API is fair game for those of you who got somewhat comfortable with the Census API. For an ever growing list of available US government APIs, <a href="https://catalog.data.gov/dataset?q=-aapi+api+OR++res_format%3Aapi#topic=developers_navigation" target="_blank">data.gov</a> is a great place to go to.</p></li>
+</ol>
+</div>
+<div id="getting-ready" class="section level2">
+<h2>Getting Ready</h2>
+<p>First take a look at the variables within the data set itself</p>
+<pre class="r"><code>names(election2016)</code></pre>
+<pre><code>##  [1] &quot;state&quot;        &quot;votes&quot;        &quot;st&quot;           &quot;fips&quot;         &quot;total_vote&quot;  
+##  [6] &quot;vote_margin&quot;  &quot;winner&quot;       &quot;party&quot;        &quot;pct_margin&quot;   &quot;r_points&quot;    
+## [11] &quot;d_points&quot;     &quot;pct_clinton&quot;  &quot;pct_trump&quot;    &quot;pct_johnson&quot;  &quot;pct_other&quot;   
+## [16] &quot;clinton_vote&quot; &quot;trump_vote&quot;   &quot;johnson_vote&quot; &quot;other_vote&quot;   &quot;ev_dem&quot;      
+## [21] &quot;ev_rep&quot;       &quot;ev_oth&quot;       &quot;census&quot;       &quot;region&quot;</code></pre>
+<p>or view the entire set in a spreadsheet like form</p>
+<pre class="r"><code>View(election2016) </code></pre>
+<p>Since we’re looking at the general election, let’s go ahead and define the two major parties with colors</p>
+<pre class="r"><code>partyColors &lt;- c(&quot;#2E74C0&quot;, &quot;#CB454A&quot;) </code></pre>
+<pre class="r"><code>scales::show_col(partyColors)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-12-1.png" width="90%" /></p>
+</div>
+<div id="part-i-lollipops" class="section level2">
+<h2>Part I: Lollipops</h2>
+<p>A <em>lollipop plot</em>, or <em>Cleveland dot</em>, is essentially a barplot’s cousin where the bar is transformed in a line and a dot at the top. Let’s draw one using the data.</p>
+<p>Notice the <code>!</code> here. It means <em>not</em> and in this R reads it like</p>
+<ol style="list-style-type: decimal">
+<li>look at all values in the election2016 data set and then</li>
+<li>do not include the data point DC from the <code>st</code>, or state column</li>
+</ol>
+<pre class="r"><code>ggplot(data = subset(election2016, !st %in% &quot;DC&quot;), 
+       mapping = aes(x = r_points,
+                     xend=r_points,
+                     y = reorder(state, r_points),
+                     color = party)) +
+  geom_vline(xintercept = 0, color = &quot;gray30&quot;) +
+  geom_point(size = 3) +
+  scale_color_manual(values = partyColors)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-13-1.png" width="90%" /></p>
+<p>That’s not bad but it is pretty bland so let’s make it nicer</p>
+<pre class="r"><code>ggplot(data = subset(election2016, !st %in% &quot;DC&quot;), 
+       mapping = aes(x = r_points,
+                     xend=r_points,
+                     y = reorder(state, r_points),
+                     color = party)) + 
+  geom_vline(xintercept = 0, color = &quot;gray30&quot;) +
+  geom_segment(aes(x = 0, y = state, xend = r_points, 
+                   yend = state), color = &quot;grey70&quot;) +
+  geom_point(shape = 21, size = 3, fill=&quot;white&quot;, stroke = 1) + 
+  scale_color_manual(values = partyColors) +
+  scale_x_continuous(labels = function(x) paste0(abs(x), &quot;%&quot;), limits = c(-35, 50)) +
+  theme_minimal() +
+  theme(
+    legend.position = &quot;none&quot;,
+    panel.border = element_blank(),
+    axis.ticks = element_blank()
+  ) +
+  xlab(NULL) +
+  ylab(&quot;State&quot;)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-14-1.png" width="90%" /></p>
+<p>Oh no what happened? The states are in reverse alphabetical order. Think about how you can fix it to display the data in a better way, try it out and then see a solution using the dropdown below.</p>
+<details>
+<summary>
+Better representation
+</summary>
+<pre class="r"><code>ggplot(data = subset(election2016, !st %in% &quot;DC&quot;),  
+       mapping = aes(x = r_points,  
+                     xend=r_points,  
+                     y = reorder(state, r_points),  
+                     color = party)) +  
+  geom_vline(xintercept = 0, color = &quot;gray30&quot;) +  
+  geom_segment(aes(x = 0, y = reorder(state, r_points), xend = r_points, 
+                   yend = reorder(state, r_points)), color = &quot;grey70&quot;) +  
+  # Here is the fix but what do you think happened?  
+  geom_point(shape = 21, size = 3, fill=&quot;white&quot;, stroke = 1) +  
+  scale_color_manual(values = partyColors) +  
+  scale_x_continuous(labels = function(x) paste0(abs(x), &quot;%&quot;), limits = c(-35, 50)) +  
+  theme_minimal() +  
+  theme(  
+    legend.position = &quot;none&quot;,  
+    panel.border = element_blank()  
+  ) +  
+  xlab(&quot;Party Affiliation&quot;) +  
+  ylab(&quot;State&quot;)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-15-1.png" width="100%" /></p>
+If you thought that reordering the column <code>state</code> by <code>r_points</code>, then you were correct and win eleventy billion points.
+</details>
+<div id="side-quest" class="section level3">
+<h3>Side Quest</h3>
+<p>We can make this plot prettier. First load (or install and load) the following library.</p>
+<pre class="r"><code>library(ggthemes)</code></pre>
+<p>For more information about themes, please see the <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/" target="_blank">ggthemes vignette</a>. Anyway, if you are aware of the data analyst and all around predictive guru Nate Silver who uses analytic and data visualizations for multiple reasons, then the website <a href="https://fivethirtyeight.com/" target="_blank">FiveThirtyEight</a> - may be something familiar. We’ll redraw the plot above using a theme commonly found on the FiveThirtyEight website using the options <code>scale_color_fivethirtyeight()</code> and <code>theme_fivethirtyeight()</code>.</p>
+<pre class="r"><code>ggplot(data = subset(election2016, !st %in% &quot;DC&quot;),
+       mapping = aes(x = r_points,
+                     xend = r_points,
+                     y = reorder(state, r_points),
+                     color = party)) + 
+  geom_vline(xintercept = 0, color = &quot;gray30&quot;) +
+  geom_segment(aes(x = 0, y = reorder(state, r_points), xend = r_points, 
+                   yend = reorder(state, r_points)), color = &quot;#5e3c58&quot;) +
+  geom_point(shape = 21, size = 3, fill=&quot;white&quot;, stroke = 1) + 
+  scale_x_continuous(labels = function(x) paste0(abs(x), &quot;%&quot;), 
+                     expand = c(0, 0), limits = c(-35, 50)) +
+  theme(
+    legend.position = &quot;none&quot;,
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  xlab(&quot;Party Affiliation&quot;) +
+  ylab(&quot;State&quot;) + 
+  scale_color_fivethirtyeight() +
+  theme_fivethirtyeight() </code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-17-1.png" width="100%" /></p>
+</div>
+</div>
+<div id="part-ii-choropleths" class="section level2">
+<h2>Part II: Choropleths</h2>
+<p>In a nutshell, choropleth comes from the Greek choros (area) and pleth (value). They distribute colors the map regions based on a measure. This is then used for comparisons using the relative value associated with each color of one region to another.</p>
+<p>With that in mind, let’s get some map data…</p>
+<pre class="r"><code>library(maps)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;maps&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     map</code></pre>
+<p>…for all of the states…</p>
+<pre class="r"><code>state &lt;- map_data(&quot;state&quot;)</code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(state)</code></pre>
+<pre><code>##        long      lat group order  region subregion
+## 1 -87.46201 30.38968     1     1 alabama      &lt;NA&gt;
+## 2 -87.48493 30.37249     1     2 alabama      &lt;NA&gt;
+## 3 -87.52503 30.37249     1     3 alabama      &lt;NA&gt;
+## 4 -87.53076 30.33239     1     4 alabama      &lt;NA&gt;
+## 5 -87.57087 30.32665     1     5 alabama      &lt;NA&gt;
+## 6 -87.58806 30.32665     1     6 alabama      &lt;NA&gt;</code></pre>
+<p>That looks pretty big! We can check the dimensions by</p>
+<pre class="r"><code>dim(state)</code></pre>
+<pre><code>## [1] 15537     6</code></pre>
+<p>This time we’re going to plot map data using a different set of commands…well sort of in the fact that were not flattening the plot, rather it’s being viewed as if on a globe.</p>
+<pre class="r"><code>ggplot(data = state,
+            aes(x = long, y = lat,
+                group = group, fill = region)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
+  guides(fill = FALSE)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>You probably noticed that the coordinates for latitude and longitude started where we defined them but you may not know about <code>albers</code>. I won’t get into the history but <code>albers</code> refers to the Albers projection which is the industry standard for how maps are constructed. Play around with some of the others some of which were noted in <a href="/assignment/06-assignment/#mapping-using-estimated-curvatures" target="_blank">last week’s assignments page</a>.</p>
+<p>Anyway, we need to get our own data on to the map. First let’s lower the case of the column name</p>
+<pre class="r"><code>election2016$region &lt;- tolower(election2016$state) # </code></pre>
+<p>In this case we want the state level data to be primary source since election2016 data is dependent on states.</p>
+<pre class="r"><code>state_elec &lt;- left_join(state, election2016) </code></pre>
+<pre><code>## Joining, by = &quot;region&quot;</code></pre>
+<p>Take a look at the result</p>
+<pre class="r"><code>head(state_elec)</code></pre>
+<pre><code>##        long      lat group order  region subregion   state votes st fips
+## 1 -87.46201 30.38968     1     1 alabama      &lt;NA&gt; Alabama     9 AL    1
+## 2 -87.48493 30.37249     1     2 alabama      &lt;NA&gt; Alabama     9 AL    1
+## 3 -87.52503 30.37249     1     3 alabama      &lt;NA&gt; Alabama     9 AL    1
+## 4 -87.53076 30.33239     1     4 alabama      &lt;NA&gt; Alabama     9 AL    1
+## 5 -87.57087 30.32665     1     5 alabama      &lt;NA&gt; Alabama     9 AL    1
+## 6 -87.58806 30.32665     1     6 alabama      &lt;NA&gt; Alabama     9 AL    1
+##   total_vote vote_margin winner      party pct_margin r_points d_points
+## 1    2123372      588708  Trump Republican      27.73    27.72   -27.72
+## 2    2123372      588708  Trump Republican      27.73    27.72   -27.72
+## 3    2123372      588708  Trump Republican      27.73    27.72   -27.72
+## 4    2123372      588708  Trump Republican      27.73    27.72   -27.72
+## 5    2123372      588708  Trump Republican      27.73    27.72   -27.72
+## 6    2123372      588708  Trump Republican      27.73    27.72   -27.72
+##   pct_clinton pct_trump pct_johnson pct_other clinton_vote trump_vote
+## 1       34.36     62.08        2.09      1.46       729547    1318255
+## 2       34.36     62.08        2.09      1.46       729547    1318255
+## 3       34.36     62.08        2.09      1.46       729547    1318255
+## 4       34.36     62.08        2.09      1.46       729547    1318255
+## 5       34.36     62.08        2.09      1.46       729547    1318255
+## 6       34.36     62.08        2.09      1.46       729547    1318255
+##   johnson_vote other_vote ev_dem ev_rep ev_oth census
+## 1        44467      31103      9      0      0  South
+## 2        44467      31103      9      0      0  South
+## 3        44467      31103      9      0      0  South
+## 4        44467      31103      9      0      0  South
+## 5        44467      31103      9      0      0  South
+## 6        44467      31103      9      0      0  South</code></pre>
+<p>Here’s a basic test plot.</p>
+<pre class="r"><code>ggplot(data = state_elec,
+            aes(x = long, y = lat,
+                group = group, fill = party)) +
+      geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+      coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) </code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Let’s try it with the colors we assigned for each party.</p>
+<pre class="r"><code>ggplot(data = state_elec,
+             mapping = aes(x = long, y = lat,
+                           group = group, fill = party)) +
+        geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+        coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
+        scale_fill_manual(values = partyColors) +
+        labs(title = &quot;2016 Presidential Election Results&quot;, fill = NULL) +
+        theme_map() </code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>r better yet, why don’t we go crazy and use the five thirty eight theme!</p>
+<pre class="r"><code>ggplot(data = state_elec,
+       mapping = aes(x = long, y = lat,
+                     group = group, fill = party)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
+  scale_fill_manual(values = partyColors) +
+  labs(title = &quot;2016 Presidential Election Results&quot;, fill = NULL) +
+  theme_map()+
+  theme_fivethirtyeight() </code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Now that you’ve recovered from that, there are many avenues we could explore using this data set. Here we’ll look at the individual candidates and their winnings by the popular vote.</p>
+<p>Let’s look for Trump’s winnings…</p>
+<pre class="r"><code>tr1 &lt;- ggplot(data = state_elec,
+    mapping = aes(x = long, y = lat, group = group, fill = pct_trump)) +
+    geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+    coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
+    theme_map() + 
+    theme_fivethirtyeight() +
+    scale_fill_gradient(low = &quot;white&quot;, high = &quot;#CB454A&quot;) +
+    labs(title = &quot;Trump vote&quot;) + 
+    guides(fill = FALSE)</code></pre>
+<p>…and then for Clinton’s</p>
+<pre class="r"><code>cl1 &lt;- ggplot(data = state_elec,
+             mapping = aes(x = long, y = lat, group = group, fill = pct_clinton)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  theme_map() + 
+  theme_fivethirtyeight() +
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;#2E74C0&quot;) +
+  labs(title = &quot;Clinton vote&quot;) +
+  guides(fill = FALSE) </code></pre>
+<p>And finally we’ll plot them both</p>
+<pre class="r"><code>tr1 + cl1</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>That looks pretty clean but something is off or maybe because I’m partially colorblind.The dense color distribution on the Trump map makes it appear that he won everywhere nearly everywhere and since we are looking at population data, Clinton won</p>
+<pre class="r"><code>nrow(filter(election2016, winner == &quot;Clinton&quot;))  </code></pre>
+<p>states. We found this by counting the number of rows after filtering the <code>election2016</code> data set where the winner was Clinton. Now let’s try to take a look at the legends to get an idea of what may be going wrong. Again here are Trump’s winnings</p>
+<pre class="r"><code>tr2 &lt;- ggplot(data = state_elec,
+             mapping = aes(x = long, y = lat, group = group, fill = pct_trump)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  theme_map() + 
+  theme_fivethirtyeight() +
+   theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +
+  labs(title = &quot;Trump vote&quot;, fill = &quot;Percent&quot;) + 
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;#CB454A&quot;)</code></pre>
+<p>and Clinton’s winnings</p>
+<pre class="r"><code># Clinton&#39;s winnings
+cl2 &lt;- ggplot(data = state_elec,
+             mapping = aes(x = long, y = lat, group = group, fill = pct_clinton)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  theme_map() + 
+  theme_fivethirtyeight() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +
+  labs(title = &quot;Clinton vote&quot;, fill = &quot;Percent&quot;) + 
+  scale_fill_gradient(low = &quot;#FFFFFF&quot;, high = &quot;#2E74C0&quot;)</code></pre>
+<p>And together</p>
+<pre class="r"><code>tr2 + cl2</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Ah the percents differ! The range indicated within Trump’s map is shorter than Clinton’s yielding the false representation. To compare them, they should be the same. To do this, we first check out the minimum and maximum values for each former candidate.</p>
+<pre class="r"><code>trrange &lt;- range(election2016$pct_trump, na.rm = TRUE) # Check the range of Trump&#39;s percentages</code></pre>
+<pre class="r"><code>clrange &lt;- range(election2016$pct_clinton, na.rm = TRUE) # Check the range of Clinton&#39;s percentages</code></pre>
+<pre class="r"><code>range(trrange, clrange) # Check the range of both</code></pre>
+<pre><code>## [1]  4.09 90.86</code></pre>
+<p>Well it looks like the standard 0-100% will probably work the best here.</p>
+<pre class="r"><code>tr3 &lt;- ggplot(data = state_elec,
+              mapping = aes(x = long, y = lat, group = group, fill = pct_trump)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  theme_map() + 
+  theme_fivethirtyeight() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +
+  labs(title = &quot;Trump vote&quot;, fill = &quot;Percent&quot;) + 
+  scale_fill_gradient(limits=c(0, 100), low = &quot;#FFFFFF&quot;, high = &quot;#CB454A&quot;)</code></pre>
+<pre class="r"><code>cl3 &lt;- ggplot(data = state_elec,
+                mapping = aes(x = long, y = lat, group = group, fill = pct_clinton)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  theme_map() + 
+  theme_fivethirtyeight() +
+   theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +
+  labs(title = &quot;Clinton vote&quot;, fill = &quot;Percent&quot;) + 
+  scale_fill_gradient(limits=c(0, 100), low = &quot;#FFFFFF&quot;, high = &quot;#2E74C0&quot;)</code></pre>
+<pre class="r"><code># Plot them both
+tr3 + cl3</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Now compare all four plots:</p>
+<pre class="r"><code>tr2 + cl2 + tr3 + cl3 + plot_layout(nrow = 2)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>here! That looks better. Now that’s all fine and dandy but individual maps still only tell us about the performance of those candidates among st the states but not against each other. So what we really need to do is to care about the margin of wins. To do this, we can either pick the column <code>d_points</code> or <code>r_points</code>. Since the Democrats lost the general election in 2016 and there was a great deal of coverage regarding the popular vote, let’s choose the Republican points as the comparative baseline and use <code>d_points</code>.</p>
+<pre class="r"><code>lighter_map &lt;- 
+  ggplot(data = state_elec,
+         mapping = aes(x = long, y = lat, group = group, fill = d_points)) + 
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  scale_fill_gradient2(
+    low = &quot;#CB454A&quot;, mid = scales::muted(&quot;purple&quot;),
+    high = &quot;#2E74C0&quot;, breaks = c(-100, -75, -50,-25, 0, 25, 50, 75, 100), 
+    labels = c(100, 75, 50, 25, 0, 25, 50, 75, 100)) +
+  theme_map() +
+  theme_fivethirtyeight() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  labs(title = &quot;Winning margins&quot;,
+       subtitle = &quot;(The Lighter Map)&quot;,
+       fill = &quot;Percent&quot;)</code></pre>
+<pre class="r"><code>lighter_map</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>Take a moment to look at the map and code. Most of the items are probably familiar by now barring <code>scale_fill_gradient2</code>. There are many ways to apply gradients within ggplot. If you want to know more, look at the tidyverse page on <a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html" target="_blank">scale gradients</a>. Anyway, its seems a little hard to discern the difference between the choice of reds and blues, especially with purple being the middle color. Let’s try taking true reds and blues rather than a shade of them.</p>
+<pre class="r"><code>darker_map &lt;- 
+ggplot(data = state_elec,
+       mapping = aes(x = long, y = lat, group = group, fill = d_points)) + 
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  scale_fill_gradient2(low = &quot;red&quot;, mid = scales::muted(&quot;purple&quot;),
+                       high = &quot;blue&quot;, breaks = c(-100, -75, -50,-25, 0, 25, 50, 75, 100), 
+                       labels = c(100, 75, 50, 25, 0, 25, 50, 75, 100)) +
+  theme_map() +
+  theme_fivethirtyeight() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +
+  labs(title = &quot;Winning margins&quot;,
+       subtitle = &quot;(The Darker Map)&quot;,
+       fill = &quot;Percent&quot;)</code></pre>
+<pre class="r"><code>darker_map</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p>In this case, using the range we have includes everyone so there is no reason to stretch out the percentage which makes the coloring lighter. However, I still think that the colors are for The Darker Map are still not bright enough. Maybe the data set is skewing our results. Let’s find out.</p>
+<pre class="r"><code># Grab the outliers
+outliers = boxplot(election2016$d_points, plot=FALSE)$out </code></pre>
+<pre class="r"><code># Extract the row information from the original data frame
+election2016[election2016$d_points %in% outliers,] </code></pre>
+<pre><code>## # A tibble: 1 x 24
+##   state        votes st     fips total_vote vote_margin winner party  pct_margin
+##   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
+## 1 District of…     3 DC       11     311268      270107 Clint… Democ…       86.8
+## # … with 15 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;</code></pre>
+<p>Well clearly Washington D.C. is the outlier here. What if we remove it…</p>
+<pre class="r"><code>darker_map_NODC &lt;- ggplot(data = subset(state_elec,
+                           !region %in% &quot;district of columbia&quot;),
+             aes(x = long, y = lat, group = group, fill = d_points)) +
+  geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) + 
+  scale_fill_gradient2( low = &quot;red&quot;, mid = scales::muted(&quot;purple&quot;),
+                        high = &quot;blue&quot;, breaks = c(-100, -75, -50,-25, 0, 25, 50, 75, 100), 
+                        labels = c(100, 75, 50, 25, 0, 25, 50, 75, 100)) +
+  theme_map() +
+  theme_fivethirtyeight() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = &quot;#FFFFFF&quot;, color = &quot;#FFFFFF&quot;),
+    plot.background = element_rect(fill = &quot;#FFFFFF&quot;),
+    legend.background = element_rect(fill = &quot;#FFFFFF&quot;)) +  
+  labs(title = &quot;Winning margins&quot;,
+                subtitle =str_wrap(&quot;(The Darker Map without Washington D.C.)&quot;,30),
+       fill = &quot;Percent&quot;)</code></pre>
+<p>…and re plot both darker maps to compare.</p>
+<pre class="r"><code>darker_map + darker_map_NODC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-49-1.png" width="100%" /></p>
+<p>Now that made a huge difference mainly since the outlier (DC) was such an outlier that it was stretching the color distribution. You can see evidence of this by looking at the legends below each plot.</p>
+</div>
+<div id="part-iii-choropleths-with-blocks" class="section level2">
+<h2>Part III: Choropleths with Blocks</h2>
+<p>For this part, please load the following libraries</p>
+<pre class="r"><code>library(devtools)</code></pre>
+<pre><code>## Loading required package: usethis</code></pre>
+<pre class="r"><code>library(statebins)
+library(RColorBrewer)</code></pre>
+<p>Then run <code>devtools::install_github("hrbrmstr/statebins")</code> and</p>
+<pre class="r"><code>library(statebins)</code></pre>
+<p>On a side note, There is a version of the package <code>statebins</code> on CRAN but it lacks the functionality we need. More about the new version of <code>statebins</code> <a href="https://github.com/hrbrmstr/statebins" target="_blank">here</a>. You do not have to comment it out after the first installation. Read the message if you attempt to run it again. However at some point there will be an official version posted to CRAN so it is recommended that you uninstall this by using <code>remove.packages(statebins)</code>. If you get an odd error about <code>ggplot2</code> being corrupt, restart your R Studio (make sure to save your work space!)</p>
+<div id="the-rcolorbrewer-package" class="section level3">
+<h3>The RColorBrewer package</h3>
+<p>The <code>RColorBrewer</code> package is the most utilized collection of color palettes used in R. There is a lot of color theory which amazingly is quite interesting and grounded in science and history, but we simply do not have the bandwidth to cover that in this course. But if you’re interested, check out the PBS Eons clip below which addresses the Purple Earth Hypothesis.</p>
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=IIA-k_bBcL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</p>
+<p>For resources, a few sites you may wish to check out are listed below</p>
+<ul>
+<li><p>Using the <a href="https://earlglynn.github.io/RNotes/package/RColorBrewer/index.html" target="_blank">RColorBrewer package</a></p></li>
+<li><p><a href="http://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3" target="_blank">Color Advice for Maps</a></p></li>
+<li><p><a href="https://moderndata.plot.ly/create-colorful-graphs-in-r-with-rcolorbrewer-and-plotly/" target="_blank">Plotly and RColorBrewer</a></p></li>
+</ul>
+<p>You can see the entire set of palettes using</p>
+<pre class="r"><code>display.brewer.all()</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-52-1.png" width="100%" />
+which probably looks better in R Studio than here.</p>
+</div>
+<div id="statebins" class="section level3">
+<h3>Statebins</h3>
+<p>We’re going to be using the package <code>statebins</code> but the basic command does not come with a great deal of flexibility. For example</p>
+<pre class="r"><code>statebins(election2016, value_col=&quot;pct_trump&quot;, palette = &quot;Reds&quot;, round=TRUE) +
+  theme_statebins()</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p>is built with the default color palette within R. While it’s fine, without hacking or overwriting the basic commands, we are unable make changes like expanding the limits on the legend. For that, we need the command geom_statebins which does not exist in the CRAN version at the time of this writing. With that command, we have the ability to to work within <code>ggplot2</code>. You should also be aware that ggplot really does not like the base R palette! Below, were going to use <code>brewer.pal("all", "Reds")</code> which calls the Reds palette from <code>RColorBrewer</code></p>
+<pre class="r"><code>basicRedBrews &lt;- brewer.pal(&quot;all&quot;, &quot;Reds&quot;)</code></pre>
+<pre><code>## Warning in brewer.pal(&quot;all&quot;, &quot;Reds&quot;): n too large, allowed maximum for palette Reds is 9
+## Returning the palette you asked for with that many colors</code></pre>
+<p>Did you catch the Warning? The <code>RColorBrewer</code> package is nice but limited. We have measures from 50 states but only have 9 colors to account for the differences.</p>
+<pre class="r"><code>show_col(basicRedBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p>Now if we apply it to the plot below…</p>
+<pre class="r"><code>trumpNineRed &lt;- ggplot(election2016, aes(state=state, fill=pct_trump)) +
+             geom_statebins() +
+             coord_equal() +
+             theme_statebins() +
+             scale_fill_gradientn(limits = c(0, 100), colors = brewer.pal(&quot;all&quot;, &quot;Reds&quot;)) + 
+             labs(title = str_wrap(&quot;Trump 2016 Popular Vote Percent Distribution&quot;, 30), 
+             # Notice the text wrap via thge stringr package.
+             subtitle =&quot;(Nine Shades of Red)&quot;, 
+             # cough cough proper APA formatting cough cough
+             fill = NULL)</code></pre>
+<pre><code>## Warning in brewer.pal(&quot;all&quot;, &quot;Reds&quot;): n too large, allowed maximum for palette Reds is 9
+## Returning the palette you asked for with that many colors</code></pre>
+<p>…we get the same warning and the plot looks like</p>
+<pre class="r"><code>trumpNineRed</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<p>Now sometimes it is a good idea to have a small palette even if you have a large data set which I’ll address later on. However, let’s assume we want 50 colors, and in this case 50 shades of red (not to be confused with another color and what I can only assume is a terrible movie). Unless you really enjoy constructing palettes manually (which many people do!), there is a way to have R do it for you - enter the <code>colorRampPalette</code> command.</p>
+<pre class="r"><code># Define a range of 50 colors based on the RColorBrewer Reds palette.
+fiftyRedBrews &lt;- colorRampPalette(basicRedBrews)(50) </code></pre>
+<pre class="r"><code>show_col(fiftyRedBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-59-1.png" width="100%" /></p>
+<p>Now that’s more like it! So let’s try the plot from earlier again:</p>
+<pre class="r"><code>trumpFiftyRed &lt;- ggplot(election2016, aes(state=state, fill=pct_trump)) +
+  geom_statebins() +
+  coord_equal() +
+  theme_statebins() +
+  scale_fill_gradientn(limits = c(0, 100), colors = fiftyRedBrews) +     
+  labs(title = str_wrap(&quot;Trump 2016 Popular Vote Percent Distribution&quot;, 30),
+       subtitle =&quot;(50 Shades of Red)&quot;,
+       fill = NULL)</code></pre>
+<pre class="r"><code>trumpFiftyRed</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>Now compare the other nine color plot versus this newer version with 50.</p>
+<pre class="r"><code>trumpNineRed + trumpFiftyRed</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-62-1.png" width="100%" />
+Did it make a difference? Well that depends on whom you ask. Even if I cannot see one, that does not imply that others cannot. With that said, there are situations where having a smaller palette makes sense. One example of this is when you want to explore groups</p>
+<pre class="r"><code>threeRedBrews &lt;- brewer.pal(3, &quot;Reds&quot;) # We&#39;re taking three evenly distributed colors</code></pre>
+<pre class="r"><code>show_col(threeRedBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
+<pre class="r"><code>trumpThreeRed &lt;- ggplot(election2016, aes(state=state, fill=pct_trump)) +
+  geom_statebins() + 
+  coord_equal() + # If you run the ggplot and geom_statbins line, it looks rectangular.
+  theme_statebins() + # This is akin to the base ggplot2 theme_minimal()
+  scale_fill_gradientn(limits = c(0, 100), colors = threeRedBrews) +
+  labs(title = str_wrap(&quot;Trump 2016 Popular Vote Percent Distribution&quot;,30),
+       subtitle =&quot;(Three Shades of Red)&quot;,
+       fill = NULL) </code></pre>
+<pre class="r"><code>trumpThreeRed</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p>From the plot, there is an indication from the shading that the the Midwest and south went more for Trump than the coastal areas. This brings us to a good point<strong>Your choice in palettes in both color and range are situationally dependent</strong>. In a nutshell, never plot blindly and always think about what you want people to see! Remember, you (should) know your data inside and out but is</p>
+<ul>
+<li><p>that understanding translate over into your visualization and</p></li>
+<li><p>visually appealing?</p></li>
+</ul>
+<p>Also, never assume that the same ranges will give you similar results as we’ll see below. However, let’s perform the same type of plot for Clinton firsts.</p>
+<pre class="r"><code>basicBlueBrews &lt;- brewer.pal(&quot;all&quot;, &quot;Blues&quot;)</code></pre>
+<pre><code>## Warning in brewer.pal(&quot;all&quot;, &quot;Blues&quot;): n too large, allowed maximum for palette Blues is 9
+## Returning the palette you asked for with that many colors</code></pre>
+<pre class="r"><code>show_col(basicBlueBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<pre class="r"><code>fiftyBlueBrews &lt;- 
+  colorRampPalette(basicBlueBrews)(50)</code></pre>
+<pre class="r"><code>show_col(fiftyBlueBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-70-1.png" width="100%" /></p>
+<pre class="r"><code>clintonFiftyBlue &lt;- 
+  ggplot(election2016, aes(state=state, fill=pct_clinton)) +
+  geom_statebins() +
+  coord_equal() +
+  theme_statebins() +
+  scale_fill_gradientn(limits = c(0, 100), colors = fiftyBlueBrews) +
+  labs(title = str_wrap(&quot;Clinton 2016 Popular Vote Percent Distribution&quot;, 30),
+       subtitle =&quot;(50 Shades of Blue)&quot;,
+       fill = NULL)</code></pre>
+<pre class="r"><code>clintonFiftyBlue</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<pre class="r"><code>threeBlueBrews &lt;- brewer.pal(3, &quot;Blues&quot;)</code></pre>
+<pre class="r"><code>show_col(threeBlueBrews)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<pre class="r"><code>clintonThreeBlue &lt;- ggplot(election2016, aes(state=state, fill=pct_clinton)) +
+  geom_statebins() +
+  coord_equal() +
+  theme_statebins() +
+  scale_fill_gradientn(limits = c(0, 100), colors = threeBlueBrews) +
+  labs(title = str_wrap(&quot;Clinton 2016 Popular Vote Percent Distribution&quot;, 30),
+       subtitle =&quot;(Three Shades of Blue)&quot;,
+       fill = NULL)</code></pre>
+<pre class="r"><code>clintonThreeBlue</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p>Now to view them all</p>
+<pre class="r"><code>trumpFiftyRed + clintonFiftyBlue + trumpThreeRed + clintonThreeBlue + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-77-1.png" width="100%" /></p>
+<p>Looking at these, it appears that regional differences are best shown by <code>clintonFiftyBlue</code> and <code>trumpThreeRed</code> both of which clearly do not have the same number of colors and corresponding distributions.</p>
+<pre class="r"><code>trumpThreeRed + clintonFiftyBlue</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-78-1.png" width="80%" /></p>
+<p>How can we know for sure? Let’s check out the distributions for each candidate beginning with Trump</p>
+<pre class="r"><code>ggplot(election2016) +
+  geom_bar(mapping = aes(x=state, y=pct_trump, fill = pct_trump), stat = &quot;identity&quot;) +
+  scale_fill_gradientn(limits = c(0, 100), colors = threeRedBrews) +
+  facet_grid(~ census, drop = TRUE, scales = &quot;free_x&quot;) +
+  theme_bw() +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    legend.position = &quot;bottom&quot;
+  ) +
+  xlab(&quot;Regions&quot;) +
+  ylab(&quot;&quot;) + 
+  labs(title = &quot;2016 Presidential Results for Trump&quot;, 
+       subtitle =&quot;Distribution by US Region&quot;,
+       fill = NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-79-1.png" width="672" />
+Trump’s darker reds are relatively consistent in the Midwest and South but split in the West. If we plot Clinton’s pattern, you would expect to see the opposite and that is exactly what is plotted.</p>
+<pre class="r"><code>ggplot(election2016) +
+        geom_bar(mapping = aes(x=state, y=pct_clinton, fill = pct_clinton), stat = &quot;identity&quot;) +
+  scale_fill_gradientn(limits = c(0, 100), colors = fiftyBlueBrews) +
+  facet_grid(~ census, drop = TRUE, scales = &quot;free_x&quot;) +
+  theme_bw() +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    legend.position = &quot;bottom&quot;
+  ) +
+  xlab(&quot;Regions&quot;) +
+  ylab(&quot;&quot;) + 
+  labs(title = &quot;2016 Presidential Results for Clinton&quot;, 
+       subtitle =&quot;Distribution by US Region&quot;,
+       fill = NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p>Clinton’s darker blues are reds are relatively consistent and concentrated in the Northeast but split in the West. Both of these make sense since Trump won handily in the Midwest and South while Clinton dominated the Northeast. But just to be sure, we’ll look at the comparative data set without DC (since it was an outlier).</p>
+<pre class="r"><code>ggplot(data = subset(election2016,
+                       !region %in% &quot;district of columbia&quot;),
+         aes(state = state, fill = d_points)) +
+  geom_statebins() +
+  coord_equal() +
+  theme_statebins() +
+  scale_fill_gradient2(low = &quot;red&quot;, mid = scales::muted(&quot;purple&quot;),
+                        high = &quot;blue&quot;, breaks = c(-100, -75, -50,-25, 0, 25, 50, 75, 100), 
+                        labels = c(100, 75, 50, 25, 0, 25, 50, 75, 100)) +
+  labs(fill = NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-81-1.png" width="672" />
+Sure, this is a method to see the states that are primarily Democrat or Republican. But its also a way to view how mixed (or purple) we are as a nation as well in terms of our voting.</p>
+</div>
+</div>
+<div id="part-iv-augmenting-maps" class="section level2">
+<h2>Part IV: Augmenting Maps</h2>
+<p>Now staying on the 2016 election focus, we’re going to try to reproduce a better version of the results found in the last plot in Part III. What’s the problem? Well many people concentrate on the popular vote. Regardless of your stance on the electoral college, that representative
+system is what we currently live under and did shape the outcome of the 2016 presidential election. Recall that Clinton amassed</p>
+<pre class="r"><code>sum(election2016$clinton_vote)</code></pre>
+<pre><code>## [1] 65853625</code></pre>
+<p>votes while Trump garnered</p>
+<pre class="r"><code>sum(election2016$trump_vote)</code></pre>
+<pre><code>## [1] 62985106</code></pre>
+<p>votes which told us that Clinton won the popular vote by</p>
+<pre class="r"><code>sum(election2016$clinton_vote)-sum(election2016$trump_vote)</code></pre>
+<pre><code>## [1] 2868519</code></pre>
+<p>votes. To explore the electoral college and its impact, a static ggplot map does not allow for more than three variables as we saw in a prior session. So we have to figure out another way to show size. Why don’t we do it by changing the size of the states?</p>
+<p>First let’s get a relatively under utilized set of data from the maps package.</p>
+<pre class="r"><code>mapbase &lt;- map_data(&quot;state.vbm&quot;) %&gt;% 
+rename(state = region)  %&gt;% # Rename the column region to state
+  select_if(~sum(!is.na(.)) &gt; 0) # Drop any columns where the entire set is NA</code></pre>
+<p>This <code>.vbm</code> data set is called a <code>SpatialPolygonsDataFrame</code> object in R (yes that’s the actual term) but in the real world, it is known as a <em>Visibility Base Map</em>. What is important here is that the state level longitudinal and latitudinal coordinates been adjusted such that the sizes are as proportionally equal to each other as possible while maintaining the overall shape of the United States. The original point of this was to have all the states be of equal sizes to be utilized as symbols. However, someone much more intelligent than me thought about using it to display demographic data as well. The set looks a bit different than the typical maps data set you have seen before, but its not far off</p>
+<pre class="r"><code>head(mapbase) # or View(mapbase)</code></pre>
+<pre><code>##   long lat group order   state
+## 1   89  34     1     1 Alabama
+## 2   96  34     1     2 Alabama
+## 3   98  20     1     3 Alabama
+## 4   91  20     1     4 Alabama
+## 5   91  16     1     5 Alabama
+## 6   89  17     1     6 Alabama</code></pre>
+<p>Take a look at the states now:</p>
+<pre class="r"><code>map(&quot;state.vbm&quot;, fill=T, col=&quot;white&quot;)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p>Or if you prefer a bit of color in your life:</p>
+<pre class="r"><code>RViridisD &lt;- viridis_pal(option = &quot;D&quot;)(50) # To view use show_col(RViridis)</code></pre>
+<pre class="r"><code>map(&quot;state.vbm&quot;, fill=T, col=RViridisD)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+<p>We could have used some other versions of the Viridis set. Try the above for options A, B, C, D, or E. Alternatively, you can use a site like <a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="_blank">this</a> to generate small or large color palettes.</p>
+<p>However I urge you to follow elements of proper color theory as outlined <a href="https://graphicdesign.stackexchange.com/questions/3682/where-can-i-find-a-large-palette-set-of-contrasting-colors-for-coloring-many-d/3815" target="_blank">here with examples</a></p>
+<p>This next data set <code>state.vbm.center</code> is made up centroids. These provide coordinates of the centers of the 50 states (in alphabetical order).</p>
+<pre class="r"><code>data(state.vbm.center) # This is a list. Do View(state.vbm.center) to see it.</code></pre>
+<p>Now we have multiple data files so we have to join them somehow. First we’ll look at the set that was just pulled and use only what we need. Extra columns and general data points that we don’t need just add to the amount of time it takes for R to get things done.<br />
+
+Below we are going to convert the list <code>state.vbm.center</code> to a data frame using pipes and recall all those do is provide shortcuts for multiple regular R commands. The steps are as follows:</p>
+<ul>
+<li><p>Call the <code>state.vbm.center</code> data set</p></li>
+<li><p>Force (aka <em>coerce</em>) the list to a data frame</p></li>
+<li><p>Add in state names which are given by the variable <code>state</code> that we renamed earlier.</p></li>
+<li><p>Pull everything into a variable called <code>truncated_map</code></p></li>
+</ul>
+<pre class="r"><code>truncated_map &lt;- state.vbm.center %&gt;% 
+                    as.data.frame() %&gt;% 
+                    mutate(state = unique(mapbase$state))</code></pre>
+<p>Let’s take a look at what we did.</p>
+<pre class="r"><code>head(truncated_map) # or View(truncated_map)</code></pre>
+<pre><code>##    x  y      state
+## 1 93 27    Alabama
+## 2 10 19     Alaska
+## 3 32 34    Arizona
+## 4 76 33   Arkansas
+## 5 13 42 California
+## 6 46 51   Colorado</code></pre>
+<p>Remember that <code>truncated_map</code> is simply a conversion of the list <code>state.vbm.center</code> to a data frame.<br />
+
+Now let’s merge some data sets by using joins. There are many ways to accomplish the end goal which is to put <code>mapbase</code> (state level map data), <code>election2016</code> (our current data set with various types of election information by state except for electoral college votes), and <code>truncated_map</code> (the centroid data set) together into one cohesive data frame (or file if you prefer). You could arguably download all three and do it in say Excel but it would take quite a while and unless there has been a change in the recent version, it appears you have to do by coding in a language called Visual Basic within the software anyway. Joins are a great way to have computers handle that nonsense and in general, if you ever come across files that you need merged, this type of logic and command structure apples in that situation too!
+
+OK here we go!<br />
+
+Step 1: Join <code>mapbase</code> (state level map data) with <code>election2016</code> (current election data set) and call it <code>merged_electoral</code></p>
+<pre class="r"><code>merged_electoral &lt;- 
+  election2016 %&gt;% 
+    filter(!st == &quot;DC&quot;) %&gt;% 
+# Since DC is not a state, it is not included in the map data set so we need to get rid
+# of it.
+      right_join(mapbase) %&gt;% 
+# Its a right join since the mapbase data has the coordinates to draw our map
+          select_if(~sum(!is.na(.)) &gt; 0) </code></pre>
+<pre><code>## Joining, by = &quot;state&quot;</code></pre>
+<pre class="r"><code># Drop any columns where the entire set is NA</code></pre>
+<p>Let’s take a look at what we did.</p>
+<pre class="r"><code>head(merged_electoral) # or View(merged_electoral)</code></pre>
+<pre><code>## # A tibble: 6 x 28
+##   state   votes st     fips total_vote vote_margin winner party      pct_margin
+##   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 2 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 3 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 4 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 5 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 6 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## # … with 19 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;, long &lt;dbl&gt;,
+## #   lat &lt;dbl&gt;, group &lt;dbl&gt;, order &lt;int&gt;</code></pre>
+<p>Step 2: Join <code>merged_electoral</code> (state level map data with election data) with <code>truncated_map</code> (the centroid data set) and call it <code>merged_map</code></p>
+<pre class="r"><code>merged_map &lt;- merged_electoral %&gt;% 
+                left_join(truncated_map) # Its a left join since again the </code></pre>
+<pre><code>## Joining, by = &quot;state&quot;</code></pre>
+<pre class="r"><code>                                         # merged_electoral data has the coordinates
+                                         # to draw our map</code></pre>
+<p>OK we’re done and have our full data set. Again, let’s take a look at what we did</p>
+<pre class="r"><code>head(merged_map) # or View(merged_map)</code></pre>
+<pre><code>## # A tibble: 6 x 30
+##   state   votes st     fips total_vote vote_margin winner party      pct_margin
+##   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 2 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 3 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 4 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 5 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 6 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## # … with 21 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;, long &lt;dbl&gt;,
+## #   lat &lt;dbl&gt;, group &lt;dbl&gt;, order &lt;int&gt;, x &lt;dbl&gt;, y &lt;dbl&gt;</code></pre>
+<p>Notice that we have two sets of coordinates now: The ones for the states (<code>long</code> and <code>lat</code>) which differ since those are used to draw the outline and the centroids (<code>x</code> and <code>y</code>) which do not differ except by state and are simply the center point of each state. We need to “scale” or make the standard outlines of the state given by <code>long</code> and <code>lat</code> by reducing the size of each proportionally. To do that, we need a starting point and an ending point.</p>
+<p>Well we have the starting point which is just the standard outline of the state itself which we saw earlier</p>
+<pre class="r"><code>ggplot(merged_map, aes(long, lat, group = group, fill=state)) + 
+  geom_polygon(fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;) +
+  coord_fixed() + 
+  theme_minimal() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  guides(fill = FALSE) +  
+  xlab(NULL) +
+  ylab(NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<p>and we certainly have an ending point that are given by the centroids.</p>
+<pre class="r"><code>ggplot(merged_map, aes(x, y, group = group, fill=state)) + 
+  geom_point(color=&quot;#8b0a50&quot;, size=1) +
+  coord_fixed() + 
+  theme_minimal() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  guides(fill = FALSE) +  
+  xlab(NULL) +
+  ylab(NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+<p>Again, these denote the center point of each state</p>
+<pre class="r"><code>ggplot(merged_map, aes(group = group, fill=state)) + 
+  geom_polygon(aes(long, lat), fill=&quot;#FFFFFF&quot;, color=&quot;#000000&quot;) +
+  geom_point(aes(x, y), color=&quot;#8b0a50&quot;, size=1) +
+  coord_fixed() + 
+  theme_minimal() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  guides(fill = FALSE) +  
+  xlab(NULL) +
+  ylab(NULL)</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p>Which implies the largest any state representation can be is the outline and the smallest is the centroid. So within each state, we scale the long and lat points to be closer to the centroid by some factor which in this case are the electoral votes by state.<br />
+
+First we’ll do it for Trump…</p>
+<pre class="r"><code>Trump_rescaledByEC &lt;- merged_map %&gt;% 
+                  group_by(state) %&gt;% 
+                  filter(party == &quot;Republican&quot;) %&gt;% # Only include where Republicans won
+                  mutate(longscale = (votes*10/538)*(long - x) + x, # number of electoral votes x 10 divided by the total electoral votes
+                  latscale = (votes*10/538)*(lat - y) + y) </code></pre>
+<p>…then view the result…</p>
+<pre class="r"><code>head(Trump_rescaledByEC) # or View(Trump_rescaledByEC)</code></pre>
+<pre><code>## # A tibble: 6 x 32
+## # Groups:   state [1]
+##   state   votes st     fips total_vote vote_margin winner party      pct_margin
+##   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 2 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 3 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 4 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 5 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 6 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## # … with 23 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;, long &lt;dbl&gt;,
+## #   lat &lt;dbl&gt;, group &lt;dbl&gt;, order &lt;int&gt;, x &lt;dbl&gt;, y &lt;dbl&gt;, longscale &lt;dbl&gt;,
+## #   latscale &lt;dbl&gt;</code></pre>
+<p>…and finally plot.</p>
+<pre class="r"><code>TrumpByState_EC &lt;- ggplot(Trump_rescaledByEC, aes(long, lat, group = group, fill = pct_trump)) + 
+#  geom_path() + # Enable if you want to see the original outline
+  geom_polygon(aes(longscale, latscale)) +
+  coord_fixed() + 
+  theme_void() + 
+  scale_fill_gradientn(limits = c(0, 100), colors = threeRedBrews) +
+  labs(title = str_wrap(&quot;Trump 2016 Popular Vote Resized by Electoral Vote For States Won&quot;, 30),
+       fill = &quot;Percent&quot;) </code></pre>
+<pre class="r"><code>TrumpByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
+<p>Now let’s do the same for Clinton…</p>
+<pre class="r"><code>Clinton_rescaledByEC &lt;- merged_map %&gt;% 
+  group_by(state) %&gt;% 
+  filter(party == &quot;Democrat&quot;) %&gt;% # Only include where Democrats won
+  mutate(longscale = (votes*10/538)*(long - x) + x,
+         latscale = (votes*10/538)*(lat - y) + y) </code></pre>
+<p>…then view the result…</p>
+<pre class="r"><code>head(Clinton_rescaledByEC) # or View(Clinton_rescaledByECp)</code></pre>
+<pre><code>## # A tibble: 6 x 32
+## # Groups:   state [1]
+##   state      votes st     fips total_vote vote_margin winner  party   pct_margin
+##   &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;
+## 1 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## 2 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## 3 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## 4 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## 5 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## 6 California    55 CA        6   14237884     4269978 Clinton Democr…       30.0
+## # … with 23 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;, long &lt;dbl&gt;,
+## #   lat &lt;dbl&gt;, group &lt;dbl&gt;, order &lt;int&gt;, x &lt;dbl&gt;, y &lt;dbl&gt;, longscale &lt;dbl&gt;,
+## #   latscale &lt;dbl&gt;</code></pre>
+<p>…and finally plot.</p>
+<pre class="r"><code>ClintonByState_EC &lt;- ggplot(Clinton_rescaledByEC, aes(long, lat, group = group, fill = pct_clinton)) + 
+  #  geom_path() + # Enable if you want to see the original outline
+  geom_polygon(aes(longscale, latscale)) +
+  coord_fixed() + 
+  theme_void() + 
+  scale_fill_gradientn(limits = c(0, 100), colors = fiftyBlueBrews) +
+  labs(title = str_wrap(&quot;Clinton 2016 Popular Vote Resized by Electoral Vote by State&quot;, 30),
+       fill = &quot;Percent&quot;)</code></pre>
+<pre class="r"><code>ClintonByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
+<p>If we look at them both</p>
+<pre class="r"><code>TrumpByState_EC + ClintonByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-108-1.png" width="100%" /></p>
+<p>then we find indicators of how Trump won. Again this is nice but a side-by-side map is only good when assessing each candidate individually and comparisons take effort. I would personally rather be lazy so let’s view them both on the same map.<br />
+
+Here we simply do not subset the data by party</p>
+<pre class="r"><code>All_rescaledByEC &lt;- merged_map %&gt;% 
+  group_by(state) %&gt;% 
+  mutate(longscale = (votes*10/538)*(long - x) + x,
+         latscale = (votes*10/538)*(lat - y) + y)</code></pre>
+<p>Here’s what it looks like…</p>
+<pre class="r"><code>head(All_rescaledByEC) # or View(All_rescaledByEC)</code></pre>
+<pre><code>## # A tibble: 6 x 32
+## # Groups:   state [1]
+##   state   votes st     fips total_vote vote_margin winner party      pct_margin
+##   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt;      &lt;int&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 2 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 3 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 4 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 5 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## 6 Alabama     9 AL        1    2123372      588708 Trump  Republican       27.7
+## # … with 23 more variables: r_points &lt;dbl&gt;, d_points &lt;dbl&gt;, pct_clinton &lt;dbl&gt;,
+## #   pct_trump &lt;dbl&gt;, pct_johnson &lt;dbl&gt;, pct_other &lt;dbl&gt;, clinton_vote &lt;int&gt;,
+## #   trump_vote &lt;int&gt;, johnson_vote &lt;int&gt;, other_vote &lt;int&gt;, ev_dem &lt;int&gt;,
+## #   ev_rep &lt;int&gt;, ev_oth &lt;int&gt;, census &lt;chr&gt;, region &lt;chr&gt;, long &lt;dbl&gt;,
+## #   lat &lt;dbl&gt;, group &lt;dbl&gt;, order &lt;int&gt;, x &lt;dbl&gt;, y &lt;dbl&gt;, longscale &lt;dbl&gt;,
+## #   latscale &lt;dbl&gt;</code></pre>
+<p>…and here’s the plot.</p>
+<pre class="r"><code>AllByState_EC &lt;- ggplot(All_rescaledByEC, aes(long, lat, group=group, fill=winner)) + 
+  #  geom_path() + # Enable if you want to see the original outline
+  geom_polygon(aes(longscale, latscale)) +
+  coord_fixed() + 
+  theme_void() + 
+  scale_fill_manual(values= partyColors) +
+  labs(title = &quot;States Won by Each Party&quot;,
+       subtitle =&quot;with each resized by electoral votes&quot;,
+       fill = NULL) +
+  theme_map()+
+  theme_statebins() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +
+  xlab(&quot;&quot;) +
+  ylab(&quot;&quot;)</code></pre>
+<pre class="r"><code>AllByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<p>But what about the margins you ask? No you didn’t ask. Well here is a plot of those anyway</p>
+<pre class="r"><code>MarginsByState_EC &lt;- ggplot(data = All_rescaledByEC, aes(long, lat, group=group, fill = d_points)) + 
+  geom_polygon(aes(longscale, latscale)) +
+ # geom_polygon(color = &quot;gray90&quot;, size = 0.1) +
+  coord_fixed() + 
+# coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = -20) + 
+  scale_fill_gradient2( low = &quot;red&quot;, mid = scales::muted(&quot;purple&quot;),
+                        high = &quot;blue&quot;, breaks = c(-100, -75, -50,-25, 0, 25, 50, 75, 100), 
+                        labels = c(100, 75, 50, 25, 0, 25, 50, 75, 100)) +
+  theme_map() +
+  theme_statebins() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    panel.border = element_blank(),
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  ) +      
+  labs(title = &quot;Winning margins by Popular Vote&quot;,
+       subtitle =&quot;with each state resized by electoral votes&quot;,
+       fill = &quot;Percent&quot;)  +
+  xlab(&quot;&quot;) +
+  ylab(&quot;&quot;)</code></pre>
+<pre class="r"><code>MarginsByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
+<p>And just to compare both for fun…yes I said fun:</p>
+<pre class="r"><code>AllByState_EC + MarginsByState_EC</code></pre>
+<p><img src="/example/07-example_files/figure-html/unnamed-chunk-115-1.png" width="100%" /></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/Courses/edp693e/edit/master/content/example/07-example.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 693e: Data Visualization (Spring 2021)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://counselingandlearningsci.wvu.edu/" target="_blank" rel="noopener">Counseling &amp; Learning Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope fa-fw"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next 15 weeks) &emsp;&emsp;
+                <i class="far fa-clock fa-fw"></i> You pick!
+                <br><i class="fas fa-university fa-fw"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2021 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+
+            <p>This site was created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with customizations heavily influenced by Dr. Andrew Heiss'<a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> site<a/>. </p>
+
+            <p><a href="https://github.com/piechartssuck/Courses/tree/edp693e" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.f30a8b5a880e824aab9653942c89109b.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

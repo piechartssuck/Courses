@@ -494,31 +494,21 @@ library(wesanderson)
 options(tigris_use_cache = TRUE) 
 
 
-
-
-
-
-
 mon <- get_acs(state = "WV", 
                county = "Monongalia", 
                geography = "tract", 
                variables = "B19013_001", 
-               geometry = TRUE)
+               geometry = TRUE) 
 
 
 
 datatable(mon)
 
+# Optionally create a palette
+wes_palette("Darjeeling1")
 
-
-
-
-wes_palette("Rushmore1")
-
-
-
-pal <- wes_palette("Rushmore1", 
-                   max(mon$estimate), 
+darj1 <- wes_palette("Darjeeling1", 
+                      max(mon$estimate), 
                    type = "continuous")
 
 

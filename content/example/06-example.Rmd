@@ -7,12 +7,25 @@ output:
 menu:
   example:
     parent: Examples
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 editor_options: 
   chunk_output_type: console
 ---
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 
 # Introduction
 
