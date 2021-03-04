@@ -2679,5 +2679,158 @@ stereographic projection
 </description>
     </item>
     
+    <item>
+      <title>A Map to the Past</title>
+      <link>https://edp693e.theoreticalphysed.com/assignment/07-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/assignment/07-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read-the-submission-directions&#34;&gt;Read the Submission Directions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+&lt;/style&gt;
+&lt;div id=&#34;read-the-submission-directions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read the Submission Directions&lt;/h2&gt;
+&lt;p&gt;Please submit a PDF out using an Rmarkdown file for this task.&lt;/p&gt;
+&lt;p&gt;You may use the data set provided in this week’s walkthrough or any other valid set &lt;em&gt;with citations&lt;/em&gt; to address the following criteria regarding &lt;strong&gt;both the 2016 and 2020 general elections&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For each election year, do the following:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The differences between the popular and electoral college votes by census tract, county, and state. For each, show both the flat standard representation and where votes counts and/or percentages are displayed by size. One example of a state level representation of this, look &lt;a href=&#34;http://www-personal.umich.edu/~mejn/election/2016/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How differing demographical subgroups voted. You should include at minimum &lt;em&gt;age&lt;/em&gt;, &lt;em&gt;race&lt;/em&gt; and &lt;em&gt;sex&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and &lt;em&gt;at least three others of your choice&lt;/em&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A &lt;em&gt;single&lt;/em&gt; final visualization showing the differences in the popular and electoral college votes by &lt;em&gt;census tract&lt;/em&gt;, &lt;em&gt;county&lt;/em&gt;, and &lt;em&gt;state&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Please submit both to &lt;a href=&#34;https://ecampus.wvu.edu&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; and &lt;a href=&#34;https://2021edp693e.slack.com/archives/C01PTTDPTM5&#34; target=&#34;_blank&#34;&gt;Slack&lt;/a&gt; a &lt;code&gt;PDF&lt;/code&gt; and/or &lt;code&gt;HTML&lt;/code&gt; output using an Rmarkdown file for this task.&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Bonus! Display state&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; elections by &lt;em&gt;census tract&lt;/em&gt; and &lt;em&gt;county&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Please use the applicable &lt;a href=&#34;https://www.census.gov/topics/population.html&#34; target=&#34;_blank&#34;&gt;U.S Census standard&lt;/a&gt; for these demographics.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Need not be a criteria reported in the U.S. Census&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;of your choice&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

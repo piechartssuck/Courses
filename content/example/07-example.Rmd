@@ -1,6 +1,6 @@
 ---
-title: "Mapping the Past"
-linktitle: "Week 7: Mapping the Past"
+title: "A Map to the Past"
+linktitle: "Week 7: A Map to the Past"
 output:
   blogdown::html_page:
     toc: true
@@ -144,7 +144,13 @@ Again if you have familiarity with the structure of your directory, then use the
 We will not be using the Census API this time around but please save your key for future data pulls. You'll likely receive a prompt to save it using
 
 ```{r eval = FALSE, echo=TRUE}
-# Input your Census key
+# Input your Census key generally
+
+# Input your Census key for the tidycensus package
+# Load the library
+library(tidycensus)
+
+# Save you
 census_api_key("YOUR CENSUS API KEY", install = TRUE)
 
 # Reload the .Renviron marker
