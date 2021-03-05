@@ -1,0 +1,25 @@
+---
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have two modules to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Intermediate Data Visualization with ggplot2 
+
+- Visualization Best Practices in R
+
+For more information about these, take a look at the tentative schedule.
+

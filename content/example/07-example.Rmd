@@ -665,7 +665,7 @@ On a side note, There is a version of the package `statebins` on CRAN but it lac
 The `RColorBrewer` package is the most utilized collection of color palettes used in R. There is a lot of color theory which amazingly is quite interesting and grounded in science and history, but we simply do not have the bandwidth to cover that in this course. But if you're interested, check out the PBS Eons clip below which addresses the Purple Earth Hypothesis. 
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=IIA-k_bBcL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IIA-k_bBcL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 For resources, a few sites you may wish to check out are listed below

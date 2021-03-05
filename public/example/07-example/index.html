@@ -240,7 +240,7 @@
   
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/07-example/">
-  <meta property="og:title" content="Mapping the Past | Data Visualization">
+  <meta property="og:title" content="A Map to the Past | Data Visualization">
   <meta property="og:description" content="Introduction Preliminary Items  First Things First! Download the script and data set Set your Working Directory Loading libraries Loading files Left field reminder to save your API key  Walkthrough  Notes Getting Ready Part I: Lollipops  Side Quest  Part II: Choropleths Part III: Choropleths with Blocks  The RColorBrewer package Statebins  Part IV: Augmenting Maps    Introduction This is a deeper exploration of mapping with a purpose."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
@@ -289,7 +289,7 @@
 <meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
 
 
-  <title>Mapping the Past | Data Visualization</title>
+  <title>A Map to the Past | Data Visualization</title>
 
 </head>
 
@@ -709,7 +709,7 @@
       </li>
       
       <li class="active">
-        <a href="/example/07-example/">Week 7: Mapping the Past</a>
+        <a href="/example/07-example/">Week 7: A Map to the Past</a>
       </li>
       
     </ul>
@@ -729,7 +729,7 @@
             <article class="article">
 
                 <div class="docs-article-container">
-                    <h1>Mapping the Past</h1>
+                    <h1>A Map to the Past</h1>
 
                     
 
@@ -781,7 +781,8 @@
 <h1>Preliminary Items</h1>
 <div id="first-things-first-download-the-script-and-data-set" class="section level2">
 <h2>First Things First! Download the script and data set</h2>
-<p>Please download a all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
+<p>Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
+<p><a href="/example/07-example_files/Week7materials.zip">Week 7 materials</a></p>
 </div>
 <div id="set-your-working-directory" class="section level2">
 <h2>Set your Working Directory</h2>
@@ -799,9 +800,9 @@
 <h2>Loading libraries</h2>
 <p>Go ahead and load these or install and then load them.</p>
 <pre class="r"><code>library(tidyverse)
-library(patchwork) # Used to plot things in a grid
-library(RColorBrewer) # A coloring package with multiple palettes
-library(scales) # Used to manipulate applications of colors
+library(patchwork) 
+library(RColorBrewer) 
+library(scales)
 library(ggpubr)</code></pre>
 <p>We should first take a look at the new ones being used here</p>
 <center>
@@ -904,12 +905,19 @@ Gives predefined settings for publication quality plots
 <pre class="r"><code>rm(list = ls())</code></pre>
 <p>We’ll be using the file <code>election2016.Rdata</code>. To load it up, run the following</p>
 <pre class="r"><code>load(election2016.RData)</code></pre>
+<p>If that does not work, go to the actual data set, right click and open it with RStudio.</p>
 <p>Again if you have familiarity with the structure of your directory, then use the appropriate path. Notice that you don’t have to say something like <code>variable &lt;- load("/data/election2016.RData")</code> because you aren’t just loading up a data set!</p>
 </div>
 <div id="left-field-reminder-to-save-your-api-key" class="section level2">
 <h2>Left field reminder to save your API key</h2>
 <p>We will not be using the Census API this time around but please save your key for future data pulls. You’ll likely receive a prompt to save it using</p>
-<pre class="r"><code># Input your Census key
+<pre class="r"><code># Input your Census key generally
+
+# Input your Census key for the tidycensus package
+# Load the library
+library(tidycensus)
+
+# Save you
 census_api_key(&quot;YOUR CENSUS API KEY&quot;, install = TRUE)
 
 # Reload the .Renviron marker
@@ -1347,7 +1355,7 @@ library(RColorBrewer)</code></pre>
 <h3>The RColorBrewer package</h3>
 <p>The <code>RColorBrewer</code> package is the most utilized collection of color palettes used in R. There is a lot of color theory which amazingly is quite interesting and grounded in science and history, but we simply do not have the bandwidth to cover that in this course. But if you’re interested, check out the PBS Eons clip below which addresses the Purple Earth Hypothesis.</p>
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=IIA-k_bBcL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IIA-k_bBcL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </p>
 <p>For resources, a few sites you may wish to check out are listed below</p>
