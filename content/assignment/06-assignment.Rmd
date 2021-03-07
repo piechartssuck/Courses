@@ -1511,7 +1511,7 @@ ggplot() +
                                   face = "bold",
                                   color = "#005b5b",
                                   hjust = 0.5)) +
-  ggtitle("2016 ACS Median Income for the United States")
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the United States", 35))
 ```
 
 ## Regional Level Data
@@ -1696,7 +1696,7 @@ ggplot() +
                                   face = "bold",
                                   color = "#005b5b",
                                   hjust = 0.5)) +
-  ggtitle("2016 ACS Median Income for the Contiguous US States")
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the Contiguous US States", 35))
 ```
 
 ## County Level Data
@@ -1799,7 +1799,7 @@ doug %>%
                                   face = "bold",
                                   color = "#005b5b",
                                   hjust = 0.5)) +
-  ggtitle("2016 ACS Median Income for the Census Tracts in Kansas")
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the Census Tracts in Kansas", 35))
 ```
 </details>
 
