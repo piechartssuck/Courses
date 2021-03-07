@@ -10,27 +10,44 @@ library(censusapi)
 
 Sys.setenv(CENSUS_KEY="YOUR API KEY HERE")
 
+
+
 readRenviron("~/.Renviron") # You may get a warning...ignore it
 
+
+
 Sys.getenv("CENSUS_KEY")
+
 
 
 availableapis <- listCensusApis()
 
 
+
 datatable(availableapis)
+
+
+
+
 
 nrow(availableapis)
 
 
-availableapis %>%
-   filter_all(any_vars(grepl("income", .))) %>%
-   datatable()
-
 
 availableapis %>%
-   filter(str_detect(description, 'income')) %>%
-   datatable()
+  filter_all(any_vars(grepl("income", .))) %>%
+  datatable()
+
+
+
+
+
+availableapis %>%
+  filter(str_detect(description, 'income')) %>%
+  datatable()
+
+
+
 
 
 availableapis %>%
@@ -39,6 +56,8 @@ availableapis %>%
   drop_na(vintage) %>%
   arrange(-vintage) %>%
   datatable()
+
+
 
 
 
@@ -59,6 +78,9 @@ vars <- listCensusMetadata(name = "acs/acs5/profile",
 vars %>%
   as_tibble() %>%
     datatable()
+
+
+
 
 
 usa <- map_data("usa")
@@ -104,6 +126,7 @@ state <- map_data("state")
 California <- map_data("state", region = "CA")
 
 
+
 Kansas <- map_data("state", region = "KS")
 
 
@@ -129,6 +152,7 @@ mi <- subset(state,
              region=="michigan")
 
 
+
 ggplot() + 
   geom_polygon(data = mi, 
                         aes(x=long, y = lat, group = group)) + 
@@ -148,11 +172,6 @@ county <- map_data("county")
 
 
 mi_count <- subset(county, region=="michigan")
-
-
-
-par(mar = c(12, 6, 4, 2) + 0.1)
-
 
 
 ggplot() + 
@@ -213,6 +232,7 @@ ggplot() +
 
 
 apis <- listCensusApis()
+
 
 
 View(apis)
@@ -494,21 +514,31 @@ library(wesanderson)
 options(tigris_use_cache = TRUE) 
 
 
+
+
+
+
+
 mon <- get_acs(state = "WV", 
                county = "Monongalia", 
                geography = "tract", 
                variables = "B19013_001", 
-               geometry = TRUE) 
+               geometry = TRUE)
 
 
 
 datatable(mon)
 
-# Optionally create a palette
-wes_palette("Darjeeling1")
 
-darj1 <- wes_palette("Darjeeling1", 
-                      max(mon$estimate), 
+
+
+
+wes_palette("Rushmore1")
+
+
+
+pal <- wes_palette("Rushmore1", 
+                   max(mon$estimate), 
                    type = "continuous")
 
 
@@ -700,49 +730,49 @@ estimate_map <-
                              label.hjust = 0.5)) 
 
 
-
+----
 estimate_map
 
 
-
+----
 estimate_map + 
   coord_map("albers", 
             lat0 = 39, 
             lat1 = 45)
 
 
-
+----
 estimate_map + 
   coord_quickmap()
 
 
-
+----
 estimate_map + 
   coord_map("azequalarea")
 
 
-
+----
 estimate_map + 
   coord_map("bonne", 
             lat0 = 50)
 
 
-
+----
 estimate_map + 
   coord_map("cylindrical")
 
 
-
+----
 estimate_map + 
   coord_map("gilbert")
 
 
-
+----
 estimate_map + 
   coord_map("lagrange")
 
 
-
+----
 estimate_map + 
   coord_map("mercator")
 
@@ -752,12 +782,12 @@ estimate_map +
   coord_map()
 
 
-
+----
 estimate_map + 
   coord_map("orthographic")
 
 
-
+----
 estimate_map + 
   coord_map("stereographic")
 
@@ -773,3 +803,4 @@ ggsave("poverty_estimates.pdf",
        width = 297,
        height = 210,
        units = "mm")
+

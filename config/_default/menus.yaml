@@ -58,6 +58,8 @@ assignment:
     weight: 1
   - name: Weekly Tasks
     weight: 2
+  - name: Possible Solutions
+    weight: 3
 resource:
   - name: Resources
     weight: 1

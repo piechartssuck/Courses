@@ -17,6 +17,7 @@ lessons:
     lesson: "02-lesson"
     example: "02-example"
     assignment: "02-assignment"
+    solutions: "02-solutions"
     due: "02-due"
 
   - title: 'ggplotting'
@@ -25,6 +26,7 @@ lessons:
     lesson: "03-lesson"
     example: "03-example"
     assignment: "03-assignment"
+    solutions: "03-solutions"
     due: "03-due"
 
   - title: 'Tidy Themes'
@@ -38,6 +40,7 @@ lessons:
     lesson: "05-lesson"
     example: "05-example"
     assignment: "05-assignment"
+    solutions: "05-solutions"
     due: "05-due"
 
   - title: "I'm the Map"
@@ -46,6 +49,7 @@ lessons:
     lesson: "06-lesson"
     example: "06-example"
     assignment: "06-assignment"
+    solutions: "06-solutions"
     due: "06-due"
 
   - title: 'A Map to the Past'
@@ -54,6 +58,7 @@ lessons:
     lesson: "07-lesson"
     example: "07-example"
     assignment: "07-assignment"
+    # solutions: "07-solutions"
     due: "07-due"
 
   # - title: 'Who Evaluates the Evaluators?'
