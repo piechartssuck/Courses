@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="What to Do: Replicate Using ggplot  Visualization Choices  Choice 1: Government Data Choice 2: Surface Temperatures Choice 3: Average Temperatures Choice 4: Baseball   How to Do It:  More about Rmarkdown     .">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/assignment/05-assignment-copy/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://edp693e.theoreticalphysed.com/assignment/05-assignment-copy/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://edp693e.theoreticalphysed.com/assignment/05-assignment-copy/">
+  <meta property="og:title" content="Making Copies | Data Visualization">
+  <meta property="og:description" content="What to Do: Replicate Using ggplot  Visualization Choices  Choice 1: Government Data Choice 2: Surface Temperatures Choice 3: Average Temperatures Choice 4: Baseball   How to Do It:  More about Rmarkdown     ."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
+
+<script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
+<link rel="shortcut icon" href="https://edp693e.theoreticalphysed.com/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp693e.theoreticalphysed.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp693e.theoreticalphysed.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp693e.theoreticalphysed.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp693e.theoreticalphysed.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp693e.theoreticalphysed.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp693e.theoreticalphysed.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp693e.theoreticalphysed.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp693e.theoreticalphysed.com/img/android-icon-192x192.png" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="96x96" />
+<meta name="application-name" content="EDP 693e: Data Visualization" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
+
+
+  <title>Making Copies | Data Visualization</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/readings/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/due/"><span>Due?</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/professor/"><span>Professor</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/">About the Assignments</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/01-assignment/">Weekly Tasks</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/01-assignment/">Week 1: Friends Don&#39;t Let Friends Use Pie Charts</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/02-assignment/">Week 2: Base R is a Thing</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/03-assignment/">Week 3: ggplotting</a>
+      </li>
+      
+      <li class="active">
+        <a href="/assignment/05-assignment-copy/">Week 5: Making Copies</a>
+      </li>
+      
+      <li >
+        <a href="/assignment/07-assignment/">Week 7: A Map to the Past</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/assignment/06-assignment-sols/">Possible Solutions</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/assignment/06-assignment-sols/">Week 6: I&#39;m the Map</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Making Copies</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="05-assignment copy_files/header-attrs/header-attrs.js"></script>
+<script src="05-assignment copy_files/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#what-to-do-replicate-using-ggplot">What to Do: Replicate Using <code>ggplot</code></a>
+<ul>
+<li><a href="#visualization-choices">Visualization Choices</a>
+<ul>
+<li><a href="#choice-1-government-data">Choice 1: Government Data</a></li>
+<li><a href="#choice-2-surface-temperatures">Choice 2: Surface Temperatures</a></li>
+<li><a href="#choice-3-average-temperatures">Choice 3: Average Temperatures</a></li>
+<li><a href="#choice-4-baseball">Choice 4: Baseball</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#how-to-do-it">How to Do It:</a>
+<ul>
+<li><a href="#more-about-rmarkdown">More about Rmarkdown</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #733367;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="what-to-do-replicate-using-ggplot" class="section level1">
+<h1>What to Do: Replicate Using <code>ggplot</code></h1>
+<p>In this task, you are asked to do three things:</p>
+<ul>
+<li><p>Pick <strong>one</strong> of the Plots given in the tabs.</p></li>
+<li><p>Replicate a <strong>static version</strong> of it using <code>ggplot2</code></p></li>
+<li><p>Produce <strong>one alternative visualization</strong> using the same dataset in <code>ggplot2</code></p></li>
+</ul>
+<div id="visualization-choices" class="section level2">
+<h2>Visualization Choices</h2>
+<div id="choice-1-government-data" class="section level3">
+<h3>Choice 1: Government Data</h3>
+<p>This graphic was published in the <a href="https://archive.nytimes.com/screenshots/www.nytimes.com/interactive/2012/11/23/us/state-government-control-since-1938.jpg" target="_blank">New York Times</a> back in 2012. You are tasked to replicate and construct an alternative for it.</p>
+<p><img src="/assignment/05-assignment_files/Choice1.png" /></p>
+<p>Download the <a href="/visuals/Choice1.png">visual</a></p>
+<p>Download the data set <a href="/data/divided.csv"><code>divided.csv</code></a> to construct this visualization.</p>
+</div>
+<div id="choice-2-surface-temperatures" class="section level3">
+<h3>Choice 2: Surface Temperatures</h3>
+<p>You are looking at the surface temperature Dec 2001 on a very coarse 24 by 24 grid covering Central America. You are tasked to replicate and construct an alternative for it (Hint: use <code>geom_tile()</code>)</p>
+<p><img src="/assignment/05-assignment_files/Choice2.png" /></p>
+<p><a href="/visuals/Choice2.png" width="70%">Download the visual</a></p>
+<p>To get the data, run the following in your script and Rmarkdown document:</p>
+<pre class="r"><code>install.packages(&quot;nasaweather&quot;)
+
+library(nasaweather)
+
+jan2001 &lt;- subset(atmos, year == 2000 &amp; month == 1)</code></pre>
+</div>
+<div id="choice-3-average-temperatures" class="section level3">
+<h3>Choice 3: Average Temperatures</h3>
+<p>This data set for the following plot includes the average mean, minimum, and maximum daily temperature in Corvallis, Oregon based on a ten year span. You are tasked to replicate and construct an alternative for it: (Hint: use <code>geom_pointrange()</code>)</p>
+<p><img src="/assignment/05-assignment_files/Choice3.png" /></p>
+<p>Download the <a href="/visuals/Choice3.png">visual</a></p>
+<p>Download the data set <a href="/data/corv.csv"><code>corv.csv</code></a> to construct this visualization.</p>
+</div>
+<div id="choice-4-baseball" class="section level3">
+<h3>Choice 4: Baseball</h3>
+<p>This graphic was published in the <a href="https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?ref=baseball" target="_blank">New York Times</a> back in 2013. You are tasked to replicate and construct an alternative for it.</p>
+<p><img src="/assignment/05-assignment_files/Choice4.png" /></p>
+<p><a href="/visuals/Choice4.png">Download the visual</a></p>
+<p>To get the data, run the following in your script and Rmarkdown document:</p>
+<pre class="r"><code>install.packages(Lahman)
+library(Lahman)  
+library(dplyr)
+
+# Pipes everwhere!
+so_by_team &lt;- select(Teams, yearID, name, G, SO) %&gt;%
+               mutate(strikeouts_per_game = SO/G) 
+
+avg_so_by_year  &lt;- so_by_team %&gt;% 
+                    group_by(yearID) %&gt;%
+                    summarise(avg_so = mean(strikeouts_per_game))
+
+# you can either use both so_by_team &amp; avg_so_by_year,
+# or use only so_by_team and look at ?stat_summary</code></pre>
+</div>
+</div>
+</div>
+<div id="how-to-do-it" class="section level1">
+<h1>How to Do It:</h1>
+<ol style="list-style-type: decimal">
+<li><p>Open the <code>Relications_Practice_Script.R</code> blank R script or simple create one as you normally would. Then get to replicating one of the visualizations given above using the corresponding data set.</p></li>
+<li><p>After you are happy with your plots, double click and open the file <code>Replications.rmd</code>. It should load up into RStudio.</p></li>
+<li><p>Follow the directions and copy the appropriate parts over. Make sure to compile the document!</p></li>
+<li><p>Submit the PDF output of the Rmarkdown to <a href="https://2021edp693e.slack.com/archives/C01NJ8H33V3" target="_blank">#wk-5-replications</a></p></li>
+</ol>
+<p>You can download all of the scripts to fetch data, <code>Relications_Practice_Script.R</code> and <code>Replications.rmd</code> by clicking below</p>
+<a href="data:application/zip;base64,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" download="Week 5 Task Files.zip">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the files</button>
+</a>
+<div id="more-about-rmarkdown" class="section level2">
+<h2>More about Rmarkdown</h2>
+<p>Its not a bad idea to see what you can do with an Rmarkdown document. For example, you can actually output a file in nearly any format (e.g. Pages, PDF, HTML, Word, etc.) In fact this course website is written on an Rmarkdown platform called <a href="https://bookdown.org/yihui/blogdown/" target="_blank">Blogdown</a>.</p>
+<p>Here are some resources that may be helpful at the current time:</p>
+<ul>
+<li><a href="https://ourcodingclub.github.io/tutorials/rmarkdown/" target="_blank">Getting Started with Rmarkdown</a></li>
+<li><a href="https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf" target="_blank">R Markdown Cheat Sheet</a></li>
+<li><a href="https://www.rostrum.blog/2018/09/24/knitting-club/" target="_blank">R Markdown for beginners</a></li>
+<li><a href="/resource/rmarkdown/" target="_blank">Using R Markdown</a></li>
+</ul>
+</div>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/Courses/edp693e/edit/master/content/assignment/05-assignment%20copy.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 693e: Data Visualization (Spring 2021)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://counselingandlearningsci.wvu.edu/" target="_blank" rel="noopener">Counseling &amp; Learning Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope fa-fw"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next 15 weeks) &emsp;&emsp;
+                <i class="far fa-clock fa-fw"></i> You pick!
+                <br><i class="fas fa-university fa-fw"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2021 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+
+            <p>This site was created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with customizations heavily influenced by Dr. Andrew Heiss'<a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> site<a/>. </p>
+
+            <p><a href="https://github.com/piechartssuck/Courses/tree/edp693e" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.f30a8b5a880e824aab9653942c89109b.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 ---
-title: "I'm the Map Possible Solutions"
-linktitle: "Week 6: I'm the Map Possible Solutions"
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map Example"
 output:
   blogdown::html_page:
     toc: true
@@ -424,7 +424,7 @@ ggplot() +
 ## County Level Data
 Tract level data is sometimes tricky to get, in that not all data sets with geographies have them. Sticking to the widespread surveys such as the decennial census and acs will always work, while others are up in the air.
 
-```{r}
+```{r warning=FALSE,message=FALSE,results='hide'}
 kansas <- get_acs(state = "KS", 
                   geography = "county", 
                   variables = vars_of_interest,
@@ -475,7 +475,7 @@ kansas %>%
 ## Tract Level Data
 Tract level data is sometimes tricky to get, in that not all data sets with geographies have them. Sticking to the widespread surveys such as the decennial census and acs will always work, while others are up in the air.
 
-```{r}
+```{r warning=FALSE,message=FALSE,results='hide'}
 doug <- get_acs(state = "KS", 
                 county = "Douglas", 
                 geography = "tract", 
