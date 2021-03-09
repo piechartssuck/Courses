@@ -464,21 +464,21 @@ ggplot(team_strikeouts,
   annotate("text", x = 2010, y = 8.7, 
            label = "2012\nLeague average",
            fontface = 2,
-           size = 4) +
+           size = 2) +
   annotate("text", x = 2010, y = 8, 
            label = "7.5",
            fontface = 2,
            color = "#00688b",
-           size = 6) +
+           size = 4) +
   annotate("text", x = 1924, y = 1.5, 
            label = "League average\n1924", 
            fontface = 2,
-           size = 4) +
+           size = 2) +
   annotate("text", x = 1924, y = 2.2, 
            label = "2.7", 
            fontface = 2,
            color = "#00688b",
-           size = 6) +
+           size = 4) +
   annotate(geom ="text", x = 1917, y = 1, 
            size = 3.0, 
            color = "#7e7e7e", 
