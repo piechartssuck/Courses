@@ -398,7 +398,7 @@ showtext_auto()</code></pre>
   annotate(&quot;text&quot;, x = 2010, y = 8.7, 
            label = &quot;2012\nLeague average&quot;,
            fontface = 2,
-           size = 2) +
+           size = 3) +
   annotate(&quot;text&quot;, x = 2010, y = 8, 
            label = &quot;7.5&quot;,
            fontface = 2,
@@ -407,7 +407,7 @@ showtext_auto()</code></pre>
   annotate(&quot;text&quot;, x = 1924, y = 1.5, 
            label = &quot;League average\n1924&quot;, 
            fontface = 2,
-           size = 2) +
+           size = 3) +
   annotate(&quot;text&quot;, x = 1924, y = 2.2, 
            label = &quot;2.7&quot;, 
            fontface = 2,
@@ -458,7 +458,7 @@ showtext_auto()</code></pre>
            fill=&quot;#FFFFFF&quot;,
            label = &quot;Strikeouts per game per team&quot;,
            label.size = NA,
-           hjust = 0.29) +
+           hjust = 0.5) +
   scale_x_continuous(&quot;&quot;,
                    breaks=c(1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010), 
                    limits=c(1900,2015)) +
@@ -489,7 +489,7 @@ showtext_auto()</code></pre>
                                           color = &quot;#dfdfdf&quot;),
         panel.grid.minor = element_blank()) +
   theme(legend.position = c(0, 0.9), 
-        legend.background = element_rect(fill=&quot;#FFFFFF&quot;,
+        legend.background = element_rect(fill=NA,
                                          color=NA),
         legend.justification=&#39;left&#39;,
         legend.direction=&#39;horizontal&#39;,

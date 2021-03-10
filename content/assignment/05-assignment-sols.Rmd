@@ -464,7 +464,7 @@ ggplot(team_strikeouts,
   annotate("text", x = 2010, y = 8.7, 
            label = "2012\nLeague average",
            fontface = 2,
-           size = 2) +
+           size = 3) +
   annotate("text", x = 2010, y = 8, 
            label = "7.5",
            fontface = 2,
@@ -473,7 +473,7 @@ ggplot(team_strikeouts,
   annotate("text", x = 1924, y = 1.5, 
            label = "League average\n1924", 
            fontface = 2,
-           size = 2) +
+           size = 3) +
   annotate("text", x = 1924, y = 2.2, 
            label = "2.7", 
            fontface = 2,
@@ -524,7 +524,7 @@ ggplot(team_strikeouts,
            fill="#FFFFFF",
            label = "Strikeouts per game per team",
            label.size = NA,
-           hjust = 0.29) +
+           hjust = 0.5) +
   scale_x_continuous("",
                    breaks=c(1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010), 
                    limits=c(1900,2015)) +
@@ -555,7 +555,7 @@ ggplot(team_strikeouts,
                                           color = "#dfdfdf"),
         panel.grid.minor = element_blank()) +
   theme(legend.position = c(0, 0.9), 
-        legend.background = element_rect(fill="#FFFFFF",
+        legend.background = element_rect(fill=NA,
                                          color=NA),
         legend.justification='left',
         legend.direction='horizontal',
