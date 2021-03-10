@@ -389,7 +389,8 @@ showtext_auto()</code></pre>
                size = 0.1) +
   stat_summary(fun = &#39;mean&#39;, 
                geom =c(&quot;point&quot;), 
-               color = &quot;#00688b&quot;) +
+               color = &quot;#00688b&quot;,
+               size = 0.3) +
   stat_summary(aes(shape=&quot;League average&quot;),
                fun = &#39;mean&#39;, 
                geom =c(&quot;line&quot;), 
@@ -403,7 +404,7 @@ showtext_auto()</code></pre>
            label = &quot;7.5&quot;,
            fontface = 2,
            color = &quot;#00688b&quot;,
-           size = 4) +
+           size = 4.3) +
   annotate(&quot;text&quot;, x = 1924, y = 1.5, 
            label = &quot;League average\n1924&quot;, 
            fontface = &quot;bold&quot;,
@@ -412,34 +413,34 @@ showtext_auto()</code></pre>
            label = &quot;2.7&quot;, 
            fontface = 2,
            color = &quot;#00688b&quot;,
-           size = 4) +
+           size = 4.3) +
   annotate(geom =&quot;text&quot;, x = 1917, y = 1, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;U.S. enters\nWorld War I.&quot;, 
            hjust = 0.5) +
   annotate(geom =&quot;text&quot;, x = 1945, y = 1.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;Players return\nfrom World War II.&quot;, 
            hjust = 0.5) +
   annotate(geom =&quot;text&quot;, x = 1963, y = 2.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;Strike zone enlarged\nfrom 1963-68.&quot;, 
            hjust = 0.5) +
   annotate(geom =&quot;text&quot;, x = 1969, y = 8.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;Pitching had become so dominant\nin the 1960s that the mound\nwas lowered in 1969.&quot;, 
            hjust = 0.5) +
   annotate(geom =&quot;text&quot;, x = 1972, y = 1.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;Designated hitter\nrule took effect.&quot;, 
            hjust = 0.5) +
   annotate(geom =&quot;text&quot;, x = 2006, y = 3.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = &quot;#7e7e7e&quot;, 
            label = &quot;Mitchell report\non steroids.&quot;, 
            hjust = 0.6) +

@@ -455,7 +455,8 @@ ggplot(team_strikeouts,
                size = 0.1) +
   stat_summary(fun = 'mean', 
                geom =c("point"), 
-               color = "#00688b") +
+               color = "#00688b",
+               size = 0.3) +
   stat_summary(aes(shape="League average"),
                fun = 'mean', 
                geom =c("line"), 
@@ -469,7 +470,7 @@ ggplot(team_strikeouts,
            label = "7.5",
            fontface = 2,
            color = "#00688b",
-           size = 4) +
+           size = 4.3) +
   annotate("text", x = 1924, y = 1.5, 
            label = "League average\n1924", 
            fontface = "bold",
@@ -478,34 +479,34 @@ ggplot(team_strikeouts,
            label = "2.7", 
            fontface = 2,
            color = "#00688b",
-           size = 4) +
+           size = 4.3) +
   annotate(geom ="text", x = 1917, y = 1, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "U.S. enters\nWorld War I.", 
            hjust = 0.5) +
   annotate(geom ="text", x = 1945, y = 1.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "Players return\nfrom World War II.", 
            hjust = 0.5) +
   annotate(geom ="text", x = 1963, y = 2.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "Strike zone enlarged\nfrom 1963-68.", 
            hjust = 0.5) +
   annotate(geom ="text", x = 1969, y = 8.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "Pitching had become so dominant\nin the 1960s that the mound\nwas lowered in 1969.", 
            hjust = 0.5) +
   annotate(geom ="text", x = 1972, y = 1.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "Designated hitter\nrule took effect.", 
            hjust = 0.5) +
   annotate(geom ="text", x = 2006, y = 3.5, 
-           size = 3.0, 
+           size = 2.0, 
            color = "#7e7e7e", 
            label = "Mitchell report\non steroids.", 
            hjust = 0.6) +
