@@ -419,7 +419,7 @@ ba_im <- ggdraw() + draw_image(here("static", "img", "assignments", "Choice4.png
 ```
 
 ```{r eval=TRUE, echo=FALSE}
-# Pipes everwhere!
+# Pipes everywhere!
 team_strikeouts <- select(Teams, yearID, name, G, SO) %>%
                    mutate(strikeouts_per_game = SO/G) 
 
@@ -509,7 +509,7 @@ ggplot(team_strikeouts,
            size = 2.0, 
            color = "#7e7e7e", 
            label = "Mitchell report\non steroids.", 
-           hjust = 0.6) +
+           hjust = 0.5) +
   annotate(geom="label", x = 1925, y = 9, 
            size = 2.0, 
            fontface = 2,
@@ -525,7 +525,7 @@ ggplot(team_strikeouts,
            fill="#FFFFFF",
            label = "Strikeouts per game per team",
            label.size = NA,
-           hjust = 0.8) +
+           hjust = 0.2) +
   scale_x_continuous("",
                    breaks=c(1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010), 
                    limits=c(1900,2015)) +
