@@ -140,8 +140,8 @@ library(showtext)
 library(nasaweather)
 library(Lahman)
 font_add_google("Libre Franklin", "libre")
-font_add_google("Playfair Display", "playfair")
-font_add("Arial", "/Library/Fonts/Supplemental/Arial.ttf")
+font_add("Arial", "/System/Library/Fonts/Supplemental/Arial.ttf")
+font_add("Georgia", "/System/Library/Fonts/Supplemental/Georgia.ttf")
 showtext_auto()
 ```
 
@@ -167,7 +167,7 @@ library(magick)
 library(fs)
 library(showtext)
 font_add_google("Libre Franklin", "libre")
-font_add_google("Playfair Display", "playfair")
+font_add_google("Georgia Display", "Georgia")
 font_add("Arial", "/Library/Fonts/Supplemental/Arial.ttf")
 showtext_auto()
 ```
@@ -535,13 +535,13 @@ ggplot(team_strikeouts,
                      position = "right"
 ) +
   theme_minimal() +
-  theme(plot.title = element_text(family = "playfair",
+  theme(plot.title = element_text(family = "Georgia",
                                   face = "bold",
                                   size = 14, 
                                   color = "#000000", 
                                   margin = margin(b = 0), 
                                   vjust = 0),
-        plot.subtitle = element_text(family = "playfair",
+        plot.subtitle = element_text(family = "Georgia",
                                      size = 10, 
                                      color = "#000000", 
                                      margin = margin(b = 10), 

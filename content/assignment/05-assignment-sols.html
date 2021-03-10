@@ -164,7 +164,7 @@ library(magick)
 library(fs)
 library(showtext)
 font_add_google(&quot;Libre Franklin&quot;, &quot;libre&quot;)
-font_add_google(&quot;Playfair Display&quot;, &quot;playfair&quot;)
+font_add_google(&quot;Georgia Display&quot;, &quot;Georgia&quot;)
 font_add(&quot;Arial&quot;, &quot;/Library/Fonts/Supplemental/Arial.ttf&quot;)
 showtext_auto()</code></pre>
 </div>
@@ -469,13 +469,13 @@ showtext_auto()</code></pre>
                      position = &quot;right&quot;
 ) +
   theme_minimal() +
-  theme(plot.title = element_text(family = &quot;playfair&quot;,
+  theme(plot.title = element_text(family = &quot;Georgia&quot;,
                                   face = &quot;bold&quot;,
                                   size = 14, 
                                   color = &quot;#000000&quot;, 
                                   margin = margin(b = 0), 
                                   vjust = 0),
-        plot.subtitle = element_text(family = &quot;playfair&quot;,
+        plot.subtitle = element_text(family = &quot;Georgia&quot;,
                                      size = 10, 
                                      color = &quot;#000000&quot;, 
                                      margin = margin(b = 10), 
