@@ -167,8 +167,8 @@ library(magick)
 library(fs)
 library(showtext)
 font_add_google("Libre Franklin", "libre")
-font_add_google("Georgia Display", "Georgia")
-font_add("Arial", "/Library/Fonts/Supplemental/Arial.ttf")
+font_add("Arial", "/System/Library/Fonts/Supplemental/Arial.ttf")
+font_add("Georgia", "/System/Library/Fonts/Supplemental/Georgia.ttf")
 showtext_auto()
 ```
 
@@ -456,17 +456,17 @@ ggplot(team_strikeouts,
   stat_summary(fun = 'mean', 
                geom =c("point"), 
                color = "#00688b",
-               size = 0.3) +
+               size = 0.45) +
   stat_summary(aes(shape="League average"),
                fun = 'mean', 
                geom =c("line"), 
                color = "#00688b",
                show.legend = TRUE) +
-  annotate("text", x = 2010, y = 8.7, 
+  annotate("text", x = 2012, y = 8.7, 
            label = "2012\nLeague average",
            fontface = 2,
            size = 2) +
-  annotate("text", x = 2010, y = 8, 
+  annotate("text", x = 2012, y = 8, 
            label = "7.5",
            fontface = 2,
            color = "#00688b",
@@ -542,7 +542,7 @@ ggplot(team_strikeouts,
                                   margin = margin(b = 0), 
                                   vjust = 0),
         plot.subtitle = element_text(family = "Georgia",
-                                     size = 10, 
+                                     size = 8, 
                                      color = "#000000", 
                                      margin = margin(b = 10), 
                                      vjust = -2)) +

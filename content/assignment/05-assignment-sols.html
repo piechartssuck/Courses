@@ -164,8 +164,8 @@ library(magick)
 library(fs)
 library(showtext)
 font_add_google(&quot;Libre Franklin&quot;, &quot;libre&quot;)
-font_add_google(&quot;Georgia Display&quot;, &quot;Georgia&quot;)
-font_add(&quot;Arial&quot;, &quot;/Library/Fonts/Supplemental/Arial.ttf&quot;)
+font_add(&quot;Arial&quot;, &quot;/System/Library/Fonts/Supplemental/Arial.ttf&quot;)
+font_add(&quot;Georgia&quot;, &quot;/System/Library/Fonts/Supplemental/Georgia.ttf&quot;)
 showtext_auto()</code></pre>
 </div>
 </div>
@@ -390,17 +390,17 @@ showtext_auto()</code></pre>
   stat_summary(fun = &#39;mean&#39;, 
                geom =c(&quot;point&quot;), 
                color = &quot;#00688b&quot;,
-               size = 0.3) +
+               size = 0.45) +
   stat_summary(aes(shape=&quot;League average&quot;),
                fun = &#39;mean&#39;, 
                geom =c(&quot;line&quot;), 
                color = &quot;#00688b&quot;,
                show.legend = TRUE) +
-  annotate(&quot;text&quot;, x = 2010, y = 8.7, 
+  annotate(&quot;text&quot;, x = 2012, y = 8.7, 
            label = &quot;2012\nLeague average&quot;,
            fontface = 2,
            size = 2) +
-  annotate(&quot;text&quot;, x = 2010, y = 8, 
+  annotate(&quot;text&quot;, x = 2012, y = 8, 
            label = &quot;7.5&quot;,
            fontface = 2,
            color = &quot;#00688b&quot;,
@@ -476,7 +476,7 @@ showtext_auto()</code></pre>
                                   margin = margin(b = 0), 
                                   vjust = 0),
         plot.subtitle = element_text(family = &quot;Georgia&quot;,
-                                     size = 10, 
+                                     size = 8, 
                                      color = &quot;#000000&quot;, 
                                      margin = margin(b = 10), 
                                      vjust = -2)) +
