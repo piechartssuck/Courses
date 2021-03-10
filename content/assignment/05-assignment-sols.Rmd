@@ -434,7 +434,7 @@ You can either use both `team_strikeouts` & `avg_so_by_year`, or use only `team_
 ggplot(team_strikeouts,
        aes(yearID, strikeouts_per_game)) +
   geom_point (color="#dfdfdf",
-              size = 0.5) +
+              size = 0.3) +
   geom_segment(aes(x = 1917, y = 1.3, xend = 1917, yend = 3.5), 
                color = "#dfdfdf",
                size = 0.1) +
@@ -464,7 +464,7 @@ ggplot(team_strikeouts,
   annotate("text", x = 2010, y = 8.7, 
            label = "2012\nLeague average",
            fontface = 2,
-           size = 3) +
+           size = 2) +
   annotate("text", x = 2010, y = 8, 
            label = "7.5",
            fontface = 2,
@@ -472,7 +472,7 @@ ggplot(team_strikeouts,
            size = 4) +
   annotate("text", x = 1924, y = 1.5, 
            label = "League average\n1924", 
-           fontface = 2,
+           fontface = "bold",
            size = 3) +
   annotate("text", x = 1924, y = 2.2, 
            label = "2.7", 
@@ -524,7 +524,7 @@ ggplot(team_strikeouts,
            fill="#FFFFFF",
            label = "Strikeouts per game per team",
            label.size = NA,
-           hjust = 0.7) +
+           hjust = 0.8) +
   scale_x_continuous("",
                    breaks=c(1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010), 
                    limits=c(1900,2015)) +
@@ -559,7 +559,8 @@ ggplot(team_strikeouts,
                                          color=NA),
         legend.justification='left',
         legend.direction='horizontal',
-        legend.text = element_text(color = "#7e7e7e"),
+        legend.text = element_text(color = "#7e7e7e",
+                                   size = 8),
         legend.title = element_blank()) +
   labs(title = "Strikeouts on the Rise", 
        subtitle = "There were more strikeouts in 2012 than at any other time in major league history."
