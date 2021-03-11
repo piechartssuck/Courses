@@ -1,0 +1,534 @@
+---
+title: "Hooked on Feelings"
+linktitle: "Week 8: Hooked on Feelings"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 8
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This is a deeper exploration of mapping with a purpose. In this case, we are going to map the results of the 2016 Presidential Election. For a look at the maps we are going to do, take a look at this [Washington Post article](http://www.washingtonpost.com/wp-srv/special/business/states-most-threatened-by-trade/){target="_blank"}.
+
+# Preliminary Items
+
+## First Things First! Download the script and data set
+
+Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
+
+[Week 8 materials](/example/08-example_files/Week8materials.zip)
+
+##  Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1.  Open up the included script by going to `File > Open File` or double click the file itself if RStudio is your default program for opening `.R` files.
+2.  To set your working directory:
+  - Go to the menu bar and select `Session > Set Working Directory > To Source File Location` OR
+  - run `setwd(dirname(rstudioapi::getActiveDocumentContext()$path))`^[Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.]
+
+## Loading libraries
+
+Go ahead and load these or install and then load them.
+```{r message=FALSE}
+library(tidyverse)
+library(tidytext)
+library(glue)
+```
+
+We should first take a look at the new ones being used here
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_walk <- 
+  
+  tibble(
+   
+    name <- c("`tidyverse`",
+              "`tidytext`",
+              "`glue`"),
+    
+    description <- c("Nope",
+                     "Provides the tools to make a text mining experience tidy",
+                     "A tidyverse package that gives the power to concatenate strings in a way that's tidy"
+                     ),
+    
+    github <- c("[Github](https://github.com/tidyverse/tidyverse){target='_blank'}",    
+                "[Github](https://github.com/juliasilge/tidytext){target='_blank'}",
+                "[Github](https://github.com/tidyverse/glue){target='_blank'}"
+                ),
+    
+    example <- c("[Tutorial](https://www.datacamp.com/community/tutorials/tidyverse-tutorial-r){target='_blank'}",
+                 "[Vignette](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html){target='_blank'}",
+                "[Vignette](https://glue.tidyverse.org/reference/glue.html){target='_blank'}"
+                ),
+    
+    .name_repair = "minimal"
+    
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+packages_list_walk %>%
+  kbl(col.names = c("Library", "Description", "Repository", "Example"),
+      "html",
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>% 
+  column_spec(4, width = "10em") %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## Loading Data
+
+We'll be using text data, in particular state of the union speeches. These are annual narratives by the President of the United States given to a joint session of congress. In each, the President reviews the previous year and lays out his legislative agenda for the coming year. This dataset contains the full text of the State of the Union address from 1989 (Reagan) to 2017 (Trump).
+
+Let's get a list of the files in the directory
+
+```{r echo=TRUE,eval=FALSE}
+files <- list.files("state-of-the-union-corpus-1989-2017")
+
+files
+```
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+files <- list.files(here::here("static", "data", "state-of-the-union-corpus-1989-2017"))
+
+files
+```
+
+We'll bring in the first file
+```{r}
+files[1]
+```
+
+Stick together the path to the file and 1st file name
+```{r echo=TRUE,eval=FALSE}
+fileName <- glue("state-of-the-union-corpus-1989-2017/", files[1], sep = "") %>%
+              trimws()
+
+fileName
+```
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+fileName <- glue(here::here("static", "data", "state-of-the-union-corpus-1989-2017"), files[1], sep = "") %>%
+              trimws()
+
+fileName
+```
+
+read in the text and clean it up by removing any dollar signs since they mean something different in R
+```{r echo=TRUE,eval=FALSE}
+fileText <- glue(read_file(fileName)) %>%
+              gsub("\\$", "", fileText)
+
+fileText
+```
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+fileText <- read_file(here::here("static", "data", "state-of-the-union-corpus-1989-2017", "Bush_1989.txt")) %>%
+              trimws() 
+
+fileText <- gsub("\\$", "", fileText)
+
+fileText %>%
+  kbl() 
+```
+
+
+## Understanding NLP
+
+In a nutshell, computers and  people don't view or "understand" text in the same way - enter *Natural Language Processing* (NLP). Part of artificial intelligence, NLP acts as a middleman that deals with the reading, deciphering and understanding of natural language used by computers and humans. Some things you can do with this include the following with possible questions that address each method
+
++ **Authorship identification**: Can you correctly identify the author of a previously unseen address?
+
++ **Parsing**: Can you train implement a parser to automatically extract the syntactic relationships between words?
+
++ **Sentiment analysis**: Are there differences in tone between different Presidents? Presidents from different parties?
+
++ **Topic modeling**: Which topics have become more popular over time? Which have become less popular?
+
+# Sentiment Analysis
+
+## What is it?
+
+A sentiment analysis is the computational task of automatically determining what feelings a writer is expressing in text. Sentiment is often framed as a binary distinction (positive vs. negative), but it can also be a more fine-grained, like identifying the specific emotion an author is expressing (like fear, joy or anger).
+
+It is used for many applications, especially in assessing consumers. Some examples of applications for sentiment analysis include
+
++ Analyzing the social media discussion around a certain topic
+
++ Evaluating survey responses
+
++ Determining whether product reviews are polar and to what degree
+
+A sentiment analysis is not perfect and as with any automatic analysis of language, you will have errors in your results. It also cannot tell you why a writer is feeling a certain way. However, it can be useful to quickly summarize some qualities of text, especially if you have so much text that a human reader cannot analyze all of it.
+
+## How Does it Work?
+
+There are many ways to do sentiment analysis and most approaches use the same general idea
+
+1. Create or find a list of words associated with strongly positive or negative sentiment.
+
+2. Count the number of positive and negative words in the text.
+
+3. Analyze the mix of positive to negative words. Many positive words and few negative words indicates positive sentiment, while many negative words and few positive words indicates negative sentiment.
+
+## What is an Example?
+
+The first step, creating or finding a word list (also called a **lexicon**), is generally the most time-consuming. While you can often use a lexicon that already exists, if your text is discussing a specific topic you may need to add to or modify it.
+
+*Sick* is an example of a word that can have positive or negative sentiment depending on what it's used to refer to. If you're discussing a pet store that sells a lot of sick animals, the sentiment is probably negative. On the other hand, if you're talking about a skateboarding instructor who taught you how to do a lot of sick flips, the sentiment is probably very positive.
+
+## What are the steps?
+
+Generally this is what you have to do
+
+### Tokenize 
+
+*Tokenization* is process of taking a bunch of characters (i.e. strings) and chopping the up into little pieces called *tokens*. Notice that actual "words" are not necessary here. This is important because it will allow us to use parts of words as you'll see soon!
+
+```{r}
+tokens <- data_frame(text = fileText) %>% 
+              unnest_tokens(word, text)
+tokens
+```
+
+### Filter Stop Words
+
+In text analysis, we tend to remove *stop words* which are terms that are not useful for an analysis like "and", “of”, "the", etc. Here we use `anti_join()` to get rid of those terms from our data set.
+
+```{r}
+data(stop_words)
+
+tidy_tokens <- tokens %>%
+               anti_join(stop_words)
+```
+
+Let's see a count of the remaining terms 
+
+```{r}
+tidy_tokens %>%
+  count(word, sort = TRUE) 
+```
+
+and plot them to get a visual filtering on occurrences greater than five for the sake of space
+
+```{r}
+tidy_tokens %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 5) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word, fill=n)) +
+  geom_col() +
+  theme_minimal() +
+  labs(y = NULL)
+```
+
+### Find Polarities
+
+Now that we have a list of tokens, we need to compare them against a list of words with either positive or negative sentiment.
+A list of words associated with a specific sentiment is usually called a **sentiment lexicon**. Because we're using the `tidytext` package, we actually already have some of these lists. I'm going to be using the "bing" list, which was developed by Bing Liu and co-authors.
+
+```{r}
+# Get the sentiment from the first text: 
+speech_bing_descriptives <- tokens %>%
+  inner_join(get_sentiments("bing")) %>% # pull out only sentiment words
+  count(sentiment) %>% # count the # of positive & negative words
+  spread(sentiment, n, fill = 0) %>% # made data wide rather than narrow
+  mutate(sentiment = positive - negative) # of positive words - # of negative words
+
+speech_bing_descriptives
+```
+
+So this text has 117 negative polarity words and 240 positive polarity words. This means that there are 123 more positive than negative words in this text. Now that we know how to get the sentiment for a given text, let's write a function to do this more quickly and easily and then apply that function to every text in our dataset.
+
+## Another Example
+
+The Harry Potter R package `harrypotter` on GitHub contains the text for all seven books in the Harry Potter series, by JK Rowling.  Below, I have included the code required to connect to the  ackage using `devtools`, as well as the other packages required for the basic text analytics.
+
+### 
+
+Loading libraries
+
+Go ahead and load these or install and then load them.
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+library(wordcloud)
+library(devtools)
+library(tidyverse)      
+library(stringr)        
+library(tidytext)
+library(dplyr)
+library(reshape2)
+library(igraph)
+library(ggraph)
+library(harrypotter)
+```
+
+After downloading the data from the harrypotter package on github, we can do a bit of data shaping.  The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we tokenize the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears. 
+
+```{r, warning=FALSE}
+titles <- c("Philosopher's Stone", "Chamber of Secrets", "Prisoner of Azkaban",
+            "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince",
+            "Deathly Hallows")
+
+books <- list(philosophers_stone, chamber_of_secrets, prisoner_of_azkaban,
+           goblet_of_fire, order_of_the_phoenix, half_blood_prince,
+           deathly_hallows)
+  
+series <- tibble()
+
+for(i in seq_along(titles)) {
+        
+        clean <- tibble(chapter = seq_along(books[[i]]),
+                        text = books[[i]]) %>%
+             unnest_tokens(word, text) %>%
+             mutate(book = titles[i]) %>%
+             select(book, everything())
+
+        series <- rbind(series, clean)
+}
+
+# set factor to keep books in order of publication
+series$book <- factor(series$book, levels = rev(titles))
+
+series
+```
+
+
+We can get simple counts for each word using the count function.  The word "the" occurs 51593 times in the Harry Potter series.
+```{r}
+series %>% count(word, sort = TRUE)
+```
+
+Many of the words in the top ten most frequently appearing words are stop-words such as "the", "and", "to", etc., so let's discard those for now.  Below, you can see a word cloud showing the most frequently occurring non-stop words in the series. The cloud contains the top 100 most frequently occurring words, and the larger a word appears in the cloud, the more frequently that word occurred in the text. It comes as no surprise to Harry Potter readers that most of the largest words in the cloud are names like "Harry", "Ron" and "Hermione".
+
+```{r, message=FALSE, warning=FALSE, fig.align='center'}
+series$book <- factor(series$book, levels = rev(titles))
+
+series %>% 
+  anti_join(stop_words) %>%
+  count(word) %>%
+  with(wordcloud(word, n, max.words = 100))
+```
+
+Now we can begin the sentiment analysis. For this portion, we will continue working with the text that contains stop-words.  The basic motivation behind sentiment analysis is to assess how positive or negative text is, based on a dictionary of words that have been previously classified as positive or negative.  This type of dictionary is called a sentiment lexicon.  The tidyverse has several built in lexicons for sentiment analysis, but for this example we will stick with 'nrc' and 'bing'.  The 'nrc' is a more advanced lexicon that categorizes words into several sentiment categories - *sadness*, *anger*, *positive*, *negative*, *trust*, etc.  A single word in this lexicon may fall into multiple categories.  Using the following code, we can get counts for the number of words in the Harry Potter series that fall into each of the categories addressed by 'nrc'. In the output, you can see that there were 56579 words in the series that are classified as 'negative' by the 'nrc' lexicon. Overall, it looks like there are more negative words in the series than positive words. There are also a lot of words related to anger and sadness.  
+
+Get the lexicons we'll be using by running these. You only have to do this once!
+
+```{r echo=TRUE, eval=FALSE}
+get_sentiments("afinn")
+get_sentiments("bing")
+get_sentiments("nrc")
+```
+
+And then tp see the in action
+```{r, message=FALSE, warning=FALSE}
+series %>%
+  right_join(get_sentiments("nrc")) %>%
+  filter(!is.na(sentiment)) %>%
+  count(sentiment, sort = TRUE)
+```
+
+The 'bing' lexicon only classifies words as positive or negative.  Below you can see that this lexicon picked up 39503 negative words in the Harry Potter series, and 29066 positive words. 
+
+```{r, message=FALSE, warning=FALSE}
+series %>%
+  right_join(get_sentiments("bing")) %>%
+  filter(!is.na(sentiment)) %>%
+  count(sentiment, sort = TRUE)
+```
+
+Similarly to the word cloud we created above, we can use the 'bing' lexicon to make a comparison cloud.  This cloud displays the 50 most frequently occurring words in the series that were categorized by 'bing', and color-codes them based on negative or positive sentiment.  You'll notice that words like "Harry"", "Hermione" and "Ron" don't appear in this cloud, because character names are not classified as positive or negative in 'bing'. 
+
+```{r, message=FALSE, warning=FALSE, fig.align='center'}
+series %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("#F8766D", "#00BFC4"),
+                   max.words = 50)
+```
+
+\newpage
+Now, let's see what the comparison cloud looks like with stop-words removed temporarily. 
+```{r, message=FALSE, warning=FALSE, fig.align='center'}
+series %>%
+  anti_join(stop_words) %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("#F8766D", "#00BFC4"),
+                   max.words = 50)
+```
+
+In the following code chunk, each book text is split into groups of 500 words, and counts for the number of positive and negative words in each group (based on the 'bing' lexicon) are calculated.  Then we subtract the number of negative words from the number of positive words in each group.  For example, if there were 341 positive words in a group and 159 negative words in the same group, the sentiment score for the group would be 182 (a positive sentiment score). We calculate this sentiment score for each 500 word group within each book in the series.  Using ggplot, we create bar charts for each book in the series that demonstrate how the sentiment score for the text groups changes as time passes in the series. Overall, the sentiment of the Harry Potter series appears to be negative. 
+
+Challenges: How do these plots change if you go back and leave all of the stop-words in the tibble? Does the size of the text groups (500 words vs. 1000 words) affect the analysis?  
+
+As a next step, one might look at the maximum sentiment score and the minimum sentiment score for each book to see what text groups produced the extreme scores. 
+
+```{r, message=FALSE, warning=FALSE}
+series %>%
+  group_by(book) %>% 
+  mutate(word_count = 1:n(),
+         index = word_count %/% 500 + 1) %>% 
+  inner_join(get_sentiments("bing")) %>%
+  count(book, index = index , sentiment) %>%
+  ungroup() %>%
+  spread(sentiment, n, fill = 0) %>%
+  mutate(sentiment = positive - negative,
+         book = factor(book, levels = titles)) %>%
+  ggplot(aes(index, sentiment, fill = book)) +
+  geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+  facet_wrap(~ book, ncol = 2, scales = "free_x")
+
+```
+
+Using single words as tokens for sentiment analysis can be less than ideal.  This is because nearby words add context - in particular, negations make the analysis tricky. For example, the word "good" is a positive word.  However, "My day was not good" has a negative sentiment, despite the presence of the word "good". A better example for the Harry Potter series would be that "magic" is considered to be a positive word, but "dark magic" would be have a negative meaning.  For further analysis of our Harry Potter text, let's look at pairs of words (bigrams). A bigram is a pair of words that appear consecutively in a text.  For example, if we look at the sentence "I ate purple grapes", the bigrams we can extract would be (I, ate), (ate, purple), and (purple, grapes). In the following code chunk, I repeat the process of shaping the text data from the beginning of the document, but this time I specify that bigrams should be used to tokenize the text rather than single words. 
+
+```{r}
+series <- tibble()
+
+for(i in seq_along(titles)) {
+  
+  temp <- tibble(chapter = seq_along(books[[i]]),
+                  text = books[[i]]) %>%
+    unnest_tokens(bigram, text, token = "ngrams", n = 2) %>%
+    ##Here we tokenize each chapter into bigrams
+    mutate(book = titles[i]) %>%
+    select(book, everything())
+  
+  series <- rbind(series, temp)
+}
+
+# set factor to keep books in order of publication
+series$book <- factor(series$book, levels = rev(titles))
+series
+```
+
+Again, we can use the count function to find the most common bigrams in the series.  
+
+```{r}
+series %>%
+  count(bigram, sort = TRUE)
+```
+
+As we saw with the single words, most of the most common bigrams contain stop-words. Let's remove those from our bigram tibble. 
+
+```{r}
+bigrams_separated <- series %>%
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+bigrams_filtered <- bigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word)
+
+# new bigram counts:
+bigrams_united <- bigrams_filtered %>%
+  unite(bigram, word1, word2, sep = " ")
+
+bigram_counts <- bigrams_united %>% 
+    count(bigram, sort = TRUE)
+```
+Now that we have removed the stop-words, we can see that the most frequently occurring bigram in the series is "Professor McGonagall".  The only bigrams in the top ten that don't contain character names are "Death Eaters", "Invisibility Cloak" and "Dark Arts". 
+
+Now, let's use our bigrams to practice tf-idf (term frequency -inverse document frequency).  In a nutshell, tf-idf is an analysis that seeks to identify how common a word is in a particular text, given how often it occurs in a group of texts.  For example, Professor Lupin was a very prominent character in "The Prisoner of Azkaban"", but not so much in the other books (and in the other books, he was not a professor).  A person who had not read all of the books could determine this by simply counting the number of times the name "Professor Lupin" occurs in "The Prisoner of Azkaban" and comparing that number to the frequency of that bigram in the rest of the books in the series.  To quantify this idea, the term frequency (the number of times a token appears in a document divided by the total number of tokens in the document) is multiplied by the inverse document frequency (the total number of documents divided by the number of documents containing the token). The chart below displays the ten bigrams with the highest tf-idf scores among the seven books in the series.  "Professor Umbridge", has the highest tf-idf score relative to "The Order of the Phoenix".  Any Harry Potter lover can tell you that we first meet Professor Umbridge in "The Order of the Phoenix", in which and she plays a major role.  In the other books in the series, her role ranges from small to non-existent. Thus, it makes sense that "Professor Umbridge" has a relatively high tf-idf score.  Beneath the chart, I have created a visual for the bigrams with the highest tf-idf scores.
+
+```{r}
+bigram_tf_idf <- bigrams_united %>%
+  count(book, bigram) %>%
+  bind_tf_idf(bigram, book, n) %>%
+  arrange(desc(tf_idf))
+
+bigram_tf_idf
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+plot_potter<- bigram_tf_idf %>%
+  arrange(desc(tf_idf)) %>%
+  mutate(bigram = factor(bigram, levels = rev(unique(bigram))))
+
+plot_potter %>% 
+  top_n(20) %>%
+  ggplot(aes(bigram, tf_idf, fill = book)) +
+  geom_col() +
+  labs(x = NULL, y = "tf-idf") +
+  coord_flip()
+```
+Now, to get an idea of how our sentiment analysis was affected by negations, let's find all the bigrams that have the word "not" as the first word in the bigram. 
+
+```{r}
+bigrams_separated %>%
+  filter(word1 == "not") %>%
+  count(word1, word2, sort = TRUE)
+```
+The first ten bigrams with "not" as the first word are boring, so let's remove stop-words from the `word2` column. 
+
+```{r}
+bigrams_separated <- bigrams_separated %>%
+  filter(word1 == "not") %>%
+  filter(!word2 %in% stop_words$word)%>%
+  count(word1, word2, sort = TRUE)
+
+bigrams_separated
+```
+
+```{r}
+BING <- get_sentiments("bing")
+
+not_words <- bigrams_separated %>%
+  filter(word1 == "not") %>%
+  filter(!word2 %in% stop_words$word)%>%
+  inner_join(BING, by = c(word2 = "word")) %>%
+  ungroup()
+
+not_words
+```
+
+Just looking at the top ten words in the list, we can see that most of the words that are preceded by "not" in the series, have negative sentiment.  This means, we may be over estimating the negative sentiment present in the text.  Of course, there are many other negation words such as "never", "no", etc. One could explore all of these possible negation words to get a better idea of how negation is affecting the sentiment analysis. 
+
+We can also create a graph that connects our most frequently occurring words with each other. Looking at the graph below, we can see a couple of larger clusters that give some context to what the series might be about.  For example, there is a cluster with the word "professor" in the center, with several other words connected to it such as"McGonagall" and "Lupin". 
+
+```{r}
+bigram_graph <- bigram_counts %>%
+  filter(n > 70) %>%
+  graph_from_data_frame()
+
+bigram_graph
+```
+```{r}
+set.seed(2017)
+
+ggraph(bigram_graph, layout = "fr") +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+```
+
+That's it for text analytics with the Harry Potter series.This is by no means a comprehensive analysis, but it should have demonstrated some of the basic facets of text mining with the `tidyverse` in R.

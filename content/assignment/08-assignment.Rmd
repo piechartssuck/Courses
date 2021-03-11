@@ -1,0 +1,268 @@
+---
+title: "Hooked on Feelings"
+linktitle: "Week 8: Hooked on Feelings"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 8
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read the Submission Directions
+Please submit a PDF out using an Rmarkdown file for this task^[If you use an external file for your data, please submit that as well.]. You can use a chapter book of your choice or give the process below a go.
+
+## Getting Text
+In addition to the packages listed in the example, you can use the library `gutenbergr` which gives you the ability to download and process public domain works from the [Project Gutenberg collection](https://www.gutenberg.org/){target="_blank"}. Follow the mini walkthrough below to see how to get a text of your choice^[As long as it exists in the public domain.].
+
+```{r}
+library(tidyverse)
+library(gutenbergr)
+library(tidytext)
+library(flextable)
+
+gutenberg_metadata
+```
+
+Let's say we want *The War of the Worlds*. We can get it by running the following
+
+```{r}
+war <- gutenberg_works() %>%
+            filter(title == "The War of the Worlds")
+
+war
+```
+
+Well that's a bit difficult to read. Instead of using the `DT` package, let's give `flextable` a go. 
+
+```{r}
+war_flex <- flextable(war) %>%
+                  autofit() %>%
+                  theme_booktabs()
+
+war_flex
+```
+
+That helps! If you're interested, more customization options can be found on the [package site](https://davidgohel.github.io/flextable/){target="_blank"}.
+
+Anyway we actually need the number, or *index* given by the 'gutenberg_id' column because we haven't done anything barring grabbing the catalog. In our case that index number is `36`. We can use that identification along with the `gutenberg_download()` function to get the entire text.
+
+```{r}
+war_get <- gutenberg_works() %>%
+                filter(title == "The War of the Worlds")
+
+war_get
+```
+
+```{r}
+war_text <- gutenberg_download(36)
+
+war_flex_text <- war_text %>%
+                      head(n = 15) %>%
+                      flextable() %>%
+                      autofit() %>%
+                      theme_booktabs()
+
+war_flex_text
+```
+
+But recall what we need is at least the title but here we'll also get chapter information.
+
+```{r}
+war_text_tc <- gutenberg_download(36,
+                                    meta_fields = "title")
+
+war_flex_text_tc <- war_text_tc %>%
+                          head(n = 15) %>%
+                          flextable() %>%
+                          autofit() %>%
+                          theme_booktabs()
+
+war_flex_text_tc
+```
+
+Now divide into documents, each representing one chapter. Please Note that this assumes that the text column includes the term *chapter*. So you can ether amend the `mutate` below or look at the data set to make sure it includes the term to indicate the different chapters.
+
+```{r}
+war_chapters <- war_text_tc %>%
+  group_by(title) %>%
+  mutate(chapter = cumsum(str_detect(text, regex("^chapter ", ignore_case = TRUE)))) %>%
+  ungroup() %>%
+  filter(chapter > 0) %>%
+  unite(document, title, chapter)
+
+war_chapters %>%
+  head(n = 15) %>%
+  flextable() %>%
+  autofit() %>%
+  theme_booktabs()
+```
+
+Then split the into words
+
+```{r}
+war_chapters_word <- war_chapters %>%
+                      unnest_tokens(word, text)
+```
+
+and assess document-word counts
+
+```{r}
+war_word_counts <- war_chapters_word %>%
+                    anti_join(stop_words) %>%
+                    count(document, word, sort = TRUE) %>%
+                    ungroup()
+
+war_word_counts
+```
+
+or better yet
+
+```{r}
+war_word_counts %>%
+  head(n = 15) %>%
+  flextable() %>%
+  autofit() %>%
+  theme_booktabs()
+```
+
+Now that is a form you should be able to work with!
+
+## Tasks
+
+Perform the following
+
+1. a chapterwise sentient analysis of your text using AFINN, Bing, and NRC with a visual of each.
+2. BONUS^[Will replace the 2016 general election map activity]: a topic model of the work with a visual of the top 10 topics by prevalence.
+
+:::

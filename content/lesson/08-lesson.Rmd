@@ -1,0 +1,23 @@
+---
+title: "Hooked on Feelings"
+linktitle: "Week 8: Hooked on Feelings"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 8
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have one module to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Analyzing US Census Data in R
+
+For more information about these, take a look at the tentative schedule.
+

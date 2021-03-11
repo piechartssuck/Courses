@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en-us" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Dr. Abhik Roy">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction Preliminary Items  First Things First! Download the script and data set Set your Working Directory Loading libraries Loading Data Steps for a Sentiment Analysis  Understanding NLP Tokenize Get Stop Words     Introduction This is a deeper exploration of mapping with a purpose.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/08-example/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#4974a5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i%7COverpass:400,400i,700,700i&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hueb6cb991f915e0e50394eeb6ea084443_68747_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://edp693e.theoreticalphysed.com/example/08-example/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@piechartssuck">
+  <meta property="twitter:creator" content="@piechartssuck">
+  
+  <meta property="og:site_name" content="Data Visualization">
+  <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/08-example/">
+  <meta property="og:title" content="Hooked on Feelings | Data Visualization">
+  <meta property="og:description" content="Introduction Preliminary Items  First Things First! Download the script and data set Set your Working Directory Loading libraries Loading Data Steps for a Sentiment Analysis  Understanding NLP Tokenize Get Stop Words     Introduction This is a deeper exploration of mapping with a purpose."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
+
+<script src="media/scripts/embedded-smart-player.min.js"></script>
+
+<script>
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
+</script>
+
+<link rel="shortcut icon" href="https://edp693e.theoreticalphysed.com/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp693e.theoreticalphysed.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp693e.theoreticalphysed.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp693e.theoreticalphysed.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp693e.theoreticalphysed.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp693e.theoreticalphysed.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp693e.theoreticalphysed.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp693e.theoreticalphysed.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp693e.theoreticalphysed.com/img/android-icon-192x192.png" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp693e.theoreticalphysed.com/img/favicon-16x16.png" sizes="96x96" />
+<meta name="application-name" content="EDP 693e: Data Visualization" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://edp693e.theoreticalphysed.com/img/ms-icon-144x144.png" />
+
+
+  <title>Hooked on Feelings | Data Visualization</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70"
+    data-target="#TableOfContents"
+    >
+
+    <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+    
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Data Visualization</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/syllabus/"><span>Syllabus</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/schedule/"><span>Schedule</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/readings/"><span>Readings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/lesson/"><span>Lessons</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/example/"><span>Examples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/assignment/"><span>Assignments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/due/"><span>Due?</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/professor/"><span>Professor</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http:/2021edp693e.slack.com" target="_blank" rel="noopener"><span><i class="fab fa-slack"></i></span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://rstudio.cloud/" target="_blank" rel="noopener"><span><i class="fab fa-r-project"></i></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+    
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+            
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/">Overview</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/">About the Examples</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/example/01-example/">Examples</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/example/01-example/">Week 1: Friends Don&#39;t Let Friends Use Pie Charts</a>
+      </li>
+      
+      <li >
+        <a href="/example/02-example/">Week 2: Base R is a Thing</a>
+      </li>
+      
+      <li >
+        <a href="/example/03-example/">Week 3: ggplotting</a>
+      </li>
+      
+      <li >
+        <a href="/example/04-example/">Week 4: Tidy Themes</a>
+      </li>
+      
+      <li >
+        <a href="/example/05-example/">Week 5: Making Copies</a>
+      </li>
+      
+      <li >
+        <a href="/example/06-example/">Week 6: I&#39;m the Map</a>
+      </li>
+      
+      <li >
+        <a href="/example/07-example/">Week 7: A Map to the Past</a>
+      </li>
+      
+      <li class="active">
+        <a href="/example/08-example/">Week 8: Hooked on Feelings</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+        </div>
+
+        
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+            <article class="article">
+
+                <div class="docs-article-container">
+                    <h1>Hooked on Feelings</h1>
+
+                    
+
+                    
+
+                    
+
+                    <div class="article-style">
+                        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#preliminary-items">Preliminary Items</a>
+<ul>
+<li><a href="#first-things-first-download-the-script-and-data-set">First Things First! Download the script and data set</a></li>
+<li><a href="#set-your-working-directory">Set your Working Directory</a></li>
+<li><a href="#loading-libraries">Loading libraries</a></li>
+<li><a href="#loading-data">Loading Data</a></li>
+<li><a href="#steps-for-a-sentiment-analysis">Steps for a Sentiment Analysis</a>
+<ul>
+<li><a href="#understanding-nlp">Understanding NLP</a></li>
+<li><a href="#tokenize">Tokenize</a></li>
+<li><a href="#get-stop-words">Get Stop Words</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is a deeper exploration of mapping with a purpose. In this case, we are going to map the results of the 2016 Presidential Election. For a look at the maps we are going to do, take a look at this <a href="http://www.washingtonpost.com/wp-srv/special/business/states-most-threatened-by-trade/" target="_blank">Washington Post article</a>.</p>
+</div>
+<div id="preliminary-items" class="section level1">
+<h1>Preliminary Items</h1>
+<div id="first-things-first-download-the-script-and-data-set" class="section level2">
+<h2>First Things First! Download the script and data set</h2>
+<p>Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
+<p><a href="/example/08-example_files/Week8materials.zip">Week 8 materials</a></p>
+</div>
+<div id="set-your-working-directory" class="section level2">
+<h2>Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up the included script by going to <code>File &gt; Open File</code> or double click the file itself if RStudio is your default program for opening <code>.R</code> files.</li>
+<li>To set your working directory:</li>
+</ol>
+<ul>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code> OR</li>
+<li>run <code>setwd(dirname(rstudioapi::getActiveDocumentContext()$path))</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+</ul>
+</div>
+<div id="loading-libraries" class="section level2">
+<h2>Loading libraries</h2>
+<p>Go ahead and load these or install and then load them.</p>
+<pre class="r"><code>library(tidyverse)
+library(tidytext)
+library(glue)</code></pre>
+<p>We should first take a look at the new ones being used here</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nope
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.datacamp.com/community/tutorials/tidyverse-tutorial-r" target="_blank">Tutorial</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>tidytext</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Provides the tools to make a text mining experience tidy
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/juliasilge/tidytext" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>glue</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+A tidyverse package that gives the power to concatenate strings in a way that’s tidy
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/glue" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://glue.tidyverse.org/reference/glue.html" target="_blank">Vignette</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="loading-data" class="section level2">
+<h2>Loading Data</h2>
+<p>We’ll be using text data, in particular state of the union speeches. Let’s get a list of the files in the directory</p>
+<pre class="r"><code>files &lt;- list.files(&quot;state-of-the-union-corpus-1989-2017&quot;)
+
+files</code></pre>
+<pre><code>##  [1] &quot;Bush_1989.txt&quot;    &quot;Bush_1990.txt&quot;    &quot;Bush_1991.txt&quot;    &quot;Bush_1992.txt&quot;   
+##  [5] &quot;Bush_2001.txt&quot;    &quot;Bush_2002.txt&quot;    &quot;Bush_2003.txt&quot;    &quot;Bush_2004.txt&quot;   
+##  [9] &quot;Bush_2005.txt&quot;    &quot;Bush_2006.txt&quot;    &quot;Bush_2007.txt&quot;    &quot;Bush_2008.txt&quot;   
+## [13] &quot;Clinton_1993.txt&quot; &quot;Clinton_1994.txt&quot; &quot;Clinton_1995.txt&quot; &quot;Clinton_1996.txt&quot;
+## [17] &quot;Clinton_1997.txt&quot; &quot;Clinton_1998.txt&quot; &quot;Clinton_1999.txt&quot; &quot;Clinton_2000.txt&quot;
+## [21] &quot;Obama_2009.txt&quot;   &quot;Obama_2010.txt&quot;   &quot;Obama_2011.txt&quot;   &quot;Obama_2012.txt&quot;  
+## [25] &quot;Obama_2013.txt&quot;   &quot;Obama_2014.txt&quot;   &quot;Obama_2015.txt&quot;   &quot;Obama_2016.txt&quot;  
+## [29] &quot;Trump_2017.txt&quot;</code></pre>
+<p>We’ll bring in the first file</p>
+<pre class="r"><code>files[1]</code></pre>
+<pre><code>## [1] &quot;Bush_1989.txt&quot;</code></pre>
+<p>Stick together the path to the file and 1st file name</p>
+<pre class="r"><code>fileName &lt;- glue(&quot;state-of-the-union-corpus-1989-2017/&quot;, files[1], sep = &quot;&quot;) %&gt;%
+              trimws()
+
+fileName</code></pre>
+<pre><code>## /Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp693e/static/data/state-of-the-union-corpus-1989-2017Bush_1989.txt</code></pre>
+<p>read in the text and clean it up by removing any dollar signs since they mean something different in R</p>
+<pre class="r"><code>fileText &lt;- glue(read_file(fileName)) %&gt;%
+              gsub(&quot;\\$&quot;, &quot;&quot;, fileText)
+
+fileText</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Mr. Speaker, Mr. President, and distinguished Members of the House and Senate, honored guests, and fellow citizens:
+Less than 3 weeks ago, I joined you on the West Front of this very building and, looking over the monuments to our proud past, offered you my hand in filling the next page of American history with a story of extended prosperity and continued peace. And tonight I’m back to offer you my plans as well. The hand remains extended; the sleeves are rolled up; America is waiting; and now we must produce. Together, we can build a better America.
+It is comforting to return to this historic Chamber. Here, 22 years ago, I first raised my hand to be sworn into public life. So, tonight I feel as if I’m returning home to friends. And I intend, in the months and years to come, to give you what friends deserve: frankness, respect, and my best judgment about ways to improve America’s future. In return, I ask for an honest commitment to our common mission of progress. If we seize the opportunities on the road before us, there’ll be praise enough for all. The people didn’t send us here to bicker, and it’s time to govern.
+And many Presidents have come to this Chamber in times of great crisis: war and depression, loss of national spirit. And 8 years ago, I sat in that very chair as President Reagan spoke of punishing inflation and devastatingly high interest rates and people out of work — American confidence on the wane. And our challenge is different. We’re fortunate — a much changed landscape lies before us tonight. So, I don’t propose to reverse direction. We’re headed the right way, but we cannot rest. We’re a people whose energy and drive have fueled our rise to greatness. And we’re a forward-looking nation — generous, yes, but ambitious, not for ourselves but for the world. Complacency is not in our character — not before, not now, not ever.
+And so, tonight we must take a strong America and make it even better. We must address some very real problems. We must establish some very clear priorities. And we must make a very substantial cut in the Federal budget deficit. Some people find that agenda impossible, but I’m presenting to you tonight a realistic plan for tackling it. My plan has four broad features: attention to urgent priorities, investment in the future, an attack on the deficit, and no new taxes. This budget represents my best judgment of how we can address our priorities. There are many areas in which we would all like to spend more than I propose; I understand that. But we cannot until we get our fiscal house in order.
+Next year alone, thanks to economic growth, without any change in the law, the Federal Government will take in over 80 billion more than it does this year. That’s right — over 80 billion in new revenues, with no increases in taxes. And our job is to allocate those new resources wisely. We can afford to increase spending by a modest amount, but enough to invest in key priorities and still cut the deficit by almost 40 percent in 1 year. And that will allow us to meet the targets set forth in the Gramm-Rudman-Hollings law. But to do that, we must recognize that growth above inflation in Federal programs is not preordained, that not all spending initiatives were designed to be immortal.
+I make this pledge tonight: My team and I are ready to work with the Congress, to form a special leadership group, to negotiate in good faith, to work day and night — if that’s what it takes — to meet the budget targets and to produce a budget on time.
+We cannot settle for business as usual. Government by continuing resolution, or government by crisis, will not do. And I ask the Congress tonight to approve several measures which will make budgeting more sensible. We could save time and improve efficiency by enacting 2-year budgets. Forty-three Governors have the line-item veto. Presidents should have it, too. And at the very least, when a President proposes to rescind Federal spending, the Congress should be required to vote on that proposal instead of killing it by inaction. And I ask the Congress to honor the public’s wishes by passing a constitutional amendment to require a balanced budget. Such an amendment, once phased in, will discipline both the Congress and the executive branch.
+Several principles describe the kind of America I hope to build with your help in the years ahead. We will not have the luxury of taking the easy, spendthrift approach to solving problems because higher spending and higher taxes put economic growth at risk. Economic growth provides jobs and hope. Economic growth enables us to pay for social programs. Economic growth enhances the security of the Nation, and low tax rates create economic growth.
+I believe in giving Americans greater freedom and greater choice. And I will work for choice for American families, whether in the housing in which they live, the schools to which they send their children, or the child care they select for their young. You see, I believe that we have an obligation to those in need, but that government should not be the provider of first resort for things that the private sector can produce better. I believe in a society that is free from discrimination and bigotry of any kind. And I will work to knock down the barriers left by past discrimination and to build a more tolerant society that will stop such barriers from ever being built again.
+I believe that family and faith represent the moral compass of the Nation. And I’ll work to make them strong, for as Benjamin Franklin said: <code>If a sparrow cannot fall to the ground without His notice, can a great nation rise without His aid? And I believe in giving people the power to make their own lives better through growth and opportunity. And together, let's put power in the hands of people. Three weeks ago, we celebrated the bicentennial inaugural, the 200th anniversary of the first Presidency. And if you look back, one thing is so striking about the way the Founding Fathers looked at America. They didn't talk about themselves. They talked about posterity. They talked about the future. And we, too, must think in terms bigger than ourselves. We must take actions today that will ensure a better tomorrow. We must extend American leadership in technology, increase long-term investment, improve our educational system, and boost productivity. These are the keys to building a better future, and here are some of my recommendations: I propose almost 2.2 billion for the National Science Foundation to promote basic research and keep us on track to double its budget by 1993. I propose to make permanent the tax credit for research and development. I've asked Vice President Quayle to chair a new Task Force on Competitiveness. And I request funding for NASA [National Aeronautics and Space Administration] and a strong space program, an increase of almost 2.4 billion over the current fiscal year. We must have a manned space station; a vigorous, safe space shuttle program; and more commercial development in space. The space program should always go</code>full throttle up. And that’s not just our ambition; it’s our destiny.
+I propose that we cut the maximum tax rate on capital gains to increase long-term investment. History on this is clear — this will increase revenues, help savings, and create new jobs. We won’t be competitive if we leave whole sectors of America behind. This is the year we should finally enact urban enterprise zones and bring hope to the inner cities.
+But the most important competitiveness program of all is one which improves education in America. When some of our students actually have trouble locating America on a map of the world, it is time for us to map a new approach to education. We must reward excellence and cut through bureaucracy. We must help schools that need help the most. We must give choice to parents, students, teachers, and principals; and we must hold all concerned accountable. In education, we cannot tolerate mediocrity. I want to cut that dropout rate and make America a more literate nation, because what it really comes down to is this: The longer our graduation lines are today, the shorter our unemployment lines will be tomorrow.
+So, tonight I’m proposing the following initiatives: the beginning of a 500 million program to reward America’s best schools, merit schools; the creation of special Presidential awards for the best teachers in every State, because excellence should be rewarded; the establishment of a new program of National Science Scholars, one each year for every Member of the House and Senate, to give this generation of students a special incentive to excel in science and mathematics; the expanded use of magnet schools, which give families and students greater choice; and a new program to encourage alternative certification, which will let talented people from all fields teach in our classrooms. I’ve said I’d like to be the <code>Education President. And tonight, I'd ask you to join me by becoming the</code>Education Congress.
+Just last week, as I settled into this new office, I received a letter from a mother in Pennsylvania who had been struck by my message in the Inaugural Address. <code>Not 12 hours before, she wrote,</code>my husband and I received word that our son was addicted to cocaine. He had the world at his feet. Bright, gifted, personable — he could have done anything with his life. And now he has chosen cocaine. <code>And please, she wrote,</code>find a way to curb the supply of cocaine. Get tough with the pushers. Our son needs your help.
+My friends, that voice crying out for help could be the voice of your own neighbor, your own friend, your own son. Over 23 million Americans used illegal drugs last year, at a staggering cost to our nation’s well-being. Let this be recorded as the time when America rose up and said no to drugs. The scourge of drugs must be stopped. And I am asking tonight for an increase of almost a billion dollars in budget outlays to escalate the war against drugs. The war must be waged on all fronts. Our new drug czar, Bill Bennett, and I will be shoulder to shoulder in the executive branch leading the charge.
+Some money will be used to expand treatment to the poor and to young mothers. This will offer the helping hand to the many innocent victims of drugs, like the thousands of babies born addicted or with AIDS because of the mother’s addiction. Some will be used to cut the waiting time for treatment. Some money will be devoted to those urban schools where the emergency is now the worst. And much of it will be used to protect our borders, with help from the Coast Guard and the Customs Service, the Departments of State and Justice, and, yes, the U.S. military.
+I mean to get tough on the drug criminals. And let me be clear: This President will back up those who put their lives on the line every single day — our local police officers. My budget asks for beefed-up prosecution, for a new attack on organized crime, and for enforcement of tough sentences — and for the worst kingpins, that means the death penalty. I also want to make sure that when a drug dealer is convicted there’s a cell waiting for him. And he should not go free because prisons are too full. And so, let the word go out: If you’re caught and convicted, you will do time.
+But for all we do in law enforcement, in interdiction and treatment, we will never win this war on drugs unless we stop the demand for drugs. So, some of this increase will be used to educate the young about the dangers of drugs. We must involve the parents. We must involve the teachers. We must involve the communities. And, my friends, we must involve ourselves, each and every one of us in this concern.
+One problem related to drug use demands our urgent attention and our continuing compassion, and that is the terrible tragedy of AIDS. I’m asking for 1.6 billion for education to prevent the disease and for research to find a cure.
+If we’re to protect our future, we need a new attitude about the environment. We must protect the air we breathe. I will send to you shortly legislation for a new, more effective Clean Air Act. It will include a plan to reduce by date certain the emissions which cause acid rain, because the time for study alone has passed, and the time for action is now. We must make use of clean coal. My budget contains full funding, on schedule, for the clean coal technology agreement that we’ve made with Canada. We’ve made that agreement with Canada, and we intend to honor that agreement. We must not neglect our parks. So, I’m asking to fund new acquisitions under the Land and Water Conservation Fund. We must protect our oceans. And I support new penalties against those who would dump medical waste and other trash into our oceans. The age of the needle on the beaches must end.
+And in some cases, the gulfs and oceans off our shores hold the promise of oil and gas reserves which can make our nation more secure and less dependent on foreign oil. And when those with the most promise can be tapped safely, as with much of the Alaska National Wildlife Refuge, we should proceed. But we must use caution; we must respect the environment. And so, tonight I’m calling for the indefinite postponement of three lease sales which have raised troubling questions, two off the coast of California and one which could threaten the Everglades in Florida. Action on these three lease sales will await the conclusion of a special task force set up to measure the potential for environmental damage.
+I’m directing the Attorney General and the Administrator of the Environmental Protection Agency to use every tool at their disposal to speed and toughen the enforcement of our laws against toxic-waste dumpers. I want faster cleanups and tougher enforcement of penalties against polluters.
+In addition to caring for our future, we must care for those around us. A decent society shows compassion for the young, the elderly, the vulnerable, and the poor. Our first obligation is to the most vulnerable — infants, poor mothers, children living in poverty — and my proposed budget recognizes this. I ask for full funding of Medicaid, an increase of over 3 billion, and an expansion of the program to include coverage of pregnant women who are near the poverty line. I believe we should help working families cope with the burden of child care. Our help should be aimed at those who need it most: low-income families with young children. I support a new child care tax credit that will aim our efforts at exactly those families, without discriminating against mothers who choose to stay at home.
+Now, I know there are competing proposals. But remember this: The overwhelming majority of all preschool child care is now provided by relatives and neighbors and churches and community groups. Families who choose these options should remain eligible for help. Parents should have choice. And for those children who are unwanted or abused or whose parents are deceased, we should encourage adoption. I propose to reenact the tax deduction for adoption expenses and to double it to 3,000. Let’s make it easier for these kids to have parents who love them.
+We have a moral contract with our senior citizens. And in this budget, Social Security is fully funded, including a full cost-of-living adjustment. We must honor our contract.
+We must care about those in the shadow of life, and I, like many Americans, am deeply troubled by the plight of the homeless. The causes of homelessness are many; the history is long. But the moral imperative to act is clear. Thanks to the deep well of generosity in this great land, many organizations already contribute, but we in government cannot stand on the sidelines. In my budget, I ask for greater support for emergency food and shelter, for health services and measures to prevent substance abuse, and for clinics for the mentally ill. And I propose a new initiative involving the full range of government agencies. We must confront this national shame.
+There’s another issue that I’ve decided to mention here tonight. I’ve long believed that the people of Puerto Rico should have the right to determine their own political future. Personally, I strongly favor statehood. But I urge the Congress to take the necessary steps to allow the people to decide in a referendum.
+Certain problems, the result of decades of unwise practices, threaten the health and security of our people. Left unattended, they will only get worse. But we can act now to put them behind us.
+Earlier this week, I announced my support for a plan to restore the financial and moral integrity of our savings system. I ask Congress to enact our reform proposals within 45 days. We must not let this situation fester. We owe it to the savers in this country to solve this problem. Certainly, the savings of Americans must remain secure. Let me be clear: Insured depositors will continue to be fully protected, but any plan to refinance the system must be accompanied by major reform. Our proposals will prevent such a crisis from recurring. The best answer is to make sure that a mess like this will never happen again. The majority of thrifts in communities across the Nation have been honest. They’ve played a major role in helping families achieve the dream of home ownership. But make no mistake, those who are corrupt, those who break the law, must be kicked out of the business; and they should go to jail.
+We face a massive task in cleaning up the waste left from decades of environmental neglect at America’s nuclear weapons plants. Clearly, we must modernize these plants and operate them safely. That’s not at issue; our national security depends on it. But beyond that, we must clean up the old mess that’s been left behind. And I propose in this budget to more than double our current effort to do so. This will allow us to identify the exact nature of the various problems so we can clean them up, and clean them up we will.
+We’ve been fortunate during these past 8 years. America is a stronger nation than it was in 1980. Morale in our Armed Forces has been restored; our resolve has been shown. Our readiness has been improved, and we are at peace. There can no longer be any doubt that peace has been made more secure through strength. And when America is stronger, the world is safer.
+Most people don’t realize that after the successful restoration of our strength, the Pentagon budget has actually been reduced in real terms for each of the last 4 years. We cannot tolerate continued real reduction in defense. In light of the compelling need to reduce the deficit, however, I support a 1-year freeze in the military budget, something I proposed last fall in my flexible freeze plan. And this freeze will apply for only 1 year, and after that, increases above inflation will be required. I will not sacrifice American preparedness, and I will not compromise American strength.
+I should be clear on the conditions attached to my recommendation for the coming year: The savings must be allocated to those priorities for investing in our future that I’ve spoken about tonight. This defense freeze must be a part of a comprehensive budget agreement which meets the targets spelled out in Gramm-Rudman-Hollings law without raising taxes and which incorporates reforms in the budget process.
+I’ve directed the National Security Council to review our national security and defense policies and report back to me within 90 days to ensure that our capabilities and resources meet our commitments and strategies. I’m also charging the Department of Defense with the task of developing a plan to improve the defense procurement process and management of the Pentagon, one which will fully implement the Packard commission report. Many of these changes can only be made with the participation of the Congress, and so, I ask for your help. We need fewer regulations. We need less bureaucracy. We need multiyear procurement and 2-year budgeting. And frankly — and don’t take this wrong — we need less congressional micromanagement of our nation’s military policy. I detect a slight division on that question, but nevertheless.
+Securing a more peaceful world is perhaps the most important priority I’d like to address tonight. You know, we meet at a time of extraordinary hope. Never before in this century have our values of freedom, democracy, and economic opportunity been such a powerful and intellectual force around the globe. Never before has our leadership been so crucial, because while America has its eyes on the future, the world has its eyes on America.
+And it’s a time of great change in the world, and especially in the Soviet Union. Prudence and common sense dictate that we try to understand the full meaning of the change going on there, review our policies, and then proceed with caution. But I’ve personally assured General Secretary Gorbachev that at the conclusion of such a review we will be ready to move forward. We will not miss any opportunity to work for peace. The fundamental facts remain that the Soviets retain a very powerful military machine in the service of objectives which are still too often in conflict with ours. So, let us take the new openness seriously, but let’s also be realistic. And let’s always be strong.
+There are some pressing issues we must address. I will vigorously pursue the Strategic Defense Initiative. The spread, and even use, of sophisticated weaponry threatens global security as never before. Chemical weapons must be banned from the face of the Earth, never to be used again. And look, this won’t be easy. Verification — extraordinarily difficult, but civilization and human decency demand that we try. And the spread of nuclear weapons must be stopped. And I’ll work to strengthen the hand of the International Atomic Energy Agency. Our diplomacy must work every day against the proliferation of nuclear weapons.
+And around the globe, we must continue to be freedom’s best friend. And we must stand firm for self-determination and democracy in Central America, including in Nicaragua. It is my strongly held conviction that when people are given the chance they inevitably will choose a free press, freedom of worship, and certifiably free and fair elections.
+We must strengthen the alliance of the industrial democracies, as solid a force for peace as the world has ever known. And this is an alliance forged by the power of our ideals, not the pettiness of our differences. So, let’s lift our sights to rise above fighting about beef hormones, to building a better future, to move from protectionism to progress.
+I’ve asked the Secretary of State to visit Europe next week and to consult with our allies on the wide range of challenges and opportunities we face together, including East-West relations. And I look forward to meeting with our NATO partners in the near future.
+And I, too, shall begin a trip shortly to the far reaches of the Pacific Basin, where the winds of democracy are creating new hope and the power of free markets is unleashing a new force. When I served as our representative in China 14 or 15 years ago, few would have predicted the scope of the changes we’ve witnessed since then. But in preparing for this trip, I was struck by something I came across from a Chinese writer. He was speaking of his country, decades ago, but his words speak to each of us in America tonight. <code>Today, he said,</code>we’re afraid of the simple words like <code>goodness' and</code>mercy’ and `kindness.’ My friends, if we’re to succeed as a nation, we must rediscover those words.
+In just 3 days, we mark the birthday of Abraham Lincoln, the man who saved our Union and gave new meaning to the word <code>opportunity. Lincoln once said:</code>I hold that while man exists, it is his duty to improve not only his own condition but to assist in ameliorating that of mankind. It is this broader mission to which I call all Americans, because the definition of a successful life must include serving others.
+And to the young people of America, who sometimes feel left out, I ask you tonight to give us the benefit of your talent and energy through a new program called YES, for Youth Entering Service to America.
+To those men and women in business, remember the ultimate end of your work: to make a better product, to create better lives. I ask you to plan for the longer term and avoid that temptation of quick and easy paper profits.
+To the brave men and women who wear the uniform of the United States of America, thank you. Your calling is a high one: to be the defenders of freedom and the guarantors of liberty. And I want you to know that this nation is grateful for your service.
+To the farmers of America, we appreciate the bounty you provide. We will work with you to open foreign markets to American agricultural products.
+And to the parents of America, I ask you to get involved in your child’s schooling. Check on the homework, go to the school, meet the teachers, care about what is happening there. It’s not only your child’s future on the line, it’s America’s.
+To kids in our cities, don’t give up hope. Say no to drugs; stay in school. And, yes, <code>Keep hope alive. To those 37 million Americans with some form of disability, you belong in the economic mainstream. We need your talents in America's work force. Disabled Americans must become full partners in America's opportunity society. To the families of America watching tonight in your living rooms, hold fast to your dreams because ultimately America's future rests in your hands. And to my friends in this Chamber, I ask your cooperation to keep America growing while cutting the deficit. That's only fair to those who now have no vote: the generations to come. Let them look back and say that we had the foresight to understand that a time of peace and prosperity is not the time to rest but a time to press forward, a time to invest in the future. And let all Americans remember that no problem of human making is too great to be overcome by human ingenuity, human energy, and the untiring hope of the human spirit. I believe this. I would not have asked to be your President if I didn't. And tomorrow the debate on the plan I've put forward begins, and I ask the Congress to come forward with your own proposals. Let's not question each other's motives. Let's debate, let's negotiate; but let us solve the problem. Recalling anniversaries may not be my specialty in speeches but tonight is one of some note. On February 9th, 1941, just 48 years ago tonight, Sir Winston Churchill took to the airwaves during Britain's hour of peril. He'd received from President Roosevelt a hand-carried letter quoting Longfellow's famous poem:</code>Sail on, O Ship of State! Sail on, O Union, strong and great! Humanity with all its fears, With all the hopes of future years, Is hanging breathless on thy fate! And Churchill responded on this night by radio broadcast to a nation at war, but he directed his words to Franklin Roosevelt. <code>We shall not fail or falter, he said.</code>We shall not weaken or tire. Give us the tools, and we will finish the job.
+Tonight, almost half a century later, our peril may be less immediate, but the need for perseverance and clear-sighted fortitude is just as great. Now, as then, there are those who say it can’t be done. There are voices who say that America’s best days have passed, that we’re bound by constraints, threatened by problems, surrounded by troubles which limit our ability to hope. Well, tonight I remain full of hope. We Americans have only begun on our mission of goodness and greatness. And to those timid souls, I repeat the plea: ``Give us the tools, and we will do the job.
+Thank you. God bless you, and God bless America.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="steps-for-a-sentiment-analysis" class="section level2">
+<h2>Steps for a Sentiment Analysis</h2>
+<div id="understanding-nlp" class="section level3">
+<h3>Understanding NLP</h3>
+<p>In a nutshell, computers and people don’t view or “understand” text in the same way - enter <em>Natural Language Processing</em> (NLP). Part of artificial intelligence, NLP acts as a middleman that deals with the reading, deciphering and understanding of natural language used by computers and humans.</p>
+</div>
+<div id="tokenize" class="section level3">
+<h3>Tokenize</h3>
+<p><em>Tokenization</em> is process of taking a bunch of characters (i.e. strings) and chopping the up into little pieces called <em>tokens</em>. Notice that actual “words” are not necessary here. This is important because it will allow us to use parts of words as you’ll see soon!</p>
+<pre class="r"><code>tokens &lt;- data_frame(text = fileText) %&gt;% 
+              unnest_tokens(word, text)</code></pre>
+<pre><code>## Warning: `data_frame()` was deprecated in tibble 1.1.0.
+## Please use `tibble()` instead.</code></pre>
+<pre class="r"><code>tokens</code></pre>
+<pre><code>## # A tibble: 4,822 x 1
+##    word         
+##    &lt;chr&gt;        
+##  1 mr           
+##  2 speaker      
+##  3 mr           
+##  4 president    
+##  5 and          
+##  6 distinguished
+##  7 members      
+##  8 of           
+##  9 the          
+## 10 house        
+## # … with 4,812 more rows</code></pre>
+</div>
+<div id="get-stop-words" class="section level3">
+<h3>Get Stop Words</h3>
+<p>In text analysis, we tend to remove <em>stop words</em> which are terms that are not useful for an analysis like “and”, “of”, “the”, etc. Here we use <code>anti_join()</code> to get rid of those terms from our data set.</p>
+<pre class="r"><code>data(stop_words)
+
+tidy_tokens &lt;- tokens %&gt;%
+               anti_join(stop_words)</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<p>Let’s see a count of the remaining terms</p>
+<pre class="r"><code>tidy_tokens %&gt;%
+  count(word, sort = TRUE) </code></pre>
+<pre><code>## # A tibble: 1,097 x 2
+##    word          n
+##    &lt;chr&gt;     &lt;int&gt;
+##  1 america      24
+##  2 tonight      21
+##  3 budget       17
+##  4 future       15
+##  5 time         15
+##  6 people       13
+##  7 nation       11
+##  8 congress     10
+##  9 hope         10
+## 10 americans     9
+## # … with 1,087 more rows</code></pre>
+<p>and plot them to get a visual filtering on occurrences greater than five for the sake of space</p>
+<pre class="r"><code>tidy_tokens %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 5) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word, fill=factor(n))) +
+  scale_fill_brewer(&quot;Blues&quot;) +
+  geom_col() +
+  theme_minimal() +
+  labs(y = NULL)</code></pre>
+<pre><code>## Warning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Blues is 9
+## Returning the palette you asked for with that many colors</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+                    </div>
+
+                    
+
+
+
+                    
+                </div>
+
+                <div class="body-footer">
+                    <p>Last updated on January 1, 0001</p>
+
+                    
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/piechartssuck/Courses/edp693e/edit/master/content/example/08-example.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+                    
+
+                </div>
+
+            </article>
+
+            <footer>
+    <hr>
+
+    <div class="row course-info">
+        <div class="col-md-7">
+            <p>
+                <strong>EDP 693e: Data Visualization (Spring 2021)</strong><br>
+
+                <a href="https://www.wvu.edu" target="_blank" rel="noopener">West Virginia University</a> &emsp;&emsp;
+                <a href="https://counselingandlearningsci.wvu.edu/" target="_blank" rel="noopener">Counseling &amp; Learning Sciences</a>
+            </p>
+
+            <p>
+                <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
+                    Dr. Abhik Roy</a> &emsp;&emsp;
+                <a href="mailto:Abhik.Roy@mail.wvu.edu"><i class="fas fa-envelope fa-fw"></i>
+                    Abhik.Roy@mail.wvu.edu</a>
+            </p>
+
+            <p>
+                <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next 15 weeks) &emsp;&emsp;
+                <i class="far fa-clock fa-fw"></i> You pick!
+                <br><i class="fas fa-university fa-fw"></i> Online
+            </p>
+        </div>
+
+        <div class="col-md-5 credits">
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+            <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2021 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
+
+            <p>This site was created with the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> in <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a> and <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with customizations heavily influenced by Dr. Andrew Heiss'<a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> site<a/>. </p>
+
+            <p><a href="https://github.com/piechartssuck/Courses/tree/edp693e" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+        </div>
+    </div>
+</footer>
+
+
+        </main>
+    </div>
+</div>
+
+        
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.f30a8b5a880e824aab9653942c89109b.js"></script>
+
+    
+
+
+
+    
+    
+
+    
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

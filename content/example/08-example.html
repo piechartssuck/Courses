@@ -1,0 +1,703 @@
+---
+title: "Hooked on Feelings"
+linktitle: "Week 8: Hooked on Feelings"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 8
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#preliminary-items">Preliminary Items</a>
+<ul>
+<li><a href="#first-things-first-download-the-script-and-data-set">First Things First! Download the script and data set</a></li>
+<li><a href="#set-your-working-directory">Set your Working Directory</a></li>
+<li><a href="#loading-libraries">Loading libraries</a></li>
+<li><a href="#loading-data">Loading Data</a></li>
+<li><a href="#understanding-nlp">Understanding NLP</a></li>
+</ul></li>
+<li><a href="#sentiment-analysis">Sentiment Analysis</a>
+<ul>
+<li><a href="#what-is-it">What is it?</a></li>
+<li><a href="#how-does-it-work">How Does it Work?</a></li>
+<li><a href="#what-is-an-example">What is an Example?</a></li>
+<li><a href="#what-are-the-steps">What are the steps?</a>
+<ul>
+<li><a href="#tokenize">Tokenize</a></li>
+<li><a href="#filter-stop-words">Filter Stop Words</a></li>
+<li><a href="#find-polarities">Find Polarities</a></li>
+</ul></li>
+<li><a href="#another-example">Another Example</a>
+<ul>
+<li><a href="#section"></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is a deeper exploration of mapping with a purpose. In this case, we are going to map the results of the 2016 Presidential Election. For a look at the maps we are going to do, take a look at this <a href="http://www.washingtonpost.com/wp-srv/special/business/states-most-threatened-by-trade/" target="_blank">Washington Post article</a>.</p>
+</div>
+<div id="preliminary-items" class="section level1">
+<h1>Preliminary Items</h1>
+<div id="first-things-first-download-the-script-and-data-set" class="section level2">
+<h2>First Things First! Download the script and data set</h2>
+<p>Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
+<p><a href="/example/08-example_files/Week8materials.zip">Week 8 materials</a></p>
+</div>
+<div id="set-your-working-directory" class="section level2">
+<h2>Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up the included script by going to <code>File &gt; Open File</code> or double click the file itself if RStudio is your default program for opening <code>.R</code> files.</li>
+<li>To set your working directory:</li>
+</ol>
+<ul>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code> OR</li>
+<li>run <code>setwd(dirname(rstudioapi::getActiveDocumentContext()$path))</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+</ul>
+</div>
+<div id="loading-libraries" class="section level2">
+<h2>Loading libraries</h2>
+<p>Go ahead and load these or install and then load them.</p>
+<pre class="r"><code>library(tidyverse)
+library(tidytext)
+library(glue)</code></pre>
+<p>We should first take a look at the new ones being used here</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nope
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.datacamp.com/community/tutorials/tidyverse-tutorial-r" target="_blank">Tutorial</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>tidytext</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Provides the tools to make a text mining experience tidy
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/juliasilge/tidytext" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>glue</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+A tidyverse package that gives the power to concatenate strings in a way that’s tidy
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/glue" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://glue.tidyverse.org/reference/glue.html" target="_blank">Vignette</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="loading-data" class="section level2">
+<h2>Loading Data</h2>
+<p>We’ll be using text data, in particular state of the union speeches. These are annual narratives by the President of the United States given to a joint session of congress. In each, the President reviews the previous year and lays out his legislative agenda for the coming year. This dataset contains the full text of the State of the Union address from 1989 (Reagan) to 2017 (Trump).</p>
+<p>Let’s get a list of the files in the directory</p>
+<pre class="r"><code>files &lt;- list.files(&quot;state-of-the-union-corpus-1989-2017&quot;)
+
+files</code></pre>
+<pre><code>##  [1] &quot;Bush_1989.txt&quot;    &quot;Bush_1990.txt&quot;    &quot;Bush_1991.txt&quot;    &quot;Bush_1992.txt&quot;   
+##  [5] &quot;Bush_2001.txt&quot;    &quot;Bush_2002.txt&quot;    &quot;Bush_2003.txt&quot;    &quot;Bush_2004.txt&quot;   
+##  [9] &quot;Bush_2005.txt&quot;    &quot;Bush_2006.txt&quot;    &quot;Bush_2007.txt&quot;    &quot;Bush_2008.txt&quot;   
+## [13] &quot;Clinton_1993.txt&quot; &quot;Clinton_1994.txt&quot; &quot;Clinton_1995.txt&quot; &quot;Clinton_1996.txt&quot;
+## [17] &quot;Clinton_1997.txt&quot; &quot;Clinton_1998.txt&quot; &quot;Clinton_1999.txt&quot; &quot;Clinton_2000.txt&quot;
+## [21] &quot;Obama_2009.txt&quot;   &quot;Obama_2010.txt&quot;   &quot;Obama_2011.txt&quot;   &quot;Obama_2012.txt&quot;  
+## [25] &quot;Obama_2013.txt&quot;   &quot;Obama_2014.txt&quot;   &quot;Obama_2015.txt&quot;   &quot;Obama_2016.txt&quot;  
+## [29] &quot;Trump_2017.txt&quot;</code></pre>
+<p>We’ll bring in the first file</p>
+<pre class="r"><code>files[1]</code></pre>
+<pre><code>## [1] &quot;Bush_1989.txt&quot;</code></pre>
+<p>Stick together the path to the file and 1st file name</p>
+<pre class="r"><code>fileName &lt;- glue(&quot;state-of-the-union-corpus-1989-2017/&quot;, files[1], sep = &quot;&quot;) %&gt;%
+              trimws()
+
+fileName</code></pre>
+<pre><code>## /Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp693e/static/data/state-of-the-union-corpus-1989-2017Bush_1989.txt</code></pre>
+<p>read in the text and clean it up by removing any dollar signs since they mean something different in R</p>
+<pre class="r"><code>fileText &lt;- glue(read_file(fileName)) %&gt;%
+              gsub(&quot;\\$&quot;, &quot;&quot;, fileText)
+
+fileText</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Mr. Speaker, Mr. President, and distinguished Members of the House and Senate, honored guests, and fellow citizens:
+Less than 3 weeks ago, I joined you on the West Front of this very building and, looking over the monuments to our proud past, offered you my hand in filling the next page of American history with a story of extended prosperity and continued peace. And tonight I’m back to offer you my plans as well. The hand remains extended; the sleeves are rolled up; America is waiting; and now we must produce. Together, we can build a better America.
+It is comforting to return to this historic Chamber. Here, 22 years ago, I first raised my hand to be sworn into public life. So, tonight I feel as if I’m returning home to friends. And I intend, in the months and years to come, to give you what friends deserve: frankness, respect, and my best judgment about ways to improve America’s future. In return, I ask for an honest commitment to our common mission of progress. If we seize the opportunities on the road before us, there’ll be praise enough for all. The people didn’t send us here to bicker, and it’s time to govern.
+And many Presidents have come to this Chamber in times of great crisis: war and depression, loss of national spirit. And 8 years ago, I sat in that very chair as President Reagan spoke of punishing inflation and devastatingly high interest rates and people out of work — American confidence on the wane. And our challenge is different. We’re fortunate — a much changed landscape lies before us tonight. So, I don’t propose to reverse direction. We’re headed the right way, but we cannot rest. We’re a people whose energy and drive have fueled our rise to greatness. And we’re a forward-looking nation — generous, yes, but ambitious, not for ourselves but for the world. Complacency is not in our character — not before, not now, not ever.
+And so, tonight we must take a strong America and make it even better. We must address some very real problems. We must establish some very clear priorities. And we must make a very substantial cut in the Federal budget deficit. Some people find that agenda impossible, but I’m presenting to you tonight a realistic plan for tackling it. My plan has four broad features: attention to urgent priorities, investment in the future, an attack on the deficit, and no new taxes. This budget represents my best judgment of how we can address our priorities. There are many areas in which we would all like to spend more than I propose; I understand that. But we cannot until we get our fiscal house in order.
+Next year alone, thanks to economic growth, without any change in the law, the Federal Government will take in over 80 billion more than it does this year. That’s right — over 80 billion in new revenues, with no increases in taxes. And our job is to allocate those new resources wisely. We can afford to increase spending by a modest amount, but enough to invest in key priorities and still cut the deficit by almost 40 percent in 1 year. And that will allow us to meet the targets set forth in the Gramm-Rudman-Hollings law. But to do that, we must recognize that growth above inflation in Federal programs is not preordained, that not all spending initiatives were designed to be immortal.
+I make this pledge tonight: My team and I are ready to work with the Congress, to form a special leadership group, to negotiate in good faith, to work day and night — if that’s what it takes — to meet the budget targets and to produce a budget on time.
+We cannot settle for business as usual. Government by continuing resolution, or government by crisis, will not do. And I ask the Congress tonight to approve several measures which will make budgeting more sensible. We could save time and improve efficiency by enacting 2-year budgets. Forty-three Governors have the line-item veto. Presidents should have it, too. And at the very least, when a President proposes to rescind Federal spending, the Congress should be required to vote on that proposal instead of killing it by inaction. And I ask the Congress to honor the public’s wishes by passing a constitutional amendment to require a balanced budget. Such an amendment, once phased in, will discipline both the Congress and the executive branch.
+Several principles describe the kind of America I hope to build with your help in the years ahead. We will not have the luxury of taking the easy, spendthrift approach to solving problems because higher spending and higher taxes put economic growth at risk. Economic growth provides jobs and hope. Economic growth enables us to pay for social programs. Economic growth enhances the security of the Nation, and low tax rates create economic growth.
+I believe in giving Americans greater freedom and greater choice. And I will work for choice for American families, whether in the housing in which they live, the schools to which they send their children, or the child care they select for their young. You see, I believe that we have an obligation to those in need, but that government should not be the provider of first resort for things that the private sector can produce better. I believe in a society that is free from discrimination and bigotry of any kind. And I will work to knock down the barriers left by past discrimination and to build a more tolerant society that will stop such barriers from ever being built again.
+I believe that family and faith represent the moral compass of the Nation. And I’ll work to make them strong, for as Benjamin Franklin said: <code>If a sparrow cannot fall to the ground without His notice, can a great nation rise without His aid? And I believe in giving people the power to make their own lives better through growth and opportunity. And together, let's put power in the hands of people. Three weeks ago, we celebrated the bicentennial inaugural, the 200th anniversary of the first Presidency. And if you look back, one thing is so striking about the way the Founding Fathers looked at America. They didn't talk about themselves. They talked about posterity. They talked about the future. And we, too, must think in terms bigger than ourselves. We must take actions today that will ensure a better tomorrow. We must extend American leadership in technology, increase long-term investment, improve our educational system, and boost productivity. These are the keys to building a better future, and here are some of my recommendations: I propose almost 2.2 billion for the National Science Foundation to promote basic research and keep us on track to double its budget by 1993. I propose to make permanent the tax credit for research and development. I've asked Vice President Quayle to chair a new Task Force on Competitiveness. And I request funding for NASA [National Aeronautics and Space Administration] and a strong space program, an increase of almost 2.4 billion over the current fiscal year. We must have a manned space station; a vigorous, safe space shuttle program; and more commercial development in space. The space program should always go</code>full throttle up. And that’s not just our ambition; it’s our destiny.
+I propose that we cut the maximum tax rate on capital gains to increase long-term investment. History on this is clear — this will increase revenues, help savings, and create new jobs. We won’t be competitive if we leave whole sectors of America behind. This is the year we should finally enact urban enterprise zones and bring hope to the inner cities.
+But the most important competitiveness program of all is one which improves education in America. When some of our students actually have trouble locating America on a map of the world, it is time for us to map a new approach to education. We must reward excellence and cut through bureaucracy. We must help schools that need help the most. We must give choice to parents, students, teachers, and principals; and we must hold all concerned accountable. In education, we cannot tolerate mediocrity. I want to cut that dropout rate and make America a more literate nation, because what it really comes down to is this: The longer our graduation lines are today, the shorter our unemployment lines will be tomorrow.
+So, tonight I’m proposing the following initiatives: the beginning of a 500 million program to reward America’s best schools, merit schools; the creation of special Presidential awards for the best teachers in every State, because excellence should be rewarded; the establishment of a new program of National Science Scholars, one each year for every Member of the House and Senate, to give this generation of students a special incentive to excel in science and mathematics; the expanded use of magnet schools, which give families and students greater choice; and a new program to encourage alternative certification, which will let talented people from all fields teach in our classrooms. I’ve said I’d like to be the <code>Education President. And tonight, I'd ask you to join me by becoming the</code>Education Congress.
+Just last week, as I settled into this new office, I received a letter from a mother in Pennsylvania who had been struck by my message in the Inaugural Address. <code>Not 12 hours before, she wrote,</code>my husband and I received word that our son was addicted to cocaine. He had the world at his feet. Bright, gifted, personable — he could have done anything with his life. And now he has chosen cocaine. <code>And please, she wrote,</code>find a way to curb the supply of cocaine. Get tough with the pushers. Our son needs your help.
+My friends, that voice crying out for help could be the voice of your own neighbor, your own friend, your own son. Over 23 million Americans used illegal drugs last year, at a staggering cost to our nation’s well-being. Let this be recorded as the time when America rose up and said no to drugs. The scourge of drugs must be stopped. And I am asking tonight for an increase of almost a billion dollars in budget outlays to escalate the war against drugs. The war must be waged on all fronts. Our new drug czar, Bill Bennett, and I will be shoulder to shoulder in the executive branch leading the charge.
+Some money will be used to expand treatment to the poor and to young mothers. This will offer the helping hand to the many innocent victims of drugs, like the thousands of babies born addicted or with AIDS because of the mother’s addiction. Some will be used to cut the waiting time for treatment. Some money will be devoted to those urban schools where the emergency is now the worst. And much of it will be used to protect our borders, with help from the Coast Guard and the Customs Service, the Departments of State and Justice, and, yes, the U.S. military.
+I mean to get tough on the drug criminals. And let me be clear: This President will back up those who put their lives on the line every single day — our local police officers. My budget asks for beefed-up prosecution, for a new attack on organized crime, and for enforcement of tough sentences — and for the worst kingpins, that means the death penalty. I also want to make sure that when a drug dealer is convicted there’s a cell waiting for him. And he should not go free because prisons are too full. And so, let the word go out: If you’re caught and convicted, you will do time.
+But for all we do in law enforcement, in interdiction and treatment, we will never win this war on drugs unless we stop the demand for drugs. So, some of this increase will be used to educate the young about the dangers of drugs. We must involve the parents. We must involve the teachers. We must involve the communities. And, my friends, we must involve ourselves, each and every one of us in this concern.
+One problem related to drug use demands our urgent attention and our continuing compassion, and that is the terrible tragedy of AIDS. I’m asking for 1.6 billion for education to prevent the disease and for research to find a cure.
+If we’re to protect our future, we need a new attitude about the environment. We must protect the air we breathe. I will send to you shortly legislation for a new, more effective Clean Air Act. It will include a plan to reduce by date certain the emissions which cause acid rain, because the time for study alone has passed, and the time for action is now. We must make use of clean coal. My budget contains full funding, on schedule, for the clean coal technology agreement that we’ve made with Canada. We’ve made that agreement with Canada, and we intend to honor that agreement. We must not neglect our parks. So, I’m asking to fund new acquisitions under the Land and Water Conservation Fund. We must protect our oceans. And I support new penalties against those who would dump medical waste and other trash into our oceans. The age of the needle on the beaches must end.
+And in some cases, the gulfs and oceans off our shores hold the promise of oil and gas reserves which can make our nation more secure and less dependent on foreign oil. And when those with the most promise can be tapped safely, as with much of the Alaska National Wildlife Refuge, we should proceed. But we must use caution; we must respect the environment. And so, tonight I’m calling for the indefinite postponement of three lease sales which have raised troubling questions, two off the coast of California and one which could threaten the Everglades in Florida. Action on these three lease sales will await the conclusion of a special task force set up to measure the potential for environmental damage.
+I’m directing the Attorney General and the Administrator of the Environmental Protection Agency to use every tool at their disposal to speed and toughen the enforcement of our laws against toxic-waste dumpers. I want faster cleanups and tougher enforcement of penalties against polluters.
+In addition to caring for our future, we must care for those around us. A decent society shows compassion for the young, the elderly, the vulnerable, and the poor. Our first obligation is to the most vulnerable — infants, poor mothers, children living in poverty — and my proposed budget recognizes this. I ask for full funding of Medicaid, an increase of over 3 billion, and an expansion of the program to include coverage of pregnant women who are near the poverty line. I believe we should help working families cope with the burden of child care. Our help should be aimed at those who need it most: low-income families with young children. I support a new child care tax credit that will aim our efforts at exactly those families, without discriminating against mothers who choose to stay at home.
+Now, I know there are competing proposals. But remember this: The overwhelming majority of all preschool child care is now provided by relatives and neighbors and churches and community groups. Families who choose these options should remain eligible for help. Parents should have choice. And for those children who are unwanted or abused or whose parents are deceased, we should encourage adoption. I propose to reenact the tax deduction for adoption expenses and to double it to 3,000. Let’s make it easier for these kids to have parents who love them.
+We have a moral contract with our senior citizens. And in this budget, Social Security is fully funded, including a full cost-of-living adjustment. We must honor our contract.
+We must care about those in the shadow of life, and I, like many Americans, am deeply troubled by the plight of the homeless. The causes of homelessness are many; the history is long. But the moral imperative to act is clear. Thanks to the deep well of generosity in this great land, many organizations already contribute, but we in government cannot stand on the sidelines. In my budget, I ask for greater support for emergency food and shelter, for health services and measures to prevent substance abuse, and for clinics for the mentally ill. And I propose a new initiative involving the full range of government agencies. We must confront this national shame.
+There’s another issue that I’ve decided to mention here tonight. I’ve long believed that the people of Puerto Rico should have the right to determine their own political future. Personally, I strongly favor statehood. But I urge the Congress to take the necessary steps to allow the people to decide in a referendum.
+Certain problems, the result of decades of unwise practices, threaten the health and security of our people. Left unattended, they will only get worse. But we can act now to put them behind us.
+Earlier this week, I announced my support for a plan to restore the financial and moral integrity of our savings system. I ask Congress to enact our reform proposals within 45 days. We must not let this situation fester. We owe it to the savers in this country to solve this problem. Certainly, the savings of Americans must remain secure. Let me be clear: Insured depositors will continue to be fully protected, but any plan to refinance the system must be accompanied by major reform. Our proposals will prevent such a crisis from recurring. The best answer is to make sure that a mess like this will never happen again. The majority of thrifts in communities across the Nation have been honest. They’ve played a major role in helping families achieve the dream of home ownership. But make no mistake, those who are corrupt, those who break the law, must be kicked out of the business; and they should go to jail.
+We face a massive task in cleaning up the waste left from decades of environmental neglect at America’s nuclear weapons plants. Clearly, we must modernize these plants and operate them safely. That’s not at issue; our national security depends on it. But beyond that, we must clean up the old mess that’s been left behind. And I propose in this budget to more than double our current effort to do so. This will allow us to identify the exact nature of the various problems so we can clean them up, and clean them up we will.
+We’ve been fortunate during these past 8 years. America is a stronger nation than it was in 1980. Morale in our Armed Forces has been restored; our resolve has been shown. Our readiness has been improved, and we are at peace. There can no longer be any doubt that peace has been made more secure through strength. And when America is stronger, the world is safer.
+Most people don’t realize that after the successful restoration of our strength, the Pentagon budget has actually been reduced in real terms for each of the last 4 years. We cannot tolerate continued real reduction in defense. In light of the compelling need to reduce the deficit, however, I support a 1-year freeze in the military budget, something I proposed last fall in my flexible freeze plan. And this freeze will apply for only 1 year, and after that, increases above inflation will be required. I will not sacrifice American preparedness, and I will not compromise American strength.
+I should be clear on the conditions attached to my recommendation for the coming year: The savings must be allocated to those priorities for investing in our future that I’ve spoken about tonight. This defense freeze must be a part of a comprehensive budget agreement which meets the targets spelled out in Gramm-Rudman-Hollings law without raising taxes and which incorporates reforms in the budget process.
+I’ve directed the National Security Council to review our national security and defense policies and report back to me within 90 days to ensure that our capabilities and resources meet our commitments and strategies. I’m also charging the Department of Defense with the task of developing a plan to improve the defense procurement process and management of the Pentagon, one which will fully implement the Packard commission report. Many of these changes can only be made with the participation of the Congress, and so, I ask for your help. We need fewer regulations. We need less bureaucracy. We need multiyear procurement and 2-year budgeting. And frankly — and don’t take this wrong — we need less congressional micromanagement of our nation’s military policy. I detect a slight division on that question, but nevertheless.
+Securing a more peaceful world is perhaps the most important priority I’d like to address tonight. You know, we meet at a time of extraordinary hope. Never before in this century have our values of freedom, democracy, and economic opportunity been such a powerful and intellectual force around the globe. Never before has our leadership been so crucial, because while America has its eyes on the future, the world has its eyes on America.
+And it’s a time of great change in the world, and especially in the Soviet Union. Prudence and common sense dictate that we try to understand the full meaning of the change going on there, review our policies, and then proceed with caution. But I’ve personally assured General Secretary Gorbachev that at the conclusion of such a review we will be ready to move forward. We will not miss any opportunity to work for peace. The fundamental facts remain that the Soviets retain a very powerful military machine in the service of objectives which are still too often in conflict with ours. So, let us take the new openness seriously, but let’s also be realistic. And let’s always be strong.
+There are some pressing issues we must address. I will vigorously pursue the Strategic Defense Initiative. The spread, and even use, of sophisticated weaponry threatens global security as never before. Chemical weapons must be banned from the face of the Earth, never to be used again. And look, this won’t be easy. Verification — extraordinarily difficult, but civilization and human decency demand that we try. And the spread of nuclear weapons must be stopped. And I’ll work to strengthen the hand of the International Atomic Energy Agency. Our diplomacy must work every day against the proliferation of nuclear weapons.
+And around the globe, we must continue to be freedom’s best friend. And we must stand firm for self-determination and democracy in Central America, including in Nicaragua. It is my strongly held conviction that when people are given the chance they inevitably will choose a free press, freedom of worship, and certifiably free and fair elections.
+We must strengthen the alliance of the industrial democracies, as solid a force for peace as the world has ever known. And this is an alliance forged by the power of our ideals, not the pettiness of our differences. So, let’s lift our sights to rise above fighting about beef hormones, to building a better future, to move from protectionism to progress.
+I’ve asked the Secretary of State to visit Europe next week and to consult with our allies on the wide range of challenges and opportunities we face together, including East-West relations. And I look forward to meeting with our NATO partners in the near future.
+And I, too, shall begin a trip shortly to the far reaches of the Pacific Basin, where the winds of democracy are creating new hope and the power of free markets is unleashing a new force. When I served as our representative in China 14 or 15 years ago, few would have predicted the scope of the changes we’ve witnessed since then. But in preparing for this trip, I was struck by something I came across from a Chinese writer. He was speaking of his country, decades ago, but his words speak to each of us in America tonight. <code>Today, he said,</code>we’re afraid of the simple words like <code>goodness' and</code>mercy’ and `kindness.’ My friends, if we’re to succeed as a nation, we must rediscover those words.
+In just 3 days, we mark the birthday of Abraham Lincoln, the man who saved our Union and gave new meaning to the word <code>opportunity. Lincoln once said:</code>I hold that while man exists, it is his duty to improve not only his own condition but to assist in ameliorating that of mankind. It is this broader mission to which I call all Americans, because the definition of a successful life must include serving others.
+And to the young people of America, who sometimes feel left out, I ask you tonight to give us the benefit of your talent and energy through a new program called YES, for Youth Entering Service to America.
+To those men and women in business, remember the ultimate end of your work: to make a better product, to create better lives. I ask you to plan for the longer term and avoid that temptation of quick and easy paper profits.
+To the brave men and women who wear the uniform of the United States of America, thank you. Your calling is a high one: to be the defenders of freedom and the guarantors of liberty. And I want you to know that this nation is grateful for your service.
+To the farmers of America, we appreciate the bounty you provide. We will work with you to open foreign markets to American agricultural products.
+And to the parents of America, I ask you to get involved in your child’s schooling. Check on the homework, go to the school, meet the teachers, care about what is happening there. It’s not only your child’s future on the line, it’s America’s.
+To kids in our cities, don’t give up hope. Say no to drugs; stay in school. And, yes, <code>Keep hope alive. To those 37 million Americans with some form of disability, you belong in the economic mainstream. We need your talents in America's work force. Disabled Americans must become full partners in America's opportunity society. To the families of America watching tonight in your living rooms, hold fast to your dreams because ultimately America's future rests in your hands. And to my friends in this Chamber, I ask your cooperation to keep America growing while cutting the deficit. That's only fair to those who now have no vote: the generations to come. Let them look back and say that we had the foresight to understand that a time of peace and prosperity is not the time to rest but a time to press forward, a time to invest in the future. And let all Americans remember that no problem of human making is too great to be overcome by human ingenuity, human energy, and the untiring hope of the human spirit. I believe this. I would not have asked to be your President if I didn't. And tomorrow the debate on the plan I've put forward begins, and I ask the Congress to come forward with your own proposals. Let's not question each other's motives. Let's debate, let's negotiate; but let us solve the problem. Recalling anniversaries may not be my specialty in speeches but tonight is one of some note. On February 9th, 1941, just 48 years ago tonight, Sir Winston Churchill took to the airwaves during Britain's hour of peril. He'd received from President Roosevelt a hand-carried letter quoting Longfellow's famous poem:</code>Sail on, O Ship of State! Sail on, O Union, strong and great! Humanity with all its fears, With all the hopes of future years, Is hanging breathless on thy fate! And Churchill responded on this night by radio broadcast to a nation at war, but he directed his words to Franklin Roosevelt. <code>We shall not fail or falter, he said.</code>We shall not weaken or tire. Give us the tools, and we will finish the job.
+Tonight, almost half a century later, our peril may be less immediate, but the need for perseverance and clear-sighted fortitude is just as great. Now, as then, there are those who say it can’t be done. There are voices who say that America’s best days have passed, that we’re bound by constraints, threatened by problems, surrounded by troubles which limit our ability to hope. Well, tonight I remain full of hope. We Americans have only begun on our mission of goodness and greatness. And to those timid souls, I repeat the plea: ``Give us the tools, and we will do the job.
+Thank you. God bless you, and God bless America.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="understanding-nlp" class="section level2">
+<h2>Understanding NLP</h2>
+<p>In a nutshell, computers and people don’t view or “understand” text in the same way - enter <em>Natural Language Processing</em> (NLP). Part of artificial intelligence, NLP acts as a middleman that deals with the reading, deciphering and understanding of natural language used by computers and humans. Some things you can do with this include the following with possible questions that address each method</p>
+<ul>
+<li><p><strong>Authorship identification</strong>: Can you correctly identify the author of a previously unseen address?</p></li>
+<li><p><strong>Parsing</strong>: Can you train implement a parser to automatically extract the syntactic relationships between words?</p></li>
+<li><p><strong>Sentiment analysis</strong>: Are there differences in tone between different Presidents? Presidents from different parties?</p></li>
+<li><p><strong>Topic modeling</strong>: Which topics have become more popular over time? Which have become less popular?</p></li>
+</ul>
+</div>
+</div>
+<div id="sentiment-analysis" class="section level1">
+<h1>Sentiment Analysis</h1>
+<div id="what-is-it" class="section level2">
+<h2>What is it?</h2>
+<p>A sentiment analysis is the computational task of automatically determining what feelings a writer is expressing in text. Sentiment is often framed as a binary distinction (positive vs. negative), but it can also be a more fine-grained, like identifying the specific emotion an author is expressing (like fear, joy or anger).</p>
+<p>It is used for many applications, especially in assessing consumers. Some examples of applications for sentiment analysis include</p>
+<ul>
+<li><p>Analyzing the social media discussion around a certain topic</p></li>
+<li><p>Evaluating survey responses</p></li>
+<li><p>Determining whether product reviews are polar and to what degree</p></li>
+</ul>
+<p>A sentiment analysis is not perfect and as with any automatic analysis of language, you will have errors in your results. It also cannot tell you why a writer is feeling a certain way. However, it can be useful to quickly summarize some qualities of text, especially if you have so much text that a human reader cannot analyze all of it.</p>
+</div>
+<div id="how-does-it-work" class="section level2">
+<h2>How Does it Work?</h2>
+<p>There are many ways to do sentiment analysis and most approaches use the same general idea</p>
+<ol style="list-style-type: decimal">
+<li><p>Create or find a list of words associated with strongly positive or negative sentiment.</p></li>
+<li><p>Count the number of positive and negative words in the text.</p></li>
+<li><p>Analyze the mix of positive to negative words. Many positive words and few negative words indicates positive sentiment, while many negative words and few positive words indicates negative sentiment.</p></li>
+</ol>
+</div>
+<div id="what-is-an-example" class="section level2">
+<h2>What is an Example?</h2>
+<p>The first step, creating or finding a word list (also called a <strong>lexicon</strong>), is generally the most time-consuming. While you can often use a lexicon that already exists, if your text is discussing a specific topic you may need to add to or modify it.</p>
+<p><em>Sick</em> is an example of a word that can have positive or negative sentiment depending on what it’s used to refer to. If you’re discussing a pet store that sells a lot of sick animals, the sentiment is probably negative. On the other hand, if you’re talking about a skateboarding instructor who taught you how to do a lot of sick flips, the sentiment is probably very positive.</p>
+</div>
+<div id="what-are-the-steps" class="section level2">
+<h2>What are the steps?</h2>
+<p>Generally this is what you have to do</p>
+<div id="tokenize" class="section level3">
+<h3>Tokenize</h3>
+<p><em>Tokenization</em> is process of taking a bunch of characters (i.e. strings) and chopping the up into little pieces called <em>tokens</em>. Notice that actual “words” are not necessary here. This is important because it will allow us to use parts of words as you’ll see soon!</p>
+<pre class="r"><code>tokens &lt;- data_frame(text = fileText) %&gt;% 
+              unnest_tokens(word, text)</code></pre>
+<pre><code>## Warning: `data_frame()` was deprecated in tibble 1.1.0.
+## Please use `tibble()` instead.</code></pre>
+<pre class="r"><code>tokens</code></pre>
+<pre><code>## # A tibble: 4,822 x 1
+##    word         
+##    &lt;chr&gt;        
+##  1 mr           
+##  2 speaker      
+##  3 mr           
+##  4 president    
+##  5 and          
+##  6 distinguished
+##  7 members      
+##  8 of           
+##  9 the          
+## 10 house        
+## # … with 4,812 more rows</code></pre>
+</div>
+<div id="filter-stop-words" class="section level3">
+<h3>Filter Stop Words</h3>
+<p>In text analysis, we tend to remove <em>stop words</em> which are terms that are not useful for an analysis like “and”, “of”, “the”, etc. Here we use <code>anti_join()</code> to get rid of those terms from our data set.</p>
+<pre class="r"><code>data(stop_words)
+
+tidy_tokens &lt;- tokens %&gt;%
+               anti_join(stop_words)</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<p>Let’s see a count of the remaining terms</p>
+<pre class="r"><code>tidy_tokens %&gt;%
+  count(word, sort = TRUE) </code></pre>
+<pre><code>## # A tibble: 1,097 x 2
+##    word          n
+##    &lt;chr&gt;     &lt;int&gt;
+##  1 america      24
+##  2 tonight      21
+##  3 budget       17
+##  4 future       15
+##  5 time         15
+##  6 people       13
+##  7 nation       11
+##  8 congress     10
+##  9 hope         10
+## 10 americans     9
+## # … with 1,087 more rows</code></pre>
+<p>and plot them to get a visual filtering on occurrences greater than five for the sake of space</p>
+<pre class="r"><code>tidy_tokens %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 5) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word, fill=n)) +
+  geom_col() +
+  theme_minimal() +
+  labs(y = NULL)</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="find-polarities" class="section level3">
+<h3>Find Polarities</h3>
+<p>Now that we have a list of tokens, we need to compare them against a list of words with either positive or negative sentiment.
+A list of words associated with a specific sentiment is usually called a <strong>sentiment lexicon</strong>. Because we’re using the <code>tidytext</code> package, we actually already have some of these lists. I’m going to be using the “bing” list, which was developed by Bing Liu and co-authors.</p>
+<pre class="r"><code># Get the sentiment from the first text: 
+speech_bing_descriptives &lt;- tokens %&gt;%
+  inner_join(get_sentiments(&quot;bing&quot;)) %&gt;% # pull out only sentiment words
+  count(sentiment) %&gt;% # count the # of positive &amp; negative words
+  spread(sentiment, n, fill = 0) %&gt;% # made data wide rather than narrow
+  mutate(sentiment = positive - negative) # of positive words - # of negative words</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<pre class="r"><code>speech_bing_descriptives</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   negative positive sentiment
+##      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1      117      240       123</code></pre>
+<p>So this text has 117 negative polarity words and 240 positive polarity words. This means that there are 123 more positive than negative words in this text. Now that we know how to get the sentiment for a given text, let’s write a function to do this more quickly and easily and then apply that function to every text in our dataset.</p>
+</div>
+</div>
+<div id="another-example" class="section level2">
+<h2>Another Example</h2>
+<p>The Harry Potter R package <code>harrypotter</code> on GitHub contains the text for all seven books in the Harry Potter series, by JK Rowling. Below, I have included the code required to connect to the ackage using <code>devtools</code>, as well as the other packages required for the basic text analytics.</p>
+<div id="section" class="section level3">
+<h3></h3>
+<p>Loading libraries</p>
+<p>Go ahead and load these or install and then load them.</p>
+<pre class="r"><code>library(wordcloud)
+library(devtools)
+library(tidyverse)      
+library(stringr)        
+library(tidytext)
+library(dplyr)
+library(reshape2)
+library(igraph)
+library(ggraph)
+library(harrypotter)</code></pre>
+<p>After downloading the data from the harrypotter package on github, we can do a bit of data shaping. The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we tokenize the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears.</p>
+<pre class="r"><code>titles &lt;- c(&quot;Philosopher&#39;s Stone&quot;, &quot;Chamber of Secrets&quot;, &quot;Prisoner of Azkaban&quot;,
+            &quot;Goblet of Fire&quot;, &quot;Order of the Phoenix&quot;, &quot;Half-Blood Prince&quot;,
+            &quot;Deathly Hallows&quot;)
+
+books &lt;- list(philosophers_stone, chamber_of_secrets, prisoner_of_azkaban,
+           goblet_of_fire, order_of_the_phoenix, half_blood_prince,
+           deathly_hallows)
+  
+series &lt;- tibble()
+
+for(i in seq_along(titles)) {
+        
+        clean &lt;- tibble(chapter = seq_along(books[[i]]),
+                        text = books[[i]]) %&gt;%
+             unnest_tokens(word, text) %&gt;%
+             mutate(book = titles[i]) %&gt;%
+             select(book, everything())
+
+        series &lt;- rbind(series, clean)
+}
+
+# set factor to keep books in order of publication
+series$book &lt;- factor(series$book, levels = rev(titles))
+
+series</code></pre>
+<pre><code>## # A tibble: 1,089,386 x 3
+##    book                chapter word   
+##    &lt;fct&gt;                 &lt;int&gt; &lt;chr&gt;  
+##  1 Philosopher&#39;s Stone       1 the    
+##  2 Philosopher&#39;s Stone       1 boy    
+##  3 Philosopher&#39;s Stone       1 who    
+##  4 Philosopher&#39;s Stone       1 lived  
+##  5 Philosopher&#39;s Stone       1 mr     
+##  6 Philosopher&#39;s Stone       1 and    
+##  7 Philosopher&#39;s Stone       1 mrs    
+##  8 Philosopher&#39;s Stone       1 dursley
+##  9 Philosopher&#39;s Stone       1 of     
+## 10 Philosopher&#39;s Stone       1 number 
+## # … with 1,089,376 more rows</code></pre>
+<p>We can get simple counts for each word using the count function. The word “the” occurs 51593 times in the Harry Potter series.</p>
+<pre class="r"><code>series %&gt;% count(word, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 24,475 x 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 the   51593
+##  2 and   27430
+##  3 to    26985
+##  4 of    21802
+##  5 a     20966
+##  6 he    20322
+##  7 harry 16557
+##  8 was   15631
+##  9 said  14398
+## 10 his   14264
+## # … with 24,465 more rows</code></pre>
+<p>Many of the words in the top ten most frequently appearing words are stop-words such as “the”, “and”, “to”, etc., so let’s discard those for now. Below, you can see a word cloud showing the most frequently occurring non-stop words in the series. The cloud contains the top 100 most frequently occurring words, and the larger a word appears in the cloud, the more frequently that word occurred in the text. It comes as no surprise to Harry Potter readers that most of the largest words in the cloud are names like “Harry”, “Ron” and “Hermione”.</p>
+<pre class="r"><code>series$book &lt;- factor(series$book, levels = rev(titles))
+
+series %&gt;% 
+  anti_join(stop_words) %&gt;%
+  count(word) %&gt;%
+  with(wordcloud(word, n, max.words = 100))</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Now we can begin the sentiment analysis. For this portion, we will continue working with the text that contains stop-words. The basic motivation behind sentiment analysis is to assess how positive or negative text is, based on a dictionary of words that have been previously classified as positive or negative. This type of dictionary is called a sentiment lexicon. The tidyverse has several built in lexicons for sentiment analysis, but for this example we will stick with ‘nrc’ and ‘bing’. The ‘nrc’ is a more advanced lexicon that categorizes words into several sentiment categories - <em>sadness</em>, <em>anger</em>, <em>positive</em>, <em>negative</em>, <em>trust</em>, etc. A single word in this lexicon may fall into multiple categories. Using the following code, we can get counts for the number of words in the Harry Potter series that fall into each of the categories addressed by ‘nrc’. In the output, you can see that there were 56579 words in the series that are classified as ‘negative’ by the ‘nrc’ lexicon. Overall, it looks like there are more negative words in the series than positive words. There are also a lot of words related to anger and sadness.</p>
+<p>Get the lexicons we’ll be using by running these. You only have to do this once!</p>
+<pre class="r"><code>get_sentiments(&quot;afinn&quot;)
+get_sentiments(&quot;bing&quot;)
+get_sentiments(&quot;nrc&quot;)</code></pre>
+<p>And then tp see the in action</p>
+<pre class="r"><code>series %&gt;%
+  right_join(get_sentiments(&quot;nrc&quot;)) %&gt;%
+  filter(!is.na(sentiment)) %&gt;%
+  count(sentiment, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    sentiment        n
+##    &lt;chr&gt;        &lt;int&gt;
+##  1 negative     56579
+##  2 positive     38324
+##  3 sadness      35866
+##  4 anger        32750
+##  5 trust        23485
+##  6 fear         21544
+##  7 anticipation 21123
+##  8 joy          14298
+##  9 disgust      13381
+## 10 surprise     12991</code></pre>
+<p>The ‘bing’ lexicon only classifies words as positive or negative. Below you can see that this lexicon picked up 39503 negative words in the Harry Potter series, and 29066 positive words.</p>
+<pre class="r"><code>series %&gt;%
+  right_join(get_sentiments(&quot;bing&quot;)) %&gt;%
+  filter(!is.na(sentiment)) %&gt;%
+  count(sentiment, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   sentiment     n
+##   &lt;chr&gt;     &lt;int&gt;
+## 1 negative  39502
+## 2 positive  29065</code></pre>
+<p>Similarly to the word cloud we created above, we can use the ‘bing’ lexicon to make a comparison cloud. This cloud displays the 50 most frequently occurring words in the series that were categorized by ‘bing’, and color-codes them based on negative or positive sentiment. You’ll notice that words like “Harry”“,”Hermione" and “Ron” don’t appear in this cloud, because character names are not classified as positive or negative in ‘bing’.</p>
+<pre class="r"><code>series %&gt;%
+  inner_join(get_sentiments(&quot;bing&quot;)) %&gt;%
+  count(word, sentiment, sort = TRUE) %&gt;%
+  acast(word ~ sentiment, value.var = &quot;n&quot;, fill = 0) %&gt;%
+  comparison.cloud(colors = c(&quot;#F8766D&quot;, &quot;#00BFC4&quot;),
+                   max.words = 50)</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div style="page-break-after: always;"></div>
+<p>Now, let’s see what the comparison cloud looks like with stop-words removed temporarily.</p>
+<pre class="r"><code>series %&gt;%
+  anti_join(stop_words) %&gt;%
+  inner_join(get_sentiments(&quot;bing&quot;)) %&gt;%
+  count(word, sentiment, sort = TRUE) %&gt;%
+  acast(word ~ sentiment, value.var = &quot;n&quot;, fill = 0) %&gt;%
+  comparison.cloud(colors = c(&quot;#F8766D&quot;, &quot;#00BFC4&quot;),
+                   max.words = 50)</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>In the following code chunk, each book text is split into groups of 500 words, and counts for the number of positive and negative words in each group (based on the ‘bing’ lexicon) are calculated. Then we subtract the number of negative words from the number of positive words in each group. For example, if there were 341 positive words in a group and 159 negative words in the same group, the sentiment score for the group would be 182 (a positive sentiment score). We calculate this sentiment score for each 500 word group within each book in the series. Using ggplot, we create bar charts for each book in the series that demonstrate how the sentiment score for the text groups changes as time passes in the series. Overall, the sentiment of the Harry Potter series appears to be negative.</p>
+<p>Challenges: How do these plots change if you go back and leave all of the stop-words in the tibble? Does the size of the text groups (500 words vs. 1000 words) affect the analysis?</p>
+<p>As a next step, one might look at the maximum sentiment score and the minimum sentiment score for each book to see what text groups produced the extreme scores.</p>
+<pre class="r"><code>series %&gt;%
+  group_by(book) %&gt;% 
+  mutate(word_count = 1:n(),
+         index = word_count %/% 500 + 1) %&gt;% 
+  inner_join(get_sentiments(&quot;bing&quot;)) %&gt;%
+  count(book, index = index , sentiment) %&gt;%
+  ungroup() %&gt;%
+  spread(sentiment, n, fill = 0) %&gt;%
+  mutate(sentiment = positive - negative,
+         book = factor(book, levels = titles)) %&gt;%
+  ggplot(aes(index, sentiment, fill = book)) +
+  geom_bar(alpha = 0.5, stat = &quot;identity&quot;, show.legend = FALSE) +
+  facet_wrap(~ book, ncol = 2, scales = &quot;free_x&quot;)</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Using single words as tokens for sentiment analysis can be less than ideal. This is because nearby words add context - in particular, negations make the analysis tricky. For example, the word “good” is a positive word. However, “My day was not good” has a negative sentiment, despite the presence of the word “good”. A better example for the Harry Potter series would be that “magic” is considered to be a positive word, but “dark magic” would be have a negative meaning. For further analysis of our Harry Potter text, let’s look at pairs of words (bigrams). A bigram is a pair of words that appear consecutively in a text. For example, if we look at the sentence “I ate purple grapes”, the bigrams we can extract would be (I, ate), (ate, purple), and (purple, grapes). In the following code chunk, I repeat the process of shaping the text data from the beginning of the document, but this time I specify that bigrams should be used to tokenize the text rather than single words.</p>
+<pre class="r"><code>series &lt;- tibble()
+
+for(i in seq_along(titles)) {
+  
+  temp &lt;- tibble(chapter = seq_along(books[[i]]),
+                  text = books[[i]]) %&gt;%
+    unnest_tokens(bigram, text, token = &quot;ngrams&quot;, n = 2) %&gt;%
+    ##Here we tokenize each chapter into bigrams
+    mutate(book = titles[i]) %&gt;%
+    select(book, everything())
+  
+  series &lt;- rbind(series, temp)
+}
+
+# set factor to keep books in order of publication
+series$book &lt;- factor(series$book, levels = rev(titles))
+series</code></pre>
+<pre><code>## # A tibble: 1,089,186 x 3
+##    book                chapter bigram     
+##    &lt;fct&gt;                 &lt;int&gt; &lt;chr&gt;      
+##  1 Philosopher&#39;s Stone       1 the boy    
+##  2 Philosopher&#39;s Stone       1 boy who    
+##  3 Philosopher&#39;s Stone       1 who lived  
+##  4 Philosopher&#39;s Stone       1 lived mr   
+##  5 Philosopher&#39;s Stone       1 mr and     
+##  6 Philosopher&#39;s Stone       1 and mrs    
+##  7 Philosopher&#39;s Stone       1 mrs dursley
+##  8 Philosopher&#39;s Stone       1 dursley of 
+##  9 Philosopher&#39;s Stone       1 of number  
+## 10 Philosopher&#39;s Stone       1 number four
+## # … with 1,089,176 more rows</code></pre>
+<p>Again, we can use the count function to find the most common bigrams in the series.</p>
+<pre class="r"><code>series %&gt;%
+  count(bigram, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 340,021 x 2
+##    bigram         n
+##    &lt;chr&gt;      &lt;int&gt;
+##  1 of the      4895
+##  2 in the      3571
+##  3 said harry  2626
+##  4 he was      2490
+##  5 at the      2435
+##  6 to the      2386
+##  7 on the      2359
+##  8 he had      2138
+##  9 it was      2123
+## 10 out of      1911
+## # … with 340,011 more rows</code></pre>
+<p>As we saw with the single words, most of the most common bigrams contain stop-words. Let’s remove those from our bigram tibble.</p>
+<pre class="r"><code>bigrams_separated &lt;- series %&gt;%
+  separate(bigram, c(&quot;word1&quot;, &quot;word2&quot;), sep = &quot; &quot;)
+
+bigrams_filtered &lt;- bigrams_separated %&gt;%
+  filter(!word1 %in% stop_words$word) %&gt;%
+  filter(!word2 %in% stop_words$word)
+
+# new bigram counts:
+bigrams_united &lt;- bigrams_filtered %&gt;%
+  unite(bigram, word1, word2, sep = &quot; &quot;)
+
+bigram_counts &lt;- bigrams_united %&gt;% 
+    count(bigram, sort = TRUE)</code></pre>
+<p>Now that we have removed the stop-words, we can see that the most frequently occurring bigram in the series is “Professor McGonagall”. The only bigrams in the top ten that don’t contain character names are “Death Eaters”, “Invisibility Cloak” and “Dark Arts”.</p>
+<p>Now, let’s use our bigrams to practice tf-idf (term frequency -inverse document frequency). In a nutshell, tf-idf is an analysis that seeks to identify how common a word is in a particular text, given how often it occurs in a group of texts. For example, Professor Lupin was a very prominent character in “The Prisoner of Azkaban”“, but not so much in the other books (and in the other books, he was not a professor). A person who had not read all of the books could determine this by simply counting the number of times the name”Professor Lupin" occurs in “The Prisoner of Azkaban” and comparing that number to the frequency of that bigram in the rest of the books in the series. To quantify this idea, the term frequency (the number of times a token appears in a document divided by the total number of tokens in the document) is multiplied by the inverse document frequency (the total number of documents divided by the number of documents containing the token). The chart below displays the ten bigrams with the highest tf-idf scores among the seven books in the series. “Professor Umbridge”, has the highest tf-idf score relative to “The Order of the Phoenix”. Any Harry Potter lover can tell you that we first meet Professor Umbridge in “The Order of the Phoenix”, in which and she plays a major role. In the other books in the series, her role ranges from small to non-existent. Thus, it makes sense that “Professor Umbridge” has a relatively high tf-idf score. Beneath the chart, I have created a visual for the bigrams with the highest tf-idf scores.</p>
+<pre class="r"><code>bigram_tf_idf &lt;- bigrams_united %&gt;%
+  count(book, bigram) %&gt;%
+  bind_tf_idf(bigram, book, n) %&gt;%
+  arrange(desc(tf_idf))
+
+bigram_tf_idf</code></pre>
+<pre><code>## # A tibble: 107,016 x 6
+##    book                 bigram                 n      tf   idf  tf_idf
+##    &lt;fct&gt;                &lt;chr&gt;              &lt;int&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Order of the Phoenix professor umbridge   173 0.00533 1.25  0.00667
+##  2 Prisoner of Azkaban  professor lupin      107 0.00738 0.847 0.00625
+##  3 Deathly Hallows      elder wand            58 0.00243 1.95  0.00473
+##  4 Goblet of Fire       ludo bagman           49 0.00201 1.95  0.00391
+##  5 Prisoner of Azkaban  aunt marge            42 0.00290 1.25  0.00363
+##  6 Deathly Hallows      death eaters         139 0.00582 0.560 0.00326
+##  7 Goblet of Fire       madame maxime         89 0.00365 0.847 0.00309
+##  8 Chamber of Secrets   gilderoy lockhart     28 0.00232 1.25  0.00291
+##  9 Half-Blood Prince    advanced potion       27 0.00129 1.95  0.00252
+## 10 Deathly Hallows      deathly hallows       30 0.00126 1.95  0.00245
+## # … with 107,006 more rows</code></pre>
+<pre class="r"><code>plot_potter&lt;- bigram_tf_idf %&gt;%
+  arrange(desc(tf_idf)) %&gt;%
+  mutate(bigram = factor(bigram, levels = rev(unique(bigram))))
+
+plot_potter %&gt;% 
+  top_n(20) %&gt;%
+  ggplot(aes(bigram, tf_idf, fill = book)) +
+  geom_col() +
+  labs(x = NULL, y = &quot;tf-idf&quot;) +
+  coord_flip()</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-31-1.png" width="672" />
+Now, to get an idea of how our sentiment analysis was affected by negations, let’s find all the bigrams that have the word “not” as the first word in the bigram.</p>
+<pre class="r"><code>bigrams_separated %&gt;%
+  filter(word1 == &quot;not&quot;) %&gt;%
+  count(word1, word2, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 1,085 x 3
+##    word1 word2     n
+##    &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
+##  1 not   to      383
+##  2 not   be      157
+##  3 not   a       131
+##  4 not   have    116
+##  5 not   the     103
+##  6 not   know     98
+##  7 not   going    92
+##  8 not   want     81
+##  9 not   said     76
+## 10 not   been     75
+## # … with 1,075 more rows</code></pre>
+<p>The first ten bigrams with “not” as the first word are boring, so let’s remove stop-words from the <code>word2</code> column.</p>
+<pre class="r"><code>bigrams_separated &lt;- bigrams_separated %&gt;%
+  filter(word1 == &quot;not&quot;) %&gt;%
+  filter(!word2 %in% stop_words$word)%&gt;%
+  count(word1, word2, sort = TRUE)
+
+bigrams_separated</code></pre>
+<pre><code>## # A tibble: 824 x 3
+##    word1 word2          n
+##    &lt;chr&gt; &lt;chr&gt;      &lt;int&gt;
+##  1 not   answer        41
+##  2 not   speak         41
+##  3 not   understand    35
+##  4 not   harry         32
+##  5 not   supposed      25
+##  6 not   dare          24
+##  7 not   hear          24
+##  8 not   allowed       22
+##  9 not   care          22
+## 10 not   knowing       17
+## # … with 814 more rows</code></pre>
+<pre class="r"><code>BING &lt;- get_sentiments(&quot;bing&quot;)
+
+not_words &lt;- bigrams_separated %&gt;%
+  filter(word1 == &quot;not&quot;) %&gt;%
+  filter(!word2 %in% stop_words$word)%&gt;%
+  inner_join(BING, by = c(word2 = &quot;word&quot;)) %&gt;%
+  ungroup()
+
+not_words</code></pre>
+<pre><code>## # A tibble: 199 x 4
+##    word1 word2       n sentiment
+##    &lt;chr&gt; &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;    
+##  1 not   bad        14 negative 
+##  2 not   stupid     12 negative 
+##  3 not   dead        9 negative 
+##  4 not   daring      8 positive 
+##  5 not   funny       8 negative 
+##  6 not   hurt        7 negative 
+##  7 not   blame       6 negative 
+##  8 not   bother      6 negative 
+##  9 not   pretend     6 negative 
+## 10 not   afraid      5 negative 
+## # … with 189 more rows</code></pre>
+<p>Just looking at the top ten words in the list, we can see that most of the words that are preceded by “not” in the series, have negative sentiment. This means, we may be over estimating the negative sentiment present in the text. Of course, there are many other negation words such as “never”, “no”, etc. One could explore all of these possible negation words to get a better idea of how negation is affecting the sentiment analysis.</p>
+<p>We can also create a graph that connects our most frequently occurring words with each other. Looking at the graph below, we can see a couple of larger clusters that give some context to what the series might be about. For example, there is a cluster with the word “professor” in the center, with several other words connected to it such as“McGonagall” and “Lupin”.</p>
+<pre class="r"><code>bigram_graph &lt;- bigram_counts %&gt;%
+  filter(n &gt; 70) %&gt;%
+  graph_from_data_frame()
+
+bigram_graph</code></pre>
+<pre><code>## IGRAPH 1ce3d1f DN-- 79 43 -- 
+## + attr: name (v/c)
+## + edges from 1ce3d1f (vertex names):
+##  [1] professor mcgonagall-&gt;578 uncle vernon        -&gt;386
+##  [3] harry potter        -&gt;349 death eaters        -&gt;346
+##  [5] harry looked        -&gt;316 harry ron           -&gt;302
+##  [7] aunt petunia        -&gt;206 invisibility cloak  -&gt;192
+##  [9] professor trelawney -&gt;177 dark arts           -&gt;176
+## [11] professor umbridge  -&gt;174 death eater         -&gt;164
+## [13] entrance hall       -&gt;145 madam pomfrey       -&gt;145
+## [15] dark lord           -&gt;141 professor dumbledore-&gt;127
+## + ... omitted several edges</code></pre>
+<pre class="r"><code>set.seed(2017)
+
+ggraph(bigram_graph, layout = &quot;fr&quot;) +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)</code></pre>
+<p><img src="/example/08-example_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>That’s it for text analytics with the Harry Potter series.This is by no means a comprehensive analysis, but it should have demonstrated some of the basic facets of text mining with the <code>tidyverse</code> in R.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

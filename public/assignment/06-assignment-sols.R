@@ -25,6 +25,7 @@ national_data <- get_acs(geography = "county",
                          rename(`Median Income` = estimate)
 
 
+
 datatable(national_data)  
 
 
@@ -155,7 +156,7 @@ state_data <- get_acs(geography = "state",
                       rename(`Median Income` = estimate)
 
 
-----warning=FALSE,message=FALSE----------------------------------
+
 datatable(state_data)  
 
 
