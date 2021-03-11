@@ -143,8 +143,9 @@ fileName
 
 read in the text and clean it up by removing any dollar signs since they mean something different in R
 ```{r echo=TRUE,eval=FALSE}
-fileText <- glue(read_file(fileName)) %>%
-              gsub("\\$", "", fileText)
+fileText <- glue(read_file(fileName)) 
+
+fileText <- gsub("\\$", "", fileText)
 
 fileText
 ```
@@ -292,13 +293,21 @@ library(harrypotter)
 After downloading the data from the harrypotter package on github, we can do a bit of data shaping.  The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we tokenize the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears. 
 
 ```{r, warning=FALSE}
-titles <- c("Philosopher's Stone", "Chamber of Secrets", "Prisoner of Azkaban",
-            "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince",
+titles <- c("Philosopher's Stone", 
+            "Chamber of Secrets", 
+            "Prisoner of Azkaban",
+            "Goblet of Fire", 
+            "Order of the Phoenix", 
+            "Half-Blood Prince",
             "Deathly Hallows")
 
-books <- list(philosophers_stone, chamber_of_secrets, prisoner_of_azkaban,
-           goblet_of_fire, order_of_the_phoenix, half_blood_prince,
-           deathly_hallows)
+books <- list("philosophers_stone", 
+              "chamber_of_secrets", 
+              "prisoner_of_azkaban",
+              "goblet_of_fire", 
+              "order_of_the_phoenix", 
+              "half_blood_prince",
+              "deathly_hallows")
   
 series <- tibble()
 

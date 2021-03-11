@@ -14,9 +14,9 @@ fileName <- glue("state-of-the-union-corpus-1989-2017/", files[1], sep = "") %>%
 
 fileName
 
+fileText <- glue(read_file(fileName))
 
-fileText <- glue(read_file(fileName)) %>%
-              gsub("\\$", "", fileText)
+fileText <- gsub("\\$", "", fileText)
 
 fileText
 
@@ -71,14 +71,13 @@ library(ggraph)
 library(harrypotter)
 
 
-
 titles <- c("Philosopher's Stone", "Chamber of Secrets", "Prisoner of Azkaban",
             "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince",
             "Deathly Hallows")
 
-books <- list(philosophers_stone, chamber_of_secrets, prisoner_of_azkaban,
-           goblet_of_fire, order_of_the_phoenix, half_blood_prince,
-           deathly_hallows)
+books <- list("philosophers_stone", "chamber_of_secrets", "prisoner_of_azkaban",
+           "goblet_of_fire", "order_of_the_phoenix", "half_blood_prince,"
+           "deathly_hallows")
   
 series <- tibble()
 

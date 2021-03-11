@@ -168,8 +168,9 @@ files</code></pre>
 fileName</code></pre>
 <pre><code>## /Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp693e/static/data/state-of-the-union-corpus-1989-2017Bush_1989.txt</code></pre>
 <p>read in the text and clean it up by removing any dollar signs since they mean something different in R</p>
-<pre class="r"><code>fileText &lt;- glue(read_file(fileName)) %&gt;%
-              gsub(&quot;\\$&quot;, &quot;&quot;, fileText)
+<pre class="r"><code>fileText &lt;- glue(read_file(fileName)) 
+
+fileText &lt;- gsub(&quot;\\$&quot;, &quot;&quot;, fileText)
 
 fileText</code></pre>
 <table>
@@ -672,9 +673,9 @@ not_words</code></pre>
   graph_from_data_frame()
 
 bigram_graph</code></pre>
-<pre><code>## IGRAPH a45c71f DN-- 79 43 -- 
+<pre><code>## IGRAPH 02520a3 DN-- 79 43 -- 
 ## + attr: name (v/c)
-## + edges from a45c71f (vertex names):
+## + edges from 02520a3 (vertex names):
 ##  [1] professor mcgonagall-&gt;578 uncle vernon        -&gt;386
 ##  [3] harry potter        -&gt;349 death eaters        -&gt;346
 ##  [5] harry looked        -&gt;316 harry ron           -&gt;302
