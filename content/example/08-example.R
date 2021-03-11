@@ -59,7 +59,6 @@ speech_bing_descriptives <- tokens %>%
 speech_bing_descriptives
 
 
----- echo=TRUE, message=FALSE, warning=FALSE-------
 library(wordcloud)
 library(devtools)
 library(tidyverse)      
