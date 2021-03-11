@@ -517,7 +517,7 @@ ggplot(team_strikeouts,
            fill="#FFFFFF",
            label = "(by batters)", 
            label.size = NA,
-           hjust = 1) +
+           hjust = 0.2) +
   annotate(geom="label", x = 1900, y = 9, 
            size = 2.5, 
            fontface = 2,
