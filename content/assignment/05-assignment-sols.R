@@ -1,210 +1,17 @@
----
-title: "Making Copies"
-linktitle: "Week 5: Making Copies Example"
-output:
-  blogdown::html_page:
-    toc: true
-menu:
-  assignment:
-    parent: Possible Solutions
-    weight: 5
-type: docs
-weight: 1
-editor_options: 
-  chunk_output_type: console
----
 
-<style>
-.hvr-sweep-to-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-}
+## nyt_data <- read_csv("divided.csv")
 
-.hvr-sweep-to-left:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:	#003277;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
 
-.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
-  color: white;
-}
 
-.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 700px;
-  background: #efefef;
-  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
-}
-
-.input {
-  position: absolute;
-  opacity: 0;
-}
-
-.label {
-  width: 100%;
-  padding: 20px 30px;
-  background: #e5e5e5;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  color: #7f7f7f;
-  transition: background 0.1s, color 0.1s;
-}
-
-.label:hover {
-  background: #d8d8d8;
-}
-
-.label:active {
-  background: #ccc;
-}
-
-.input:focus + .label {
-  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
-  z-index: 1;
-}
-
-.input:checked + .label {
-  background: #fff;
-  color: #000;
-}
-
-@media (min-width: 600px) {
-  .label {
-    width: auto;
-  }
-}
-
-.panel {
-  display: none;
-  padding: 20px 30px 30px;
-  background: #fff;
-}
-
-@media (min-width: 600px) {
-  .panel {
-    order: 99;
-  }
-}
-
-.input:checked + .label + .panel {
-  display: block;
-}
-</style>
-
-```{r echo=FALSE, message=FALSE, purl=FALSE, warning=FALSE}
-library(knitr)
-library(kableExtra)
-library(tidyverse)
-library(downloadthis)
-library(here)
-library(cowplot)
-library(magick)
-library(fs)
-library(showtext)
-library(nasaweather)
-library(Lahman)
-font_add_google("Libre Franklin", "libre")
-font_add("Arial", "/System/Library/Fonts/Supplemental/Arial.ttf")
-font_add("Georgia", "/System/Library/Fonts/Supplemental/Georgia.ttf")
-showtext_auto()
-```
-
-```{r setup, include=FALSE, purl=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Getting Prepped
-
-## Download the script
-
-Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
-
-```{r echo=FALSE,eval=TRUE,purl=FALSE}
-downloadthis::download_file(
-  path = here::here("content", "assignment", "05-assignment-sols.R"),
-  output_name = "Week 5 Possible Solutions",
-  button_label = "Download the Script",
-  button_type = "default",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-)
-```
-
-## Load the packages
-
-```{r eval=FALSE, message=FALSE, purl=FALSE}
-library(tidyverse)
-library(here)
-library(cowplot)
-library(nasaweather)
-library(Lahman)
-library(magick)
-library(fs)
-library(showtext)
-font_add_google("Libre Franklin", "libre")
-font_add("Arial", "/System/Library/Fonts/Supplemental/Arial.ttf")
-font_add("Georgia", "/System/Library/Fonts/Supplemental/Georgia.ttf")
-showtext_auto()
-```
-
-# Possible Solutions
-
-Remember just because your code doesn't look like mine doesn't mean anything and there's no expectation that you were this detailed. Included are examples of approaches that can be used to complete this task, but there are so many more! Use the to study how the plots were formed rather than comparing the code below with yours.
-
-## Choice 1: Government Data
-
-```{r echo=TRUE,eval=FALSE}
-nyt_data <- read_csv("divided.csv") 
-```
-
-```{r echo=FALSE,eval=TRUE}
 nyt_data <- read_csv(here("static", "data", "divided.csv"))
-```
 
-Take a look
-```{r}
+
+
 nyt_data %>%
   head(n=5)
-```
 
-```{r}
+
+
 divided_shortish <- ggplot(nyt_data) + 
   geom_bar(aes(x = year, weight = count, 
                fill = relevel(factor(status), "Unified.R")), # Fill by factor. If you want to know more about factors, give this site a try: https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors/ 
@@ -240,25 +47,22 @@ divided_shortish <- ggplot(nyt_data) +
   geom_segment(aes(x = 1937, xend = 2013, y = 40, yend=40), color ="#FFFFFF") + # Ditto except for y = 40
   scale_y_continuous(breaks=c(10,20,30,40,50)) + # Limit the labels on the y-axis (called ticks)
   scale_x_continuous(breaks=seq(1940,2010,10))  # Show labels in a sequence starting with 1940 and ending in 2010 in increments of 10
-```
 
-```{r echo=FALSE,eval=TRUE}
+
+
 nyt_im <- ggdraw() + draw_image(here("static", "img", "assignments", "Choice1.png"),
            scale = 1.0)
-```
 
-```{r echo=FALSE,eval=TRUE, out.height="60%"}
+
+
 divided_shortish 
-```
 
-in comparison to the original
-```{r echo=FALSE,eval=TRUE}
+
+
 nyt_im
-```
 
-If you want something that is closer to the original but requires some coding you likely have not been exposed to
 
-```{r}
+
 divided_longish <- ggplot(nyt_data) + # Assign this whole mess to the variable p
   geom_bar(aes(x = year, weight = count, 
                fill = relevel(factor(status), "Unified.R")), # Fill by factor  
@@ -354,83 +158,69 @@ divided_longish <- ggplot(nyt_data) + # Assign this whole mess to the variable p
            color = "#333333", 
            label = "24 states have\nunified Republican capitals\nin 2012 \u2A", 
            hjust = 0)
-```
 
-```{r echo=FALSE,eval=TRUE,out.width="100%"}
+
 divided_longish 
-```
 
-in comparison to the original
-```{r echo=FALSE,eval=TRUE}
+
+
 nyt_im
-```
 
-### Choice 2: Temperatures
 
-```{r echo=FALSE,eval=TRUE}
+
 st_im <- ggdraw() + draw_image(here("static", "img", "assignments", "Choice2.png"),
            scale = 1.0)
-```
 
-```{r}
+
+
 jan2001 <- subset(atmos, year == 2000 & month == 1) 
-```
 
-```{r}
+
+
 surface_shortish <- ggplot(jan2001) +  
                     geom_tile(aes(x = long, 
                                   y = lat, 
                                   fill = temp)) +   
                     scale_fill_continuous(limits = c(270, 310))
-```
 
-We can use `geom_tile()` using `fill` to represent different temperatures
-```{r echo=FALSE,eval=TRUE,out.width="70%"}
+
+
 surface_shortish
-```
 
-in comparison to the original 
-```{r echo=FALSE,eval=TRUE}
+
+
 st_im
-```
 
 
 
-### Choice 3: Average Temperatures
+## corv_data <- read_csv("corv.csv")
 
-```{r echo=TRUE,eval=FALSE}
-corv_data <- read_csv("corv.csv") 
-```
 
-```{r echo=FALSE,eval=TRUE}
+
 corv_data <- read_csv(here("static", "data", "corv.csv"))
-```
 
-```{r echo=FALSE,eval=TRUE}
+
+
 co_im <- ggdraw() + draw_image(here("static", "img", "assignments", "Choice3.png"),
            scale = 1.0)
-```
 
-To replicate the original plot, we can do
-```{r}
+
+
 ggplot(corv_data) + 
   geom_pointrange(aes(x = yday, y = mean, ymin = min, ymax = max)) + 
   labs(x = "Day of Year", y = "Temperature (F)")
-```
 
-in comparison to the original 
-```{r echo=FALSE,eval=TRUE}
+
+
 co_im
-```
 
-### Choice 4: Baseball
 
-```{r echo=FALSE,eval=TRUE}
+
 ba_im <- ggdraw() + draw_image(here("static", "img", "assignments", "Choice4.png"),
            scale = 1.0)
-```
 
-```{r eval=TRUE, echo=FALSE}
+
+
 # Pipes everywhere!
 team_strikeouts <- select(Teams, yearID, name, G, SO) %>%
                    mutate(strikeouts_per_game = SO/G) 
@@ -438,11 +228,8 @@ team_strikeouts <- select(Teams, yearID, name, G, SO) %>%
 avg_so_by_year  <- team_strikeouts %>% 
                     group_by(yearID) %>%
                     summarise(avg_so = mean(strikeouts_per_game))
-```
 
-You can either use both `team_strikeouts` & `avg_so_by_year`, or use only `team_strikeouts` which is shown below
 
-```{r, out.height="70%", warning=FALSE}
 ggplot(team_strikeouts,
        aes(yearID, strikeouts_per_game)) +
   geom_point (color="#dfdfdf",
@@ -578,10 +365,8 @@ ggplot(team_strikeouts,
   labs(title = "Strikeouts on the Rise", 
        subtitle = "There were more strikeouts in 2012 than at any other time in major league history."
     )
-```
 
-in comparison to the original 
-```{r echo=FALSE,eval=TRUE}
+
+
 ba_im
-```
 
