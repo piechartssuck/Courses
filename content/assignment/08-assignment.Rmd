@@ -263,6 +263,7 @@ Now that is a form you should be able to work with!
 Perform the following
 
 1. a chapterwise or bookwise sentient analysis of your text using AFINN, Bing, and NRC with a visual of each.
+
 2. BONUS^[Will replace the 2016 general election map activity]: Follow the approach given in [Text Mining with R](https://www.tidytextmining.com/){target="_blank"} to construct a topic model of the work with a visual of the top 10 topics by prevalence.
 
 :::
