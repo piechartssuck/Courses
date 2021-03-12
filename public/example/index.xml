@@ -4245,11 +4245,22 @@ Here we simply do not subset the data by party&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#set-your-working-directory&#34;&gt;Set your Working Directory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#loading-libraries&#34;&gt;Loading libraries&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#loading-data&#34;&gt;Loading Data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#steps-for-a-sentiment-analysis&#34;&gt;Steps for a Sentiment Analysis&lt;/a&gt;
-&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#understanding-nlp&#34;&gt;Understanding NLP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sentiment-analysis&#34;&gt;Sentiment Analysis&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-it&#34;&gt;What is it?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-does-it-work&#34;&gt;How Does it Work?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-an-example&#34;&gt;What is an Example?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-are-the-steps&#34;&gt;What are the steps?&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#tokenize&#34;&gt;Tokenize&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-stop-words&#34;&gt;Get Stop Words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#filter-stop-words&#34;&gt;Filter Stop Words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#find-polarities&#34;&gt;Find Polarities&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#another-example&#34;&gt;Another Example&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#section&#34;&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4352,7 +4363,8 @@ A tidyverse package that gives the power to concatenate strings in a way that’
 &lt;/div&gt;
 &lt;div id=&#34;loading-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Loading Data&lt;/h2&gt;
-&lt;p&gt;We’ll be using text data, in particular state of the union speeches. Let’s get a list of the files in the directory&lt;/p&gt;
+&lt;p&gt;We’ll be using text data, in particular state of the union speeches. These are annual narratives by the President of the United States given to a joint session of congress. In each, the President reviews the previous year and lays out his legislative agenda for the coming year. This dataset contains the full text of the State of the Union address from 1989 (Reagan) to 2017 (Trump).&lt;/p&gt;
+&lt;p&gt;Let’s get a list of the files in the directory&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;files &amp;lt;- list.files(&amp;quot;state-of-the-union-corpus-1989-2017&amp;quot;)
 
 files&lt;/code&gt;&lt;/pre&gt;
@@ -4374,8 +4386,9 @@ files&lt;/code&gt;&lt;/pre&gt;
 fileName&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## /Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp693e/static/data/state-of-the-union-corpus-1989-2017Bush_1989.txt&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;read in the text and clean it up by removing any dollar signs since they mean something different in R&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fileText &amp;lt;- glue(read_file(fileName)) %&amp;gt;%
-              gsub(&amp;quot;\\$&amp;quot;, &amp;quot;&amp;quot;, fileText)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fileText &amp;lt;- glue(read_file(fileName)) 
+
+fileText &amp;lt;- gsub(&amp;quot;\\$&amp;quot;, &amp;quot;&amp;quot;, fileText)
 
 fileText&lt;/code&gt;&lt;/pre&gt;
 &lt;table&gt;
@@ -4445,12 +4458,47 @@ Thank you. God bless you, and God bless America.
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&#34;steps-for-a-sentiment-analysis&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Steps for a Sentiment Analysis&lt;/h2&gt;
-&lt;div id=&#34;understanding-nlp&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Understanding NLP&lt;/h3&gt;
-&lt;p&gt;In a nutshell, computers and people don’t view or “understand” text in the same way - enter &lt;em&gt;Natural Language Processing&lt;/em&gt; (NLP). Part of artificial intelligence, NLP acts as a middleman that deals with the reading, deciphering and understanding of natural language used by computers and humans.&lt;/p&gt;
+&lt;div id=&#34;understanding-nlp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Understanding NLP&lt;/h2&gt;
+&lt;p&gt;In a nutshell, computers and people don’t view or “understand” text in the same way - enter &lt;em&gt;Natural Language Processing&lt;/em&gt; (NLP). Part of artificial intelligence, NLP acts as a middleman that deals with the reading, deciphering and understanding of natural language used by computers and humans. Some things you can do with this include the following with possible questions that address each method&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Authorship identification&lt;/strong&gt;: Can you correctly identify the author of a previously unseen address?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Parsing&lt;/strong&gt;: Can you train implement a parser to automatically extract the syntactic relationships between words?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sentiment analysis&lt;/strong&gt;: Are there differences in tone between different Presidents? Presidents from different parties?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Topic modeling&lt;/strong&gt;: Which topics have become more popular over time? Which have become less popular?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-analysis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sentiment Analysis&lt;/h1&gt;
+&lt;div id=&#34;what-is-it&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;A sentiment analysis is the computational task of automatically determining what feelings a writer is expressing in text. Sentiment is often framed as a binary distinction (positive vs. negative), but it can also be a more fine-grained, like identifying the specific emotion an author is expressing (like fear, joy or anger).&lt;/p&gt;
+&lt;p&gt;It is used for many applications, especially in assessing consumers. Some examples of applications for sentiment analysis include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Analyzing the social media discussion around a certain topic&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Evaluating survey responses&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Determining whether product reviews are polar and to what degree&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A sentiment analysis is not perfect and as with any automatic analysis of language, you will have errors in your results. It also cannot tell you why a writer is feeling a certain way. However, it can be useful to quickly summarize some qualities of text, especially if you have so much text that a human reader cannot analyze all of it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-does-it-work&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How Does it Work?&lt;/h2&gt;
+&lt;p&gt;There are many ways to do sentiment analysis and most approaches use the same general idea&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Create or find a list of words associated with strongly positive or negative sentiment.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Count the number of positive and negative words in the text.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Analyze the mix of positive to negative words. Many positive words and few negative words indicates positive sentiment, while many negative words and few positive words indicates negative sentiment.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-an-example&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is an Example?&lt;/h2&gt;
+&lt;p&gt;The first step, creating or finding a word list (also called a &lt;strong&gt;lexicon&lt;/strong&gt;), is generally the most time-consuming. While you can often use a lexicon that already exists, if your text is discussing a specific topic you may need to add to or modify it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Sick&lt;/em&gt; is an example of a word that can have positive or negative sentiment depending on what it’s used to refer to. If you’re discussing a pet store that sells a lot of sick animals, the sentiment is probably negative. On the other hand, if you’re talking about a skateboarding instructor who taught you how to do a lot of sick flips, the sentiment is probably very positive.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-are-the-steps&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What are the steps?&lt;/h2&gt;
+&lt;p&gt;Generally this is what you have to do&lt;/p&gt;
 &lt;div id=&#34;tokenize&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Tokenize&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Tokenization&lt;/em&gt; is process of taking a bunch of characters (i.e. strings) and chopping the up into little pieces called &lt;em&gt;tokens&lt;/em&gt;. Notice that actual “words” are not necessary here. This is important because it will allow us to use parts of words as you’ll see soon!&lt;/p&gt;
@@ -4474,8 +4522,8 @@ Thank you. God bless you, and God bless America.
 ## 10 house        
 ## # … with 4,812 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;get-stop-words&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get Stop Words&lt;/h3&gt;
+&lt;div id=&#34;filter-stop-words&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Filter Stop Words&lt;/h3&gt;
 &lt;p&gt;In text analysis, we tend to remove &lt;em&gt;stop words&lt;/em&gt; which are terms that are not useful for an analysis like “and”, “of”, “the”, etc. Here we use &lt;code&gt;anti_join()&lt;/code&gt; to get rid of those terms from our data set.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(stop_words)
 
@@ -4504,14 +4552,365 @@ tidy_tokens &amp;lt;- tokens %&amp;gt;%
   count(word, sort = TRUE) %&amp;gt;%
   filter(n &amp;gt; 5) %&amp;gt;%
   mutate(word = reorder(word, n)) %&amp;gt;%
-  ggplot(aes(n, word, fill=factor(n))) +
-  scale_fill_brewer(&amp;quot;Blues&amp;quot;) +
+  ggplot(aes(n, word, fill=n)) +
   geom_col() +
   theme_minimal() +
   labs(y = NULL)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Blues is 9
-## Returning the palette you asked for with that many colors&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;find-polarities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Find Polarities&lt;/h3&gt;
+&lt;p&gt;Now that we have a list of tokens, we need to compare them against a list of words with either positive or negative sentiment.
+A list of words associated with a specific sentiment is usually called a &lt;strong&gt;sentiment lexicon&lt;/strong&gt;. Because we’re using the &lt;code&gt;tidytext&lt;/code&gt; package, we actually already have some of these lists. I’m going to be using the “bing” list, which was developed by Bing Liu and co-authors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Get the sentiment from the first text: 
+speech_bing_descriptives &amp;lt;- tokens %&amp;gt;%
+  inner_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;% # pull out only sentiment words
+  count(sentiment) %&amp;gt;% # count the # of positive &amp;amp; negative words
+  spread(sentiment, n, fill = 0) %&amp;gt;% # made data wide rather than narrow
+  mutate(sentiment = positive - negative) # of positive words - # of negative words&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = &amp;quot;word&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;speech_bing_descriptives&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 3
+##   negative positive sentiment
+##      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1      117      240       123&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So this text has 117 negative polarity words and 240 positive polarity words. This means that there are 123 more positive than negative words in this text. Now that we know how to get the sentiment for a given text, let’s write a function to do this more quickly and easily and then apply that function to every text in our dataset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;another-example&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Another Example&lt;/h2&gt;
+&lt;p&gt;The Harry Potter R package &lt;code&gt;harrypotter&lt;/code&gt; on GitHub contains the text for all seven books in the Harry Potter series, by JK Rowling. Below, I have included the code required to connect to the ackage using &lt;code&gt;devtools&lt;/code&gt;, as well as the other packages required for the basic text analytics.&lt;/p&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;p&gt;Loading libraries&lt;/p&gt;
+&lt;p&gt;Go ahead and load these or install and then load them.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(wordcloud)
+library(devtools)
+library(tidyverse)      
+library(stringr)        
+library(tidytext)
+library(dplyr)
+library(reshape2)
+library(igraph)
+library(ggraph)
+library(harrypotter)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After downloading the data from the harrypotter package on github, we can do a bit of data shaping. The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we tokenize the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titles &amp;lt;- c(&amp;quot;Philosopher&amp;#39;s Stone&amp;quot;, &amp;quot;Chamber of Secrets&amp;quot;, &amp;quot;Prisoner of Azkaban&amp;quot;,
+            &amp;quot;Goblet of Fire&amp;quot;, &amp;quot;Order of the Phoenix&amp;quot;, &amp;quot;Half-Blood Prince&amp;quot;,
+            &amp;quot;Deathly Hallows&amp;quot;)
+
+books &amp;lt;- list(philosophers_stone, chamber_of_secrets, prisoner_of_azkaban,
+           goblet_of_fire, order_of_the_phoenix, half_blood_prince,
+           deathly_hallows)
+  
+series &amp;lt;- tibble()
+
+for(i in seq_along(titles)) {
+        
+        clean &amp;lt;- tibble(chapter = seq_along(books[[i]]),
+                        text = books[[i]]) %&amp;gt;%
+             unnest_tokens(word, text) %&amp;gt;%
+             mutate(book = titles[i]) %&amp;gt;%
+             select(book, everything())
+
+        series &amp;lt;- rbind(series, clean)
+}
+
+# set factor to keep books in order of publication
+series$book &amp;lt;- factor(series$book, levels = rev(titles))
+
+series&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,089,386 x 3
+##    book                chapter word   
+##    &amp;lt;fct&amp;gt;                 &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  
+##  1 Philosopher&amp;#39;s Stone       1 the    
+##  2 Philosopher&amp;#39;s Stone       1 boy    
+##  3 Philosopher&amp;#39;s Stone       1 who    
+##  4 Philosopher&amp;#39;s Stone       1 lived  
+##  5 Philosopher&amp;#39;s Stone       1 mr     
+##  6 Philosopher&amp;#39;s Stone       1 and    
+##  7 Philosopher&amp;#39;s Stone       1 mrs    
+##  8 Philosopher&amp;#39;s Stone       1 dursley
+##  9 Philosopher&amp;#39;s Stone       1 of     
+## 10 Philosopher&amp;#39;s Stone       1 number 
+## # … with 1,089,376 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can get simple counts for each word using the count function. The word “the” occurs 51593 times in the Harry Potter series.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;% count(word, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 24,475 x 2
+##    word      n
+##    &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 the   51593
+##  2 and   27430
+##  3 to    26985
+##  4 of    21802
+##  5 a     20966
+##  6 he    20322
+##  7 harry 16557
+##  8 was   15631
+##  9 said  14398
+## 10 his   14264
+## # … with 24,465 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Many of the words in the top ten most frequently appearing words are stop-words such as “the”, “and”, “to”, etc., so let’s discard those for now. Below, you can see a word cloud showing the most frequently occurring non-stop words in the series. The cloud contains the top 100 most frequently occurring words, and the larger a word appears in the cloud, the more frequently that word occurred in the text. It comes as no surprise to Harry Potter readers that most of the largest words in the cloud are names like “Harry”, “Ron” and “Hermione”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series$book &amp;lt;- factor(series$book, levels = rev(titles))
+
+series %&amp;gt;% 
+  anti_join(stop_words) %&amp;gt;%
+  count(word) %&amp;gt;%
+  with(wordcloud(word, n, max.words = 100))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we can begin the sentiment analysis. For this portion, we will continue working with the text that contains stop-words. The basic motivation behind sentiment analysis is to assess how positive or negative text is, based on a dictionary of words that have been previously classified as positive or negative. This type of dictionary is called a sentiment lexicon. The tidyverse has several built in lexicons for sentiment analysis, but for this example we will stick with ‘nrc’ and ‘bing’. The ‘nrc’ is a more advanced lexicon that categorizes words into several sentiment categories - &lt;em&gt;sadness&lt;/em&gt;, &lt;em&gt;anger&lt;/em&gt;, &lt;em&gt;positive&lt;/em&gt;, &lt;em&gt;negative&lt;/em&gt;, &lt;em&gt;trust&lt;/em&gt;, etc. A single word in this lexicon may fall into multiple categories. Using the following code, we can get counts for the number of words in the Harry Potter series that fall into each of the categories addressed by ‘nrc’. In the output, you can see that there were 56579 words in the series that are classified as ‘negative’ by the ‘nrc’ lexicon. Overall, it looks like there are more negative words in the series than positive words. There are also a lot of words related to anger and sadness.&lt;/p&gt;
+&lt;p&gt;Get the lexicons we’ll be using by running these. You only have to do this once!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_sentiments(&amp;quot;afinn&amp;quot;)
+get_sentiments(&amp;quot;bing&amp;quot;)
+get_sentiments(&amp;quot;nrc&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then tp see the in action&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  right_join(get_sentiments(&amp;quot;nrc&amp;quot;)) %&amp;gt;%
+  filter(!is.na(sentiment)) %&amp;gt;%
+  count(sentiment, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 2
+##    sentiment        n
+##    &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;
+##  1 negative     56579
+##  2 positive     38324
+##  3 sadness      35866
+##  4 anger        32750
+##  5 trust        23485
+##  6 fear         21544
+##  7 anticipation 21123
+##  8 joy          14298
+##  9 disgust      13381
+## 10 surprise     12991&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The ‘bing’ lexicon only classifies words as positive or negative. Below you can see that this lexicon picked up 39503 negative words in the Harry Potter series, and 29066 positive words.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  right_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  filter(!is.na(sentiment)) %&amp;gt;%
+  count(sentiment, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   sentiment     n
+##   &amp;lt;chr&amp;gt;     &amp;lt;int&amp;gt;
+## 1 negative  39502
+## 2 positive  29065&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Similarly to the word cloud we created above, we can use the ‘bing’ lexicon to make a comparison cloud. This cloud displays the 50 most frequently occurring words in the series that were categorized by ‘bing’, and color-codes them based on negative or positive sentiment. You’ll notice that words like “Harry”“,”Hermione&#34; and “Ron” don’t appear in this cloud, because character names are not classified as positive or negative in ‘bing’.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  inner_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  count(word, sentiment, sort = TRUE) %&amp;gt;%
+  acast(word ~ sentiment, value.var = &amp;quot;n&amp;quot;, fill = 0) %&amp;gt;%
+  comparison.cloud(colors = c(&amp;quot;#F8766D&amp;quot;, &amp;quot;#00BFC4&amp;quot;),
+                   max.words = 50)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;div style=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;Now, let’s see what the comparison cloud looks like with stop-words removed temporarily.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  anti_join(stop_words) %&amp;gt;%
+  inner_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  count(word, sentiment, sort = TRUE) %&amp;gt;%
+  acast(word ~ sentiment, value.var = &amp;quot;n&amp;quot;, fill = 0) %&amp;gt;%
+  comparison.cloud(colors = c(&amp;quot;#F8766D&amp;quot;, &amp;quot;#00BFC4&amp;quot;),
+                   max.words = 50)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In the following code chunk, each book text is split into groups of 500 words, and counts for the number of positive and negative words in each group (based on the ‘bing’ lexicon) are calculated. Then we subtract the number of negative words from the number of positive words in each group. For example, if there were 341 positive words in a group and 159 negative words in the same group, the sentiment score for the group would be 182 (a positive sentiment score). We calculate this sentiment score for each 500 word group within each book in the series. Using ggplot, we create bar charts for each book in the series that demonstrate how the sentiment score for the text groups changes as time passes in the series. Overall, the sentiment of the Harry Potter series appears to be negative.&lt;/p&gt;
+&lt;p&gt;Challenges: How do these plots change if you go back and leave all of the stop-words in the tibble? Does the size of the text groups (500 words vs. 1000 words) affect the analysis?&lt;/p&gt;
+&lt;p&gt;As a next step, one might look at the maximum sentiment score and the minimum sentiment score for each book to see what text groups produced the extreme scores.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  group_by(book) %&amp;gt;% 
+  mutate(word_count = 1:n(),
+         index = word_count %/% 500 + 1) %&amp;gt;% 
+  inner_join(get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  count(book, index = index , sentiment) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  spread(sentiment, n, fill = 0) %&amp;gt;%
+  mutate(sentiment = positive - negative,
+         book = factor(book, levels = titles)) %&amp;gt;%
+  ggplot(aes(index, sentiment, fill = book)) +
+  geom_bar(alpha = 0.5, stat = &amp;quot;identity&amp;quot;, show.legend = FALSE) +
+  facet_wrap(~ book, ncol = 2, scales = &amp;quot;free_x&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Using single words as tokens for sentiment analysis can be less than ideal. This is because nearby words add context - in particular, negations make the analysis tricky. For example, the word “good” is a positive word. However, “My day was not good” has a negative sentiment, despite the presence of the word “good”. A better example for the Harry Potter series would be that “magic” is considered to be a positive word, but “dark magic” would be have a negative meaning. For further analysis of our Harry Potter text, let’s look at pairs of words (bigrams). A bigram is a pair of words that appear consecutively in a text. For example, if we look at the sentence “I ate purple grapes”, the bigrams we can extract would be (I, ate), (ate, purple), and (purple, grapes). In the following code chunk, I repeat the process of shaping the text data from the beginning of the document, but this time I specify that bigrams should be used to tokenize the text rather than single words.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series &amp;lt;- tibble()
+
+for(i in seq_along(titles)) {
+  
+  temp &amp;lt;- tibble(chapter = seq_along(books[[i]]),
+                  text = books[[i]]) %&amp;gt;%
+    unnest_tokens(bigram, text, token = &amp;quot;ngrams&amp;quot;, n = 2) %&amp;gt;%
+    ##Here we tokenize each chapter into bigrams
+    mutate(book = titles[i]) %&amp;gt;%
+    select(book, everything())
+  
+  series &amp;lt;- rbind(series, temp)
+}
+
+# set factor to keep books in order of publication
+series$book &amp;lt;- factor(series$book, levels = rev(titles))
+series&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,089,186 x 3
+##    book                chapter bigram     
+##    &amp;lt;fct&amp;gt;                 &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;      
+##  1 Philosopher&amp;#39;s Stone       1 the boy    
+##  2 Philosopher&amp;#39;s Stone       1 boy who    
+##  3 Philosopher&amp;#39;s Stone       1 who lived  
+##  4 Philosopher&amp;#39;s Stone       1 lived mr   
+##  5 Philosopher&amp;#39;s Stone       1 mr and     
+##  6 Philosopher&amp;#39;s Stone       1 and mrs    
+##  7 Philosopher&amp;#39;s Stone       1 mrs dursley
+##  8 Philosopher&amp;#39;s Stone       1 dursley of 
+##  9 Philosopher&amp;#39;s Stone       1 of number  
+## 10 Philosopher&amp;#39;s Stone       1 number four
+## # … with 1,089,176 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, we can use the count function to find the most common bigrams in the series.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;series %&amp;gt;%
+  count(bigram, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 340,021 x 2
+##    bigram         n
+##    &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt;
+##  1 of the      4895
+##  2 in the      3571
+##  3 said harry  2626
+##  4 he was      2490
+##  5 at the      2435
+##  6 to the      2386
+##  7 on the      2359
+##  8 he had      2138
+##  9 it was      2123
+## 10 out of      1911
+## # … with 340,011 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we saw with the single words, most of the most common bigrams contain stop-words. Let’s remove those from our bigram tibble.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bigrams_separated &amp;lt;- series %&amp;gt;%
+  separate(bigram, c(&amp;quot;word1&amp;quot;, &amp;quot;word2&amp;quot;), sep = &amp;quot; &amp;quot;)
+
+bigrams_filtered &amp;lt;- bigrams_separated %&amp;gt;%
+  filter(!word1 %in% stop_words$word) %&amp;gt;%
+  filter(!word2 %in% stop_words$word)
+
+# new bigram counts:
+bigrams_united &amp;lt;- bigrams_filtered %&amp;gt;%
+  unite(bigram, word1, word2, sep = &amp;quot; &amp;quot;)
+
+bigram_counts &amp;lt;- bigrams_united %&amp;gt;% 
+    count(bigram, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have removed the stop-words, we can see that the most frequently occurring bigram in the series is “Professor McGonagall”. The only bigrams in the top ten that don’t contain character names are “Death Eaters”, “Invisibility Cloak” and “Dark Arts”.&lt;/p&gt;
+&lt;p&gt;Now, let’s use our bigrams to practice tf-idf (term frequency -inverse document frequency). In a nutshell, tf-idf is an analysis that seeks to identify how common a word is in a particular text, given how often it occurs in a group of texts. For example, Professor Lupin was a very prominent character in “The Prisoner of Azkaban”“, but not so much in the other books (and in the other books, he was not a professor). A person who had not read all of the books could determine this by simply counting the number of times the name”Professor Lupin&#34; occurs in “The Prisoner of Azkaban” and comparing that number to the frequency of that bigram in the rest of the books in the series. To quantify this idea, the term frequency (the number of times a token appears in a document divided by the total number of tokens in the document) is multiplied by the inverse document frequency (the total number of documents divided by the number of documents containing the token). The chart below displays the ten bigrams with the highest tf-idf scores among the seven books in the series. “Professor Umbridge”, has the highest tf-idf score relative to “The Order of the Phoenix”. Any Harry Potter lover can tell you that we first meet Professor Umbridge in “The Order of the Phoenix”, in which and she plays a major role. In the other books in the series, her role ranges from small to non-existent. Thus, it makes sense that “Professor Umbridge” has a relatively high tf-idf score. Beneath the chart, I have created a visual for the bigrams with the highest tf-idf scores.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bigram_tf_idf &amp;lt;- bigrams_united %&amp;gt;%
+  count(book, bigram) %&amp;gt;%
+  bind_tf_idf(bigram, book, n) %&amp;gt;%
+  arrange(desc(tf_idf))
+
+bigram_tf_idf&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 107,016 x 6
+##    book                 bigram                 n      tf   idf  tf_idf
+##    &amp;lt;fct&amp;gt;                &amp;lt;chr&amp;gt;              &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1 Order of the Phoenix professor umbridge   173 0.00533 1.25  0.00667
+##  2 Prisoner of Azkaban  professor lupin      107 0.00738 0.847 0.00625
+##  3 Deathly Hallows      elder wand            58 0.00243 1.95  0.00473
+##  4 Goblet of Fire       ludo bagman           49 0.00201 1.95  0.00391
+##  5 Prisoner of Azkaban  aunt marge            42 0.00290 1.25  0.00363
+##  6 Deathly Hallows      death eaters         139 0.00582 0.560 0.00326
+##  7 Goblet of Fire       madame maxime         89 0.00365 0.847 0.00309
+##  8 Chamber of Secrets   gilderoy lockhart     28 0.00232 1.25  0.00291
+##  9 Half-Blood Prince    advanced potion       27 0.00129 1.95  0.00252
+## 10 Deathly Hallows      deathly hallows       30 0.00126 1.95  0.00245
+## # … with 107,006 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot_potter&amp;lt;- bigram_tf_idf %&amp;gt;%
+  arrange(desc(tf_idf)) %&amp;gt;%
+  mutate(bigram = factor(bigram, levels = rev(unique(bigram))))
+
+plot_potter %&amp;gt;% 
+  top_n(20) %&amp;gt;%
+  ggplot(aes(bigram, tf_idf, fill = book)) +
+  geom_col() +
+  labs(x = NULL, y = &amp;quot;tf-idf&amp;quot;) +
+  coord_flip()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;
+Now, to get an idea of how our sentiment analysis was affected by negations, let’s find all the bigrams that have the word “not” as the first word in the bigram.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bigrams_separated %&amp;gt;%
+  filter(word1 == &amp;quot;not&amp;quot;) %&amp;gt;%
+  count(word1, word2, sort = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,085 x 3
+##    word1 word2     n
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1 not   to      383
+##  2 not   be      157
+##  3 not   a       131
+##  4 not   have    116
+##  5 not   the     103
+##  6 not   know     98
+##  7 not   going    92
+##  8 not   want     81
+##  9 not   said     76
+## 10 not   been     75
+## # … with 1,075 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first ten bigrams with “not” as the first word are boring, so let’s remove stop-words from the &lt;code&gt;word2&lt;/code&gt; column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bigrams_separated &amp;lt;- bigrams_separated %&amp;gt;%
+  filter(word1 == &amp;quot;not&amp;quot;) %&amp;gt;%
+  filter(!word2 %in% stop_words$word)%&amp;gt;%
+  count(word1, word2, sort = TRUE)
+
+bigrams_separated&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 824 x 3
+##    word1 word2          n
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;int&amp;gt;
+##  1 not   answer        41
+##  2 not   speak         41
+##  3 not   understand    35
+##  4 not   harry         32
+##  5 not   supposed      25
+##  6 not   dare          24
+##  7 not   hear          24
+##  8 not   allowed       22
+##  9 not   care          22
+## 10 not   knowing       17
+## # … with 814 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;BING &amp;lt;- get_sentiments(&amp;quot;bing&amp;quot;)
+
+not_words &amp;lt;- bigrams_separated %&amp;gt;%
+  filter(word1 == &amp;quot;not&amp;quot;) %&amp;gt;%
+  filter(!word2 %in% stop_words$word)%&amp;gt;%
+  inner_join(BING, by = c(word2 = &amp;quot;word&amp;quot;)) %&amp;gt;%
+  ungroup()
+
+not_words&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 199 x 4
+##    word1 word2       n sentiment
+##    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    
+##  1 not   bad        14 negative 
+##  2 not   stupid     12 negative 
+##  3 not   dead        9 negative 
+##  4 not   daring      8 positive 
+##  5 not   funny       8 negative 
+##  6 not   hurt        7 negative 
+##  7 not   blame       6 negative 
+##  8 not   bother      6 negative 
+##  9 not   pretend     6 negative 
+## 10 not   afraid      5 negative 
+## # … with 189 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just looking at the top ten words in the list, we can see that most of the words that are preceded by “not” in the series, have negative sentiment. This means, we may be over estimating the negative sentiment present in the text. Of course, there are many other negation words such as “never”, “no”, etc. One could explore all of these possible negation words to get a better idea of how negation is affecting the sentiment analysis.&lt;/p&gt;
+&lt;p&gt;We can also create a graph that connects our most frequently occurring words with each other. Looking at the graph below, we can see a couple of larger clusters that give some context to what the series might be about. For example, there is a cluster with the word “professor” in the center, with several other words connected to it such as“McGonagall” and “Lupin”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bigram_graph &amp;lt;- bigram_counts %&amp;gt;%
+  filter(n &amp;gt; 70) %&amp;gt;%
+  graph_from_data_frame()
+
+bigram_graph&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## IGRAPH 02520a3 DN-- 79 43 -- 
+## + attr: name (v/c)
+## + edges from 02520a3 (vertex names):
+##  [1] professor mcgonagall-&amp;gt;578 uncle vernon        -&amp;gt;386
+##  [3] harry potter        -&amp;gt;349 death eaters        -&amp;gt;346
+##  [5] harry looked        -&amp;gt;316 harry ron           -&amp;gt;302
+##  [7] aunt petunia        -&amp;gt;206 invisibility cloak  -&amp;gt;192
+##  [9] professor trelawney -&amp;gt;177 dark arts           -&amp;gt;176
+## [11] professor umbridge  -&amp;gt;174 death eater         -&amp;gt;164
+## [13] entrance hall       -&amp;gt;145 madam pomfrey       -&amp;gt;145
+## [15] dark lord           -&amp;gt;141 professor dumbledore-&amp;gt;127
+## + ... omitted several edges&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(2017)
+
+ggraph(bigram_graph, layout = &amp;quot;fr&amp;quot;) +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/08-example_files/figure-html/unnamed-chunk-36-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That’s it for text analytics with the Harry Potter series.This is by no means a comprehensive analysis, but it should have demonstrated some of the basic facets of text mining with the &lt;code&gt;tidyverse&lt;/code&gt; in R.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
