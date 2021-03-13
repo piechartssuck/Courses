@@ -1,0 +1,82 @@
+---
+title: "R Project"
+linktitle: "R Project"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Projects
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+Consider using a data set you intend to use for your final project. 
+
+## Step I: Prospectus
+
+This submission is due in **one week**^[Please check eCampus for the exact due date.] 
+
+In this part, you are asked to submit two items of interest:
+
+1. **data file**: A possible data set that you wish to explore for your R Project provided in `.csv`, `.Rmd`, or `.Rdata` formatting. 
+
+2. **narrative**: A short one to three paragraph illustration outlining the following components:
+
+    + An overview of the context regarding the proposed data set.
+
+    + A explanation of intended outcomes (what you wish to explore or discover about the data set)
+
+    + (optional) An explanation of how you think it would be best to visualize the data
+
+## Step II: Visualization
+
+In general, you ust submit five different visualizations 
+This submission is due in **two weeks**^[Please check eCampus for the exact due date.] 
+
+In this part, you are asked to submit three items of interest:
+
+1. **data file**: The data set you explored using R provided in `.csv`,`.Rda`, or `.Rdata` formatting *if it differs from your original submission.*.  
+
+2. **narrative**: A short statement within a Microsoft Word (`.docx`) file describing whether you manipulated the original data set or not. If you did manipulate it, please briefly describe what you did.  
+
+3. **script** or **Rmarkdown**: A copy of your final script in `.R` or `Rmd` formatting. Please ensure that I am able to run it all at once.
+
+## Notes
+
+### Formatting the Narrative
+
+The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. 
+
+Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting.
+
+1. A cover page with your name
+
+2. No running head
+
+3. The Body fulfilling the requirements described above
+
+4. A references section^[If necessary]
+
+5. Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.^[Optional] 
+
+
+### Assessment of Visualization
+
+Some areas that you will be assessed on include
+
++ Your ability to describe an entire data set within your data visualization without additional explanation.
+
++ The use of color and aesthetics in general. 
+
++ An attention to detail such as labeling, scope, and clarity.
+
++ Ensuring that each applicable *line* or *chunk* of code you use is explained within the script.
+
+Remember your work should be at a graduate level. I can typically tell how much work has gone into a task. 
+
+If you are unsure of something, please ask and do not assume!
+
