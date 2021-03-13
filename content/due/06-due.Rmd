@@ -41,7 +41,7 @@ wk_post <- tibble(
 "Slack" = c(checked, 
               unchecked),
 
-Description = c("Create a replication and alternative visualization",
+Description = c("Create five census maps",
                 "Complete two modules"),
 
 Location = c("[Link](/assignment/06-assignment/)",
