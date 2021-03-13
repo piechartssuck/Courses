@@ -16,7 +16,7 @@ editor_options:
 
 # Exploratory Data Visualization 
 
-In this task, you will use R to create a set of static visuals based on a predefined data set. *Ideally you should work with one you intend to use for your final project.* Please make sure you follow the directions noted below.
+In this task, you will use R to create a set of static visuals based on a predefined data set. *Ideally you should work with one you intend to use for your final project.* Please make sure you follow the directions noted below. 
 
 ## Step I: Prospectus
 
@@ -33,6 +33,8 @@ In this part, you are asked to submit two items of interest:
     + A explanation of intended outcomes (what you wish to explore or discover about the data set)
 
     + (optional) An explanation of how you think it would be best to visualize the data
+
+Please wait to start Step II until approval. You may choose to submit the proposal early but please contact me over Slack so I may look it over prior to the due date.
 
 ## Step II: Visualization
 
