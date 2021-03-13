@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Data Visualization</title>
+    <link>https://edp693e.theoreticalphysed.com/projects/</link>
+      <atom:link href="https://edp693e.theoreticalphysed.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <image>
+      <url>https://edp693e.theoreticalphysed.com/img/course_info.png</url>
+      <title>Projects</title>
+      <link>https://edp693e.theoreticalphysed.com/projects/</link>
+    </image>
+    
+    <item>
+      <title>R Project</title>
+      <link>https://edp693e.theoreticalphysed.com/projects/01-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/projects/01-project/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#step-i-prospectus&#34;&gt;Step I: Prospectus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-ii-visualization&#34;&gt;Step II: Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#formatting-the-narrative&#34;&gt;Formatting the Narrative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assessment-of-visualization&#34;&gt;Assessment of Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Consider using a data set you intend to use for your final project.&lt;/p&gt;
+&lt;div id=&#34;step-i-prospectus&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step I: Prospectus&lt;/h2&gt;
+&lt;p&gt;This submission is due in &lt;strong&gt;one week&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this part, you are asked to submit two items of interest:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;data file&lt;/strong&gt;: A possible data set that you wish to explore for your R Project provided in &lt;code&gt;.csv&lt;/code&gt;, &lt;code&gt;.Rmd&lt;/code&gt;, or &lt;code&gt;.Rdata&lt;/code&gt; formatting.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;narrative&lt;/strong&gt;: A short one to three paragraph illustration outlining the following components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;An overview of the context regarding the proposed data set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A explanation of intended outcomes (what you wish to explore or discover about the data set)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(optional) An explanation of how you think it would be best to visualize the data&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-ii-visualization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step II: Visualization&lt;/h2&gt;
+&lt;p&gt;In general, you ust submit five different visualizations
+This submission is due in &lt;strong&gt;two weeks&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this part, you are asked to submit three items of interest:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;data file&lt;/strong&gt;: The data set you explored using R provided in &lt;code&gt;.csv&lt;/code&gt;,&lt;code&gt;.Rda&lt;/code&gt;, or &lt;code&gt;.Rdata&lt;/code&gt; formatting &lt;em&gt;if it differs from your original submission.&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;narrative&lt;/strong&gt;: A short statement within a Microsoft Word (&lt;code&gt;.docx&lt;/code&gt;) file describing whether you manipulated the original data set or not. If you did manipulate it, please briefly describe what you did.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;script&lt;/strong&gt; or &lt;strong&gt;Rmarkdown&lt;/strong&gt;: A copy of your final script in &lt;code&gt;.R&lt;/code&gt; or &lt;code&gt;Rmd&lt;/code&gt; formatting. Please ensure that I am able to run it all at once.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;notes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Notes&lt;/h2&gt;
+&lt;div id=&#34;formatting-the-narrative&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Formatting the Narrative&lt;/h3&gt;
+&lt;p&gt;The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document.&lt;/p&gt;
+&lt;p&gt;Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;A cover page with your name&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;No running head&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The Body fulfilling the requirements described above&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A references section&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assessment-of-visualization&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assessment of Visualization&lt;/h3&gt;
+&lt;p&gt;Some areas that you will be assessed on include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Your ability to describe an entire data set within your data visualization without additional explanation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The use of color and aesthetics in general.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An attention to detail such as labeling, scope, and clarity.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ensuring that each applicable &lt;em&gt;line&lt;/em&gt; or &lt;em&gt;chunk&lt;/em&gt; of code you use is explained within the script.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Remember your work should be at a graduate level. I can typically tell how much work has gone into a task.&lt;/p&gt;
+&lt;p&gt;If you are unsure of something, please ask and do not assume!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Please check eCampus for the exact due date.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Please check eCampus for the exact due date.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;If necessary&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Optional&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

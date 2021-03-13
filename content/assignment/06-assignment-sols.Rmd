@@ -1,0 +1,525 @@
+---
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map Example"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Possible Solutions
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting Prepped
+
+## Download the script
+
+Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.
+
+```{r echo=FALSE,eval=TRUE,purl=FALSE}
+downloadthis::download_file(
+  path = here::here("content", "assignment", "06-assignment-sols.R"),
+  output_name = "Week 6 Possible Solutions",
+  button_label = "Download the Script",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+# Possible Solutions
+
+Remember just because your code doesn't look like mine doesn't mean anything. Included are examples of approaches that can be used to complete this task, but there are so many more!
+
+```{r libraries, message=FALSE}
+library(tidyverse)
+library(tidycensus)
+library(DT)
+library(wesanderson)
+library(ggthemes)
+library(scales)
+```
+
+First let's check the FIPS codes for the states and counties
+
+```{r}
+head(tidycensus::fips_codes)
+```
+
+## Prior Things
+### Data Set
+
+For the following, we'll use a single variable though you can absolutely use many more! In this case, let's utilize the average income measured by medians in 2016.
+
+```{r}
+vars_of_interest <- c(median_income = "B19013_001")
+```
+
+### Color Palettes
+We will need continuous color palettes to display the data well. In this case we'll use the [`wesanderson`](https://github.com/karthik/wesanderson){target="_blank"} collection, but please feel free to use your own.
+
+## National Level Data
+
+```{r warning=FALSE,message=FALSE,results='hide'}
+national_data <- get_acs(geography = "county",
+                         variables = vars_of_interest,
+                         year = 2016,
+                         survey = "acs5",
+                         shift_geo = TRUE,
+                         geometry = TRUE) %>%
+                         rename(`Median Income` = estimate)
+```
+
+Make sure to check it
+
+```{r warning=FALSE,message=FALSE}
+datatable(national_data)  
+```
+
+Let's now create a palette
+
+```{r out.width="40%", fig.align='center'}
+wes_palette("Darjeeling2")
+```
+
+make it continuous
+```{r}
+darj2 <- wes_palette("Darjeeling2",
+                      max(national_data$`Median Income`, 
+                      na.rm = TRUE), 
+                      type = "continuous")
+```
+
+and plot it for the entire US
+```{r}
+ggplot() + 
+  geom_sf(data = national_data,
+          mapping = aes(fill = `Median Income`),
+          color = NA) + 
+  coord_sf(datum = NA) +
+  scale_fill_gradientn(colors = darj2)  + 
+  theme_minimal() +
+  theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5)) +
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the United States", 35))
+```
+
+## Regional Level Data
+Here is a [US Census PDF](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf) of what the regions are. Now Region 1 can be defined by
+
+```{r}
+region1 = c("CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA")
+```
+
+We get `acs` data and geographies for our variable at the 
+
+- tract level 
+ 
+```{r warning=FALSE,message=FALSE,results='hide'}
+multistate_tract_data <- get_acs(geography = "tract",
+                                 variables = vars_of_interest,
+                                 state = region1,
+                                 year = 2016,
+                                 survey = "acs5",
+                                 geometry = TRUE) %>%
+                          rename(`Median Income` = estimate)
+```
+
+Make sure to check it
+
+```{r warning=FALSE,message=FALSE,echo=TRUE,eval=FALSE}
+datatable(multistate_tract_data)  
+```
+
+```{r warning=FALSE,message=FALSE,echo=FALSE,eval=TRUE}
+multistate_tract_data %>%
+  head() %>%
+  kbl()
+```
+
+- state level
+```{r warning=FALSE,message=FALSE,results='hide'}
+multistate_state_data <- get_acs(geography = "state",
+                                 variables = vars_of_interest,
+                                 state = region1,
+                                 year = 2016,
+                                 survey = "acs5",
+                                 geometry = TRUE) %>%
+                          rename(`Median Income` = estimate)
+```
+
+Make sure to check it
+
+```{r warning=FALSE,message=FALSE,echo=TRUE,eval=FALSE}
+datatable(multistate_state_data)  
+```
+
+```{r warning=FALSE,message=FALSE,echo=FALSE,eval=TRUE}
+multistate_tract_data %>%
+  head() %>%
+  kbl()
+```
+
+Putting `geometry = TRUE` brings in the geographic information (aka shapefiles) so make sure that is on, though if you only need the data and not a map, save yourself some time and turn it off. Geographic data is relatively dense and can take some time depending on how much you need.
+
+Optionally let's create a palette,
+
+```{r out.width="40%", fig.align='center'}
+wes_palette("Darjeeling1")
+```
+
+make it continuous
+```{r}
+darj1 <- wes_palette("Darjeeling1",
+                     max(multistate_tract_data$`Median Income`, 
+                         na.rm = TRUE), 
+                     type = "continuous")
+```
+
+and plot it. This is tract level data so you'll have to wait a little bit
+
+```{r}
+ggplot() + 
+  geom_sf(data = multistate_tract_data,
+                   mapping = aes(fill = `Median Income`),
+                   color = NA) + 
+  scale_fill_gradientn(colors = darj1) +
+  theme_map() 
+```
+
+Let's give it a go with state borders so its a bit more familiar and with a formatted title and some finagling of the legend
+
+```{r}
+ggplot() + 
+  geom_sf(data = multistate_tract_data,
+                   mapping = aes(fill = `Median Income`),
+                   color = NA) + 
+  geom_sf(data = multistate_state_data,
+                   color = "#f7f7f7",
+                   fill = NA) + 
+  scale_fill_gradientn(colors = darj1,
+                       label = scales::dollar) +
+  theme_map() +
+  theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5),
+        legend.position = c(0.8,0.1),
+        legend.title = element_text(size = 12,
+                                    face = "bold",
+                                    color = "#3392a4",
+                                    hjust = 0.5,
+                                    margin = margin(b = 10)),
+        legend.text = element_text(size = 10,
+                                   face = "bold",
+                                   color = "#2d8292")) +
+  ggtitle("2016 ACS Median Income for Census Region 1")
+```
+
+## State Level Data
+We get `acs` data and geographies for our variable using 
+
+```{r warning=FALSE,message=FALSE,results='hide'}
+state_data <- get_acs(geography = "state",
+                      variables = vars_of_interest,
+                      year = 2016,
+                      survey = "acs5",
+                      shift_geo = TRUE,
+                      geometry = TRUE) %>%
+                      rename(`Median Income` = estimate)
+```
+
+Make sure to check it
+
+```{r warning=FALSE,message=FALSE}
+datatable(state_data)  
+```
+
+Optionally let's create a palette,
+
+```{r out.width="40%", fig.align='center'}
+wes_palette("Zissou1")
+```
+
+make it continuous
+```{r}
+ziss1 <- wes_palette("Zissou1",
+                     max(state_data$`Median Income`, 
+                         na.rm = TRUE), 
+                     type = "continuous")
+```
+
+and plot it for the entire US
+```{r}
+ggplot() + 
+  geom_sf(data = state_data,
+          mapping = aes(fill = `Median Income`),
+          color = NA) + 
+  scale_fill_gradientn(colors = ziss1) +
+  theme_map() +
+  theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5)) +
+  ggtitle("2016 ACS Median Income for All US States")
+```
+
+or just the lower 48 states
+
+```{r}
+lower_48 <- state_data %>%
+            filter(GEOID < 60) %>%
+            filter(!NAME == "Hawaii") %>%
+            filter(!NAME == "Alaska")
+```
+
+```{r}
+ggplot() + 
+ geom_sf(data = lower_48,
+         mapping = aes(fill = `Median Income`),
+         color = NA) + 
+ scale_fill_gradientn(colors = ziss1) +
+ theme_map() +
+    coord_sf(crs = 5070, 
+             datum = NA) +
+ theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5)) +
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the Contiguous US States", 35))
+```
+
+## County Level Data
+Tract level data is sometimes tricky to get, in that not all data sets with geographies have them. Sticking to the widespread surveys such as the decennial census and acs will always work, while others are up in the air.
+
+```{r warning=FALSE,message=FALSE,results='hide'}
+kansas <- get_acs(state = "KS", 
+                  geography = "county", 
+                  variables = vars_of_interest,
+                  geometry = TRUE) %>%
+                  rename(`Median Income` = estimate)
+```
+
+```{r eval=FALSE}
+datatable(kansas)
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(kansas) %>%
+  kable()
+```
+
+```{r out.width="40%", fig.align='center'}
+wes_palette("FantasticFox1")
+```
+
+make it continuous
+```{r}
+ffox <- wes_palette("FantasticFox1",
+                     max(kansas$`Median Income`, 
+                         na.rm = TRUE), 
+                     type = "continuous")
+```
+
+and plot it!
+```{r}
+kansas %>%
+  ggplot(aes(fill = `Median Income`)) + 
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = ffox,
+                       label = scales::dollar) +
+  theme_map() +
+  theme(legend.position = "bottom",
+        legend.direction = "horizontal",
+        legend.title.align=0.5) +   
+  guides(fill = guide_legend(title.position="top")) +
+ theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5)) +
+  ggtitle("2016 ACS Median Income for the Counties in Kansas")
+```
+
+## Tract Level Data
+Tract level data is sometimes tricky to get, in that not all data sets with geographies have them. Sticking to the widespread surveys such as the decennial census and acs will always work, while others are up in the air.
+
+```{r warning=FALSE,message=FALSE,results='hide'}
+doug <- get_acs(state = "KS", 
+                county = "Douglas", 
+                geography = "tract", 
+                variables = vars_of_interest,
+                geometry = TRUE) %>%
+                rename(`Median Income` = estimate)
+```
+
+```{r eval=FALSE}
+datatable(doug)
+```
+
+```{r echo=FALSE, purl=FALSE}
+head(doug) %>%
+  kable()
+```
+
+```{r out.width="40%", fig.align='center'}
+wes_palette("Cavalcanti1")
+```
+
+make it continuous
+```{r}
+caval <- wes_palette("Cavalcanti1",
+                     max(doug$`Median Income`, 
+                         na.rm = TRUE), 
+                     type = "continuous")
+```
+
+and plot it!
+```{r}
+doug %>%
+  ggplot(aes(fill = `Median Income`)) + 
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = caval,
+                       label = scales::dollar) +
+  theme_map() +
+  theme(legend.position = "bottom",
+        legend.key.width = unit(3, "line")) +   
+  guides(fill = guide_legend(title.position="top", 
+                              title.hjust =0.5))  +
+ theme(plot.title = element_text(size = 20,
+                                  face = "bold",
+                                  color = "#005b5b",
+                                  hjust = 0.5)) +
+  ggtitle(stringr::str_wrap("2016 ACS Median Income for the Census Tracts in Kansas", 35))
+```

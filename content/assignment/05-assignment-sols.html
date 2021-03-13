@@ -1,0 +1,512 @@
+---
+title: "Making Copies"
+linktitle: "Week 5: Making Copies Example"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Possible Solutions
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#load-the-packages">Load the packages</a></li>
+</ul></li>
+<li><a href="#possible-solutions">Possible Solutions</a>
+<ul>
+<li><a href="#choice-1-government-data">Choice 1: Government Data</a>
+<ul>
+<li><a href="#choice-2-temperatures">Choice 2: Temperatures</a></li>
+<li><a href="#choice-3-average-temperatures">Choice 3: Average Temperatures</a></li>
+<li><a href="#choice-4-baseball">Choice 4: Baseball</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,CiMjIG55dF9kYXRhIDwtIHJlYWRfY3N2KCJkaXZpZGVkLmNzdiIpCgoKCm55dF9kYXRhIDwtIHJlYWRfY3N2KGhlcmUoInN0YXRpYyIsICJkYXRhIiwgImRpdmlkZWQuY3N2IikpCgoKCm55dF9kYXRhICU+JQogIGhlYWQobj01KQoKCgpkaXZpZGVkX3Nob3J0aXNoIDwtIGdncGxvdChueXRfZGF0YSkgKyAKICBnZW9tX2JhcihhZXMoeCA9IHllYXIsIHdlaWdodCA9IGNvdW50LCAKICAgICAgICAgICAgICAgZmlsbCA9IHJlbGV2ZWwoZmFjdG9yKHN0YXR1cyksICJVbmlmaWVkLlIiKSksICMgRmlsbCBieSBmYWN0b3IuIElmIHlvdSB3YW50IHRvIGtub3cgbW9yZSBhYm91dCBmYWN0b3JzLCBnaXZlIHRoaXMgc2l0ZSBhIHRyeTogaHR0cHM6Ly9zd2NhcnBlbnRyeS5naXRodWIuaW8vci1ub3ZpY2UtaW5mbGFtbWF0aW9uLzEyLXN1cHAtZmFjdG9ycy8gCiAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gInN0YWNrIikgKyAjIFN0YWNrIHRoZSBiYXJzCiAgc2NhbGVfZmlsbF9tYW51YWwobGFiZWxzID0gYygiUmVwdWJsaWNhbnMiLCAiTWl4ZWQiLCAiRGVtb2NyYXRzIiksICMgUmVuYW1lIHRoZSB0ZXh0IHdpdGhpbiB0aGUgbGVnZW5kIAogICAgICAgICAgICAgICAgICAgIHZhbHVlcyA9IGMoIiNBNzU2NTMiLCIjQ0NDQkNBIiwiIzQxNkU5NSIpLCAjIEZpbGwgaW4gdGhlIHJlZCwgZ3JleSwgYW5kIGJsdWUgcmVzcGVjdGl2ZWx5CiAgICAgICAgICAgICAgICAgICAgbmFtZT0iQ09OVFJPTCBPRiBTVEFURSBDQVBJVEFMUyIsCiAgICAgICAgICAgICAgICAgICAgZ3VpZGUgPSBndWlkZV9sZWdlbmQoCiAgICAgICAgICAgICAgICAgICAgICBkaXJlY3Rpb24gPSAiaG9yaXpvbnRhbCIsCiAgICAgICAgICAgICAgICAgICAgICB0aXRsZS5wb3NpdGlvbiA9ICJ0b3AiKQogICAgICAgICAgICAgICAgICAgICkgKyAKICB0aGVtZV9taW5pbWFsKCkgKwogIHRoZW1lKHBhbmVsLmdyaWQubWFqb3IueCA9IGVsZW1lbnRfYmxhbmsoKSwgIyByZW1vdmUgdGhlIHZlcnRpY2FsIGdyaWQgbGluZXMKICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnkgPSBlbGVtZW50X2xpbmUoc2l6ZSA9IDAuNSwgbGluZXR5cGUgPSAzLCBjb2xvciA9ICIjMDAwMDAwIiksICMgc2V0IG1ham9yIGludGVyY2VwdCBsaW5lcyB0byBhIGRvdHRlZCBibGFjayBsaW5lCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSwgIyB0dXJuIGFsbCBtaW5vciBpbnRlcmNlcHQgbGluZXMgb2ZmCiAgICAgICAgYXhpcy50aXRsZS54PWVsZW1lbnRfYmxhbmsoKSwgIyBHZXQgcmlkIG9mIHRoZSB4LWF4aXMgbGFiZWwKICAgICAgICBheGlzLnRleHQueD1lbGVtZW50X3RleHQoc2l6ZT0xMCwgbWFyZ2luID0gbWFyZ2luKHQgPSAtNiwgciA9IDAsIGIgPSAwLCBsID0gMCkpLCAjUmVzaXplIHRoZSB4LWF4aXMgdGV4dCB0byAxMCBhbmQgbW92ZSBpdCB1cCA2IHVuaXRzCiAgICAgICAgYXhpcy50aWNrcy54PWVsZW1lbnRfYmxhbmsoKSwgICMgR2V0IHJpZCBvZiB0aGUgeC1heGlzIHRpY2tzCiAgICAgICAgYXhpcy50aXRsZS55PWVsZW1lbnRfYmxhbmsoKSwgIyBHZXQgcmlkIG9mIHRoZSB5LWF4aXMgbGFiZWwKICAgICAgICBheGlzLnRleHQueT1lbGVtZW50X3RleHQoc2l6ZT0xMCwgbWFyZ2luID0gbWFyZ2luKHQgPSAwLCByID0gMCwgYiA9IDAsIGwgPSAwKSksICNSZXNpemUgdGhlIHktYXhpcyB0ZXh0IHRvIDEwCiAgICAgICAgYXhpcy50aWNrcy55PWVsZW1lbnRfYmxhbmsoKSAgIyBHZXQgcmlkIG9mIHRoZSB5LWF4aXMgdGlja3MKICApICsKICB0aGVtZShsZWdlbmQucG9zaXRpb249InRvcCIsICMgTW92ZSB0aGUgbGVnZW5kIGFib3ZlIHRoZSBwbG90CiAgICAgICAgbGVnZW5kLmp1c3RpZmljYXRpb24gPSBjKDEsIDEpLCAjIEVxdWl2YWxlbnQgdG8ganVzdGlmeSByaWdodAogICAgICAgIGxlZ2VuZC5ib3g9Imhvcml6b250YWwiLCAjIE1ha2UgdGhlIGxlZ2VuZCBob3Jpem9udGFsCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduPTAuNSAgIyBDZW50ZXIgdGhlIHRpdGxlICgwIGlzIGxlZnQganVzdGlmeTsgMSBpcyByaWdodCBqdXN0aWZ5KQogICkgKwogIGd1aWRlcyhjb2xvciA9IGd1aWRlX2NvbG9yYmFyKHRpdGxlLnBvc2l0aW9uPSJ0b3AiLCB0aXRsZS5oanVzdCA9IDAuNSksICAjIEhlcmUgd2UgbW92ZWQgdGhlIGNvbG9yIGluIHRoZSBsZWdlbmQgdG8gdGhlIHRvcCBhbmQgY2VudGVyZWQgdGhlbS4KICAgICAgICAgc2l6ZSA9IGd1aWRlX2xlZ2VuZCh0aXRsZS5wb3NpdGlvbj0idG9wIiwgdGl0bGUuaGp1c3QgPSAwLjUpKSArICMgSGVyZSB3ZSBtb3ZlZCB0aGUgdGl0bGUgdG8gdGhlIHRvcCBhbmQgY2VudGVyZWQgaXQuCiAgZ2VvbV9zZWdtZW50KGFlcyh4ID0gMTkzNywgeGVuZCA9IDIwMTMsIHkgPSAxMCwgeWVuZD0xMCksIGNvbG9yID0iI0ZGRkZGRiIpICsgIyBVc2UgdGhlIG1pbiBhbmQgbWF4IHllYXIgdmFsdWVzIHRvIGRyYXcgYSBsaW5lIHNlZ21lbnQgYXQgeSA9IDEwOiBtaW4oZGl2aWRlZCR5ZWFyKSBhbmQgbWF4KGRpdmlkZWQkeWVhcikKICBnZW9tX3NlZ21lbnQoYWVzKHggPSAxOTM3LCB4ZW5kID0gMjAxMywgeSA9IDIwLCB5ZW5kPTIwKSwgY29sb3IgPSIjRkZGRkZGIikgKyAjIERpdHRvIGV4Y2VwdCBmb3IgeSA9IDIwCiAgZ2VvbV9zZWdtZW50KGFlcyh4ID0gMTkzNywgeGVuZCA9IDIwMTMsIHkgPSAzMCwgeWVuZD0zMCksIGNvbG9yID0iI0ZGRkZGRiIpICsgIyBEaXR0byBleGNlcHQgZm9yIHkgPSAzMAogIGdlb21fc2VnbWVudChhZXMoeCA9IDE5MzcsIHhlbmQgPSAyMDEzLCB5ID0gNDAsIHllbmQ9NDApLCBjb2xvciA9IiNGRkZGRkYiKSArICMgRGl0dG8gZXhjZXB0IGZvciB5ID0gNDAKICBzY2FsZV95X2NvbnRpbnVvdXMoYnJlYWtzPWMoMTAsMjAsMzAsNDAsNTApKSArICMgTGltaXQgdGhlIGxhYmVscyBvbiB0aGUgeS1heGlzIChjYWxsZWQgdGlja3MpCiAgc2NhbGVfeF9jb250aW51b3VzKGJyZWFrcz1zZXEoMTk0MCwyMDEwLDEwKSkgICMgU2hvdyBsYWJlbHMgaW4gYSBzZXF1ZW5jZSBzdGFydGluZyB3aXRoIDE5NDAgYW5kIGVuZGluZyBpbiAyMDEwIGluIGluY3JlbWVudHMgb2YgMTAKCgoKbnl0X2ltIDwtIGdnZHJhdygpICsgZHJhd19pbWFnZShoZXJlKCJzdGF0aWMiLCAiaW1nIiwgImFzc2lnbm1lbnRzIiwgIkNob2ljZTEucG5nIiksCiAgICAgICAgICAgc2NhbGUgPSAxLjApCgoKCmRpdmlkZWRfc2hvcnRpc2ggCgoKCm55dF9pbQoKCgpkaXZpZGVkX2xvbmdpc2ggPC0gZ2dwbG90KG55dF9kYXRhKSArICMgQXNzaWduIHRoaXMgd2hvbGUgbWVzcyB0byB0aGUgdmFyaWFibGUgcAogIGdlb21fYmFyKGFlcyh4ID0geWVhciwgd2VpZ2h0ID0gY291bnQsIAogICAgICAgICAgICAgICBmaWxsID0gcmVsZXZlbChmYWN0b3Ioc3RhdHVzKSwgIlVuaWZpZWQuUiIpKSwgIyBGaWxsIGJ5IGZhY3RvciAgCiAgICAgICAgICAgcG9zaXRpb24gPSAic3RhY2siKSArICMgU3RhY2sgdGhlIGJhcnMKICBzY2FsZV9maWxsX21hbnVhbChsYWJlbHMgPSBjKCJSZXB1YmxpY2FucyIsICJNaXhlZCIsICJEZW1vY3JhdHMiKSwgIyBSZW5hbWUgdGhlIHRleHQgd2l0aGluIHRoZSBsZWdlbmQgCiAgICAgICAgICAgICAgICAgICAgdmFsdWVzID0gYygiI0E3NTY1MyIsIiNDQ0NCQ0EiLCIjNDE2RTk1IiksICMgRmlsbCBpbiB0aGUgcmVkLCBncmV5LCBhbmQgYmx1ZSByZXNwZWN0aXZlbHkKICAgICAgICAgICAgICAgICAgICBuYW1lPSJDT05UUk9MIE9GIFNUQVRFIENBUElUQUxTIiwKICAgICAgICAgICAgICAgICAgICBndWlkZSA9IGd1aWRlX2xlZ2VuZCgKICAgICAgICAgICAgICAgICAgICAgIGRpcmVjdGlvbiA9ICJob3Jpem9udGFsIiwgCiAgICAgICAgICAgICAgICAgICAgICB0aXRsZS5wb3NpdGlvbiA9ICJ0b3AiLCAjIHB1dCB0aGUgdGl0bGUgb2YgdGhlIGxlZ2VuZCBhYm92ZQogICAgICAgICAgICAgICAgICAgICAgcmV2ZXJzZT1UUlVFLCAjIHJldmVyc2UgdGhlIGRlZmF1bHQgb3JkZXIgb2YgdGhlIGxlZ2VuZAogICAgICAgICAgICAgICAgICAgICAgbGFiZWwucG9zaXRpb24gPSAiYm90dG9tIikKICAgICAgICAgICAgICAgICAgICApICsgCiAgdGhlbWVfbWluaW1hbCgpICsKICB0aGVtZShwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksICMgcmVtb3ZlIHRoZSB2ZXJ0aWNhbCBncmlkIGxpbmVzCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvci55ID0gZWxlbWVudF9saW5lKHNpemUgPSAwLjUsIGxpbmV0eXBlID0gMywgY29sb3IgPSAiIzAwMDAwMCIpLCAjIHNldCBtYWpvciBpbnRlcmNlcHQgbGluZXMgdG8gYSBkb3R0ZWQgYmxhY2sgbGluZQogICAgICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksICMgdHVybiBhbGwgbWlub3IgaW50ZXJjZXB0IGxpbmVzIG9mZgogICAgICAgIGF4aXMudGl0bGUueD1lbGVtZW50X2JsYW5rKCksICMgR2V0IHJpZCBvZiB0aGUgeC1heGlzIGxhYmVsCiAgICAgICAgYXhpcy50ZXh0Lng9ZWxlbWVudF90ZXh0KHNpemU9MTAsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW4gPSBtYXJnaW4odCA9IC02LCByID0gMCwgYiA9IDAsIGwgPSAwKSksICMgcmVzaXplIHRoZSB4LWF4aXMgdGV4dCB0byAxMCBhbmQgbW92ZSBpdCB1cCA2IHVuaXRzCiAgICAgICAgYXhpcy50aWNrcy54PWVsZW1lbnRfYmxhbmsoKSwgICMgR2V0IHJpZCBvZiB0aGUgeC1heGlzIHRpY2tzCiAgICAgICAgYXhpcy50aXRsZS55PWVsZW1lbnRfYmxhbmsoKSwgIyBHZXQgcmlkIG9mIHRoZSB5LWF4aXMgbGFiZWwKICAgICAgICBheGlzLnRleHQueT1lbGVtZW50X3RleHQoc2l6ZT0xMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhqdXN0ID0gMCksICMgcmVzaXplIHRoZSB5LWF4aXMgdGV4dCB0byAxMCBhbmQgbGVmdCBqdXN0aWZ5IHRoZSBsYWJlbHMuCiAgICAgICAgYXhpcy50aWNrcy55PWVsZW1lbnRfYmxhbmsoKSAgIyBHZXQgcmlkIG9mIHRoZSB5LWF4aXMgdGlja3MKICApICsKICB0aGVtZShsZWdlbmQucG9zaXRpb249InRvcCIsICMgTW92ZSB0aGUgbGVnZW5kIGFib3ZlIHRoZSBwbG90CiAgICAgICAgbGVnZW5kLmp1c3RpZmljYXRpb24gPSBjKDEsIDEpLCAjIEVxdWl2YWxlbnQgdG8ganVzdGlmeSByaWdodAogICAgICAgIGxlZ2VuZC5ib3g9Imhvcml6b250YWwiLCAjIE1ha2UgdGhlIGxlZ2VuZCBob3Jpem9udGFsCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduPTAuNSwgIyBDZW50ZXIgdGhlIHRpdGxlICgwIGlzIGxlZnQganVzdGlmeTsgMSBpcyByaWdodCBqdXN0aWZ5KQogICAgICAgIGxlZ2VuZC5rZXkuaGVpZ2h0ID0gdW5pdCgwLjMsImNtIiksCiAgICAgICAgbGVnZW5kLmtleS53aWR0aCA9IHVuaXQoMiwgImNtIikKICAgICAgICApICsKICB0aGVtZSh0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseT0iQXJpYWwiLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gIiMyRjRGNEYiKSkgKyAjIGFrYSBzZXQgdGhlIGRlZmF1bHQgZm9udCB0byBBcmlhbCBhbmQgdXNlIGRhcmtzbGF0ZWdyZXkgYXMgdGhlIGNvbG9yIAogIHRoZW1lKHBsb3QubWFyZ2luID0gdW5pdChjKDEsMTAsMSwxKSwgImxpbmVzIikpICsgIyBTZXQgdGhlIHBsb3QgbWFyZ2lucyBzbyB0aGF0IHRoZSBlbnRpcmUgb3V0cHV0IGNhbiBmaXQKICBndWlkZXMoY29sb3IgPSBndWlkZV9jb2xvcmJhcih0aXRsZS5wb3NpdGlvbj0idG9wIiwgdGl0bGUuaGp1c3QgPSAwLjUpLCAjIE1vdmUgdGhlIGxlZ2VuZCBjb2xvcnMgdG8gdGhlIHRvcCBvZiB0aGUgbGVnZW5kIAogICAgICAgICBzaXplID0gZ3VpZGVfbGVnZW5kKHRpdGxlLnBvc2l0aW9uPSJ0b3AiLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0aXRsZS5oanVzdCA9IDAuNSkpICsgIyBNb3ZlIHRoZSBsZWdlbmQgdGl0bGUgdG8gdGhlIHRvcCBvZiB0aGUgbGVnZW5kIAogIGdlb21fc2VnbWVudChhZXMoeCA9IDE5MzcsIHhlbmQgPSAyMDEzLCB5ID0gMTAsIHllbmQ9MTApLCAKICAgICAgICAgICAgICAgY29sb3IgPSIjRkZGRkZGIikgKyAjIFVzZSB0aGUgbWluIGFuZCBtYXggeWVhciB2YWx1ZXMgdG8gZHJhdyBhIGxpbmUgc2VnbWVudCBhdCB5ID0gMTA6IG1pbihkaXZpZGVkJHllYXIpIGFuZCBtYXgoZGl2aWRlZCR5ZWFyKQogIGdlb21fc2VnbWVudChhZXMoeCA9IDE5MzcsIHhlbmQgPSAyMDEzLCB5ID0gMjAsIHllbmQ9MjApLCAKICAgICAgICAgICAgICAgY29sb3IgPSIjRkZGRkZGIikgKyAjIERpdHRvIGV4Y2VwdCBmb3IgeSA9IDIwCiAgZ2VvbV9zZWdtZW50KGFlcyh4ID0gMTkzNywgeGVuZCA9IDIwMTMsIHkgPSAzMCwgeWVuZD0zMCksIAogICAgICAgICAgICAgICBjb2xvciA9IiNGRkZGRkYiKSArICMgRGl0dG8gZXhjZXB0IGZvciB5ID0gMzAKICBnZW9tX3NlZ21lbnQoYWVzKHggPSAxOTM3LCB4ZW5kID0gMjAxMywgeSA9IDQwLCB5ZW5kPTQwKSwgCiAgICAgICAgICAgICAgIGNvbG9yID0iI0ZGRkZGRiIpICsgIyBEaXR0byBleGNlcHQgZm9yIHkgPSA0MAogIHNjYWxlX3lfY29udGludW91cyhicmVha3M9YygxMCwyMCwzMCw0MCw1MCksIAogICAgICAgICAgICAgICAgICAgICBsYWJlbHMgPSBjKCIxMCIsICIyMCIsICIzMCIsICI0MCIsICI1MCBzdGF0ZXMiKSkgKyAjIExpbWl0IHRoZSBsYWJlbHMgb24gdGhlIHktYXhpcyAoY2FsbGVkIHRpY2tzKQogIHNjYWxlX3hfY29udGludW91cyhicmVha3M9c2VxKDE5NDAsMjAxMCwxMCkpICsgIyBTaG93IGxhYmVscyBpbiBhIHNlcXVlbmNlIHN0YXJ0aW5nIHdpdGggMTk0MCBhbmQgZW5kaW5nIGluIDIwMTAgaW4gaW5jcmVtZW50cyBvZiAxMAogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gImxpYnJlIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzaXplID0gMTIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiIzAwMDAwMCIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luID0gbWFyZ2luKGIgPSAxMCksIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAwKSwgIyBMaWJyZSBmYW1pbHkgd2l0aCAyMCBwdCBibGFjayBmb250IGFuZCBtYXJnaW4gb2YgMTAgcHQuCiAgcGxvdC5zdWJ0aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMTIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiIzMzMzMzMyIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luID0gbWFyZ2luKGIgPSAxMCksIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmp1c3QgPSAtNSksICMgRXZlcnl0aGluZyBhYm92ZSBidXQgd2l0aCBncmV5MjAKICBwbG90LmNhcHRpb24gPSBlbGVtZW50X3RleHQoc2l6ZSA9IDgsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW4gPSBtYXJnaW4odCA9IDEwKSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gIiMzMzMzMzMiLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaGp1c3QgPSAtMikgIyBQcmV0dHkgbXVjaCBldmVyeXRoaW5nIGZyb20gYWJvdmUKICApICsKICBsYWJzKHRpdGxlID0gc3RyaW5ncjo6c3RyX3dyYXAoIlN0YXRlIEdvdmVybm1lbnQgQ29udHJvbCBTaW5jZSAxOTM4Iiw0MCksICMgQ29uc3RydWN0IGEgdGl0bGUgZm9yIHRoZSBwbG90CiAgICAgICBzdWJ0aXRsZSA9IHN0cmluZ3I6OnN0cl93cmFwKCJUaGVyZSBhcmUgbm93IG1vcmUgc3RhdGUgY2FwaXRhbHMgZG9taW5hdGVkIGJ5IGEgc2luZ2xlIHBhcnR5IFx1MjAxNCB3aGVyZSBvbmUgcGFydHkgY29udHJvbHMgdGhlIGxlZ2lzbGF0dXJlIGFuZCB0aGUgZ292ZXJub3IncyBvZmZpY2UgXHUyMDE0IHRoYW4gYXQgYW55IHRpbWUgc2luY2UgMTk1Mi4iLDgwKSwKICAgICAgIGNhcHRpb24gPSAiXHUyQSBWaXJnaW5pYSBpcyBjb3VudGVkIGFzIHVuaWZpZWQgUmVwdWJsaWNhbiBiZWNhdXNlIGl0cyBTdGF0ZSBTZW5hdGUgaXMgdGllZCBhbmQgaXRzIHRpZWJyZWFrZXIsIHRoZSBsaWV1dGVuYW50IGdvdmVybm9yLCBpcyBhIFJlcHVibGljYW4uXG5cdTIwMjAgRWFybHkgcmVzdWx0cyBhcHBlYXJlZCB0byBzaG93IHRoYXQgTmV3IFlvcmsgaGFkIHVuaWZpZWQgRGVtb2NyYXRpYyBjb250cm9sLiBidXQgdm90ZXMgYXJlIHN0aWxsIGJlaW5nIGNvdW50ZWQgaW4gbWFueSByYWNlcy5cblxuU291cmNlOiBOYXRpb25hbCBDb25mZXJlbmNlIG9mIFN0YXRlIExlZ2lzbGF0dXJlcy4iLAogICAgICAgY29sLm1haW4gPSBhZGp1c3Rjb2xvcigiIzM4NDQ1OCIsMSksIGNleC5tYWluID0gMiwgbGluZT0tMC41KSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMjAxMi42LCB5ID0gNywgc2l6ZSA9IDMuNSwgY29sb3IgPSAiIzMzMzMzMyIsIGxhYmVsID0gIlx1MjAxNCIsIGhqdXN0ID0gMCkgKwogIGFubm90YXRlKGdlb20gPSJ0ZXh0IiwgeCA9IDIwMTQuMiwgeSA9IDcsIHNpemUgPSAzLjUsIGNvbG9yID0gIiMzMzMzMzMiLCBsYWJlbCA9ICJBdCBsZWFzdCAxM1xuaGF2ZSBEZW1vY3JhdGljIGNvbnRyb2wiLCBoanVzdCA9IDApICsKICBhbm5vdGF0ZShnZW9tID0idGV4dCIsIHggPSAyMDEyLjYsIHkgPSAxNC4yLCBzaXplID0gMy41LCAKICAgICAgICAgICBjb2xvciA9ICIjMzMzMzMzIiwgCiAgICAgICAgICAgbGFiZWwgPSAiXHUyMDE0IiwgCiAgICAgICAgICAgaGp1c3QgPSAwKSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMjAxNC4yLCB5ID0gMTQuMiwgc2l6ZSA9IDMuNSwgCiAgICAgICAgICAgY29sb3IgPSAiIzMzMzMzMyIsIAogICAgICAgICAgIGxhYmVsID0gIk5ldyBZb3JrIFx1MjAyMCIsIAogICAgICAgICAgIGhqdXN0ID0gMCkgKwogIGFubm90YXRlKGdlb20gPSJ0ZXh0IiwgeCA9IDIwMTIuNiwgeSA9IDIyLjIsIHNpemUgPSAzLjUsIAogICAgICAgICAgIGNvbG9yID0gIiMzMzMzMzMiLCAKICAgICAgICAgICBsYWJlbCA9ICJcdTIwMTQiLCAKICAgICAgICAgICBoanVzdCA9IDApICsKICBhbm5vdGF0ZShnZW9tID0idGV4dCIsIHggPSAyMDE0LjIsIHkgPSAyMi4yLCBzaXplID0gMy41LCAKICAgICAgICAgICBjb2xvciA9ICIjMzMzMzMzIiwgCiAgICAgICAgICAgbGFiZWwgPSAiQXQgbGVhc3QgMTFcbmhhdmUgbWl4ZWQgY29udHJvbCIsIAogICAgICAgICAgIGhqdXN0ID0gMCkgKwogIGFubm90YXRlKGdlb20gPSJ0ZXh0IiwgeCA9IDIwMTIuNiwgeSA9IDQ0LjIsIHNpemUgPSAzLjUsIAogICAgICAgICAgIGNvbG9yID0gIiMzMzMzMzMiLCAKICAgICAgICAgICBsYWJlbCA9ICJcdTIwMTQiLCAKICAgICAgICAgICBoanVzdCA9IDApICsKICBhbm5vdGF0ZShnZW9tID0idGV4dCIsIHggPSAyMDE0LjIsIHkgPSA0NC4yLCBzaXplID0gMy41LCAKICAgICAgICAgICBjb2xvciA9ICIjMzMzMzMzIiwgCiAgICAgICAgICAgbGFiZWwgPSAiMjQgc3RhdGVzIGhhdmVcbnVuaWZpZWQgUmVwdWJsaWNhbiBjYXBpdGFsc1xuaW4gMjAxMiBcdTJBIiwgCiAgICAgICAgICAgaGp1c3QgPSAwKQoKCmRpdmlkZWRfbG9uZ2lzaCAKCgoKbnl0X2ltCgoKCnN0X2ltIDwtIGdnZHJhdygpICsgZHJhd19pbWFnZShoZXJlKCJzdGF0aWMiLCAiaW1nIiwgImFzc2lnbm1lbnRzIiwgIkNob2ljZTIucG5nIiksCiAgICAgICAgICAgc2NhbGUgPSAxLjApCgoKCmphbjIwMDEgPC0gc3Vic2V0KGF0bW9zLCB5ZWFyID09IDIwMDAgJiBtb250aCA9PSAxKSAKCgoKc3VyZmFjZV9zaG9ydGlzaCA8LSBnZ3Bsb3QoamFuMjAwMSkgKyAgCiAgICAgICAgICAgICAgICAgICAgZ2VvbV90aWxlKGFlcyh4ID0gbG9uZywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB5ID0gbGF0LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSB0ZW1wKSkgKyAgIAogICAgICAgICAgICAgICAgICAgIHNjYWxlX2ZpbGxfY29udGludW91cyhsaW1pdHMgPSBjKDI3MCwgMzEwKSkKCgoKc3VyZmFjZV9zaG9ydGlzaAoKCgpzdF9pbQoKCgojIyBjb3J2X2RhdGEgPC0gcmVhZF9jc3YoImNvcnYuY3N2IikKCgoKY29ydl9kYXRhIDwtIHJlYWRfY3N2KGhlcmUoInN0YXRpYyIsICJkYXRhIiwgImNvcnYuY3N2IikpCgoKCmNvX2ltIDwtIGdnZHJhdygpICsgZHJhd19pbWFnZShoZXJlKCJzdGF0aWMiLCAiaW1nIiwgImFzc2lnbm1lbnRzIiwgIkNob2ljZTMucG5nIiksCiAgICAgICAgICAgc2NhbGUgPSAxLjApCgoKCmdncGxvdChjb3J2X2RhdGEpICsgCiAgZ2VvbV9wb2ludHJhbmdlKGFlcyh4ID0geWRheSwgeSA9IG1lYW4sIHltaW4gPSBtaW4sIHltYXggPSBtYXgpKSArIAogIGxhYnMoeCA9ICJEYXkgb2YgWWVhciIsIHkgPSAiVGVtcGVyYXR1cmUgKEYpIikKCgoKY29faW0KCgoKYmFfaW0gPC0gZ2dkcmF3KCkgKyBkcmF3X2ltYWdlKGhlcmUoInN0YXRpYyIsICJpbWciLCAiYXNzaWdubWVudHMiLCAiQ2hvaWNlNC5wbmciKSwKICAgICAgICAgICBzY2FsZSA9IDEuMCkKCgoKIyBQaXBlcyBldmVyeXdoZXJlIQp0ZWFtX3N0cmlrZW91dHMgPC0gc2VsZWN0KFRlYW1zLCB5ZWFySUQsIG5hbWUsIEcsIFNPKSAlPiUKICAgICAgICAgICAgICAgICAgIG11dGF0ZShzdHJpa2VvdXRzX3Blcl9nYW1lID0gU08vRykgCgphdmdfc29fYnlfeWVhciAgPC0gdGVhbV9zdHJpa2VvdXRzICU+JSAKICAgICAgICAgICAgICAgICAgICBncm91cF9ieSh5ZWFySUQpICU+JQogICAgICAgICAgICAgICAgICAgIHN1bW1hcmlzZShhdmdfc28gPSBtZWFuKHN0cmlrZW91dHNfcGVyX2dhbWUpKQoKCmdncGxvdCh0ZWFtX3N0cmlrZW91dHMsCiAgICAgICBhZXMoeWVhcklELCBzdHJpa2VvdXRzX3Blcl9nYW1lKSkgKwogIGdlb21fcG9pbnQgKGNvbG9yPSIjZGZkZmRmIiwKICAgICAgICAgICAgICBzaXplID0gMC4zKSArCiAgZ2VvbV9zZWdtZW50KGFlcyh4ID0gMTkxNywgeSA9IDEuMywgeGVuZCA9IDE5MTcsIHllbmQgPSAzLjUpLCAKICAgICAgICAgICAgICAgY29sb3IgPSAiI2RmZGZkZiIsCiAgICAgICAgICAgICAgIHNpemUgPSAwLjEpICsKICBnZW9tX3NlZ21lbnQoYWVzKHggPSAxOTQ1LCB5ID0gMS44LCB4ZW5kID0gMTk0NSwgeWVuZCA9IDMuOSksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjZGZkZmRmIiwKICAgICAgICAgICAgICAgc2l6ZSA9IDAuMSkgKwogIGdlb21fc2VnbWVudChhZXMoeCA9IDE5NjMsIHkgPSAyLjgsIHhlbmQgPSAxOTYzLCB5ZW5kID0gNS44KSwgCiAgICAgICAgICAgICAgIGNvbG9yID0gIiNkZmRmZGYiLAogICAgICAgICAgICAgICBzaXplID0gMC4xKSArCiAgZ2VvbV9zZWdtZW50KGFlcyh4ID0gMTk2OSwgeSA9IDcuOSwgeGVuZCA9IDE5NjksIHllbmQgPSA1LjgpLCAKICAgICAgICAgICAgICAgY29sb3IgPSAiI2RmZGZkZiIsCiAgICAgICAgICAgICAgIHNpemUgPSAwLjEpICsKICBnZW9tX3NlZ21lbnQoYWVzKHggPSAxOTcyLCB5ID0gMS44LCB4ZW5kID0gMTk3MiwgeWVuZCA9IDUuMiksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjZGZkZmRmIiwKICAgICAgICAgICAgICAgc2l6ZSA9IDAuMSkgKwogIGdlb21fc2VnbWVudChhZXMoeCA9IDIwMDYsIHkgPSAzLjgsIHhlbmQgPSAyMDA2LCB5ZW5kID0gNi44KSwgCiAgICAgICAgICAgICAgIGNvbG9yID0gIiNkZmRmZGYiLAogICAgICAgICAgICAgICBzaXplID0gMC4xKSArCiAgc3RhdF9zdW1tYXJ5KGZ1biA9ICdtZWFuJywgCiAgICAgICAgICAgICAgIGdlb20gPWMoInBvaW50IiksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjMDA2ODhiIiwKICAgICAgICAgICAgICAgc2l6ZSA9IDAuNzUpICsKICBzdGF0X3N1bW1hcnkoYWVzKHNoYXBlPSJMZWFndWUgYXZlcmFnZSIpLAogICAgICAgICAgICAgICBmdW4gPSAnbWVhbicsIAogICAgICAgICAgICAgICBnZW9tID1jKCJsaW5lIiksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjMDA2ODhiIiwKICAgICAgICAgICAgICAgc2hvdy5sZWdlbmQgPSBUUlVFKSArCiAgYW5ub3RhdGUoInRleHQiLCB4ID0gMjAxMiwgeSA9IDguNywgCiAgICAgICAgICAgbGFiZWwgPSAiMjAxMlxuTGVhZ3VlIGF2ZXJhZ2UiLAogICAgICAgICAgIGZvbnRmYWNlID0gMiwKICAgICAgICAgICBzaXplID0gMikgKwogIGFubm90YXRlKCJ0ZXh0IiwgeCA9IDIwMTIsIHkgPSA4LCAKICAgICAgICAgICBsYWJlbCA9ICI3LjUiLAogICAgICAgICAgIGZvbnRmYWNlID0gMiwKICAgICAgICAgICBjb2xvciA9ICIjMDA2ODhiIiwKICAgICAgICAgICBzaXplID0gNC4zKSArCiAgYW5ub3RhdGUoInRleHQiLCB4ID0gMTkyNCwgeSA9IDEuNSwgCiAgICAgICAgICAgbGFiZWwgPSAiTGVhZ3VlIGF2ZXJhZ2VcbjE5MjQiLCAKICAgICAgICAgICBmb250ZmFjZSA9ICJib2xkIiwKICAgICAgICAgICBzaXplID0gMykgKwogIGFubm90YXRlKCJ0ZXh0IiwgeCA9IDE5MjQsIHkgPSAyLjIsIAogICAgICAgICAgIGxhYmVsID0gIjIuNyIsIAogICAgICAgICAgIGZvbnRmYWNlID0gMiwKICAgICAgICAgICBjb2xvciA9ICIjMDA2ODhiIiwKICAgICAgICAgICBzaXplID0gNC4zKSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMTkxNywgeSA9IDEsIAogICAgICAgICAgIHNpemUgPSAyLjAsIAogICAgICAgICAgIGNvbG9yID0gIiM3ZTdlN2UiLCAKICAgICAgICAgICBsYWJlbCA9ICJVLlMuIGVudGVyc1xuV29ybGQgV2FyIEkuIiwgCiAgICAgICAgICAgaGp1c3QgPSAwLjUpICsKICBhbm5vdGF0ZShnZW9tID0idGV4dCIsIHggPSAxOTQ1LCB5ID0gMS41LCAKICAgICAgICAgICBzaXplID0gMi4wLCAKICAgICAgICAgICBjb2xvciA9ICIjN2U3ZTdlIiwgCiAgICAgICAgICAgbGFiZWwgPSAiUGxheWVycyByZXR1cm5cbmZyb20gV29ybGQgV2FyIElJLiIsIAogICAgICAgICAgIGhqdXN0ID0gMC41KSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMTk2MywgeSA9IDIuNSwgCiAgICAgICAgICAgc2l6ZSA9IDIuMCwgCiAgICAgICAgICAgY29sb3IgPSAiIzdlN2U3ZSIsIAogICAgICAgICAgIGxhYmVsID0gIlN0cmlrZSB6b25lIGVubGFyZ2VkXG5mcm9tIDE5NjMtNjguIiwgCiAgICAgICAgICAgaGp1c3QgPSAwLjUpICsKICBhbm5vdGF0ZShnZW9tID0idGV4dCIsIHggPSAxOTY5LCB5ID0gOC41LCAKICAgICAgICAgICBzaXplID0gMi4wLCAKICAgICAgICAgICBjb2xvciA9ICIjN2U3ZTdlIiwgCiAgICAgICAgICAgbGFiZWwgPSAiUGl0Y2hpbmcgaGFkIGJlY29tZSBzbyBkb21pbmFudFxuaW4gdGhlIDE5NjBzIHRoYXQgdGhlIG1vdW5kXG53YXMgbG93ZXJlZCBpbiAxOTY5LiIsIAogICAgICAgICAgIGhqdXN0ID0gMC41KSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMTk3MiwgeSA9IDEuNSwgCiAgICAgICAgICAgc2l6ZSA9IDIuMCwgCiAgICAgICAgICAgY29sb3IgPSAiIzdlN2U3ZSIsIAogICAgICAgICAgIGxhYmVsID0gIkRlc2lnbmF0ZWQgaGl0dGVyXG5ydWxlIHRvb2sgZWZmZWN0LiIsIAogICAgICAgICAgIGhqdXN0ID0gMC41KSArCiAgYW5ub3RhdGUoZ2VvbSA9InRleHQiLCB4ID0gMjAwNiwgeSA9IDMuNSwgCiAgICAgICAgICAgc2l6ZSA9IDIuMCwgCiAgICAgICAgICAgY29sb3IgPSAiIzdlN2U3ZSIsIAogICAgICAgICAgIGxhYmVsID0gIk1pdGNoZWxsIHJlcG9ydFxub24gc3Rlcm9pZHMuIiwgCiAgICAgICAgICAgaGp1c3QgPSAwLjUpICsKICBhbm5vdGF0ZShnZW9tPSJsYWJlbCIsIHggPSAxOTI1LCB5ID0gOSwgCiAgICAgICAgICAgc2l6ZSA9IDIuMCwgCiAgICAgICAgICAgZm9udGZhY2UgPSAyLAogICAgICAgICAgIGNvbG9yID0gIiM3ZTdlN2UiLCAKICAgICAgICAgICBmaWxsPSIjRkZGRkZGIiwKICAgICAgICAgICBsYWJlbCA9ICIoYnkgYmF0dGVycykiLCAKICAgICAgICAgICBsYWJlbC5zaXplID0gTkEsCiAgICAgICAgICAgaGp1c3QgPSAwLjIyKSArCiAgYW5ub3RhdGUoZ2VvbT0ibGFiZWwiLCB4ID0gMTkwMCwgeSA9IDksIAogICAgICAgICAgIHNpemUgPSAyLjUsIAogICAgICAgICAgIGZvbnRmYWNlID0gMiwKICAgICAgICAgICBjb2xvciA9ICIjMDAwMDAwIiwKICAgICAgICAgICBmaWxsPSIjRkZGRkZGIiwKICAgICAgICAgICBsYWJlbCA9ICJTdHJpa2VvdXRzIHBlciBnYW1lIHBlciB0ZWFtIiwKICAgICAgICAgICBsYWJlbC5zaXplID0gTkEsCiAgICAgICAgICAgaGp1c3QgPSAwLjIpICsKICBzY2FsZV94X2NvbnRpbnVvdXMoIiIsCiAgICAgICAgICAgICAgICAgICBicmVha3M9YygxOTAwLDE5MTAsMTkyMCwxOTMwLDE5NDAsMTk1MCwxOTYwLDE5NzAsMTk4MCwxOTkwLDIwMDAsMjAxMCksIAogICAgICAgICAgICAgICAgICAgbGltaXRzPWMoMTkwMCwyMDE1KSkgKwogIHNjYWxlX3lfY29udGludW91cygiIiwKICAgICAgICAgICAgICAgICAgICAgYnJlYWtzPWMoMCwxLDIsMyw0LDUsNiw3LDgsOSksCiAgICAgICAgICAgICAgICAgICAgIGxpbWl0cz1jKDAsOSksCiAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uID0gInJpZ2h0IgopICsKICB0aGVtZV9taW5pbWFsKCkgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdlb3JnaWEiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFjZSA9ICJib2xkIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNpemUgPSAxNCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICIjMDAwMDAwIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW4gPSBtYXJnaW4oYiA9IDApLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZqdXN0ID0gMCksCiAgICAgICAgcGxvdC5zdWJ0aXRsZSA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR2VvcmdpYSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzaXplID0gOCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvciA9ICIjMDAwMDAwIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW4gPSBtYXJnaW4oYiA9IDEwKSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2anVzdCA9IC0yKSkgKwogIHRoZW1lKGF4aXMudGV4dC55LnJpZ2h0ID0gZWxlbWVudF90ZXh0KGNvbG9yID0gIiM3ZTdlN2UiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiYm9sZCIpLAogICAgICAgIGF4aXMudGV4dC54ID0gZWxlbWVudF90ZXh0KGhqdXN0ID0gMCksCiAgICAgICAgYXhpcy5saW5lLnggPSBlbGVtZW50X2xpbmUoKSwKICAgICAgICBheGlzLnRpY2tzLnggPSBlbGVtZW50X2xpbmUoKSwKICAgICAgICBwYW5lbC5ncmlkLm1ham9yLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvci55ID0gZWxlbWVudF9saW5lKGxpbmV0eXBlID0gImRvdHRlZCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gIiNkZmRmZGYiKSwKICAgICAgICBwYW5lbC5ncmlkLm1pbm9yID0gZWxlbWVudF9ibGFuaygpKSArCiAgdGhlbWUobGVnZW5kLnBvc2l0aW9uID0gYygwLCAwLjkpLCAKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChmaWxsPU5BLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yPU5BKSwKICAgICAgICBsZWdlbmQuanVzdGlmaWNhdGlvbj0nbGVmdCcsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbj0naG9yaXpvbnRhbCcsCiAgICAgICAgbGVnZW5kLnRleHQgPSBlbGVtZW50X3RleHQoY29sb3IgPSAiIzdlN2U3ZSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2l6ZSA9IDgpLAogICAgICAgIGxlZ2VuZC50aXRsZSA9IGVsZW1lbnRfYmxhbmsoKSkgKwogIGxhYnModGl0bGUgPSAiU3RyaWtlb3V0cyBvbiB0aGUgUmlzZSIsIAogICAgICAgc3VidGl0bGUgPSAiVGhlcmUgd2VyZSBtb3JlIHN0cmlrZW91dHMgaW4gMjAxMiB0aGFuIGF0IGFueSBvdGhlciB0aW1lIGluIG1ham9yIGxlYWd1ZSBoaXN0b3J5LiIKICAgICkKCgoKYmFfaW0KCg==" download="Week 5 Possible Solutions.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="load-the-packages" class="section level2">
+<h2>Load the packages</h2>
+<pre class="r"><code>library(tidyverse)
+library(here)
+library(cowplot)
+library(nasaweather)
+library(Lahman)
+library(magick)
+library(fs)
+library(showtext)
+font_add_google(&quot;Libre Franklin&quot;, &quot;libre&quot;)
+font_add(&quot;Arial&quot;, &quot;/System/Library/Fonts/Supplemental/Arial.ttf&quot;)
+font_add(&quot;Georgia&quot;, &quot;/System/Library/Fonts/Supplemental/Georgia.ttf&quot;)
+showtext_auto()</code></pre>
+</div>
+</div>
+<div id="possible-solutions" class="section level1">
+<h1>Possible Solutions</h1>
+<p>Remember just because your code doesn’t look like mine doesn’t mean anything and there’s no expectation that you were this detailed. Included are examples of approaches that can be used to complete this task, but there are so many more! Use the to study how the plots were formed rather than comparing the code below with yours.</p>
+<div id="choice-1-government-data" class="section level2">
+<h2>Choice 1: Government Data</h2>
+<pre class="r"><code>nyt_data &lt;- read_csv(&quot;divided.csv&quot;) </code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   year = col_double(),
+##   status = col_character(),
+##   count = col_double()
+## )</code></pre>
+<p>Take a look</p>
+<pre class="r"><code>nyt_data %&gt;%
+  head(n=5)</code></pre>
+<pre><code>## # A tibble: 5 x 3
+##    year status  count
+##   &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
+## 1  1938 Divided    10
+## 2  1940 Divided    15
+## 3  1942 Divided     9
+## 4  1944 Divided    10
+## 5  1946 Divided     8</code></pre>
+<pre class="r"><code>divided_shortish &lt;- ggplot(nyt_data) + 
+  geom_bar(aes(x = year, weight = count, 
+               fill = relevel(factor(status), &quot;Unified.R&quot;)), # Fill by factor. If you want to know more about factors, give this site a try: https://swcarpentry.github.io/r-novice-inflammation/12-supp-factors/ 
+                  position = &quot;stack&quot;) + # Stack the bars
+  scale_fill_manual(labels = c(&quot;Republicans&quot;, &quot;Mixed&quot;, &quot;Democrats&quot;), # Rename the text within the legend 
+                    values = c(&quot;#A75653&quot;,&quot;#CCCBCA&quot;,&quot;#416E95&quot;), # Fill in the red, grey, and blue respectively
+                    name=&quot;CONTROL OF STATE CAPITALS&quot;,
+                    guide = guide_legend(
+                      direction = &quot;horizontal&quot;,
+                      title.position = &quot;top&quot;)
+                    ) + 
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(), # remove the vertical grid lines
+        panel.grid.major.y = element_line(size = 0.5, linetype = 3, color = &quot;#000000&quot;), # set major intercept lines to a dotted black line
+        panel.grid.minor = element_blank(), # turn all minor intercept lines off
+        axis.title.x=element_blank(), # Get rid of the x-axis label
+        axis.text.x=element_text(size=10, margin = margin(t = -6, r = 0, b = 0, l = 0)), #Resize the x-axis text to 10 and move it up 6 units
+        axis.ticks.x=element_blank(),  # Get rid of the x-axis ticks
+        axis.title.y=element_blank(), # Get rid of the y-axis label
+        axis.text.y=element_text(size=10, margin = margin(t = 0, r = 0, b = 0, l = 0)), #Resize the y-axis text to 10
+        axis.ticks.y=element_blank()  # Get rid of the y-axis ticks
+  ) +
+  theme(legend.position=&quot;top&quot;, # Move the legend above the plot
+        legend.justification = c(1, 1), # Equivalent to justify right
+        legend.box=&quot;horizontal&quot;, # Make the legend horizontal
+        legend.title.align=0.5  # Center the title (0 is left justify; 1 is right justify)
+  ) +
+  guides(color = guide_colorbar(title.position=&quot;top&quot;, title.hjust = 0.5),  # Here we moved the color in the legend to the top and centered them.
+         size = guide_legend(title.position=&quot;top&quot;, title.hjust = 0.5)) + # Here we moved the title to the top and centered it.
+  geom_segment(aes(x = 1937, xend = 2013, y = 10, yend=10), color =&quot;#FFFFFF&quot;) + # Use the min and max year values to draw a line segment at y = 10: min(divided$year) and max(divided$year)
+  geom_segment(aes(x = 1937, xend = 2013, y = 20, yend=20), color =&quot;#FFFFFF&quot;) + # Ditto except for y = 20
+  geom_segment(aes(x = 1937, xend = 2013, y = 30, yend=30), color =&quot;#FFFFFF&quot;) + # Ditto except for y = 30
+  geom_segment(aes(x = 1937, xend = 2013, y = 40, yend=40), color =&quot;#FFFFFF&quot;) + # Ditto except for y = 40
+  scale_y_continuous(breaks=c(10,20,30,40,50)) + # Limit the labels on the y-axis (called ticks)
+  scale_x_continuous(breaks=seq(1940,2010,10))  # Show labels in a sequence starting with 1940 and ending in 2010 in increments of 10</code></pre>
+<p><img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-9-1.png" width="672" height="60%" /></p>
+<p>in comparison to the original
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>If you want something that is closer to the original but requires some coding you likely have not been exposed to</p>
+<pre class="r"><code>divided_longish &lt;- ggplot(nyt_data) + # Assign this whole mess to the variable p
+  geom_bar(aes(x = year, weight = count, 
+               fill = relevel(factor(status), &quot;Unified.R&quot;)), # Fill by factor  
+           position = &quot;stack&quot;) + # Stack the bars
+  scale_fill_manual(labels = c(&quot;Republicans&quot;, &quot;Mixed&quot;, &quot;Democrats&quot;), # Rename the text within the legend 
+                    values = c(&quot;#A75653&quot;,&quot;#CCCBCA&quot;,&quot;#416E95&quot;), # Fill in the red, grey, and blue respectively
+                    name=&quot;CONTROL OF STATE CAPITALS&quot;,
+                    guide = guide_legend(
+                      direction = &quot;horizontal&quot;, 
+                      title.position = &quot;top&quot;, # put the title of the legend above
+                      reverse=TRUE, # reverse the default order of the legend
+                      label.position = &quot;bottom&quot;)
+                    ) + 
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(), # remove the vertical grid lines
+        panel.grid.major.y = element_line(size = 0.5, linetype = 3, color = &quot;#000000&quot;), # set major intercept lines to a dotted black line
+        panel.grid.minor = element_blank(), # turn all minor intercept lines off
+        axis.title.x=element_blank(), # Get rid of the x-axis label
+        axis.text.x=element_text(size=10, 
+                                 margin = margin(t = -6, r = 0, b = 0, l = 0)), # resize the x-axis text to 10 and move it up 6 units
+        axis.ticks.x=element_blank(),  # Get rid of the x-axis ticks
+        axis.title.y=element_blank(), # Get rid of the y-axis label
+        axis.text.y=element_text(size=10, 
+                                 hjust = 0), # resize the y-axis text to 10 and left justify the labels.
+        axis.ticks.y=element_blank()  # Get rid of the y-axis ticks
+  ) +
+  theme(legend.position=&quot;top&quot;, # Move the legend above the plot
+        legend.justification = c(1, 1), # Equivalent to justify right
+        legend.box=&quot;horizontal&quot;, # Make the legend horizontal
+        legend.title.align=0.5, # Center the title (0 is left justify; 1 is right justify)
+        legend.key.height = unit(0.3,&quot;cm&quot;),
+        legend.key.width = unit(2, &quot;cm&quot;)
+        ) +
+  theme(text = element_text(family=&quot;Arial&quot;, 
+                            color = &quot;#2F4F4F&quot;)) + # aka set the default font to Arial and use darkslategrey as the color 
+  theme(plot.margin = unit(c(1,10,1,1), &quot;lines&quot;)) + # Set the plot margins so that the entire output can fit
+  guides(color = guide_colorbar(title.position=&quot;top&quot;, title.hjust = 0.5), # Move the legend colors to the top of the legend 
+         size = guide_legend(title.position=&quot;top&quot;, 
+                             title.hjust = 0.5)) + # Move the legend title to the top of the legend 
+  geom_segment(aes(x = 1937, xend = 2013, y = 10, yend=10), 
+               color =&quot;#FFFFFF&quot;) + # Use the min and max year values to draw a line segment at y = 10: min(divided$year) and max(divided$year)
+  geom_segment(aes(x = 1937, xend = 2013, y = 20, yend=20), 
+               color =&quot;#FFFFFF&quot;) + # Ditto except for y = 20
+  geom_segment(aes(x = 1937, xend = 2013, y = 30, yend=30), 
+               color =&quot;#FFFFFF&quot;) + # Ditto except for y = 30
+  geom_segment(aes(x = 1937, xend = 2013, y = 40, yend=40), 
+               color =&quot;#FFFFFF&quot;) + # Ditto except for y = 40
+  scale_y_continuous(breaks=c(10,20,30,40,50), 
+                     labels = c(&quot;10&quot;, &quot;20&quot;, &quot;30&quot;, &quot;40&quot;, &quot;50 states&quot;)) + # Limit the labels on the y-axis (called ticks)
+  scale_x_continuous(breaks=seq(1940,2010,10)) + # Show labels in a sequence starting with 1940 and ending in 2010 in increments of 10
+  theme(plot.title = element_text(family = &quot;libre&quot;,
+                                  face = &quot;bold&quot;,
+                                  size = 12, 
+                                  color = &quot;#000000&quot;, 
+                                  margin = margin(b = 10), 
+                                  vjust = 0), # Libre family with 20 pt black font and margin of 10 pt.
+  plot.subtitle = element_text(size = 12, 
+                               color = &quot;#333333&quot;, 
+                               margin = margin(b = 10), 
+                               vjust = -5), # Everything above but with grey20
+  plot.caption = element_text(size = 8, 
+                              margin = margin(t = 10), 
+                              color = &quot;#333333&quot;, 
+                              hjust = -2) # Pretty much everything from above
+  ) +
+  labs(title = stringr::str_wrap(&quot;State Government Control Since 1938&quot;,40), # Construct a title for the plot
+       subtitle = stringr::str_wrap(&quot;There are now more state capitals dominated by a single party \u2014 where one party controls the legislature and the governor&#39;s office \u2014 than at any time since 1952.&quot;,80),
+       caption = &quot;\u2A Virginia is counted as unified Republican because its State Senate is tied and its tiebreaker, the lieutenant governor, is a Republican.\n\u2020 Early results appeared to show that New York had unified Democratic control. but votes are still being counted in many races.\n\nSource: National Conference of State Legislatures.&quot;,
+       col.main = adjustcolor(&quot;#384458&quot;,1), cex.main = 2, line=-0.5) +
+  annotate(geom =&quot;text&quot;, x = 2012.6, y = 7, size = 3.5, color = &quot;#333333&quot;, label = &quot;\u2014&quot;, hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2014.2, y = 7, size = 3.5, color = &quot;#333333&quot;, label = &quot;At least 13\nhave Democratic control&quot;, hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2012.6, y = 14.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;\u2014&quot;, 
+           hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2014.2, y = 14.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;New York \u2020&quot;, 
+           hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2012.6, y = 22.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;\u2014&quot;, 
+           hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2014.2, y = 22.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;At least 11\nhave mixed control&quot;, 
+           hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2012.6, y = 44.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;\u2014&quot;, 
+           hjust = 0) +
+  annotate(geom =&quot;text&quot;, x = 2014.2, y = 44.2, size = 3.5, 
+           color = &quot;#333333&quot;, 
+           label = &quot;24 states have\nunified Republican capitals\nin 2012 \u2A&quot;, 
+           hjust = 0)</code></pre>
+<p><img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-12-1.png" width="100%" /></p>
+<p>in comparison to the original
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div id="choice-2-temperatures" class="section level3">
+<h3>Choice 2: Temperatures</h3>
+<pre class="r"><code>jan2001 &lt;- subset(atmos, year == 2000 &amp; month == 1) </code></pre>
+<pre class="r"><code>surface_shortish &lt;- ggplot(jan2001) +  
+                    geom_tile(aes(x = long, 
+                                  y = lat, 
+                                  fill = temp)) +   
+                    scale_fill_continuous(limits = c(270, 310))</code></pre>
+<p>We can use <code>geom_tile()</code> using <code>fill</code> to represent different temperatures
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-17-1.png" width="70%" /></p>
+<p>in comparison to the original
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="choice-3-average-temperatures" class="section level3">
+<h3>Choice 3: Average Temperatures</h3>
+<pre class="r"><code>corv_data &lt;- read_csv(&quot;corv.csv&quot;) </code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   yday = col_double(),
+##   min = col_double(),
+##   max = col_double(),
+##   mean = col_double()
+## )</code></pre>
+<p>To replicate the original plot, we can do</p>
+<pre class="r"><code>ggplot(corv_data) + 
+  geom_pointrange(aes(x = yday, y = mean, ymin = min, ymax = max)) + 
+  labs(x = &quot;Day of Year&quot;, y = &quot;Temperature (F)&quot;)</code></pre>
+<p><img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>in comparison to the original
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="choice-4-baseball" class="section level3">
+<h3>Choice 4: Baseball</h3>
+<p>You can either use both <code>team_strikeouts</code> &amp; <code>avg_so_by_year</code>, or use only <code>team_strikeouts</code> which is shown below</p>
+<pre class="r"><code>ggplot(team_strikeouts,
+       aes(yearID, strikeouts_per_game)) +
+  geom_point (color=&quot;#dfdfdf&quot;,
+              size = 0.3) +
+  geom_segment(aes(x = 1917, y = 1.3, xend = 1917, yend = 3.5), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  geom_segment(aes(x = 1945, y = 1.8, xend = 1945, yend = 3.9), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  geom_segment(aes(x = 1963, y = 2.8, xend = 1963, yend = 5.8), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  geom_segment(aes(x = 1969, y = 7.9, xend = 1969, yend = 5.8), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  geom_segment(aes(x = 1972, y = 1.8, xend = 1972, yend = 5.2), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  geom_segment(aes(x = 2006, y = 3.8, xend = 2006, yend = 6.8), 
+               color = &quot;#dfdfdf&quot;,
+               size = 0.1) +
+  stat_summary(fun = &#39;mean&#39;, 
+               geom =c(&quot;point&quot;), 
+               color = &quot;#00688b&quot;,
+               size = 0.75) +
+  stat_summary(aes(shape=&quot;League average&quot;),
+               fun = &#39;mean&#39;, 
+               geom =c(&quot;line&quot;), 
+               color = &quot;#00688b&quot;,
+               show.legend = TRUE) +
+  annotate(&quot;text&quot;, x = 2012, y = 8.7, 
+           label = &quot;2012\nLeague average&quot;,
+           fontface = 2,
+           size = 2) +
+  annotate(&quot;text&quot;, x = 2012, y = 8, 
+           label = &quot;7.5&quot;,
+           fontface = 2,
+           color = &quot;#00688b&quot;,
+           size = 4.3) +
+  annotate(&quot;text&quot;, x = 1924, y = 1.5, 
+           label = &quot;League average\n1924&quot;, 
+           fontface = &quot;bold&quot;,
+           size = 3) +
+  annotate(&quot;text&quot;, x = 1924, y = 2.2, 
+           label = &quot;2.7&quot;, 
+           fontface = 2,
+           color = &quot;#00688b&quot;,
+           size = 4.3) +
+  annotate(geom =&quot;text&quot;, x = 1917, y = 1, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;U.S. enters\nWorld War I.&quot;, 
+           hjust = 0.5) +
+  annotate(geom =&quot;text&quot;, x = 1945, y = 1.5, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;Players return\nfrom World War II.&quot;, 
+           hjust = 0.5) +
+  annotate(geom =&quot;text&quot;, x = 1963, y = 2.5, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;Strike zone enlarged\nfrom 1963-68.&quot;, 
+           hjust = 0.5) +
+  annotate(geom =&quot;text&quot;, x = 1969, y = 8.5, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;Pitching had become so dominant\nin the 1960s that the mound\nwas lowered in 1969.&quot;, 
+           hjust = 0.5) +
+  annotate(geom =&quot;text&quot;, x = 1972, y = 1.5, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;Designated hitter\nrule took effect.&quot;, 
+           hjust = 0.5) +
+  annotate(geom =&quot;text&quot;, x = 2006, y = 3.5, 
+           size = 2.0, 
+           color = &quot;#7e7e7e&quot;, 
+           label = &quot;Mitchell report\non steroids.&quot;, 
+           hjust = 0.5) +
+  annotate(geom=&quot;label&quot;, x = 1925, y = 9, 
+           size = 2.0, 
+           fontface = 2,
+           color = &quot;#7e7e7e&quot;, 
+           fill=&quot;#FFFFFF&quot;,
+           label = &quot;(by batters)&quot;, 
+           label.size = NA,
+           hjust = 0.22) +
+  annotate(geom=&quot;label&quot;, x = 1900, y = 9, 
+           size = 2.5, 
+           fontface = 2,
+           color = &quot;#000000&quot;,
+           fill=&quot;#FFFFFF&quot;,
+           label = &quot;Strikeouts per game per team&quot;,
+           label.size = NA,
+           hjust = 0.2) +
+  scale_x_continuous(&quot;&quot;,
+                   breaks=c(1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2000,2010), 
+                   limits=c(1900,2015)) +
+  scale_y_continuous(&quot;&quot;,
+                     breaks=c(0,1,2,3,4,5,6,7,8,9),
+                     limits=c(0,9),
+                     position = &quot;right&quot;
+) +
+  theme_minimal() +
+  theme(plot.title = element_text(family = &quot;Georgia&quot;,
+                                  face = &quot;bold&quot;,
+                                  size = 14, 
+                                  color = &quot;#000000&quot;, 
+                                  margin = margin(b = 0), 
+                                  vjust = 0),
+        plot.subtitle = element_text(family = &quot;Georgia&quot;,
+                                     size = 8, 
+                                     color = &quot;#000000&quot;, 
+                                     margin = margin(b = 10), 
+                                     vjust = -2)) +
+  theme(axis.text.y.right = element_text(color = &quot;#7e7e7e&quot;,
+                                         face = &quot;bold&quot;),
+        axis.text.x = element_text(hjust = 0),
+        axis.line.x = element_line(),
+        axis.ticks.x = element_line(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(linetype = &quot;dotted&quot;,
+                                          color = &quot;#dfdfdf&quot;),
+        panel.grid.minor = element_blank()) +
+  theme(legend.position = c(0, 0.9), 
+        legend.background = element_rect(fill=NA,
+                                         color=NA),
+        legend.justification=&#39;left&#39;,
+        legend.direction=&#39;horizontal&#39;,
+        legend.text = element_text(color = &quot;#7e7e7e&quot;,
+                                   size = 8),
+        legend.title = element_blank()) +
+  labs(title = &quot;Strikeouts on the Rise&quot;, 
+       subtitle = &quot;There were more strikeouts in 2012 than at any other time in major league history.&quot;
+    )</code></pre>
+<p><img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-26-1.png" width="672" height="70%" /></p>
+<p>in comparison to the original
+<img src="/assignment/05-assignment-sols_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+</div>
+</div>
+</div>
