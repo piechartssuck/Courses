@@ -140,7 +140,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Read the Submission Directions
-Please submit a PDF out using an Rmarkdown file for this task^[If you use an external file for your data, please submit that as well.]. You can use a chapter book of your choice or give the process below a go.
+Please submit a PDF using an Rmarkdown file for this task^[If you use an external file for your data, please submit that as well.] both to eCampus and [Slack](https://2021edp693e.slack.com/archives/C01RG3MB56D){target="_blank"}. 
+
+You can use a chapter book of your choice or get one using the process below a go.
 
 ## Getting Text
 In addition to the packages listed in the example, you can use the library `gutenbergr` which gives you the ability to download and process public domain works from the [Project Gutenberg collection](https://www.gutenberg.org/){target="_blank"}. Follow the mini walkthrough below to see how to get a text of your choice^[As long as it exists in the public domain.].
