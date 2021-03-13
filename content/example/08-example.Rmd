@@ -555,3 +555,4 @@ ggraph(bigram_graph, layout = "fr") +
 ```
 
 That's it for text analytics with the Harry Potter series.This is by no means a comprehensive analysis, but it should have demonstrated some of the basic facets of text mining with the `tidyverse` in R.
+

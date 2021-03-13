@@ -58,6 +58,12 @@ speech_bing_descriptives <- tokens %>%
 
 speech_bing_descriptives
 
+# Only run once!
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+
+devtools::install_github("bradleyboehmke/harrypotter")
 
 library(wordcloud)
 library(devtools)
