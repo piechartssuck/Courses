@@ -32,7 +32,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Consider using a data set you intend to use for your final project.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ideally you should work with a data set you intend to use for your final project.&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;step-i-prospectus&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step I: Prospectus&lt;/h2&gt;
 &lt;p&gt;This submission is due in &lt;strong&gt;one week&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
@@ -49,8 +49,8 @@
 &lt;/div&gt;
 &lt;div id=&#34;step-ii-visualization&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step II: Visualization&lt;/h2&gt;
-&lt;p&gt;In general, you ust submit five different visualizations
-This submission is due in &lt;strong&gt;two weeks&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You must submit five different visualizations of your data set. Put soe thought into these&lt;/p&gt;
+&lt;p&gt;This submission is due in &lt;strong&gt;two weeks&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this part, you are asked to submit three items of interest:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;data file&lt;/strong&gt;: The data set you explored using R provided in &lt;code&gt;.csv&lt;/code&gt;,&lt;code&gt;.Rda&lt;/code&gt;, or &lt;code&gt;.Rdata&lt;/code&gt; formatting &lt;em&gt;if it differs from your original submission.&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;

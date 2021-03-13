@@ -14,7 +14,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Consider using a data set you intend to use for your final project. 
+# Exploratory Data Visualization 
+
+In this task, you will use R to create a set of static visuals based on a predefined data set. *Ideally you should work with one you intend to use for your final project.* Please make sure you follow the directions noted below.
 
 ## Step I: Prospectus
 
@@ -34,7 +36,8 @@ In this part, you are asked to submit two items of interest:
 
 ## Step II: Visualization
 
-In general, you ust submit five different visualizations 
+You must submit five different visualizations of your data set. Put some thought into these as I will provide feedback based on what you submit. 
+
 This submission is due in **two weeks**^[Please check eCampus for the exact due date.] 
 
 In this part, you are asked to submit three items of interest:

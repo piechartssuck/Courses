@@ -30,21 +30,27 @@ wk_post <- tibble(
   
 
 "Data Camp" = c(unchecked,
-            checked),
+                checked,
+                unchecked),
 
-"eCampus" = c(unchecked,
-        unchecked),
+"eCampus" = c(checked,
+              unchecked,
+              unchecked),
 
 "R" = c(checked,
+        checked,
         checked),
 
 "Slack" = c(checked, 
-              unchecked),
+            unchecked,
+            unchecked),
 
 Description = c("Construct a sentiment analysis",
+                "Submit a prospectus for your R Project",
                 "Complete two modules"),
 
 Location = c("[Link](/assignment/08-assignment/)",
+             "[Link](/projects/01-project/#step-i-prospectus)",
              "[Link](https://www.datacamp.com/){target='_blank'}")
 
 )
