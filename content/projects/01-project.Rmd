@@ -5,7 +5,7 @@ output:
   blogdown::html_page:
     toc: true
 menu:
-  example:
+  assignment:
     parent: Projects
     weight: 1
 type: docs
