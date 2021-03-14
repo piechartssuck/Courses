@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="S9 Identifying Criteria_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="48.7333556373" vpos="0" h="41.8887981859" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="S10 Identifying Criteria" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2149115">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f923.au" len="262144" min="-0.644464" max="0.728972" rms="0.108768"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="eff1f65b.au" len="262144" min="-0.454161" max="0.500123" rms="0.076975"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="eff1fb54.au" len="262144" min="-0.539884" max="0.696655" rms="0.097183"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="eff1f3da.au" len="262144" min="-0.625254" max="0.822434" rms="0.097552"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="eff1f74d.au" len="262144" min="-0.440647" max="0.588008" rms="0.074317"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="eff1f0b8.au" len="262144" min="-0.421843" max="0.586487" rms="0.091934"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="eff1f985.au" len="262144" min="-0.59045" max="0.726312" rms="0.079819"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="eff1f28e.au" len="262144" min="-0.626339" max="0.723391" rms="0.103355"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="eff1fa7a.au" len="51963" min="-0.21286" max="0.22708" rms="0.026018"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="S10 Identifying Criteria" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2149115">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f469.au" len="262144" min="-0.644464" max="0.729094" rms="0.108768"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="eff1f71d.au" len="262144" min="-0.454069" max="0.500092" rms="0.076975"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="eff1ff85.au" len="262144" min="-0.539792" max="0.696747" rms="0.097183"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="eff1f66c.au" len="262144" min="-0.625132" max="0.82243" rms="0.097552"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="eff1fb75.au" len="262144" min="-0.440646" max="0.587947" rms="0.074317"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="eff1f7d2.au" len="262144" min="-0.421843" max="0.586579" rms="0.091934"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="eff1f7c3.au" len="262144" min="-0.590603" max="0.726373" rms="0.079819"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="eff1fcf0.au" len="262144" min="-0.626217" max="0.723239" rms="0.103355"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="eff1f12a.au" len="51963" min="-0.21286" max="0.226988" rms="0.026018"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

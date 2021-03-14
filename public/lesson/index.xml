@@ -492,5 +492,99 @@ You can move back and forth using &lt;kbd&gt;←&lt;/kbd&gt; and &lt;kbd&gt;→&
 </description>
     </item>
     
+    <item>
+      <title>Making Sense and Interpreting Nonsense</title>
+      <link>https://edp617.theoreticalphysed.com/lesson/07-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/lesson/07-lesson/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#collaborative-participatory-empowerment-evaluation&#34;&gt;Collaborative, Participatory, &amp;amp; Empowerment Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#goal-free-versus-goal-based&#34;&gt;Goal Free versus Goal Based&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#standards-based-evaluation&#34;&gt;Standards Based Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meeting&lt;/h2&gt;
+&lt;p&gt;Please make sure to meet with me &lt;strong&gt;after&lt;/strong&gt; submitting your proposal and receiving approval but &lt;strong&gt;before&lt;/strong&gt; conducting your evaluation. I want to make sure you are all ready to go and that all of your questions are addressed before starting the proposed study. However I will be glad to meet with your group at any point prior to that!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;collaborative-participatory-empowerment-evaluation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Collaborative, Participatory, &amp;amp; Empowerment Evaluation&lt;/h2&gt;
+&lt;p&gt;Take a look at a &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Collaborative,%20Participatory,%20Empowerment%20Evaluation%201-Pager.pdf&#34; target=&#34;_blank&#34;&gt;one-pager&lt;/a&gt; explaining the difference between collaborative, participatory and empowerment evaluation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goal-free-versus-goal-based&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Goal Free versus Goal Based&lt;/h2&gt;
+&lt;p&gt;Go through this excellent &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/GFEvsGFB.pdf&#34; target=&#34;_blank&#34;&gt;slideshow&lt;/a&gt; assessing the differences between a goal-based evaluation (GBE) which you are currently planning versus a goal-free evaluation (GFE). This was created by Dr. Brandon Youker who graduated from my doctoral program a year or two before me. While it is fantastic and well worth reviewing, please excuse the few instances of Comic Sans&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp617.theoreticalphysed.com/lesson/07-lesson_files/comicsans_fortune500.png&#34; style=&#34;width:40.0%&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;standards-based-evaluation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Standards Based Evaluation&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Posting shortly&lt;/em&gt;&lt;/p&gt;
+&lt;!--
+To get an idea of how standards can be written including those related to evaluation questions and purposes, please view and listen to the **Standards-Based Evaluation** slideshow. You can also download a [PDF](/slides/Standards-Based Evaluation/Standards_Based_Evaluation.pdf){target=&#34;_blank&#34;} of the presentation. 
+
+&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/slides/Standards-Based Evaluation/Standards_Based_Evaluation.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;
+
+You can move back and forth using &lt;kbd&gt;←&lt;/kbd&gt; and &lt;kbd&gt;→&lt;/kbd&gt; and toggle fullscreen by pressing &lt;kbd&gt;F&lt;/kbd&gt;. Just press &lt;kbd&gt;O&lt;/kbd&gt;^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press &lt;kbd&gt;O&lt;/kbd&gt; to exit tile view. For more options, press &lt;kbd&gt;H&lt;/kbd&gt; for help.
+--&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;&lt;em&gt;Hint: Don’t use Comic Sans&lt;/em&gt;&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

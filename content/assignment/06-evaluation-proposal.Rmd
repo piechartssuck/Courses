@@ -80,12 +80,26 @@ As you construct this, please use the items in **bold** as headings and subheadi
   + **Data Collection**. Discuss what data you will utilize within your evaluation, how you will collect that data, what instruments and/or materials you will be using or plan to use, and how you will gain permission from those who are participating.
   
   + **Analysis**. Provide a narrative on the type of raw data you will have. Address how you intend to analyze the quantitative, qualitative, and or mixed data you will have. 
-  
   + **Reporting Cycle**. Briefly discuss how the results will be reported to the sponsor, when you intend to do so, and if you are intending to provide an interim report.
   
-+ **Statement of Intent**^[May earn an extra 10% on the final score.]. On a separate page, please provide a one paragraph statement of intent on whether you plan to use or publish your work beyond the framework of this course and your corresponding reasoning. 
+  + **Statement of Intent**. On a separate page, please provide a one paragraph statement of intent on whether you plan to *use* or *publish* your work beyond the framework of this course and your corresponding reasoning. Please note that *use* implies
 
-  - <details><summary>If you ***do*** intend to publish, then please select this</summary>
+    - Using the report as proof of an evaluation having been performed. 
+    - Creating a manuscript for a possible publication within a journal[May earn an extra 10% on the final score.].
+    - Referring to or copying the content within the report beyond the scope of the evaluation within this course.
+    
+#### <span style="color:#1B609D">Note About Usage</span>
+
+  - Using your evaluation in any capacity outside of the course requires a client authorization.
+  - An IRB submission may also also required but should not be included in your submission. You may however submit this request through the [WVU+kc system](https://oric.research.wvu.edu/wvu-kc){target="_blank"}.
+
+*Please be sure of your intent! The way in which I consult you will differ based on your statement. This is extremely important primarily due to writing styles, in that the narrative in an academic report often differs significantly from the body of an academic paper.*
+
+### <span style="color:#cf4003">Looking Ahead</span>
+
+For the *final report*, note that you will have to include one the following in the course submission variant depending on your intent: 
+
+  - <details><summary>If you ***did not*** intend to use the report beyond the course, then please look at this</summary>
 <p>
 Your team submission should include the following components separated into three parts
     1. **external deliverable**. Your final report submitted to the sponsor that is written to be easily accessible and consumable
@@ -94,7 +108,7 @@ Your team submission should include the following components separated into thre
 </p>
 </details>
 
-  - <details><summary>If you ***do not*** intend to publish, then please select this</summary>
+  - <details><summary>If you ***did*** intend to use the report beyond the evaluation itself, then please look at this</summary>
 <p>
 Your team submission should include the following components separated into three parts
     1. **external deliverable**. Your final report submitted to the sponsor that is written to be easily accessible and consumable
@@ -103,12 +117,6 @@ Your team submission should include the following components separated into thre
 </p>
 </details>
 
-Notes:
 
-  - Using your evaluation in any capacity outside of the course requires a client authorization.
-  - An IRB submission may also also required but should not be included in your submission. You may however submit this request through the [WVU+kc system](https://oric.research.wvu.edu/wvu-kc){target="_blank"}.
-
-
-*Please be sure of your intent! The way in which I consult you will differ based on your statement. This is extremely important primarily due to writing styles, in that the narrative in an academic report often differs significantly from the body of an academic paper.*
 
 :::

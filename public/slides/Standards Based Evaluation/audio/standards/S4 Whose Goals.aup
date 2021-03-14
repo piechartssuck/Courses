@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="S4 Whose Goals_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="50.0486772487" vpos="0" h="0.0000000000" zoom="12.8375021143" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="S5 Whose Goals" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2207121">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f0cb.au" len="262144" min="-0.317721" max="0.503545" rms="0.066548"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="eff1f7c9.au" len="262144" min="-0.492764" max="0.780598" rms="0.090512"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="eff1f0ad.au" len="262144" min="-0.423982" max="0.765795" rms="0.075345"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="eff1fc37.au" len="262144" min="-0.49455" max="0.582817" rms="0.083165"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="eff1f016.au" len="262144" min="-0.464517" max="0.60754" rms="0.084329"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="eff1fc44.au" len="262144" min="-0.45576" max="0.481344" rms="0.081341"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="eff1f346.au" len="262144" min="-0.548777" max="0.581176" rms="0.079908"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="eff1f2a3.au" len="262144" min="-0.502926" max="0.666987" rms="0.092043"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="eff1fb48.au" len="109969" min="-0.310177" max="0.343793" rms="0.079748"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="S5 Whose Goals" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2207121">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f6bd.au" len="262144" min="-0.317624" max="0.503883" rms="0.066548"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="eff1f8f0.au" len="262144" min="-0.492764" max="0.780501" rms="0.090512"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="eff1f6c2.au" len="262144" min="-0.423934" max="0.765844" rms="0.075345"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="eff1f299.au" len="262144" min="-0.494598" max="0.582866" rms="0.083165"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="eff1f8d0.au" len="262144" min="-0.464517" max="0.607734" rms="0.084329"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="eff1fe41.au" len="262144" min="-0.455712" max="0.48144" rms="0.081341"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="eff1f5a6.au" len="262144" min="-0.548826" max="0.581128" rms="0.079908"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="eff1f04a.au" len="262144" min="-0.502877" max="0.667084" rms="0.092043"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="eff1f7e5.au" len="109969" min="-0.310129" max="0.343986" rms="0.079747"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
