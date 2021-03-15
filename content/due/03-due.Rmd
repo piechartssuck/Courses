@@ -36,13 +36,15 @@ wk_post <- tibble(
               unchecked,
               unchecked,
               unchecked,
-              unchecked),
+              unchecked,
+              checked),
 
 "Slack" = c(checked,
             checked,
             unchecked,
             unchecked,
             checked,
+            unchecked,
             unchecked),
 
 Description = c("Respond to the posts on `#davidson` and `#mathison`",
@@ -50,15 +52,16 @@ Description = c("Respond to the posts on `#davidson` and `#mathison`",
                 "Read three chapters in your book",
                 "Go through a slideshow",
                 "Post on evaluation `#criteria`",
-                "Finalize and submit your evaluation teams"),
+                "Finalize and submit your evaluation teams",
+                "Take a look at the criteria needed for an Evaluation Prospectus due in ***one week!***"),
 
 Location = c("[Link](/readings/03-readings/#respond-to-posts)",
              "[Link](/lesson/03-lesson/#respond-to-posts)",
              "[Link](/readings/03-readings/#read-the-book)",
              "[Link](/lesson/03-lesson/#learning-about-criteria)",
              "[Link](/readings/03-readings/#read-the-book)",
-             "[Link](/lesson/03-lesson/#creating-evaluation-teams)"
-    )
+             "[Link](/lesson/03-lesson/#creating-evaluation-teams)",
+             "[Link](/deliverables/01-evaluation-prospectus/)")
 
 )
 ```
@@ -80,6 +83,7 @@ kable(wk_post,
   row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(5, extra_css = 'vertical-align: middle !important;') 
+  row_spec(5, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(6, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>

@@ -50,7 +50,7 @@ Description = c("Respond to the posts on `#criteria`",
                 "Write two posts on `#ranking-criteria` and `#causality-conundrum`",
                 "Meet up this or next week",
                 "Skim over the KEC",
-                "Write and submit a prospectus",
+                "***Write and submit an Evaluation Prospectus by the end of this week!***",
                 "Take a look at some *optional* material"),
 
 Location = c("[Link](/readings/04-readings/#respond-to-posts)",
@@ -58,7 +58,7 @@ Location = c("[Link](/readings/04-readings/#respond-to-posts)",
              "[Link](/readings/04-readings/#read-the-book)",
              "[Link](/lesson/04-lesson/#key-evaluation-checklist-kec)",
              "[Link](/lesson/04-lesson/#meeting)",
-             "[Link](/assignment/04-evaluation-prospectus/)",
+             "[Link](/deliverables/01-evaluation-prospectus/)",
              "[Link](/example/04-example/#causal-models-in-evaluation)"
     )
 

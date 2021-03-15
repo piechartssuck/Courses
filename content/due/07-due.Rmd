@@ -61,7 +61,7 @@ Description = c("Respond to the posts on `#important-criteria` and `#merit-disag
                 "Take a look at a one-pager comparing three different types of evaluations",
                 "Review the differences between goal-free and goal-based evaluations",
                 "Go through the slideshow on standards based evaluations",
-                "Submit your needs assessment by the end of this week!",
+                "***Submit your Needs Assessment by the end of this week!***",
                 "Start writing your Evaluation Proposal",
                 "Take a look at some *extra* materials on needs assessments"),
 
@@ -73,8 +73,8 @@ Location = c("[Link](/readings/07-readings/#respond-to-posts)",
              "[Link](/lesson/07-lesson/#collaborative-participatory-empowerment-evaluation)",
              "[Link](/lesson/07-lesson/#goal-free-versus-goal-based)",
              "[Link](/lesson/07-lesson/#standards-based-evaluation)",
-             "[Link](/assignment/05-needs-assessment/)",
-             "[Link](/assignment/06-evaluation-proposal/)",
+             "[Link](/deliverables/02-needs-assessment/)",
+             "[Link](/deliverables/03-evaluation-proposal/)",
              "[Link](example/07-example/#more-needs-assessment)"
     )
 

@@ -79,14 +79,10 @@ Go through this excellent [slideshow](/handouts/GFEvsGFB.pdf){target="_blank"} a
 
 ## Standards Based Evaluation
 
-*Posting shortly*
-
-<!--
-To get an idea of how standards can be written including those related to evaluation questions and purposes, please view and listen to the **Standards-Based Evaluation** slideshow. You can also download a [PDF](/slides/Standards-Based Evaluation/Standards_Based_Evaluation.pdf){target="_blank"} of the presentation. 
+To get an idea of how standards can be written including those related to evaluation questions and purposes, please view and listen to the **Standards-Based Evaluation** slideshow. You can also download a [PDF](/slides/Standards Based Evaluation/Standards_Based_Evaluation.pdf){target="_blank"} of the presentation. 
 
 ```{r echo = FALSE}
-knitr::include_url("/slides/Standards-Based Evaluation/Standards_Based_Evaluation.html")
+knitr::include_url("/slides/Standards Based Evaluation/Standards_Based_Evaluation.html")
 ```
 
 You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
--->

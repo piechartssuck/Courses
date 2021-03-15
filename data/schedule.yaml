@@ -64,13 +64,11 @@ lessons:
     assignment: "07-assignment"
     due: "07-due"
 
-  # - title: 'Who Evaluates the Evaluators?'
-  #   session: 8
-  #   date: "October 11, 2020"
-  #   readings: "08-readings"
-  #   lesson: "08-lesson"
-  #   due: "08-due"
-  #
+  - title: 'Propose This!'
+    session: 8
+    date: "March 9, 2020"
+    due: "08-due"
+
   # - title: 'Who's Side Are You on Anyway?'
   #   session: 9
   #   date: "October 18, 2020"

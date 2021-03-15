@@ -1,0 +1,106 @@
+---
+title: "Needs Assessment"
+linktitle: "Needs Assessent"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Deliverables
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em;
+}
+</style>
+
+## <span style="color:#0392cf">Needs Assessment</span>
+
+### <span style="color:#073965">Submission</span>
+[eCampus](https://ecampus.wvu.edu){target="_blank"}
+
+### <span style="color:#074276">Type</span>
+Teams^[Students in the course must participate in the writing process in a group oriented setting.]
+
+### <span style="color:#0F4C81">Description</span>
+At this point you should begin to contact programs and possibly narrow your list. 
+
+### <span style="color:#155790">Criteria</span>
+As soon as you and your group have identified a program to evaluate, you can begin working on this assignment. Based on that program and the context within which it operates, answer the questions listed below. To do this, you will need to conduct at least one *interview* and/or *focus group* (face-to-face, telephone, or synchronous chat). 
+
+The intent of the meeting is be to help you answer the questions and better meet stakeholder information and decision-making needs. Therefore, you should be interviewing a key stakeholder or (focus) group of stakeholders. You have options in how to conduct this
+
+- If done face-to-face or telephone, you should tape (audio or video^[Better for reviewing purposes.]) your interview / focus group and transcribe the recording. 
+
+- If done electronically utilizing synchronous (e.g., chat room) technology, then often the transcription is done for you. For example, Zoom has this ability via their [Cloud Service](https://support.zoom.us/hc/en-us/articles/115004794983-Using-audio-transcription-for-cloud-recordings-){target="_blank"}.
+
+### <span style="color:#1B609D">Structure</span>
+This submission is due in **two weeks**^[Please check eCampus for the exact due date.] and the following components are required for your submission in the order listed below and must be uploaded as a single cohesive document . Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting.
+
+1. A cover page with your name
+
+  - Every group member's name in the upper left-hand corner in alphabetical order in accordance to their last name. For those teams that have assigned internal roles, please include those titles in parentheses. 
+  - The title of this task – **Needs Assessment** – in the middle of the page.
+  
+2. No running head
+
+3. A Table of Contents 
+
+4. The Body fulfilling the requirements described below
+
+5. A references section^[If necessary]
+
+6. Appendix describing Analysis Technique as described below.
+
+7. Any additional  materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.^[Optional] 
+
+8. Filename in *either* of the following formats
+
+- `teamname_needsassessent.docx` 
+
+- `teamname_needsassessent.pdf`
+
+
+#### <span style="color:#1B609D">Body</span>
+
+As you construct this, you must use the questions as your subheadings and answers must be up formally. Your answers should be brief and to the point. This assignment usually fills five (5) to 10 pages double spaced not including the appendix. That section includes a brief description of your analysis technique (please see below).
+
++ Who did you interview? 
++ What is their role in the program? 
++ What are the goals and objectives for the program you will evaluate?
++ Describe what you discovered about the merit, worth, and significance of the program? 
++ What specific values were described in the interview? Which ones do you believe are feasible to study and why?
++ Who is the program designed to serve? Include as much demographic detail as possible (age, gender, ethnicity, etc.) for each group impacted by the program (e.g., students, parents, clients, etc.). Give your best estimates if precise demographic information is not available.
++ What are the means through which program goals and objectives are expected to be met? What activities does the program utilize to serve its clientele?
++ What is the history of this program? How long has it been in existence? How has it changed over time? What evaluation work, if any, has occurred in the past?
++ What data currently exists relative to goals, objectives, and activities of this program? Describe the data you believe exists even if you don’t currently have access to that data.
++ Did you learn anything from any non-verbal cues? If so, what were they and did they affect your decision on potential avenues to pursue?
++ Is there anything else not covered in the items above?
++ If you had to perform the interview again, would there be anything you change? Please be honest. While it any sound silly to some, a reflection on the process and approaches taken will most likely help you perform in future interviews. Rather than writing a narrative here, I suggest that you provide a table with one column dedicated to what occurred, the second outlining what you would change, and the third with a very brief description as to why.
+
+#### <span style="color:#1B609D">Analysis Technique</span>
+
+In past renditions of this course, students were required to transcribe the entire interview. While that is still recommended , it is not required. Should you choose to do so, there are many free ways to go about this. Some students have paid a service to do it for them – which is fine as it is common practice in evaluation – while most have used free online and offline services. If a transcription is an avenue you wish to pursue and do not wish to spend any money, services such as [Google Cloud](https://cloud.google.com/speech-to-text){target="_blank"} and [SpeechText.AI](https://speechtext.ai/){target="_blank"} use grounded artificial intelligence approaches to transcribe audio. Regardless of your decision regarding the above, please follow the steps below to analyze your recording:
+
+1. Each member should independently listen to the recording in its entirety while jotting down notes regrading particular items of interest and themes that may occur. Should you have the benefit of having a video recording, consider adding notes about non-verbal cues and points of inflection. Make sure to note the timestamp or the next step will be extremely difficult!
+
+2. After everyone has accomplished the task above, meet as a group and discuss your findings. Come to an agreement as to what may be potential themes and avenues to consider for an evaluation. From this, you have two choices for justification:
+
+- **Quantitative approach**. Consider using an agreement scaling like a [Kappa Statistic](/handouts/Kappa Statistic.pdf){target="_blank"} as your justification. Then provide a clear and concise narrative on your process, your agreement threshold and what criteria were used (i.e. please just don’t simply say we agreed on theme X because we felt like it, rather provide actual criteria for agreement). Please submit the final agreement measures delineated by theme in addition to the aggregated agreement score and description. To clarify, you will be required to submit the following in the appendix:
+    - A table of all themes and corresponding agreement rating by theme. Please rearrange the themes by agreement rating going from greatest to least.
+    - An aggregated and specific list of criteria used for agreement. If some of these are theme specific, please note that. 
+    - A short and concise narrative explain the process, criteria, and benchmarks for agreement. Include the final agreement score and what scaling you used.
+    
+- **Qualitative approach**. Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your appendix. Read over Shenton (2004) and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
+    - A table of all themes regardless of agreement. 
+    - A detailed and explicit narrative regarding how credibility, transferability, dependability, and confirmability were satisfied or an argument as to why it could not.
+    - A through narrative further delineating credibility by addressing multiple provisions provided in [Shenton (2004)](/handouts/Shenton (2004).pdf){target="_blank"} and how these were accomplished.
+    - A short and concise narrative on how triangulation and saturation were fully addressed. Make sure to be very specific in addressing what criteria were used and how each was satisfied. 
+
+:::

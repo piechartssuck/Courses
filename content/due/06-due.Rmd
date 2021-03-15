@@ -55,7 +55,7 @@ Description = c("Respond to the posts on `#evaluation-politicization` and `#whic
                 "Remember to meet with me before your interview",
                 "Skim over the JCSEE Program Evaluation Standards",
                 "Learn more about required logic models",
-                "Write and submit a needs assessment in ***one week***",
+                "Write and submit a Needs Assessment in ***one week***",
                 "Preview what's required in the Evaluation Proposal",
                 "Take a look at some *extra* materials on logic models"),
 
@@ -65,8 +65,8 @@ Location = c("[Link](/readings/06-readings/#respond-to-posts)",
              "[Link](/lesson/06-lesson/#meeting)",
              "[Link](/lesson/06-lesson/#program-evaluation-standards)",
              "[Link](/lesson/06-lesson/#logic-model)",
-             "[Link](/assignment/05-needs-assessment/)",
-             "[Link](/assignment/06-evaluation-proposal/)",
+             "[Link](/deliverables/02-needs-assessment/)",
+             "[Link](/deliverables/03-evaluation-proposal/)",
              "[Link](example/06-example/#more-logic-models)"
     )
 
