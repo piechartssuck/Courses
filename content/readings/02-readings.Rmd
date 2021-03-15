@@ -4,7 +4,7 @@ linktitle: "Week 2: Rethinking the Way You Think"
 menu:
   content:
     parent: Readings
-    weight: 1
+    weight: 2
 type: docs
 weight: 1
 bibliography: "../../static/bib/references.bib"
