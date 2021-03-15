@@ -75,7 +75,7 @@ Location = c("[Link](/readings/07-readings/#respond-to-posts)",
              "[Link](/lesson/07-lesson/#standards-based-evaluation)",
              "[Link](/deliverables/02-needs-assessment/)",
              "[Link](/deliverables/03-evaluation-proposal/)",
-             "[Link](example/07-example/#more-needs-assessment)"
+             "[Link](/example/07-example/#more-needs-assessment)"
     )
 
 )

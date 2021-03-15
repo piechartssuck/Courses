@@ -64,10 +64,10 @@ Location = c("[Link](/readings/06-readings/#respond-to-posts)",
              "[Link](/readings/05-readings/#read-the-book)",
              "[Link](/lesson/06-lesson/#meeting)",
              "[Link](/lesson/06-lesson/#program-evaluation-standards)",
-             "[Link](/lesson/06-lesson/#logic-model)",
+             "[Link](/example/06-example/#more-logic-models)",
              "[Link](/deliverables/02-needs-assessment/)",
              "[Link](/deliverables/03-evaluation-proposal/)",
-             "[Link](example/06-example/#more-logic-models)"
+             "[Link](/example/06-example/#more-logic-models)"
     )
 
 )
