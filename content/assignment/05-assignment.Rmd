@@ -14,6 +14,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Please head over to the [Needs Assessment](/assignment/05-needs-assessment/) page to get a preview of what is due in a little over two weeks.
+Please head over to the [Needs Assessment](/deliverables/02-needs-assessment/) page to get a preview of what is due in a little over two weeks.
 
 :::

@@ -14,6 +14,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Please head over to the [Evaluation Proposal](/assignment/06-evaluation-proposal/) page to get a preview of what is due right after the Needs Assessment.
+Please head over to the [Evaluation Proposal](/deliverables/03-evaluation-proposal/) page to get a preview of what is due right after the Needs Assessment.
 
 :::
