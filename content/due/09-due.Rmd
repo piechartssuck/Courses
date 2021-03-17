@@ -51,7 +51,7 @@ Description = c("Respond to the posts on `#views-on-synthesis`, `#including-kec-
 
 Location = c("[Link](/readings/09-readings/#respond-to-posts)",
              "[Link](/lesson/09-lesson/#meeting)",
-             "[Link](lesson/09-lesson/#evaluation-models)",
+             "[Link](/lesson/09-lesson/#evaluation-models)",
              "[Link](/lesson/09-lesson/#data-collection)",
              "[Link](/example/09-example/#evaluation-checklists)"
              
