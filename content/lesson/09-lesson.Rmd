@@ -1,0 +1,94 @@
+---
+title: "Whose Side Are You on Anyway?"
+linktitle: "Week 9: Whose Side Are You on Anyway?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Meeting
+Please make sure to meet with me **after** receiving approval but **before** beginning your evaluation. I want to make sure you are all ready to go and that all of your questions are addressed before starting the proposed study. After this week and barring one needed check-in about halfway through your evaluation, we'll meet on a at-need basis.
+
+## A Few Approaches
+Take a peek at [some evaluation models](/handouts/Some Evaluation Models.pdf){target="_blank"}. This is a rather lengthy document so skim it over and treat it like a repository of things you may need. 
+
+## Evaluation Models
+
+Are there evaluation models and should you care? Well yes and no - it's not a straightforward answer so please view and listen to the **Evaluation Models and Approaches** slideshow to get a better handle on an answer. You can also download a [PDF](/slides/A Short Course on Evaluation Models/A Short Course on Evaluation Models.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/A Short Course on Evaluation Models/A-Short-Course-on-Evaluation-Models.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+
+## Data Collection
+
+The **Data collection** slideshow is a compact summary of all things quantitative and qualitative. You can also download a [PDF](/slides/Data Collection/Data Collection.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Data Collection/Data-Collection.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+

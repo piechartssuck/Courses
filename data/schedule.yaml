@@ -70,15 +70,14 @@ lessons:
     due: "08-due"
     assignment: "08-assignment"
 
-  # - title: 'Who's Side Are You on Anyway?'
-  #   session: 9
-  #   date: "October 18, 2020"
-  #   readings: "09-readings"
-  #   lesson: "09-lesson"
-  #   example: "09-example"
-  #   assignment: "09-assignment"
-  #   due: "09-due"
-  #
+  - title: 'Whose Side Are You on Anyway?'
+    session: 9
+    date: "March 16, 2020"
+    readings: "09-readings"
+    lesson: "09-lesson"
+    example: "09-example"
+    due: "09-due"
+
   # - title: 'Thinking About Mixing Your Methods Up'
   #   session: 10
   #   date: "October 25, 2020"

@@ -4,7 +4,7 @@ subtitle: 'Benchmarking and Costs'
 author: Dr. Abhik Roy
 output: 
  xaringan::moon_reader:
-   css: ['xaringan-themer.css', 'custom.css']
+   css: ['custom.css', 'xaringan-themer.css']
 ---
 
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
@@ -27,10 +27,10 @@ xaringanthemer::style_duo(
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
 
+
 #  Welcome
 
 As usual, I've tried to channel Morgan Freeman but he's having none of it. Hopefully my voice won't put you to sleep.
-
 
 ---
 
@@ -45,6 +45,7 @@ As usual, I've tried to channel Morgan Freeman but he's having none of it. Hopef
 >- Program costs
 
 >- Program goals
+
 <br>
 <center>
 <audio controls preload="auto">
@@ -163,6 +164,7 @@ It's not so clear cut!
 <center>
 <img src="img/Blank Logic Model_transparent.png" width="70%" height="70%" style="background-color:#212121;"/>
 </center>
+
 <br>
 <center>
 <audio controls preload="auto">

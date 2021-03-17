@@ -1,0 +1,62 @@
+---
+title: "Whose Side Are You on Anyway?"
+linktitle: "Week 9: Whose Side Are You on Anyway?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the evaluation process phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+process <- tibble(
+  
+  phase = c("Process"),
+  
+  task = c("Administering an evaluation"),
+  
+  current <- c(checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  process %>%
+  kbl(escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## Evaluation Checklists
+
+If you are a checklist type of person, consider taking a look at the many examples at the [*Evaluation Checklist Project*](https://wmich.edu/evaluation/checklists){target="_blank"} within the The Evaluation Center at Western Michigan University.
+
+There is a likely a checklist for everything and all have been [validated](https://wmich.edu/evaluation/checklists/checklistsvalidation){target="_blank"}. Also if you create one that the project doesn't house, consider [submitting](https://wmich.edu/evaluation/checklists/checklist-submit){target="_blank"} it. 

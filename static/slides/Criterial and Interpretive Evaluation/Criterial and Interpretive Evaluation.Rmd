@@ -4,7 +4,7 @@ subtitle: 'Key Concepts, Discussion Points, and Group Activities'
 author: Dr. Abhik Roy
 output: 
  xaringan::moon_reader:
-   css: ['custom.css', 'xaringan-themer.css']
+   css: ['xaringan-themer.css', 'custom.css']
 ---
 
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
@@ -13,6 +13,7 @@ library(fontawesome)
 library(knitr)
 library(kableExtra)
 library(here)
+library(xaringanthemer)
 ```
 
 ```{r echo = FALSE}
@@ -22,9 +23,9 @@ xaringanthemer::style_duo(
   header_font_google = xaringanthemer::google_font("Jost", "600"),
   text_font_google   = xaringanthemer::google_font("Jost", "400")
 )
+
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 ```
-
 
 # Welcome! 
 
@@ -32,9 +33,9 @@ Some information about the audio files. Firstly and importantly, I'm no Morgan F
 
 <center>
 <audio controls preload="auto">
-  <source src="/audio/criteria/S1_Introduction.mp3" type="audio/mpeg">
+  <source src="audio/criteria/S1_Introduction.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
-</audio>
+<audio>
 </center>
 
 ---
@@ -44,8 +45,8 @@ Some information about the audio files. Firstly and importantly, I'm no Morgan F
 .bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 **Evaluation** is the act or process of determining the ***merit***, ***worth***, or ***significance*** of something or the product of that process.
 ]
-<br>
 
+<br>
 <center>
 <audio controls preload="auto">
   <source src="audio/criteria/S2_Evaluation_Definition.mp3" type="audio/mpeg">
@@ -309,13 +310,11 @@ What is culture? How do we recognize it ?
 
 # The Iceberg
 
-```{r, out.width='50%', fig.align='center', echo=FALSE}
-knitr::include_graphics('img/iceberg.png')
-```
-
-</audio>
+<center>
+<img src="img/iceberg.png" width="70%" height="70%" style="background-color:#212121;"/>
 </center>
 <br>
+
 <center>
 <audio controls preload="auto">
   <source src="audio/criteria/S14_Iceberg.mp3" type="audio/mpeg">
@@ -327,12 +326,10 @@ knitr::include_graphics('img/iceberg.png')
 
 #  Markus & Kitayama (1991) 
 
-```{r, out.width='60%', fig.align='center', echo=FALSE}
-knitr::include_graphics('img/eastvwest.png')
-```
-
-</audio>
+<center>
+<img src="img/eastvwest.png" width="60%" height="60%" style="background-color:#212121;"/>
 </center>
+
 <br>
 <center>
 <audio controls preload="auto">

@@ -1,0 +1,81 @@
+---
+title: "Whose Side Are You on Anyway?"
+linktitle: "Week 9: Whose Side Are You on Anyway?"
+menu:
+  content:
+    parent: Readings
+    weight: 9
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+```
+
+## Respond to Posts
+Please create **two responses** apiece for the post below on Slack. 
+
+- [`#views-on-synthesis`](https://2021edp617.slack.com/messages/views-on-synthesis){target='_blank'}
+
+- [`#including-kec-parts`](https://2021edp617.slack.com/messages/including-kec-parts){target='_blank'}
+
+- [`#tde`](https://2021edp617.slack.com/messages/including-kec-parts){target='_blank'}
+
+### Note about the responding to posts 
+Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the `Reply in thread` option when replying! If you need a reminder on how to do this, please click [here](/lesson/02-lesson/#responses).
+

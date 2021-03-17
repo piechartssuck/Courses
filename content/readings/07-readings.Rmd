@@ -75,8 +75,8 @@ Please read and address the following questions using a single post for each cha
 
 readings <- tibble(
   
-  title <- c('Determining Importance',
-             'The Merit Determination Step'
+  title <- c('Synthesis Methodology',
+             'Putting it All Together'
   ),
   
   number <- c(

@@ -520,5 +520,66 @@ Suggesting a course of action
 </description>
     </item>
     
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/example/09-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/09-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-checklists&#34;&gt;Evaluation Checklists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the evaluation process phase. This involves&lt;/p&gt;
+&lt;center&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+phase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+task
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+current &amp;lt;- c(checked)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Process
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Administering an evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewBox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-checklists&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Checklists&lt;/h2&gt;
+&lt;p&gt;If you are a checklist type of person, consider taking a look at the many examples at the &lt;a href=&#34;https://wmich.edu/evaluation/checklists&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Evaluation Checklist Project&lt;/em&gt;&lt;/a&gt; within the The Evaluation Center at Western Michigan University.&lt;/p&gt;
+&lt;p&gt;There is a likely a checklist for everything and all have been &lt;a href=&#34;https://wmich.edu/evaluation/checklists/checklistsvalidation&#34; target=&#34;_blank&#34;&gt;validated&lt;/a&gt;. Also if you create one that the project doesn’t house, consider &lt;a href=&#34;https://wmich.edu/evaluation/checklists/checklist-submit&#34; target=&#34;_blank&#34;&gt;submitting&lt;/a&gt; it.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

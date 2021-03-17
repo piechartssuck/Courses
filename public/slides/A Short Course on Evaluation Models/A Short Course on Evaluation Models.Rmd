@@ -1,0 +1,303 @@
+---
+title: 'Evaluation Models and Approaches'
+subtitle: 'A Tiny Primer'
+author: Dr. Abhik Roy
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+library(xaringanthemer)
+```
+
+```{r echo = FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#6ac4cd",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+
+#  Welcome
+
+This is a relatively compact and short introduction to evaluation models.
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/models/S1 Introduction to EMD.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# The Basics 
+
+<center>
+<audio controls preload="auto">
+  <source src="audio/models/S2a The Basics.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+```{r echo=FALSE}
+basics <- tibble(
+  
+  name = c(
+    "Behavioral Objectives Approach",
+    "The Four-Level Model",
+    "Responsive Evaluation",
+    "Goal-Free Evaluation"
+  ),
+  
+  audio = c("<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S2b Behavioral Objectives Approach.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S2c The Four-Level Model.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S2d The Four-Level Model.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S2e Goal-Free Evaluation.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>"
+    
+  )
+)
+```
+
+<br>
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+basics_table <- 
+      kable(basics, 
+      format="html",
+      booktabs = TRUE,
+      escape = FALSE,
+      align = 'cc',
+      col.names = c("","")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "20em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important; background: #212121; underline: FALSE') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important; background: #212121') 
+
+gsub("<thead>.*</thead>", "", basics_table)
+```
+</center>
+
+---
+
+# Middle of the Pack 
+
+<center>
+<audio controls preload="auto">
+  <source src="audio/models/S3a Middle Pack.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+```{r echo=FALSE}
+middle <- tibble(
+  
+  name = c(
+    "Adversary/Judicial Approaches",
+    "Consumer Oriented Approaches",
+    "Expertise/Accreditation Approaches",
+    "Organizational Learning",
+    "Success Case Method"
+  ),
+  
+  audio = c("<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S3b Adversary-Judicial Approaches.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S3c Consumer Oriented Approaches.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S3d Expertise-Accreditation Approaches.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S3e Organizational Learning.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S3f Success Case Method.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>"
+    
+  )
+)
+```
+
+<br>
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+middle_table <- 
+      kable(middle, 
+      format="html",
+      booktabs = TRUE,
+      escape = FALSE,
+      align = 'cc',
+      col.names = c("","")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "20em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important; background: #212121; underline: FALSE') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important; background: #212121')
+
+gsub("<thead>.*</thead>", "", middle_table)
+```
+</center>
+
+---
+
+# The Drivers 
+
+<center>
+<audio controls preload="auto">
+  <source src="audio/models/S4a Drivers.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+```{r echo=FALSE}
+middle <- tibble(
+  
+  name = c(
+    "Theory Driven Evaluation",
+    "Utilization Focused Evaluation",
+    "Participatory Evaluation",
+    "Empowerment Evaluation"
+  ),
+  
+  audio = c("<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S4b Theory Driven Evaluation.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S4c Utilization Focused Evaluation.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S4d Participatory Evaluation.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>",
+"<center>
+<audio controls preload='auto'>
+  <source src='audio/models/S4e Empowerment Evaluation.mp3' type='audio/mpeg'>
+  Your browser does not support embedded audio.
+<audio>
+</center>"
+    
+  )
+)
+```
+
+<br>
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+middle_table <- 
+      kable(middle, 
+      format="html",
+      booktabs = TRUE,
+      escape = FALSE,
+      align = 'cc',
+      col.names = c("","")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "20em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important; background: #212121; underline: FALSE') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important; background: #212121') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important; background: #212121')
+
+gsub("<thead>.*</thead>", "", middle_table)
+```
+</center>
+
+---
+
+# Which One to Use?
+
+You don't have to formally declare a model. In fact, unless specific circumstances demand it, its better that you probably don't. Recently there has been a push to get away from a design oriented evaluation approach which is good for many reasons - for one you aren't pigeonholing yourself to a predetermined structure that 
+
+1. may not apply exactly resulting in skewed results, and
+
+2. dilutes or suppresses creativity and thinking. 
+
+This allows you to deal with the program as is rather than viewing it through framework of a model. The bottom line is if we believe that *no two programs are alike, then why should we use a one size fit all approach to study it?*
+
+So should you care? Yes because even though a prior framework is likely not the best tool to use, you'll use parts of multiple models here and there. So rather than treating these as musts, think of them as possible approaches that can be combined, expanded, ignored, etc. Like anything else, they can help but most evaluations should never rely on any one of them.
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/models/S5 Which One.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# And That's It
+
+Remember that models don't determine the course of an evaluation - you do! Use your best judgment, common sense, content knowledge, expertise, etc - the things that hopefully distinguish you both professionally and academically to administer a study. If you have any questions, please feel free to reach out.
+
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+<br><br><br><br><br><br><br><br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

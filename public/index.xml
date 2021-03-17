@@ -2914,7 +2914,7 @@ Skim over the JCSEE Program Evaluation Standards
 Learn more about required logic models
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/06-lesson/#logic-model&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/06-example/#more-logic-models&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -2968,7 +2968,7 @@ Preview what’s required in the Evaluation Proposal
 Take a look at some &lt;em&gt;extra&lt;/em&gt; materials on logic models
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;example/06-example/#more-logic-models&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/06-example/#more-logic-models&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -3556,7 +3556,7 @@ Start writing your Evaluation Proposal
 Take a look at some &lt;em&gt;extra&lt;/em&gt; materials on needs assessments
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;example/07-example/#more-needs-assessment&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/07-example/#more-needs-assessment&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -3820,7 +3820,7 @@ Channel
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Determining Importance
+Synthesis Methodology
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 9
@@ -3834,7 +3834,7 @@ Do you agree with Davidson that a synthesis is necessary? Please explain your vi
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-The Merit Determination Step
+Putting it All Together
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
 10
@@ -3980,6 +3980,313 @@ Location
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/center&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/assignment/09-assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/assignment/09-assignment/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Remember that your &lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/03-evaluation-proposal/&#34;&gt;Evaluation Proposal&lt;/a&gt; is due this week!&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/due/09-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/due/09-due/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+eCampus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Slack
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;vertical-align: middle !important;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#e4e4e4;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+&lt;strong&gt;&lt;em&gt;Submit your Evaluation Proposal by the end of this week!&lt;/em&gt;&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/03-evaluation-proposal/&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/example/09-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/09-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-checklists&#34;&gt;Evaluation Checklists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the evaluation process phase. This involves&lt;/p&gt;
+&lt;center&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+phase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+task
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+current &amp;lt;- c(checked)
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Process
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Administering an evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewBox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;/&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-checklists&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Checklists&lt;/h2&gt;
+&lt;p&gt;If you are a checklist type of person, consider taking a look at the many examples at the &lt;a href=&#34;https://wmich.edu/evaluation/checklists&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Evaluation Checklist Project&lt;/em&gt;&lt;/a&gt; within the The Evaluation Center at Western Michigan University.&lt;/p&gt;
+&lt;p&gt;There is a likely a checklist for everything and all have been &lt;a href=&#34;https://wmich.edu/evaluation/checklists/checklistsvalidation&#34; target=&#34;_blank&#34;&gt;validated&lt;/a&gt;. Also if you create one that the project doesn’t house, consider &lt;a href=&#34;https://wmich.edu/evaluation/checklists/checklist-submit&#34; target=&#34;_blank&#34;&gt;submitting&lt;/a&gt; it.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/lesson/09-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/lesson/09-lesson/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-few-approaches&#34;&gt;A Few Approaches&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-models&#34;&gt;Evaluation Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-collection&#34;&gt;Data Collection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meeting&lt;/h2&gt;
+&lt;p&gt;Please make sure to meet with me &lt;strong&gt;after&lt;/strong&gt; receiving approval but &lt;strong&gt;before&lt;/strong&gt; beginning your evaluation. I want to make sure you are all ready to go and that all of your questions are addressed before starting the proposed study. After this week and barring one needed check-in about halfway through your evaluation, we’ll meet on a at-need basis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-few-approaches&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A Few Approaches&lt;/h2&gt;
+&lt;p&gt;Take a peek at &lt;a href=&#34;https://edp617.theoreticalphysed.com/handouts/Some%20Evaluation%20Models.pdf&#34; target=&#34;_blank&#34;&gt;some evaluation models&lt;/a&gt;. This is a rather lengthy document so skim it over and treat it like a repository of things you may need.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluation-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Models&lt;/h2&gt;
+&lt;p&gt;Are there evaluation models and should you care? Well yes and no - it’s not a straightforward answer so please view and listen to the &lt;strong&gt;Evaluation Models and Approaches&lt;/strong&gt; slideshow to get a better handle on an answer. You can also download a &lt;a href=&#34;https://edp617.theoreticalphysed.com/slides/A%20Short%20Course%20on%20Evaluation%20Models/A%20Short%20Course%20on%20Evaluation%20Models.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/p&gt;
+&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/slides/A Short Course on Evaluation Models/A-Short-Course-on-Evaluation-Models.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can move back and forth using &lt;kbd&gt;←&lt;/kbd&gt; and &lt;kbd&gt;→&lt;/kbd&gt; and toggle fullscreen by pressing &lt;kbd&gt;F&lt;/kbd&gt;. Just press &lt;kbd&gt;O&lt;/kbd&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press &lt;kbd&gt;O&lt;/kbd&gt; to exit tile view. For more options, press &lt;kbd&gt;H&lt;/kbd&gt; for help.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-collection&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Collection&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Data collection&lt;/strong&gt; slideshow is a compact summary of all things quantitative and qualitative. You can also download a &lt;a href=&#34;https://edp617.theoreticalphysed.com/slides/Data%20Collection/Data%20Collection.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/p&gt;
+&lt;iframe src=&#34;https://edp617.theoreticalphysed.com/slides/Data Collection/Data-Collection.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;You can move back and forth using &lt;kbd&gt;←&lt;/kbd&gt; and &lt;kbd&gt;→&lt;/kbd&gt; and toggle fullscreen by pressing &lt;kbd&gt;F&lt;/kbd&gt;. Just press &lt;kbd&gt;O&lt;/kbd&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press &lt;kbd&gt;O&lt;/kbd&gt; to exit tile view. For more options, press &lt;kbd&gt;H&lt;/kbd&gt; for help.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;For &lt;strong&gt;O&lt;/strong&gt;verview&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;For &lt;strong&gt;O&lt;/strong&gt;verview&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whose Side Are You on Anyway?</title>
+      <link>https://edp617.theoreticalphysed.com/readings/09-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/readings/09-readings/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#respond-to-posts&#34;&gt;Respond to Posts&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#note-about-the-responding-to-posts&#34;&gt;Note about the responding to posts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;respond-to-posts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Respond to Posts&lt;/h2&gt;
+&lt;p&gt;Please create &lt;strong&gt;two responses&lt;/strong&gt; apiece for the post below on Slack.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://2021edp617.slack.com/messages/views-on-synthesis&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#views-on-synthesis&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://2021edp617.slack.com/messages/including-kec-parts&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#including-kec-parts&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://2021edp617.slack.com/messages/including-kec-parts&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#tde&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;note-about-the-responding-to-posts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Note about the responding to posts&lt;/h3&gt;
+&lt;p&gt;Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the &lt;code&gt;Reply in thread&lt;/code&gt; option when replying! If you need a reminder on how to do this, please click &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/#responses&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -5451,6 +5758,25 @@ This page contains instructions on what to submit by on a weekly basis.
               &lt;font color=&#34;cf4647&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/08-due/&#34;&gt;
+              &lt;font color=&#34;2a6e84&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;March 16, 2020&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Whose Side Are You on Anyway?&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/09-readings/&#34;&gt;
+              &lt;font color=&#34;739670&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/09-lesson/&#34;&gt;
+              &lt;font color=&#34;76487&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/09-example/&#34;&gt;
+              &lt;font color=&#34;eb7b59&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/09-assignment/&#34;&gt;
+              &lt;font color=&#34;cf4647&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/09-due/&#34;&gt;
               &lt;font color=&#34;2a6e84&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
