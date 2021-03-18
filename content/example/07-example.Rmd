@@ -36,7 +36,7 @@ This is a deeper exploration of mapping with a purpose. In this case, we are goi
 
 Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
 
-[Week 7 materials](/example/07-example_files/Week7materials.zip)
+[Week 7 materials](/data/Week7materials.zip)
 
 ##  Set your Working Directory
 

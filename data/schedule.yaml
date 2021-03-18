@@ -58,25 +58,27 @@ lessons:
     lesson: "07-lesson"
     example: "07-example"
     assignment: "07-assignment"
-    # solutions: "07-solutions"
+    solutions: "07-solutions"
     due: "07-due"
 
-  # - title: 'Who Evaluates the Evaluators?'
-  #   session: 8
-  #   date: "October 11, 2020"
-  #   readings: "08-readings"
-  #   lesson: "08-lesson"
-  #   due: "08-due"
-  #
-  # - title: 'Who's Side Are You on Anyway?'
-  #   session: 9
-  #   date: "October 18, 2020"
-  #   readings: "09-readings"
-  #   lesson: "09-lesson"
-  #   example: "09-example"
-  #   assignment: "09-assignment"
-  #   due: "09-due"
-  #
+  - title: 'Hooked on Feelings'
+    session: 8
+    date: "March 11, 2021"
+    lesson: "08-lesson"
+    example: "08-example"
+    assignment: "08-assignment"
+    solutions: "08-solutions"
+    due: "08-due"
+
+  - title: 'The Social Network'
+    session: 9
+    date: "March 18, 2021"
+    readings: "09-readings"
+    lesson: "09-lesson"
+    example: "09-example"
+    assignment: "09-assignment"
+    due: "09-due"
+
   # - title: 'Thinking About Mixing Your Methods Up'
   #   session: 10
   #   date: "October 25, 2020"

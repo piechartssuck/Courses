@@ -36,7 +36,7 @@ This is a deeper exploration of mapping with a purpose. In this case, we are goi
 
 Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
 
-[Week 8 materials](/example/08-example_files/Week8materials.zip)
+[Week 8 materials](/data/Week8materials.zip)
 
 ##  Set your Working Directory
 
@@ -46,6 +46,7 @@ Your *working directory* is simply where your script will look for anything it n
 2.  To set your working directory:
   - Go to the menu bar and select `Session > Set Working Directory > To Source File Location` OR
   - run `setwd(dirname(rstudioapi::getActiveDocumentContext()$path))`^[Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.]
+
 
 ## Loading libraries
 
@@ -366,7 +367,7 @@ get_sentiments("bing")
 get_sentiments("nrc")
 ```
 
-And then tp see the in action
+And then to see the in action
 ```{r, message=FALSE, warning=FALSE}
 series %>%
   right_join(get_sentiments("nrc")) %>%

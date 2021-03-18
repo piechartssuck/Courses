@@ -1,0 +1,804 @@
+---
+title: "The Social Network"
+linktitle: "Week 9: The Social Network"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### A Note
+This will be a crash course so if you don't get everything, that is fine! Hopefully this sparks some interest in the idea of network analysis.
+
+
+# Introduction to Social Network Analysis
+
+![](/example/09-example_files/stormtrooper.png){width=50%}
+
+This is a basic exploration of social networks. In this section we will be using a small network that indicates [interactions in the movie Star Wars Episode IV](http://evelinag.com/blog/2015/12-15-star-wars-social-network/){target="_blank"}.
+
+## Preliminary Items
+
+### First Things First! Download the scripts and data sets
+
+Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
+
+[Week 9 materials](/data/Week9materials.zip)
+
+###  Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1.  Open up the included script by going to `File > Open File` or double click the file itself if RStudio is your default program for opening `.R` files.
+2.  To set your working directory:
+  - Go to the menu bar and select `Session > Set Working Directory > To Source File Location` OR
+  - run `setwd(dirname(rstudioapi::getActiveDocumentContext()$path))`^[Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.]
+
+### Load libraries
+
+Go ahead and install and then load it.
+```{r message=FALSE}
+library(igraph)
+```
+
+What is this lonesome package?
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+package_list_igraph <- 
+  
+  tibble(
+   
+    name <- c("`igraph`"),
+    
+    description <- 
+      c("A cross platform package used for analysing and visualizing networks"
+                     ),
+    
+    github <- 
+      c("[Github](https://github.com/igraph/igraph){target='_blank'}"
+                ),
+    
+    example <-
+      c("[Tutorial](https://kateto.net/netscix2016.html){target='_blank'}"
+                ),
+    
+    .name_repair = "minimal"
+    
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+package_list_igraph %>%
+  kbl(col.names = c("Library", "Description", "Repository", "Example"),
+      "html",
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>% 
+  column_spec(4, width = "10em") %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+### Load Files
+
+The first step is to read the list of edges and nodes in this network
+
+```{r eval=FALSE,echo=TRUE}
+edges <- read_csv("star-wars-network-edges.csv")
+```
+
+```{r eval=TRUE,echo=FALSE}
+edges <- read_csv(here("static", "data", "star-wars-network-edges.csv"))
+```
+
+```{r eval=FALSE,echo=TRUE}
+nodes <- read_csv("star-wars-network-nodes.csv")
+```
+
+```{r eval=TRUE,echo=FALSE}
+nodes <- read_csv(here("static", "data", "star-wars-network-nodes.csv"))
+```
+
+and take a look
+
+```{r}
+head(edges)
+```
+
+```{r}
+head(nodes)
+```
+
+For example, we learn that C-3PO and R2-D2 appeared in 17 scenes together.
+
+How do we convert these two datasets into a network object in R? There are multiple packages to work with networks, but the most popular is `igraph` because it's very flexible and easy to do, and in my experience it's much faster and scales well to very large networks. Other packages that you may want to explore are `sna` and `networks`. We won't be covering those in great detail because some network modeling packages are not compatible with `igraph` and there's a separate course taught in the every ***Fall term during odd years***.
+
+Now, how do we create the igraph object? We can use the `graph_from_data_frame()` function, which takes two arguments: `d`, the data frame with the edge list in the first two columns; and `vertices`, a data frame with node data with the node label in the first column. (Note that igraph calls the nodes `vertices`, but it's exactly the same thing.)
+
+```{r}
+g <- graph_from_data_frame(d=edges, 
+                           vertices=nodes,
+                           directed=FALSE)
+```
+
+
+```{r, message=FALSE}
+g 
+```
+
+#### Commands
+```{r, echo=FALSE, eval = TRUE, message=FALSE, results='hide', warning=FALSE}
+vertices <- V(g)
+```
+
+Take a look at the output for a second. There are details here that will inform you of specific details about the network.
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+network_details <- 
+  
+  tibble(
+   
+    detail <- c("*`name (v/c)`*",
+                "*`id (v/n)`*",
+                "*`weight (e/n)`*",
+                "*`vertex names`*",
+                "*`edges`*",
+                "*`U`*",
+                "*`N`*",
+                "*`W`*",
+                "*`22`*",
+                "*`60`*"
+                ),
+    
+    description <- 
+      c("Denoted _name_ is a node attribute and it's a character",
+        "An id number used by R to distinguish one node from another",
+        "means _weight_ is an edge attribute and it's numeric^[Typically indicates importance.]",
+        "Values in a network",
+        "Connection between nodes",
+        "Undirected which implies that direction between nodes do not matter",
+        "Named graph implying that the nodes are labeled",
+        "Indicating that this is a weighted graph which, as noted earlier, is a default parameter",
+        "The total number of nodes",
+        "The total number of edges"
+                     ),
+    
+    example <- 
+      c("*`CHEWBACCA`*",
+        "*`1`*",
+        "*`1`*^[Note that everything in this data set is weighted so the weight is *not shown*. However we could add another column with just weights if there was a reason to do so like force users get a weight of *`2`* abd everyone else receives a *`1`*.]",
+        "*`CHEWBACCA`*",
+        "*`--LUKE`*",
+        "",
+        "",
+        "",
+        "*`22`*",
+        "*`60`*"
+            ),
+    
+    .name_repair = "minimal"
+    
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+network_details %>%
+  kbl(col.names = c("Detail", "Description", "Example"),
+      "html",
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+We can access specific elements within the igraph object using the following commands
+
+#### Outputs
+
+We can use certain commands to get inforation from a graph object
+
++ List of nodes
+  ```{r}
+  V(g)
+  ```
+
++ Names of each node
+  ```{r}
+  V(g)$name
+  ```
++ Weights for each node
+  ```{r}
+  V(g)$weight
+  ```
+
++ All attributes of the nodes
+  ```{r}
+  vertex_attr(g)
+  ```
+
++ List of edges
+  ```{r}
+  E(g)
+  ```
+
++ Weights for each edge
+  ```{r}
+  E(g)$weight
+  ```
+  
++ All attributes of the edges
+  ```{r}
+  edge_attr(g)
+  ```
+
++ An adjacency matrix^[We'll expand on this in a bit.]
+  ```{r}
+  g[]
+  ```
+  
+  + The first row
+    ```{r}
+    g[1,]
+    ```
+
+How can we visualize this network? The `plot()` function works out of the box, but the default options are often not ideal:
+
+```{r}
+plot(g)
+```
+
+Let's see how we can improve this figure. To see all the available plotting options, you can check `?igraph.plotting`. Let's start by fixing some of these.
+
+```{r}
+plot(g,
+     vertex.color = "grey", # change color of nodes
+     vertex.label.color = "black", # change color of labels
+     vertex.label.cex = 0.75, # change size of labels to 75% of original size
+     edge.curved = 0.25, # add a 25% curve to the edges
+     edge.color = "#333333") # change edge color to grey20
+```
+
+Now imagine that we want to modify some of these plotting attributes so that they are function of network properties. For example, a common adjustment is to change the size of the nodes and node labels so that they match their *importance.* Here, `strength()` will correspond to the number of scenes they appear in. And we're only going to show the labels of character that appear in 10 or more scenes.
+
+```{r}
+V(g)$size <- strength(g)
+plot(g)
+
+# taking the log to improve it
+V(g)$size <- log(strength(g)) * 4 + 3
+plot(g)
+
+V(g)$label <- ifelse( strength(g)>=10, 
+                      V(g)$name, 
+                      NA )
+
+plot(g)
+
+# Think about what `ifelse()` does
+nodes$name=="R2-D2"
+ifelse(nodes$name=="R2-D2", "yes", "no")
+ifelse(grepl("R", nodes$name), "yes", "no")
+```
+
+We can also change the colors of each node based on what side they're in (dark side or light side).
+
+```{r}
+# create vectors with characters in each side
+dark_side <- c("DARTH VADER", "MOTTI", "TARKIN")
+light_side <- c("R2-D2", "CHEWBACCA", "C-3PO", "LUKE", "CAMIE", "BIGGS",
+                "LEIA", "BERU", "OWEN", "OBI-WAN", "HAN", "DODONNA",
+                "GOLD LEADER", "WEDGE", "RED LEADER", "RED TEN", "GOLD FIVE")
+other <- c("GREEDO", "JABBA")
+
+# node we'll create a new color variable as a node property
+V(g)$color <- NA
+V(g)$color[V(g)$name %in% dark_side] <- "red"
+V(g)$color[V(g)$name %in% light_side] <- "gold"
+V(g)$color[V(g)$name %in% other] <- "grey20"
+vertex_attr(g)
+plot(g)
+
+# Think about what `%in%` does
+1 %in% c(1,2,3,4)
+1 %in% c(2,3,4)
+```
+
+If we want to indicate what the colors correspond to, we can add a legend.
+```{r}
+plot(g)
+legend(x = 0.75, 
+       y = 0.75, 
+       legend = c("Dark side", "Light side", "Other"), 
+       pch=21, 
+       pt.bg = c("red", "gold", "grey20"), 
+       pt.cex = 2, 
+       bty = "n")
+```
+
+Edge properties can also be modified. For example, here the width of each edge is a function of the log number of scenes those two characters appear together.
+```{r}
+E(g)$width <- log(E(g)$weight) + 1
+
+edge_attr(g)
+
+plot(g)
+```
+
+Up to now, everytime we run the `plot()` function, the nodes appear to be in a different location. Why? In a nutshell the placement is dependent on an internal probabilistic function which tries to locate them in the optimal way possible.
+
+However, we can also specify the __layout__ for the plot; that is, the (x,y) coordinates where each node will be placed. `igraph` has a few different layouts built-in, that will use different algorithms to find an `optimal` distribution of nodes. The following code illustrates some of these
+
+```{r, fig.width=12, fig.height=7}
+par(mfrow=c(2, 3), mar=c(0,0,1,0))
+plot(g, layout=layout_randomly, main="Random")
+plot(g, layout=layout_in_circle, main="Circle")
+plot(g, layout=layout_as_star, main="Star")
+plot(g, layout=layout_as_tree, main="Tree")
+plot(g, layout=layout_on_grid, main="Grid")
+plot(g, layout=layout_with_fr, main="Force-directed")
+```
+
+Note that each of these is actually just a matrix of horizontal and vertical locations for each node. If you don't care about this, just ignore what's below.
+
+```{r}
+l <- layout_randomly(g)
+str(l)
+```
+
+The most popular layouts are [force-directed ](https://en.wikipedia.org/wiki/Force-directed_graph_drawing){target="_blank"}. These algorithms, such as *Fruchterman-Reingold*, try to position the nodes so that the edges have similar length and there are as few crossing edges as possible. The idea is to generate "clean" layouts, where nodes that are closer to each other share more connections in common that those that are located further apart. Note that this is a non-deterministic algorithm: choosing a different seed will generate different layouts.
+
+```{r, fig.width=12, fig.height=7}
+par(mfrow=c(1,2))
+
+set.seed(777)
+fr <- layout_with_fr(g, niter=1000)
+
+par(mar=c(0,0,0,0)); plot(g, layout=fr)
+
+set.seed(666)
+fr <- layout_with_fr(g, niter=1000)
+
+plot(g, layout=fr)
+```
+
+# Node and Network Properties
+
+What are the most important nodes in a network? What is the propensity of two nodes that are connected to be both connected to a third node? What are the different hidden communities in a network? These are some of the descriptive questions that we will address.
+
+We'll start with descriptive statistics at the node level. All of these are in some way measures of importance or __centrality__.
+
+The most basic measure is __degree__, the number of adjacent edges to each node. It is often considered a measure of direct influence. In the Star Wars network, it will be the unique number of characters that each character is interacting with.
+
+```{r}
+sort(degree(g))
+```
+
+In directed graphs, there are three types of degree: indegree (incoming edges), outdegree (outgoing edges), and total degree. You can find these using `mode="in"` or `mode="out"` or `mode="total"`. 
+
+__Strength__ is a weighted measure of degree that takes into account the number of edges that go from one node to another. In this network, it will be the total number of interactions of each character with anybody else.
+
+```{r}
+sort(strength(g))
+```
+
+__Closeness__ measures how many steps are required to access every other node from a given node. It's a measure of how long information takes to arrive (who hears news first?). Higher values mean less centrality.
+
+```{r}
+sort(closeness(g, normalized=TRUE))
+```
+
+__Betweenness__ measures brokerage or gatekeeping potential. It is (approximately) the number of shortest paths between nodes that pass through a particular node.
+
+```{r}
+sort(betweenness(g))
+```
+
+_Eigenvector centrality_ is a measure of being well-connected connected to the well-connected. I'll spare you the linear algebra lesson but this only works with undirected networks.
+
+```{r}
+sort(eigen_centrality(g)$vector)
+```
+
+__Page rank__ approximates probability that any message will arrive to a particular node. This algorithm was developed by Google founders, and originally applied to website links.
+
+```{r}
+sort(page_rank(g)$vector)
+```
+
+__Authority score__ is another measure of centrality [initially applied to the Web](https://en.wikipedia.org/wiki/HITS_algorithm){target="_blank"}. A node has high authority when it is linked by many other nodes that are linking many other nodes.
+
+```{r}
+sort(authority_score(g)$vector)
+```
+
+Finally, not exactly a measure of centrality, but we can learn more about who each node is connected to by using the following functions: `neighbors` (for direct neighbors) and `ego` (for neighbors up to `n` neighbors away)
+
+```{r}
+neighbors(g, v=which(V(g)$name=="DARTH VADER"))
+ego(g, order=2, nodes=which(V(g)$name=="DARTH VADER"))
+```
+
+Let's now try to describe what a network looks like as a whole. We can start with measures of the __size__ of a network. `diameter` is the length of the longest path (in number of edges) between two nodes. We can use `get_diameter` to identify this path. `mean_distance` is the average number of edges between any two nodes in the network. We can find each of these paths between pairs of edges with `distances`.
+
+```{r}
+diameter(g, directed=FALSE, weights=NA)
+get_diameter(g, directed=FALSE, weights=NA)
+mean_distance(g, directed=FALSE)
+dist <- distances(g, weights=NA)
+dist[1:5, 1:5]
+```
+
+`edge_density` is the proportion of edges in the network over all possible edges that could exist.
+
+```{r}
+edge_density(g)
+# 22*21 possible edges / 2 because it's undirected = 231 possible edges
+# but only 60 exist
+60/((22*21)/2)
+```
+
+`reciprocity` measures the propensity of each edge to be a mutual edge; that is, the probability that if `i` is connected to `j`, `j` is also connected to `i`.
+
+```{r}
+reciprocity(g)
+# Why is it 1?
+```
+
+`transitivity`, also known as clustering coefficient, measures that probability that adjacent nodes of a network are connected. In other words, if `i` is connected to `j`, and `j` is connected to `k`, what is the probability that `i` is also connected to `k`?
+
+```{r}
+transitivity(g)
+```
+
+#### Network communities
+
+Networks often have different clusters or communities of nodes that are more densely connected to each other than to the rest of the network. Let's cover some of the different existing methods to identify these communities.
+
+The most straightforward way to partition a network is into __connected components__. Each component is a group of nodes that are connected to each other, but _not_ to the rest of the nodes. For example, this network has two components.
+
+```{r}
+components(g)
+par(mar=c(0,0,0,0)); plot(g)
+```
+
+Most networks have a single __giant connected component__ that includes most nodes. Most studies of networks actually focus on the giant component (e.g. the shortest path between nodes in a network with two or more component is Inf!).
+
+```{r}
+giant <- decompose(g)[[1]]
+```
+
+Components can be __weakly connected__ (in undirected networks) or __strongly connected (in directed networks, where there is an edge that ends in every single node of that component).
+
+Even within a giant component, there can be different subsets of the network that are more connected to each other than to the rest of the network. The goal of __community detection algorithms__ is to identify these subsets.
+
+There are a few different algorithms, each following a different logic. 
+
+The __walktrap__ algorithm finds communities through a series of short random walks. The idea is that these random walks tend to stay within the same community. The length of these random walks is 4 edges by default, but you may want to experiment with different values. The goal of this algorithm is to identify the partition that maximizes a modularity score.
+
+```{r}
+cluster_walktrap(giant)
+cluster_walktrap(giant, steps=10)
+```
+
+Other methods are:
+
+- The __fast and greedy__ method tries to directly optimize this modularity score.
+- The __infomap__ method attempts to map the flow of information in a network, and the different clusters in which information may get remain for longer periods. Similar to walktrap, but not necessarily maximizing modularity, but rather the so-called "map equation".
+- The __edge-betweenness__ method iteratively removes edges with high betweenness, with the idea that they are likely to connect different parts of the network. Here betweenness (gatekeeping potential) applies to edges, but the intuition is the same.
+- The __label propagation__ method labels each node with unique labels, and then updates these labels by choosing the label assigned to the majority of their neighbors, and repeat this iteratively until each node has the most common labels among its neighbors.
+
+```{r}
+cluster_fast_greedy(giant)
+cluster_edge_betweenness(giant)
+cluster_infomap(giant)
+cluster_label_prop(giant)
+```
+
+My experience is that infomap tends to work better in most social science examples (websites, social media, classrooms, etc), but fastgreedy is faster.
+
+`igraph` also makes it very easy to plot the resulting communities:
+```{r}
+comm <- cluster_infomap(giant)
+modularity(comm) # modularity score
+par(mar=c(0,0,0,0)); plot(comm, giant)
+```
+
+Alternatively, we can also add the membership to different communities as a color parameter in the `igraph` object.
+```{r}
+V(giant)$color <- membership(comm)
+par(mar=c(0,0,0,0)); plot(giant)
+```
+
+The final way in which we can think about network communities is in terms of hierarchy or structure. We'll discuss two of these methods.
+
+__K-core decomposition__ allows us to identify the core and the periphery of the network. A k-core is a subnetwork where each node has degree k. So a 3-core would imply that each node is at least degree 3.
+
+```{r, fig.height=5, figh.width=6}
+coreness(g)
+which(coreness(g)==6) # what is the core of the network?
+which(coreness(g)==1) # what is the periphery of the network?
+
+# Visualizing network structure
+V(g)$coreness <- coreness(g)
+
+par(mfrow=c(2, 3), mar=c(0.1,0.1,1,0.1))
+
+set.seed(777); fr <- layout_with_fr(g)
+
+for (k in 1:6){
+  V(g)$color <- ifelse(V(g)$coreness>=k, "orange", "grey")
+  plot(g, main=paste0(k, '-core shell'), layout=fr)
+}
+```
+
+# Getting tidy
+
+```{r}
+library(tidyverse)
+```
+
+Let's remind ourselves of what the data looks like!
+```{r}
+nodes
+```
+
+```{r}
+edges
+```
+
+## The `network` package
+
+Please install and load the following package
+```{r}
+library(network)
+```
+
+The command structure is not reall straight forward, but you can always enter `?network()` into the console if you get confused. 
+
+As noted in the documentation, The first argument is *a matrix giving the network structure in adjacency, incidence, or edgelist form.* 
+
+The language demonstrates the significance of matrices in network analysis, but instead of a matrix, we have an edge list, which fills the same role. The second argument is a list of vertex attributes, which corresponds to the nodes list. Notice that similar to `igraph`,the `network` package uses the term *vertices* instead of *nodes.* 
+
+We then need to specify the type of data that has been entered into the first two arguments by specifying that the matrix.type is an *edgelist* Finally, we set `ignore.eval` to `FALSE` so that our network can be weighted and take into account the number of letters along each route.
+
+```{r}
+starwars_network <- 
+  network(edges, 
+          vertex.attr = nodes,
+          matrix.type = "edgelist",
+          ignore.eval = FALSE)
+```
+
+and you can verify what it is by 
+```{r}
+class(starwars_network)
+```
+
+Printing out `starwars_network` to the console shows that the structure of the object is pretty different from data-frame style objects such as edges and nodes. 
+
+The print command reveals information that is specifically defined for network analysis. It shows that there are 21 vertices or nodes and 60 edges which we saw earlier. Again, these numbers correspond to the number of rows in nodes and edges respectively. Additionally like before, we can also see that the vertices and edges both contain attributes such as label and weight. You can get even more information, including what is known as a *sociomatrix* of the data, by entering
+
+```{r}
+summary(starwars_network)
+```
+
+which we can then visualize
+
+```{r}
+plot(starwars_network)
+```
+
+possibly with larger vertices
+
+```{r}
+plot(starwars_network,
+     vertex.cex = 3)
+```
+
+and into a particular structure as well
+
+```{r}
+plot(starwars_network,
+     vertex.cex = 3,
+     mode = "circle")
+```
+
+or 
+
+```{r}
+plot(starwars_network,
+     vertex.cex = 3,
+     mode = "kamadakawai")
+```
+
+if you prefer. 
+
+## The `tidygraph` and  `ggraph` packages
+
+Please install and load the following package
+```{r}
+library(tidygraph)
+library(ggraph)
+```
+
+Two important piece of information are that 
+
++ Nearly all network analysis packages are based on `igraph` but the `network` package is not one of them. 
+
++ The `network` package actually causes a lot of conflicts with `igraph` so we need to unload it and any information based on it by running
+
+```{r}
+detach(package:network)
+```
+
+and 
+
+```{r}
+rm(starwars_network)
+```
+
+The tidiest packages that you can use to perform network analyses are `tidygraph` and  `ggraph`. 
+
+So let's first create a network object using `tidygraph` which uses a similar approach as `igraph`
+
+```{r}
+starwars_tidy <- 
+  tbl_graph(nodes = nodes, 
+            edges = edges, 
+            directed = FALSE)
+```
+
+We can again verify the class by
+
+```{r}
+class(starwars_tidy)
+```
+
+Let's take a look at the underlying information
+
+```{r}
+starwars_tidy
+```
+
+Notice that the package is built on `igraph`!
+
+Note from the output that the nodes are active. This is what is known as an *active tibble* within a `tbl_graph` object and makes it possible to manipulate the data in one tibble at a time. The nodes tibble is activated by default, but you can change which tibble is active with the `activate()` function. Thus, if I wanted to rearrange the rows in the edges tibble to list those with the highest *weight* first, I could use `activate()` and then `arrange()` like so
+
+```{r}
+starwars_tidy %>% 
+  activate(edges) %>% 
+  arrange(desc(weight))
+```
+
+The tidy approach is relatively simple so lets plot it
+
+```{r}
+ggraph(starwars_tidy) + 
+  geom_edge_link() + 
+  geom_node_point() + 
+  theme_graph()
+```
+
+Yes its absolutely similar to `ggplot` which allows e to use all kinds of common packages and functions
+
+```{r}
+ggraph(starwars_tidy, 
+       layout = "graphopt") + 
+  geom_node_point() +
+  geom_edge_link(aes(width = weight), 
+                 alpha = 0.8) + 
+  scale_edge_width(range = c(0.2, 2)) +
+  geom_node_text(aes(label = name),
+                 repel = TRUE) +
+  labs(edge_width = "Letters") +
+  theme_graph()
+```
+and do fun things with the data
+
+```{r}
+ggraph(starwars_tidy, 
+       layout = "linear") + 
+  geom_edge_arc(aes(width = weight), 
+                alpha = 0.8) + 
+  scale_edge_width(range = c(0.2, 2)) +
+  geom_node_text(aes(label = name)) +
+  labs(edge_width = "Letters") +
+  theme_graph()
+```
+
+# Interactive network graphs with `visNetwork` and `networkD3`
+
+Please install and load the following package
+```{r}
+library(visNetwork)
+library(networkD3)
+```
+
+## visNetwork
+The `visNetwork()` package uses a nodes list and edges list to create an interactive graph. The nodes list must include an “id” column, and the edge list must have “from” and “to” columns. The function also plots the labels for the nodes, using the names of the cities from the “label” column in the node list. The resulting graph is fun to play around with. You can move the nodes and the graph will use an algorithm to keep the nodes properly spaced. You can also zoom in and out on the plot and move it around to re-center it.
+
+```{r}
+visNetwork(nodes, edges)
+```
+
+and weight the edges
+
+```{r}
+edges <- mutate(edges, width = weight/5 + 1)
+```
+
+and plot
+
+```{r}
+visNetwork(nodes, edges) %>% 
+  visIgraphLayout(layout = "layout_with_fr") %>% 
+  visEdges(arrows = "middle")
+```
+
+## networkD3
+A little wrangling is necessary to prepare the data to create a `networkD3` graph. To make a `networkD3` graph with a edge and node list requires that the IDs be a series of numeric integers that begin with 0. 
+
+```{r}
+nodes_d3 <- mutate(nodes, 
+                   id = id - 1)
+
+edges_d3 <- mutate(edges, 
+                   from = from - 1, 
+                   to = to - 1)
+```
+
+and we can plot it
+
+```{r}
+forceNetwork(Links = edges_d3, 
+             Nodes = nodes_d3, 
+             Source = "from", 
+             Target = "to", 
+             NodeID = "name", 
+             Group = "id", 
+             Value = "weight", 
+             opacity = 1, 
+             fontSize = 16, 
+             zoom = TRUE)
+````
+
+or you can see how the individual nodes are linked
+
+```{r}
+sankeyNetwork(Links = edges_d3, 
+              Nodes = nodes_d3, 
+              Source = "from",
+              Target = "to", 
+              NodeID = "label", 
+              Value = "weight", 
+              fontSize = 16, 
+              unit = "Letter(s)")
+````

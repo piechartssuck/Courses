@@ -1,0 +1,24 @@
+---
+title: "The Social Network"
+linktitle: "Week 9: The Social Network"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have two module to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Text Mining with Bag-of-Words in R
+- Sentiment Analysis in R
+
+For more information about these, take a look at the tentative schedule.
+
