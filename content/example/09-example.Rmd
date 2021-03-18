@@ -752,10 +752,15 @@ visNetwork(nodes, edges)
 and weight the edges
 
 ```{r}
-edges <- mutate(edges, width = weight/5 + 1)
+edges <- mutate(edges, 
+                width = weight/5 + 1)
 ```
 
 and plot
+
+```{r}
+
+```
 
 ```{r}
 visNetwork(nodes, edges) %>% 
