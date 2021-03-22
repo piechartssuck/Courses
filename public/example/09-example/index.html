@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Part I: Introduction to social network analysis with R  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files     Part I: Introduction to social network analysis with R This is a basic exploration of social networks.">
+  <meta name="description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages    A Note This will be a crash course so if you don’t get everything, that is fine!">
 
   
   <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/09-example/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/09-example/">
   <meta property="og:title" content="The Social Network | Data Visualization">
-  <meta property="og:description" content="Part I: Introduction to social network analysis with R  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files     Part I: Introduction to social network analysis with R This is a basic exploration of social networks."><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="og:description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages    A Note This will be a crash course so if you don’t get everything, that is fine!"><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -753,7 +753,8 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#part-i-introduction-to-social-network-analysis-with-r">Part I: Introduction to social network analysis with R</a>
+<li><a href="#a-note">A Note</a></li>
+<li><a href="#introduction-to-social-network-analysis">Introduction to Social Network Analysis</a>
 <ul>
 <li><a href="#preliminary-items">Preliminary Items</a>
 <ul>
@@ -763,11 +764,22 @@
 <li><a href="#load-files">Load Files</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#node-and-network-properties">Node and Network Properties</a></li>
+<li><a href="#getting-tidy">Getting tidy</a>
+<ul>
+<li><a href="#the-network-package">The <code>network</code> package</a></li>
+<li><a href="#the-tidygraph-and-ggraph-packages">The <code>tidygraph</code> and <code>ggraph</code> packages</a></li>
+</ul></li>
 </ul>
 </div>
 
-<div id="part-i-introduction-to-social-network-analysis-with-r" class="section level1">
-<h1>Part I: Introduction to social network analysis with R</h1>
+<div id="a-note" class="section level3">
+<h3>A Note</h3>
+<p>This will be a crash course so if you don’t get everything, that is fine! Hopefully this sparks some interest in the idea of network analysis.</p>
+</div>
+<div id="introduction-to-social-network-analysis" class="section level1">
+<h1>Introduction to Social Network Analysis</h1>
+<p><img src="/example/09-example_files/stormtrooper.png" style="width:50.0%" /></p>
 <p>This is a basic exploration of social networks. In this section we will be using a small network that indicates <a href="http://evelinag.com/blog/2015/12-15-star-wars-social-network/" target="_blank">interactions in the movie Star Wars Episode IV</a>.</p>
 <div id="preliminary-items" class="section level2">
 <h2>Preliminary Items</h2>
@@ -832,7 +844,7 @@ A cross platform package used for analysing and visualizing networks
 </div>
 <div id="load-files" class="section level3">
 <h3>Load Files</h3>
-<p>Please go ahead and load up the edge and nodes data sets</p>
+<p>The first step is to read the list of edges and nodes in this network</p>
 <pre class="r"><code>edges &lt;- read_csv(&quot;star-wars-network-edges.csv&quot;)</code></pre>
 <pre><code>## 
 ## ── Column specification ────────────────────────────────────────────────────────
@@ -869,13 +881,931 @@ A cross platform package used for analysing and visualizing networks
 ## 4 LUKE            3
 ## 5 DARTH VADER     4
 ## 6 CAMIE           5</code></pre>
+<p>For example, we learn that C-3PO and R2-D2 appeared in 17 scenes together.</p>
+<p>How do we convert these two datasets into a network object in R? There are multiple packages to work with networks, but the most popular is <code>igraph</code> because it’s very flexible and easy to do, and in my experience it’s much faster and scales well to very large networks. Other packages that you may want to explore are <code>sna</code> and <code>networks</code>. We won’t be covering those in great detail because some network modeling packages are not compatible with <code>igraph</code> and there’s a separate course taught in the every <strong><em>Fall term during odd years</em></strong>.</p>
+<p>Now, how do we create the igraph object? We can use the <code>graph_from_data_frame()</code> function, which takes two arguments: <code>d</code>, the data frame with the edge list in the first two columns; and <code>vertices</code>, a data frame with node data with the node label in the first column. (Note that igraph calls the nodes <code>vertices</code>, but it’s exactly the same thing.)</p>
+<pre class="r"><code>g &lt;- graph_from_data_frame(d=edges, 
+                           vertices=nodes,
+                           directed=FALSE)</code></pre>
+<pre class="r"><code>g </code></pre>
+<pre><code>## IGRAPH e36261d UNW- 22 60 -- 
+## + attr: name (v/c), id (v/n), weight (e/n)
+## + edges from e36261d (vertex names):
+##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
+##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
+##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
+## [10] CHEWBACCA  --LUKE        CHEWBACCA  --HAN         CHEWBACCA  --LEIA       
+## [13] CHEWBACCA  --DARTH VADER CHEWBACCA  --DODONNA     LUKE       --CAMIE      
+## [16] CAMIE      --BIGGS       LUKE       --BIGGS       DARTH VADER--LEIA       
+## [19] LUKE       --BERU        BERU       --OWEN        C-3PO      --BERU       
+## [22] LUKE       --OWEN        C-3PO      --LUKE        C-3PO      --OWEN       
+## + ... omitted several edges</code></pre>
+<div id="commands" class="section level4">
+<h4>Commands</h4>
+<p>Take a look at the output for a second. There are details here that will inform you of specific details about the network.</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Detail
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<em><code>name (v/c)</code></em>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Denoted <em>name</em> is a node attribute and it’s a character
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<em><code>CHEWBACCA</code></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>id (v/n)</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+An id number used by R to distinguish one node from another
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>1</code></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>weight (e/n)</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+means <em>weight</em> is an edge attribute and it’s numeric<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>1</code></em><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>vertex names</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+Values in a network
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>CHEWBACCA</code></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>edges</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+Connection between nodes
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>--LUKE</code></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>U</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+Undirected which implies that direction between nodes do not matter
+</td>
+<td style="text-align:center;width: 10em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>N</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+Named graph implying that the nodes are labeled
+</td>
+<td style="text-align:center;width: 10em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>W</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+Indicating that this is a weighted graph which, as noted earlier, is a default parameter
+</td>
+<td style="text-align:center;width: 10em; ">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>22</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+The total number of nodes
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>22</code></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<em><code>60</code></em>
+</td>
+<td style="text-align:left;width: 30em; ">
+The total number of edges
+</td>
+<td style="text-align:center;width: 10em; ">
+<em><code>60</code></em>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>We can access specific elements within the igraph object using the following commands</p>
 </div>
+<div id="outputs" class="section level4">
+<h4>Outputs</h4>
+<p>We can use certain commands to get inforation from a graph object</p>
+<ul>
+<li><p>List of nodes</p>
+<pre class="r"><code>V(g)</code></pre>
+<pre><code>## + 22/22 vertices, named, from e36261d:
+##  [1] R2-D2       CHEWBACCA   C-3PO       LUKE        DARTH VADER CAMIE      
+##  [7] BIGGS       LEIA        BERU        OWEN        OBI-WAN     MOTTI      
+## [13] TARKIN      HAN         GREEDO      JABBA       DODONNA     GOLD LEADER
+## [19] WEDGE       RED LEADER  RED TEN     GOLD FIVE</code></pre></li>
+<li><p>Names of each node</p>
+<pre class="r"><code>V(g)$name</code></pre>
+<pre><code>##  [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;DARTH VADER&quot;
+##  [6] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;LEIA&quot;        &quot;BERU&quot;        &quot;OWEN&quot;       
+## [11] &quot;OBI-WAN&quot;     &quot;MOTTI&quot;       &quot;TARKIN&quot;      &quot;HAN&quot;         &quot;GREEDO&quot;     
+## [16] &quot;JABBA&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;       &quot;RED LEADER&quot; 
+## [21] &quot;RED TEN&quot;     &quot;GOLD FIVE&quot;</code></pre></li>
+<li><p>Weights for each node</p>
+<pre class="r"><code>V(g)$weight</code></pre>
+<pre><code>## NULL</code></pre></li>
+<li><p>All attributes of the nodes</p>
+<pre class="r"><code>vertex_attr(g)</code></pre>
+<pre><code>## $name
+##  [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;DARTH VADER&quot;
+##  [6] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;LEIA&quot;        &quot;BERU&quot;        &quot;OWEN&quot;       
+## [11] &quot;OBI-WAN&quot;     &quot;MOTTI&quot;       &quot;TARKIN&quot;      &quot;HAN&quot;         &quot;GREEDO&quot;     
+## [16] &quot;JABBA&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;       &quot;RED LEADER&quot; 
+## [21] &quot;RED TEN&quot;     &quot;GOLD FIVE&quot;  
+## 
+## $id
+##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21</code></pre></li>
+<li><p>List of edges</p>
+<pre class="r"><code>E(g)</code></pre>
+<pre><code>## + 60/60 edges from e36261d (vertex names):
+##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
+##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
+##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
+## [10] CHEWBACCA  --LUKE        CHEWBACCA  --HAN         CHEWBACCA  --LEIA       
+## [13] CHEWBACCA  --DARTH VADER CHEWBACCA  --DODONNA     LUKE       --CAMIE      
+## [16] CAMIE      --BIGGS       LUKE       --BIGGS       DARTH VADER--LEIA       
+## [19] LUKE       --BERU        BERU       --OWEN        C-3PO      --BERU       
+## [22] LUKE       --OWEN        C-3PO      --LUKE        C-3PO      --OWEN       
+## [25] C-3PO      --LEIA        LUKE       --LEIA        LEIA       --BERU       
+## [28] LUKE       --OBI-WAN     C-3PO      --OBI-WAN     LEIA       --OBI-WAN    
+## + ... omitted several edges</code></pre></li>
+<li><p>Weights for each edge</p>
+<pre class="r"><code>E(g)$weight</code></pre>
+<pre><code>##  [1] 17 13  6  5  5  3  1  7  5 16 19 11  1  1  2  2  4  1  3  3  2  3 18  2  6
+## [26] 17  1 19  6  1  2  1  7  9 26  1  1  6  1  1 13  1  1  1  1  1  1  2  1  1
+## [51]  3  3  1  1  3  1  2  1  1  1</code></pre></li>
+<li><p>All attributes of the edges</p>
+<pre class="r"><code>edge_attr(g)</code></pre>
+<pre><code>## $weight
+##  [1] 17 13  6  5  5  3  1  7  5 16 19 11  1  1  2  2  4  1  3  3  2  3 18  2  6
+## [26] 17  1 19  6  1  2  1  7  9 26  1  1  6  1  1 13  1  1  1  1  1  1  2  1  1
+## [51]  3  3  1  1  3  1  2  1  1  1</code></pre></li>
+<li><p>An adjacency matrix<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<pre class="r"><code>g[]</code></pre>
+<pre><code>## 22 x 22 sparse Matrix of class &quot;dgCMatrix&quot;</code></pre>
+<pre><code>##    [[ suppressing 22 column names &#39;R2-D2&#39;, &#39;CHEWBACCA&#39;, &#39;C-3PO&#39; ... ]]</code></pre>
+<pre><code>##                                                               
+## R2-D2        .  3 17 13 . . .  5 . .  6 . .  5 . . 1 . . . . .
+## CHEWBACCA    3  .  5 16 1 . . 11 . .  7 . . 19 . . 1 . . . . .
+## C-3PO       17  5  . 18 . . 1  6 2 2  6 . .  6 . . . . . 1 . .
+## LUKE        13 16 18  . . 2 4 17 3 3 19 . . 26 . . 1 1 2 3 1 .
+## DARTH VADER  .  1  .  . . . .  1 . .  1 1 7  . . . . . . . . .
+## CAMIE        .  .  .  2 . . 2  . . .  . . .  . . . . . . . . .
+## BIGGS        .  .  1  4 . 2 .  1 . .  . . .  . . . . 1 2 3 . .
+## LEIA         5 11  6 17 1 . 1  . 1 .  1 1 1 13 . . . . . 1 . .
+## BERU         .  .  2  3 . . .  1 . 3  . . .  . . . . . . . . .
+## OWEN         .  .  2  3 . . .  . 3 .  . . .  . . . . . . . . .
+## OBI-WAN      6  7  6 19 1 . .  1 . .  . . .  9 . . . . . . . .
+## MOTTI        .  .  .  . 1 . .  1 . .  . . 2  . . . . . . . . .
+## TARKIN       .  .  .  . 7 . .  1 . .  . 2 .  . . . . . . . . .
+## HAN          5 19  6 26 . . . 13 . .  9 . .  . 1 1 . . . . . .
+## GREEDO       .  .  .  . . . .  . . .  . . .  1 . . . . . . . .
+## JABBA        .  .  .  . . . .  . . .  . . .  1 . . . . . . . .
+## DODONNA      1  1  .  1 . . .  . . .  . . .  . . . . 1 1 . . .
+## GOLD LEADER  .  .  .  1 . . 1  . . .  . . .  . . . 1 . 1 1 . .
+## WEDGE        .  .  .  2 . . 2  . . .  . . .  . . . 1 1 . 3 . .
+## RED LEADER   .  .  1  3 . . 3  1 . .  . . .  . . . . 1 3 . 1 .
+## RED TEN      .  .  .  1 . . .  . . .  . . .  . . . . . . 1 . .
+## GOLD FIVE    .  .  .  . . . .  . . .  . . .  . . . . . . . . .</code></pre>
+<ul>
+<li><p>The first row</p>
+<pre class="r"><code>g[1,]</code></pre>
+<pre><code>##       R2-D2   CHEWBACCA       C-3PO        LUKE DARTH VADER       CAMIE 
+##           0           3          17          13           0           0 
+##       BIGGS        LEIA        BERU        OWEN     OBI-WAN       MOTTI 
+##           0           5           0           0           6           0 
+##      TARKIN         HAN      GREEDO       JABBA     DODONNA GOLD LEADER 
+##           0           5           0           0           1           0 
+##       WEDGE  RED LEADER     RED TEN   GOLD FIVE 
+##           0           0           0           0</code></pre></li>
+</ul></li>
+</ul>
+<p>How can we visualize this network? The <code>plot()</code> function works out of the box, but the default options are often not ideal:</p>
+<pre class="r"><code>plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>Let’s see how we can improve this figure. To see all the available plotting options, you can check <code>?igraph.plotting</code>. Let’s start by fixing some of these.</p>
+<pre class="r"><code>plot(g,
+     vertex.color = &quot;grey&quot;, # change color of nodes
+     vertex.label.color = &quot;black&quot;, # change color of labels
+     vertex.label.cex = 0.75, # change size of labels to 75% of original size
+     edge.curved = 0.25, # add a 25% curve to the edges
+     edge.color = &quot;#333333&quot;) # change edge color to grey20</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Now imagine that we want to modify some of these plotting attributes so that they are function of network properties. For example, a common adjustment is to change the size of the nodes and node labels so that they match their <em>importance.</em> Here, <code>strength()</code> will correspond to the number of scenes they appear in. And we’re only going to show the labels of character that appear in 10 or more scenes.</p>
+<pre class="r"><code>V(g)$size &lt;- strength(g)
+plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<pre class="r"><code># taking the log to improve it
+V(g)$size &lt;- log(strength(g)) * 4 + 3
+plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-27-2.png" width="672" /></p>
+<pre class="r"><code>V(g)$label &lt;- ifelse( strength(g)&gt;=10, 
+                      V(g)$name, 
+                      NA )
+
+plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-27-3.png" width="672" /></p>
+<pre class="r"><code># Think about what `ifelse()` does
+nodes$name==&quot;R2-D2&quot;</code></pre>
+<pre><code>##  [1]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+## [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>ifelse(nodes$name==&quot;R2-D2&quot;, &quot;yes&quot;, &quot;no&quot;)</code></pre>
+<pre><code>##  [1] &quot;yes&quot; &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot; 
+## [13] &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;no&quot;</code></pre>
+<pre class="r"><code>ifelse(grepl(&quot;R&quot;, nodes$name), &quot;yes&quot;, &quot;no&quot;)</code></pre>
+<pre><code>##  [1] &quot;yes&quot; &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;yes&quot; &quot;no&quot;  &quot;no&quot;  &quot;no&quot;  &quot;yes&quot; &quot;no&quot;  &quot;no&quot;  &quot;no&quot; 
+## [13] &quot;yes&quot; &quot;no&quot;  &quot;yes&quot; &quot;no&quot;  &quot;no&quot;  &quot;yes&quot; &quot;no&quot;  &quot;yes&quot; &quot;yes&quot; &quot;no&quot;</code></pre>
+<p>We can also change the colors of each node based on what side they’re in (dark side or light side).</p>
+<pre class="r"><code># create vectors with characters in each side
+dark_side &lt;- c(&quot;DARTH VADER&quot;, &quot;MOTTI&quot;, &quot;TARKIN&quot;)
+light_side &lt;- c(&quot;R2-D2&quot;, &quot;CHEWBACCA&quot;, &quot;C-3PO&quot;, &quot;LUKE&quot;, &quot;CAMIE&quot;, &quot;BIGGS&quot;,
+                &quot;LEIA&quot;, &quot;BERU&quot;, &quot;OWEN&quot;, &quot;OBI-WAN&quot;, &quot;HAN&quot;, &quot;DODONNA&quot;,
+                &quot;GOLD LEADER&quot;, &quot;WEDGE&quot;, &quot;RED LEADER&quot;, &quot;RED TEN&quot;, &quot;GOLD FIVE&quot;)
+other &lt;- c(&quot;GREEDO&quot;, &quot;JABBA&quot;)
+
+# node we&#39;ll create a new color variable as a node property
+V(g)$color &lt;- NA
+V(g)$color[V(g)$name %in% dark_side] &lt;- &quot;red&quot;
+V(g)$color[V(g)$name %in% light_side] &lt;- &quot;gold&quot;
+V(g)$color[V(g)$name %in% other] &lt;- &quot;grey20&quot;
+vertex_attr(g)</code></pre>
+<pre><code>## $name
+##  [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;DARTH VADER&quot;
+##  [6] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;LEIA&quot;        &quot;BERU&quot;        &quot;OWEN&quot;       
+## [11] &quot;OBI-WAN&quot;     &quot;MOTTI&quot;       &quot;TARKIN&quot;      &quot;HAN&quot;         &quot;GREEDO&quot;     
+## [16] &quot;JABBA&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;       &quot;RED LEADER&quot; 
+## [21] &quot;RED TEN&quot;     &quot;GOLD FIVE&quot;  
+## 
+## $id
+##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+## 
+## $size
+##  [1] 18.648092 19.572539 19.635532 22.439250 12.591581  8.545177 13.556229
+##  [8] 19.310150 11.788898 11.317766 18.567281  8.545177 12.210340 20.528107
+## [15]  3.000000  3.000000  9.437752  9.437752 11.788898 13.259797  5.772589
+## [22]      -Inf
+## 
+## $label
+##  [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;DARTH VADER&quot;
+##  [6] NA            &quot;BIGGS&quot;       &quot;LEIA&quot;        NA            NA           
+## [11] &quot;OBI-WAN&quot;     NA            &quot;TARKIN&quot;      &quot;HAN&quot;         NA           
+## [16] NA            NA            NA            NA            &quot;RED LEADER&quot; 
+## [21] NA            NA           
+## 
+## $color
+##  [1] &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;red&quot;    &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;  
+##  [9] &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;red&quot;    &quot;red&quot;    &quot;gold&quot;   &quot;grey20&quot; &quot;grey20&quot;
+## [17] &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;   &quot;gold&quot;</code></pre>
+<pre class="r"><code>plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<pre class="r"><code># Think about what `%in%` does
+1 %in% c(1,2,3,4)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>1 %in% c(2,3,4)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>If we want to indicate what the colors correspond to, we can add a legend.</p>
+<pre class="r"><code>plot(g)
+legend(x = 0.75, 
+       y = 0.75, 
+       legend = c(&quot;Dark side&quot;, &quot;Light side&quot;, &quot;Other&quot;), 
+       pch=21, 
+       pt.bg = c(&quot;red&quot;, &quot;gold&quot;, &quot;grey20&quot;), 
+       pt.cex = 2, 
+       bty = &quot;n&quot;)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Edge properties can also be modified. For example, here the width of each edge is a function of the log number of scenes those two characters appear together.</p>
+<pre class="r"><code>E(g)$width &lt;- log(E(g)$weight) + 1
+
+edge_attr(g)</code></pre>
+<pre><code>## $weight
+##  [1] 17 13  6  5  5  3  1  7  5 16 19 11  1  1  2  2  4  1  3  3  2  3 18  2  6
+## [26] 17  1 19  6  1  2  1  7  9 26  1  1  6  1  1 13  1  1  1  1  1  1  2  1  1
+## [51]  3  3  1  1  3  1  2  1  1  1
+## 
+## $width
+##  [1] 3.833213 3.564949 2.791759 2.609438 2.609438 2.098612 1.000000 2.945910
+##  [9] 2.609438 3.772589 3.944439 3.397895 1.000000 1.000000 1.693147 1.693147
+## [17] 2.386294 1.000000 2.098612 2.098612 1.693147 2.098612 3.890372 1.693147
+## [25] 2.791759 3.833213 1.000000 3.944439 2.791759 1.000000 1.693147 1.000000
+## [33] 2.945910 3.197225 4.258097 1.000000 1.000000 2.791759 1.000000 1.000000
+## [41] 3.564949 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.693147
+## [49] 1.000000 1.000000 2.098612 2.098612 1.000000 1.000000 2.098612 1.000000
+## [57] 1.693147 1.000000 1.000000 1.000000</code></pre>
+<pre class="r"><code>plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Up to now, everytime we run the <code>plot()</code> function, the nodes appear to be in a different location. Why? In a nutshell the placement is dependent on an internal probabilistic function which tries to locate them in the optimal way possible.</p>
+<p>However, we can also specify the <strong>layout</strong> for the plot; that is, the (x,y) coordinates where each node will be placed. <code>igraph</code> has a few different layouts built-in, that will use different algorithms to find an <code>optimal</code> distribution of nodes. The following code illustrates some of these</p>
+<pre class="r"><code>par(mfrow=c(2, 3), mar=c(0,0,1,0))
+plot(g, layout=layout_randomly, main=&quot;Random&quot;)
+plot(g, layout=layout_in_circle, main=&quot;Circle&quot;)
+plot(g, layout=layout_as_star, main=&quot;Star&quot;)
+plot(g, layout=layout_as_tree, main=&quot;Tree&quot;)
+plot(g, layout=layout_on_grid, main=&quot;Grid&quot;)
+plot(g, layout=layout_with_fr, main=&quot;Force-directed&quot;)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-31-1.png" width="1152" /></p>
+<p>Note that each of these is actually just a matrix of horizontal and vertical locations for each node. If you don’t care about this, just ignore what’s below.</p>
+<pre class="r"><code>l &lt;- layout_randomly(g)
+str(l)</code></pre>
+<pre><code>##  num [1:22, 1:2] 0.752 0.176 -0.194 -0.89 0.192 ...</code></pre>
+<p>The most popular layouts are <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing" target="_blank">force-directed</a>. These algorithms, such as <em>Fruchterman-Reingold</em>, try to position the nodes so that the edges have similar length and there are as few crossing edges as possible. The idea is to generate “clean” layouts, where nodes that are closer to each other share more connections in common that those that are located further apart. Note that this is a non-deterministic algorithm: choosing a different seed will generate different layouts.</p>
+<pre class="r"><code>par(mfrow=c(1,2))
+
+set.seed(777)
+fr &lt;- layout_with_fr(g, niter=1000)
+
+par(mar=c(0,0,0,0)); plot(g, layout=fr)
+
+set.seed(666)
+fr &lt;- layout_with_fr(g, niter=1000)
+
+plot(g, layout=fr)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-33-1.png" width="1152" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="node-and-network-properties" class="section level1">
+<h1>Node and Network Properties</h1>
+<p>What are the most important nodes in a network? What is the propensity of two nodes that are connected to be both connected to a third node? What are the different hidden communities in a network? These are some of the descriptive questions that we will address.</p>
+<p>We’ll start with descriptive statistics at the node level. All of these are in some way measures of importance or <strong>centrality</strong>.</p>
+<p>The most basic measure is <strong>degree</strong>, the number of adjacent edges to each node. It is often considered a measure of direct influence. In the Star Wars network, it will be the unique number of characters that each character is interacting with.</p>
+<pre class="r"><code>sort(degree(g))</code></pre>
+<pre><code>##   GOLD FIVE      GREEDO       JABBA       CAMIE     RED TEN        OWEN 
+##           0           1           1           2           2           3 
+##       MOTTI      TARKIN        BERU DARTH VADER     DODONNA GOLD LEADER 
+##           3           3           4           5           5           5 
+##       WEDGE       R2-D2       BIGGS     OBI-WAN  RED LEADER   CHEWBACCA 
+##           5           7           7           7           7           8 
+##         HAN       C-3PO        LEIA        LUKE 
+##           8          10          12          15</code></pre>
+<p>In directed graphs, there are three types of degree: indegree (incoming edges), outdegree (outgoing edges), and total degree. You can find these using <code>mode="in"</code> or <code>mode="out"</code> or <code>mode="total"</code>.</p>
+<p><strong>Strength</strong> is a weighted measure of degree that takes into account the number of edges that go from one node to another. In this network, it will be the total number of interactions of each character with anybody else.</p>
+<pre class="r"><code>sort(strength(g))</code></pre>
+<pre><code>##   GOLD FIVE      GREEDO       JABBA     RED TEN       CAMIE       MOTTI 
+##           0           1           1           2           4           4 
+##     DODONNA GOLD LEADER        OWEN        BERU       WEDGE      TARKIN 
+##           5           5           8           9           9          10 
+## DARTH VADER  RED LEADER       BIGGS     OBI-WAN       R2-D2        LEIA 
+##          11          13          14          49          50          59 
+##   CHEWBACCA       C-3PO         HAN        LUKE 
+##          63          64          80         129</code></pre>
+<p><strong>Closeness</strong> measures how many steps are required to access every other node from a given node. It’s a measure of how long information takes to arrive (who hears news first?). Higher values mean less centrality.</p>
+<pre class="r"><code>sort(closeness(g, normalized=TRUE))</code></pre>
+<pre><code>## Warning in closeness(g, normalized = TRUE): At centrality.c:2617 :closeness
+## centrality is not well-defined for disconnected graphs</code></pre>
+<pre><code>##   GOLD FIVE      GREEDO       JABBA         HAN        OWEN       CAMIE 
+##  0.04545455  0.11666667  0.11666667  0.13043478  0.17647059  0.18584071 
+##      TARKIN       R2-D2     OBI-WAN       MOTTI DARTH VADER        BERU 
+##  0.20000000  0.20388350  0.20792079  0.21000000  0.21649485  0.21649485 
+##   CHEWBACCA       WEDGE     RED TEN       C-3PO        LUKE        LEIA 
+##  0.21875000  0.21875000  0.22105263  0.23595506  0.23863636  0.24418605 
+## GOLD LEADER  RED LEADER     DODONNA       BIGGS 
+##  0.24418605  0.25000000  0.25301205  0.25925926</code></pre>
+<p><strong>Betweenness</strong> measures brokerage or gatekeeping potential. It is (approximately) the number of shortest paths between nodes that pass through a particular node.</p>
+<pre class="r"><code>sort(betweenness(g))</code></pre>
+<pre><code>##       CAMIE        OWEN     OBI-WAN       MOTTI      TARKIN      GREEDO 
+##    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000 
+##       JABBA       WEDGE   GOLD FIVE        BERU     RED TEN DARTH VADER 
+##    0.000000    0.000000    0.000000    1.666667    2.200000   15.583333 
+##   CHEWBACCA        LUKE       R2-D2 GOLD LEADER  RED LEADER       BIGGS 
+##   15.916667   18.333333   22.750000   23.800000   31.416667   31.916667 
+##       C-3PO         HAN     DODONNA        LEIA 
+##   32.783333   37.000000   47.533333   59.950000</code></pre>
+<p><em>Eigenvector centrality</em> is a measure of being well-connected connected to the well-connected. I’ll spare you the linear algebra lesson but this only works with undirected networks.</p>
+<pre class="r"><code>sort(eigen_centrality(g)$vector)</code></pre>
+<pre><code>##       MOTTI      TARKIN       JABBA      GREEDO     RED TEN GOLD LEADER 
+## 0.009298153 0.011493184 0.011602602 0.011602604 0.015241796 0.017475057 
+## DARTH VADER       CAMIE     DODONNA       WEDGE        OWEN  RED LEADER 
+## 0.027009389 0.030744983 0.031723524 0.034374377 0.062695673 0.065141246 
+##        BERU       BIGGS   GOLD FIVE       R2-D2     OBI-WAN        LEIA 
+## 0.070824006 0.078921422 0.121485774 0.503053912 0.541729368 0.592624857 
+##       C-3PO   CHEWBACCA         HAN        LUKE 
+## 0.595864470 0.657663375 0.812242325 1.000000000</code></pre>
+<p><strong>Page rank</strong> approximates probability that any message will arrive to a particular node. This algorithm was developed by Google founders, and originally applied to website links.</p>
+<pre class="r"><code>sort(page_rank(g)$vector)</code></pre>
+<pre><code>##   GOLD FIVE       JABBA      GREEDO     RED TEN       CAMIE     DODONNA 
+## 0.007092199 0.008310156 0.008310156 0.010573836 0.013792262 0.016185680 
+##       MOTTI GOLD LEADER        OWEN        BERU       WEDGE      TARKIN 
+## 0.016813964 0.017945853 0.018881975 0.020368818 0.026377242 0.034180007 
+## DARTH VADER  RED LEADER       BIGGS     OBI-WAN       R2-D2        LEIA 
+## 0.034576040 0.034578060 0.035070288 0.067378471 0.068538690 0.086027500 
+##   CHEWBACCA       C-3PO         HAN        LUKE 
+## 0.086390090 0.088708430 0.114631333 0.185268949</code></pre>
+<p><strong>Authority score</strong> is another measure of centrality <a href="https://en.wikipedia.org/wiki/HITS_algorithm" target="_blank">initially applied to the Web</a>. A node has high authority when it is linked by many other nodes that are linking many other nodes.</p>
+<pre class="r"><code>sort(authority_score(g)$vector)</code></pre>
+<pre><code>##    GOLD FIVE        MOTTI       TARKIN       GREEDO        JABBA      RED TEN 
+## 1.273708e-17 9.118469e-03 1.133319e-02 1.154515e-02 1.154515e-02 1.512880e-02 
+##  GOLD LEADER  DARTH VADER        CAMIE      DODONNA        WEDGE         OWEN 
+## 1.717615e-02 2.671707e-02 3.064953e-02 3.143121e-02 3.410098e-02 6.256707e-02 
+##   RED LEADER         BERU        BIGGS        R2-D2      OBI-WAN         LEIA 
+## 6.476889e-02 7.063977e-02 7.856101e-02 5.030995e-01 5.417666e-01 5.923767e-01 
+##        C-3PO    CHEWBACCA          HAN         LUKE 
+## 5.957835e-01 6.577603e-01 8.125507e-01 1.000000e+00</code></pre>
+<p>Finally, not exactly a measure of centrality, but we can learn more about who each node is connected to by using the following functions: <code>neighbors</code> (for direct neighbors) and <code>ego</code> (for neighbors up to <code>n</code> neighbors away)</p>
+<pre class="r"><code>neighbors(g, v=which(V(g)$name==&quot;DARTH VADER&quot;))</code></pre>
+<pre><code>## + 5/22 vertices, named, from e36261d:
+## [1] CHEWBACCA LEIA      OBI-WAN   MOTTI     TARKIN</code></pre>
+<pre class="r"><code>ego(g, order=2, nodes=which(V(g)$name==&quot;DARTH VADER&quot;))</code></pre>
+<pre><code>## [[1]]
+## + 14/22 vertices, named, from e36261d:
+##  [1] DARTH VADER CHEWBACCA   LEIA        OBI-WAN     MOTTI       TARKIN     
+##  [7] R2-D2       C-3PO       LUKE        HAN         DODONNA     BIGGS      
+## [13] BERU        RED LEADER</code></pre>
+<p>Let’s now try to describe what a network looks like as a whole. We can start with measures of the <strong>size</strong> of a network. <code>diameter</code> is the length of the longest path (in number of edges) between two nodes. We can use <code>get_diameter</code> to identify this path. <code>mean_distance</code> is the average number of edges between any two nodes in the network. We can find each of these paths between pairs of edges with <code>distances</code>.</p>
+<pre class="r"><code>diameter(g, directed=FALSE, weights=NA)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>get_diameter(g, directed=FALSE, weights=NA)</code></pre>
+<pre><code>## + 4/22 vertices, named, from e36261d:
+## [1] DARTH VADER CHEWBACCA   C-3PO       OWEN</code></pre>
+<pre class="r"><code>mean_distance(g, directed=FALSE)</code></pre>
+<pre><code>## [1] 1.909524</code></pre>
+<pre class="r"><code>dist &lt;- distances(g, weights=NA)
+dist[1:5, 1:5]</code></pre>
+<pre><code>##             R2-D2 CHEWBACCA C-3PO LUKE DARTH VADER
+## R2-D2           0         1     1    1           2
+## CHEWBACCA       1         0     1    1           1
+## C-3PO           1         1     0    1           2
+## LUKE            1         1     1    0           2
+## DARTH VADER     2         1     2    2           0</code></pre>
+<p><code>edge_density</code> is the proportion of edges in the network over all possible edges that could exist.</p>
+<pre class="r"><code>edge_density(g)</code></pre>
+<pre><code>## [1] 0.2597403</code></pre>
+<pre class="r"><code># 22*21 possible edges / 2 because it&#39;s undirected = 231 possible edges
+# but only 60 exist
+60/((22*21)/2)</code></pre>
+<pre><code>## [1] 0.2597403</code></pre>
+<p><code>reciprocity</code> measures the propensity of each edge to be a mutual edge; that is, the probability that if <code>i</code> is connected to <code>j</code>, <code>j</code> is also connected to <code>i</code>.</p>
+<pre class="r"><code>reciprocity(g)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code># Why is it 1?</code></pre>
+<p><code>transitivity</code>, also known as clustering coefficient, measures that probability that adjacent nodes of a network are connected. In other words, if <code>i</code> is connected to <code>j</code>, and <code>j</code> is connected to <code>k</code>, what is the probability that <code>i</code> is also connected to <code>k</code>?</p>
+<pre class="r"><code>transitivity(g)</code></pre>
+<pre><code>## [1] 0.5375303</code></pre>
+<div id="network-communities" class="section level4">
+<h4>Network communities</h4>
+<p>Networks often have different clusters or communities of nodes that are more densely connected to each other than to the rest of the network. Let’s cover some of the different existing methods to identify these communities.</p>
+<p>The most straightforward way to partition a network is into <strong>connected components</strong>. Each component is a group of nodes that are connected to each other, but <em>not</em> to the rest of the nodes. For example, this network has two components.</p>
+<pre class="r"><code>components(g)</code></pre>
+<pre><code>## $membership
+##       R2-D2   CHEWBACCA       C-3PO        LUKE DARTH VADER       CAMIE 
+##           1           1           1           1           1           1 
+##       BIGGS        LEIA        BERU        OWEN     OBI-WAN       MOTTI 
+##           1           1           1           1           1           1 
+##      TARKIN         HAN      GREEDO       JABBA     DODONNA GOLD LEADER 
+##           1           1           1           1           1           1 
+##       WEDGE  RED LEADER     RED TEN   GOLD FIVE 
+##           1           1           1           2 
+## 
+## $csize
+## [1] 21  1
+## 
+## $no
+## [1] 2</code></pre>
+<pre class="r"><code>par(mar=c(0,0,0,0)); plot(g)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p>Most networks have a single <strong>giant connected component</strong> that includes most nodes. Most studies of networks actually focus on the giant component (e.g. the shortest path between nodes in a network with two or more component is Inf!).</p>
+<pre class="r"><code>giant &lt;- decompose(g)[[1]]</code></pre>
+<p>Components can be <strong>weakly connected</strong> (in undirected networks) or __strongly connected (in directed networks, where there is an edge that ends in every single node of that component).</p>
+<p>Even within a giant component, there can be different subsets of the network that are more connected to each other than to the rest of the network. The goal of <strong>community detection algorithms</strong> is to identify these subsets.</p>
+<p>There are a few different algorithms, each following a different logic.</p>
+<p>The <strong>walktrap</strong> algorithm finds communities through a series of short random walks. The idea is that these random walks tend to stay within the same community. The length of these random walks is 4 edges by default, but you may want to experiment with different values. The goal of this algorithm is to identify the partition that maximizes a modularity score.</p>
+<pre class="r"><code>cluster_walktrap(giant)</code></pre>
+<pre><code>## IGRAPH clustering walktrap, groups: 6, mod: 0.16
+## + groups:
+##   $`1`
+##   [1] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;      
+##   [6] &quot;RED LEADER&quot;  &quot;RED TEN&quot;    
+##   
+##   $`2`
+##   [1] &quot;DARTH VADER&quot; &quot;MOTTI&quot;       &quot;TARKIN&quot;     
+##   
+##   $`3`
+##   [1] &quot;R2-D2&quot;     &quot;CHEWBACCA&quot; &quot;C-3PO&quot;     &quot;LUKE&quot;      &quot;LEIA&quot;      &quot;OBI-WAN&quot;  
+##   [7] &quot;HAN&quot;      
+##   + ... omitted several groups/vertices</code></pre>
+<pre class="r"><code>cluster_walktrap(giant, steps=10)</code></pre>
+<pre><code>## IGRAPH clustering walktrap, groups: 3, mod: 0.15
+## + groups:
+##   $`1`
+##   [1] &quot;DARTH VADER&quot; &quot;MOTTI&quot;       &quot;TARKIN&quot;     
+##   
+##   $`2`
+##    [1] &quot;R2-D2&quot;     &quot;CHEWBACCA&quot; &quot;C-3PO&quot;     &quot;LUKE&quot;      &quot;LEIA&quot;      &quot;BERU&quot;     
+##    [7] &quot;OWEN&quot;      &quot;OBI-WAN&quot;   &quot;HAN&quot;       &quot;GREEDO&quot;    &quot;JABBA&quot;    
+##   
+##   $`3`
+##   [1] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;      
+##   [6] &quot;RED LEADER&quot;  &quot;RED TEN&quot;    
+##   + ... omitted several groups/vertices</code></pre>
+<p>Other methods are:</p>
+<ul>
+<li>The <strong>fast and greedy</strong> method tries to directly optimize this modularity score.</li>
+<li>The <strong>infomap</strong> method attempts to map the flow of information in a network, and the different clusters in which information may get remain for longer periods. Similar to walktrap, but not necessarily maximizing modularity, but rather the so-called “map equation”.</li>
+<li>The <strong>edge-betweenness</strong> method iteratively removes edges with high betweenness, with the idea that they are likely to connect different parts of the network. Here betweenness (gatekeeping potential) applies to edges, but the intuition is the same.</li>
+<li>The <strong>label propagation</strong> method labels each node with unique labels, and then updates these labels by choosing the label assigned to the majority of their neighbors, and repeat this iteratively until each node has the most common labels among its neighbors.</li>
+</ul>
+<pre class="r"><code>cluster_fast_greedy(giant)</code></pre>
+<pre><code>## IGRAPH clustering fast greedy, groups: 4, mod: 0.17
+## + groups:
+##   $`1`
+##   [1] &quot;CHEWBACCA&quot; &quot;LUKE&quot;      &quot;LEIA&quot;      &quot;OBI-WAN&quot;   &quot;HAN&quot;       &quot;GREEDO&quot;   
+##   [7] &quot;JABBA&quot;    
+##   
+##   $`2`
+##   [1] &quot;R2-D2&quot; &quot;C-3PO&quot; &quot;BERU&quot;  &quot;OWEN&quot; 
+##   
+##   $`3`
+##   [1] &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;      
+##   [6] &quot;RED LEADER&quot;  &quot;RED TEN&quot;    
+##   + ... omitted several groups/vertices</code></pre>
+<pre class="r"><code>cluster_edge_betweenness(giant)</code></pre>
+<pre><code>## Warning in cluster_edge_betweenness(giant): At community.c:460 :Membership
+## vector will be selected based on the lowest modularity score.</code></pre>
+<pre><code>## Warning in cluster_edge_betweenness(giant): At community.c:467 :Modularity
+## calculation with weighted edge betweenness community detection might not make
+## sense -- modularity treats edge weights as similarities while edge betwenness
+## treats them as distances</code></pre>
+<pre><code>## IGRAPH clustering edge betweenness, groups: 2, mod: 0.033
+## + groups:
+##   $`1`
+##    [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;DARTH VADER&quot; &quot;LEIA&quot;        &quot;OBI-WAN&quot;    
+##    [6] &quot;MOTTI&quot;       &quot;TARKIN&quot;      &quot;HAN&quot;         &quot;GREEDO&quot;      &quot;JABBA&quot;      
+##   
+##   $`2`
+##    [1] &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;CAMIE&quot;       &quot;BIGGS&quot;       &quot;BERU&quot;       
+##    [6] &quot;OWEN&quot;        &quot;DODONNA&quot;     &quot;GOLD LEADER&quot; &quot;WEDGE&quot;       &quot;RED LEADER&quot; 
+##   [11] &quot;RED TEN&quot;    
+## </code></pre>
+<pre class="r"><code>cluster_infomap(giant)</code></pre>
+<pre><code>## IGRAPH clustering infomap, groups: 2, mod: 0.064
+## + groups:
+##   $`1`
+##    [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;CAMIE&quot;      
+##    [6] &quot;BIGGS&quot;       &quot;LEIA&quot;        &quot;BERU&quot;        &quot;OWEN&quot;        &quot;OBI-WAN&quot;    
+##   [11] &quot;HAN&quot;         &quot;GREEDO&quot;      &quot;JABBA&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot;
+##   [16] &quot;WEDGE&quot;       &quot;RED LEADER&quot;  &quot;RED TEN&quot;    
+##   
+##   $`2`
+##   [1] &quot;DARTH VADER&quot; &quot;MOTTI&quot;       &quot;TARKIN&quot;     
+## </code></pre>
+<pre class="r"><code>cluster_label_prop(giant)</code></pre>
+<pre><code>## IGRAPH clustering label propagation, groups: 2, mod: 0.064
+## + groups:
+##   $`1`
+##    [1] &quot;R2-D2&quot;       &quot;CHEWBACCA&quot;   &quot;C-3PO&quot;       &quot;LUKE&quot;        &quot;CAMIE&quot;      
+##    [6] &quot;BIGGS&quot;       &quot;LEIA&quot;        &quot;BERU&quot;        &quot;OWEN&quot;        &quot;OBI-WAN&quot;    
+##   [11] &quot;HAN&quot;         &quot;GREEDO&quot;      &quot;JABBA&quot;       &quot;DODONNA&quot;     &quot;GOLD LEADER&quot;
+##   [16] &quot;WEDGE&quot;       &quot;RED LEADER&quot;  &quot;RED TEN&quot;    
+##   
+##   $`2`
+##   [1] &quot;DARTH VADER&quot; &quot;MOTTI&quot;       &quot;TARKIN&quot;     
+## </code></pre>
+<p>My experience is that infomap tends to work better in most social science examples (websites, social media, classrooms, etc), but fastgreedy is faster.</p>
+<p><code>igraph</code> also makes it very easy to plot the resulting communities:</p>
+<pre class="r"><code>comm &lt;- cluster_infomap(giant)
+modularity(comm) # modularity score</code></pre>
+<pre><code>## [1] 0.06420569</code></pre>
+<pre class="r"><code>par(mar=c(0,0,0,0)); plot(comm, giant)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>Alternatively, we can also add the membership to different communities as a color parameter in the <code>igraph</code> object.</p>
+<pre class="r"><code>V(giant)$color &lt;- membership(comm)
+par(mar=c(0,0,0,0)); plot(giant)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<p>The final way in which we can think about network communities is in terms of hierarchy or structure. We’ll discuss two of these methods.</p>
+<p><strong>K-core decomposition</strong> allows us to identify the core and the periphery of the network. A k-core is a subnetwork where each node has degree k. So a 3-core would imply that each node is at least degree 3.</p>
+<pre class="r"><code>coreness(g)</code></pre>
+<pre><code>##       R2-D2   CHEWBACCA       C-3PO        LUKE DARTH VADER       CAMIE 
+##           6           6           6           6           3           2 
+##       BIGGS        LEIA        BERU        OWEN     OBI-WAN       MOTTI 
+##           5           6           3           3           6           3 
+##      TARKIN         HAN      GREEDO       JABBA     DODONNA GOLD LEADER 
+##           3           6           1           1           5           5 
+##       WEDGE  RED LEADER     RED TEN   GOLD FIVE 
+##           5           5           2           0</code></pre>
+<pre class="r"><code>which(coreness(g)==6) # what is the core of the network?</code></pre>
+<pre><code>##     R2-D2 CHEWBACCA     C-3PO      LUKE      LEIA   OBI-WAN       HAN 
+##         1         2         3         4         8        11        14</code></pre>
+<pre class="r"><code>which(coreness(g)==1) # what is the periphery of the network?</code></pre>
+<pre><code>## GREEDO  JABBA 
+##     15     16</code></pre>
+<pre class="r"><code># Visualizing network structure
+V(g)$coreness &lt;- coreness(g)
+
+par(mfrow=c(2, 3), mar=c(0.1,0.1,1,0.1))
+
+set.seed(777); fr &lt;- layout_with_fr(g)
+
+for (k in 1:6){
+  V(g)$color &lt;- ifelse(V(g)$coreness&gt;=k, &quot;orange&quot;, &quot;grey&quot;)
+  plot(g, main=paste0(k, &#39;-core shell&#39;), layout=fr)
+}</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+</div>
+</div>
+<div id="getting-tidy" class="section level1">
+<h1>Getting tidy</h1>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>Let’s remind ourselves of what the data looks like!</p>
+<pre class="r"><code>nodes</code></pre>
+<pre><code>## # A tibble: 22 x 2
+##    name           id
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 R2-D2           0
+##  2 CHEWBACCA       1
+##  3 C-3PO           2
+##  4 LUKE            3
+##  5 DARTH VADER     4
+##  6 CAMIE           5
+##  7 BIGGS           6
+##  8 LEIA            7
+##  9 BERU            8
+## 10 OWEN            9
+## # … with 12 more rows</code></pre>
+<pre class="r"><code>edges</code></pre>
+<pre><code>## # A tibble: 60 x 3
+##    source    target    weight
+##    &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt;
+##  1 C-3PO     R2-D2         17
+##  2 LUKE      R2-D2         13
+##  3 OBI-WAN   R2-D2          6
+##  4 LEIA      R2-D2          5
+##  5 HAN       R2-D2          5
+##  6 CHEWBACCA R2-D2          3
+##  7 DODONNA   R2-D2          1
+##  8 CHEWBACCA OBI-WAN        7
+##  9 C-3PO     CHEWBACCA      5
+## 10 CHEWBACCA LUKE          16
+## # … with 50 more rows</code></pre>
+<div id="the-network-package" class="section level2">
+<h2>The <code>network</code> package</h2>
+<p>Please install and load the following package</p>
+<pre class="r"><code>library(network)</code></pre>
+<pre><code>## network: Classes for Relational Data
+## Version 1.16.1 created on 2020-10-06.
+## copyright (c) 2005, Carter T. Butts, University of California-Irvine
+##                     Mark S. Handcock, University of California -- Los Angeles
+##                     David R. Hunter, Penn State University
+##                     Martina Morris, University of Washington
+##                     Skye Bender-deMoll, University of Washington
+##  For citation information, type citation(&quot;network&quot;).
+##  Type help(&quot;network-package&quot;) to get started.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;network&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:igraph&#39;:
+## 
+##     %c%, %s%, add.edges, add.vertices, delete.edges, delete.vertices,
+##     get.edge.attribute, get.edges, get.vertex.attribute, is.bipartite,
+##     is.directed, list.edge.attributes, list.vertex.attributes,
+##     set.edge.attribute, set.vertex.attribute</code></pre>
+<p>The command structure is not reall straight forward, but you can always enter <code>?network()</code> into the console if you get confused.</p>
+<p>As noted in the documentation, The first argument is <em>a matrix giving the network structure in adjacency, incidence, or edgelist form.</em></p>
+<p>The language demonstrates the significance of matrices in network analysis, but instead of a matrix, we have an edge list, which fills the same role. The second argument is a list of vertex attributes, which corresponds to the nodes list. Notice that similar to <code>igraph</code>,the <code>network</code> package uses the term <em>vertices</em> instead of <em>nodes.</em></p>
+<p>We then need to specify the type of data that has been entered into the first two arguments by specifying that the matrix.type is an <em>edgelist</em> Finally, we set <code>ignore.eval</code> to <code>FALSE</code> so that our network can be weighted and take into account the number of letters along each route.</p>
+<pre class="r"><code>starwars_network &lt;- 
+  network(edges, 
+          vertex.attr = nodes,
+          matrix.type = &quot;edgelist&quot;,
+          ignore.eval = FALSE)</code></pre>
+<p>and you can verify what it is by</p>
+<pre class="r"><code>class(starwars_network)</code></pre>
+<pre><code>## [1] &quot;network&quot;</code></pre>
+<p>Printing out <code>starwars_network</code> to the console shows that the structure of the object is pretty different from data-frame style objects such as edges and nodes.</p>
+<p>The print command reveals information that is specifically defined for network analysis. It shows that there are 21 vertices or nodes and 60 edges which we saw earlier. Again, these numbers correspond to the number of rows in nodes and edges respectively. Additionally like before, we can also see that the vertices and edges both contain attributes such as label and weight. You can get even more information, including what is known as a <em>sociomatrix</em> of the data, by entering</p>
+<pre class="r"><code>summary(starwars_network)</code></pre>
+<pre><code>## Network attributes:
+##   vertices = 21
+##   directed = TRUE
+##   hyper = FALSE
+##   loops = FALSE
+##   multiple = FALSE
+##   bipartite = FALSE
+##  total edges = 60 
+##    missing edges = 0 
+##    non-missing edges = 60 
+##  density = 0.1428571 
+## 
+## Vertex attributes:
+## 
+##  id:
+##    numeric valued attribute
+##    attribute summary:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       0       5      10      10      15      20 
+## 
+##  name:
+##    character valued attribute
+##    attribute summary:
+##    the 10 most common values are:
+##        BERU       BIGGS       C-3PO       CAMIE   CHEWBACCA DARTH VADER 
+##           1           1           1           1           1           1 
+##     DODONNA GOLD LEADER      GREEDO         HAN 
+##           1           1           1           1 
+##   vertex.names:
+##    character valued attribute
+##    21 valid vertex names
+## 
+## Edge attributes:
+## 
+##  weight:
+##    numeric valued attribute
+##    attribute summary:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.000   1.000   2.000   4.917   6.000  26.000 
+## 
+## Network edgelist matrix:
+##       [,1] [,2]
+##  [1,]    3   17
+##  [2,]   13   17
+##  [3,]   15   17
+##  [4,]   12   17
+##  [5,]   10   17
+##  [6,]    5   17
+##  [7,]    7   17
+##  [8,]    5   15
+##  [9,]    3    5
+## [10,]    5   13
+## [11,]    5   10
+## [12,]    5   12
+## [13,]    5    6
+## [14,]    5    7
+## [15,]    4   13
+## [16,]    2    4
+## [17,]    2   13
+## [18,]    6   12
+## [19,]    1   13
+## [20,]    1   16
+## [21,]    1    3
+## [22,]   13   16
+## [23,]    3   13
+## [24,]    3   16
+## [25,]    3   12
+## [26,]   12   13
+## [27,]    1   12
+## [28,]   13   15
+## [29,]    3   15
+## [30,]   12   15
+## [31,]   14   20
+## [32,]    6   14
+## [33,]    6   20
+## [34,]   10   15
+## [35,]   10   13
+## [36,]    9   10
+## [37,]   10   11
+## [38,]    3   10
+## [39,]   12   14
+## [40,]   12   20
+## [41,]   10   12
+## [42,]    6   15
+## [43,]    7    8
+## [44,]    7   21
+## [45,]    7   13
+## [46,]    8   21
+## [47,]    8   13
+## [48,]   13   21
+## [49,]    2   12
+## [50,]   12   18
+## [51,]   13   18
+## [52,]    2   18
+## [53,]    2    3
+## [54,]    3   18
+## [55,]   18   21
+## [56,]    8   18
+## [57,]    2   21
+## [58,]   18   19
+## [59,]    2    8
+## [60,]   13   19</code></pre>
+<p>which we can then visualize</p>
+<pre class="r"><code>plot(starwars_network)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p>possibly with larger vertices</p>
+<pre class="r"><code>plot(starwars_network,
+     vertex.cex = 3)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>and into a particular structure as well</p>
+<pre class="r"><code>plot(starwars_network,
+     vertex.cex = 3,
+     mode = &quot;circle&quot;)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p>or</p>
+<pre class="r"><code>plot(starwars_network,
+     vertex.cex = 3,
+     mode = &quot;kamadakawai&quot;)</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p>if you prefer.</p>
+</div>
+<div id="the-tidygraph-and-ggraph-packages" class="section level2">
+<h2>The <code>tidygraph</code> and <code>ggraph</code> packages</h2>
+<p>Please install and load the following package</p>
+<pre class="r"><code>library(tidygraph)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;tidygraph&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:igraph&#39;:
+## 
+##     groups</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre class="r"><code>library(ggraph)</code></pre>
+<p>Two important piece of information are that</p>
+<ul>
+<li><p>Nearly all network analysis packages are based on <code>igraph</code> but the <code>network</code> package is not one of them.</p></li>
+<li><p>The <code>network</code> package actually causes a lot of conflicts with <code>igraph</code> so we need to unload it and any information based on it by running</p></li>
+</ul>
+<pre class="r"><code>detach(package:network)</code></pre>
+<p>and</p>
+<pre class="r"><code>rm(starwars_network)</code></pre>
+<p>The tidiest packages that you can use to perform network analyses are <code>tidygraph</code> and <code>ggraph</code>.</p>
+<p>So let’s first create a network object using <code>tidygraph</code> which uses a similar approach as <code>igraph</code></p>
+<pre class="r"><code>starwars_tidy &lt;- 
+  tbl_graph(nodes = nodes, 
+            edges = edges, 
+            directed = FALSE)</code></pre>
+<p>We can again verify the class by</p>
+<pre class="r"><code>class(starwars_tidy)</code></pre>
+<pre><code>## [1] &quot;tbl_graph&quot; &quot;igraph&quot;</code></pre>
+<p>Let’s take a look at the underlying information</p>
+<pre class="r"><code>starwars_tidy</code></pre>
+<pre><code>## # A tbl_graph: 22 nodes and 60 edges
+## #
+## # An undirected simple graph with 2 components
+## #
+## # Node Data: 22 x 2 (active)
+##   name           id
+##   &lt;chr&gt;       &lt;dbl&gt;
+## 1 R2-D2           0
+## 2 CHEWBACCA       1
+## 3 C-3PO           2
+## 4 LUKE            3
+## 5 DARTH VADER     4
+## 6 CAMIE           5
+## # … with 16 more rows
+## #
+## # Edge Data: 60 x 3
+##    from    to weight
+##   &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+## 1     1     3     17
+## 2     1     4     13
+## 3     1    11      6
+## # … with 57 more rows</code></pre>
+<p>Note fro the output that</p>
+<p>Notice that the package is built on <code>igraph</code>!</p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>Consider just pasting it at the top of your script and leaving it there. Please note that this will not work in an Rmarkdown file or Shiny app.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Typically indicates importance.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Note that everything in this data set is weighted so the weight is <em>not shown</em>. However we could add another column with just weights if there was a reason to do so like force users get a weight of <em><code>2</code></em> abd everyone else receives a <em><code>1</code></em>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>We’ll expand on this in a bit.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 

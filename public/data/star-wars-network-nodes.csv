@@ -1,23 +1,23 @@
-"name","id"
-"R2-D2",0
-"CHEWBACCA",1
-"C-3PO",2
-"LUKE",3
-"DARTH VADER",4
-"CAMIE",5
-"BIGGS",6
-"LEIA",7
-"BERU",8
-"OWEN",9
-"OBI-WAN",10
-"MOTTI",11
-"TARKIN",12
-"HAN",13
-"GREEDO",14
-"JABBA",15
-"DODONNA",16
-"GOLD LEADER",17
-"WEDGE",18
-"RED LEADER",19
-"RED TEN",20
-"GOLD FIVE",21
+name,id,allegiance
+R2-D2,0,Galactic Republic
+CHEWBACCA,1,Galactic Republic
+C-3PO,2,Galactic Republic
+LUKE,3,Jedi Order
+DARTH VADER,4,Sith Order
+CAMIE,5,Unknown
+BIGGS,6,Galactic Republic
+LEIA,7,Galactic Republic
+BERU,8,Galactic Republic
+OWEN,9,Galactic Republic
+OBI-WAN,10,Jedi Order
+MOTTI,11,Galactic Empire
+TARKIN,12,Galactic Empire
+HAN,13,Galactic Republic
+GREEDO,14,Hutt Cartel
+JABBA,15,Hutt Cartel
+DODONNA,16,Galactic Republic
+GOLD LEADER,17,Galactic Republic
+WEDGE,18,Galactic Republic
+RED LEADER,19,Galactic Republic
+RED TEN,20,Galactic Republic
+GOLD FIVE,21,Galactic Republic

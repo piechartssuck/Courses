@@ -224,7 +224,7 @@
     </item>
     
     <item>
-      <title>Hooked on Feelings</title>
+      <title>The Social Network</title>
       <link>https://edp693e.theoreticalphysed.com/lesson/09-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edp693e.theoreticalphysed.com/lesson/09-lesson/</guid>
@@ -239,9 +239,10 @@
 
 &lt;div id=&#34;data-camp&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Camp&lt;/h2&gt;
-&lt;p&gt;This week you have one module to cover on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular this are&lt;/p&gt;
+&lt;p&gt;This week you have two module to cover on &lt;a href=&#34;https://www.datacamp.com/&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;. In particular this are&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Analyzing US Census Data in R&lt;/li&gt;
+&lt;li&gt;Text Mining with Bag-of-Words in R&lt;/li&gt;
+&lt;li&gt;Sentiment Analysis in R&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For more information about these, take a look at the tentative schedule.&lt;/p&gt;
 &lt;/div&gt;

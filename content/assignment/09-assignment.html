@@ -1,0 +1,634 @@
+---
+title: "The Social Network"
+linktitle: "Week 9: The Social Network"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#read-the-submission-directions">Read the Submission Directions</a>
+<ul>
+<li><a href="#first-things-first-download-the-data-set">First Things First! Download the data set</a></li>
+</ul></li>
+<li><a href="#idea">Idea</a></li>
+<li><a href="#task">Task</a></li>
+<li><a href="#bonus">Bonus</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="read-the-submission-directions" class="section level2">
+<h2>Read the Submission Directions</h2>
+<p>Please submit a PDF using an Rmarkdown file for this task<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> both to eCampus and <a href="https://2021edp693e.slack.com/archives/C01RPG3PEVB" target="_blank">Slack</a>.</p>
+<div id="first-things-first-download-the-data-set" class="section level3">
+<h3>First Things First! Download the data set</h3>
+<p>Please download all of the materials needed for this task.</p>
+<p><a href="/data/Week9taskmaterials.zip">Week 9 materials</a></p>
+</div>
+</div>
+<div id="idea" class="section level2">
+<h2>Idea</h2>
+<p>The purpose of this task is to analyze the Twitter network of the Members of the U.S. Congress.</p>
+<p>Please use the following data files:</p>
+<ul>
+<li><code>congress-twitter-network-edges.csv</code> contains the edges of this network. Note that unlike in the previous example, these nodes are now directed: they indicate whether the legislator in the <code>source</code> column follows the legislator in the <code>target</code> column.</li>
+<li><code>congress-twitter-network-nodes.csv</code> contains information about each of the nodes. The only important variables you need to use for this challenge are: <code>id_str</code> (the unique Twitter ID for each legislator; same as in the edge list), <code>name</code> (full name of each legislator), <code>party</code> (Republican, Democrat or Independent), and <code>chamber</code> (<code>rep</code> for the House of Representatives, <code>sen</code> for the Senate).</li>
+</ul>
+</div>
+<div id="task" class="section level2">
+<h2>Task</h2>
+<p>Please answer the following. Note that this network is too large for us to visualize it directly with R, so let’s try to learn more about it using what we have learned so far.</p>
+<ol style="list-style-type: decimal">
+<li><p>How many nodes and edges does this network have?</p></li>
+<li><p>How many components does this network have? As you will see, in this particular case it makes sense that we work only with the giant component.</p></li>
+<li><p>Who are the most relevant Members of Congress, according to different measures of <strong>centrality</strong>? Note that this is a directed network, which means there is a difference between <em>indegree</em> and <em>outdegree</em>.</p></li>
+<li><p>What communities can you find in the network? Use the additional node-level variables to try to identify whether these communities overlap with any of these other attributes. Try different community detection algorithms to see if you get different answers.</p></li>
+<li><p>Finally, try to visualize the network as well. Instead of plotting it in the Viewer window, you can write directly to a PDF file. I have added a few options here for you so that it’s faster, but note that this will probably take 1-2 minutes.</p>
+<pre class="r"><code>set.seed(777)
+fr &lt;- layout_with_fr(g, niter=1000)
+V(g)$color &lt;- ifelse(V(g)$party==&quot;Republican&quot;, &quot;red&quot;, &quot;blue&quot;) # clue
+V(g)$shape &lt;- ifelse(V(g)$chamber==&quot;sen&quot;, &quot;square&quot;, &quot;circle&quot;) # clue
+V(g)$label &lt;- NA
+V(g)$size &lt;- authority_score(g)$vector * 5
+
+pdf(&quot;congress-network.pdf&quot;)
+par(mar=c(0,0,0,0))
+plot(g, edge.curved=.25, edge.width=.05, edge.arrow.mode=0)
+dev.off()</code></pre></li>
+</ol>
+</div>
+<div id="bonus" class="section level2">
+<h2>Bonus</h2>
+<p>Up to this point, we have focused on describing networks, both visually and numerically. Now we turn to trying to <strong>explain</strong> how networks emerge: what are the mechanisms that explain the structure of the observed networks?</p>
+<p>We’ll continue with the example of the Twitter network of Congress. Our goal will be to find the micro-mechanisms that explain following decisions and thus network formation. Now go ahead and load up the following data sets</p>
+<p>We’ll continue to use the previous data sets</p>
+<pre class="r"><code>library(tidyverse)
+library(igraph)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;igraph&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     as_data_frame, groups, union</code></pre>
+<pre><code>## The following objects are masked from &#39;package:purrr&#39;:
+## 
+##     compose, simplify</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     crossing</code></pre>
+<pre><code>## The following object is masked from &#39;package:tibble&#39;:
+## 
+##     as_data_frame</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     decompose, spectrum</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     union</code></pre>
+<pre class="r"><code>g &lt;- graph_from_data_frame(d=edges, 
+                           vertices=nodes, 
+                           directed=TRUE)
+
+g &lt;- decompose(g)[[1]]</code></pre>
+<p>One of the most basic notions governing network formation is <strong>homophily</strong>, that is, the propensity of individuals to <a href="https://en.wikipedia.org/wiki/Homophily" target="_blank">cluster along common traits</a>, such as age, gender, class, etc.</p>
+<p>We can measure the extent to which a network is homophilic along a specific variable by computing the <strong>assortativity index</strong>. Positive values indicate a positive propensity; negative values indicate negative propensity.</p>
+<pre class="r"><code>assortativity_degree(g, directed=FALSE)</code></pre>
+<pre><code>## [1] -0.1027231</code></pre>
+<pre class="r"><code>assortativity(g, log(V(g)$followers_count), directed=FALSE)</code></pre>
+<pre><code>## [1] 0.1064822</code></pre>
+<pre class="r"><code>assortativity_nominal(g, factor(V(g)$chamber))</code></pre>
+<pre><code>## [1] 0.3989669</code></pre>
+<pre class="r"><code>assortativity_nominal(g, factor(V(g)$party))</code></pre>
+<pre><code>## [1] 0.6528812</code></pre>
+<pre class="r"><code>assortativity_nominal(g, factor(V(g)$gender))</code></pre>
+<pre><code>## [1] 0.0830673</code></pre>
+<p>The main limitation with this approach is that we don’t know to what extent this coefficients are different from what you would find simply by chance in any network. Furthermore, it is hard to disentangle what is the variable that is driving homophily. For example, the proportion of women is higher among Republicans, and thus the homophily result for gender could be simply due to party effects. (Of course, I’m putting aside issues related to causality: homophily could be driven by selection or by social influence.)</p>
+<pre class="r"><code>prop.table(table(V(g)$gender, V(g)$party), margin=2)</code></pre>
+<pre><code>##    
+##       Democrat Independent Republican
+##   F 0.33482143  0.00000000 0.09688581
+##   M 0.66517857  1.00000000 0.90311419</code></pre>
+<p>To try to address these limitations, we can rely on <strong>exponential random graph models</strong>. We will not get into the details, but here’s a general intuition of how these models work:</p>
+<ul>
+<li>These models start from your observed network. It is considered a realization of many possible networks with the same number of nodes and edges.<br />
+</li>
+<li>The goal is to learn the mechanisms that explain how you get to this specific network, e.g. homophily, reciprocity, transitivity… Each of these mechanisms is considered a parameter in the model.<br />
+</li>
+<li>Assuming these mechanisms, what is the likelihood of arriving to the network you observe? From the probability distribution of all possible networks based on the parameter space, what is the probability of observing this particular one?</li>
+<li>The goal is to estimate the parameters that best match the observed network using MCMC methods.</li>
+</ul>
+<p>For a great introduction to ERGMs, see <a href="http://ptrckprry.com/course/ssd/Robi07a.pdf">Robins et al (2007) _An introduction to exponential random graph (p*) models for social networks_, <strong>Social Networks</strong></a>.</p>
+<p>We can estimate these models with the <code>ergm</code> package in R. Unfortunately, <code>ergm</code> works with object in <code>network</code> format (not <code>igraph</code>), so we will need to convert first between packages using the <code>intergraph</code> package.</p>
+<pre class="r"><code>library(intergraph)
+library(network)</code></pre>
+<pre><code>## network: Classes for Relational Data
+## Version 1.16.1 created on 2020-10-06.
+## copyright (c) 2005, Carter T. Butts, University of California-Irvine
+##                     Mark S. Handcock, University of California -- Los Angeles
+##                     David R. Hunter, Penn State University
+##                     Martina Morris, University of Washington
+##                     Skye Bender-deMoll, University of Washington
+##  For citation information, type citation(&quot;network&quot;).
+##  Type help(&quot;network-package&quot;) to get started.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;network&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:igraph&#39;:
+## 
+##     %c%, %s%, add.edges, add.vertices, delete.edges, delete.vertices,
+##     get.edge.attribute, get.edges, get.vertex.attribute, is.bipartite,
+##     is.directed, list.edge.attributes, list.vertex.attributes,
+##     set.edge.attribute, set.vertex.attribute</code></pre>
+<pre class="r"><code>net &lt;- asNetwork(g)
+
+net</code></pre>
+<pre><code>##  Network attributes:
+##   vertices = 514 
+##   directed = TRUE 
+##   hyper = FALSE 
+##   loops = FALSE 
+##   multiple = FALSE 
+##   bipartite = FALSE 
+##   total edges= 61766 
+##     missing edges= 0 
+##     non-missing edges= 61766 
+## 
+##  Vertex attribute names: 
+##     bioid chamber followers_count gender party twitter vertex.names 
+## 
+##  Edge attribute names not shown</code></pre>
+<p>(We could also create the object directly as a <code>network</code> object, but converting from igraph is easier.)</p>
+<p>What parameters can we add to the model?</p>
+<ul>
+<li><p><strong>edges</strong> = number of edges in the network. It’s equivalent to a constant in a regression. Given that this network is relatively sparse, the parameter is negative, which means that the probability of observing any given edge is low. In fact, the estimated parameter in this baseline model is equal to the log of the odds of observing any edge.</p>
+<pre class="r"><code>library(ergm)
+reg1 &lt;- ergm(net ~ edges)
+
+summary(reg1)</code></pre>
+<pre><code>## Call:
+## ergm(formula = net ~ edges)
+## 
+## Iterations:  5 out of 20 
+## 
+## Monte Carlo MLE Results:
+##        Estimate Std. Error MCMC % z value Pr(&gt;|z|)    
+## edges -1.184499   0.004598      0  -257.6   &lt;1e-04 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##      Null Deviance: 365541  on 263682  degrees of freedom
+##  Residual Deviance: 287073  on 263681  degrees of freedom
+##  
+## AIC: 287075    BIC: 287085    (Smaller is better.)</code></pre>
+<pre class="r"><code># no. of edges / ( no. of potential edges - no. of existing edges)
+log(length(E(g)) / ( length(V(g))*(length(V(g))-1) - length(E(g))))</code></pre>
+<pre><code>## [1] -1.184499</code></pre></li>
+<li><p><strong>mutual</strong> provides rge number of mutual dyads. This parameter captures reciprocity as a mechanism for tie formation. If positive, it means reciprocity is more common than expected given the baseline probability of any two nodes being connected, holding the number of edges constant. In the case below, the positive coefficient means that if you see an edge from <code>i</code> to <code>j</code>, then you are exp(2.04)=7.76 times more likely to see an edge from <code>j</code> to <code>i</code> as well.</p>
+<pre class="r"><code>reg2 &lt;- ergm(net ~ edges + mutual)</code></pre>
+<pre><code>## Starting maximum pseudolikelihood estimation (MPLE):</code></pre>
+<pre><code>## Evaluating the predictor and response matrix.</code></pre>
+<pre><code>## Maximizing the pseudolikelihood.</code></pre>
+<pre><code>## Finished MPLE.</code></pre>
+<pre><code>## Starting Monte Carlo maximum likelihood estimation (MCMLE):</code></pre>
+<pre><code>## Iteration 1 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 1.</code></pre>
+<pre><code>## The log-likelihood improved by 0.4038.</code></pre>
+<pre><code>## Step length converged once. Increasing MCMC sample size.</code></pre>
+<pre><code>## Iteration 2 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 1.</code></pre>
+<pre><code>## The log-likelihood improved by 2.038.</code></pre>
+<pre><code>## Step length converged twice. Stopping.</code></pre>
+<pre><code>## Finished MCMLE.</code></pre>
+<pre><code>## Evaluating log-likelihood at the estimate. Using 20 bridges: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 .
+## This model was fit using MCMC.  To examine model diagnostics and check
+## for degeneracy, use the mcmc.diagnostics() function.</code></pre>
+<pre class="r"><code>summary(reg2)</code></pre>
+<pre><code>## Call:
+## ergm(formula = net ~ edges + mutual)
+## 
+## Iterations:  2 out of 20 
+## 
+## Monte Carlo MLE Results:
+##         Estimate Std. Error MCMC % z value Pr(&gt;|z|)    
+## edges  -1.843104   0.006461      2  -285.3   &lt;1e-04 ***
+## mutual  2.063706   0.016023      2   128.8   &lt;1e-04 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##      Null Deviance: 365541  on 263682  degrees of freedom
+##  Residual Deviance: 268056  on 263680  degrees of freedom
+##  
+## AIC: 268060    BIC: 268081    (Smaller is better.)</code></pre></li>
+<li><p><strong>nodematch</strong> captures homophily on a specific factor variable. It measures the increase in the probability that an edge exists between two nodes with the same value on this variable. In the example below, a Member of Congress of the same party is exp(1.50)=4.48 times more likely to follow another Member of Congress if he/she belongs to the same party.</p>
+<pre class="r"><code>reg3 &lt;- ergm(net ~ edges + mutual + nodematch(&quot;party&quot;))</code></pre>
+<pre><code>## Starting maximum pseudolikelihood estimation (MPLE):</code></pre>
+<pre><code>## Evaluating the predictor and response matrix.</code></pre>
+<pre><code>## Maximizing the pseudolikelihood.</code></pre>
+<pre><code>## Finished MPLE.</code></pre>
+<pre><code>## Starting Monte Carlo maximum likelihood estimation (MCMLE):</code></pre>
+<pre><code>## Iteration 1 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 1.</code></pre>
+<pre><code>## The log-likelihood improved by 0.495.</code></pre>
+<pre><code>## Step length converged once. Increasing MCMC sample size.</code></pre>
+<pre><code>## Iteration 2 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 1.</code></pre>
+<pre><code>## The log-likelihood improved by 0.2611.</code></pre>
+<pre><code>## Step length converged twice. Stopping.</code></pre>
+<pre><code>## Finished MCMLE.</code></pre>
+<pre><code>## Evaluating log-likelihood at the estimate. Using 20 bridges: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 .
+## This model was fit using MCMC.  To examine model diagnostics and check
+## for degeneracy, use the mcmc.diagnostics() function.</code></pre>
+<pre class="r"><code>summary(reg3) </code></pre>
+<pre><code>## Call:
+## ergm(formula = net ~ edges + mutual + nodematch(&quot;party&quot;))
+## 
+## Iterations:  2 out of 20 
+## 
+## Monte Carlo MLE Results:
+##                  Estimate Std. Error MCMC % z value Pr(&gt;|z|)    
+## edges           -2.667315   0.009049      3  -294.8   &lt;1e-04 ***
+## mutual           1.594548   0.015154      3   105.2   &lt;1e-04 ***
+## nodematch.party  1.531731   0.012008      3   127.6   &lt;1e-04 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##      Null Deviance: 365541  on 263682  degrees of freedom
+##  Residual Deviance: 241283  on 263679  degrees of freedom
+##  
+## AIC: 241289    BIC: 241321    (Smaller is better.)</code></pre></li>
+<li><p><strong>nodecov</strong> and <strong>nodefactor</strong> = measure whether individuals with high values on a variable or with a specific value on a factor variable are more likely to follow or to be followed.</p></li>
+<li><p><strong>absdiff</strong> = measures whether individuals with similar values along a continuous variable are more likely to have an edge between them (in either direction).</p>
+<pre class="r"><code>reg4 &lt;- ergm(net ~ edges + mutual + nodefactor(&quot;chamber&quot;) +
+               absdiff(&quot;followers_count&quot;) + nodematch(&quot;party&quot;) + 
+               nodematch(&quot;chamber&quot;) + nodematch(&quot;gender&quot;))</code></pre>
+<pre><code>## Starting maximum pseudolikelihood estimation (MPLE):</code></pre>
+<pre><code>## Evaluating the predictor and response matrix.</code></pre>
+<pre><code>## Maximizing the pseudolikelihood.</code></pre>
+<pre><code>## Finished MPLE.</code></pre>
+<pre><code>## Starting Monte Carlo maximum likelihood estimation (MCMLE):</code></pre>
+<pre><code>## Iteration 1 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.493132739919402.</code></pre>
+<pre><code>## The log-likelihood improved by 2.453.</code></pre>
+<pre><code>## Iteration 2 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.677091744669799.</code></pre>
+<pre><code>## The log-likelihood improved by 1.965.</code></pre>
+<pre><code>## Iteration 3 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.181386433493612.</code></pre>
+<pre><code>## The log-likelihood improved by 1.699.</code></pre>
+<pre><code>## Iteration 4 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.301266888230387.</code></pre>
+<pre><code>## The log-likelihood improved by 2.284.</code></pre>
+<pre><code>## Iteration 5 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.486530464584912.</code></pre>
+<pre><code>## The log-likelihood improved by 1.224.</code></pre>
+<pre><code>## Iteration 6 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.183981626536171.</code></pre>
+<pre><code>## The log-likelihood improved by 1.915.</code></pre>
+<pre><code>## Iteration 7 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.542894308311544.</code></pre>
+<pre><code>## The log-likelihood improved by 2.439.</code></pre>
+<pre><code>## Iteration 8 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.500898012508401.</code></pre>
+<pre><code>## The log-likelihood improved by 1.86.</code></pre>
+<pre><code>## Iteration 9 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.189330764485591.</code></pre>
+<pre><code>## The log-likelihood improved by 1.534.</code></pre>
+<pre><code>## Iteration 10 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.500131152024041.</code></pre>
+<pre><code>## The log-likelihood improved by 2.567.</code></pre>
+<pre><code>## Iteration 11 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.224774143629235.</code></pre>
+<pre><code>## The log-likelihood improved by 1.276.</code></pre>
+<pre><code>## Iteration 12 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.448698584132466.</code></pre>
+<pre><code>## The log-likelihood improved by 2.844.</code></pre>
+<pre><code>## Iteration 13 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.296806119132533.</code></pre>
+<pre><code>## The log-likelihood improved by 2.002.</code></pre>
+<pre><code>## Iteration 14 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.112004858017235.</code></pre>
+<pre><code>## The log-likelihood improved by 2.318.</code></pre>
+<pre><code>## Iteration 15 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.251976978490044.</code></pre>
+<pre><code>## The log-likelihood improved by 1.29.</code></pre>
+<pre><code>## Iteration 16 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.55745627541811.</code></pre>
+<pre><code>## The log-likelihood improved by 2.498.</code></pre>
+<pre><code>## Iteration 17 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.469147681779228.</code></pre>
+<pre><code>## The log-likelihood improved by 1.987.</code></pre>
+<pre><code>## Iteration 18 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.259454699669255.</code></pre>
+<pre><code>## The log-likelihood improved by 2.629.</code></pre>
+<pre><code>## Iteration 19 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.269197838244846.</code></pre>
+<pre><code>## The log-likelihood improved by 2.626.</code></pre>
+<pre><code>## Iteration 20 of at most 20:</code></pre>
+<pre><code>## Optimizing with step length 0.505250894347924.</code></pre>
+<pre><code>## The log-likelihood improved by 3.469.</code></pre>
+<pre><code>## MCMLE estimation did not converge after 20 iterations. The estimated coefficients may not be accurate. Estimation may be resumed by passing the coefficients as initial values; see &#39;init&#39; under ?control.ergm for details.</code></pre>
+<pre><code>## Finished MCMLE.</code></pre>
+<pre><code>## Evaluating log-likelihood at the estimate. Using 20 bridges: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 .
+## This model was fit using MCMC.  To examine model diagnostics and check
+## for degeneracy, use the mcmc.diagnostics() function.</code></pre>
+<pre class="r"><code>summary(reg4)</code></pre>
+<pre><code>## Call:
+## ergm(formula = net ~ edges + mutual + nodefactor(&quot;chamber&quot;) + 
+##     absdiff(&quot;followers_count&quot;) + nodematch(&quot;party&quot;) + nodematch(&quot;chamber&quot;) + 
+##     nodematch(&quot;gender&quot;))
+## 
+## Iterations:  20 out of 20 
+## 
+## Monte Carlo MLE Results:
+##                           Estimate Std. Error MCMC % z value Pr(&gt;|z|)    
+## edges                   -3.719e+00  7.577e-03    100 -490.83   &lt;1e-04 ***
+## mutual                   1.360e+00  6.721e-03    100  202.35   &lt;1e-04 ***
+## nodefactor.chamber.sen   4.255e-01  5.342e-03    100   79.66   &lt;1e-04 ***
+## absdiff.followers_count  2.996e-07  2.338e-08     17   12.81   &lt;1e-04 ***
+## nodematch.party          1.636e+00  3.698e-03    100  442.51   &lt;1e-04 ***
+## nodematch.chamber        1.350e+00  6.555e-03    100  205.98   &lt;1e-04 ***
+## nodematch.gender        -1.769e-01  4.437e-03    100  -39.86   &lt;1e-04 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##      Null Deviance: 365541  on 263682  degrees of freedom
+##  Residual Deviance: 231646  on 263675  degrees of freedom
+##  
+## AIC: 231660    BIC: 231734    (Smaller is better.)</code></pre></li>
+</ul>
+<p>One practical issues with ERGMs is that when you add multiple variables, the MCMC chains often have convergence issues. Sometimes just running these for more iterations and increasing the thinning parameter will fix this. Sadly, very often it’s more difficult than that…</p>
+<pre class="r"><code>mcmc.diagnostics(reg2)</code></pre>
+<pre><code>## Sample statistics summary:
+## 
+## Iterations = 16384:4209664
+## Thinning interval = 1024 
+## Number of chains = 1 
+## Sample size per chain = 4096 
+## 
+## 1. Empirical mean and standard deviation for each variable,
+##    plus standard error of the mean:
+## 
+##          Mean    SD Naive SE Time-series SE
+## edges  -342.5 228.9    3.577          59.85
+## mutual -186.5  92.4    1.444          24.57
+## 
+## 2. Quantiles for each variable:
+## 
+##          2.5%  25%    50%    75% 97.5%
+## edges  -746.0 -510 -344.5 -187.8 175.6
+## mutual -369.6 -252 -185.0 -121.0 -13.0
+## 
+## 
+## Sample statistics cross-correlations:
+##            edges    mutual
+## edges  1.0000000 0.7242037
+## mutual 0.7242037 1.0000000
+## 
+## Sample statistics auto-correlation:
+## Chain 1 
+##              edges    mutual
+## Lag 0    1.0000000 1.0000000
+## Lag 1024 0.9928789 0.9931975
+## Lag 2048 0.9860376 0.9864289
+## Lag 3072 0.9793953 0.9793711
+## Lag 4096 0.9726075 0.9724758
+## Lag 5120 0.9662138 0.9659111
+## 
+## Sample statistics burn-in diagnostic (Geweke):
+## Chain 1 
+## 
+## Fraction in 1st window = 0.1
+## Fraction in 2nd window = 0.5 
+## 
+##  edges mutual 
+##  1.288  2.103 
+## 
+## Individual P-values (lower = worse):
+##      edges     mutual 
+## 0.19766352 0.03546197 
+## Joint P-value (lower = worse):  0.5816436 .</code></pre>
+<p><img src="/assignment/09-assignment_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<pre><code>## 
+## MCMC diagnostics shown here are from the last round of simulation, prior to computation of final parameter estimates. Because the final estimates are refinements of those used for this simulation run, these diagnostics may understate model performance. To directly assess the performance of the final model on in-model statistics, please use the GOF command: gof(ergmFitObject, GOF=~model).</code></pre>
+<p>Another way to check the results of the model is to simulate networks assuming the estimated parameters and compare their degree distribution to the observed indegree distribution. (Warning: running the code below will take a while!)</p>
+<pre class="r"><code>sims &lt;- simulate(reg2, nsim=10)
+
+summary(sims)</code></pre>
+<pre><code>## Number of Networks: 10 
+## Model: net ~ edges + mutual 
+## Reference: ~Bernoulli 
+## Constraints: ~. 
+## Parameters:
+##     edges    mutual 
+## -1.843104  2.063706 
+## 
+## Stored network statistics:
+##       edges mutual
+##  [1,] 61990  17048
+##  [2,] 61974  17060
+##  [3,] 61992  17051
+##  [4,] 61991  17047
+##  [5,] 61975  17045
+##  [6,] 61948  17050
+##  [7,] 61951  17047
+##  [8,] 61959  17042
+##  [9,] 61941  17033
+## [10,] 61950  17048
+## attr(,&quot;monitored&quot;)
+## [1] FALSE FALSE</code></pre>
+<pre><code>## Number of Networks: 10 
+## Model: net ~ edges + mutual 
+## Reference: ~Bernoulli 
+## Constraints: ~. 
+## Parameters:
+##     edges    mutual 
+## -1.843104  2.063706</code></pre>
+<pre class="r"><code>reggof &lt;- gof(reg2 ~ idegree)
+
+plot(reggof)</code></pre>
+<p><img src="/assignment/09-assignment_files/figure-html/unnamed-chunk-14-1.png" width="672" /><img src="/assignment/09-assignment_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+<p>In this challenge you will work with a dataset about classroom interactions. The goal is to understand the extent to which homophily explains friendships across students.</p>
+<p>First, let’s load the dataset, which is available in the NetData package.</p>
+<pre class="r"><code>library(NetData)
+
+data(studentnets.ergm173)
+
+str(nodes)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    22 obs. of  5 variables:
+##  $ std_id     : int  104456 113211 114144 114992 118466 118680 122713 122714 122723 125522 ...
+##  $ gnd        : int  2 2 1 1 1 2 2 1 1 1 ...
+##  $ grd        : int  10 10 10 10 10 10 10 10 10 10 ...
+##  $ rce        : int  4 1 4 4 2 4 4 1 4 4 ...
+##  $ per_cap_inc: int  4342 13452 13799 13138 8387 9392 12471 10391 17524 12145 ...</code></pre>
+<pre class="r"><code>str(edges)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    160 obs. of  5 variables:
+##  $ ego_id             : int  104456 104456 104456 104456 104456 104456 104456 104456 104456 104456 ...
+##  $ alter_id           : int  104456 114992 118680 122713 122723 125522 126101 126784 132942 138966 ...
+##  $ sem1_friend        : int  0 0 0 0 0 1 0 0 0 0 ...
+##  $ sem2_friend        : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ sem1_wtd_dicht_seat: int  0 0 0 0 1 0 0 0 1 1 ...</code></pre>
+<p>You can read the codebook by typing: <code>?NetData::nodes</code></p>
+<p>The student-level variables are:</p>
+<ul>
+<li><code>std_id</code>: student ID<br />
+</li>
+<li><code>gnd</code>: gender (1 = male, 2 = female)<br />
+</li>
+<li><code>grd</code>: grade (always 10th)<br />
+</li>
+<li><code>rce</code>: race (1 = Hispanic, 2 = Asian, 3 = African-American, 4 = White)<br />
+</li>
+<li><code>per_cap_inc</code>: per capita income from the 1990 census</li>
+</ul>
+<p>The edge-level variables are:</p>
+<ul>
+<li><code>ego_id</code> and <code>alter_id</code> are the source and target of the edge<br />
+</li>
+<li><code>sem1_friends</code> and <code>sem2_friends</code> indicate responses to friendship survey in semesters 1 and 2(0 = not friends, 1 = friend, 2 = best friends)<br />
+</li>
+<li><code>sem1_wtd_dicht_seat</code> indicates whether students were seating next to each other</li>
+</ul>
+<p>Our goal will be to explain friendships in the first semester, so we will keep only edges where <code>sem1_friends&gt;0</code>.</p>
+<pre class="r"><code>some_edges &lt;- edges[edges$sem1_friend&gt;0,]</code></pre>
+<ol style="list-style-type: decimal">
+<li>First create the igraph object</li>
+</ol>
+<p>Here you will get an error. Why? Some students name as friends other students in different classrooms. We’ll get rid of those edges and try again. How many nodes and edges does this network have? Visualize it to see what else you learn.</p>
+<pre class="r"><code>edges &lt;- edges[edges$alter_id %in% nodes$std_id,]</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Convert the <code>igraph</code> object to <code>network</code> format. Check that the size of the network is the same as before.</li>
+</ol>
+<p>And now we’re ready to start estimating models!</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Estimate a baseline model with total number of edges and number of mutual edges. What do you learn?</p></li>
+<li><p>Examine the effect of similarity across race, gender, and income. What do you learn?</p></li>
+</ol>
+<p>:::</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you use an external file for your data, please submit that as well.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

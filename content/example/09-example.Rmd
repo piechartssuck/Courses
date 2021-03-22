@@ -42,7 +42,7 @@ This is a basic exploration of social networks. In this section we will be using
 
 Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.
 
-[Week 9 materials](/data/Week9materials.zip)
+[Week 9 materials](/data/Week9examplematerials.zip)
 
 ###  Set your Working Directory
 
@@ -110,7 +110,7 @@ The first step is to read the list of edges and nodes in this network
 edges <- read_csv("star-wars-network-edges.csv")
 ```
 
-```{r eval=TRUE,echo=FALSE}
+```{r eval=TRUE,echo=FALSE,purl=FALSE}
 edges <- read_csv(here("static", "data", "star-wars-network-edges.csv"))
 ```
 
@@ -118,7 +118,7 @@ edges <- read_csv(here("static", "data", "star-wars-network-edges.csv"))
 nodes <- read_csv("star-wars-network-nodes.csv")
 ```
 
-```{r eval=TRUE,echo=FALSE}
+```{r eval=TRUE,echo=FALSE,purl=FALSE}
 nodes <- read_csv(here("static", "data", "star-wars-network-nodes.csv"))
 ```
 
@@ -150,7 +150,7 @@ g
 ```
 
 #### Commands
-```{r, echo=FALSE, eval = TRUE, message=FALSE, results='hide', warning=FALSE}
+```{r, echo=FALSE, eval = TRUE, message=FALSE, results='hide', warning=FALSE,purl=FALSE}
 vertices <- V(g)
 ```
 
@@ -665,7 +665,7 @@ and
 rm(starwars_network)
 ```
 
-The tidiest packages that you can use to perform network analyses are `tidygraph` and  `ggraph`. 
+The tidiest packages that you can use to perform network analyses are `tidygraph` and `ggraph`. 
 
 So let's first create a network object using `tidygraph` which uses a similar approach as `igraph`
 
@@ -698,7 +698,7 @@ starwars_tidy %>%
   arrange(desc(weight))
 ```
 
-The tidy approach is relatively simple so lets plot it
+The *tidy* approach is relatively simple so lets plot it
 
 ```{r}
 ggraph(starwars_tidy) + 
@@ -707,30 +707,44 @@ ggraph(starwars_tidy) +
   theme_graph()
 ```
 
-Yes its absolutely similar to `ggplot` which allows e to use all kinds of common packages and functions
+This uses a default layout called stress but there are any others which you can find [here](https://www.data-imaginist.com/2017/ggraph-introduction-layouts/){target="_blank"}. Yes it is also absolutely similar to `ggplot` which allows us to use all kinds of common packages and functions
 
 ```{r}
 ggraph(starwars_tidy, 
        layout = "graphopt") + 
-  geom_node_point() +
   geom_edge_link(aes(width = weight), 
-                 alpha = 0.8) + 
-  scale_edge_width(range = c(0.2, 2)) +
-  geom_node_text(aes(label = name),
+                 alpha = 0.5,
+                 show.legend = FALSE) + 
+  scale_edge_width(range = c(0.2, 1.2)) +
+  geom_node_point(aes(size = centrality_pagerank(),
+                      fill = centrality_degree()),
+                  shape = 21,
+                  stroke = 1.4,
+                  color = "#4d194d",
+                  show.legend = FALSE) +
+  scale_size(range = c(1, 14)) +
+  scale_fill_gradient(low = "#81b29a", high = "#3d405b") +
+  geom_node_label(aes(label = name),
                  repel = TRUE) +
-  labs(edge_width = "Letters") +
+  coord_fixed() +
   theme_graph()
 ```
 and do fun things with the data
 
 ```{r}
 ggraph(starwars_tidy, 
-       layout = "linear") + 
-  geom_edge_arc(aes(width = weight), 
-                alpha = 0.8) + 
+       layout = "linear",
+       circular = TRUE) + 
+  geom_edge_arc(aes(width = weight,
+                    color = weight), 
+                alpha = 0.8,
+                show.legend = FALSE) + 
   scale_edge_width(range = c(0.2, 2)) +
-  geom_node_text(aes(label = name)) +
-  labs(edge_width = "Letters") +
+  scale_edge_color_gradient(low = "#b7094c", high = "#0091ad") +
+  geom_node_label(aes(label = name,
+                      size = centrality_betweenness()),
+                  show.legend = FALSE) +
+  scale_size(range = c(3, 6)) +
   theme_graph()
 ```
 
@@ -743,39 +757,128 @@ library(networkD3)
 ```
 
 ## visNetwork
-The `visNetwork()` package uses a nodes list and edges list to create an interactive graph. The nodes list must include an “id” column, and the edge list must have “from” and “to” columns. The function also plots the labels for the nodes, using the names of the cities from the “label” column in the node list. The resulting graph is fun to play around with. You can move the nodes and the graph will use an algorithm to keep the nodes properly spaced. You can also zoom in and out on the plot and move it around to re-center it.
+The `visNetwork()` package uses a nodes list and edges list to create an interactive graph and it is picky! Here are the requirements
 
++ from the `node` data set
+  + must include an **id** column
+  + names of the nodes must come from the **label** column^[If you intend to use labels.]
+
++ from the `edge` data set
+  + must have **from** and **to** columns.
+
+The network is fun to play around with. With just the basic plot, you can 
+
++ move the nodes and the graph will use an algorithm to keep the nodes properly spaced. 
++ zoom in and out on the plot and move it around to re-center it
+
+So we can grab the edge set
 ```{r}
-visNetwork(nodes, edges)
+edge_list <-
+  starwars_tidy %>%
+    activate(edges) %>%
+    data.frame()
 ```
 
-and weight the edges
-
+Take a look
 ```{r}
-edges <- mutate(edges, 
-                width = weight/5 + 1)
+edge_list
 ```
 
-and plot
-
+And manipulate the node a bit
 ```{r}
+node_list <-
+  starwars_tidy %>%
+    activate(nodes) %>%
+    data.frame() %>%
+    rename(label = name) %>%
+    rename(group = allegiance)
+```
 
+Take a look
+```{r}
+node_list
+```
+
+and plot it
+```{r}
+visNetwork(node_list,
+           edge_list)
+```
+
+Let's  work on the aesthetics of the nodes
+```{r}
+new_node_list <- node_list %>%
+                  mutate(borderWidth = 1.5) %>%
+                  mutate(color.background = 
+                           case_when(
+                             group == "Galactic Republic" ~ "#CF6728",
+                             group == "Jedi Order" ~ "#4BA1F0",
+                             group == "Galactic Empire" ~ "#741D2F",
+                             group == "Sith Order" ~ "#912721",
+                             group == "Hutt Cartel" ~ "#c3cb71",
+                             group == "Unknown" ~ "#5a5255"
+                           )
+                  ) %>%
+                  mutate(color.border = "#43675a") %>%
+                  mutate(color.highlight.border = "#3a95a7") %>%
+                  mutate(font.color = "#FFFFFF")
+```
+
+and weight the edges for no good reason
+```{r}
+weighted_edges <- mutate(edge_list, 
+                         width = weight/4 + 1)
 ```
 
 ```{r}
-visNetwork(nodes, edges) %>% 
-  visIgraphLayout(layout = "layout_with_fr") %>% 
-  visEdges(arrows = "middle")
+weighted_edges 
+```
+
+and plot it
+```{r}
+visNetwork(new_node_list, 
+           weighted_edges, 
+           height = "700px", 
+           width = "100%") %>%
+  visEdges(color = "#c7bbc9") %>%
+  visNodes(shape = "circle", 
+           color = list(hover = "#5cb85c",
+                        highlight = "#449d44"), 
+           shadow = list(enabled = TRUE, 
+                         size = 5))  %>%
+  visInteraction(navigationButtons = TRUE, 
+                 hover = TRUE) %>%
+  visOptions(selectedBy = "group",
+             highlightNearest = TRUE, 
+             nodesIdSelection = TRUE,
+             collapse = TRUE) %>%
+  visPhysics(solver = "repulsion", 
+             repulsion = list(nodeDistance = 400, 
+                              springlength = 300, 
+                              centralGravity = 0.2),
+             timestep = 0.75, 
+             stabilization = TRUE) %>%
+  visPhysics(stabilization = FALSE)   %>%
+  visLayout(randomSeed = 12)
+```
+
+We can even group them
+```{r}
+node_list_byside <-
+        starwars_tidy %>%
+          activate(nodes) %>%
+          data.frame() %>%
+          rename(label = name) 
 ```
 
 ## networkD3
 A little wrangling is necessary to prepare the data to create a `networkD3` graph. To make a `networkD3` graph with a edge and node list requires that the IDs be a series of numeric integers that begin with 0. 
 
 ```{r}
-nodes_d3 <- mutate(nodes, 
+nodes_d3 <- mutate(node_list, 
                    id = id - 1)
 
-edges_d3 <- mutate(edges, 
+edges_d3 <- mutate(edge_list, 
                    from = from - 1, 
                    to = to - 1)
 ```
@@ -787,7 +890,7 @@ forceNetwork(Links = edges_d3,
              Nodes = nodes_d3, 
              Source = "from", 
              Target = "to", 
-             NodeID = "name", 
+             NodeID = "label", 
              Group = "id", 
              Value = "weight", 
              opacity = 1, 
@@ -807,3 +910,4 @@ sankeyNetwork(Links = edges_d3,
               fontSize = 16, 
               unit = "Letter(s)")
 ````
+

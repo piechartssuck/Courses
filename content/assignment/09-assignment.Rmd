@@ -1,0 +1,359 @@
+---
+title: "The Social Network"
+linktitle: "Week 9: The Social Network"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read the Submission Directions
+Please submit a PDF using an Rmarkdown file for this task^[If you use an external file for your data, please submit that as well.] both to eCampus and [Slack](https://2021edp693e.slack.com/archives/C01RPG3PEVB){target="_blank"}. 
+
+### First Things First! Download the data set
+
+Please download all of the materials needed for this task.
+
+[Week 9 materials](/data/Week9taskmaterials.zip)
+
+## Idea
+The purpose of this task is to analyze the Twitter network of the Members of the U.S. Congress.
+
+Please use the following data files:
+
++ `congress-twitter-network-edges.csv` contains the edges of this network. Note that unlike in the previous example, these nodes are now directed: they indicate whether the legislator in the `source` column follows the legislator in the `target` column.
++ `congress-twitter-network-nodes.csv` contains information about each of the nodes. The only important variables you need to use for this challenge are: `id_str` (the unique Twitter ID for each legislator; same as in the edge list), `name` (full name of each legislator), `party` (Republican, Democrat or Independent), and `chamber` (`rep` for the House of Representatives, `sen` for the Senate).
+
+## Task
+Please answer the following. Note that this network is too large for us to visualize it directly with R, so let's try to learn more about it using what we have learned so far.
+
+1. How many nodes and edges does this network have?
+2. How many components does this network have? As you will see, in this particular case it makes sense that we work only with the giant component.
+3. Who are the most relevant Members of Congress, according to different measures of **centrality**? Note that this is a directed network, which means there is a difference between *indegree* and *outdegree*.
+4. What communities can you find in the network? Use the additional node-level variables to try to identify whether these communities overlap with any of these other attributes. Try different community detection algorithms to see if you get different answers.
+5. Finally, try to visualize the network as well. Instead of plotting it in the Viewer window, you can write directly to a PDF file. I have added a few options here for you so that it's faster, but note that this will probably take 1-2 minutes.
+
+    ```{r eval=FALSE}
+    set.seed(777)
+    fr <- layout_with_fr(g, niter=1000)
+    V(g)$color <- ifelse(V(g)$party=="Republican", "red", "blue") # clue
+    V(g)$shape <- ifelse(V(g)$chamber=="sen", "square", "circle") # clue
+    V(g)$label <- NA
+    V(g)$size <- authority_score(g)$vector * 5
+    
+    pdf("congress-network.pdf")
+    par(mar=c(0,0,0,0))
+    plot(g, edge.curved=.25, edge.width=.05, edge.arrow.mode=0)
+    dev.off()
+    ```
+
+## Bonus
+
+Up to this point, we have focused on describing networks, both visually and numerically. Now we turn to trying to __explain__ how networks emerge: what are the mechanisms that explain the structure of the observed networks?
+
+We'll continue with the example of the Twitter network of Congress. Our goal will be to find the micro-mechanisms that explain following decisions and thus network formation. Now go ahead and load up the following data sets 
+
+We'll continue to use the previous data sets
+
+```{r}
+library(tidyverse)
+library(igraph)
+```
+
+```{r, echo=FALSE, message=FALSE, purl=FALSE}
+nodes <- read_csv(here("static", "data", "congress-twitter-network-nodes.csv"))
+edges <- read_csv(here("static", "data", "congress-twitter-network-edges.csv"))
+```
+
+
+```{r}
+g <- graph_from_data_frame(d=edges, 
+                           vertices=nodes, 
+                           directed=TRUE)
+
+g <- decompose(g)[[1]]
+```
+
+One of the most basic notions governing network formation is __homophily__, that is, the propensity of individuals to [cluster along common traits](https://en.wikipedia.org/wiki/Homophily){target='_blank'}, such as age, gender, class, etc. 
+
+We can measure the extent to which a network is homophilic along a specific variable by computing the __assortativity index__. Positive values indicate a positive propensity; negative values indicate negative propensity.
+
+```{r}
+assortativity_degree(g, directed=FALSE)
+assortativity(g, log(V(g)$followers_count), directed=FALSE)
+assortativity_nominal(g, factor(V(g)$chamber))
+assortativity_nominal(g, factor(V(g)$party))
+assortativity_nominal(g, factor(V(g)$gender))
+```
+
+The main limitation with this approach is that we don't know to what extent this coefficients are different from what you would find simply by chance in any network. Furthermore, it is hard to disentangle what is the variable that is driving homophily. For example, the proportion of women is higher among Republicans, and thus the homophily result for gender could be simply due to party effects. (Of course, I'm putting aside issues related to causality: homophily could be driven by selection or by social influence.)
+
+```{r}
+prop.table(table(V(g)$gender, V(g)$party), margin=2)
+```
+
+To try to address these limitations, we can rely on __exponential random graph models__. We will not get into the details, but here's a general intuition of how these models work:
+
+- These models start from your observed network. It is considered a realization of many possible networks with the same number of nodes and edges.   
+- The goal is to learn the mechanisms that explain how you get to this specific network, e.g. homophily, reciprocity, transitivity... Each of these mechanisms is considered a parameter in the model.  
+- Assuming these mechanisms, what is the likelihood of arriving to the network you observe? From the probability distribution of all possible networks based on the parameter space, what is the probability of observing this particular one?
+- The goal is to estimate the parameters that best match the observed network using MCMC methods.  
+
+For a great introduction to ERGMs, see [Robins et al (2007) _An introduction to exponential random graph (p*) models for social networks_, __Social Networks__](http://ptrckprry.com/course/ssd/Robi07a.pdf).
+
+We can estimate these models with the `ergm` package in R. Unfortunately, `ergm` works with object in `network` format (not `igraph`), so we will need to convert first between packages using the `intergraph` package.
+
+```{r}
+library(intergraph)
+library(network)
+
+net <- asNetwork(g)
+
+net
+```
+
+(We could also create the object directly as a `network` object, but converting from igraph is easier.)
+
+What parameters can we add to the model?
+
++ __edges__ = number of edges in the network. It's equivalent to a constant in a regression. Given that this network is relatively sparse, the parameter is negative, which means that the probability of observing any given edge is low. In fact, the estimated parameter in this baseline model is equal to the log of the odds of observing any edge.
+
+    ```{r message=FALSE}
+    library(ergm)
+    reg1 <- ergm(net ~ edges)
+    
+    summary(reg1)
+    
+    # no. of edges / ( no. of potential edges - no. of existing edges)
+    log(length(E(g)) / ( length(V(g))*(length(V(g))-1) - length(E(g))))
+    ```
+
++ __mutual__ provides rge number of mutual dyads. This parameter captures reciprocity as a mechanism for tie formation. If positive, it means reciprocity is more common than expected given the baseline probability of any two nodes being connected, holding the number of edges constant. In the case below, the positive coefficient means that if you see an edge from `i` to `j`, then you are exp(2.04)=7.76 times more likely to see an edge from `j` to `i` as well.
+
+    ```{r}
+    reg2 <- ergm(net ~ edges + mutual)
+    
+    summary(reg2)
+    ```
+
++ __nodematch__ captures homophily on a specific factor variable. It measures the increase in the probability that an edge exists between two nodes with the same value on this variable. In the example below, a Member of Congress of the same party is exp(1.50)=4.48 times more likely to follow another Member of Congress if he/she belongs to the same party.
+
+    ```{r}
+    reg3 <- ergm(net ~ edges + mutual + nodematch("party"))
+    
+    summary(reg3) 
+    ```
+
++ __nodecov__ and __nodefactor__ = measure whether individuals with high values on a variable or with a specific value on a factor variable are more likely to follow or to be followed.
++ __absdiff__ = measures whether individuals with similar values along a continuous variable are more likely to have an edge between them (in either direction).
+
+    ```{r}
+    reg4 <- ergm(net ~ edges + mutual + nodefactor("chamber") +
+                   absdiff("followers_count") + nodematch("party") + 
+                   nodematch("chamber") + nodematch("gender"))
+    summary(reg4)
+    ```
+
+One practical issues with ERGMs is that when you add multiple variables, the MCMC chains often have convergence issues. Sometimes just running these for more iterations and increasing the thinning parameter will fix this. Sadly, very often it's more difficult than that...
+
+```{r}
+mcmc.diagnostics(reg2)
+```
+
+Another way to check the results of the model is to simulate networks assuming the estimated parameters and compare their degree distribution to the observed indegree distribution. (Warning: running the code below will take a while!)
+
+```{r}
+sims <- simulate(reg2, nsim=10)
+
+summary(sims)
+
+reggof <- gof(reg2 ~ idegree)
+
+plot(reggof)
+```
+
+In this challenge you will work with a dataset about classroom interactions. The goal is to understand the extent to which homophily explains friendships across students.
+
+First, let's load the dataset, which is available in the NetData package.
+
+
+```{r}
+library(NetData)
+
+data(studentnets.ergm173)
+
+str(nodes)
+str(edges)
+```
+
+You can read the codebook by typing: `?NetData::nodes`
+
+The student-level variables are:  
+
+- `std_id`: student ID  
+- `gnd`: gender (1 = male, 2 = female)  
+- `grd`: grade (always 10th)  
+- `rce`: race (1 = Hispanic, 2 = Asian, 3 = African-American, 4 = White)  
+- `per_cap_inc`: per capita income from the 1990 census  
+
+The edge-level variables are:  
+
+- `ego_id` and `alter_id` are the source and target of the edge  
+- `sem1_friends` and `sem2_friends` indicate responses to friendship survey in semesters 1 and 2(0 = not friends, 1 = friend, 2 = best friends)  
+- `sem1_wtd_dicht_seat` indicates whether students were seating next to each other  
+
+Our goal will be to explain friendships in the first semester, so we will keep only edges where `sem1_friends>0`.
+
+```{r eval=FALSE}
+some_edges <- edges[edges$sem1_friend>0,]
+```
+
+1. First create the igraph object
+
+Here you will get an error. Why? Some students name as friends other students in different classrooms. We'll get rid of those edges and try again. How many nodes and edges does this network have? Visualize it to see what else you learn.
+
+```{r}
+edges <- edges[edges$alter_id %in% nodes$std_id,]
+```
+
+2. Convert the `igraph` object to `network` format. Check that the size of the network is the same as before.
+
+And now we're ready to start estimating models! 
+
+3. Estimate a baseline model with total number of edges and number of mutual edges. What do you learn?
+
+4. Examine the effect of similarity across race, gender, and income. What do you learn?
+
+:::
