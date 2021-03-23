@@ -1,55 +1,55 @@
 lessons:
-  - title: '<span class="fake-header-table">Concentration</span>'
+  - title: '<span style="font-weight:bold">Content</span>'
     header: True
-
-  - title: 'Does it Work and Why Does it Work?'
-    session: 1
-    date: "July 5, 2020"
-    readings: "01-readings"
-    lesson: "01-lesson"
-    example: "01-example"
-    assignment: "01-exercise"
-    due: "01-due"
-
-  - title: 'Neverending Designs, Measures, and Methods'
-    session: 2
-    date: "July 12, 2020"
-    readings: "02-readings"
-    lesson: "02-lesson"
-    example: "02-example"
-    assignment: "02-exercise"
-    due: "02-due"
-
-  - title: 'Truthiness, Damned Truthiness, and Statistics'
-    session: 3
-    date: "July 19, 2020"
-    readings: "03-readings"
-    lesson: "03-lesson"
-    example: "03-example"
-    assignment: "03-exercise"
-    due: "03-due"
-
-  - title: 'Pirates Cause Global Warming'
-    session: 4
-    date: "July 26, 2020"
-    readings: "04-readings"
-    lesson: "04-lesson"
-    example: "04-example"
-    assignment: "04-exercise"
-    due: "04-due"
-
-  - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
-    session: 5
-    date: "August 2, 2020"
-    readings: "05-readings"
-    lesson: "05-lesson"
-    example: "05-example"
-    assignment: "05-exercise"
-    due: "05-due"
-
-  - title: 'From a Certain Poimt of View... A Certain Point of View?'
-    session: 6
-    date: "August 9, 2020"
-    example: "06-example"
-    assignment: "06-exercise"
-    due: "06-due"
+  #
+  # - title: 'Does it Work and Why Does it Work?'
+  #   session: 1
+  #   date: "July 5, 2020"
+  #   readings: "01-readings"
+  #   lesson: "01-lesson"
+  #   example: "01-example"
+  #   assignment: "01-exercise"
+  #   due: "01-due"
+  #
+  # - title: 'Neverending Designs, Measures, and Methods'
+  #   session: 2
+  #   date: "July 12, 2020"
+  #   readings: "02-readings"
+  #   lesson: "02-lesson"
+  #   example: "02-example"
+  #   assignment: "02-exercise"
+  #   due: "02-due"
+  #
+  # - title: 'Truthiness, Damned Truthiness, and Statistics'
+  #   session: 3
+  #   date: "July 19, 2020"
+  #   readings: "03-readings"
+  #   lesson: "03-lesson"
+  #   example: "03-example"
+  #   assignment: "03-exercise"
+  #   due: "03-due"
+  #
+  # - title: 'Pirates Cause Global Warming'
+  #   session: 4
+  #   date: "July 26, 2020"
+  #   readings: "04-readings"
+  #   lesson: "04-lesson"
+  #   example: "04-example"
+  #   assignment: "04-exercise"
+  #   due: "04-due"
+  #
+  # - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
+  #   session: 5
+  #   date: "August 2, 2020"
+  #   readings: "05-readings"
+  #   lesson: "05-lesson"
+  #   example: "05-example"
+  #   assignment: "05-exercise"
+  #   due: "05-due"
+  #
+  # - title: 'From a Certain Poimt of View... A Certain Point of View?'
+  #   session: 6
+  #   date: "August 9, 2020"
+  #   example: "06-example"
+  #   assignment: "06-exercise"
+  #   due: "06-due"

@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course materials | Measurement/Evaluation in Educational Psychology</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp611.theoreticalphysed.com/</link>
+      <atom:link href="https://edp611.theoreticalphysed.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Course materials</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/social-image.png</url>
+      <url>https://edp611.theoreticalphysed.com/img/social-image.png</url>
       <title>Course materials</title>
-      <link>/</link>
+      <link>https://edp611.theoreticalphysed.com/</link>
     </image>
     
     <item>
       <title>Citations and bibliography</title>
-      <link>/resource/citations/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/citations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/citations/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/citations/</guid>
       <description>
 
 
-&lt;p&gt;You can &lt;a href=&#34;/bib/references.bib&#34; target=&#34;_blank&#34;&gt;download a BibTeX file&lt;/a&gt; of all the readings in the course:&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;https://edp611.theoreticalphysed.com/bib/references.bib&#34; target=&#34;_blank&#34;&gt;download a BibTeX file&lt;/a&gt; of all the readings in the course:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/bib/references.bib&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;code&gt;references.bib&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/bib/references.bib&#34; target=&#34;_blank&#34;&gt;&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt; &lt;code&gt;references.bib&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can open the file in &lt;a href=&#34;http://bibdesk.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;BibDesk on macOS&lt;/a&gt;, &lt;a href=&#34;http://www.jabref.org/&#34; target=&#34;_blank&#34;&gt;JabRef on Windows/macOS&lt;/a&gt;, or &lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34;&gt;Zotero&lt;/a&gt; or &lt;a href=&#34;https://www.mendeley.com/&#34; target=&#34;_blank&#34;&gt;Mendeley&lt;/a&gt; online.&lt;/p&gt;
 &lt;p&gt;If you are comfortable with the terminal in a Mac, then the &lt;a href=&#34;http://refdb.sourceforge.net/manual-0.9.6/sect-bibtoris.html&#34; target=&#34;_blank&#34;&gt;bib2ris&lt;/a&gt; may be easy to implement.&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/assignment/01-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/01-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/01-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/01-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -44,7 +44,7 @@
 
 &lt;div id=&#34;idea-no-idea&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Idea: No Idea&lt;/h2&gt;
-&lt;p&gt;Typically pages that are not required to visit will be greyed out on the course &lt;a href=&#34;/schedule/&#34;&gt;Schedule&lt;/a&gt; page. While there isn’t an exercise this week, please take this time to go through the first week of material on Data Camp. It is important that you understand the basics and develop some familiarity with R.&lt;/p&gt;
+&lt;p&gt;Typically pages that are not required to visit will be greyed out on the course &lt;a href=&#34;https://edp611.theoreticalphysed.com/schedule/&#34;&gt;Schedule&lt;/a&gt; page. While there isn’t an exercise this week, please take this time to go through the first week of material on Data Camp. It is important that you understand the basics and develop some familiarity with R.&lt;/p&gt;
 &lt;p&gt;:::&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -52,11 +52,11 @@
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/due/01-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/01-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/01-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -91,7 +91,7 @@ Location
 Complete modules in Data Camp that address the basic elements of R and tidying data.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -104,7 +104,7 @@ Complete modules in Data Camp that address the basic elements of R and tidying d
 Think about a population to test
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -117,7 +117,7 @@ Think about a population to test
 Submit your Week 1 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/01-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/01-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -128,9 +128,9 @@ Submit your Week 1 Reflections.
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/example/01-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/01-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/01-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -159,9 +159,9 @@ Submit your Week 1 Reflections.
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/lesson/01-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -195,11 +195,11 @@ and
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/due/02-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/02-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/02-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -234,7 +234,7 @@ Location
 Complete modules in Data Camp that gives you the tools to assess, wrangle, and explore data sets.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -247,7 +247,7 @@ Complete modules in Data Camp that gives you the tools to assess, wrangle, and e
 Complete a task on running descriptive statistics in R.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/02-exercise/#task-assessing-common-descriptives&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/02-exercise/#task-assessing-common-descriptives&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -260,7 +260,7 @@ Complete a task on running descriptive statistics in R.
 Build a case to test a population.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk2&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk2&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -273,7 +273,7 @@ Build a case to test a population.
 Submit your Week 2 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/02-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/02-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -284,11 +284,11 @@ Submit your Week 2 Reflections.
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/due/03-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/03-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/03-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -323,7 +323,7 @@ Location
 Complete modules in Data Camp that address correlation and regression as well as survey development.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -336,7 +336,7 @@ Complete modules in Data Camp that address correlation and regression as well as
 Complete a task on analyzing an ICPSR data set.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/03-exercise/#task-exploring-icpsr&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/03-exercise/#task-exploring-icpsr&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -349,7 +349,7 @@ Complete a task on analyzing an ICPSR data set.
 Create a draft instrument and skeleton.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk3&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk3&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -362,7 +362,7 @@ Create a draft instrument and skeleton.
 Submit your Week 3 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/03-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/03-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -373,11 +373,11 @@ Submit your Week 3 Reflections.
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/due/04-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/04-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/04-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/04-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -412,7 +412,7 @@ Location
 Complete modules in Data Camp that leaves the basics of R and introduces inferences.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -425,7 +425,7 @@ Complete modules in Data Camp that leaves the basics of R and introduces inferen
 Complete a Request for Proposal or better known as an RFP.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/04-exercise/#task-rfps-with-reliability-and-validity&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/04-exercise/#task-rfps-with-reliability-and-validity&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -438,7 +438,7 @@ Complete a Request for Proposal or better known as an RFP.
 Amend your draft as needed.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk4&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk4&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -451,7 +451,7 @@ Amend your draft as needed.
 Submit your Week 4 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/04-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/04-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -462,11 +462,11 @@ Submit your Week 4 Reflections.
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/due/05-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/05-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/05-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -501,7 +501,7 @@ Location
 Complete a module in Data Camp that covers factor analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -514,7 +514,7 @@ Complete a module in Data Camp that covers factor analysis.
 Submit an analysis of a survey data using exploratory factor analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/05-example/#exploratory-factor-analysis-efa&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/05-example/#exploratory-factor-analysis-efa&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -527,7 +527,7 @@ Submit an analysis of a survey data using exploratory factor analysis.
 Perform some conditional and post analyses of your pilot data.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk5&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk5&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -540,7 +540,7 @@ Perform some conditional and post analyses of your pilot data.
 Submit your Week 5 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/05-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/05-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -551,11 +551,11 @@ Submit your Week 5 Reflections.
     
     <item>
       <title>From a Certain Poimt of View. A Certain Point of View?</title>
-      <link>/due/06-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/06-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/06-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/06-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -590,7 +590,7 @@ Location
 Submit an analysis of a survey data using principal component analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
-&lt;a href=&#34;/example/06-example/#principal-component-analysis-pca&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/06-example/#principal-component-analysis-pca&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -603,7 +603,7 @@ Submit an analysis of a survey data using principal component analysis.
 Submit your final instrument&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk6&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk6&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -634,9 +634,9 @@ A unique Qualtrics link was sent to your WVU MIX email this morning.
     
     <item>
       <title>Data</title>
-      <link>/resource/data/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/data/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/data/</guid>
       <description>
 
 
@@ -653,9 +653,9 @@ A unique Qualtrics link was sent to your WVU MIX email this morning.
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/assignment/02-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/02-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/02-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/02-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -669,7 +669,7 @@ A unique Qualtrics link was sent to your WVU MIX email this morning.
 &lt;p&gt;Load the &lt;code&gt;fivethirtyeight&lt;/code&gt; package and scroll through the data sets or alternatively click &lt;a href=&#34;https://github.com/fivethirtyeight/data&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to see the FiveThirtyEight GitHub repository. Locate a response set that is derived from a survey.&lt;/p&gt;
 &lt;p&gt;Run some basic descriptive statistics on the set. What you explore and/or report on is up to you. What I really want is for you to get comfortable (well as much as possible) with writing syntax. The more you try, the more I can comment on! Please turn in&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;your R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Please please please make sure to provide comments for clarification and format your script so that it is clear and understandable. An example scripts is included which can be accessed &lt;a href=&#34;/exscripts/example_script.R&#34;&gt;here&lt;/a&gt;. You may either right click and download the file to open it or copy and paste the content to your own blank script.&lt;/li&gt;
+&lt;li&gt;your R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Please please please make sure to provide comments for clarification and format your script so that it is clear and understandable. An example scripts is included which can be accessed &lt;a href=&#34;https://edp611.theoreticalphysed.com/exscripts/example_script.R&#34;&gt;here&lt;/a&gt;. You may either right click and download the file to open it or copy and paste the content to your own blank script.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;If you want some help with commands, give these sites a try:&lt;/p&gt;
 &lt;ul&gt;
@@ -690,9 +690,9 @@ A unique Qualtrics link was sent to your WVU MIX email this morning.
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/example/02-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/02-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/02-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/02-example/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -924,9 +924,9 @@ The &lt;code&gt;dplyr&lt;/code&gt; function &lt;code&gt;select()&lt;/code&gt; &l
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/assignment/03-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/03-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/03-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/03-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -958,7 +958,7 @@ The &lt;code&gt;dplyr&lt;/code&gt; function &lt;code&gt;select()&lt;/code&gt; &l
 &lt;/ol&gt;
 &lt;p&gt;Please submit the items below as separate pieces using the Submission Portal on &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt;.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;an R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Again please provide comments where it is not obvious what you are doing. Perpetually, an example script is included which can be accessed &lt;a href=&#34;/exscripts/example_script.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The more directions you include, the better the response! You may either right click and download the file to open it or copy and paste the content to your own blank script.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;an R script (.R format) with your name in the upper left-hand corner beside of a hashtag # so it appears as a comment. Again please provide comments where it is not obvious what you are doing. Perpetually, an example script is included which can be accessed &lt;a href=&#34;https://edp611.theoreticalphysed.com/exscripts/example_script.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The more directions you include, the better the response! You may either right click and download the file to open it or copy and paste the content to your own blank script.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;a maximum one page 12-point font double spaced reflection that includes brief narratives on what&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
@@ -984,9 +984,9 @@ The &lt;code&gt;dplyr&lt;/code&gt; function &lt;code&gt;select()&lt;/code&gt; &l
     
     <item>
       <title>Design</title>
-      <link>/resource/design/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/design/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/design/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -1068,11 +1068,11 @@ The &lt;code&gt;dplyr&lt;/code&gt; function &lt;code&gt;select()&lt;/code&gt; &l
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/example/03-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/03-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/03-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/03-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1114,9 +1114,9 @@ The &lt;code&gt;dplyr&lt;/code&gt; function &lt;code&gt;select()&lt;/code&gt; &l
 &lt;h2&gt;Data Files&lt;/h2&gt;
 &lt;p&gt;Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/data/Big5data.csv&#34;&gt;&lt;code&gt;Big5data.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/Big5codebook.csv&#34;&gt;&lt;code&gt;Big5codebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/Big5measures.csv&#34;&gt;&lt;code&gt;Big5measures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/Big5data.csv&#34;&gt;&lt;code&gt;Big5data.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/Big5codebook.csv&#34;&gt;&lt;code&gt;Big5codebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/Big5measures.csv&#34;&gt;&lt;code&gt;Big5measures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;prerequisites&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -2134,9 +2134,9 @@ I don’t like to draw attention to myself.
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/lesson/03-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/03-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/03-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2169,9 +2169,9 @@ and
     
     <item>
       <title>Installing R, RStudio, and tidyverse</title>
-      <link>/resource/install/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/install/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/resource/install/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/install/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2201,12 +2201,12 @@ and
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Go to the CRAN (Collective R Archive Network)&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; website: &lt;a href=&#34;https://cran.r-project.org/&#34; class=&#34;uri&#34;&gt;https://cran.r-project.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Click on “Download R for &lt;code&gt;XXX&lt;/code&gt;”, where &lt;code&gt;XXX&lt;/code&gt; is either Mac or Windows:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-links.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-links.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;If you use macOS, scroll down to the first &lt;code&gt;.pkg&lt;/code&gt; file in the list of files (as of this writing, it’s &lt;code&gt;R-4.0.0.pkg&lt;/code&gt;; as of right now but download the most current version.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-mac.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-mac.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you use Windows, click “base” (or click on the bolded “install R for the first time” link) and download it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-windows.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-windows.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Double click on the downloaded file (check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you use macOS, &lt;a href=&#34;https://www.xquartz.org/&#34; target=&#34;_blank&#34;&gt;download and install XQuartz&lt;/a&gt;. You do not need to do this on Windows.&lt;/p&gt;&lt;/li&gt;
@@ -2218,9 +2218,9 @@ and
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Go to the free download location on RStudio’s website: &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The website should automatically detect your operating system (macOS or Windows) and show a big download button for it:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-rstudio1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-rstudio1.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;If not, scroll down a little to the large table and choose the version of RStudio that matches your operating system.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-rstudio2.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-rstudio2.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Double click on the downloaded file (again, check your &lt;code&gt;Downloads&lt;/code&gt; folder). Click yes through all the prompts to install like any other program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Double click on RStudio to run it (check your applications folder or start menu).&lt;/p&gt;
@@ -2228,10 +2228,10 @@ and
 &lt;div id=&#34;install-tidyverse&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Install &lt;code&gt;tidyverse&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;R packages are easy to install with RStudio. Select the packages panel, click on “Install,” type the name of the package you want to install, and press enter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-package-panel.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-package-panel.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This can sometimes be tedious when you’re installing lots of packages, though. &lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34;&gt;The tidyverse&lt;/a&gt;, for instance, consists of dozens of packages (including &lt;strong&gt;ggplot2&lt;/strong&gt;) that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.&lt;/p&gt;
 &lt;p&gt;Go to the packages panel in RStudio, click on “Install,” type “tidyverse”, and press enter. You’ll see a bunch of output in the RStudio console as all the tidyverse packages are installed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/install/install-r-tidyverse.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/install/install-r-tidyverse.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice also that RStudio will generate a line of code for you and run it: &lt;code&gt;install.packages(&#34;tidyverse&#34;)&lt;/code&gt;. You can also just paste and run this instead of using the packages panel.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2246,9 +2246,9 @@ and
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/lesson/02-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/02-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/02-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2286,9 +2286,9 @@ and
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/assignment/04-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/04-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/04-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/04-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2338,19 +2338,19 @@ Since most RFPs are submitted without any opportunities for follow-ups or clarif
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/example/04-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/04-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/04-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/04-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2391,9 +2391,9 @@ Since most RFPs are submitted without any opportunities for follow-ups or clarif
 &lt;h2&gt;Data Files&lt;/h2&gt;
 &lt;p&gt;Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyData.csv&#34;&gt;&lt;code&gt;conspiracyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyCodebook.csv&#34;&gt;&lt;code&gt;conspiracyCodebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyMeasures.csv&#34;&gt;&lt;code&gt;conspiracyMeasures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyData.csv&#34;&gt;&lt;code&gt;conspiracyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyCodebook.csv&#34;&gt;&lt;code&gt;conspiracyCodebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyMeasures.csv&#34;&gt;&lt;code&gt;conspiracyMeasures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;prerequisites&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -2568,7 +2568,7 @@ library(&amp;quot;polycor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 ## Proportion Var 0.484&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also create a diagram of loadings. The &lt;code&gt;fa.diagram()&lt;/code&gt; command takes the outpit from &lt;code&gt;fa()&lt;/code&gt; and creates a diagram, called a &lt;em&gt;path diagram&lt;/em&gt; to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fa.diagram(EFA)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/example/04-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/example/04-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;note-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Note&lt;/h3&gt;
 &lt;p&gt;So why can’t we just use pipes and &lt;code&gt;ggplot&lt;/code&gt; here? Well the main problem can be found using this command&lt;/p&gt;
@@ -2604,9 +2604,9 @@ library(&amp;quot;polycor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/lesson/04-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/04-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/04-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/04-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2655,19 +2655,19 @@ and
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/example/05-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/05-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/05-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/05-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2708,9 +2708,9 @@ and
 &lt;h2&gt;Data Files&lt;/h2&gt;
 &lt;p&gt;Please download the files below. Note you may have to right click and download each file if your browser renders csv files automatically:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyData.csv&#34;&gt;&lt;code&gt;conspiracyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyCodebook.csv&#34;&gt;&lt;code&gt;conspiracyCodebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/conspiracyMeasures.csv&#34;&gt;&lt;code&gt;conspiracyMeasures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyData.csv&#34;&gt;&lt;code&gt;conspiracyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyCodebook.csv&#34;&gt;&lt;code&gt;conspiracyCodebook.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/conspiracyMeasures.csv&#34;&gt;&lt;code&gt;conspiracyMeasures.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;prerequisites&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -2885,7 +2885,7 @@ library(&amp;quot;polycor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 ## Proportion Var 0.484&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also create a diagram of loadings. The &lt;code&gt;fa.diagram()&lt;/code&gt; command takes the outpit from &lt;code&gt;fa()&lt;/code&gt; and creates a diagram, called a &lt;em&gt;path diagram&lt;/em&gt; to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fa.diagram(EFA)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/example/05-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/example/05-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;note-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Note&lt;/h3&gt;
 &lt;p&gt;So why can’t we just use pipes and &lt;code&gt;ggplot&lt;/code&gt; here? Well the main problem can be found using this command&lt;/p&gt;
@@ -2921,19 +2921,19 @@ library(&amp;quot;polycor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>From a Certain Poimt of View... A Certain Point of View?</title>
-      <link>/example/06-example/</link>
+      <link>https://edp611.theoreticalphysed.com/example/06-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/example/06-example/</guid>
+      <guid>https://edp611.theoreticalphysed.com/example/06-example/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -2977,11 +2977,11 @@ library(&amp;quot;polycor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Data Files&lt;/h2&gt;
 &lt;p&gt;Please download all the files below. Note you may have to right click and download each file if your browser renders csv files automatically:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/data/nerdyData.csv&#34;&gt;&lt;code&gt;nerdyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/nerdyCodebook_PM.csv&#34;&gt;&lt;code&gt;nerdyCodebook_PM.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/nerdyMeasures_PM.csv&#34;&gt;&lt;code&gt;nerdyMeasures_PM.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/nerdyCodebook_TIPI.csv&#34;&gt;&lt;code&gt;nerdyCodebook_TIPI.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/data/nerdyMeasures_TIPI.csv&#34;&gt;&lt;code&gt;nerdyMeasures_TIPI.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/nerdyData.csv&#34;&gt;&lt;code&gt;nerdyData.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/nerdyCodebook_PM.csv&#34;&gt;&lt;code&gt;nerdyCodebook_PM.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/nerdyMeasures_PM.csv&#34;&gt;&lt;code&gt;nerdyMeasures_PM.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/nerdyCodebook_TIPI.csv&#34;&gt;&lt;code&gt;nerdyCodebook_TIPI.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/data/nerdyMeasures_TIPI.csv&#34;&gt;&lt;code&gt;nerdyMeasures_TIPI.csv&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;prerequisites&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -3153,7 +3153,7 @@ library(&amp;quot;patchwork&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 ## Proportion Var 0.484&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also create a diagram of loadings. The &lt;code&gt;fa.diagram()&lt;/code&gt; command takes the outpit from &lt;code&gt;fa()&lt;/code&gt; and creates a diagram, called a &lt;em&gt;path diagram&lt;/em&gt; to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;fa.diagram(EFA)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/example/06-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/example/06-example_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;note-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Note&lt;/h3&gt;
 &lt;p&gt;So why can’t we just use pipes and &lt;code&gt;ggplot&lt;/code&gt; here? Well the main problem can be found using this command&lt;/p&gt;
@@ -3189,9 +3189,9 @@ library(&amp;quot;patchwork&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Using Markdown</title>
-      <link>/resource/markdown/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/markdown/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/resource/markdown/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/markdown/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3277,7 +3277,7 @@ Heading 3
 &lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;code&gt;![Image caption](/path/to/image.png)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;/img/mstile-144x144.png&#34; title=&#34;fig:&#34; alt=&#34;Class logo&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/mstile-144x144.png&#34; title=&#34;fig:&#34; alt=&#34;Class logo&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;`&lt;code&gt;Inline code` with backticks&lt;/code&gt;&lt;/td&gt;
@@ -3533,7 +3533,7 @@ title: &amp;#39;An evaluation of &amp;quot;scare quotes&amp;quot;&amp;#39;
 &lt;/div&gt;
 &lt;div id=&#34;citations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Citations&lt;/h2&gt;
-&lt;p&gt;One of the most powerful features of Markdown + pandoc is the ability to automatically cite things and generate bibliographies. to use citations, you need to create a &lt;a href=&#34;http://www.bibtex.org/&#34; target=&#34;_blank&#34;&gt;BibTeX file&lt;/a&gt; (ends in &lt;code&gt;.bib&lt;/code&gt;) that contains a database of the things you want to cite. You can do this with bibliography managers designed to work with BibTeX directly (like &lt;a href=&#34;https://bibdesk.sourceforge.io/&#34; target=&#34;_blank&#34;&gt;BibDesk&lt;/a&gt; on macOS), or you can use &lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34;&gt;Zotero&lt;/a&gt; (macOS and Windows) to export a &lt;code&gt;.bib&lt;/code&gt; file. You can &lt;a href=&#34;/reference/&#34;&gt;download an example &lt;code&gt;.bib&lt;/code&gt; file of all the readings from this class here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of the most powerful features of Markdown + pandoc is the ability to automatically cite things and generate bibliographies. to use citations, you need to create a &lt;a href=&#34;http://www.bibtex.org/&#34; target=&#34;_blank&#34;&gt;BibTeX file&lt;/a&gt; (ends in &lt;code&gt;.bib&lt;/code&gt;) that contains a database of the things you want to cite. You can do this with bibliography managers designed to work with BibTeX directly (like &lt;a href=&#34;https://bibdesk.sourceforge.io/&#34; target=&#34;_blank&#34;&gt;BibDesk&lt;/a&gt; on macOS), or you can use &lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34;&gt;Zotero&lt;/a&gt; (macOS and Windows) to export a &lt;code&gt;.bib&lt;/code&gt; file. You can &lt;a href=&#34;https://edp611.theoreticalphysed.com/reference/&#34;&gt;download an example &lt;code&gt;.bib&lt;/code&gt; file of all the readings from this class here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html&#34; target=&#34;_blank&#34;&gt;Complete details for using citations can be found here&lt;/a&gt;. In brief, you need to do three things:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Add a &lt;code&gt;bibliography:&lt;/code&gt; entry to the YAML metadata:&lt;/p&gt;
@@ -3612,9 +3612,9 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/assignment/05-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/05-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/05-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/05-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3684,9 +3684,9 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/lesson/05-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/05-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/05-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/05-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3710,9 +3710,9 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     
     <item>
       <title>From a Certain Poimt of View... A Certain Point of View?</title>
-      <link>/assignment/06-exercise/</link>
+      <link>https://edp611.theoreticalphysed.com/assignment/06-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/assignment/06-exercise/</guid>
+      <guid>https://edp611.theoreticalphysed.com/assignment/06-exercise/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3783,9 +3783,9 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     
     <item>
       <title>R</title>
-      <link>/resource/r/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/r/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/r/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/r/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3848,9 +3848,9 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
     
     <item>
       <title>Using R Markdown</title>
-      <link>/resource/rmarkdown/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/rmarkdown/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/resource/rmarkdown/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/rmarkdown/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -3864,7 +3864,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://rmarkdown.rstudio.com/&#34; target=&#34;_blank&#34;&gt;R Markdown&lt;/a&gt; is &lt;a href=&#34;/reference/markdown/&#34;&gt;regular Markdown&lt;/a&gt; with R code and output sprinkled in. You can do everything you can with &lt;a href=&#34;/reference/markdown/&#34;&gt;regular Markdown&lt;/a&gt;, but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even &lt;a href=&#34;https://rmarkdown.rstudio.com/flexdashboard/index.html&#34; target=&#34;_blank&#34;&gt;interactive dashboards&lt;/a&gt; with R Markdown. This whole course website is created with R Markdown (and &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34;&gt;a package named &lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rmarkdown.rstudio.com/&#34; target=&#34;_blank&#34;&gt;R Markdown&lt;/a&gt; is &lt;a href=&#34;https://edp611.theoreticalphysed.com/reference/markdown/&#34;&gt;regular Markdown&lt;/a&gt; with R code and output sprinkled in. You can do everything you can with &lt;a href=&#34;https://edp611.theoreticalphysed.com/reference/markdown/&#34;&gt;regular Markdown&lt;/a&gt;, but you can incorporate graphs, tables, and other R output directly in your document. You can create HTML, PDF, and Word documents, PowerPoint and HTML presentations, websites, books, and even &lt;a href=&#34;https://rmarkdown.rstudio.com/flexdashboard/index.html&#34; target=&#34;_blank&#34;&gt;interactive dashboards&lt;/a&gt; with R Markdown. This whole course website is created with R Markdown (and &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34;&gt;a package named &lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://rmarkdown.rstudio.com/&#34; target=&#34;_blank&#34;&gt;documentation for R Markdown&lt;/a&gt; is extremely comprehensive, and their &lt;a href=&#34;https://rmarkdown.rstudio.com/lesson-1.html&#34; target=&#34;_blank&#34;&gt;tutorials&lt;/a&gt; and &lt;a href=&#34;https://rmarkdown.rstudio.com/lesson-15.html&#34; target=&#34;_blank&#34;&gt;cheatsheets&lt;/a&gt; are excellent—rely on those.&lt;/p&gt;
 &lt;p&gt;Here are the most important things you’ll need to know about R Markdown in this class:&lt;/p&gt;
 &lt;div id=&#34;key-terms&#34; class=&#34;section level2&#34;&gt;
@@ -3878,7 +3878,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;p&gt;There must be an empty line before and after the chunk. The final three backticks must be the only thing on the line—if you add more text, or if you forget to add the backticks, or accidentally delete the backticks, your document will not knit correctly.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Knit&lt;/strong&gt;: When you “knit” a document, R runs each of the chunks sequentially and converts the output of each chunk into Markdown. R then runs the knitted document through &lt;a href=&#34;https://pandoc.org/&#34; target=&#34;_blank&#34;&gt;pandoc&lt;/a&gt; to convert it to HTML or PDF or Word (or whatever output you’ve selected).&lt;/p&gt;
 &lt;p&gt;You can knit by clicking on the “Knit” button at the top of the editor window, or by pressing &lt;code&gt;⌘⇧K&lt;/code&gt; on macOS or &lt;code&gt;control + shift + K&lt;/code&gt; on Windows.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/assignments/knit-button.png&#34; width=&#34;30%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/assignments/knit-button.png&#34; width=&#34;30%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;add-chunks&#34; class=&#34;section level2&#34;&gt;
@@ -3887,14 +3887,14 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Press &lt;code&gt;⌘⌥I&lt;/code&gt; on macOS or &lt;code&gt;control + alt + I&lt;/code&gt; on Windows&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Click on the “Insert” button at the top of the editor window&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/reference/insert-chunk.png&#34; width=&#34;30%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/reference/insert-chunk.png&#34; width=&#34;30%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Manually type all the backticks and curly braces (don’t do this)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;chunk-names&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Chunk names&lt;/h2&gt;
 &lt;p&gt;You can add names to chunks to make it easier to navigate your document. If you click on the little dropdown menu at the bottom of your editor in RStudio, you can see a table of contents that shows all the headings and chunks. If you name chunks, they’ll appear in the list. If you don’t include a name, the chunk will still show up, but you won’t know what it does.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/reference/chunk-toc.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/reference/chunk-toc.png&#34; width=&#34;40%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;To add a name, include it immediately after the &lt;code&gt;{r&lt;/code&gt; in the first line of the chunk. Names cannot contain spaces, but they can contain underscores and dashes. &lt;strong&gt;All chunk names in your document must be unique.&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;```{r name-of-this-chunk}
 # Code goes here
@@ -3916,7 +3916,7 @@ csl: &amp;quot;https://raw.githubusercontent.com/citation-style-language/styles/
 &lt;li&gt;&lt;code&gt;include=FALSE&lt;/code&gt;: The chunk still runs, but the code and results are not included in the final document&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You can also set chunk options by clicking on the little gear icon in the top right corner of any chunk:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/reference/chunk-options.png&#34; width=&#34;70%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/reference/chunk-options.png&#34; width=&#34;70%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;inline-chunks&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Inline chunks&lt;/h2&gt;
@@ -3934,14 +3934,14 @@ The average fuel efficiency for cars from 1974 was `r round(avg_mpg, 1)` miles p
 &lt;/div&gt;
 &lt;div id=&#34;output-formats&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Output formats&lt;/h2&gt;
-&lt;p&gt;You can specify what kind of document you create when you knit in the &lt;a href=&#34;/reference/markdown/#front-matter&#34;&gt;YAML front matter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can specify what kind of document you create when you knit in the &lt;a href=&#34;https://edp611.theoreticalphysed.com/reference/markdown/#front-matter&#34;&gt;YAML front matter&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;title: &amp;quot;My document&amp;quot;
 output:
   html_document: default
   pdf_document: default
   word_document: default&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can also click on the down arrow on the “Knit” button to choose the output &lt;em&gt;and&lt;/em&gt; generate the appropriate YAML. If you click on the gear icon next to the “Knit” button and choose “Output options”, you change settings for each specific output type, like default figure dimensions or whether or not a table of contents is included.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/reference/output-options.png&#34; width=&#34;35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/reference/output-options.png&#34; width=&#34;35%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The first output type listed under &lt;code&gt;output:&lt;/code&gt; will be what is generated when you click on the “Knit” button or press the keyboard shortcut (&lt;code&gt;⌘⇧K&lt;/code&gt; on macOS; &lt;code&gt;control + shift + K&lt;/code&gt; on Windows). If you choose a different output with the “Knit” button menu, that output will be moved to the top of the &lt;code&gt;output&lt;/code&gt; section.&lt;/p&gt;
 &lt;p&gt;The indentation of the YAML section matters, especially when you have settings nested under each output type. Here’s what a typical &lt;code&gt;output&lt;/code&gt; section might look like:&lt;/p&gt;
 &lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;---
@@ -3969,9 +3969,9 @@ output:
     
     <item>
       <title>R style suggestions</title>
-      <link>/resource/style/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/style/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/style/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/style/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4157,9 +4157,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>Visualization</title>
-      <link>/resource/visualization/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/visualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resource/visualization/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/visualization/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4226,9 +4226,9 @@ mpg %&amp;gt;%
     
     <item>
       <title>Unzipping files</title>
-      <link>/resource/unzipping/</link>
+      <link>https://edp611.theoreticalphysed.com/resource/unzipping/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      <guid>/resource/unzipping/</guid>
+      <guid>https://edp611.theoreticalphysed.com/resource/unzipping/</guid>
       <description>
 
 
@@ -4237,31 +4237,31 @@ mpg %&amp;gt;%
 &lt;div id=&#34;unzipping-files-on-macos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Unzipping files on macOS&lt;/h2&gt;
 &lt;p&gt;Double click on the downloaded &lt;code&gt;.zip&lt;/code&gt; file. macOS will automatically create a new folder with the same name as the &lt;code&gt;.zip&lt;/code&gt; file, and all the file’s contents will be inside. Double click on the RStudio Project file (&lt;code&gt;.Rproj&lt;/code&gt;) to get started.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/unzip-mac.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/unzip-mac.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;unzipping-files-on-windows&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Unzipping files on Windows&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;tl;dr&lt;/strong&gt;: Right click on the &lt;code&gt;.zip&lt;/code&gt; file, select “Extract All…”, and work with the resulting unzipped folder.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Unlike macOS, Windows does &lt;em&gt;not&lt;/em&gt; automatically unzip things for you. If you double click on the &lt;code&gt;.zip&lt;/code&gt; file, Windows will show you what’s inside, but it will do so without actually extracting anything. This &lt;del&gt;can be&lt;/del&gt; is incredibly confusing! Here’s what it looks like—the only clues that this folder is really a &lt;code&gt;.zip&lt;/code&gt; file are that there’s a “Compressed Folder Tools” tab at the top, and there’s a “Ratio” column that shows how much each file is compressed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/inside-zip-windows.png&#34; width=&#34;80%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/inside-zip-windows.png&#34; width=&#34;80%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It is very tempting to try to open files from this view. However, if you do, things will break and you won’t be able to correctly work with any of the files in the zipped folder. If you open the R Project file, for instance, RStudio will point to a bizarre working directory buried deep in some temporary folder:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/temp-wd-windows.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/temp-wd-windows.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;You most likely won’t be able to open any data files or save anything, which will be frustrating.&lt;/p&gt;
 &lt;p&gt;Instead, you need to right click on the &lt;code&gt;.zip&lt;/code&gt; file and select “Extract All…”:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-1.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/extract-windows-1.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Then choose where you want to unzip all the files and click on “Extract”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-2.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/extract-windows-2.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;You should then finally have a real folder with all the contents of the zipped file. Open the R Project file and RStudio will point to the correct working directory and everything will work.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/unzipping/extract-windows-3.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/unzipping/extract-windows-3.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Professor</title>
-      <link>/professor/</link>
+      <link>https://edp611.theoreticalphysed.com/professor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/professor/</guid>
+      <guid>https://edp611.theoreticalphysed.com/professor/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4278,7 +4278,7 @@ mpg %&amp;gt;%
 &lt;div id=&#34;this-is-me&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;This is me&lt;/h3&gt;
 &lt;center&gt;
-&lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;/img/me.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://lshd.wvu.edu/faculty-staff/roy&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/me.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;this-is-what-i-am&#34; class=&#34;section level3&#34;&gt;
@@ -4342,7 +4342,7 @@ You can check out more about what I do here:
 &lt;div id=&#34;this-is-sparta&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;This is Sparta&lt;/h3&gt;
 &lt;center&gt;
-&lt;img src=&#34;/img/sparta.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;
+&lt;img src=&#34;https://edp611.theoreticalphysed.com/img/sparta.png&#34; style=&#34;width:50.0%&#34; alt=&#34;Me&#34; /&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -4357,19 +4357,19 @@ You can check out more about what I do here:
     
     <item>
       <title>Schedule</title>
-      <link>/schedule/</link>
+      <link>https://edp611.theoreticalphysed.com/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/schedule/</guid>
+      <guid>https://edp611.theoreticalphysed.com/schedule/</guid>
       <description>
 
 
 &lt;p&gt;Every class session may be comprised of four important sections with tasks denoted in a fifth area. You should read about the details for each using the main menu at the top of this webpage&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Sunday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/&#34;&gt;&lt;strong&gt;Readings&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-book&#34;&gt;&lt;/i&gt;): This page contains the readings for the topic. Read these first each time you visit.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/&#34;&gt;&lt;strong&gt;Lesson&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-chalkboard&#34;&gt;&lt;/i&gt;): This page contains interactive lessons, slides, and/or recorded walkthroughs that teaches you the principles and code you need to know. Go through these after doing the content.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-lightbulb&#34;&gt;&lt;/i&gt;): This page contains extra items that are picked or created to help you understand the current material. You do not have anything to complete in this section. From time to time I may post videos of performing something in R that may be beneficial.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/&#34;&gt;&lt;strong&gt;Assignment&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-tasks&#34;&gt;&lt;/i&gt;): This page contains the instructions for all student related tasks including information about the tasks and the final.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/&#34;&gt;&lt;strong&gt;Due&lt;/strong&gt;&lt;/a&gt; (&lt;i class=&#34;fas fa-folder-open&#34;&gt;&lt;/i&gt;): This page contains the instructions what to submit by week. &lt;strong&gt;Assignments are due by Sunday at 11:59 PM or as noted.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;::: note &lt;br/&gt;
 &lt;strong&gt;tl;dr&lt;/strong&gt;: I recommend that you follow these lessons in the following order:&lt;/p&gt;
@@ -4402,75 +4402,75 @@ You can check out more about what I do here:
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 5, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Does it Work and Why Does it Work?&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/01-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/01-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/01-lesson/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/01-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/01-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/01-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/01-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/01-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/01-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/01-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 12, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Neverending Designs, Measures, and Methods&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/02-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/02-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/02-lesson/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/02-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/02-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/02-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/02-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/02-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/02-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/02-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 19, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Truthiness, Damned Truthiness, and Statistics&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/03-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/03-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/03-lesson/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/03-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/03-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/03-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/03-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/03-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/03-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/03-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;July 26, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Pirates Cause Global Warming&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/04-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/04-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/04-lesson/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/04-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/04-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/04-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/04-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/04-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/04-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/04-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;August 2, 2020&lt;/td&gt;
             &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/readings/05-readings/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/05-readings/&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/lesson/05-lesson/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/05-lesson/&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/05-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/05-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/05-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/05-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/05-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/05-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
@@ -4485,11 +4485,11 @@ You can check out more about what I do here:
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
             &lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/example/06-example/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/06-example/&#34;&gt;
                     &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/assignment/06-exercise/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/06-exercise/&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
-            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;/due/06-due/&#34;&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp611.theoreticalphysed.com/due/06-due/&#34;&gt;
               &lt;font color=&#34;008080&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;
@@ -4503,9 +4503,9 @@ You can check out more about what I do here:
     
     <item>
       <title>Syllabus</title>
-      <link>/syllabus/</link>
+      <link>https://edp611.theoreticalphysed.com/syllabus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/syllabus/</guid>
+      <guid>https://edp611.theoreticalphysed.com/syllabus/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4630,7 +4630,7 @@ You can check out more about what I do here:
 &lt;/div&gt;
 &lt;p&gt;R is free, but it can sometimes be a task to install and configure. To make life easier, you can opt to use the free &lt;a href=&#34;http://rstudio.cloud/&#34; target=&#34;_blank&#34;&gt;RStudio.cloud&lt;/a&gt; service, which lets you run a full instance of RStudio in your web browser. This is recommended for those of you who do not want to install programs right now but please note that you will most likely have to in the near future.&lt;/p&gt;
 &lt;p&gt;The service is convenient, but please keep in mind that it can be slow and is not designed to handle large data sets or more complicated analysis and graphics. You also cannot customize much with RStudio.cloud. Over the course of the term, you’ll want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud.&lt;/p&gt;
-&lt;p&gt;You can &lt;a href=&#34;/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;https://edp611.theoreticalphysed.com/resource/install/&#34;&gt;find instructions for installing R, RStudio, and all the tidyverse packages here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;note-online-help&#34; class=&#34;section level3&#34;&gt;
@@ -4656,7 +4656,7 @@ You can check out more about what I do here:
 &lt;/div&gt;
 &lt;div id=&#34;assignments-and-grades&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Assignments and grades&lt;/h2&gt;
-&lt;p&gt;You can find descriptions for all the assignments on the &lt;a href=&#34;/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can find descriptions for all the assignments on the &lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/&#34;&gt;assignments page&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;centered-table&#34;&gt;
 &lt;table style=&#34;width:58%;&#34;&gt;
 &lt;colgroup&gt;
@@ -4903,9 +4903,9 @@ You can check out more about what I do here:
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/readings/01-readings/</link>
+      <link>https://edp611.theoreticalphysed.com/readings/01-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/01-readings/</guid>
+      <guid>https://edp611.theoreticalphysed.com/readings/01-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4919,7 +4919,7 @@ You can check out more about what I do here:
 &lt;div id=&#34;readings&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Readings&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://edp611.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;https://edp611.theoreticalphysed.com/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
 &lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapter 1-2 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34; target=&#34;_blank&#34;&gt;Chapter 1&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4940,9 +4940,9 @@ You can check out more about what I do here:
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/readings/02-readings/</link>
+      <link>https://edp611.theoreticalphysed.com/readings/02-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/02-readings/</guid>
+      <guid>https://edp611.theoreticalphysed.com/readings/02-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -4956,7 +4956,7 @@ You can check out more about what I do here:
 &lt;div id=&#34;readings&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Readings&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://edp611.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/content/&#34;&gt;content&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/&#34;&gt;lessons&lt;/a&gt;, &lt;a href=&#34;https://edp611.theoreticalphysed.com/example/&#34;&gt;examples&lt;/a&gt;, and &lt;a href=&#34;https://edp611.theoreticalphysed.com/assigment/&#34;&gt;assignments&lt;/a&gt; pages for this class&lt;/li&gt;
 &lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; Chapter 3-4 in James McDavid, &lt;em&gt;Program Evaluation and Performance Measurement&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;i class=&#34;fas fa-book fa-fw&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://www.thetaminusb.com/intro-measurement-r/introduction.html&#34; target=&#34;_blank&#34;&gt;Chapter 2&lt;/a&gt; in Tony Albano, &lt;em&gt;Introduction to Educational and Psychological Measurement Using R&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4975,7 +4975,7 @@ You can check out more about what I do here:
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;/assignment/02-exercise/#task-exercise-i-1&#34;&gt;Exercise I Task&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/02-exercise/#task-exercise-i-1&#34;&gt;Exercise I Task&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -4983,9 +4983,9 @@ You can check out more about what I do here:
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/readings/03-readings/</link>
+      <link>https://edp611.theoreticalphysed.com/readings/03-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/03-readings/</guid>
+      <guid>https://edp611.theoreticalphysed.com/readings/03-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -5033,7 +5033,7 @@ You can check out more about what I do here:
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;/assignment/03-exercise/#task-exercise-ii-1&#34;&gt;Exercise II Task&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;These reflection items &lt;em&gt;can&lt;/em&gt; be integrated into this week’s reflection which is item #2 in the &lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/03-exercise/#task-exercise-ii-1&#34;&gt;Exercise II Task&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -5041,9 +5041,9 @@ You can check out more about what I do here:
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/readings/04-readings/</link>
+      <link>https://edp611.theoreticalphysed.com/readings/04-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/04-readings/</guid>
+      <guid>https://edp611.theoreticalphysed.com/readings/04-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -5074,7 +5074,7 @@ You can check out more about what I do here:
 &lt;li&gt;do you think correlation is ever enough? what is that point?&lt;/li&gt;
 &lt;li&gt;how do you think correlation is tied to measurement?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Stuck? Please take a look at &lt;a href=&#34;/handouts/bad_survey.pdf&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; read of some common survey design mistakes that lead to all kinds of measurement errors.&lt;/p&gt;
+&lt;p&gt;Stuck? Please take a look at &lt;a href=&#34;https://edp611.theoreticalphysed.com/handouts/bad_survey.pdf&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; read of some common survey design mistakes that lead to all kinds of measurement errors.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -5082,9 +5082,9 @@ You can check out more about what I do here:
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/readings/05-readings/</link>
+      <link>https://edp611.theoreticalphysed.com/readings/05-readings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/readings/05-readings/</guid>
+      <guid>https://edp611.theoreticalphysed.com/readings/05-readings/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

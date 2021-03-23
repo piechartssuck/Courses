@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interactive lessons | Measurement/Evaluation in Educational Psychology</title>
-    <link>/lesson/</link>
-      <atom:link href="/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp611.theoreticalphysed.com/lesson/</link>
+      <atom:link href="https://edp611.theoreticalphysed.com/lesson/index.xml" rel="self" type="application/rss+xml" />
     <description>Interactive lessons</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/social-image.png</url>
+      <url>https://edp611.theoreticalphysed.com/img/social-image.png</url>
       <title>Interactive lessons</title>
-      <link>/lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/</link>
     </image>
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/lesson/01-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/01-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/01-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/01-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -50,9 +50,9 @@ and
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/lesson/03-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/03-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/03-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/03-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -85,9 +85,9 @@ and
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/lesson/02-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/02-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/02-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/02-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -125,9 +125,9 @@ and
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/lesson/04-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/04-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/04-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/04-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -176,9 +176,9 @@ and
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/lesson/05-lesson/</link>
+      <link>https://edp611.theoreticalphysed.com/lesson/05-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lesson/05-lesson/</guid>
+      <guid>https://edp611.theoreticalphysed.com/lesson/05-lesson/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

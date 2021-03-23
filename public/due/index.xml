@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>So What&#39;s Due? | Measurement/Evaluation in Educational Psychology</title>
-    <link>/due/</link>
-      <atom:link href="/due/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp611.theoreticalphysed.com/due/</link>
+      <atom:link href="https://edp611.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/social-image.png</url>
+      <url>https://edp611.theoreticalphysed.com/img/social-image.png</url>
       <title>So What&#39;s Due?</title>
-      <link>/due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/</link>
     </image>
     
     <item>
       <title>Does it Work and Why Does it Work?</title>
-      <link>/due/01-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/01-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/01-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -53,7 +53,7 @@ Location
 Complete modules in Data Camp that address the basic elements of R and tidying data.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/01-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -66,7 +66,7 @@ Complete modules in Data Camp that address the basic elements of R and tidying d
 Think about a population to test
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -79,7 +79,7 @@ Think about a population to test
 Submit your Week 1 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/01-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/01-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -90,11 +90,11 @@ Submit your Week 1 Reflections.
     
     <item>
       <title>80% of Your Time with Data is Dedicated to Wrangling!</title>
-      <link>/due/02-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/02-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/02-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -129,7 +129,7 @@ Location
 Complete modules in Data Camp that gives you the tools to assess, wrangle, and explore data sets.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/02-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -142,7 +142,7 @@ Complete modules in Data Camp that gives you the tools to assess, wrangle, and e
 Complete a task on running descriptive statistics in R.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/02-exercise/#task-assessing-common-descriptives&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/02-exercise/#task-assessing-common-descriptives&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -155,7 +155,7 @@ Complete a task on running descriptive statistics in R.
 Build a case to test a population.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk2&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk2&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -168,7 +168,7 @@ Build a case to test a population.
 Submit your Week 2 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/02-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/02-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -179,11 +179,11 @@ Submit your Week 2 Reflections.
     
     <item>
       <title>Truthiness, Damned Truthiness, and Statistics</title>
-      <link>/due/03-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/03-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/03-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -218,7 +218,7 @@ Location
 Complete modules in Data Camp that address correlation and regression as well as survey development.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/03-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -231,7 +231,7 @@ Complete modules in Data Camp that address correlation and regression as well as
 Complete a task on analyzing an ICPSR data set.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/03-exercise/#task-exploring-icpsr&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/03-exercise/#task-exploring-icpsr&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -244,7 +244,7 @@ Complete a task on analyzing an ICPSR data set.
 Create a draft instrument and skeleton.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk3&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk3&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -257,7 +257,7 @@ Create a draft instrument and skeleton.
 Submit your Week 3 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/03-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/03-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -268,11 +268,11 @@ Submit your Week 3 Reflections.
     
     <item>
       <title>Pirates Cause Global Warming</title>
-      <link>/due/04-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/04-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/04-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/04-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -307,7 +307,7 @@ Location
 Complete modules in Data Camp that leaves the basics of R and introduces inferences.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/04-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -320,7 +320,7 @@ Complete modules in Data Camp that leaves the basics of R and introduces inferen
 Complete a Request for Proposal or better known as an RFP.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/04-exercise/#task-rfps-with-reliability-and-validity&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/04-exercise/#task-rfps-with-reliability-and-validity&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -333,7 +333,7 @@ Complete a Request for Proposal or better known as an RFP.
 Amend your draft as needed.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk4&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk4&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -346,7 +346,7 @@ Amend your draft as needed.
 Submit your Week 4 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/04-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/04-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -357,11 +357,11 @@ Submit your Week 4 Reflections.
     
     <item>
       <title>Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!</title>
-      <link>/due/05-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/05-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/05-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/05-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -396,7 +396,7 @@ Location
 Complete a module in Data Camp that covers factor analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/lesson/05-lesson/#data-camp-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -409,7 +409,7 @@ Complete a module in Data Camp that covers factor analysis.
 Submit an analysis of a survey data using exploratory factor analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/example/05-example/#exploratory-factor-analysis-efa&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/05-example/#exploratory-factor-analysis-efa&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -422,7 +422,7 @@ Submit an analysis of a survey data using exploratory factor analysis.
 Perform some conditional and post analyses of your pilot data.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk5&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk5&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -435,7 +435,7 @@ Perform some conditional and post analyses of your pilot data.
 Submit your Week 5 Reflections.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;/readings/05-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/readings/05-readings/#questions-to-reflect-on-1&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -446,11 +446,11 @@ Submit your Week 5 Reflections.
     
     <item>
       <title>From a Certain Poimt of View. A Certain Point of View?</title>
-      <link>/due/06-due/</link>
+      <link>https://edp611.theoreticalphysed.com/due/06-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/due/06-due/</guid>
+      <guid>https://edp611.theoreticalphysed.com/due/06-due/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp611.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -485,7 +485,7 @@ Location
 Submit an analysis of a survey data using principal component analysis.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
-&lt;a href=&#34;/example/06-example/#principal-component-analysis-pca&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/example/06-example/#principal-component-analysis-pca&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -498,7 +498,7 @@ Submit an analysis of a survey data using principal component analysis.
 Submit your final instrument&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 20em; &#34;&gt;
-&lt;a href=&#34;/assignment/#anchorwk6&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.theoreticalphysed.com/assignment/#anchorwk6&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

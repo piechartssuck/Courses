@@ -1,15 +1,15 @@
 ---
-title: "From a Certain Poimt of View... A Certain Point of View?"
-linktitle: "Week 6: From a Certain Poimt of View... A Certain Point of View?"
+title: "From a Certain Point of View"
+linktitle: "Week 6: From a Certain Point of View"
 output:
   blogdown::html_page:
     toc: true
 menu:
   assignment:
     parent: Exercises
-    weight: 5
+    weight: 6
 type: docs
-weight: 5
+weight: 1
 editor_options: 
   chunk_output_type: console
 ---
@@ -44,17 +44,17 @@ Where can you find data you ask? Oh you didn't. Well its too late now so here ar
 After you have located a data set, do the data scientist thing and please follow these steps:
 
 1. Open up the codebook and locate multiple columns:
-  - one that has a unique identifier
-  - multiple with quantiative data that have relationships or are being used to assess the same measure^[None should be filled with demographical information.]
+    - one that has a unique identifier
+    - multiple with quantiative data that have relationships or are being used to assess the same measure^[None should be filled with demographical information.]
   
 2. Use the same steps outlined in the example piece to conduct your own principal component analysis. 
 
 3. Answer the following questions on a word document. As usual, please put your name in the upper left hand corner.
-  a. What is the official name of the data set you chose?
-  b. What repository did you get it from (e.g. data.world, Kaggle, etc)? If you did not get it from a place where data is housed, please copy and paste the web address. Please do not copy and paste any additional nonsense that say search engines put on a web address. For example, if you've ever copied and pasted a website after using Google, you may notice that the address is obnoxiously long. I don't want that. If you are having trouble, contact me and I'll help you through it.
-  c. How did you determine the number of components?
-  d. What do the components tell you? *hint: look at the loadings*
-  e. Describe the results into a single paragraph narrative. Try to be specific and concise. There is a very narrow way to interpret the results of a PCA.
+    a. What is the official name of the data set you chose?
+    b. What repository did you get it from (e.g. data.world, Kaggle, etc)? If you did not get it from a place where data is housed, please copy and paste the web address. Please do not copy and paste any additional nonsense that say search engines put on a web address. For example, if you've ever copied and pasted a website after using Google, you may notice that the address is obnoxiously long. I don't want that. If you are having trouble, contact me and I'll help you through it.
+    c. How did you determine the number of components?
+    d. What do the components tell you? *hint: look at the loadings*
+    e. Describe the results into a single paragraph narrative. Try to be specific and concise. There is a very narrow way to interpret the results of a PCA.
   
 4. Submit your script, a copy of the data set and responses on [eCampus](https://ecampus.wvu.edu/){target="_blank"}.
 
