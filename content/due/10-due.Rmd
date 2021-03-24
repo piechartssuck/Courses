@@ -39,7 +39,7 @@ wk_post <- tibble(
 
 Description = c("Create a single post under `#reasoning-participatory-evaluations`",
                 "Plan to meet with me at some point before you complete the evaluation cycle",
-                "Take a look at some *extra* materials on evaluation checklists"
+                "Take a look at some materials on participatory evaluations"
                 ),
 
 
