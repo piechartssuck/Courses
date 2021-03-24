@@ -1,0 +1,71 @@
+---
+title: "Onboarding"
+linktitle: "Week 10: Onboarding"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 10
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+
+wk_post <- tibble(
+  
+"eCampus" = c(unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(checked,
+            unchecked,
+            unchecked),
+
+Description = c("Create a single post under `#reasoning-participatory-evaluations`",
+                "Plan to meet with me at some point before you complete the evaluation cycle",
+                "Take a look at some *extra* materials on evaluation checklists"
+                ),
+
+
+Location = c("[Link](/lesson/10-lesson/#meeting)",
+             "[Link](/lesson/10-lesson/#meeting)",
+             "[Link](/example/09-example/#evaluation-checklists)"
+    )
+)
+```
+
+### What's Due?
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "10em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;')  
+```
+</center>
+
+### A Note About Onboarding
+
+Take this week to tweak or get last minute things done for your evaluation. Thing will ramp up soon!

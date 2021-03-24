@@ -1,0 +1,176 @@
+---
+title: "All Mixed Up"
+linktitle: "Week 11: All Mixed Up"
+menu:
+  content:
+    parent: Readings
+    weight: 11
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+```
+
+## Read Papers
+
+First go ahead and download all of the papers before going through the list
+
+[Week 11 materials](/readings/EDP617Week11Readings.zip)
+
+Now below is a list of papers assigned for this week. While you must read those under **Required**, consider giving the ones under **Optional** a go.
+
+```{r echo=FALSE}
+
+threebars <- as.character(fontawesome::fa("stream", fill = "#019875", height = "15px"))
+
+papers <- tibble(
+  
+  title <- c('Developing Good Research Questions',
+             'Toward a conceptual framework for mixed-method evaluation designs',
+             'Mixed Methods Research Designs in Counseling Psychology',
+             'The Meanings of Self-Ratings of Health: A Qualitative and Quantitative Approach',
+             'Crossing Anxious Borders: Teaching Across the Quantitative–Qualitative ‘Divide’',
+             'Paradigms Lost and Pragmatism Regained',
+             'Strategies for ensuring trustworthiness in qualitative research projects',
+             'Depression and Substance Use in Two Divergent High School Cultures: A Quantitative and Qualitative Analysis'
+  ),
+  
+  Citation <- c(
+    "Bufkin (2007)",
+    "Greene, Caracelli, & Graham (1989)",
+    "Hanson (2005)",
+    "Idler (1999)",
+    "Luttrell (2005)",
+    "Morgan (2006)",
+    "Shenton (2004)",
+    "Way, Stauber, Nakkula, & London (1994)"
+  ),
+  
+  optional <- c(
+    threebars,
+    "",
+    "",
+    "",
+    threebars,
+    threebars,
+    "",
+    threebars
+  ),
+  
+  required <- c(
+    "",
+    threebars,
+    threebars,
+    threebars,
+    "",
+    "",
+    threebars,
+    ""
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+papers %>%
+  kbl(col.names = c("Title", "Citation", "Optional", "Required"), 
+      "html", 
+      escape = FALSE,
+      align = 'lccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;')  %>% 
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;')  %>% 
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;')  %>% 
+  row_spec(6, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(7, extra_css = 'vertical-align: middle !important;') %>% 
+  row_spec(8, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+
+## Post
+
+1. Read and write a single post under [#mixed-methods](https://2021edp617.slack.com/archives/C01S5GG7R0T) that compares, contrasts, and synthesizes:
+    a. **Greene, Caracelli, & Graham (1989)**,
+    b. **Hanson (2005)**, and
+    c. **Idler (1999)**
+    Then discuss which you found to be the most interesting and why. If you did not find any to be of interest, please state your reason.<br><br>
+
+2. Read **Shenton (2004)** and write a single post under [#trustworthiness](https://2021edp617.slack.com/archives/C01RQJBS3UP){target='_blank'} that address the following 
+    + if you identify mostly or fully with <span style="color:#d9534f">**quantitative**</span> methodological approaches:
+      a. State this in your title somewhere.
+      b. Discuss your agreement or disagreement of Shenton’s argument. Please be thorough and justify.
+      c. Ask a question about the reading that you believe a <span style="color:#428bca">**qualitative**</span> person should be able to answer.
+    
+    + if you identify mostly or fully with <span style="color:#428bca">**qualitative**</span> methodological approaches:
+      a. State this in your title somewhere.
+      b. Discuss your agreement or disagreement of Shenton’s argument. Please be thorough and justify.
+      c. Ask a question about the reading that you believe a <span style="color:#d9534f">**quantitative**</span> person should be able to answer.
+

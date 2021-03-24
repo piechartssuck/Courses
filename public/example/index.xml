@@ -541,7 +541,7 @@ Suggesting a course of action
 &lt;h2&gt;Evaluation Phase&lt;/h2&gt;
 &lt;p&gt;We are currently in the evaluation process phase. This involves&lt;/p&gt;
 &lt;center&gt;
-&lt;table&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;text-align:left;&#34;&gt;
@@ -551,21 +551,21 @@ phase
 task
 &lt;/th&gt;
 &lt;th style=&#34;text-align:center;&#34;&gt;
-current &amp;lt;- c(checked)
+current
 &lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
 Process
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
 Administering an evaluation
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;&#34;&gt;
-&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewBox=&#34;0 0 512 512&#34;&gt;
-&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;/&gt;
+&lt;td style=&#34;text-align:center;width: 20em; vertical-align: middle !important;&#34;&gt;
+&lt;svg style=&#34;height:15px;fill:#428bca;&#34; viewbox=&#34;0 0 512 512&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;/tr&gt;

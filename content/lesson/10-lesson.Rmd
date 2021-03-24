@@ -1,0 +1,190 @@
+---
+title: "Onboarding"
+linktitle: "Week 10: Onboarding"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 10
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Meeting
+We should meet once before your evaluation ends. While I typically recommend that this occurs around the middle of your evaluation, that may not be the best for everyone. I will leave it up to each team to suggest suitable dates.
+
+## Participatory Evaluations
+
+### A Refresher
+If you need to remind yourself of what a *participatory evaluation* is, take a look at this rather comprehensive overview at the [University of Kansas](https://ctb.ku.edu/en/table-of-contents/evaluate/evaluation/participatory-evaluation/main){target='_blank'}. 
+
+### Posts
+Evaluations administered within the context of a class are almost never *participatory* simply due to a lack of time. However if in the future you continue to evaluate typical social programs where participant involvement is needed, without getting technical with some statistics^[Called a Bayesian Beta Regression which really rolls off the tongue...], there is a good chance that one out of the next five or six will be. So the question isn't *if* you'll have one that is participatory, its just a matter of *when*. Given that, how you balance stakeholder involvement in the planning and execution of a study can really have an effect on its efficacy. Take a bit to think about the following three items and when you're ready, please address all three in a single narrative and posit it to [#reasoning-participatory-evaluations](https://2021edp617.slack.com/archives/C01SYHGKP6C). 
+
+1. Take a look at the pretty badly rendered plot below. First assess if there is a greater or lesser need for participatory evaluations. Then decide on the level of harm you believe that need would incur. Now choose a letter or group of letters. Interpret and justify your selection.
+  
+    ```{r echo=FALSE, message=FALSE}
+    library(tidyverse)
+    library(magrittr)
+    
+    # constants
+    axis_begin  <- -2
+    axis_end    <- 2
+    total_ticks <- 10
+    
+    # DATA ----
+    # point to plot
+    my_point <- data.frame(x=1,y=1)
+    
+    # chart junk data
+    tick_frame <- 
+      data.frame(ticks = seq(axis_begin, axis_end, length.out = total_ticks), 
+                 zero=0) %>%
+      subset(ticks != 0)
+    
+    lab_frame <- data.frame(lab = seq(axis_begin, axis_end),
+                            zero = 0) %>%
+      subset(lab != 0)
+    
+    tick_sz <- (tail(lab_frame$lab, 1) -  lab_frame$lab[1]) / 128
+    
+    # PLOT ----
+    ggplot(my_point, aes(x,y)) +
+    
+      # CHART JUNK
+      # y axis line
+      geom_segment(x = 0, 
+                   xend = 0, 
+                   y = lab_frame$lab[1], 
+                   yend = tail(lab_frame$lab, 1),
+                   size = 0.5) +
+      # x axis line
+      geom_segment(y = 0, 
+                   yend = 0, 
+                   x = lab_frame$lab[1], 
+                   xend = tail(lab_frame$lab, 1),
+                   size = 0.5) +
+      # x ticks
+      geom_segment(data = tick_frame, 
+                   aes(x = ticks, 
+                       xend = ticks, 
+                       y = zero, 
+                       yend = zero + tick_sz)) +
+      # y ticks
+      geom_segment(data = tick_frame, 
+                   aes(x = zero, 
+                       xend = zero + tick_sz, 
+                       y = ticks, 
+                       yend = ticks)) +
+      theme_minimal() + 
+      annotate("rect", xmin = -2, xmax = 0, ymin = -2, ymax = 0, fill= "#F8F9F9") + 
+      annotate("rect", xmin = 0, xmax = 2, ymin = 0, ymax = 2 , fill= "#F8F9F9") +
+      annotate("rect", xmin = 0, xmax = 2, ymin = -2, ymax = 0, fill= "#FFFFFF") + 
+      annotate("rect", xmin = -2, xmax = 0, ymin = 0, ymax = 2, fill= "#FFFFFF") +
+      annotate("label", x = 1, y = 1, label = "A", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = -1, y = 1, label = "B", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = -1, y = -1, label = "C", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = 1, y = -1, label = "D", fontface="bold", size=6, color = "#005440") +
+      theme(panel.border = element_rect(color = "lightgrey", 
+                                        fill=NA, 
+                                        size=4),
+            axis.text.x = element_text(hjust = 0.5,
+                                       vjust=0.5,
+                                       color="#a9a9a9",
+                                       size=10,
+                                       face="bold",
+                                       margin = margin(t = 5)),
+            axis.text.y = element_text(hjust = 0.5, 
+                                       vjust=0.5, 
+                                       angle = 90, 
+                                       color="#a9a9a9",
+                                       size=10,
+                                       face="bold",
+                                       margin = margin(r = 5)),
+           axis.title = element_blank())+ 
+      geom_hline(yintercept=0, 
+                 color = "lightgrey", 
+                 size=2) + 
+      geom_vline(xintercept=0, 
+                 color = "lightgrey", 
+                 size=2) + 
+      annotate("label", x = 0, y = 0, label = "O", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = 0, y = 1, label = "AB", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = -1, y = 0, label = "BC", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = 0, y = -1, label = "CD", fontface="bold", size=6, color = "#005440") +
+      annotate("label", x = 1, y = 0, label = "DA", fontface="bold", size=6, color = "#005440") +
+      scale_x_continuous(expand = c(0, 0),
+                         breaks = c(-1.8,-1,0,1,1.8),
+                         labels = c("NEVER\nNEEDED", 
+                                    "", 
+                                    "NO\nCHANGE\nin\nNEED", 
+                                    "",
+                                    "ALWAYS\nNEEDED")) + 
+      scale_y_continuous(expand = c(0, 0),
+                         breaks = c(-1.7,-0.9,0,0.9,1.7),
+                         labels = c("ALWAYS\nHARMFUL",
+                                    "",
+                                    "NEITHER\nBENEFICIAL\nor\nHARMFUL",
+                                    "",
+                                    "ALWAYS\nBENEFICIAL"))
+    ```
+
+2. Does stakeholder involvement in an evaluation *begin* to affect the integrity of an evaluation? Defend your response.
+
+3. Where do you personally draw the line at stakeholder involvement?
