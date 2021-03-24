@@ -33,19 +33,19 @@ wk_post <- tibble(
               unchecked,
               unchecked),
 
-"Slack" = c(checked,
-            unchecked,
+"Slack" = c(unchecked,
+            checked,
             unchecked),
 
-Description = c("Create a single post under `#reasoning-participatory-evaluations`",
-                "Plan to meet with me at some point before you complete the evaluation cycle",
-                "Take a look at some materials on participatory evaluations"
+Description = c("Plan to meet with me at some point before you complete the evaluation cycle",
+                "Take a look at some materials on participatory evaluations and create a post",
+                "This week is relatively light so take advantage and get things ready to hit the ground running, if you have not done so already"
                 ),
 
 
 Location = c("[Link](/lesson/10-lesson/#meeting)",
-             "[Link](/lesson/10-lesson/#meeting)",
-             "[Link](/example/09-example/#evaluation-checklists)"
+             "[Link](/lesson/10-lesson/#participatory-evaluations)",
+             "[Link](/due/10-due/#a-note-about-onboarding)"
     )
 )
 ```
@@ -68,4 +68,5 @@ kable(wk_post,
 
 ### A Note About Onboarding
 
-Take this week to tweak or get last minute things done for your evaluation. Thing will ramp up soon!
+Take this week to tweak or get last minute things done for your evaluation. Things will ramp up soon! Next week we'll get back to a normal schedule, though you will notice that the overall in-course workload will drop significantly to give each team *ample* time to conduct their evaluation. Please reach out if you need help! 
+
