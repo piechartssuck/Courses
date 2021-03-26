@@ -4932,6 +4932,14 @@ ggraph(bigram_graph, layout = &amp;quot;fr&amp;quot;) +
 &lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/vis/vis-network.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/vis/vis-network.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/visNetwork-binding/visNetwork.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/d3/d3.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/forceNetwork-binding/forceNetwork.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/sankey/sankey.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -4952,6 +4960,11 @@ ggraph(bigram_graph, layout = &amp;quot;fr&amp;quot;) +
 &lt;li&gt;&lt;a href=&#34;#the-network-package&#34;&gt;The &lt;code&gt;network&lt;/code&gt; package&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#the-tidygraph-and-ggraph-packages&#34;&gt;The &lt;code&gt;tidygraph&lt;/code&gt; and &lt;code&gt;ggraph&lt;/code&gt; packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#interactive-network-graphs-with-visnetwork-and-networkd3&#34;&gt;Interactive network graphs with &lt;code&gt;visNetwork&lt;/code&gt; and &lt;code&gt;networkD3&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visnetwork&#34;&gt;visNetwork&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#networkd3&#34;&gt;networkD3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -4968,7 +4981,7 @@ ggraph(bigram_graph, layout = &amp;quot;fr&amp;quot;) +
 &lt;div id=&#34;first-things-first-download-the-scripts-and-data-sets&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;First Things First! Download the scripts and data sets&lt;/h3&gt;
 &lt;p&gt;Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://edp693e.theoreticalphysed.com/data/Week9materials.zip&#34;&gt;Week 9 materials&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://edp693e.theoreticalphysed.com/data/Week9examplematerials.zip&#34;&gt;Week 9 materials&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;set-your-working-directory&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Set your Working Directory&lt;/h3&gt;
@@ -5040,7 +5053,8 @@ A cross platform package used for analysing and visualizing networks
 ## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   name = col_character(),
-##   id = col_double()
+##   id = col_double(),
+##   allegiance = col_character()
 ## )&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and take a look&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(edges)&lt;/code&gt;&lt;/pre&gt;
@@ -5054,15 +5068,15 @@ A cross platform package used for analysing and visualizing networks
 ## 5 HAN       R2-D2       5
 ## 6 CHEWBACCA R2-D2       3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(nodes)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 2
-##   name           id
-##   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
-## 1 R2-D2           0
-## 2 CHEWBACCA       1
-## 3 C-3PO           2
-## 4 LUKE            3
-## 5 DARTH VADER     4
-## 6 CAMIE           5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   name           id allegiance       
+##   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            
+## 1 R2-D2           0 Galactic Republic
+## 2 CHEWBACCA       1 Galactic Republic
+## 3 C-3PO           2 Galactic Republic
+## 4 LUKE            3 Jedi Order       
+## 5 DARTH VADER     4 Sith Order       
+## 6 CAMIE           5 Unknown&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For example, we learn that C-3PO and R2-D2 appeared in 17 scenes together.&lt;/p&gt;
 &lt;p&gt;How do we convert these two datasets into a network object in R? There are multiple packages to work with networks, but the most popular is &lt;code&gt;igraph&lt;/code&gt; because it’s very flexible and easy to do, and in my experience it’s much faster and scales well to very large networks. Other packages that you may want to explore are &lt;code&gt;sna&lt;/code&gt; and &lt;code&gt;networks&lt;/code&gt;. We won’t be covering those in great detail because some network modeling packages are not compatible with &lt;code&gt;igraph&lt;/code&gt; and there’s a separate course taught in the every &lt;strong&gt;&lt;em&gt;Fall term during odd years&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Now, how do we create the igraph object? We can use the &lt;code&gt;graph_from_data_frame()&lt;/code&gt; function, which takes two arguments: &lt;code&gt;d&lt;/code&gt;, the data frame with the edge list in the first two columns; and &lt;code&gt;vertices&lt;/code&gt;, a data frame with node data with the node label in the first column. (Note that igraph calls the nodes &lt;code&gt;vertices&lt;/code&gt;, but it’s exactly the same thing.)&lt;/p&gt;
@@ -5070,9 +5084,9 @@ A cross platform package used for analysing and visualizing networks
                            vertices=nodes,
                            directed=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;g &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## IGRAPH e36261d UNW- 22 60 -- 
-## + attr: name (v/c), id (v/n), weight (e/n)
-## + edges from e36261d (vertex names):
+&lt;pre&gt;&lt;code&gt;## IGRAPH ac319ee UNW- 22 60 -- 
+## + attr: name (v/c), id (v/n), allegiance (v/c), weight (e/n)
+## + edges from ac319ee (vertex names):
 ##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
 ##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
 ##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
@@ -5219,7 +5233,7 @@ The total number of edges
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;List of nodes&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;V(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## + 22/22 vertices, named, from e36261d:
+&lt;pre&gt;&lt;code&gt;## + 22/22 vertices, named, from ac319ee:
 ##  [1] R2-D2       CHEWBACCA   C-3PO       LUKE        DARTH VADER CAMIE      
 ##  [7] BIGGS       LEIA        BERU        OWEN        OBI-WAN     MOTTI      
 ## [13] TARKIN      HAN         GREEDO      JABBA       DODONNA     GOLD LEADER
@@ -5244,10 +5258,20 @@ The total number of edges
 ## [21] &amp;quot;RED TEN&amp;quot;     &amp;quot;GOLD FIVE&amp;quot;  
 ## 
 ## $id
-##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+## 
+## $allegiance
+##  [1] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+##  [4] &amp;quot;Jedi Order&amp;quot;        &amp;quot;Sith Order&amp;quot;        &amp;quot;Unknown&amp;quot;          
+##  [7] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [10] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Jedi Order&amp;quot;        &amp;quot;Galactic Empire&amp;quot;  
+## [13] &amp;quot;Galactic Empire&amp;quot;   &amp;quot;Galactic Republic&amp;quot; &amp;quot;Hutt Cartel&amp;quot;      
+## [16] &amp;quot;Hutt Cartel&amp;quot;       &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [19] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [22] &amp;quot;Galactic Republic&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;List of edges&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;E(g)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## + 60/60 edges from e36261d (vertex names):
+&lt;pre&gt;&lt;code&gt;## + 60/60 edges from ac319ee (vertex names):
 ##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
 ##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
 ##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
@@ -5369,6 +5393,16 @@ vertex_attr(g)&lt;/code&gt;&lt;/pre&gt;
 ## $id
 ##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
 ## 
+## $allegiance
+##  [1] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+##  [4] &amp;quot;Jedi Order&amp;quot;        &amp;quot;Sith Order&amp;quot;        &amp;quot;Unknown&amp;quot;          
+##  [7] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [10] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Jedi Order&amp;quot;        &amp;quot;Galactic Empire&amp;quot;  
+## [13] &amp;quot;Galactic Empire&amp;quot;   &amp;quot;Galactic Republic&amp;quot; &amp;quot;Hutt Cartel&amp;quot;      
+## [16] &amp;quot;Hutt Cartel&amp;quot;       &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [19] &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot; &amp;quot;Galactic Republic&amp;quot;
+## [22] &amp;quot;Galactic Republic&amp;quot;
+## 
 ## $size
 ##  [1] 18.648092 19.572539 19.635532 22.439250 12.591581  8.545177 13.556229
 ##  [8] 19.310150 11.788898 11.317766 18.567281  8.545177 12.210340 20.528107
@@ -5436,7 +5470,7 @@ plot(g, layout=layout_with_fr, main=&amp;quot;Force-directed&amp;quot;)&lt;/code
 &lt;p&gt;Note that each of these is actually just a matrix of horizontal and vertical locations for each node. If you don’t care about this, just ignore what’s below.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;l &amp;lt;- layout_randomly(g)
 str(l)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  num [1:22, 1:2] 0.752 0.176 -0.194 -0.89 0.192 ...&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  num [1:22, 1:2] -0.1892 0.1239 -0.0684 -0.3249 0.2123 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The most popular layouts are &lt;a href=&#34;https://en.wikipedia.org/wiki/Force-directed_graph_drawing&#34; target=&#34;_blank&#34;&gt;force-directed&lt;/a&gt;. These algorithms, such as &lt;em&gt;Fruchterman-Reingold&lt;/em&gt;, try to position the nodes so that the edges have similar length and there are as few crossing edges as possible. The idea is to generate “clean” layouts, where nodes that are closer to each other share more connections in common that those that are located further apart. Note that this is a non-deterministic algorithm: choosing a different seed will generate different layouts.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
 
@@ -5533,11 +5567,11 @@ plot(g, layout=fr)&lt;/code&gt;&lt;/pre&gt;
 ## 5.957835e-01 6.577603e-01 8.125507e-01 1.000000e+00&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally, not exactly a measure of centrality, but we can learn more about who each node is connected to by using the following functions: &lt;code&gt;neighbors&lt;/code&gt; (for direct neighbors) and &lt;code&gt;ego&lt;/code&gt; (for neighbors up to &lt;code&gt;n&lt;/code&gt; neighbors away)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;neighbors(g, v=which(V(g)$name==&amp;quot;DARTH VADER&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## + 5/22 vertices, named, from e36261d:
+&lt;pre&gt;&lt;code&gt;## + 5/22 vertices, named, from ac319ee:
 ## [1] CHEWBACCA LEIA      OBI-WAN   MOTTI     TARKIN&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ego(g, order=2, nodes=which(V(g)$name==&amp;quot;DARTH VADER&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [[1]]
-## + 14/22 vertices, named, from e36261d:
+## + 14/22 vertices, named, from ac319ee:
 ##  [1] DARTH VADER CHEWBACCA   LEIA        OBI-WAN     MOTTI       TARKIN     
 ##  [7] R2-D2       C-3PO       LUKE        HAN         DODONNA     BIGGS      
 ## [13] BERU        RED LEADER&lt;/code&gt;&lt;/pre&gt;
@@ -5545,7 +5579,7 @@ plot(g, layout=fr)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;diameter(g, directed=FALSE, weights=NA)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_diameter(g, directed=FALSE, weights=NA)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## + 4/22 vertices, named, from e36261d:
+&lt;pre&gt;&lt;code&gt;## + 4/22 vertices, named, from ac319ee:
 ## [1] DARTH VADER CHEWBACCA   C-3PO       OWEN&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean_distance(g, directed=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 1.909524&lt;/code&gt;&lt;/pre&gt;
@@ -5737,19 +5771,19 @@ for (k in 1:6){
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let’s remind ourselves of what the data looks like!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nodes&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 22 x 2
-##    name           id
-##    &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
-##  1 R2-D2           0
-##  2 CHEWBACCA       1
-##  3 C-3PO           2
-##  4 LUKE            3
-##  5 DARTH VADER     4
-##  6 CAMIE           5
-##  7 BIGGS           6
-##  8 LEIA            7
-##  9 BERU            8
-## 10 OWEN            9
+&lt;pre&gt;&lt;code&gt;## # A tibble: 22 x 3
+##    name           id allegiance       
+##    &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            
+##  1 R2-D2           0 Galactic Republic
+##  2 CHEWBACCA       1 Galactic Republic
+##  3 C-3PO           2 Galactic Republic
+##  4 LUKE            3 Jedi Order       
+##  5 DARTH VADER     4 Sith Order       
+##  6 CAMIE           5 Unknown          
+##  7 BIGGS           6 Galactic Republic
+##  8 LEIA            7 Galactic Republic
+##  9 BERU            8 Galactic Republic
+## 10 OWEN            9 Galactic Republic
 ## # … with 12 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;edges&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 60 x 3
@@ -5815,6 +5849,14 @@ for (k in 1:6){
 ##  density = 0.1428571 
 ## 
 ## Vertex attributes:
+## 
+##  allegiance:
+##    character valued attribute
+##    attribute summary:
+##   Galactic Empire Galactic Republic       Hutt Cartel        Jedi Order 
+##                 2                13                 2                 2 
+##        Sith Order           Unknown 
+##                 1                 1 
 ## 
 ##  id:
 ##    numeric valued attribute
@@ -5959,15 +6001,15 @@ for (k in 1:6){
 ## #
 ## # An undirected simple graph with 2 components
 ## #
-## # Node Data: 22 x 2 (active)
-##   name           id
-##   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
-## 1 R2-D2           0
-## 2 CHEWBACCA       1
-## 3 C-3PO           2
-## 4 LUKE            3
-## 5 DARTH VADER     4
-## 6 CAMIE           5
+## # Node Data: 22 x 3 (active)
+##   name           id allegiance       
+##   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            
+## 1 R2-D2           0 Galactic Republic
+## 2 CHEWBACCA       1 Galactic Republic
+## 3 C-3PO           2 Galactic Republic
+## 4 LUKE            3 Jedi Order       
+## 5 DARTH VADER     4 Sith Order       
+## 6 CAMIE           5 Unknown          
 ## # … with 16 more rows
 ## #
 ## # Edge Data: 60 x 3
@@ -5977,8 +6019,355 @@ for (k in 1:6){
 ## 2     1     4     13
 ## 3     1    11      6
 ## # … with 57 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note fro the output that&lt;/p&gt;
 &lt;p&gt;Notice that the package is built on &lt;code&gt;igraph&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Note from the output that the nodes are active. This is what is known as an &lt;em&gt;active tibble&lt;/em&gt; within a &lt;code&gt;tbl_graph&lt;/code&gt; object and makes it possible to manipulate the data in one tibble at a time. The nodes tibble is activated by default, but you can change which tibble is active with the &lt;code&gt;activate()&lt;/code&gt; function. Thus, if I wanted to rearrange the rows in the edges tibble to list those with the highest &lt;em&gt;weight&lt;/em&gt; first, I could use &lt;code&gt;activate()&lt;/code&gt; and then &lt;code&gt;arrange()&lt;/code&gt; like so&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;starwars_tidy %&amp;gt;% 
+  activate(edges) %&amp;gt;% 
+  arrange(desc(weight))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tbl_graph: 22 nodes and 60 edges
+## #
+## # An undirected simple graph with 2 components
+## #
+## # Edge Data: 60 x 3 (active)
+##    from    to weight
+##   &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;  &amp;lt;dbl&amp;gt;
+## 1     4    14     26
+## 2     2    14     19
+## 3     4    11     19
+## 4     3     4     18
+## 5     1     3     17
+## 6     4     8     17
+## # … with 54 more rows
+## #
+## # Node Data: 22 x 3
+##   name         id allegiance       
+##   &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            
+## 1 R2-D2         0 Galactic Republic
+## 2 CHEWBACCA     1 Galactic Republic
+## 3 C-3PO         2 Galactic Republic
+## # … with 19 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;em&gt;tidy&lt;/em&gt; approach is relatively simple so lets plot it&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggraph(starwars_tidy) + 
+  geom_edge_link() + 
+  geom_node_point() + 
+  theme_graph()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Using `stress` as default layout&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/09-example_files/figure-html/unnamed-chunk-71-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This uses a default layout called stress but there are any others which you can find &lt;a href=&#34;https://www.data-imaginist.com/2017/ggraph-introduction-layouts/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Yes it is also absolutely similar to &lt;code&gt;ggplot&lt;/code&gt; which allows us to use all kinds of common packages and functions&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggraph(starwars_tidy, 
+       layout = &amp;quot;graphopt&amp;quot;) + 
+  geom_edge_link(aes(width = weight), 
+                 alpha = 0.5,
+                 show.legend = FALSE) + 
+  scale_edge_width(range = c(0.2, 1.2)) +
+  geom_node_point(aes(size = centrality_pagerank(),
+                      fill = centrality_degree()),
+                  shape = 21,
+                  stroke = 1.4,
+                  color = &amp;quot;#4d194d&amp;quot;,
+                  show.legend = FALSE) +
+  scale_size(range = c(1, 14)) +
+  scale_fill_gradient(low = &amp;quot;#81b29a&amp;quot;, high = &amp;quot;#3d405b&amp;quot;) +
+  geom_node_label(aes(label = name),
+                 repel = TRUE) +
+  coord_fixed() +
+  theme_graph()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/09-example_files/figure-html/unnamed-chunk-72-1.png&#34; width=&#34;672&#34; /&gt;
+and do fun things with the data&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggraph(starwars_tidy, 
+       layout = &amp;quot;linear&amp;quot;,
+       circular = TRUE) + 
+  geom_edge_arc(aes(width = weight,
+                    color = weight), 
+                alpha = 0.8,
+                show.legend = FALSE) + 
+  scale_edge_width(range = c(0.2, 2)) +
+  scale_edge_color_gradient(low = &amp;quot;#b7094c&amp;quot;, high = &amp;quot;#0091ad&amp;quot;) +
+  geom_node_label(aes(label = name,
+                      size = centrality_betweenness()),
+                  show.legend = FALSE) +
+  scale_size(range = c(3, 6)) +
+  theme_graph()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://edp693e.theoreticalphysed.com/example/09-example_files/figure-html/unnamed-chunk-73-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactive-network-graphs-with-visnetwork-and-networkd3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Interactive network graphs with &lt;code&gt;visNetwork&lt;/code&gt; and &lt;code&gt;networkD3&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Please install and load the following package&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(visNetwork)
+library(networkD3)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;visnetwork&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;visNetwork&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;visNetwork()&lt;/code&gt; package uses a nodes list and edges list to create an interactive graph and it is picky! Here are the requirements&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;from the &lt;code&gt;node&lt;/code&gt; data set
+&lt;ul&gt;
+&lt;li&gt;must include an &lt;strong&gt;id&lt;/strong&gt; column&lt;/li&gt;
+&lt;li&gt;names of the nodes must come from the &lt;strong&gt;label&lt;/strong&gt; column&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;from the &lt;code&gt;edge&lt;/code&gt; data set
+&lt;ul&gt;
+&lt;li&gt;must have &lt;strong&gt;from&lt;/strong&gt; and &lt;strong&gt;to&lt;/strong&gt; columns.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The network is fun to play around with. With just the basic plot, you can&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;move the nodes and the graph will use an algorithm to keep the nodes properly spaced.&lt;/li&gt;
+&lt;li&gt;zoom in and out on the plot and move it around to re-center it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So we can grab the edge set&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;edge_list &amp;lt;-
+  starwars_tidy %&amp;gt;%
+    activate(edges) %&amp;gt;%
+    data.frame()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Take a look&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;edge_list&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    from to weight
+## 1     1  3     17
+## 2     1  4     13
+## 3     1 11      6
+## 4     1  8      5
+## 5     1 14      5
+## 6     1  2      3
+## 7     1 17      1
+## 8     2 11      7
+## 9     2  3      5
+## 10    2  4     16
+## 11    2 14     19
+## 12    2  8     11
+## 13    2  5      1
+## 14    2 17      1
+## 15    4  6      2
+## 16    6  7      2
+## 17    4  7      4
+## 18    5  8      1
+## 19    4  9      3
+## 20    9 10      3
+## 21    3  9      2
+## 22    4 10      3
+## 23    3  4     18
+## 24    3 10      2
+## 25    3  8      6
+## 26    4  8     17
+## 27    8  9      1
+## 28    4 11     19
+## 29    3 11      6
+## 30    8 11      1
+## 31   12 13      2
+## 32    5 12      1
+## 33    5 13      7
+## 34   11 14      9
+## 35    4 14     26
+## 36   14 15      1
+## 37   14 16      1
+## 38    3 14      6
+## 39    8 12      1
+## 40    8 13      1
+## 41    8 14     13
+## 42    5 11      1
+## 43   17 18      1
+## 44   17 19      1
+## 45    4 17      1
+## 46   18 19      1
+## 47    4 18      1
+## 48    4 19      2
+## 49    7  8      1
+## 50    8 20      1
+## 51    4 20      3
+## 52    7 20      3
+## 53    3  7      1
+## 54    3 20      1
+## 55   19 20      3
+## 56   18 20      1
+## 57    7 19      2
+## 58   20 21      1
+## 59    7 18      1
+## 60    4 21      1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And manipulate the node a bit&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;node_list &amp;lt;-
+  starwars_tidy %&amp;gt;%
+    activate(nodes) %&amp;gt;%
+    data.frame() %&amp;gt;%
+    rename(label = name) %&amp;gt;%
+    rename(group = allegiance)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Take a look&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;node_list&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##          label id             group
+## 1        R2-D2  0 Galactic Republic
+## 2    CHEWBACCA  1 Galactic Republic
+## 3        C-3PO  2 Galactic Republic
+## 4         LUKE  3        Jedi Order
+## 5  DARTH VADER  4        Sith Order
+## 6        CAMIE  5           Unknown
+## 7        BIGGS  6 Galactic Republic
+## 8         LEIA  7 Galactic Republic
+## 9         BERU  8 Galactic Republic
+## 10        OWEN  9 Galactic Republic
+## 11     OBI-WAN 10        Jedi Order
+## 12       MOTTI 11   Galactic Empire
+## 13      TARKIN 12   Galactic Empire
+## 14         HAN 13 Galactic Republic
+## 15      GREEDO 14       Hutt Cartel
+## 16       JABBA 15       Hutt Cartel
+## 17     DODONNA 16 Galactic Republic
+## 18 GOLD LEADER 17 Galactic Republic
+## 19       WEDGE 18 Galactic Republic
+## 20  RED LEADER 19 Galactic Republic
+## 21     RED TEN 20 Galactic Republic
+## 22   GOLD FIVE 21 Galactic Republic&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and plot it&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;visNetwork(node_list,
+           edge_list)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;visNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;nodes&#34;:{&#34;label&#34;:[&#34;R2-D2&#34;,&#34;CHEWBACCA&#34;,&#34;C-3PO&#34;,&#34;LUKE&#34;,&#34;DARTH VADER&#34;,&#34;CAMIE&#34;,&#34;BIGGS&#34;,&#34;LEIA&#34;,&#34;BERU&#34;,&#34;OWEN&#34;,&#34;OBI-WAN&#34;,&#34;MOTTI&#34;,&#34;TARKIN&#34;,&#34;HAN&#34;,&#34;GREEDO&#34;,&#34;JABBA&#34;,&#34;DODONNA&#34;,&#34;GOLD LEADER&#34;,&#34;WEDGE&#34;,&#34;RED LEADER&#34;,&#34;RED TEN&#34;,&#34;GOLD FIVE&#34;],&#34;id&#34;:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],&#34;group&#34;:[&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Sith Order&#34;,&#34;Unknown&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Galactic Empire&#34;,&#34;Galactic Empire&#34;,&#34;Galactic Republic&#34;,&#34;Hutt Cartel&#34;,&#34;Hutt Cartel&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;]},&#34;edges&#34;:{&#34;from&#34;:[1,1,1,1,1,1,1,2,2,2,2,2,2,2,4,6,4,5,4,9,3,4,3,3,3,4,8,4,3,8,12,5,5,11,4,14,14,3,8,8,8,5,17,17,4,18,4,4,7,8,4,7,3,3,19,18,7,20,7,4],&#34;to&#34;:[3,4,11,8,14,2,17,11,3,4,14,8,5,17,6,7,7,8,9,10,9,10,4,10,8,8,9,11,11,11,13,12,13,14,14,15,16,14,12,13,14,11,18,19,17,19,18,19,8,20,20,20,7,20,20,20,19,21,18,21],&#34;weight&#34;:[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1]},&#34;nodesToDataframe&#34;:true,&#34;edgesToDataframe&#34;:true,&#34;options&#34;:{&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;100%&#34;,&#34;nodes&#34;:{&#34;shape&#34;:&#34;dot&#34;},&#34;manipulation&#34;:{&#34;enabled&#34;:false}},&#34;groups&#34;:[&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Sith Order&#34;,&#34;Unknown&#34;,&#34;Galactic Empire&#34;,&#34;Hutt Cartel&#34;],&#34;width&#34;:null,&#34;height&#34;:null,&#34;idselection&#34;:{&#34;enabled&#34;:false},&#34;byselection&#34;:{&#34;enabled&#34;:false},&#34;main&#34;:null,&#34;submain&#34;:null,&#34;footer&#34;:null,&#34;background&#34;:&#34;rgba(0, 0, 0, 0)&#34;},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;Let’s work on the aesthetics of the nodes&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;new_node_list &amp;lt;- node_list %&amp;gt;%
+                  mutate(borderWidth = 1.5) %&amp;gt;%
+                  mutate(color.background = 
+                           case_when(
+                             group == &amp;quot;Galactic Republic&amp;quot; ~ &amp;quot;#CF6728&amp;quot;,
+                             group == &amp;quot;Jedi Order&amp;quot; ~ &amp;quot;#4BA1F0&amp;quot;,
+                             group == &amp;quot;Galactic Empire&amp;quot; ~ &amp;quot;#741D2F&amp;quot;,
+                             group == &amp;quot;Sith Order&amp;quot; ~ &amp;quot;#912721&amp;quot;,
+                             group == &amp;quot;Hutt Cartel&amp;quot; ~ &amp;quot;#c3cb71&amp;quot;,
+                             group == &amp;quot;Unknown&amp;quot; ~ &amp;quot;#5a5255&amp;quot;
+                           )
+                  ) %&amp;gt;%
+                  mutate(color.border = &amp;quot;#43675a&amp;quot;) %&amp;gt;%
+                  mutate(color.highlight.border = &amp;quot;#3a95a7&amp;quot;) %&amp;gt;%
+                  mutate(font.color = &amp;quot;#FFFFFF&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and weight the edges for no good reason&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weighted_edges &amp;lt;- mutate(edge_list, 
+                         width = weight/4 + 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weighted_edges &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    from to weight width
+## 1     1  3     17  5.25
+## 2     1  4     13  4.25
+## 3     1 11      6  2.50
+## 4     1  8      5  2.25
+## 5     1 14      5  2.25
+## 6     1  2      3  1.75
+## 7     1 17      1  1.25
+## 8     2 11      7  2.75
+## 9     2  3      5  2.25
+## 10    2  4     16  5.00
+## 11    2 14     19  5.75
+## 12    2  8     11  3.75
+## 13    2  5      1  1.25
+## 14    2 17      1  1.25
+## 15    4  6      2  1.50
+## 16    6  7      2  1.50
+## 17    4  7      4  2.00
+## 18    5  8      1  1.25
+## 19    4  9      3  1.75
+## 20    9 10      3  1.75
+## 21    3  9      2  1.50
+## 22    4 10      3  1.75
+## 23    3  4     18  5.50
+## 24    3 10      2  1.50
+## 25    3  8      6  2.50
+## 26    4  8     17  5.25
+## 27    8  9      1  1.25
+## 28    4 11     19  5.75
+## 29    3 11      6  2.50
+## 30    8 11      1  1.25
+## 31   12 13      2  1.50
+## 32    5 12      1  1.25
+## 33    5 13      7  2.75
+## 34   11 14      9  3.25
+## 35    4 14     26  7.50
+## 36   14 15      1  1.25
+## 37   14 16      1  1.25
+## 38    3 14      6  2.50
+## 39    8 12      1  1.25
+## 40    8 13      1  1.25
+## 41    8 14     13  4.25
+## 42    5 11      1  1.25
+## 43   17 18      1  1.25
+## 44   17 19      1  1.25
+## 45    4 17      1  1.25
+## 46   18 19      1  1.25
+## 47    4 18      1  1.25
+## 48    4 19      2  1.50
+## 49    7  8      1  1.25
+## 50    8 20      1  1.25
+## 51    4 20      3  1.75
+## 52    7 20      3  1.75
+## 53    3  7      1  1.25
+## 54    3 20      1  1.25
+## 55   19 20      3  1.75
+## 56   18 20      1  1.25
+## 57    7 19      2  1.50
+## 58   20 21      1  1.25
+## 59    7 18      1  1.25
+## 60    4 21      1  1.25&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and plot it&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;visNetwork(new_node_list, 
+           weighted_edges, 
+           height = &amp;quot;700px&amp;quot;, 
+           width = &amp;quot;100%&amp;quot;) %&amp;gt;%
+  visEdges(color = &amp;quot;#c7bbc9&amp;quot;) %&amp;gt;%
+  visNodes(shape = &amp;quot;circle&amp;quot;, 
+           color = list(hover = &amp;quot;#5cb85c&amp;quot;,
+                        highlight = &amp;quot;#449d44&amp;quot;), 
+           shadow = list(enabled = TRUE, 
+                         size = 5))  %&amp;gt;%
+  visInteraction(navigationButtons = TRUE, 
+                 hover = TRUE) %&amp;gt;%
+  visOptions(selectedBy = &amp;quot;group&amp;quot;,
+             highlightNearest = TRUE, 
+             nodesIdSelection = TRUE,
+             collapse = TRUE) %&amp;gt;%
+  visPhysics(solver = &amp;quot;repulsion&amp;quot;, 
+             repulsion = list(nodeDistance = 400, 
+                              springlength = 300, 
+                              centralGravity = 0.2),
+             timestep = 0.75, 
+             stabilization = TRUE) %&amp;gt;%
+  visPhysics(stabilization = FALSE)   %&amp;gt;%
+  visLayout(randomSeed = 12)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:700px;&#34; class=&#34;visNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;nodes&#34;:{&#34;label&#34;:[&#34;R2-D2&#34;,&#34;CHEWBACCA&#34;,&#34;C-3PO&#34;,&#34;LUKE&#34;,&#34;DARTH VADER&#34;,&#34;CAMIE&#34;,&#34;BIGGS&#34;,&#34;LEIA&#34;,&#34;BERU&#34;,&#34;OWEN&#34;,&#34;OBI-WAN&#34;,&#34;MOTTI&#34;,&#34;TARKIN&#34;,&#34;HAN&#34;,&#34;GREEDO&#34;,&#34;JABBA&#34;,&#34;DODONNA&#34;,&#34;GOLD LEADER&#34;,&#34;WEDGE&#34;,&#34;RED LEADER&#34;,&#34;RED TEN&#34;,&#34;GOLD FIVE&#34;],&#34;id&#34;:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],&#34;group&#34;:[&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Sith Order&#34;,&#34;Unknown&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Galactic Empire&#34;,&#34;Galactic Empire&#34;,&#34;Galactic Republic&#34;,&#34;Hutt Cartel&#34;,&#34;Hutt Cartel&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;,&#34;Galactic Republic&#34;],&#34;borderWidth&#34;:[1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5],&#34;color.background&#34;:[&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#4BA1F0&#34;,&#34;#912721&#34;,&#34;#5a5255&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#4BA1F0&#34;,&#34;#741D2F&#34;,&#34;#741D2F&#34;,&#34;#CF6728&#34;,&#34;#c3cb71&#34;,&#34;#c3cb71&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;,&#34;#CF6728&#34;],&#34;color.border&#34;:[&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;,&#34;#43675a&#34;],&#34;color.highlight.border&#34;:[&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;,&#34;#3a95a7&#34;],&#34;font.color&#34;:[&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;,&#34;#FFFFFF&#34;]},&#34;edges&#34;:{&#34;from&#34;:[1,1,1,1,1,1,1,2,2,2,2,2,2,2,4,6,4,5,4,9,3,4,3,3,3,4,8,4,3,8,12,5,5,11,4,14,14,3,8,8,8,5,17,17,4,18,4,4,7,8,4,7,3,3,19,18,7,20,7,4],&#34;to&#34;:[3,4,11,8,14,2,17,11,3,4,14,8,5,17,6,7,7,8,9,10,9,10,4,10,8,8,9,11,11,11,13,12,13,14,14,15,16,14,12,13,14,11,18,19,17,19,18,19,8,20,20,20,7,20,20,20,19,21,18,21],&#34;weight&#34;:[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1],&#34;width&#34;:[5.25,4.25,2.5,2.25,2.25,1.75,1.25,2.75,2.25,5,5.75,3.75,1.25,1.25,1.5,1.5,2,1.25,1.75,1.75,1.5,1.75,5.5,1.5,2.5,5.25,1.25,5.75,2.5,1.25,1.5,1.25,2.75,3.25,7.5,1.25,1.25,2.5,1.25,1.25,4.25,1.25,1.25,1.25,1.25,1.25,1.25,1.5,1.25,1.25,1.75,1.75,1.25,1.25,1.75,1.25,1.5,1.25,1.25,1.25]},&#34;nodesToDataframe&#34;:true,&#34;edgesToDataframe&#34;:true,&#34;options&#34;:{&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;100%&#34;,&#34;nodes&#34;:{&#34;shape&#34;:&#34;circle&#34;,&#34;color&#34;:{&#34;hover&#34;:&#34;#5cb85c&#34;,&#34;highlight&#34;:&#34;#449d44&#34;},&#34;shadow&#34;:{&#34;enabled&#34;:true,&#34;size&#34;:5}},&#34;manipulation&#34;:{&#34;enabled&#34;:false},&#34;edges&#34;:{&#34;color&#34;:&#34;#c7bbc9&#34;},&#34;interaction&#34;:{&#34;hover&#34;:true,&#34;navigationButtons&#34;:true},&#34;physics&#34;:{&#34;stabilization&#34;:false},&#34;layout&#34;:{&#34;randomSeed&#34;:12}},&#34;groups&#34;:[&#34;Galactic Republic&#34;,&#34;Jedi Order&#34;,&#34;Sith Order&#34;,&#34;Unknown&#34;,&#34;Galactic Empire&#34;,&#34;Hutt Cartel&#34;],&#34;width&#34;:&#34;100%&#34;,&#34;height&#34;:&#34;700px&#34;,&#34;idselection&#34;:{&#34;enabled&#34;:true,&#34;style&#34;:&#34;width: 150px; height: 26px&#34;,&#34;useLabels&#34;:true,&#34;main&#34;:&#34;Select by id&#34;},&#34;byselection&#34;:{&#34;enabled&#34;:true,&#34;style&#34;:&#34;width: 150px; height: 26px&#34;,&#34;multiple&#34;:false,&#34;hideColor&#34;:&#34;rgba(200,200,200,0.5)&#34;,&#34;highlight&#34;:false,&#34;variable&#34;:&#34;group&#34;,&#34;main&#34;:&#34;Select by group&#34;,&#34;values&#34;:[&#34;Galactic Empire&#34;,&#34;Galactic Republic&#34;,&#34;Hutt Cartel&#34;,&#34;Jedi Order&#34;,&#34;Sith Order&#34;,&#34;Unknown&#34;]},&#34;main&#34;:null,&#34;submain&#34;:null,&#34;footer&#34;:null,&#34;background&#34;:&#34;rgba(0, 0, 0, 0)&#34;,&#34;tooltipStay&#34;:300,&#34;tooltipStyle&#34;:&#34;position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);&#34;,&#34;highlight&#34;:{&#34;enabled&#34;:true,&#34;hoverNearest&#34;:false,&#34;degree&#34;:1,&#34;algorithm&#34;:&#34;all&#34;,&#34;hideColor&#34;:&#34;rgba(200,200,200,0.5)&#34;,&#34;labelOnly&#34;:true},&#34;collapse&#34;:{&#34;enabled&#34;:true,&#34;fit&#34;:false,&#34;resetHighlight&#34;:true,&#34;clusterOptions&#34;:null,&#34;keepCoord&#34;:true,&#34;labelSuffix&#34;:&#34;(cluster)&#34;}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;We can even group them&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;node_list_byside &amp;lt;-
+        starwars_tidy %&amp;gt;%
+          activate(nodes) %&amp;gt;%
+          data.frame() %&amp;gt;%
+          rename(label = name) &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;networkd3&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;networkD3&lt;/h2&gt;
+&lt;p&gt;A little wrangling is necessary to prepare the data to create a &lt;code&gt;networkD3&lt;/code&gt; graph. To make a &lt;code&gt;networkD3&lt;/code&gt; graph with a edge and node list requires that the IDs be a series of numeric integers that begin with 0.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nodes_d3 &amp;lt;- mutate(node_list, 
+                   id = id - 1)
+
+edges_d3 &amp;lt;- mutate(edge_list, 
+                   from = from - 1, 
+                   to = to - 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and we can plot it&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forceNetwork(Links = edges_d3, 
+             Nodes = nodes_d3, 
+             Source = &amp;quot;from&amp;quot;, 
+             Target = &amp;quot;to&amp;quot;, 
+             NodeID = &amp;quot;label&amp;quot;, 
+             Group = &amp;quot;id&amp;quot;, 
+             Value = &amp;quot;weight&amp;quot;, 
+             opacity = 1, 
+             fontSize = 16, 
+             zoom = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;forceNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[0,0,0,0,0,0,0,1,1,1,1,1,1,1,3,5,3,4,3,8,2,3,2,2,2,3,7,3,2,7,11,4,4,10,3,13,13,2,7,7,7,4,16,16,3,17,3,3,6,7,3,6,2,2,18,17,6,19,6,3],&#34;target&#34;:[2,3,10,7,13,1,16,10,2,3,13,7,4,16,5,6,6,7,8,9,8,9,3,9,7,7,8,10,10,10,12,11,12,13,13,14,15,13,11,12,13,10,17,18,16,18,17,18,7,19,19,19,6,19,19,19,18,20,17,20],&#34;value&#34;:[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1],&#34;colour&#34;:[&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;,&#34;#666&#34;]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;R2-D2&#34;,&#34;CHEWBACCA&#34;,&#34;C-3PO&#34;,&#34;LUKE&#34;,&#34;DARTH VADER&#34;,&#34;CAMIE&#34;,&#34;BIGGS&#34;,&#34;LEIA&#34;,&#34;BERU&#34;,&#34;OWEN&#34;,&#34;OBI-WAN&#34;,&#34;MOTTI&#34;,&#34;TARKIN&#34;,&#34;HAN&#34;,&#34;GREEDO&#34;,&#34;JABBA&#34;,&#34;DODONNA&#34;,&#34;GOLD LEADER&#34;,&#34;WEDGE&#34;,&#34;RED LEADER&#34;,&#34;RED TEN&#34;,&#34;GOLD FIVE&#34;],&#34;group&#34;:[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;label&#34;,&#34;Group&#34;:&#34;id&#34;,&#34;colourScale&#34;:&#34;d3.scaleOrdinal(d3.schemeCategory20);&#34;,&#34;fontSize&#34;:16,&#34;fontFamily&#34;:&#34;serif&#34;,&#34;clickTextSize&#34;:40,&#34;linkDistance&#34;:50,&#34;linkWidth&#34;:&#34;function(d) { return Math.sqrt(d.value); }&#34;,&#34;charge&#34;:-30,&#34;opacity&#34;:1,&#34;zoom&#34;:true,&#34;legend&#34;:false,&#34;arrows&#34;:false,&#34;nodesize&#34;:false,&#34;radiusCalculation&#34;:&#34; Math.sqrt(d.nodesize)+6&#34;,&#34;bounded&#34;:false,&#34;opacityNoHover&#34;:0,&#34;clickAction&#34;:null}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;or you can see how the individual nodes are linked&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sankeyNetwork(Links = edges_d3, 
+              Nodes = nodes_d3, 
+              Source = &amp;quot;from&amp;quot;,
+              Target = &amp;quot;to&amp;quot;, 
+              NodeID = &amp;quot;label&amp;quot;, 
+              Value = &amp;quot;weight&amp;quot;, 
+              fontSize = 16, 
+              unit = &amp;quot;Letter(s)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-4&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;sankeyNetwork html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-4&#34;&gt;{&#34;x&#34;:{&#34;links&#34;:{&#34;source&#34;:[0,0,0,0,0,0,0,1,1,1,1,1,1,1,3,5,3,4,3,8,2,3,2,2,2,3,7,3,2,7,11,4,4,10,3,13,13,2,7,7,7,4,16,16,3,17,3,3,6,7,3,6,2,2,18,17,6,19,6,3],&#34;target&#34;:[2,3,10,7,13,1,16,10,2,3,13,7,4,16,5,6,6,7,8,9,8,9,3,9,7,7,8,10,10,10,12,11,12,13,13,14,15,13,11,12,13,10,17,18,16,18,17,18,7,19,19,19,6,19,19,19,18,20,17,20],&#34;value&#34;:[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1]},&#34;nodes&#34;:{&#34;name&#34;:[&#34;R2-D2&#34;,&#34;CHEWBACCA&#34;,&#34;C-3PO&#34;,&#34;LUKE&#34;,&#34;DARTH VADER&#34;,&#34;CAMIE&#34;,&#34;BIGGS&#34;,&#34;LEIA&#34;,&#34;BERU&#34;,&#34;OWEN&#34;,&#34;OBI-WAN&#34;,&#34;MOTTI&#34;,&#34;TARKIN&#34;,&#34;HAN&#34;,&#34;GREEDO&#34;,&#34;JABBA&#34;,&#34;DODONNA&#34;,&#34;GOLD LEADER&#34;,&#34;WEDGE&#34;,&#34;RED LEADER&#34;,&#34;RED TEN&#34;,&#34;GOLD FIVE&#34;],&#34;group&#34;:[&#34;R2-D2&#34;,&#34;CHEWBACCA&#34;,&#34;C-3PO&#34;,&#34;LUKE&#34;,&#34;DARTH VADER&#34;,&#34;CAMIE&#34;,&#34;BIGGS&#34;,&#34;LEIA&#34;,&#34;BERU&#34;,&#34;OWEN&#34;,&#34;OBI-WAN&#34;,&#34;MOTTI&#34;,&#34;TARKIN&#34;,&#34;HAN&#34;,&#34;GREEDO&#34;,&#34;JABBA&#34;,&#34;DODONNA&#34;,&#34;GOLD LEADER&#34;,&#34;WEDGE&#34;,&#34;RED LEADER&#34;,&#34;RED TEN&#34;,&#34;GOLD FIVE&#34;]},&#34;options&#34;:{&#34;NodeID&#34;:&#34;label&#34;,&#34;NodeGroup&#34;:&#34;label&#34;,&#34;LinkGroup&#34;:null,&#34;colourScale&#34;:&#34;d3.scaleOrdinal(d3.schemeCategory20);&#34;,&#34;fontSize&#34;:16,&#34;fontFamily&#34;:null,&#34;nodeWidth&#34;:15,&#34;nodePadding&#34;:10,&#34;units&#34;:&#34;Letter(s)&#34;,&#34;margin&#34;:{&#34;top&#34;:null,&#34;right&#34;:null,&#34;bottom&#34;:null,&#34;left&#34;:null},&#34;iterations&#34;:32,&#34;sinksRight&#34;:true}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -5988,6 +6377,7 @@ for (k in 1:6){
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Typically indicates importance.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Note that everything in this data set is weighted so the weight is &lt;em&gt;not shown&lt;/em&gt;. However we could add another column with just weights if there was a reason to do so like force users get a weight of &lt;em&gt;&lt;code&gt;2&lt;/code&gt;&lt;/em&gt; abd everyone else receives a &lt;em&gt;&lt;code&gt;1&lt;/code&gt;&lt;/em&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;We’ll expand on this in a bit.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;If you intend to use labels.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

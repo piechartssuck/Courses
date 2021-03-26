@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages    A Note This will be a crash course so if you don’t get everything, that is fine!">
+  <meta name="description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages  Interactive network graphs with visNetwork and networkD3  visNetwork networkD3    A Note This will be a crash course so if you don’t get everything, that is fine!">
 
   
   <link rel="alternate" hreflang="en-us" href="https://edp693e.theoreticalphysed.com/example/09-example/">
@@ -241,7 +241,7 @@
   <meta property="og:site_name" content="Data Visualization">
   <meta property="og:url" content="https://edp693e.theoreticalphysed.com/example/09-example/">
   <meta property="og:title" content="The Social Network | Data Visualization">
-  <meta property="og:description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages    A Note This will be a crash course so if you don’t get everything, that is fine!"><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
+  <meta property="og:description" content="A Note Introduction to Social Network Analysis  Preliminary Items  First Things First! Download the scripts and data sets Set your Working Directory Load libraries Load Files   Node and Network Properties Getting tidy  The network package The tidygraph and ggraph packages  Interactive network graphs with visNetwork and networkD3  visNetwork networkD3    A Note This will be a crash course so if you don’t get everything, that is fine!"><meta property="og:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png">
   <meta property="twitter:image" content="https://edp693e.theoreticalphysed.com/img/course_info.png"><meta property="og:locale" content="en-us">
   
     
@@ -750,6 +750,14 @@
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/vis/vis-network.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/vis/vis-network.min.js"></script>
+<script src="/rmarkdown-libs/visNetwork-binding/visNetwork.js"></script>
+<script src="/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/rmarkdown-libs/forceNetwork-binding/forceNetwork.js"></script>
+<script src="/rmarkdown-libs/sankey/sankey.js"></script>
+<script src="/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js"></script>
 
 <div id="TOC">
 <ul>
@@ -770,6 +778,11 @@
 <li><a href="#the-network-package">The <code>network</code> package</a></li>
 <li><a href="#the-tidygraph-and-ggraph-packages">The <code>tidygraph</code> and <code>ggraph</code> packages</a></li>
 </ul></li>
+<li><a href="#interactive-network-graphs-with-visnetwork-and-networkd3">Interactive network graphs with <code>visNetwork</code> and <code>networkD3</code></a>
+<ul>
+<li><a href="#visnetwork">visNetwork</a></li>
+<li><a href="#networkd3">networkD3</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -786,7 +799,7 @@
 <div id="first-things-first-download-the-scripts-and-data-sets" class="section level3">
 <h3>First Things First! Download the scripts and data sets</h3>
 <p>Please download all of the materials needed for this walkthrough and put them all in a folder by themselves.</p>
-<p><a href="/data/Week9materials.zip">Week 9 materials</a></p>
+<p><a href="/data/Week9examplematerials.zip">Week 9 materials</a></p>
 </div>
 <div id="set-your-working-directory" class="section level3">
 <h3>Set your Working Directory</h3>
@@ -858,7 +871,8 @@ A cross platform package used for analysing and visualizing networks
 ## ── Column specification ────────────────────────────────────────────────────────
 ## cols(
 ##   name = col_character(),
-##   id = col_double()
+##   id = col_double(),
+##   allegiance = col_character()
 ## )</code></pre>
 <p>and take a look</p>
 <pre class="r"><code>head(edges)</code></pre>
@@ -872,15 +886,15 @@ A cross platform package used for analysing and visualizing networks
 ## 5 HAN       R2-D2       5
 ## 6 CHEWBACCA R2-D2       3</code></pre>
 <pre class="r"><code>head(nodes)</code></pre>
-<pre><code>## # A tibble: 6 x 2
-##   name           id
-##   &lt;chr&gt;       &lt;dbl&gt;
-## 1 R2-D2           0
-## 2 CHEWBACCA       1
-## 3 C-3PO           2
-## 4 LUKE            3
-## 5 DARTH VADER     4
-## 6 CAMIE           5</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   name           id allegiance       
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+## 1 R2-D2           0 Galactic Republic
+## 2 CHEWBACCA       1 Galactic Republic
+## 3 C-3PO           2 Galactic Republic
+## 4 LUKE            3 Jedi Order       
+## 5 DARTH VADER     4 Sith Order       
+## 6 CAMIE           5 Unknown</code></pre>
 <p>For example, we learn that C-3PO and R2-D2 appeared in 17 scenes together.</p>
 <p>How do we convert these two datasets into a network object in R? There are multiple packages to work with networks, but the most popular is <code>igraph</code> because it’s very flexible and easy to do, and in my experience it’s much faster and scales well to very large networks. Other packages that you may want to explore are <code>sna</code> and <code>networks</code>. We won’t be covering those in great detail because some network modeling packages are not compatible with <code>igraph</code> and there’s a separate course taught in the every <strong><em>Fall term during odd years</em></strong>.</p>
 <p>Now, how do we create the igraph object? We can use the <code>graph_from_data_frame()</code> function, which takes two arguments: <code>d</code>, the data frame with the edge list in the first two columns; and <code>vertices</code>, a data frame with node data with the node label in the first column. (Note that igraph calls the nodes <code>vertices</code>, but it’s exactly the same thing.)</p>
@@ -888,9 +902,9 @@ A cross platform package used for analysing and visualizing networks
                            vertices=nodes,
                            directed=FALSE)</code></pre>
 <pre class="r"><code>g </code></pre>
-<pre><code>## IGRAPH e36261d UNW- 22 60 -- 
-## + attr: name (v/c), id (v/n), weight (e/n)
-## + edges from e36261d (vertex names):
+<pre><code>## IGRAPH ac319ee UNW- 22 60 -- 
+## + attr: name (v/c), id (v/n), allegiance (v/c), weight (e/n)
+## + edges from ac319ee (vertex names):
 ##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
 ##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
 ##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
@@ -1037,7 +1051,7 @@ The total number of edges
 <ul>
 <li><p>List of nodes</p>
 <pre class="r"><code>V(g)</code></pre>
-<pre><code>## + 22/22 vertices, named, from e36261d:
+<pre><code>## + 22/22 vertices, named, from ac319ee:
 ##  [1] R2-D2       CHEWBACCA   C-3PO       LUKE        DARTH VADER CAMIE      
 ##  [7] BIGGS       LEIA        BERU        OWEN        OBI-WAN     MOTTI      
 ## [13] TARKIN      HAN         GREEDO      JABBA       DODONNA     GOLD LEADER
@@ -1062,10 +1076,20 @@ The total number of edges
 ## [21] &quot;RED TEN&quot;     &quot;GOLD FIVE&quot;  
 ## 
 ## $id
-##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21</code></pre></li>
+##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+## 
+## $allegiance
+##  [1] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+##  [4] &quot;Jedi Order&quot;        &quot;Sith Order&quot;        &quot;Unknown&quot;          
+##  [7] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [10] &quot;Galactic Republic&quot; &quot;Jedi Order&quot;        &quot;Galactic Empire&quot;  
+## [13] &quot;Galactic Empire&quot;   &quot;Galactic Republic&quot; &quot;Hutt Cartel&quot;      
+## [16] &quot;Hutt Cartel&quot;       &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [19] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [22] &quot;Galactic Republic&quot;</code></pre></li>
 <li><p>List of edges</p>
 <pre class="r"><code>E(g)</code></pre>
-<pre><code>## + 60/60 edges from e36261d (vertex names):
+<pre><code>## + 60/60 edges from ac319ee (vertex names):
 ##  [1] R2-D2      --C-3PO       R2-D2      --LUKE        R2-D2      --OBI-WAN    
 ##  [4] R2-D2      --LEIA        R2-D2      --HAN         R2-D2      --CHEWBACCA  
 ##  [7] R2-D2      --DODONNA     CHEWBACCA  --OBI-WAN     CHEWBACCA  --C-3PO      
@@ -1187,6 +1211,16 @@ vertex_attr(g)</code></pre>
 ## $id
 ##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
 ## 
+## $allegiance
+##  [1] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+##  [4] &quot;Jedi Order&quot;        &quot;Sith Order&quot;        &quot;Unknown&quot;          
+##  [7] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [10] &quot;Galactic Republic&quot; &quot;Jedi Order&quot;        &quot;Galactic Empire&quot;  
+## [13] &quot;Galactic Empire&quot;   &quot;Galactic Republic&quot; &quot;Hutt Cartel&quot;      
+## [16] &quot;Hutt Cartel&quot;       &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [19] &quot;Galactic Republic&quot; &quot;Galactic Republic&quot; &quot;Galactic Republic&quot;
+## [22] &quot;Galactic Republic&quot;
+## 
 ## $size
 ##  [1] 18.648092 19.572539 19.635532 22.439250 12.591581  8.545177 13.556229
 ##  [8] 19.310150 11.788898 11.317766 18.567281  8.545177 12.210340 20.528107
@@ -1254,7 +1288,7 @@ plot(g, layout=layout_with_fr, main=&quot;Force-directed&quot;)</code></pre>
 <p>Note that each of these is actually just a matrix of horizontal and vertical locations for each node. If you don’t care about this, just ignore what’s below.</p>
 <pre class="r"><code>l &lt;- layout_randomly(g)
 str(l)</code></pre>
-<pre><code>##  num [1:22, 1:2] 0.752 0.176 -0.194 -0.89 0.192 ...</code></pre>
+<pre><code>##  num [1:22, 1:2] -0.1892 0.1239 -0.0684 -0.3249 0.2123 ...</code></pre>
 <p>The most popular layouts are <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing" target="_blank">force-directed</a>. These algorithms, such as <em>Fruchterman-Reingold</em>, try to position the nodes so that the edges have similar length and there are as few crossing edges as possible. The idea is to generate “clean” layouts, where nodes that are closer to each other share more connections in common that those that are located further apart. Note that this is a non-deterministic algorithm: choosing a different seed will generate different layouts.</p>
 <pre class="r"><code>par(mfrow=c(1,2))
 
@@ -1351,11 +1385,11 @@ plot(g, layout=fr)</code></pre>
 ## 5.957835e-01 6.577603e-01 8.125507e-01 1.000000e+00</code></pre>
 <p>Finally, not exactly a measure of centrality, but we can learn more about who each node is connected to by using the following functions: <code>neighbors</code> (for direct neighbors) and <code>ego</code> (for neighbors up to <code>n</code> neighbors away)</p>
 <pre class="r"><code>neighbors(g, v=which(V(g)$name==&quot;DARTH VADER&quot;))</code></pre>
-<pre><code>## + 5/22 vertices, named, from e36261d:
+<pre><code>## + 5/22 vertices, named, from ac319ee:
 ## [1] CHEWBACCA LEIA      OBI-WAN   MOTTI     TARKIN</code></pre>
 <pre class="r"><code>ego(g, order=2, nodes=which(V(g)$name==&quot;DARTH VADER&quot;))</code></pre>
 <pre><code>## [[1]]
-## + 14/22 vertices, named, from e36261d:
+## + 14/22 vertices, named, from ac319ee:
 ##  [1] DARTH VADER CHEWBACCA   LEIA        OBI-WAN     MOTTI       TARKIN     
 ##  [7] R2-D2       C-3PO       LUKE        HAN         DODONNA     BIGGS      
 ## [13] BERU        RED LEADER</code></pre>
@@ -1363,7 +1397,7 @@ plot(g, layout=fr)</code></pre>
 <pre class="r"><code>diameter(g, directed=FALSE, weights=NA)</code></pre>
 <pre><code>## [1] 3</code></pre>
 <pre class="r"><code>get_diameter(g, directed=FALSE, weights=NA)</code></pre>
-<pre><code>## + 4/22 vertices, named, from e36261d:
+<pre><code>## + 4/22 vertices, named, from ac319ee:
 ## [1] DARTH VADER CHEWBACCA   C-3PO       OWEN</code></pre>
 <pre class="r"><code>mean_distance(g, directed=FALSE)</code></pre>
 <pre><code>## [1] 1.909524</code></pre>
@@ -1555,19 +1589,19 @@ for (k in 1:6){
 <pre class="r"><code>library(tidyverse)</code></pre>
 <p>Let’s remind ourselves of what the data looks like!</p>
 <pre class="r"><code>nodes</code></pre>
-<pre><code>## # A tibble: 22 x 2
-##    name           id
-##    &lt;chr&gt;       &lt;dbl&gt;
-##  1 R2-D2           0
-##  2 CHEWBACCA       1
-##  3 C-3PO           2
-##  4 LUKE            3
-##  5 DARTH VADER     4
-##  6 CAMIE           5
-##  7 BIGGS           6
-##  8 LEIA            7
-##  9 BERU            8
-## 10 OWEN            9
+<pre><code>## # A tibble: 22 x 3
+##    name           id allegiance       
+##    &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+##  1 R2-D2           0 Galactic Republic
+##  2 CHEWBACCA       1 Galactic Republic
+##  3 C-3PO           2 Galactic Republic
+##  4 LUKE            3 Jedi Order       
+##  5 DARTH VADER     4 Sith Order       
+##  6 CAMIE           5 Unknown          
+##  7 BIGGS           6 Galactic Republic
+##  8 LEIA            7 Galactic Republic
+##  9 BERU            8 Galactic Republic
+## 10 OWEN            9 Galactic Republic
 ## # … with 12 more rows</code></pre>
 <pre class="r"><code>edges</code></pre>
 <pre><code>## # A tibble: 60 x 3
@@ -1633,6 +1667,14 @@ for (k in 1:6){
 ##  density = 0.1428571 
 ## 
 ## Vertex attributes:
+## 
+##  allegiance:
+##    character valued attribute
+##    attribute summary:
+##   Galactic Empire Galactic Republic       Hutt Cartel        Jedi Order 
+##                 2                13                 2                 2 
+##        Sith Order           Unknown 
+##                 1                 1 
 ## 
 ##  id:
 ##    numeric valued attribute
@@ -1777,15 +1819,15 @@ for (k in 1:6){
 ## #
 ## # An undirected simple graph with 2 components
 ## #
-## # Node Data: 22 x 2 (active)
-##   name           id
-##   &lt;chr&gt;       &lt;dbl&gt;
-## 1 R2-D2           0
-## 2 CHEWBACCA       1
-## 3 C-3PO           2
-## 4 LUKE            3
-## 5 DARTH VADER     4
-## 6 CAMIE           5
+## # Node Data: 22 x 3 (active)
+##   name           id allegiance       
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+## 1 R2-D2           0 Galactic Republic
+## 2 CHEWBACCA       1 Galactic Republic
+## 3 C-3PO           2 Galactic Republic
+## 4 LUKE            3 Jedi Order       
+## 5 DARTH VADER     4 Sith Order       
+## 6 CAMIE           5 Unknown          
 ## # … with 16 more rows
 ## #
 ## # Edge Data: 60 x 3
@@ -1795,8 +1837,355 @@ for (k in 1:6){
 ## 2     1     4     13
 ## 3     1    11      6
 ## # … with 57 more rows</code></pre>
-<p>Note fro the output that</p>
 <p>Notice that the package is built on <code>igraph</code>!</p>
+<p>Note from the output that the nodes are active. This is what is known as an <em>active tibble</em> within a <code>tbl_graph</code> object and makes it possible to manipulate the data in one tibble at a time. The nodes tibble is activated by default, but you can change which tibble is active with the <code>activate()</code> function. Thus, if I wanted to rearrange the rows in the edges tibble to list those with the highest <em>weight</em> first, I could use <code>activate()</code> and then <code>arrange()</code> like so</p>
+<pre class="r"><code>starwars_tidy %&gt;% 
+  activate(edges) %&gt;% 
+  arrange(desc(weight))</code></pre>
+<pre><code>## # A tbl_graph: 22 nodes and 60 edges
+## #
+## # An undirected simple graph with 2 components
+## #
+## # Edge Data: 60 x 3 (active)
+##    from    to weight
+##   &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+## 1     4    14     26
+## 2     2    14     19
+## 3     4    11     19
+## 4     3     4     18
+## 5     1     3     17
+## 6     4     8     17
+## # … with 54 more rows
+## #
+## # Node Data: 22 x 3
+##   name         id allegiance       
+##   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;            
+## 1 R2-D2         0 Galactic Republic
+## 2 CHEWBACCA     1 Galactic Republic
+## 3 C-3PO         2 Galactic Republic
+## # … with 19 more rows</code></pre>
+<p>The <em>tidy</em> approach is relatively simple so lets plot it</p>
+<pre class="r"><code>ggraph(starwars_tidy) + 
+  geom_edge_link() + 
+  geom_node_point() + 
+  theme_graph()</code></pre>
+<pre><code>## Using `stress` as default layout</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>This uses a default layout called stress but there are any others which you can find <a href="https://www.data-imaginist.com/2017/ggraph-introduction-layouts/" target="_blank">here</a>. Yes it is also absolutely similar to <code>ggplot</code> which allows us to use all kinds of common packages and functions</p>
+<pre class="r"><code>ggraph(starwars_tidy, 
+       layout = &quot;graphopt&quot;) + 
+  geom_edge_link(aes(width = weight), 
+                 alpha = 0.5,
+                 show.legend = FALSE) + 
+  scale_edge_width(range = c(0.2, 1.2)) +
+  geom_node_point(aes(size = centrality_pagerank(),
+                      fill = centrality_degree()),
+                  shape = 21,
+                  stroke = 1.4,
+                  color = &quot;#4d194d&quot;,
+                  show.legend = FALSE) +
+  scale_size(range = c(1, 14)) +
+  scale_fill_gradient(low = &quot;#81b29a&quot;, high = &quot;#3d405b&quot;) +
+  geom_node_label(aes(label = name),
+                 repel = TRUE) +
+  coord_fixed() +
+  theme_graph()</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-72-1.png" width="672" />
+and do fun things with the data</p>
+<pre class="r"><code>ggraph(starwars_tidy, 
+       layout = &quot;linear&quot;,
+       circular = TRUE) + 
+  geom_edge_arc(aes(width = weight,
+                    color = weight), 
+                alpha = 0.8,
+                show.legend = FALSE) + 
+  scale_edge_width(range = c(0.2, 2)) +
+  scale_edge_color_gradient(low = &quot;#b7094c&quot;, high = &quot;#0091ad&quot;) +
+  geom_node_label(aes(label = name,
+                      size = centrality_betweenness()),
+                  show.legend = FALSE) +
+  scale_size(range = c(3, 6)) +
+  theme_graph()</code></pre>
+<p><img src="/example/09-example_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+</div>
+</div>
+<div id="interactive-network-graphs-with-visnetwork-and-networkd3" class="section level1">
+<h1>Interactive network graphs with <code>visNetwork</code> and <code>networkD3</code></h1>
+<p>Please install and load the following package</p>
+<pre class="r"><code>library(visNetwork)
+library(networkD3)</code></pre>
+<div id="visnetwork" class="section level2">
+<h2>visNetwork</h2>
+<p>The <code>visNetwork()</code> package uses a nodes list and edges list to create an interactive graph and it is picky! Here are the requirements</p>
+<ul>
+<li>from the <code>node</code> data set
+<ul>
+<li>must include an <strong>id</strong> column</li>
+<li>names of the nodes must come from the <strong>label</strong> column<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></li>
+</ul></li>
+<li>from the <code>edge</code> data set
+<ul>
+<li>must have <strong>from</strong> and <strong>to</strong> columns.</li>
+</ul></li>
+</ul>
+<p>The network is fun to play around with. With just the basic plot, you can</p>
+<ul>
+<li>move the nodes and the graph will use an algorithm to keep the nodes properly spaced.</li>
+<li>zoom in and out on the plot and move it around to re-center it</li>
+</ul>
+<p>So we can grab the edge set</p>
+<pre class="r"><code>edge_list &lt;-
+  starwars_tidy %&gt;%
+    activate(edges) %&gt;%
+    data.frame()</code></pre>
+<p>Take a look</p>
+<pre class="r"><code>edge_list</code></pre>
+<pre><code>##    from to weight
+## 1     1  3     17
+## 2     1  4     13
+## 3     1 11      6
+## 4     1  8      5
+## 5     1 14      5
+## 6     1  2      3
+## 7     1 17      1
+## 8     2 11      7
+## 9     2  3      5
+## 10    2  4     16
+## 11    2 14     19
+## 12    2  8     11
+## 13    2  5      1
+## 14    2 17      1
+## 15    4  6      2
+## 16    6  7      2
+## 17    4  7      4
+## 18    5  8      1
+## 19    4  9      3
+## 20    9 10      3
+## 21    3  9      2
+## 22    4 10      3
+## 23    3  4     18
+## 24    3 10      2
+## 25    3  8      6
+## 26    4  8     17
+## 27    8  9      1
+## 28    4 11     19
+## 29    3 11      6
+## 30    8 11      1
+## 31   12 13      2
+## 32    5 12      1
+## 33    5 13      7
+## 34   11 14      9
+## 35    4 14     26
+## 36   14 15      1
+## 37   14 16      1
+## 38    3 14      6
+## 39    8 12      1
+## 40    8 13      1
+## 41    8 14     13
+## 42    5 11      1
+## 43   17 18      1
+## 44   17 19      1
+## 45    4 17      1
+## 46   18 19      1
+## 47    4 18      1
+## 48    4 19      2
+## 49    7  8      1
+## 50    8 20      1
+## 51    4 20      3
+## 52    7 20      3
+## 53    3  7      1
+## 54    3 20      1
+## 55   19 20      3
+## 56   18 20      1
+## 57    7 19      2
+## 58   20 21      1
+## 59    7 18      1
+## 60    4 21      1</code></pre>
+<p>And manipulate the node a bit</p>
+<pre class="r"><code>node_list &lt;-
+  starwars_tidy %&gt;%
+    activate(nodes) %&gt;%
+    data.frame() %&gt;%
+    rename(label = name) %&gt;%
+    rename(group = allegiance)</code></pre>
+<p>Take a look</p>
+<pre class="r"><code>node_list</code></pre>
+<pre><code>##          label id             group
+## 1        R2-D2  0 Galactic Republic
+## 2    CHEWBACCA  1 Galactic Republic
+## 3        C-3PO  2 Galactic Republic
+## 4         LUKE  3        Jedi Order
+## 5  DARTH VADER  4        Sith Order
+## 6        CAMIE  5           Unknown
+## 7        BIGGS  6 Galactic Republic
+## 8         LEIA  7 Galactic Republic
+## 9         BERU  8 Galactic Republic
+## 10        OWEN  9 Galactic Republic
+## 11     OBI-WAN 10        Jedi Order
+## 12       MOTTI 11   Galactic Empire
+## 13      TARKIN 12   Galactic Empire
+## 14         HAN 13 Galactic Republic
+## 15      GREEDO 14       Hutt Cartel
+## 16       JABBA 15       Hutt Cartel
+## 17     DODONNA 16 Galactic Republic
+## 18 GOLD LEADER 17 Galactic Republic
+## 19       WEDGE 18 Galactic Republic
+## 20  RED LEADER 19 Galactic Republic
+## 21     RED TEN 20 Galactic Republic
+## 22   GOLD FIVE 21 Galactic Republic</code></pre>
+<p>and plot it</p>
+<pre class="r"><code>visNetwork(node_list,
+           edge_list)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"nodes":{"label":["R2-D2","CHEWBACCA","C-3PO","LUKE","DARTH VADER","CAMIE","BIGGS","LEIA","BERU","OWEN","OBI-WAN","MOTTI","TARKIN","HAN","GREEDO","JABBA","DODONNA","GOLD LEADER","WEDGE","RED LEADER","RED TEN","GOLD FIVE"],"id":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],"group":["Galactic Republic","Galactic Republic","Galactic Republic","Jedi Order","Sith Order","Unknown","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Jedi Order","Galactic Empire","Galactic Empire","Galactic Republic","Hutt Cartel","Hutt Cartel","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic"]},"edges":{"from":[1,1,1,1,1,1,1,2,2,2,2,2,2,2,4,6,4,5,4,9,3,4,3,3,3,4,8,4,3,8,12,5,5,11,4,14,14,3,8,8,8,5,17,17,4,18,4,4,7,8,4,7,3,3,19,18,7,20,7,4],"to":[3,4,11,8,14,2,17,11,3,4,14,8,5,17,6,7,7,8,9,10,9,10,4,10,8,8,9,11,11,11,13,12,13,14,14,15,16,14,12,13,14,11,18,19,17,19,18,19,8,20,20,20,7,20,20,20,19,21,18,21],"weight":[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":["Galactic Republic","Jedi Order","Sith Order","Unknown","Galactic Empire","Hutt Cartel"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<p>Let’s work on the aesthetics of the nodes</p>
+<pre class="r"><code>new_node_list &lt;- node_list %&gt;%
+                  mutate(borderWidth = 1.5) %&gt;%
+                  mutate(color.background = 
+                           case_when(
+                             group == &quot;Galactic Republic&quot; ~ &quot;#CF6728&quot;,
+                             group == &quot;Jedi Order&quot; ~ &quot;#4BA1F0&quot;,
+                             group == &quot;Galactic Empire&quot; ~ &quot;#741D2F&quot;,
+                             group == &quot;Sith Order&quot; ~ &quot;#912721&quot;,
+                             group == &quot;Hutt Cartel&quot; ~ &quot;#c3cb71&quot;,
+                             group == &quot;Unknown&quot; ~ &quot;#5a5255&quot;
+                           )
+                  ) %&gt;%
+                  mutate(color.border = &quot;#43675a&quot;) %&gt;%
+                  mutate(color.highlight.border = &quot;#3a95a7&quot;) %&gt;%
+                  mutate(font.color = &quot;#FFFFFF&quot;)</code></pre>
+<p>and weight the edges for no good reason</p>
+<pre class="r"><code>weighted_edges &lt;- mutate(edge_list, 
+                         width = weight/4 + 1)</code></pre>
+<pre class="r"><code>weighted_edges </code></pre>
+<pre><code>##    from to weight width
+## 1     1  3     17  5.25
+## 2     1  4     13  4.25
+## 3     1 11      6  2.50
+## 4     1  8      5  2.25
+## 5     1 14      5  2.25
+## 6     1  2      3  1.75
+## 7     1 17      1  1.25
+## 8     2 11      7  2.75
+## 9     2  3      5  2.25
+## 10    2  4     16  5.00
+## 11    2 14     19  5.75
+## 12    2  8     11  3.75
+## 13    2  5      1  1.25
+## 14    2 17      1  1.25
+## 15    4  6      2  1.50
+## 16    6  7      2  1.50
+## 17    4  7      4  2.00
+## 18    5  8      1  1.25
+## 19    4  9      3  1.75
+## 20    9 10      3  1.75
+## 21    3  9      2  1.50
+## 22    4 10      3  1.75
+## 23    3  4     18  5.50
+## 24    3 10      2  1.50
+## 25    3  8      6  2.50
+## 26    4  8     17  5.25
+## 27    8  9      1  1.25
+## 28    4 11     19  5.75
+## 29    3 11      6  2.50
+## 30    8 11      1  1.25
+## 31   12 13      2  1.50
+## 32    5 12      1  1.25
+## 33    5 13      7  2.75
+## 34   11 14      9  3.25
+## 35    4 14     26  7.50
+## 36   14 15      1  1.25
+## 37   14 16      1  1.25
+## 38    3 14      6  2.50
+## 39    8 12      1  1.25
+## 40    8 13      1  1.25
+## 41    8 14     13  4.25
+## 42    5 11      1  1.25
+## 43   17 18      1  1.25
+## 44   17 19      1  1.25
+## 45    4 17      1  1.25
+## 46   18 19      1  1.25
+## 47    4 18      1  1.25
+## 48    4 19      2  1.50
+## 49    7  8      1  1.25
+## 50    8 20      1  1.25
+## 51    4 20      3  1.75
+## 52    7 20      3  1.75
+## 53    3  7      1  1.25
+## 54    3 20      1  1.25
+## 55   19 20      3  1.75
+## 56   18 20      1  1.25
+## 57    7 19      2  1.50
+## 58   20 21      1  1.25
+## 59    7 18      1  1.25
+## 60    4 21      1  1.25</code></pre>
+<p>and plot it</p>
+<pre class="r"><code>visNetwork(new_node_list, 
+           weighted_edges, 
+           height = &quot;700px&quot;, 
+           width = &quot;100%&quot;) %&gt;%
+  visEdges(color = &quot;#c7bbc9&quot;) %&gt;%
+  visNodes(shape = &quot;circle&quot;, 
+           color = list(hover = &quot;#5cb85c&quot;,
+                        highlight = &quot;#449d44&quot;), 
+           shadow = list(enabled = TRUE, 
+                         size = 5))  %&gt;%
+  visInteraction(navigationButtons = TRUE, 
+                 hover = TRUE) %&gt;%
+  visOptions(selectedBy = &quot;group&quot;,
+             highlightNearest = TRUE, 
+             nodesIdSelection = TRUE,
+             collapse = TRUE) %&gt;%
+  visPhysics(solver = &quot;repulsion&quot;, 
+             repulsion = list(nodeDistance = 400, 
+                              springlength = 300, 
+                              centralGravity = 0.2),
+             timestep = 0.75, 
+             stabilization = TRUE) %&gt;%
+  visPhysics(stabilization = FALSE)   %&gt;%
+  visLayout(randomSeed = 12)</code></pre>
+<div id="htmlwidget-2" style="width:100%;height:700px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"nodes":{"label":["R2-D2","CHEWBACCA","C-3PO","LUKE","DARTH VADER","CAMIE","BIGGS","LEIA","BERU","OWEN","OBI-WAN","MOTTI","TARKIN","HAN","GREEDO","JABBA","DODONNA","GOLD LEADER","WEDGE","RED LEADER","RED TEN","GOLD FIVE"],"id":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],"group":["Galactic Republic","Galactic Republic","Galactic Republic","Jedi Order","Sith Order","Unknown","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Jedi Order","Galactic Empire","Galactic Empire","Galactic Republic","Hutt Cartel","Hutt Cartel","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic","Galactic Republic"],"borderWidth":[1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5],"color.background":["#CF6728","#CF6728","#CF6728","#4BA1F0","#912721","#5a5255","#CF6728","#CF6728","#CF6728","#CF6728","#4BA1F0","#741D2F","#741D2F","#CF6728","#c3cb71","#c3cb71","#CF6728","#CF6728","#CF6728","#CF6728","#CF6728","#CF6728"],"color.border":["#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a","#43675a"],"color.highlight.border":["#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7","#3a95a7"],"font.color":["#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"]},"edges":{"from":[1,1,1,1,1,1,1,2,2,2,2,2,2,2,4,6,4,5,4,9,3,4,3,3,3,4,8,4,3,8,12,5,5,11,4,14,14,3,8,8,8,5,17,17,4,18,4,4,7,8,4,7,3,3,19,18,7,20,7,4],"to":[3,4,11,8,14,2,17,11,3,4,14,8,5,17,6,7,7,8,9,10,9,10,4,10,8,8,9,11,11,11,13,12,13,14,14,15,16,14,12,13,14,11,18,19,17,19,18,19,8,20,20,20,7,20,20,20,19,21,18,21],"weight":[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1],"width":[5.25,4.25,2.5,2.25,2.25,1.75,1.25,2.75,2.25,5,5.75,3.75,1.25,1.25,1.5,1.5,2,1.25,1.75,1.75,1.5,1.75,5.5,1.5,2.5,5.25,1.25,5.75,2.5,1.25,1.5,1.25,2.75,3.25,7.5,1.25,1.25,2.5,1.25,1.25,4.25,1.25,1.25,1.25,1.25,1.25,1.25,1.5,1.25,1.25,1.75,1.75,1.25,1.25,1.75,1.25,1.5,1.25,1.25,1.25]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"circle","color":{"hover":"#5cb85c","highlight":"#449d44"},"shadow":{"enabled":true,"size":5}},"manipulation":{"enabled":false},"edges":{"color":"#c7bbc9"},"interaction":{"hover":true,"navigationButtons":true},"physics":{"stabilization":false},"layout":{"randomSeed":12}},"groups":["Galactic Republic","Jedi Order","Sith Order","Unknown","Galactic Empire","Hutt Cartel"],"width":"100%","height":"700px","idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":true,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false,"variable":"group","main":"Select by group","values":["Galactic Empire","Galactic Republic","Hutt Cartel","Jedi Order","Sith Order","Unknown"]},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
+<p>We can even group them</p>
+<pre class="r"><code>node_list_byside &lt;-
+        starwars_tidy %&gt;%
+          activate(nodes) %&gt;%
+          data.frame() %&gt;%
+          rename(label = name) </code></pre>
+</div>
+<div id="networkd3" class="section level2">
+<h2>networkD3</h2>
+<p>A little wrangling is necessary to prepare the data to create a <code>networkD3</code> graph. To make a <code>networkD3</code> graph with a edge and node list requires that the IDs be a series of numeric integers that begin with 0.</p>
+<pre class="r"><code>nodes_d3 &lt;- mutate(node_list, 
+                   id = id - 1)
+
+edges_d3 &lt;- mutate(edge_list, 
+                   from = from - 1, 
+                   to = to - 1)</code></pre>
+<p>and we can plot it</p>
+<pre class="r"><code>forceNetwork(Links = edges_d3, 
+             Nodes = nodes_d3, 
+             Source = &quot;from&quot;, 
+             Target = &quot;to&quot;, 
+             NodeID = &quot;label&quot;, 
+             Group = &quot;id&quot;, 
+             Value = &quot;weight&quot;, 
+             opacity = 1, 
+             fontSize = 16, 
+             zoom = TRUE)</code></pre>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"links":{"source":[0,0,0,0,0,0,0,1,1,1,1,1,1,1,3,5,3,4,3,8,2,3,2,2,2,3,7,3,2,7,11,4,4,10,3,13,13,2,7,7,7,4,16,16,3,17,3,3,6,7,3,6,2,2,18,17,6,19,6,3],"target":[2,3,10,7,13,1,16,10,2,3,13,7,4,16,5,6,6,7,8,9,8,9,3,9,7,7,8,10,10,10,12,11,12,13,13,14,15,13,11,12,13,10,17,18,16,18,17,18,7,19,19,19,6,19,19,19,18,20,17,20],"value":[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["R2-D2","CHEWBACCA","C-3PO","LUKE","DARTH VADER","CAMIE","BIGGS","LEIA","BERU","OWEN","OBI-WAN","MOTTI","TARKIN","HAN","GREEDO","JABBA","DODONNA","GOLD LEADER","WEDGE","RED LEADER","RED TEN","GOLD FIVE"],"group":[-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]},"options":{"NodeID":"label","Group":"id","colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":16,"fontFamily":"serif","clickTextSize":40,"linkDistance":50,"linkWidth":"function(d) { return Math.sqrt(d.value); }","charge":-30,"opacity":1,"zoom":true,"legend":false,"arrows":false,"nodesize":false,"radiusCalculation":" Math.sqrt(d.nodesize)+6","bounded":false,"opacityNoHover":0,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<p>or you can see how the individual nodes are linked</p>
+<pre class="r"><code>sankeyNetwork(Links = edges_d3, 
+              Nodes = nodes_d3, 
+              Source = &quot;from&quot;,
+              Target = &quot;to&quot;, 
+              NodeID = &quot;label&quot;, 
+              Value = &quot;weight&quot;, 
+              fontSize = 16, 
+              unit = &quot;Letter(s)&quot;)</code></pre>
+<div id="htmlwidget-4" style="width:672px;height:480px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"links":{"source":[0,0,0,0,0,0,0,1,1,1,1,1,1,1,3,5,3,4,3,8,2,3,2,2,2,3,7,3,2,7,11,4,4,10,3,13,13,2,7,7,7,4,16,16,3,17,3,3,6,7,3,6,2,2,18,17,6,19,6,3],"target":[2,3,10,7,13,1,16,10,2,3,13,7,4,16,5,6,6,7,8,9,8,9,3,9,7,7,8,10,10,10,12,11,12,13,13,14,15,13,11,12,13,10,17,18,16,18,17,18,7,19,19,19,6,19,19,19,18,20,17,20],"value":[17,13,6,5,5,3,1,7,5,16,19,11,1,1,2,2,4,1,3,3,2,3,18,2,6,17,1,19,6,1,2,1,7,9,26,1,1,6,1,1,13,1,1,1,1,1,1,2,1,1,3,3,1,1,3,1,2,1,1,1]},"nodes":{"name":["R2-D2","CHEWBACCA","C-3PO","LUKE","DARTH VADER","CAMIE","BIGGS","LEIA","BERU","OWEN","OBI-WAN","MOTTI","TARKIN","HAN","GREEDO","JABBA","DODONNA","GOLD LEADER","WEDGE","RED LEADER","RED TEN","GOLD FIVE"],"group":["R2-D2","CHEWBACCA","C-3PO","LUKE","DARTH VADER","CAMIE","BIGGS","LEIA","BERU","OWEN","OBI-WAN","MOTTI","TARKIN","HAN","GREEDO","JABBA","DODONNA","GOLD LEADER","WEDGE","RED LEADER","RED TEN","GOLD FIVE"]},"options":{"NodeID":"label","NodeGroup":"label","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":16,"fontFamily":null,"nodeWidth":15,"nodePadding":10,"units":"Letter(s)","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="footnotes">
@@ -1806,6 +2195,7 @@ for (k in 1:6){
 <li id="fn2"><p>Typically indicates importance.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>Note that everything in this data set is weighted so the weight is <em>not shown</em>. However we could add another column with just weights if there was a reason to do so like force users get a weight of <em><code>2</code></em> abd everyone else receives a <em><code>1</code></em>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>We’ll expand on this in a bit.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>If you intend to use labels.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
