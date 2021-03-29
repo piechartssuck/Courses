@@ -1,0 +1,74 @@
+---
+title: "Shiny Project"
+linktitle: "Shiny Project"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Projects
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+# Interactive Data Visualization 
+
+In this task, you will use R, in particular RStudio to create a set of interactive visuals based on a predefined data set. *Ideally you should work with one you intend to use for your final project.* Please make sure you follow the directions noted below. 
+
+## Step I: Prospectus
+
+This submission is due in **one week** and only applies to you **if there is a change from the data set used in the R Project**. =
+
+## Step II: Visualization
+
+Create an interactive application where users can explore your data set. How that is done is up to you.
+
+This is likely your first attempt at creating a Shiny app so consider creating a simple app. Given this, you also an opportunity to take the design and functionality further and to do something a little more challenging. 
+
+### Resources
+
+Including those found on the Resources page, here are a couple of helpful resources. 
+
++ Training videos - to access these, please do the following
+  + Go to the [WVU Libraries](https://library.wvu.edu/){target="_blank"}  page
+  + In the search bar type in *Introduction to Shiny*
+  + Locate the item with the title **Introduction to Shiny : learn how to build interactive web apps with R, Shiny, and reactive programming**^[it should be the very first option.]
+  + Click View now
+  + Login with your WVUID number if needed
+<br>
+
++ [Learn Shiny tutorial](https://shiny.rstudio.com/tutorial/){target="_blank"} 
+
++ [Mastering Shiny](https://mastering-shiny.org/){target="_blank"}
+
+For those of you familiar with other languages, take a look at these
+
++ [Using custom CSS in your app](https://shiny.rstudio.com/articles/css.html){target="_blank"}
+
++ [Communicating with Shiny via JavaScript
+](https://shiny.rstudio.com/articles/communicating-with-js.html)
+
+
+### Assessment of Visualization
+
+Some areas that you will be assessed on include
+
++ Your ability to describe an entire data set within your data visualization without additional explanation.
+
++ Ensuring a minimal amount of text is given in such a way that your app tells the story
+
++ The use of color and aesthetics in general. 
+
++ An attention to detail such as labeling, scope, and clarity.
+
++ Including directions on how to the app.
+
+<hr>
+
+Remember your work should be at a graduate level. I can typically tell how much work has gone into a task. 
+
+If you are unsure of something, please ask and do not assume!
+
