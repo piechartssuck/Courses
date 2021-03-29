@@ -20,7 +20,7 @@ In this task, you will use R, in particular RStudio to create a set of interacti
 
 ## Step I: Prospectus
 
-This submission is due in **one week** and only applies to you **if there is a change from the data set used in the R Project**. =
+Follow the guidelines described in the [R Project page](/projects/01-project/#step-i-prospectus){target='_blank'}. This submission is due in **one week** and only applies to you **if there is a change from the data set used in the R Project**. 
 
 ## Step II: Visualization
 
@@ -28,17 +28,26 @@ Create an interactive application where users can explore your data set. How tha
 
 This is likely your first attempt at creating a Shiny app so consider creating a simple app. Given this, you also an opportunity to take the design and functionality further and to do something a little more challenging. 
 
+## Step III: Submission 
+
+Please
++ turn in your `ui.R` and `server.R` files OR just an `app.R` file to both  [eCampus](https://ecampus.wvu.edu/){target='_blank'} and to [#shiny-project](https://2021edp693e.slack.com/archives/C01SHDW55UN){target='_blank'}.
+
++ upload it to [shinyapps.io](https://www.shinyapps.io/){target='_blank'} for live consumption.
+
++ be prepared to present your app to the class.
+
 ### Resources
 
 Including those found on the Resources page, here are a couple of helpful resources. 
 
 + Training videos - to access these, please do the following
-  + Go to the [WVU Libraries](https://library.wvu.edu/){target="_blank"}  page
+  + Go to the [WVU Libraries](https://library.wvu.edu/){target="_blank"} page
   + In the search bar type in *Introduction to Shiny*
   + Locate the item with the title **Introduction to Shiny : learn how to build interactive web apps with R, Shiny, and reactive programming**^[it should be the very first option.]
   + Click View now
   + Login with your WVUID number if needed
-<br>
+<br><br>
 
 + [Learn Shiny tutorial](https://shiny.rstudio.com/tutorial/){target="_blank"} 
 
