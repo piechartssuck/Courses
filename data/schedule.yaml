@@ -84,13 +84,13 @@ lessons:
     lesson: "10-lesson"
     due: "10-due"
 
-  # - title: 'All Mixed Up'
-  #   session: 11
-  #   date: "March 30, 2020"
-  #   readings: "11-readings"
-  #   lesson: "11-lesson"
-  #   due: "11-due"
-  #
+  - title: 'All Mixed Up'
+    session: 11
+    date: "March 30, 2020"
+    readings: "11-readings"
+    lesson: "11-lesson"
+    due: "11-due"
+
   # - title: 'Wrangling Data'
   #   session: 11
   #   date: "November 1, 2020"
