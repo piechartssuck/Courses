@@ -32,31 +32,26 @@ wk_post <- tibble(
 "eCampus" = c(unchecked,
               unchecked,
               unchecked,
-              unchecked,
               unchecked),
 
-"Slack" = c(checked,
-            unchecked,
-            unchecked,
+"Slack" = c(unchecked,
+            checked,
             unchecked,
             unchecked),
 
 Description = c("Read some papers on mixed methods",
                 "Construct a couple of posts",
                 "Go through the shorter slideshow on evaluation models",
-                "Go through the longer slideshow on data collection",
-                "Take a look at some *extra* materials on evaluation checklists"
+                "Go through the longer slideshow on data collection"
                 ),
 
 
 Location = c("[Link](/readings/11-readings/#read-papers)",
-             "[Link](/readings/11-readings/#postslidex)",
+             "[Link](/readings/11-readings/#post)",
              "[Link](/lesson/11-lesson/#evaluation-models)",
-             "[Link](/lesson/11-lesson/#data-collection)",
-             "[Link](/example/09-example/#evaluation-checklists)"
+             "[Link](/lesson/11-lesson/#data-collection)"
              
     )
-
 )
 ```
 
