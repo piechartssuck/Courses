@@ -49,10 +49,10 @@ Description = c("Read some papers on mixed methods",
                 ),
 
 
-Location = c("[Link](/readings/10-readings/#read-papers)",
-             "[Link](/readings/10-readings/#postslidex)",
-             "[Link](/lesson/09-lesson/#evaluation-models)",
-             "[Link](/lesson/09-lesson/#data-collection)",
+Location = c("[Link](/readings/11-readings/#read-papers)",
+             "[Link](/readings/11-readings/#postslidex)",
+             "[Link](/lesson/11-lesson/#evaluation-models)",
+             "[Link](/lesson/11-lesson/#data-collection)",
              "[Link](/example/09-example/#evaluation-checklists)"
              
     )

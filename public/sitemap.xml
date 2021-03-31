@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://edp617.theoreticalphysed.com/assignment/</loc>
   </url>
   
@@ -24,10 +19,6 @@
   </url>
   
   <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/citations/</loc>
-  </url>
-  
-  <url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/03-evaluation-proposal/</loc>
   </url>
   
@@ -41,6 +32,10 @@
   
   <url>
     <loc>https://edp617.theoreticalphysed.com/due/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp617.theoreticalphysed.com/due/10-due/</loc>
   </url>
   
   <url>
@@ -224,56 +219,15 @@
   </url>
   
   <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/data/</loc>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/design/</loc>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/install/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/markdown/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/r/</loc>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/rmarkdown/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/style/</loc>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/visualization/</loc>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://edp617.theoreticalphysed.com/resource/unzipping/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://edp617.theoreticalphysed.com/authors/</loc>
   </url>
   
   <url>
     <loc>https://edp617.theoreticalphysed.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://edp617.theoreticalphysed.com/</loc>
   </url>
   
   <url>
