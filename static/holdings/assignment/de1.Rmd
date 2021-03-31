@@ -1,0 +1,77 @@
+---
+title: "Yawn"
+linktitle: "Week 13: Data Exploration"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Data Explorations
+    weight: 1
+type: docs
+weight: 6
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+<center>
+![My cats did not care about this data set but they did yawn!](/img/tasks/cats.png){#id .class width=50% height=50%}
+*My cats did not care about this data set but they did yawn!*
+</center>
+
+
+## Background
+The data set included with this task is derived from the Mythbusters Episode [Is Yawning Contagious?](https://go.discovery.com/tv-shows/mythbusters/videos/is-yawning-contagious-2){target="_blank"}. The file `yawning_data.csv` contains all of the actual data they collected.
+
+## Exploratory Steps
+Before getting to the question at hand, please do the following:
+
+- As usual, please open the data set and code book to familiarize yourself with the (1) information and (2) layout, both of which are important. 
+
+- Go watch the Mythbusters Episode [Is Yawning Contagious?](https://go.discovery.com/tv-shows/mythbusters/videos/is-yawning-contagious-2){target="_blank"}.
+
+## Answer the Question
+*Is yawning really contagious?* Remember that you are basing your decision on the Mythbusters data set.
+
+## What to Submit
+1. **R file**. You may choose to upload a script or Rmarkdown^[Remember that submitting the latter may earn you up to an extra 5% on this submission, though this policy applies to the paper portion as well.] document. For a curated and biased list of resources that you can use to learn R Markdown, head over to the R Markdown section on the course [Resources](https://edp613.theoreticalphysed.com/resource/rmarkdown/#learning-r-markdown-1){target="_blank"} page.
+
+> While the layout somewhat differs between a script and Rmarkdown document, you must supply a basic explanation of each line of code. If you get stuck, stay calm and think about what is happening to the data. Remember that you have the resources and a week. Worst case scenario, you have this tool called the Internet so please utilize it! Please make sure you follow these general guidelines
+
+
+  a. Write out your name in the upper left hand corner.
+  b. Please put a `# ---` between each item.^[Does not apply to Rmarkdown documents.]
+  c. Number each problem.
+  d. As noted earlier, explain each line of code.
+  e. Indicate your answer by `# Solution:` 
+  f. Always answer the question in context.
+
+2. **Findings**. Answer the question in a Word document. If you are unfamiliar with the format, USCLibraries has a fantastic site with additional resources^[In fact, the [USCLibraries](https://libguides.usc.edu/APA7th){target="_blank"} site is a great source of information with [guides](https://libguides.usc.edu/){target="_blank"} for nearly everything you may need in the social sciences.] that can help you now and in the future.
+
+> In general, please submit the following document:
+A formally written APA 7th edition formatted paper up to five (5) pages in length with the following sections:
+  - Introduction
+  - Literature Review^[Use only relevant studies which should keep this section relatively short.]
+  - Methods
+  - Analysis
+  - Findings
+  
+> Why is there no lower limit on the page length? Good question! In general, page length is no way a determining factor for quality. You should concentrate on trying to convince a reader that you have enough evidence to have answered the question. This will come primarily from statistical tests but to a lesser degree, prior literature as well.
+
+> Some advice:
+
+  - **Stick to the facts and evidence**. You may have thoughts and views but that should not be included in your report.
+  - **Avoid first person perspective**. In general, avoid using *I*, *me*, and any other term that implies the narrative is coming from your point-of-view. 
+
+## Final check
+
+1. **R file**. Once you are satisfied with the work but prior to submission, save your script or Rmarkdown document and restart R. Run your script from start to bottom by highlighting all of the contents within the entire file. If it runs smoothly without errors, then you should be fine to submit.
+
+2. **Findings**. Please read over the report prior to submission. Make sure your language is appropriate and that at minimum, it is devoid of grammatical and spelling errors.
+

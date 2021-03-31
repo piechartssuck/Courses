@@ -1,0 +1,94 @@
+---
+title: "Measures of Central Tendency"
+linktitle: "Week 3: Measures of Central Tendency"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to do for Week 3 after class ends^[For grading.]
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"eCampus?" = c(unchecked, 
+               unchecked, 
+               checked),
+
+Description = c("Complete a module in Data Camp focused on arguably the most important `tidyverse` package: `dplyr`.",
+               "Go over an R Walkthrough on distributions and measures of central tendency.",
+               "Complete problems 1, 2, 3, 4, 5, 6, 10, and 11 in Chapter 3."),
+
+Location = c("[Link](/lesson/03-lesson/#data-camp-1)", 
+             "[Link](/lesson/03-lesson/#r-walkthrough-1)",
+             "[Link](/assignment/03-homeworks/#weekly-task-1)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+<br />
+
+### What to do for Week 4 before coming to class^[For preparation.]
+
+```{r eval = TRUE, echo = FALSE}
+book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+
+wk_pre <- tibble(
+Area = c(book, 
+         chalkboard, 
+         lightbulb),
+
+Description = c("Read chapter 4 in the text.",
+               "Look over the text PowerPoint and corresponding notes.",
+               "Watch a video on the Measures of Variability.^[Optional but recommended.]"),
+
+Location = c("[Link](/readings/04-readings/#book-stuff-1)", 
+             "[Link](/lesson/04-lesson/#book-materials-1)",
+             "[Link](/example/04-example/#crash-course-statistics-1)")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_pre, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+

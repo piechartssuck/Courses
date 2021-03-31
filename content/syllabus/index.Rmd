@@ -27,7 +27,7 @@ library(kableExtra)
 
 Students will become proficient and be able to describe in detail the following aspects:
 
-1. Assessing and describing counterfactuals and scientific argumentation.
+1. Assessing and describing  and scientific argumentation.
 2. Defining the underlying constructs for appropriate statistical techniques.
 3. Describing and graphing data.
 4. Explaining and drawing inferences from data.
@@ -199,7 +199,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 - **My philosophy**:<br>
   1. Just assume that all submissions are formal and must be submitted with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider scrapbooking. If you care about data and learning highly marketable skills, you've come to the right place.
+  2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another course. However if you care about data and learning highly marketable skills, you've come to the right place.
   3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic

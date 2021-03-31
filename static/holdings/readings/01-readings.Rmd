@@ -1,0 +1,32 @@
+---
+title: "The What and Why of Statistics"
+linktitle: "Week 1: The What and Why of Statistics"
+menu:
+  content:
+    parent: Readings
+    weight: 1
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Get Some Advice
+First things first:
+<br>
+<br>
+<iframe src="/videos/snoop_syllabus.mp4" width="320" height="480" frameBorder="0">Read the syllabus.</iframe>
+<br>
+<br>Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible!
+
+### Review Syllabus
+Review the overviews of the other areas as well: [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class.
+
+### Book Stuff
+Read Chapter 1: *The What and the Why of Statistics* in Frankfort-Nachmias and Leon-Guerrero. 
+
+
+

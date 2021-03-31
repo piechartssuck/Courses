@@ -1,0 +1,432 @@
+---
+title: "Measures of Variability"
+linktitle: "Week 4: Measures of Variability"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Homeworks
+    weight: 4
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+
+li {
+    margin-left: 2.5em;
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(patchwork)
+```
+
+### Week 4 Problem Set
+
+#### Assignment
+Chapter 4 Exercises: 1, 2, 3, 7, 8, 12, 13. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+#### Solutions
+
+<details><summary>1</summary>
+<p>
+
+a. There are <span class="boxed">seven</span> response categories for political views.
+
+b. We can calculate the percentage square by
+<center>
+```{r echo=FALSE, message=FALSE}
+read_csv(here("static", "data", "homeworks", "ch4p1.csv")) %>% 
+  kable(booktabs = TRUE,
+        align = c('l', "c", "c"), 
+      col.names = c("Political Views", 
+                    "Percentage $c$", 
+                    "Percentage Squared $c^2$") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) %>%
+  row_spec(8, 
+           bold = TRUE, 
+           color = "white", 
+           background = "#559e83")
+```
+</center>
+yields <span class="boxed">$\sum c^2 =  2171.26$</span>.
+
+c. We can calculate the IQV by
+\begin{aligned}
+IQV&= \dfrac{7\cdot(100^2-2171.26)}{100^2\cdot (7-1)}\\\\
+&= \dfrac{54801.18}{60000}\\\\
+&\approx 0.91
+\end{aligned}
+which is relatively close to 1 suggesting that <span class="boxed">Americans are fairly diverse in their political views</span>.
+</p>
+</details>
+
+<details><summary>2</summary>
+<p>
+
+a. For the female population where $N = 629$, we have 
+<center>
+$Q_1 = 629\cdot 0.25 = 157.25$ 
+</center>
+<center>
+$Q_3 = 629 \cdot 0.75 = 471.75$
+</center>
+or about the 158th and 472nd cases which are representative of cases where the degree are in the High school graduate and Bachelor's degree categories, respectively. This yields $IQR = 471.75-157.25=314.5$ which includes those who have a highest attained degree of <span class="boxed">high school, junior college and bachelor's </span>.<br><br>
+For the male population where $N = 488$, we have 
+<center>
+$Q_1 = 488 \cdot 0.25 = 122$
+</center>
+<center>
+$Q_3 = 488 \cdot 0.75 = 366$
+</center>
+or the 122nd and 366th cases which are representative of cases where the degree are in the High school graduate and Bachelor's degree categories, respectively. This yields $IQR = 366-122=244$ that includes those who have a highest attained degree of <span class="boxed">high school, junior college and bachelor's </span>.<br><br> 
+So <span class="boxed">both IQRs provide the same groups of cases</span>.
+
+b. Based on the IQR calculation, we know that 50% of all cases for males and females lies between high school and bachelor’s degree, <span class="boxed">but that does not inform us about the variability of the distribution</span>. A better measure would be IQV and if interval-ratio measures were available, the variance and standard deviation would provide better information and estimates. 
+
+</p>
+</details>
+
+<details><summary>3</summary>
+<p>
+
+a. The range of convictions in 
+
+- 2010 is given by $397 – 108 =$ <span class="boxed">$289$</span>.
+- 2015 is given by $402 – 97 =$ <span class="boxed">$305$</span>.
+Therefore the range of conviction in <span class="boxed">2015 is larger</span>.
+
+b. The mean number in **2010** across all levels of government was
+\begin{aligned}
+\overline{Y} &= \dfrac{397+108+280}{3}\\\\
+&\approx 261.67
+\end{aligned}
+or about an average of <span class="boxed">262 convictions</span>.<br><br> The mean number in **2015** across all levels of government was
+\begin{aligned}
+\overline{Y} &= \dfrac{402+97+200}{3}\\\\
+&= 233
+\end{aligned}
+or an average of <span class="boxed">233 convictions</span>.
+
+c. The sum of squares can be found by
+<center>
+```{r echo=FALSE , message=FALSE}
+con2010 <- tibble(
+  
+                    level = c("Federal",
+                              "State",
+                              "Local",
+                              "Total"),
+                    
+                    count = c(397,
+                              108,
+                              280,
+                              785),
+                    
+                    diff = c("$397 - 261.1 = 135.33$",
+                             "$108 - 261.67 = -153.67$",
+                             "$280 - 261.67 = 18.33$",
+                             "$ $"),
+                    
+                    diff_sq = c("$(135.33)^2 = 18314.21$",
+                                "$(-153.67)^2 = 23614.47$",
+                                "$(18.33)^2 = 335.99$",
+                                "42264.67")
+                    
+                )
+
+
+kable(con2010,
+      booktabs = TRUE,
+      align = c('l', "c", "c", "c"), 
+      col.names = c("Government Level", 
+                    "Number of Convictions", 
+                    "$Y-\\overline{Y}$", 
+                    "$(Y-\\overline{Y})^2$") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) %>%
+  row_spec(4, 
+           bold = TRUE, 
+           color = "white", 
+           background = "#559e83")
+```
+</center>
+implying that 
+\begin{aligned}
+S &= \sqrt{\dfrac{42264.67}{2}}\\\\
+&\approx 145.37
+\end{aligned}
+So in **2010**, there was a standard deviation of about <span class="boxed">145.37</span>.<br><br>
+The sum of squares can be found by
+<center>
+```{r echo=FALSE , message=FALSE}
+con2010 <- tibble(
+  
+                    level = c("Federal",
+                              "State",
+                              "Local",
+                              "Total"),
+                    
+                    count = c(402,
+                              97,
+                              200,
+                              699),
+                    
+                    diff = c("$402 - 233 = 169$",
+                             "$97 - 233 = -136$",
+                             "$200 - 233 = -33$",
+                             "$ $"),
+                    
+                    diff_sq = c("$(169)^2 = 28561$",
+                                "$(-136)^2 = 18496$",
+                                "$(-33)^2 = 1089$",
+                                "48146")
+                    
+                )
+
+
+kable(con2010,
+      booktabs = TRUE,
+      align = c('l', "c", "c", "c"), 
+      col.names = c("Government Level", 
+                    "Number of Convictions", 
+                    "$Y-\\overline{Y}$", 
+                    "$(Y-\\overline{Y})^2$") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) %>%
+  row_spec(4, 
+           bold = TRUE, 
+           color = "white", 
+           background = "#559e83")
+```
+</center>
+implying that 
+\begin{aligned}
+S &= \sqrt{\dfrac{48146}{2}}\\\\
+&\approx 155.15
+\end{aligned}
+So in **2015**, there was a standard deviation of about <span class="boxed">155.15</span>.
+
+d. The standard deviation is larger in the latter time period so <span class="boxed">there is more variability in number of convictions in 2015 than in 2010</span>. This <span class="boxed">supports the results of the range</span>.
+
+</p>
+</details>
+
+<details><summary>7</summary>
+<p>
+
+a. The range can be found by $4.50-2.20=$ <span class="boxed">$2.30$</span>.<br><br>
+Meanwhile for $n=10$, we have
+<center>
+25th percentile: $10\cdot 0.25 = 2.5$th case so $\dfrac{2.40+2.50}{2}=2.45$
+</center>
+<center>
+75th percentile: $10\cdot 0.75 = 7.5$th case so $\dfrac{3.60+3.60}{2}=3.60$
+</center>
+S. the IQR is $3.60 – 2.45 =$ <span class="boxed">$1.15$</span>. While both measures will work, the <span class="boxed">range is a bit more precise</span>, in that <span class="boxed">it provides a better picture of the variability of divorce rates for all states in the sample</span>.
+
+b. The sum of squares can be found by
+<center>
+```{r echo=FALSE , message=FALSE}
+read_csv(here("static", "data", "homeworks", "ch4p7b.csv")) %>% 
+  replace(., is.na(.), "") %>% 
+  kable(booktabs = TRUE,
+        align = c('l', "c", "c", "c"), 
+      col.names = c("State", 
+                    "Divorce rate/thousand", 
+                    "$Y-\\overline{Y}$", 
+                    "$(Y-\\overline{Y})^2$") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) %>%
+  row_spec(10, 
+           bold = TRUE, 
+           color = "white", 
+           background = "#559e83")
+```
+</center>
+implying that 
+\begin{aligned}
+\overline{Y} &= \sqrt{\dfrac{3.6 + 3.6 + 3.9 + 3.2 + 2.5 + 4.5 + 2.6 + 2.2 + 2.9 + 2.4}{10}}\\\\
+&\approx 3.14
+\end{aligned}
+and
+\begin{aligned}
+S &= \sqrt{\dfrac{4.922}{9}}\\\\
+&\approx 0.74
+\end{aligned}
+So between **1997-2017**, the average divorce rate per 1000 people was about $3$ with an approximated standard deviation of <span class="boxed">0.74</span>.
+
+c. Divorce rates may vary by state due to multiple factors which are not represented in the included data set such as variations in >span class="boxed">employment status</span>, <span class="boxed">policies and laws by region (i.e. states with no-fault divorce laws)</span>, <span class="boxed">religious beliefs</span>, etc.
+
+</p>
+</details>
+
+<details><summary>8</summary>
+<p>
+
+a. `DEGREE` is an <span class="boxed">ordinal measure</span> whereas `AGEKDBRN` is an <span class="boxed">interval measure</span>.
+
+b. As `DEGREE` increases, `AGEKDBRN` increases as well implying the likelihood of a positive relationship. The youngest first-time parents are those with less than a high school degree, while the oldest first-time parents are those with graduate degrees with difference  $28.59 – 21.33 = 7.26$ years. The variability in age when first child was born is larger as educational attainment increases. The standard deviation for the high school degree group is largest at $5.498$ years, the smallest is for the some college group with $4.581$. 
+
+</p>
+</details>
+
+<!--
+<details><summary>11</summary>
+<p>
+
+a. `Type of Work` is a nominal variable implying that the appropriate measure of variability as the <span class="boxed">index of qualitative variation (IQV)</span>.
+
+b. The pertage squared for both grades can be found by
+```{r echo=FALSE , message=FALSE}
+jobs <- tibble(
+  
+                    level = c("Lawn work",
+                              "Food service",
+                              "Babysitting",
+                              "Other",
+                              "Total"),
+                    
+                    count8 = c(28,
+                              3,
+                              37,
+                              32,
+                              100),
+        
+                    
+                    count8_sq = c("$(28)^2 = 784$",
+                                "$(3)^2 = 9$",
+                                "$(37)^2 = 1369$",
+                                "$(32)^2 = 1024$",
+                                "$3186$"),
+                    
+                    count10 = c(20,
+                              10,
+                              28,
+                              42,
+                              100),
+        
+                     count10_sq = c("$(20)^2 = 400$",
+                                "$(10)^2 = 100$",
+                                "$(28)^2 = 784$",
+                                "$(42)^2 = 1764$",
+                                "$2048$")
+                )
+
+
+kable(jobs,
+      booktabs = TRUE,
+      align = c('l', "c", "c", "c", "c"), 
+      col.names = c("Type of Work", 
+                    "Grade 8 Percentage $c$", 
+                    "Grade 8 Percentage Squared $c^2$",
+                    "Grade 10 Percentage $c$", 
+                    "Grade 10 Percentage Squared $c^2$") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) %>%
+  row_spec(4, 
+           bold = TRUE, 
+           color = "white", 
+           background = "#559e83")
+```
+So the IQV for both grades can be found by
+<center>
+Grade 8: $\dfrac{4\cdot(100^2-3186)}{100^2\cdot (4-1)} = \dfrac{27256}{30000} = 0.91$
+</center>
+<center>
+Grade 10: $\dfrac{4\cdot(100^2-3048)}{100^2\cdot (4-1)} = \dfrac{27808}{30000} = 0.93$
+</center>
+implying <span class="boxed">IQV(Grade 8) $=0.91$</span> and <span class="boxed">IQV(Grade 10) $=0.93$</span>.
+
+c. Though both IQVs are greater than $0.90$, there is <span class="boxed">slightly more variation among 10th graders than 8th graders<span class="boxed"> in the type of jobs they hold. The difference may be attributed to <span class="boxed">more employment options for older students</span> and <span class="boxed">limitations for younger students</span>xxxx leading to more informal jobs such as lawn work and babysitting. 
+
+</p>
+</details>
+-->
+
+<details><summary>12</summary>
+<p>
+
+Using the summary statistics for life expectancy
+<center>
+```{r echo=FALSE , message=FALSE}
+read_csv(here("static", "data", "homeworks", "ch4p12_full.csv")) %>% 
+  kable(booktabs = TRUE,
+        align = c('l', "c", "c"), 
+      col.names = c("Measure", 
+                    "Statistic for European Countries", 
+                    "Statistic for Non-european Countries") 
+      ) %>%
+  kable_styling(bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed"),
+                position = "center",
+                full_width = FALSE) 
+```
+</center>
+we find that the variable is interval ratio implying that variance (or standard deviation), range, or IQR are possible and valid. Among these three measures, variance and/or standard deviation is preferred for precision. For just the average life expectancy for these 10 countries, we should rely on the mean.<br><br>
+On average, non-European countries have a slightly higher life expectancy at birth ($82.00$ vs. $80.30$). Both the mean and median are higher for non-European countries than for European countries. Also, the distribution of non-European countries exhibits more variability; the standard deviation for European countries is $3.41$ years, while for non-European countries it is $2.83$ years.<br><br>
+These differences might be explained by access and availability of health care and/or diet. However, the difference might simply be random due to the small number of countries presented in this example. We are likely to find different results if more countries were incorporated into the analyses.
+
+</p>
+</details>
+
+<details><summary>13</summary>
+<p>
+
+Overall, <span class="boxed">Clinton voters were younger</span>, <span class="boxed">more educated</span>, and <span class="boxed">attended religious services less</span> than Trump voters. The youngest voters were male Clinton voters at $50.49$ years ($s = 18.84$), followed by female Clinton voters, $51.93$ years ($s = 18.21$). For education, males who voted for Clinton had the highest mean of $14.69$ ($s = 2.73$). Males who voted for Trump had $13.80$ years of education ($s = 2.75$). Trump voters, both males and females, attended religious services more often than Clinton voters. Mean scores were $3.72$ for males ($s = 2.93$) and $3.82$ for females ($s = 2.75$), indicating church attendance about several times a year to once a month. The standard deviations indicate a consistency in the distributions of education, age, and religious service attendance across all four groups. The largest standard deviations are for age, ranging from $15.94$ to $18.84$ years. These wide standard deviations indicate more dispersion around the mean age scores. 
+
+</p>
+</details>
+
+:::

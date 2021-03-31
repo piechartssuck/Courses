@@ -1,0 +1,115 @@
+---
+title: "Bivariate Tables"
+linktitle: "Week 11: Bivariate Tables"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to do for Week 10 after class ends^[For grading. Due in two weeks.]
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "
+#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "
+#4682b4"))
+
+wk_post <- tibble(
+"eCampus?" = c(checked,
+               unchecked),
+
+Description = c("Complete problems 1, 3, 5, 6, 7 and 9 in Chapter 9.",
+               "Take a look at the R Walkthrough on comparing groups."),
+
+Location = c("[Link](/assignment/10-homeworks/#assignment-1)",
+             "[Link](/lesson/comparinggroups/)")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+<br />
+
+### What to do for Week 11 before coming to class^[For preparation.]
+
+```{r eval = TRUE, echo = FALSE}
+book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+
+wk_pre <- tibble(
+
+  Area = c(book, 
+           chalkboard),
+
+Description = c("Read chapter 10 in the text.",
+               "Look over the text PowerPoint and corresponding notes."),
+
+Location = c("[Link](/readings/10-readings/#book-stuff-1)",
+             "[Link](/lesson/10-lesson/#textbook-class-notes-1)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_pre, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+### Extra Credit
+
+```{r eval = TRUE, echo = FALSE}
+ec <- as.character(fontawesome::fa("credit-card", fill = "
+#4682b4"))
+
+wk_ec <- tibble(
+  
+Area = c(ec),
+
+Description = c("An extra credit task on using Rmarkdown for reporting purposes is still available."),
+
+Location = c("[Link](https://www.datacamp.com/){target='_blank'}")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_ec, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```

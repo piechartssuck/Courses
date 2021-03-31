@@ -1,0 +1,94 @@
+---
+title: "Measures of Variability & Quiz 1"
+linktitle: "Week 4: Measures of Variability"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to do for Week 4 after class ends^[For grading.]
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+wk_post <- tibble(
+"eCampus?" = c(checked,
+               unchecked, 
+               checked),
+
+Description = c("Submit the first quiz.^[Note: Due this Friday]",
+  "Complete a module in Data Camp focused on basic descriptive statistics and an introduction to probability.",
+               "Complete problems 1, 2, 3, 7, 8, 12, and 13 in Chapter 4."),
+
+Location = c("[Link](/lesson/04-lesson/#data-camp-1)", 
+             "[Link](/assignment/04-homeworks/#weekly-task-1)",
+             "[Link](https://ecampus.wvu.edu/){target='_blank'}")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+<br />
+
+### What to do for Week 5 before coming to class^[For preparation.]
+
+```{r eval = TRUE, echo = FALSE}
+book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+
+wk_pre <- tibble(
+Area = c(book, 
+         chalkboard, 
+         lightbulb),
+
+Description = c("Read chapter 5 in the text.",
+               "Look over the text PowerPoint and corresponding notes.",
+               "Watch a video on The Normal Distribution.^[Optional but recommended.]"),
+
+Location = c("[Link](/readings/05-readings/#book-stuff-1)", 
+             "[Link](/lesson/05-lesson/#book-materials-1)",
+             "[Link](/example/05-example/#crash-course-statistics-1)")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_pre, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+

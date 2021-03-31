@@ -93,14 +93,14 @@ author: Abhik Roy
 
 course:
   number: "EDP 613"
-  semester: "Fall 2020"
-  days: "Forever (for the next 13 weeks)"
+  semester: "Fall 2021"
+  days: "Forever aka for the next 16 weeks"
   time: "Thursdays from 4:00-6:50 PM"
-  location: "Agricultural Sciences building Rm. 2004"
-  dates: "August 26 - December 11"
+  location: "Allen Hall 510"
+  dates: "August 18 - December 17"
   github: piechartssuck/Courses/tree/edp613
-  copyrightYear: "2020"
-  slack: "https://2020edp613.slack.com"
+  copyrightYear: "2021"
+  slack: "https://2021edp613.slack.com"
 
 instructor:
   name: Dr. Abhik Roy
@@ -112,7 +112,7 @@ instructor:
   contact_policy: >-
     Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
   appointment_url: "https://calendly.com/nopiecharts/short30"
-  office_hours: "Mondays from 1-3 PM via Zoom"
+  office_hours: "TBD"
 
 school:
   name: Counseling & Learning Sciences

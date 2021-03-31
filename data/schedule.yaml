@@ -1,123 +1,123 @@
 lessons:
   - title: '<span class="fake-header-table">Concentration</span>'
     header: True
-
-  - title: 'The What and Why of Statistics'
-    session: 1
-    date: "September 2, 2020"
-    readings: "01-readings"
-    lesson: "01-lesson"
-    example: "01-example"
-    assignment: "01-homeworks"
-    due: "01-due"
-
-  - title: 'The Organization and Graphic Presentation of Data'
-    session: 2
-    date: "September 9, 2020"
-    readings: "02-readings"
-    lesson: "02-lesson"
-    example: "02-example"
-    assignment: "02-homeworks"
-    due: "02-due"
-
-  - title: 'Measures of Central Tendency'
-    session: 3
-    date: "September 16, 2020"
-    readings: "03-readings"
-    lesson: "03-lesson"
-    example: "03-example"
-    assignment: "03-homeworks"
-    due: "03-due"
-
-  - title: 'Measures of Variability'
-    session: 4
-    date: "September 23, 2020"
-    readings: "04-readings"
-    lesson: "04-lesson"
-    example: "04-example"
-    assignment: "04-homeworks"
-    due: "04-due"
-
-  - title: 'The Normal Distribution'
-    session: 5
-    date: "September 30, 2020"
-    readings: "05-readings"
-    lesson: "05-lesson"
-    example: "05-example"
-    assignment: "05-homeworks"
-    due: "05-due"
-
-  - title: 'Sampling and Sampling Distributions Part I'
-    session: 6
-    date: "October 7, 2020"
-    readings: "06-readings"
-    lesson: "06-lesson"
-    example: "06-example"
-    assignment: "06-homeworks"
-
-  - title: 'Sampling and Sampling Distributions Part II'
-    session: 7
-    date: "October 14, 2020"
-    lesson: "07-lesson"
-    example: "07-example"
-    assignment: "07-homeworks"
-
-  - title: 'Exam I'
-    session: 8
-    date: "October 21, 2020"
-    assignment: "08-homeworks"
-    due: "08-due"
-
-  - title: 'Estimations'
-    session: 9
-    date: "October 28, 2020"
-    readings: "09-readings"
-    lesson: "09-lesson"
-    example: "09-example"
-    due: "09-due"
-
-  - title: 'Testing Hypotheses'
-    session: 10
-    date: "November 4, 2020"
-    readings: "10-readings"
-    lesson: "10-lesson"
-    example: "10-example"
-    assignment: "10-homeworks"
-    due: "10-due"
-
-  - title: 'Bivariate Tables'
-    session: 11
-    date: "November 11, 2020"
-    readings: "11-readings"
-    lesson: "11-lesson"
-    assignment: "11-homeworks"
-    due: "11-due"
-
-  - title: 'The Chi-Square Test and Measures of Association'
-    session: 12
-    date: "November 18, 2020"
-    readings: "12-readings"
-    lesson: "12-lesson"
-    example: "12-example"
-    due: "12-due"
-
-  - title: 'Chi-Square and ANOVAs'
-    session: 13
-    date: "November 25, 2020"
-    readings: "13-readings"
-    lesson: "13-lesson"
-    example: "13-example"
-    assignment: "13-homeworks"
-    due: "13-due"
-
-  - title: 'Exam II'
-    session: 14
-    date: "December 2, 2020"
-    assignment: "14-homeworks"
-    due: "14-due"
-
-  - title: 'Sentiment Analysis'
-    session: 15
-    date: "December 9, 2020"
-    lesson: "15-lesson"
-    due: "15-due"
+  #
+  # - title: 'The What and Why of Statistics'
+  #   session: 1
+  #   date: "September 2, 2020"
+  #   readings: "01-readings"
+  #   lesson: "01-lesson"
+  #   example: "01-example"
+  #   assignment: "01-homeworks"
+  #   due: "01-due"
+  #
+  # - title: 'The Organization and Graphic Presentation of Data'
+  #   session: 2
+  #   date: "September 9, 2020"
+  #   readings: "02-readings"
+  #   lesson: "02-lesson"
+  #   example: "02-example"
+  #   assignment: "02-homeworks"
+  #   due: "02-due"
+  #
+  # - title: 'Measures of Central Tendency'
+  #   session: 3
+  #   date: "September 16, 2020"
+  #   readings: "03-readings"
+  #   lesson: "03-lesson"
+  #   example: "03-example"
+  #   assignment: "03-homeworks"
+  #   due: "03-due"
+  #
+  # - title: 'Measures of Variability'
+  #   session: 4
+  #   date: "September 23, 2020"
+  #   readings: "04-readings"
+  #   lesson: "04-lesson"
+  #   example: "04-example"
+  #   assignment: "04-homeworks"
+  #   due: "04-due"
+  #
+  # - title: 'The Normal Distribution'
+  #   session: 5
+  #   date: "September 30, 2020"
+  #   readings: "05-readings"
+  #   lesson: "05-lesson"
+  #   example: "05-example"
+  #   assignment: "05-homeworks"
+  #   due: "05-due"
+  #
+  # - title: 'Sampling and Sampling Distributions Part I'
+  #   session: 6
+  #   date: "October 7, 2020"
+  #   readings: "06-readings"
+  #   lesson: "06-lesson"
+  #   example: "06-example"
+  #   assignment: "06-homeworks"
+  #
+  # - title: 'Sampling and Sampling Distributions Part II'
+  #   session: 7
+  #   date: "October 14, 2020"
+  #   lesson: "07-lesson"
+  #   example: "07-example"
+  #   assignment: "07-homeworks"
+  #
+  # - title: 'Exam I'
+  #   session: 8
+  #   date: "October 21, 2020"
+  #   assignment: "08-homeworks"
+  #   due: "08-due"
+  #
+  # - title: 'Estimations'
+  #   session: 9
+  #   date: "October 28, 2020"
+  #   readings: "09-readings"
+  #   lesson: "09-lesson"
+  #   example: "09-example"
+  #   due: "09-due"
+  #
+  # - title: 'Testing Hypotheses'
+  #   session: 10
+  #   date: "November 4, 2020"
+  #   readings: "10-readings"
+  #   lesson: "10-lesson"
+  #   example: "10-example"
+  #   assignment: "10-homeworks"
+  #   due: "10-due"
+  #
+  # - title: 'Bivariate Tables'
+  #   session: 11
+  #   date: "November 11, 2020"
+  #   readings: "11-readings"
+  #   lesson: "11-lesson"
+  #   assignment: "11-homeworks"
+  #   due: "11-due"
+  #
+  # - title: 'The Chi-Square Test and Measures of Association'
+  #   session: 12
+  #   date: "November 18, 2020"
+  #   readings: "12-readings"
+  #   lesson: "12-lesson"
+  #   example: "12-example"
+  #   due: "12-due"
+  #
+  # - title: 'Chi-Square and ANOVAs'
+  #   session: 13
+  #   date: "November 25, 2020"
+  #   readings: "13-readings"
+  #   lesson: "13-lesson"
+  #   example: "13-example"
+  #   assignment: "13-homeworks"
+  #   due: "13-due"
+  #
+  # - title: 'Exam II'
+  #   session: 14
+  #   date: "December 2, 2020"
+  #   assignment: "14-homeworks"
+  #   due: "14-due"
+  #
+  # - title: 'Sentiment Analysis'
+  #   session: 15
+  #   date: "December 9, 2020"
+  #   lesson: "15-lesson"
+  #   due: "15-due"

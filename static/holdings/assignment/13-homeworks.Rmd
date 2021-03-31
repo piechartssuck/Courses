@@ -1,0 +1,264 @@
+---
+title: "Chi-Square and ANOVAs"
+linktitle: "Week 13: Chi-Square and ANOVAs"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Homeworks
+    weight: 11
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+
+li {
+    margin-left: 1.5em;
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+```
+
+### Week 13 Problem Set
+
+#### Assignment
+Chapter 10 Exercises: 1, 2, 3, 5, 7, 13. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+
+#### Solutions
+*Note: The* $\chi^2$ *value obtained will be referenced by the variable* $\chi^2_{obt}$.
+<details><summary>1</summary>
+<p>
+
+a. We have 
+\begin{align}
+df &= (3-1)\cdot(2-1)\\
+   &= 2
+\end{align}
+yielding <span class="boxed">2 degrees of freedom</span>.
+
+b. We have $\chi^2 = 3.311$. With $\chi^2_{obt} =  0.191 > \alpha = 0.01$, <span class="boxed">we fail to reject $H_0$ and conclude that sex and opinion of whether or not people can be trusted are likely independent</span>. Specifically, similar percentages of men ($34.94$%) and women ($29.7$%) felt that people can be trusted.
+
+c. If $\alpha = 0.05$, $\chi^2_{obt} =  0.191$ would still be greater and thus <span class="boxed">we would still reject $H_0$</span>.
+
+d. We have $\lambda = 0.000$ implying that there <span class="boxed">is no proportional reduction of error using sex to predict whether or not people can be trusted</span>.
+
+</p>
+</details>
+
+<details><summary>2</summary>
+<p>
+a. There does not appear to be a relationship between gender and views on restoring the voting rights of felons in prison. $30$% of respondents supported restoring the voting rights of felons in prison, with only a slightly greater percentage of men ($31$%) reporting such compared to women ($28$%). 
+<div align="center">
+<div style="width: 50%; margin:0 left;text-align: left;">
+```{r, echo=FALSE, eval=TRUE}
+views <- tibble(
+  
+  `Restoring Voting Rights` = c("Support", 
+                                "Oppose",
+                                "Total"),
+  
+  Men = c("31%", 
+          "69%",
+          "100%"),
+  
+  Women = c("28%", 
+            "71%",
+            "99%"),
+  
+  Total = c("30%", 
+            "70%",
+            "100%")
+  
+) 
+
+views %>%
+  kable(align = 'lccc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</div>
+</div>
+
+b. We <span class="boxed">fail to reject $H_0$ of no relationship and conclude that there is not a relationship between gender and views on restoring the voting rights of felons in prison at the $0.05$ $\alpha$ level</span>. 
+</p>
+</details>
+
+<details><summary>3</summary>
+<p>
+a. <span class="boxed">A higher percentage of White respondents ($38.14$%), compared to Black respondents ($23$%), reported that people could be trusted</span>.
+
+b. <span class="boxed">For Black respondents, a slightly higher percentage of men ($15.1$%) compared to women ($12.5$%) reported that people could be trusted</span>.
+
+c. For 
+- Whites with $\chi^2 = 2.395$, <span class="boxed">we fail to reject $H_0$.</span>
+- Blacks with $\chi^2 = 0.233$, <span class="boxed">we fail to reject $H_0$</span>.
+It is also worth noting that two of the cells have expected counts less than 5 so results should be cautiously interpreted. It would likely be beneficial to repeat the study with a larger sample size.
+
+</p>
+</details>
+
+<details><summary>5</summary>
+<p>
+a. <span class="boxed">We will make 2,973 errors</span> since we predict that all victims fall in the modal category (White) where
+\begin{align}
+E_1 &= 6084 – 3111\\
+   &= 2973
+\end{align}
+
+b. For 
+- White offenders, we could make <span class="boxed">373 errors</span>
+- Black offenders, we could make <span class="boxed">493 errors</span>
+- Other offenders, we would make <span class="boxed">42 errors</span> given $E_2 = 908$. 
+
+c.	The proportional reduction in error is then 
+\begin{align}
+\dfrac{2973 – 908}{2973} & \approx 0.6946
+\end{align}
+This indicates a very strong relationship between the two variables. <span class="boxed">We can reduce the error in predicting victim’s race based upon race of offender by 69.46%</span>.
+
+</p>
+</details>
+
+<details><summary>7</summary>
+<p>
+<div style="padding-left: 30px;">
+We have
+</div>
+<div align="center">
+<div style="width: 90%; margin:0 left;text-align: left;">
+```{r, echo=FALSE, eval=TRUE}
+demographics <- tibble(
+  
+  `Race/Status` = c("White/First-Generation", 
+                    "White/Nonfirst-Generation",
+                    "Black/First-Generation",
+                    "Black/Nonfirst-Generation",
+                    "Native American/First-Generation",
+                    "Native American/Nonfirst-Generation",
+                    "Hispanic/First-Generation",
+                    "Hispanic/Nonfirst-Generation",
+                    "Asian American/First-Generation",
+                    "Asian American/Nonfirst-Generation",
+                    "$\\chi^2 = 7.51$"),
+  
+  "$f_0$" = c(1742,
+             2392,
+             102,
+             119,
+             41,
+             45,
+             19,
+             25,
+             6,
+             22,
+             ""),
+  
+ "$f_e$" = c(1749.6,
+            2384.4,
+            93.5,
+            127.5,
+            36.4,
+            49.6,
+            18.6,
+            25.4,
+            11.9,
+            16.1,
+            ""),
+  
+  "$f_0-f_e$" = c(-7.6,
+                 7.6,
+                 8.5,
+                 -8.5,
+                 4.6,
+                 -4.6,
+                 0.4,
+                 -0.4,
+                 -5.9,
+                 5.9,
+                 ""),
+ 
+ "$(f_0-f_e)^2$"= c(57.76,
+                    57.76,
+                    72.25,
+                    72.25,
+                    21.16,
+                    21.16,
+                    0.16,
+                    0.16,
+                    34.81,
+                    34.81,
+                    ""),
+ 
+ "$\\dfrac{(f_0-f_e)^2}{f_e}$"= c(0.03,
+                                 0.02,
+                                 0.77,
+                                 0.57,
+                                 0.58,
+                                 0.43,
+                                 0.01,
+                                 0.01,
+                                 2.93,
+                                 2.16,
+                                 "")
+  
+) 
+
+demographics %>%
+  kable(align = 'lccccc',
+        booktabs = TRUE, 
+        linesep = "",
+        escape = FALSE) %>%
+  kable_styling(full_width = FALSE) 
+```
+</div>
+</div>
+<div style="padding-left: 30px;">
+<span class="boxed">So $\chi^2 = 7.51$ with $df = (2-1)\cdot(5-1) = 4$ implying we would fail to reject $H_0$</span>. The probability of $\chi^2_{obt}$ is between $(0.20, 0.10)>\alpha = 0.05$.
+</div>
+</p>
+</details>
+
+<details><summary>13</summary>
+<p>
+<div style="padding-left: 30px;">
+For
+</div>
+- Gender, the model is significant at the $0.01 \alpha$ level, <span class="boxed">indicating a likely significant relationship between the variables</span>. Though males contribute to more violent onset, in proportional terms, females exhibit a higher prevalence rate, in that $18.32$% of females exhibit violent onset compared with $11.71$% of males. 
+
+- Age at first offense, the model is significant at the $0.01 \alpha$ level, <span class="boxed">indicating a likely significant relationship between age at first offense and violent onset</span>. Violent onset is more likely among the group 14 years and older ($14.74$%) than those less than 14 years of age at first onset ($9.67$%). 
+</p>
+</details>
+
+:::
+

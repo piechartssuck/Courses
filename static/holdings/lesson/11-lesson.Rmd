@@ -1,0 +1,56 @@
+---
+title: "Bivariate Tables"
+linktitle: "Week 11: Bivariate Tables"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### In Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 11/Slides-Week-11.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 11/Slides-Week-11.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 11/Slides-Week-11.pdf){target="_blank"} of the presentation. 
+
+### Textbook Class Notes
+Download the textbook
+
+- [Ch 9 PowerPoint](/slides/Week 11/SSDS_Ch9.PPTX){target="_blank"}, 
+- [Ch 9 Lecture Notes](/lecture_notes/Week11/SSDS_Ch9.docx){target="_blank"},
+
+### R Walkthrough: Comparing Groups
+
+Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 9/Slides-Week-9R.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 11/Slides-Week-11R.html")
+```
+
+You can download 
+
+- The [PREDIMED Codebook](/slides/Week 11/predimed_codebook.csv){target="_blank"} used in the slideshow.
+- a [PDF](/slides/Week 11/Slides-Week-11R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 11/Slides-Week-11R.R){target="_blank"} file of just the R chunks used in the presentation.

@@ -1,0 +1,19 @@
+---
+title: "The What and Why of Statistics"
+linktitle: "Week 1: The What and Why of Statistics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Nothing!
+There are no examples this week. Go do something!
+

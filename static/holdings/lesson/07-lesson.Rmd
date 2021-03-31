@@ -1,0 +1,70 @@
+---
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 7: Sampling and Sampling Distributions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 7
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due. The module covers types of data sampling, and experiments. In particular, the sections are:
+
+- Language of data
+- Study types and cautionary tales 
+- Sampling strategies and experimental design
+- Case study
+
+### Book Materials
+Download the textbook
+
+- [Chapter 6 PowerPoint](/slides/Week 6/SSDS_Ch6.PPTX){target="_blank"}
+- [Chapter 6 Lecture Notes](/lecture_notes/Week 5/SSDS_Ch6.docx){target="_blank"}
+
+### Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 7/Slides-Week-7.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 7/Slides-Week-7.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 7/Slides-Week-7.pdf){target="_blank"} of the presentation. 
+- a [script](/slides/Week 7/Slides-Week-7.R){target="_blank"} file of just the R chunks used in the presentation.
+
+### R Walkthrough: An Incomplete Review of Descriptive Statistics Commands in R
+
+Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 7/Slides-Week-7.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 7/Slides-Week-7R.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 7/Slides-Week-7R.pdf){target="_blank"} of the presentation above. 
+- a [script](/slides/Week 7/Slides-Week-7R.R){target="_blank"} file of just the R chunks used in the presentation.
+
+### Kaggle
+
+[Kaggle](https://www.kaggle.com/){target="_blank"}^[Subsidiary of Google.] is an online learning community for data scientists and machine learning practitioners^[Stolen from Wikipedia.] That's great but its greatest benefit are the numerous tutorials/walkthroughs provided and also to locate data sets^[All data sets are submitted by people so while its fun for *window shopping*, if possible find the original source. Typically users will list where their posted data sets can be found publicly]. In an upcoming data task, you'll be asked to locate a data set of interest to perform some analysis and Kaggle is a great place to start so if you get a chance, sign up for free and look around. However for now, there is an excellent [`dplyr` walkthrough](https://www.kaggle.com/jessemostipak/dive-into-dplyr-tutorial-1){target="_blank"} that was posted recently and may be helpful to you for the exam.
+
+### Other Sites
+Head over to the [Data](/resource/data/) page under Resources to find more outlets!

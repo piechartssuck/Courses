@@ -1,0 +1,21 @@
+---
+title: "The Organization and Graphic Presentation of Data"
+linktitle: "Week 2: The Organization and Graphic Presentation of Data"
+menu:
+  content:
+    parent: Readings
+    weight: 2
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+Read Chapter 2: *The Organization and Graphic Presentation of Data* in Frankfort-Nachmias and Leon-Guerrero. 
+
+
+

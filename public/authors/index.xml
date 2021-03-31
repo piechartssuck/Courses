@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Statistical Methods I</title>
-    <link>/authors/</link>
-      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp613.theoreticalphysed.com/authors/</link>
+      <atom:link href="https://edp613.theoreticalphysed.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>/img/course_info.png</url>
+      <url>https://edp613.theoreticalphysed.com/img/course_info.png</url>
       <title>Authors</title>
-      <link>/authors/</link>
+      <link>https://edp613.theoreticalphysed.com/authors/</link>
     </image>
     
   </channel>

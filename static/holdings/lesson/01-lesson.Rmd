@@ -1,0 +1,40 @@
+---
+title: "The What and Why of Statistics"
+linktitle: "Week 1: The What and Why of Statistics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The first [Data Camp](https://www.datacamp.com/){target="_blank"} module is due the  Wednesday following the completion of the Week 1 class. It provides an introduction to the structure in and elementary use of R with an end goal of getting you familiar with its functionality. In particular the sections address:
+
+- Intro to basics
+- Vectors
+- Matrices
+- Factors
+- Data frames
+- Lists
+
+As noted last week, there is a lot on there but please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks. Just remember, this is not a programming class!
+
+### Book Materials
+Download the textbook
+
+- [Chapter 1 PowerPoint](/slides/Week 1/SSDS_Ch1.PPTX){target="_blank"} 
+- [Chapter 1 Lecture Notes](/lecture_notes/Week 1/SSDS_Ch1.docx){target="_blank"}.
+
+### Class Notes
+Download the in-class slides via
+
+- [PDF](/slides/Week 1/ICS_Ch1.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week 1/ICN_Ch1.pdf){target="_blank"}.
+

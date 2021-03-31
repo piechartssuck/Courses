@@ -271,7 +271,7 @@ ggplot(NULL, aes(c(-3,3))) +
 
 ---
 
-# What the heck is a degree of freedom?
+# What the heck is a *degree of freedom*?
 
 1. Forget statistics
 

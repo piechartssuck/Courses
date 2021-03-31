@@ -1,0 +1,41 @@
+---
+title: "Chi-Square and ANOVAs"
+linktitle: "Week 13: Chi-Square and ANOVAs"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 11
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### In Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 13/Slides-Week-13.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 13/Slides-Week-13.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 13/Slides-Week-13.pdf){target="_blank"} of the presentation. 
+
+### Textbook Class Notes
+Download the textbook
+
+- [Ch 12 PDF](/slides/Week 13/SSDS_Ch12.pdf){target="_blank"}
+- [Ch 12 Outline](/lecture_notes/Week13/SSDS_Ch12.pdf){target="_blank"}
+
+### Jamovi
+
+Download and explore the [jamovi](https://www.jamovi.org/){target="_blank"} software that uses the power and open source abilities of R in an environment that resembles SPSS.

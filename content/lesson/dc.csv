@@ -1,0 +1,57 @@
+﻿Group,Track,Lesson Page,Assigned,Due by_long,Due by_short,Required,Course,Chapters_long,Chapters_wide
+1,1,[Week 1](/lesson/01-lesson/),8/19/21,9/1/21,9/1/21,checked,Introduction to R,Intro to basics,"Intro to basics, Vectors, Matrices, Factors, Data Frames, Lists"
+1,,,,,,,,Vectors,
+1,,,,,,,,Matrices,
+1,,,,,,,,Factors,
+1,,,,,,,,Data Frames,
+1,,,,,,,,Lists,
+,,,,,,,,,
+2,2,[Week 2](/lesson/02-lesson/),9/2/21,9/8/21,9/8/21,checked,Intro to Statistics with R: Introduction,Variables,"Variables, Histograms and Distributions"
+2,,,,,,,,Histograms and Distributions,
+,,,,,,,,,
+3,3,[Week 3](/lesson/03-lesson/),9/9/21,9/15/21,9/15/21,checked,Intro to Statistics with R: Introduction,Measures of Central Tendency,Measures of Central Tendency
+3,,,,,,,,,
+3,,,,,,checked,Introduction to the Tidyverse,Data wrangling,Data wrangling
+,,,,,,,,,
+4,4,[Week 4](/lesson/04-lesson/),9/16/21,9/22/21,9/22/21,checked,Intro to Statistics with R: Introduction,Measures of Variability,Measures of Variability
+4,,,,,,,,,
+4,,,,,,checked,Introduction to the Tidyverse,Data visualization,"Data visualization, Grouping and summarizing"
+4,,,,,,,,Grouping and summarizing,
+,,,,,,,,,
+5,5,[Week 5](/lesson/05-lesson/),9/23/21,9/29/21,9/29/21,checked,Intro to Statistics with R: Introduction,Scales of Measurement,Scales of Measurement
+5,,,,,,,,,
+5,,,,,,checked,Data Manipulation with dplyr,Transforming Data with dplyr,"Transforming Data with dplyr, Aggregating Data"
+5,,,,,,,,Aggregating Data,
+,,,,,,,,,
+6,6,[Week 6](/lesson/06-lesson/),,10/6/21,10/6/21,checked,Data Manipulation with dplyr,Selecting and Transforming Data,"Selecting and Transforming Data, Case Study: The babynames Dataset"
+6,,,,,,,,Case Study: The babynames Dataset,
+6,,,,,,,,,
+6,,,,,,,Sampling in R,Bias Any Stretch of the Imagination,Bias Any Stretch of the Imagination
+6,,,,,,,,"Don't get theory eyed, Don't get theory eyed",
+,,,,,,,,,
+7,7,[Week 7](/lesson/07-lesson/),10/14/21,10/20/21,10/20/21,checked,Sampling in R,The n's justify the means,"The n's justify the means, Pull Your Data Up By Its Bootstraps"
+7,,,,,,,,Pull Your Data Up By Its Bootstraps,
+,,,,,,,,,
+9,8,[Week 9](/lesson/09-lesson/),10/21/21,10/27/21,10/27/21,checked,Hypothesis Testing in R,"Yum, That Dish Tests Good","Yum, That Dish Tests Good"
+,,,,,,,,,
+10,9,[Week 10](/lesson/10-lesson/),10/28/21,11/3/21,11/3/21,checked,Hypothesis Testing in R,Pass Me ANOVA Glass of Iced t,Pass Me ANOVA Glass of Iced t
+,,,,,,,,,
+11,10,[Week 11](/lesson/11-lesson/),11/4/21,11/10/21,11/10/21,checked,Exploratory Data Analysis in R,Exploring Categorical Data,Exploring Categorical Data
+11,,,,,,,,,
+,,,,,,,,,
+12,11,[Week 12](/lesson/12-lesson/),11/12/21,11/17/21,11/17/21,checked,Hypothesis Testing in R,Letting the Categoricals Out of the Bag,Letting the Categoricals Out of the Bag
+12,,,,,,,,Time to Define the Relationship,
+,,,,,,,,,
+13,12,[Week 13](/lesson/13-lesson/),11/18/21,12/1/21,12/1/21,checked,Intro to Statistics with R: Analysis of Variance (ANOVA),An introduction to ANOVA,An introduction to ANOVA
+,,,,,,,,,
+EC1,EC1,,8/19/21,12/8/21,12/8/21,unchecked,Working with Data in the Tidyverse,Explore your data,"Explore your data, Tame your data, Tidy your data, Transform your data"
+EC1,EC1,,,,,,,Tame your data,
+EC1,EC1,,,,,,,Tidy your data,
+EC1,EC1,,,,,,,Transform your data,
+EC1,EC1,,,,,,,,
+EC1,EC1,,,,,unchecked,Dr. Semmelweis and the Discovery of Handwashing,,
+,,,,,,,,,
+EC2,EC2,,8/19/21,12/8/21,12/8/21,unchecked,Fundamentals of Bayesian Data Analysis in R,What is Bayesian Data Analysis?,"What is Bayesian Data Analysis?, How does Bayesian inference work?, Why use Bayesian Data Analysis?, Bayesian inference with Bayes' theorem"
+EC2,EC2,,,,,,,How does Bayesian inference work?,
+EC2,EC2,,,,,,,Why use Bayesian Data Analysis?,
+EC2,EC2,,,,,,,Bayesian inference with Bayes' theorem,

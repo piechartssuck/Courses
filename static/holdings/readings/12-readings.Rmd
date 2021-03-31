@@ -1,0 +1,23 @@
+---
+title: "The Chi-Square Test and Measures of Association"
+linktitle: "Week 12: The Chi-Square Test and Measures of Association"
+menu:
+  content:
+    parent: Readings
+    weight: 11
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+### Book Stuff
+
+Read Chapter 10: *The Chi-Square Test and Measures of Association*
+
+
+
+

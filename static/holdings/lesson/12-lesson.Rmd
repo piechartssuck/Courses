@@ -1,0 +1,41 @@
+---
+title: "The Chi-Square Test and Measures of Association"
+linktitle: "Week 12: The Chi-Square Test and Measures of Association"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 10
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### In Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 12/Slides-Week-12.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 12/Slides-Week-12.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 12/Slides-Week-12.pdf){target="_blank"} of the presentation. 
+
+### Textbook Class Notes
+Download the textbook
+
+- [PowerPoint](/slides/Week 12/SSDS_Ch10.PPTX){target="_blank"}
+- [Lecture Notes](/lecture_notes/Week12/SSDS_Ch10.docx){target="_blank"}
+
+### R Walkthrough: Chi Square
+
+Take a look at a [walkthrough](/lesson/chisquare/) about the $\chi^2$ statistic.

@@ -1,0 +1,122 @@
+---
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 7: Sampling and Sampling Distributions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to do for Week 7 after class ends^[For grading.]
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "
+#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "
+#4682b4"))
+
+wk_post <- tibble(
+"eCampus?" = c(unchecked, 
+               checked,
+               unchecked),
+
+Description = c("Take a look at the coding chunks page that may help you on the upcoming exam.",
+               "Complete problems 1, 2, 3, 4, 5, 6, 7, 8, and 9 in Chapter 6.",
+               "Is reality probabilistic or deterministic? Figure out what kind of statistical thinking you have."
+               ),
+
+Location = c("[Link](/lesson/07-lesson/#r-walkthrough-an-incomplete-review-of-descriptive-statistics-com)",
+             "[Link](/assignment/07-homeworks/#weekly-task-1)",
+             "[Link](/example/07-example/)"
+             )
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+<br />
+
+### What to do for Week 8 before coming to class^[For preparation.]
+
+```{r eval = TRUE, echo = FALSE}
+test <- as.character(fontawesome::fa("file-alt", fill = "
+#4682b4"))
+
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "
+#4682b4"))
+
+wk_pre <- tibble(
+
+  Area = c(test, 
+         lightbulb),
+
+Description = c("Being reviewing Chapters 1-6 and material on Data Camp/Walkthroughs for the exam.",
+               "Watch videos on the differences between Bayesian and Frequentist Statistics.^[Optional but recommended.]"),
+
+Location = c("Everywhere", 
+             "[Link](/example/07-example/#crash-course-statistics-1)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_pre, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```
+
+### Extra Credit
+
+```{r eval = TRUE, echo = FALSE}
+ec <- as.character(fontawesome::fa("credit-card", fill = "
+#4682b4"))
+
+wk_ec <- tibble(
+  
+Area = c(ec),
+
+Description = c("An extra credit task on using Rmarkdown for reporting purposes has posted."),
+
+Location = c("[Link](https://www.datacamp.com/){target='_blank'}")
+
+)
+
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_ec, 
+      escape = FALSE,
+      align = 'clc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em")
+```

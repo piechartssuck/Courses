@@ -1,0 +1,30 @@
+---
+title: "The Chi-Square Test and Measures of Association"
+linktitle: "Week 12: The Chi-Square Test and Measures of Association"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 11
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Crash Course Statistics
+This week we are looking at the all mighty Chi Square test. Akin to a [punnet square](https://www2.palomar.edu/anthro/mendel/mendel_2.htm){target="_blank"}, these are a great way of seeing interactions between individual variables.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7_cs1YlZoug" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.

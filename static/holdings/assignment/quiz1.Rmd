@@ -1,0 +1,57 @@
+---
+title: "Quiz"
+linktitle: "Week 4: Quiz"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Quizzes
+    weight: 1
+type: docs
+weight: 4
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+span.boxed {
+  border: 0px solid #FFFFFF;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #005b96;
+  display: inline;
+} 
+
+table {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table thead th { border-bottom: 1px solid #ddd; 
+}
+
+th, td { padding: 5px; 
+}
+
+tr:nth-child(even) { background: #ffffff; 
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(here)
+library(patchwork)
+```
+
+### Quiz
+
+#### Assignment
+Quiz covering Chapters 1-3. Please turn it in to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next this Friday<br>
+
+#### Solutions
+Posted on ecampus after the submission deadline.
+
+:::

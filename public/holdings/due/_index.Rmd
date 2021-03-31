@@ -1,0 +1,11 @@
+---
+title: "So What's Due?"
+menu:
+  due:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+This section will let you know what must be completed for the purposes of assessment^[What you have to do after a current class ends.] or preparation^[What you have to do before the next class begins.]. You should still do everything else because those items are still expected and you will be scored on those skills eventually on some other course related task.

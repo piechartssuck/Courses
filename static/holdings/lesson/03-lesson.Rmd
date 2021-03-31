@@ -1,0 +1,55 @@
+---
+title: "Measures of Central Tendency"
+linktitle: "Week 3: Measures of Central Tendency"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The third [Data Camp](https://www.datacamp.com/){target="_blank"} module is due the  Wednesday following the completion of the Week 3 class. It covers a particular tidyverse package called `dplyr` which is by far the one of the most useful tools you can use. In particular the sections address:
+
+- Transforming Data with dplyr
+- Aggregating Data
+- Selecting and Transforming Data
+- Case Study: The babynames Dataset
+
+This now sets us up to do meaningful statistics in R.
+
+### Book Materials
+Download the textbook
+
+- [Chapter 3 PowerPoint](/slides/Week 3/SSDS_Ch3.PPTX){target="_blank"}
+- [Chapter 3 Lecture Notes](/lecture_notes/Week 3/SSDS_Ch3.docx){target="_blank"}
+
+### Class Notes
+Download the class
+
+- [PDF](/slides/Week 3/ICS_Ch3.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week 3/ICN_Ch3.pdf){target="_blank"}.
+
+### R Walkthrough
+
+1. Download the data sets^[You will have to unzip this file. If you are unfamilair with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.] and codebooks needed for this walkthrough. Put them wherever you want BUT please remember where they are.
+
+- [Week 3 Walkthrough Materials](/slides/Week 3/Week3data.zip){target="_blank"}
+
+2. Click on the presentation itself and then you may
+
+- Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+- Press the letter **O** at any point to see see a tile view of the slideshow.
+- Use this [link](/slides/Week 3/Slides-Week-3.html){target="_blank"} to view a larger version of slideshow in a new window.
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 3/Slides-Week-3.html")
+```
+
+You can download a [PDF](/slides/Week 3/Slides-Week-3.pdf){target="_blank"} of the presentation above. 

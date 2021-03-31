@@ -1,0 +1,38 @@
+---
+title: "The Normal Distribution"
+linktitle: "Week 5: The Normal Distribution"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Data Camp
+The fifth [Data Camp](https://www.datacamp.com/){target="_blank"} module is due **two Wednesdays** following the completion of the Week 5 class. The module covers types of data sampling, and experiments. In particular, the sections are:
+
+- Language of data
+- Study types and cautionary tales 
+- Sampling strategies and experimental design
+- Case study
+
+### Book Materials
+Download the textbook
+
+- [Chapter 5 PowerPoint](/slides/Week 5/SSDS_Ch5.PPTX){target="_blank"}
+- [Chapter 5 Lecture Notes](/lecture_notes/Week 5/SSDS_Ch5.docx){target="_blank"}
+
+### Class Notes
+Download the class
+
+- [PDF](/slides/Week 5/ICS_Ch5.pdf){target="_blank"} and 
+- [Outline](/lecture_notes/Week5/ICN_Ch5.pdf){target="_blank"}.
+
+### R Walkthrough
+Take a look at a [walkthrough](/lesson/NFLpipes/) about using NFL data and pipes from `tidyverse`.

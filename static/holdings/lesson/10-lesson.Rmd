@@ -1,0 +1,43 @@
+---
+title: "Testing Hypotheses"
+linktitle: "Week 10: Testing Hypotheses"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### In Class Notes
+
+- Download the class slides: Remember to click on the presentation itself and then you may
+
+  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
+  + Press the letter **O** at any point to see see a tile view of the slideshow.
+  + Use this [link](/slides/Week 10/Slides-Week-10.html){target="_blank"} to view a larger version of slideshow in a new window.
+        
+```{r echo = FALSE}
+knitr::include_url("/slides/Week 10/Slides-Week-10.html")
+```
+
+You can download 
+
+- a [PDF](/slides/Week 10/Slides-Week-10.pdf){target="_blank"} of the presentation. 
+
+### Textbook Class Notes
+Download the textbook
+
+- [Ch 7 PowerPoint](/slides/Week 9/SSDS_Ch7.PPTX){target="_blank"}, 
+- [Ch 7 Lecture Notes](/lecture_notes/Week9/SSDS_Ch7.docx){target="_blank"},
+- [Ch 8 PowerPoint](/slides/Week 10/SSDS_Ch8.PPTX){target="_blank"}, and
+- [Ch 8 Lecture Notes](/lecture_notes/Week10/SSDS_Ch8.docx){target="_blank"}.
+
+### R Walkthrough: Testing
+
+Take a look at a [walkthrough](/lesson/hypotheses/) about *t*-tests.

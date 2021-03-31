@@ -60,14 +60,10 @@ assignment:
     weight: 1
   - name: Homeworks
     weight: 2
-  - name: Data Camp
-    weight: 3
-  - name: Data Explorations
-    weight: 4
   - name: Quizzes
-    weight: 5
+    weight: 3
   - name: Exams
-    weight: 6
+    weight: 4
 resource:
   - name: Resources
     weight: 1

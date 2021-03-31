@@ -1,0 +1,32 @@
+---
+title: "Sampling and Sampling Distributions"
+linktitle: "Week 6: Sampling and Sampling Distributions"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+### Crash Course Statistics
+This week we have two videos from Crash Course Statistics. The first is one on **Experimental Designs** which may benefit many of you after the conclusion of this course.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kkBDa-ICvyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+The second is on **Sampling** which focuses more on the chapter elements. Sampling is one of the most important aspects of any quantitative study. If you underestimate a sample (aka undersample), then a whole study can become useless. If you overestimate a sample (aka oversample), then you'll be doing a bunch of extra work for no reason.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZwqOoD17_LU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<br>
+
+
