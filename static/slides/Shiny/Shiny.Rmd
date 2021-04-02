@@ -895,10 +895,10 @@ server <- function(input, output) {
 ---
 
 # `app.R`
-  
-  We've been running Shiny apps as code blocks so far.
 
-Apps are usually set up in a folder with `app.R`
+We've been running Shiny apps as code blocks so far.
+
+Apps are usually set up in a folder with `app.R` or separate `ui.R` and `server.r` files
 
 ---
 
@@ -906,22 +906,23 @@ Apps are usually set up in a folder with `app.R`
 
 In a project, use 
 
-**File > New Project > New Directory > Shiny Web A1pplication**
+**File > New Project > New Directory > Shiny Web Application**
 
 And then name your app.
 
 ---
 class: center, middle
-# Wrap up and Tips
+
+# Wrap up and Resources
 
 ---
 # More about inputs and outputs
 
 Further reading on the different control inputs, and data output types here:
 
-https://laderast.github.io/gradual_shiny/app-1-connecting-ui-and-server.html#more-about-inputs-and-outputs
-
 Shiny Widget Gallery: https://shiny.rstudio.com/gallery/widget-gallery.html
+
+Shiny Tutorials: https://shiny.rstudio.com/tutorial/
 
 ---
 # Layouts
@@ -929,28 +930,27 @@ Shiny Widget Gallery: https://shiny.rstudio.com/gallery/widget-gallery.html
 Ways to lay out elements of your application:
 
 - `fluidPage` - https://shiny.rstudio.com/articles/layout-guide.html
+
 - `flexdashboard` - https://rmarkdown.rstudio.com/flexdashboard/
 
 ---
-# Extensions
 
-More info here: https://laderast.github.io/gradual_shiny/where-next.html
-
----
 # Shiny at WVU
 
-- I am negotiating with RStudio to get an RStudio Connect server that is accessible to everyone
+- Plan on getting on RStudio Connect server that is accessible to everyone
+
 - Typically requires a developer's fee and user. This applies to all app rendering systems like Tableau and Microsoft BI
 
 ---
   # Shiny in the Real World
   
-  - [shinyapps.io](https://www.shinyapps.io/) lets you host Shiny apps externally
-- sign up for an account
-- Be very careful about PHI
+- [shinyapps.io](https://www.shinyapps.io/) lets you host Shiny apps externally
+
+- Other sites also host Shiny apps
 
 ---
-  # Deploying Apps on shinyapps.io
+
+# Deploying Apps on shinyapps.io
   
 - Requires installing `{rsconnect}` package
 
@@ -970,8 +970,7 @@ More info here: https://laderast.github.io/gradual_shiny/where-next.html
   
 You should now know enough to start learning from the examples:
   
-  - https://shiny.rstudio.com/gallery/
-  - Look at demos
+- https://shiny.rstudio.com/gallery/
 
 ---
 
