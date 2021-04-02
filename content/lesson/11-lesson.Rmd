@@ -22,9 +22,13 @@ This week you have two module to cover on [Data Camp](https://www.datacamp.com/)
 
 For more information about these, take a look at the tentative schedule.
 
-## Data Collection
+## Shiny
 
-The **Oh Look! Shiny Objects** slideshow is a compact introduction to Shiny. You can also download a [PDF](/slides/Shiny/Shiny.pdf){target="_blank"} of the presentation. 
+The **Oh Look! Shiny Objects** slideshow is a compact introduction to Shiny^[Please be patient while the file loads.]. You may also want to download
+
++ an in-class [example file](/data scripts/classthing.R){target="_blank"}^[You may need to right click and save the R script.] used to render a Shiny app 
+
++ a [PDF](/slides/Shiny/Shiny.pdf){target="_blank"} of the presentation. 
 
 ```{r echo = FALSE}
 knitr::include_url("/slides/Shiny/Shiny.html")
