@@ -1,0 +1,34 @@
+---
+title: "Shiny Everything"
+linktitle: "Week 11: Shiny Everything"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 11
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week you have two module to cover on [Data Camp](https://www.datacamp.com/){target="_blank"}. In particular this are
+
+- Building Web Applications with Shiny in R
+- Case Studies: Building Web Applications with Shiny in R 
+
+For more information about these, take a look at the tentative schedule.
+
+## Data Collection
+
+The **Oh Look! Shiny Objects** slideshow is a compact introduction to Shiny. You can also download a [PDF](/slides/Shiny/Shiny.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Shiny/Shiny.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+

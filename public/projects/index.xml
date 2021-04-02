@@ -117,7 +117,8 @@
 &lt;li&gt;&lt;a href=&#34;#interactive-data-visualization&#34;&gt;Interactive Data Visualization&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#step-i-prospectus&#34;&gt;Step I: Prospectus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-ii-visualization&#34;&gt;Step II: Visualization&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#step-ii-visualization&#34;&gt;Step II: Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#step-iii-submission&#34;&gt;Step III: Submission&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assessment-of-visualization&#34;&gt;Assessment of Visualization&lt;/a&gt;&lt;/li&gt;
@@ -131,12 +132,21 @@
 &lt;p&gt;In this task, you will use R, in particular RStudio to create a set of interactive visuals based on a predefined data set. &lt;em&gt;Ideally you should work with one you intend to use for your final project.&lt;/em&gt; Please make sure you follow the directions noted below.&lt;/p&gt;
 &lt;div id=&#34;step-i-prospectus&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step I: Prospectus&lt;/h2&gt;
-&lt;p&gt;This submission is due in &lt;strong&gt;one week&lt;/strong&gt; and only applies to you &lt;strong&gt;if there is a change from the data set used in the R Project&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Follow the guidelines described in the &lt;a href=&#34;https://edp693e.theoreticalphysed.com/projects/01-project/#step-i-prospectus&#34; target=&#34;_blank&#34;&gt;R Project page&lt;/a&gt;. This submission is due in &lt;strong&gt;one week&lt;/strong&gt; and only applies to you &lt;strong&gt;if there is a change from the data set used in the R Project&lt;/strong&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-ii-visualization&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Step II: Visualization&lt;/h2&gt;
 &lt;p&gt;Create an interactive application where users can explore your data set. How that is done is up to you.&lt;/p&gt;
 &lt;p&gt;This is likely your first attempt at creating a Shiny app so consider creating a simple app. Given this, you also an opportunity to take the design and functionality further and to do something a little more challenging.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-iii-submission&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Step III: Submission&lt;/h2&gt;
+&lt;p&gt;Please
++ turn in your &lt;code&gt;ui.R&lt;/code&gt; and &lt;code&gt;server.R&lt;/code&gt; files OR just an &lt;code&gt;app.R&lt;/code&gt; file to both &lt;a href=&#34;https://ecampus.wvu.edu/&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt; and to &lt;a href=&#34;https://2021edp693e.slack.com/archives/C01SHDW55UN&#34; target=&#34;_blank&#34;&gt;#shiny-project&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;upload it to &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34;&gt;shinyapps.io&lt;/a&gt; for live consumption.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;be prepared to present your app to the class.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;resources&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Resources&lt;/h3&gt;
 &lt;p&gt;Including those found on the Resources page, here are a couple of helpful resources.&lt;/p&gt;
@@ -148,7 +158,7 @@
 &lt;li&gt;Locate the item with the title &lt;strong&gt;Introduction to Shiny : learn how to build interactive web apps with R, Shiny, and reactive programming&lt;/strong&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Click View now&lt;/li&gt;
 &lt;li&gt;Login with your WVUID number if needed
-&lt;br&gt;&lt;/li&gt;
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://shiny.rstudio.com/tutorial/&#34; target=&#34;_blank&#34;&gt;Learn Shiny tutorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://mastering-shiny.org/&#34; target=&#34;_blank&#34;&gt;Mastering Shiny&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;

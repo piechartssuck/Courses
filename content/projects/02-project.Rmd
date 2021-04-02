@@ -31,7 +31,7 @@ This is likely your first attempt at creating a Shiny app so consider creating a
 ## Step III: Submission 
 
 Please
-+ turn in your `ui.R` and `server.R` files OR just an `app.R` file to both  [eCampus](https://ecampus.wvu.edu/){target='_blank'} and to [#shiny-project](https://2021edp693e.slack.com/archives/C01SHDW55UN){target='_blank'}.
++ turn in your `ui.R` and `server.R` files OR just an `app.R` file to both [eCampus](https://ecampus.wvu.edu/){target='_blank'} and to [#shiny-project](https://2021edp693e.slack.com/archives/C01SHDW55UN){target='_blank'}.
 
 + upload it to [shinyapps.io](https://www.shinyapps.io/){target='_blank'} for live consumption.
 

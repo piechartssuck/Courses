@@ -1,5 +1,6 @@
-
 lessons:
+  - title: '<span style="font-weight:bold">Content</span>'
+    header: True
 
   - title: "Friends Don't Let Friends Use Pie Chart"
     session: 1
@@ -84,15 +85,13 @@ lessons:
   #   lesson: "10-lesson"
   #   due: "10-due"
   #
-  # - title: 'Wrangling Data'
-  #   session: 11
-  #   date: "November 1, 2020"
-  #   readings: "11-readings"
-  #   lesson: "11-lesson"
-  #   example: "11-example"
-  #   assignment: "11-assignment"
-  #   due: "11-due"
-  #
+  - title: 'Shiny Everything'
+    session: 11
+    date: "April 1, 2021"
+    lesson: "11-lesson"
+    assignment: "11-assignment"
+    due: "11-due"
+
   # - title: 'Cross-Examinations'
   #   session: 12
   #   date: "November 22, 2020"
