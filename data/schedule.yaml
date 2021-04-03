@@ -1,7 +1,5 @@
 lessons:
-  - title: '<span style="font-weight:bold">Content</span>'
-    header: True
-
+  
   - title: 'Who Are You Really?'
     session: 1
     date: "Jan 19, 2021"

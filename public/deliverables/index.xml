@@ -13,6 +13,74 @@
     </image>
     
     <item>
+      <title>Evaluation Presentation</title>
+      <link>https://edp617.theoreticalphysed.com/deliverables/05-evaluation-presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/deliverables/05-evaluation-presentation/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-presentation&#34;&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Presentation&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type&#34;&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#criteria&#34;&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#structure&#34;&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+ul {
+    margin-left: 1.5em;
+}
+&lt;/style&gt;
+&lt;div id=&#34;evaluation-presentation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Presentation&lt;/span&gt;&lt;/h2&gt;
+&lt;div id=&#34;submission&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ecampus.wvu.edu&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;type&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Teams&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Construct this as if you were going to present it to your primary stakeholder/sponsor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;criteria&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#155790&#34;&gt;Criteria&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This submission is due &lt;strong&gt;one week prior to the last day of class&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; and should be written in a format that is (1) professional yet accessible by your audience and (2) aesthetically pleasing. Please note that this &lt;strong&gt;&lt;em&gt;does not&lt;/em&gt;&lt;/strong&gt; need to be in APA formatting.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;structure&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Structure&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;There is no specific formal outline to this deliverable, though you presentation must adhere to the following conditions AND follows the general components listed above in order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Administered in an accessible format (e.g. HTML, PowerPoint, xaringan, YouTube, etc);&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Narrated with detailed audio on each slide with equal group participation throughout;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Incorporates at least two (2) figures from the report must be included that strongly support your narrative;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Includes at least two (2) thoughtful prompts predicated on your study towards the end of the talk;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provides a total running length of 10 minutes (+/- one minute); and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submitted as a single presentation.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Students in the course must participate in the writing process in a group oriented setting.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Please check eCampus for the exact due date.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Evaluation Proposal</title>
       <link>https://edp617.theoreticalphysed.com/deliverables/03-evaluation-proposal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -237,6 +305,171 @@ ul {
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Each student in the course must write their own narrative and should treat this as an individual submission. All remaining submissions will be team based unless otherwise noted.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;No matter the size or scope. This task should be submitted on an individual basis.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Please note this is not a list, rather criteria that you should address within a narrative&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Evaluation Report</title>
+      <link>https://edp617.theoreticalphysed.com/deliverables/04-evaluation-report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/deliverables/04-evaluation-report/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-report&#34;&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Report&lt;/span&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#submission&#34;&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#type&#34;&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sections&#34;&gt;&lt;span style=&#34;color:#155790&#34;&gt;Sections&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+ul {
+    margin-left: 1.5em;
+}
+&lt;/style&gt;
+&lt;div id=&#34;evaluation-report&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span style=&#34;color:#0392cf&#34;&gt;Evaluation Report&lt;/span&gt;&lt;/h2&gt;
+&lt;div id=&#34;submission&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#073965&#34;&gt;Submission&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ecampus.wvu.edu&#34; target=&#34;_blank&#34;&gt;eCampus&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;type&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#074276&#34;&gt;Type&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Teams&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#0F4C81&#34;&gt;Description&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;This submission is divided into two sections&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Report. The same report that is submitted to your primary stakeholder(s) and/or sponsor(s).&lt;/li&gt;
+&lt;li&gt;Assessment. A supplementary section depending on your declared path.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The entire file should be submitted to eCampus in &lt;em&gt;either&lt;/em&gt; of the following formats&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;teamname_evaluationreport.docx&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;teamname_evaluationreport.pdf&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sections&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span style=&#34;color:#155790&#34;&gt;Sections&lt;/span&gt;&lt;/h3&gt;
+&lt;div id=&#34;report&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Report&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;This submission is due &lt;strong&gt;two weeks prior to the last day of class&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; and should be written in a format that is (1) professional yet accessible by your audience and (2) aesthetically pleasing. Please note that this &lt;strong&gt;&lt;em&gt;does not&lt;/em&gt;&lt;/strong&gt; need to be in APA formatting.&lt;/p&gt;
+&lt;p&gt;The following components are required for your submission in order and must be submitted as a single document&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Title page
+Should include the following&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Every group member’s name&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A title of the study which must include the term &lt;strong&gt;evaluation&lt;/strong&gt; (e.g. &lt;em&gt;An Evaluation of&lt;/em&gt; ….).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;A Table of Contents&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;span style=&#34;color:#1b9d83&#34;&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/span&gt; fulfilling the requirements described below&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A references section&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Any additional materials you believe will help in ensuring that your proposal is complete and valid. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&#34;color:#1b9d83&#34;&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As you construct this, please use the following as section headers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Executive Summary&lt;/strong&gt;. This is a one (1) to three (3) page shortened description of the full report. It is arguably the most crucial part, so please make sure you pay special attention to this part. You must include at least two data visualizations ! If you are unsure how to write an executive summary, please visit &lt;a href=&#34;https://betterevaluation.org/en/evaluation-options/executive_summaries&#34; target=&#34;_blank&#34;&gt;Dr. Davidson’s site&lt;/a&gt; for some hints.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;. Provide a detailed description of the program derived from the previous tasks.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Purpose&lt;/strong&gt;. In one (1) page or less, describe the&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;underlying reason for the evaluation,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;evaluation questions, and&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;any other overarching purpose related elements you deem fit.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Timeline&lt;/strong&gt;. Provide a brief narrative and graphic outlining the entire evaluative process and activities. This should be no more than one (1) page.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;. This section will be a detailed description of your implemented methods. At minimum, please cover the following where applicable&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Participants&lt;/strong&gt;. A description, including demographics, of the overall targeted population and sample that you have drawn.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sources of Data&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Existing Data&lt;/strong&gt;. If applicable, provide a description of what existing data you used in your evaluation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Collected Data&lt;/strong&gt;. If applicable, discuss what data you used within your evaluation, how you collected it, what instruments and/or materials you used, and how you gained permission from participants.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;. Provide a brief, clear and concise narrative of your analysis. Include tables and figures to make your point. Address how you analyzed the quantitative, qualitative, and or mixed data you had. Make a concerted effort to be extremely clear regarding the steps, when they occurred, and how you tackled the data set(s).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;. A brief, clear and concise description of the results. These should be directly tied back to the original evaluation questions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Recommendations&lt;/strong&gt; (if applicable).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Program-level&lt;/strong&gt;. Provide recommendations for improving the program. These should be tied back to the original evaluation questions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Evaluation-level&lt;/strong&gt;. Provide recommendations for future evaluators including, but not limited to, what areas of the program may be value added to study, lessons learned from your evaluation efforts, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Appendix&lt;/strong&gt; (if applicable). Differing items that do not fit within the narrative should be included here separated by sections (e.g. additional visualizations, extra tables, IRBs, etc.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assessment&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span style=&#34;color:#1B609D&#34;&gt;Assessment&lt;/span&gt;&lt;/h4&gt;
+&lt;details&gt;
+&lt;summary&gt;
+If you &lt;strong&gt;&lt;em&gt;did not&lt;/em&gt;&lt;/strong&gt; intend to use the report beyond the course, then please look at this
+&lt;/summary&gt;
+&lt;p&gt;
+Your team submission should include the following components separated into three parts
+1. &lt;strong&gt;external deliverable&lt;/strong&gt;. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+2. &lt;strong&gt;evaluation assessment&lt;/strong&gt;&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;. Form a &lt;em&gt;coherent&lt;/em&gt; and &lt;em&gt;detailed&lt;/em&gt; narrative addressing what you would do differently given the chance to perform your evaluation over again. You can think of this as a reflection of all activities and personnel associated with the evaluation. Specificity, clarity and distinct connections to the course content will be key here.
+3. (optional) &lt;strong&gt;client authorization&lt;/strong&gt;. If anybody on your team intends to use this report outside of this course in any capacity (e.g. as an example of work), you must submit a signed release from the sponsor. This serves as a binding document.
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;
+If you &lt;strong&gt;&lt;em&gt;did&lt;/em&gt;&lt;/strong&gt; intend to use the report beyond the evaluation itself, then please look at this
+&lt;/summary&gt;
+&lt;p&gt;
+Your team submission should include the following components separated into three parts
+1. &lt;strong&gt;external deliverable&lt;/strong&gt;. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+2. &lt;strong&gt;original manuscript&lt;/strong&gt;&lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; A solid and coherent draft of a publication based off of your evaluation.
+3. (optional) &lt;strong&gt;client authorization&lt;/strong&gt;. You must submit a signed release from the sponsor permitting the use of the evaluation for the purposes of an academic publication. This serves as a binding document.
+&lt;br&gt;&lt;br /&gt;
+
+&lt;details&gt;
+&lt;summary&gt;
+&lt;span style=&#34;color:#9d1b76&#34;&gt;&lt;strong&gt;Example Manuscript Outline&lt;/strong&gt;&lt;/span&gt;
+&lt;/summary&gt;
+&lt;p&gt;
+&lt;p&gt;Your items must be in the standard formatting and structure outlined by your primary journal of choice. A broad list of sections and descriptions are provided below. However, *&lt;strong&gt;always use the formatting and structure defined by your journal of choice&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Title&lt;/strong&gt;. The title should be specific and indicate the problem the research project addresses using term that will be helpful in searches should your paper be published.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Keywords&lt;/strong&gt;. Publishers will more often than not ask you to provide up to five keywords that are generally describe elements of your manuscript.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Letter to the Editor&lt;/strong&gt;. Most journals require a letter to the editor where you must make an argument in narrative form explain why you believe the submission fits the journal. You should absolutely review the description of the journal where they often describe what types of submissions will be considered.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;. The abstract is used by readers to quickly review the overall content of the paper. Journals typically place strict word limits on abstracts, such as 200 words, making them a challenge to write. The abstract should provide a complete synopsis of the research paper and should introduce the topic and the specific research question, provide a statement regarding methodology and should provide a general statement about the results and the findings. Because it is really a summary of the entire research paper, it is often written last.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;. The introduction begins by introducing the broad overall topic and providing basic background information. It then narrows down to the specific research question relating to this topic. It provides the purpose and focus for the rest of the paper and sets up the justification for the research.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Literature Review&lt;/strong&gt;. The purpose of the literature review is to describe past important research and it relate it specifically to the research problem. It should be a synthesis of the previous literature and the new idea being researched. The review should examine the major theories related to the topic to date and their contributors. It should include all relevant findings from credible sources, such as academic books and peer-reviewed journal articles.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;. The methods section will describe the research design and methodology used to complete to the study. The general rule of thumb is that readers should be provided with enough detail to replicate the study.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;. The analysis section will describe your approach to analyzing your data set(s). The general rule of thumb is that readers should be provided with enough detail to replicate the study.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;. In this section, the results of the analysis are presented. How the results are presented will depend upon whether the research study was quantitative or qualitative in nature. This section should focus only on results that are directly related to the research or the problem. Graphs and tables should only be used when there is too much data to efficiently include it within the text. You should absolutely present the results, but not discuss their significance.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Discussion or Conclusion&lt;/strong&gt;. This section should be a discussion of the results and the implications on the field, as well as other fields. The hypothesis should be answered and validated by the interpretation of the results. This section should also discuss how the results relate to previous research mentioned in the literature review, any cautions about the findings, and potential for future research.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;References or Bibliography&lt;/strong&gt;. The research paper is not complete without the list of references. This section should be an alphabetized list of all the academic sources of information utilized in the paper. The format of the references will match the format and style used in the paper. Common formats include APA, MLA, Harvard and so forth.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Students in the course must participate in the writing process in a group oriented setting.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Please check eCampus for the exact due date.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;If necessary&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Optional&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;Includes a significant amount of detail regarding activities, criteria satisfied, areas of missingness, timeline, and other possible legal concerns should an audit occurs.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;An authorship agreement with me is required for this option.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

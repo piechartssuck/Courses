@@ -1,0 +1,54 @@
+---
+title: "Evaluation Presentation"
+linktitle: "Evaluation Presentation"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Deliverables
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em;
+}
+</style>
+
+## <span style="color:#0392cf">Evaluation Presentation</span>
+
+### <span style="color:#073965">Submission</span>
+[eCampus](https://ecampus.wvu.edu){target="_blank"}
+
+### <span style="color:#074276">Type</span>
+Teams^[Students in the course must participate in the writing process in a group oriented setting.]
+
+### <span style="color:#0F4C81">Description</span>
+Construct this as if you were going to present it to your primary stakeholder/sponsor.                   
+
+### <span style="color:#155790">Criteria</span>
+This submission is due **one week prior to the last day of class**^[Please check eCampus for the exact due date.] and should be written in a format that is (1) professional yet accessible by your audience and (2) aesthetically pleasing. Please note that this ***does not*** need to be in APA formatting.
+
+### <span style="color:#1B609D">Structure</span>
+
+There is no specific formal outline to this deliverable, though you presentation must adhere to the following conditions AND follows the general components listed above in order:
+
++ Administered in an accessible format (e.g. HTML, PowerPoint, xaringan, YouTube, etc);
+
++	Narrated with detailed audio on each slide with equal group participation throughout;
+
++	Incorporates at least two (2) figures from the report must be included that strongly support your narrative;
+
++	Includes at least two (2) thoughtful prompts predicated on your study towards the end of the talk; 
+
++	Provides a total running length of 10 minutes (+/- one minute); and
+
++	Submitted as a single presentation.
+
+
+:::

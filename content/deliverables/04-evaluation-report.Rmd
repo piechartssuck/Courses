@@ -1,0 +1,155 @@
+---
+title: "Evaluation Report"
+linktitle: "Evaluation Report"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Deliverables
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em;
+}
+</style>
+
+## <span style="color:#0392cf">Evaluation Report</span>
+
+### <span style="color:#073965">Submission</span>
+[eCampus](https://ecampus.wvu.edu){target="_blank"}
+
+### <span style="color:#074276">Type</span>
+Teams^[Students in the course must participate in the writing process in a group oriented setting.]
+
+### <span style="color:#0F4C81">Description</span>
+This submission is divided into two sections 
+
++ Report. The same report that is submitted to your primary stakeholder(s) and/or sponsor(s).
++ Assessment. A supplementary section depending on your declared path.
+
+The entire file should be submitted to eCampus in *either* of the following formats
+
+- `teamname_evaluationreport.docx` 
+
+- `teamname_evaluationreport.pdf`
+
+### <span style="color:#155790">Sections</span>
+
+#### <span style="color:#1B609D">Report</span>
+This submission is due **two weeks prior to the last day of class**^[Please check eCampus for the exact due date.] and should be written in a format that is (1) professional yet accessible by your audience and (2) aesthetically pleasing. Please note that this ***does not*** need to be in APA formatting.
+
+The following components are required for your submission in order and must be submitted as a single document^[It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.]
+
+1. Title page
+Should include the following
+
++ Every group member's name 
+
++ A title of the study which must include the term **evaluation** (e.g. *An Evaluation of* ....).
+
+2. A Table of Contents 
+
+3. The <span style="color:#1b9d83">**Body**</span> fulfilling the requirements described below
+
+4. A references section^[If necessary]
+
+5. Any additional materials you believe will help in ensuring that your proposal is complete and valid. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.^[Optional] 
+
+
+<span style="color:#1b9d83">**Body**</span>
+
+As you construct this, please use the following as section headers.
+
++ **Executive Summary**. This is a one (1) to three (3) page shortened description of the full report. It is arguably the most crucial part, so please make sure you pay special attention to this part. You must include at least two data visualizations ! If you are unsure how to write an executive summary, please visit [Dr. Davidson’s site](https://betterevaluation.org/en/evaluation-options/executive_summaries){target="_blank"} for some hints.
+
++ **Introduction**. Provide a detailed description of the program derived from the previous tasks.
+
++ **Purpose**. In one (1) page or less, describe the 
+
+  + underlying reason for the evaluation, 
+  
+  + evaluation questions, and
+
+  + any other overarching purpose related elements you deem fit.
+
++ **Timeline**. Provide a brief narrative and graphic outlining the entire evaluative process and activities. This should be no more than one (1) page.
+  
++ **Methods**. This section will be a detailed description of your implemented methods. At minimum, please cover the following where applicable
+  
+  + **Participants**. A description, including demographics, of the overall targeted population and sample that you have drawn.
+  
+  + **Sources of Data**. 
+    
+    + **Existing Data**. If applicable, provide a description of what existing data you used in your evaluation.
+  
+    + **Collected Data**. If applicable, discuss what data you used within your evaluation, how you collected it, what instruments and/or materials you used, and how you gained permission from participants.
+  
++ **Analysis**. Provide a brief, clear and concise narrative of your analysis. Include tables and figures to make your point. Address how you analyzed the quantitative, qualitative, and or mixed data you had. Make a concerted effort to be extremely clear regarding the steps, when they occurred, and how you tackled the data set(s).
+
++ **Results**. A brief, clear and concise description of the results. These should be directly tied back to the original evaluation questions.
+  
++ **Recommendations** (if applicable).
+
+  + **Program-level**. Provide recommendations for improving the program. These should be tied back to the original evaluation questions.
+  
+  + **Evaluation-level**. Provide recommendations for future evaluators including, but not limited to, what areas of the program may be value added to study, lessons learned from your evaluation efforts, etc.
+  
++ **Appendix** (if applicable). Differing items that do not fit within the narrative should be included here separated by sections (e.g. additional visualizations, extra tables, IRBs, etc.)
+    
+#### <span style="color:#1B609D">Assessment</span>
+
+<details><summary>If you ***did not*** intend to use the report beyond the course, then please look at this</summary>
+<p>
+Your team submission should include the following components separated into three parts
+    1. **external deliverable**. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+    2. **evaluation assessment**^[Includes a significant amount of detail regarding activities, criteria satisfied, areas of missingness, timeline, and other possible legal concerns should an audit occurs.]. Form a *coherent* and *detailed* narrative addressing what you would do differently given the chance to perform your evaluation over again. You can think of this as a reflection of all activities and personnel associated with the evaluation. Specificity, clarity and distinct connections to the course content will be key here.
+    3. (optional) **client authorization**. If anybody on your team intends to use this report outside of this course in any capacity (e.g. as an example of work), you must submit a signed release from the sponsor. This serves as a binding document.    
+</p>
+</details>
+
+<details><summary>If you ***did*** intend to use the report beyond the evaluation itself, then please look at this</summary>
+<p>
+Your team submission should include the following components separated into three parts
+    1. **external deliverable**. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+    2. **original manuscript**^[An authorship agreement with me is required for this option.] A solid and coherent draft of a publication based off of your evaluation.
+    3. (optional) **client authorization**. You must submit a signed release from the sponsor permitting the use of the evaluation for the purposes of an academic publication. This serves as a binding document.
+<br>    
+<details><summary><span style="color:#9d1b76">**Example Manuscript Outline**</span></summary>
+<p>
+Your items must be in the standard formatting and structure outlined by your primary journal of choice. A broad list of sections and descriptions are provided below. However, ***always use the formatting and structure defined by your journal of choice**
+
++	**Title**. The title should be specific and indicate the problem the research project addresses using term that will be helpful in searches should your paper be published.
+
++	**Keywords**. Publishers will more often than not ask you to provide up to five keywords that are generally describe elements of your manuscript. 
+
++	**Letter to the Editor**. Most journals require a letter to the editor where you must make an argument in narrative form explain why you believe the submission fits the journal. You should absolutely review the description of the journal where they often describe what types of submissions will be considered.
+
++	**Abstract**. The abstract is used by readers to quickly review the overall content of the paper. Journals typically place strict word limits on abstracts, such as 200 words, making them a challenge to write. The abstract should provide a complete synopsis of the research paper and should introduce the topic and the specific research question, provide a statement regarding methodology and should provide a general statement about the results and the findings. Because it is really a summary of the entire research paper, it is often written last.
+
++	**Introduction**. The introduction begins by introducing the broad overall topic and providing basic background information. It then narrows down to the specific research question relating to this topic. It provides the purpose and focus for the rest of the paper and sets up the justification for the research.
+
++	**Literature Review**. The purpose of the literature review is to describe past important research and it relate it specifically to the research problem. It should be a synthesis of the previous literature and the new idea being researched. The review should examine the major theories related to the topic to date and their contributors.  It should include all relevant findings from credible sources, such as academic books and peer-reviewed journal articles.
+
++	**Methods**. The methods section will describe the research design and methodology used to complete to the study. The general rule of thumb is that readers should be provided with enough detail to replicate the study.
+
++	**Analysis**. The analysis section will describe your approach to analyzing your data set(s). The general rule of thumb is that readers should be provided with enough detail to replicate the study.
+
++	**Results**. In this section, the results of the analysis are presented. How the results are presented will depend upon whether the research study was quantitative or qualitative in nature. This section should focus only on results that are directly related to the research or the problem. Graphs and tables should only be used when there is too much data to efficiently include it within the text. You should absolutely present the results, but not discuss their significance.
+
++	**Discussion or Conclusion**. This section should be a discussion of the results and the implications on the field, as well as other fields. The hypothesis should be answered and validated by the interpretation of the results.  This section should also discuss how the results relate to previous research mentioned in the literature review, any cautions about the findings, and potential for future research.
+
++	**References or Bibliography**. The research paper is not complete without the list of references. This section should be an alphabetized list of all the academic sources of information utilized in the paper. The format of the references will match the format and style used in the paper. Common formats include APA, MLA, Harvard and so forth.
+</p>
+</details>
+
+</p>
+</details>
+
+:::
