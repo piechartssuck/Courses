@@ -1,5 +1,5 @@
 lessons:
-  
+
   - title: 'Who Are You Really?'
     session: 1
     date: "Jan 19, 2021"
@@ -64,13 +64,13 @@ lessons:
 
   - title: 'Propose This!'
     session: 8
-    date: "March 9, 2020"
+    date: "March 9, 2021"
     due: "08-due"
     assignment: "08-assignment"
 
   - title: 'Whose Side Are You on Anyway?'
     session: 9
-    date: "March 16, 2020"
+    date: "March 16, 2021"
     readings: "09-readings"
     lesson: "09-lesson"
     example: "09-example"
@@ -78,47 +78,38 @@ lessons:
 
   - title: 'Onboarding'
     session: 10
-    date: "March 23, 2020"
+    date: "March 23, 2021"
     lesson: "10-lesson"
     due: "10-due"
 
   - title: 'All Mixed Up'
     session: 11
-    date: "March 30, 2020"
+    date: "March 30, 2021"
     readings: "11-readings"
     lesson: "11-lesson"
     due: "11-due"
 
-  # - title: 'Wrangling Data'
-  #   session: 11
-  #   date: "November 1, 2020"
-  #   readings: "11-readings"
-  #   lesson: "11-lesson"
-  #   example: "11-example"
-  #   assignment: "11-assignment"
-  #   due: "11-due"
-  #
-  # - title: 'Cross-Examinations'
-  #   session: 12
-  #   date: "November 22, 2020"
-  #   assignment: "13-assignment"
-  #   due: "13-due"
-  #
+  - title: 'Maintaining'
+    session: 12
+    date: "April 6, 2021"
+    assignment: "12-lesson"
+    due: "12-due"
+
   # - title: 'Tuning Instruments'
   #   session: 13
-  #   date: "November 22, 2020"
+  #   date: "November 22, 2021"
   #   assignment: "13-assignment"
   #   due: "13-due"
   #
   # - title: 'Finals'
   #   session: 14
-  #   date: "November 22, 2020"
+  #   date: "November 22, 2021"
   #   assignment: "13-assignment"
   #   due: "13-due"
   #
   # - title: 'Presentations'
   #   session: 15
-  #   date: "November 22, 2020"
+  #   date: "November 22, 2021"
   #   assignment: "13-assignment"
   #   due: "13-due"
 

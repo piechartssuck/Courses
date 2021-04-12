@@ -1,273 +1,139 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://edp617.theoreticalphysed.com/assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/05-evaluation-presentation/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/03-evaluation-proposal/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/01-evaluation-prospectus/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/04-evaluation-report/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/02-needs-assessment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/10-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/10-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/11-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/11-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/11-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/01-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/01-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/01-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/01-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/01-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/02-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/02-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/02-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/02-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/02-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/03-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/03-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/03-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/03-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/03-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/04-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/04-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/04-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/04-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/04-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/05-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/05-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/05-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/05-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/05-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/06-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/06-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/06-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/06-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/06-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/07-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/07-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/07-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/07-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/07-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/assignment/08-assignment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/08-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/due/09-due/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/example/09-example/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/lesson/09-lesson/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/readings/09-readings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/authors/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/deliverables/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/author/dr.-abhik-roy/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/author/dr.-abhik-roy/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/professor/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/publication_types/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/schedule/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/syllabus/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://edp617.theoreticalphysed.com/tags/</loc>
   </url>
-  
 </urlset>
