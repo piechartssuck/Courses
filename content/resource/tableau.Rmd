@@ -13,7 +13,7 @@ output:
 
 ## A Few Notes About Tableau
 
-Searching for help with Tableau on Google is generally easier than R since you aren't searching for a letter. However, the first thing you may notice is that given [Tableau](https://www.tableau.com/){target="_blank"} is a proprietary software, there is severe lack of available free resources as opposed to R^[Which can ironically be overwhelming given the sheer number of resources.]. As opposed to open source softwares, you ay have difficulties in locating resources that are not commercially linked and worth an investigation. 
+Searching for help with Tableau on Google is generally easier than R since you aren't searching for a letter. However, the first thing you may notice is that given [Tableau](https://www.tableau.com/){target="_blank"} is a proprietary software, there is severe lack of available free resources as opposed to R^[Which can also be overwhelming given the sheer number of available resources.]. As opposed to open source softwares, you may have difficulties in locating resources that are not commercially linked and worth an investigation. 
 
 Similar to how Apple operates, Tableau's parent company [Salesforce](https://www.salesforce.com/){target="_blank"} tightly controls the ecosystem. 
 
@@ -23,7 +23,7 @@ If you use Twitter, post Tableau-related questions and concerns using [@TableauS
 
 ## Learning and Copying Tableau
 
-- [Sir Viz-a-Lot](https://www.sirvizalot.com/){target="_blank"}: Dashboards and descriptions from [Matt Chabers](https://twitter.com/sirvizalot){target="_blank"} - a Tableau Zen Master. 
+- [**Sir Viz-a-Lot**](https://www.sirvizalot.com/){target="_blank"}: Dashboards and descriptions from [Matt Chabers](https://twitter.com/sirvizalot){target="_blank"} - a Tableau Zen Master. 
 - [**Tableau Public**](https://public.tableau.com/en-us/s/){target="_blank"}: Public repository of all things Tableau.
 - [**Tableau Training Videos**](https://www.tableau.com/learn/training/20211){target="_blank"}: Official material from the software developer.
 - [**VizWiz**](https://www.vizwiz.com/){target="_blank"}: Examples and help from [Andy Kriebel](https://twitter.com/VizWizBI){target="_blank"} - another Tableau Zen Master. 

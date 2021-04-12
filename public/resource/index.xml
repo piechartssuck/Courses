@@ -216,6 +216,200 @@
     </item>
     
     <item>
+      <title>General Criteria for Visualizations</title>
+      <link>https://edp693e.theoreticalphysed.com/resource/look/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://edp693e.theoreticalphysed.com/resource/look/</guid>
+      <description>
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693e.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+&lt;p&gt;While there is no specific rubric, here is a basic outline of what to be looking out for in each task. Criteria will generally be graded on a competency-based scale roughly translating to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A: Exceeds expectations&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B: Meets expectations&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C: Needs improvement&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D: Unsatisfactory&lt;/strong&gt;, and&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;F: Overall Failing&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Of course this is a continuous scale so a combination of proficiencies may be assigned to work that falls between any two consecutive levels.&lt;/p&gt;
+&lt;center&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+&lt;em&gt;Criteria/Benchmarks&lt;/em&gt;
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Overall Failing
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Generally Unsatisfactory
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Needs improvement
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Meets expectations
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Exceeds expectations
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Introduction
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Introduction is not attepted or is incorrect
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Introduction has multiple major flaws creating variables/data frames that mostly do not address the task
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Introduction has a major flaw such as using variables not relevant to the visualization
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Introduction has minor flaws such as being somewhat wordy not straight to the point
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Introduction proviodes a clear explanation of the intent and the dataset used to address a given task
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Justification of approach
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Justification is not attepted or is incorrect
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Justification of approach has multiple major flaws that affect the outcome
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Justification of approach has one major flaw such as having a rendered visualization is not justified or is incorrectly defined
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Justification has minor flaws such as being somewhat wordy not straight to the point
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The chosen analysis approach and visualizations are clearly explained and justified
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Code
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Code is not attepted or is incorrect
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Code has major flaws which lead to errors
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Code has minor flaws, is difficult to follow, or includes lines or chunks that are unnecessary possibly leading to errors
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Code is correct and runs without errors, but has minor problems with formatting or explanations
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Code is correct, easy to read, properly formatted, runs without errors and properly explained
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Visualization
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Visualziation(s) are not attepted or are incorrect
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+At least one visualization has major flaws resulting in a barely comprehensible or entirely inappropriate rendering
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+At least one visualization has substantial flaw with legibility, labeling or rendering
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The visualizations have minor flaw such as those with legibility, labeling, or the chosen geom is adequate but incurs data loss
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The visualizations are appropriate, easy to read, properly labeled and utilize correct aesthetics
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Outcomes
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Explanation is not attepted or is incorrect
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Explanation has at least one major flaw in logic affecting the outcome in a substantial way
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Explanation has a secondary flaw in logic that does not affect the outcome in a substantial way
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Explanation is mostly clear and correct, but has minor inaccuracies or lacks needed depth
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Discussion of results is clear and correct with needed needed depth devoid of being wordy
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Reproducibility
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Ensuring reproducibility is not attepted
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Ensuring reproducibility is not attepted
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;.R&lt;/code&gt;, &lt;code&gt;.Rmd&lt;/code&gt;, or &lt;code&gt;.twbx&lt;/code&gt; requires major modification to knit or compile without issues, or is not provided
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+&lt;code&gt;.R&lt;/code&gt;, &lt;code&gt;.Rmd&lt;/code&gt;, or &lt;code&gt;.twbx&lt;/code&gt; requires minor modification to knit or compile without issues, or key datafile is missing
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+All required files except the resulting pdf/html are provided. &lt;code&gt;.R&lt;/code&gt;, &lt;code&gt;.Rmd&lt;/code&gt;, or &lt;code&gt;.twbx&lt;/code&gt; file knits or compiles without issues and produces a pdf/html
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;font-weight: bold;&#34;&gt;
+Presentation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Presentation is not attepted or is unintelligible
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Presentation is near impossible to comprehend
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Presenation has several deficiencies such as excessive the need for additional materials, misplaced figures, code, or text, or is otherwise confusing
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Presentation is mostly well structured, but some aspects are confusing or difficult to follow
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Entire presentation is well structured and easy to follow without the use of additioinal Entire document is well
+structured and easy to
+follow. No extraneous
+materials
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Using Markdown</title>
       <link>https://edp693e.theoreticalphysed.com/resource/markdown/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
