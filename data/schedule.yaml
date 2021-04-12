@@ -79,12 +79,6 @@ lessons:
     assignment: "09-assignment"
     due: "09-due"
 
-  # - title: 'Thinking About Mixing Your Methods Up'
-  #   session: 10
-  #   date: "October 25, 2020"
-  #   lesson: "10-lesson"
-  #   due: "10-due"
-  #
   - title: 'Shiny Everything'
     session: 11
     date: "April 1, 2021"

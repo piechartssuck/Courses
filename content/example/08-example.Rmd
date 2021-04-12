@@ -142,7 +142,7 @@ fileName <- glue(here::here("static", "data", "state-of-the-union-corpus-1989-20
 fileName
 ```
 
-read in the text and clean it up by removing any dollar signs since they mean something different in R
+read in the text and book_text it up by removing any dollar signs since they mean something different in R
 ```{r echo=TRUE,eval=FALSE}
 fileText <- glue(read_file(fileName)) 
 
@@ -279,14 +279,14 @@ Loading libraries
 
 Go ahead and load these or install and then load them.
 
-Please do not install the `harrypotter` package via CRAN. Instead use the following. This only has to be run once.
+There is a `harrypotter` package on CRAN ***but that is not the one we want***. Please run the following instead^[Note that if you run a package update through RStudio, it will overwrite the one we use with the one on CRAN.]. 
 
 ```{r echo=TRUE,eval=FALSE}
 if (packageVersion("devtools") < 1.6) {
   install.packages("devtools")
 }
 
-devtools::install_github("bradleyboehmke/harrypotter")
+devtools::install_github("bradleyboehmke/harrypotter", force = TRUE)
 ```
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
@@ -299,10 +299,14 @@ library(dplyr)
 library(reshape2)
 library(igraph)
 library(ggraph)
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("bradleyboehmke/harrypotter")
 library(harrypotter)
 ```
 
-After downloading the data from the harrypotter package on github, we can do a bit of data shaping.  The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we tokenize the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears. 
+After downloading the data from the `harrypotter` package on github, we can do a bit of data shaping.  The code below places all of the books in the Harry Potter series into a tibble. A tibble is kind of like a data frame, but it has special features that make it optimal for use in the tidyverse. After creating our tibble, we **tokenize** the text into single words, strip away all punctuation and capitalization, and add columns to the tibble for the book and chapter. In the resulting tibble, you can see each word from the Harry Potter series, and the book/chapter in which it appears. 
 
 ```{r, warning=FALSE}
 titles <- c("Philosopher's Stone", 
@@ -325,13 +329,13 @@ series <- tibble()
 
 for(i in seq_along(titles)) {
         
-        clean <- tibble(chapter = seq_along(books[[i]]),
+        book_text <- tibble(chapter = seq_along(books[[i]]),
                         text = books[[i]]) %>%
-             unnest_tokens(word, text) %>%
-             mutate(book = titles[i]) %>%
-             select(book, everything())
+                 unnest_tokens(word, text) %>%
+                 mutate(book = titles[i]) %>%
+                 select(book, everything())
 
-        series <- rbind(series, clean)
+        series <- rbind(series, book_text)
 }
 
 # set factor to keep books in order of publication
@@ -384,26 +388,29 @@ series %>%
   count(sentiment, sort = TRUE)
 ```
 
-Similarly to the word cloud we created above, we can use the 'bing' lexicon to make a comparison cloud.  This cloud displays the 50 most frequently occurring words in the series that were categorized by 'bing', and color-codes them based on negative or positive sentiment.  You'll notice that words like "Harry"", "Hermione" and "Ron" don't appear in this cloud, because character names are not classified as positive or negative in 'bing'. 
+Similarly to the word cloud we created above, we can use the 'bing' lexicon to make a comparison cloud.  This cloud displays the 50 most frequently occurring words in the series that were categorized by 'bing', and color-codes them based on negative or positive sentiment.  You'll notice that words like *Harry*, *Hermione* and *Ron* don't appear in this cloud, because character names are not classified as positive or negative in 'bing'. 
 
 ```{r, message=FALSE, warning=FALSE, fig.align='center'}
 series %>%
   inner_join(get_sentiments("bing")) %>%
   count(word, sentiment, sort = TRUE) %>%
-  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("#F8766D", "#00BFC4"),
+  acast(word ~ sentiment, 
+        value.var = "n", 
+        fill = 0) %>%
+  comparison.cloud(colors = c("#ff6347", "#4682B4"),
                    max.words = 50)
 ```
 
-\newpage
-Now, let's see what the comparison cloud looks like with stop-words removed temporarily. 
+Now, let's see what the comparison cloud looks like with stop-words removed temporarily^[Yours will probably look a bit different but that is OK!]. 
 ```{r, message=FALSE, warning=FALSE, fig.align='center'}
 series %>%
   anti_join(stop_words) %>%
   inner_join(get_sentiments("bing")) %>%
   count(word, sentiment, sort = TRUE) %>%
-  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("#F8766D", "#00BFC4"),
+  acast(word ~ sentiment, 
+        value.var = "n", 
+        fill = 0) %>%
+  comparison.cloud(colors = c("#ff6347", "#4682B4"),
                    max.words = 50)
 ```
 

@@ -63,7 +63,9 @@ assignment:
   - name: Projects
     weight: 4
 resource:
-  - name: Resources
+  - name: Overview
     weight: 1
   - name: Guides
     weight: 2
+  - name: Resources
+    weight: 3
