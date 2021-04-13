@@ -97,7 +97,9 @@ lessons:
 
   - title: 'The Short Road Ahead'
     session: 13
-    date: "April 13, 2021"
+    readings: "13-readings"
+    lesson: "13-lesson"
+    example: "13-example"
     assignment: "13-assignment"
     due: "13-due"
 
