@@ -1,0 +1,71 @@
+---
+title: "The Short Road Ahead"
+linktitle: "Week 13: The Short Road Ahead"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 13
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the evaluation process phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+process <- tibble(
+  
+  phase = c("Process"),
+  
+  task = c("Administering an evaluation"),
+  
+  current <- c(checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  process %>%
+  kbl(escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+## Mixed Methods In Impact Evaluation
+
+While we didn't get to cover a great deal beyond process based evaluations, arguably one of the most satisfying variants is those that study impacts. [Dr. Michael Bamberger](https://www.rockefellerfoundation.org/profile/michael-bamberger/){target="_blank"} is a [developmental evaluator](https://www.betterevaluation.org/en/plan/approach/developmental_evaluation){target="_blank"} wrote the highly cited report  [*Introduction To Mixed Methods In Impact Evaluation*](https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf){target="_blank"}. If nothing else, take a look at the document to see what a well structured narrative and design looks like. 
+
+[![](/example/13-example_files/mme-impact.png){width=40%}](https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf)
+
+## Resources for Constructing Final Reports 
+
++ Here are some additional examples of [evaluation reports](/readings/examplereports2.zip){target="_blank"}. 
+
++ If you are looking for some advice or indicators of reporting styles, take a look at this [page](https://www.betterevaluation.org/en/evaluation-options/final_reports){target="_blank"} at BetterEvaluation.
+
++ Take another look at the [Checklist for Program
+Evaluation Report Content](https://wmich.edu/sites/default/files/attachments/u350/2018/eval-report-content-robertson-wingate.pdf){target="_blank"}.

@@ -5,6 +5,17 @@ output:
  xaringan::moon_reader:
    css: ['xaringan-themer.css', 'custom.css']
 ---
+
+```{r echo = FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#6ac4cd",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(include = c("tile_view", "animate_css", "tachyons"))
+```
 #  Plan for this PowerPoint 
 
 General qualitative (vs. quantitative)  orientation 

@@ -1,6 +1,6 @@
 ---
-title: "Maintaining"
-linktitle: "Week 12: Maintaining"
+title: "Fine Tuning Instruments"
+linktitle: "Week 12: Fine Tuning Instruments"
 output:
   blogdown::html_page:
     toc: true
@@ -40,13 +40,13 @@ wk_post <- tibble(
             checked),
 
 Description = c("Plan to meet with me at some point before you complete the evaluation cycle if you have not already",
-                "There is nothing due this week so continue with your evaluations. Hopefully you are somewhere in the data collection stage",
+                "There is nothing due this week so continue with your evaluations. Hopefully you are somewhere in the data collection stage and are making study adjustments as needed",
                 "Review the reporting requirements for your evaluation",
                  "Review the presentation requirements for your evaluation"),
 
 
 Location = c("[Link](/lesson/12-lesson/#meeting)",
-             "[Link](/due/12-due/#a-note-about-maintaining)",
+             "[Link](/due/12-due/#a-note-about-fine-tuning)",
              "[Link](/deliverables/04-evaluation-report/#evaluation-report)",
              "[Link](/deliverables/05-evaluation-presentation/#evaluation-presentation)"
     )
@@ -71,7 +71,7 @@ kable(wk_post,
 ```
 </center>
 
-### A Note About Maintaining
+### A Note About Fine Tuning
 
 Take this week ensure that you have tweaked your evaluation if needed. The overall in-course workload will start shifting towards your final report. Please reach out if you need help! 
 

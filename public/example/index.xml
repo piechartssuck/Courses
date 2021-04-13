@@ -13,6 +13,77 @@
     </image>
     
     <item>
+      <title>The Short Road Ahead</title>
+      <link>https://edp617.theoreticalphysed.com/example/13-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/13-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mixed-methods-in-impact-evaluation&#34;&gt;Mixed Methods In Impact Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resources-for-constructing-final-reports&#34;&gt;Resources for Constructing Final Reports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the evaluation process phase. This involves&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+phase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+task
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+current
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+Process
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+Administering an evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 20em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mixed-methods-in-impact-evaluation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mixed Methods In Impact Evaluation&lt;/h2&gt;
+&lt;p&gt;While we didn’t get to cover a great deal beyond process based evaluations, arguably one of the most satisfying variants is those that study impacts. &lt;a href=&#34;https://www.rockefellerfoundation.org/profile/michael-bamberger/&#34; target=&#34;_blank&#34;&gt;Dr. Michael Bamberger&lt;/a&gt; is a &lt;a href=&#34;https://www.betterevaluation.org/en/plan/approach/developmental_evaluation&#34; target=&#34;_blank&#34;&gt;developmental evaluator&lt;/a&gt; wrote the highly cited report &lt;a href=&#34;https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Introduction To Mixed Methods In Impact Evaluation&lt;/em&gt;&lt;/a&gt;. If nothing else, take a look at the document to see what a well structured narrative and design looks like.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf&#34;&gt;&lt;img src=&#34;https://edp617.theoreticalphysed.com/example/13-example_files/mme-impact.png&#34; style=&#34;width:40.0%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resources-for-constructing-final-reports&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Resources for Constructing Final Reports&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Here are some additional examples of &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/examplereports2.zip&#34; target=&#34;_blank&#34;&gt;evaluation reports&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you are looking for some advice or indicators of reporting styles, take a look at this &lt;a href=&#34;https://www.betterevaluation.org/en/evaluation-options/final_reports&#34; target=&#34;_blank&#34;&gt;page&lt;/a&gt; at BetterEvaluation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take another look at the &lt;a href=&#34;https://wmich.edu/sites/default/files/attachments/u350/2018/eval-report-content-robertson-wingate.pdf&#34; target=&#34;_blank&#34;&gt;Checklist for Program
+Evaluation Report Content&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Who Are You Really?</title>
       <link>https://edp617.theoreticalphysed.com/example/01-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

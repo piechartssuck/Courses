@@ -1216,14 +1216,14 @@ Way, Stauber, Nakkula, &amp;amp; London (1994)
 &lt;div id=&#34;post&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Post&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Read and write a single post under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01S5GG7R0T&#34;&gt;#mixed-methods&lt;/a&gt; that compares, contrasts, and synthesizes:
+&lt;li&gt;Read and write a single post under &lt;a href=&#34;https://2021edp617.slack.com/archives/mixed-methods&#34;&gt;#mixed-methods&lt;/a&gt; that compares, contrasts, and synthesizes:
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
 &lt;li&gt;&lt;strong&gt;Greene, Caracelli, &amp;amp; Graham (1989)&lt;/strong&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Hanson (2005)&lt;/strong&gt;, and&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Idler (1999)&lt;/strong&gt;
 Then discuss which you found to be the most interesting and why. If you did not find any to be of interest, please state your reason.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;Read &lt;strong&gt;Shenton (2004)&lt;/strong&gt; and write a single post under &lt;a href=&#34;https://2021edp617.slack.com/archives/C01RQJBS3UP&#34; target=&#34;_blank&#34;&gt;#trustworthiness&lt;/a&gt; that address the following
+&lt;li&gt;Read &lt;strong&gt;Shenton (2004)&lt;/strong&gt; and write a single post under &lt;a href=&#34;https://2021edp617.slack.com/archives/trustworthiness&#34; target=&#34;_blank&#34;&gt;#trustworthiness&lt;/a&gt; that address the following
 &lt;ul&gt;
 &lt;li&gt;if you identify mostly or fully with &lt;span style=&#34;color:#d9534f&#34;&gt;&lt;strong&gt;quantitative&lt;/strong&gt;&lt;/span&gt; methodological approaches:
 &lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
@@ -1238,6 +1238,643 @@ Then discuss which you found to be the most interesting and why. If you did not 
 &lt;li&gt;Ask a question about the reading that you believe a &lt;span style=&#34;color:#d9534f&#34;&gt;&lt;strong&gt;quantitative&lt;/strong&gt;&lt;/span&gt; person should be able to answer.&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fine Tuning Instruments</title>
+      <link>https://edp617.theoreticalphysed.com/due/12-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/due/12-due/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-note-about-fine-tuning&#34;&gt;A Note About Fine Tuning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+eCampus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Slack
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;vertical-align: middle !important;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Plan to meet with me at some point before you complete the evaluation cycle if you have not already
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/12-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+There is nothing due this week so continue with your evaluations. Hopefully you are somewhere in the data collection stage and are making study adjustments as needed
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/12-due/#a-note-about-fine-tuning&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Review the reporting requirements for your evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/04-evaluation-report/#evaluation-report&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Review the presentation requirements for your evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/05-evaluation-presentation/#evaluation-presentation&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-note-about-fine-tuning&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A Note About Fine Tuning&lt;/h3&gt;
+&lt;p&gt;Take this week ensure that you have tweaked your evaluation if needed. The overall in-course workload will start shifting towards your final report. Please reach out if you need help!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fine Tuning Instruments</title>
+      <link>https://edp617.theoreticalphysed.com/lesson/12-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/lesson/12-lesson/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meeting&lt;/h2&gt;
+&lt;p&gt;We should meet once before your evaluation ends. While I typically recommend that this occurs around the middle of your evaluation, that may not be the best for everyone. I will leave it up to each team to suggest suitable dates.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Short Road Ahead</title>
+      <link>https://edp617.theoreticalphysed.com/due/13-due/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/due/13-due/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-due&#34;&gt;What’s Due?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What’s Due?&lt;/h3&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+eCampus
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Slack
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;vertical-align: middle !important;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
+Location
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Plan to meet with me at some point before you complete the evaluation cycle if you have not already
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/13-lesson/#meeting&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Read a couple of papers and post
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/13-readings/#read-papers&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; vertical-align: middle !important;&#34;&gt;
+Respond to two postings
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/13-readings/#respond-to-posts&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Take a look at mixed methods used in impact evaluations
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/13-example/#mixed-methods-in-impact-evaluation&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#e4e4e4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Look over a few resources that may help you in structuring and writing the final evaluation report
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/example/13-example/#resources-for-constructing-final-reports&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Review the reporting requirements for your evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/04-evaluation-report/#evaluation-report&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Review the presentation requirements for your evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp617.theoreticalphysed.com/deliverables/05-evaluation-presentation/#evaluation-presentation&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Short Road Ahead</title>
+      <link>https://edp617.theoreticalphysed.com/example/13-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/example/13-example/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evaluation-phase&#34;&gt;Evaluation Phase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mixed-methods-in-impact-evaluation&#34;&gt;Mixed Methods In Impact Evaluation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resources-for-constructing-final-reports&#34;&gt;Resources for Constructing Final Reports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;evaluation-phase&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Evaluation Phase&lt;/h2&gt;
+&lt;p&gt;We are currently in the evaluation process phase. This involves&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+phase
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+task
+&lt;/th&gt;
+&lt;th style=&#34;text-align:center;&#34;&gt;
+current
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+Process
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; vertical-align: middle !important;&#34;&gt;
+Administering an evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 20em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 512 512&#34; style=&#34;height:15px;width:15px;vertical-align:-0.125em;margin-right:0.2em;font-size:inherit;fill:#428bca;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mixed-methods-in-impact-evaluation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mixed Methods In Impact Evaluation&lt;/h2&gt;
+&lt;p&gt;While we didn’t get to cover a great deal beyond process based evaluations, arguably one of the most satisfying variants is those that study impacts. &lt;a href=&#34;https://www.rockefellerfoundation.org/profile/michael-bamberger/&#34; target=&#34;_blank&#34;&gt;Dr. Michael Bamberger&lt;/a&gt; is a &lt;a href=&#34;https://www.betterevaluation.org/en/plan/approach/developmental_evaluation&#34; target=&#34;_blank&#34;&gt;developmental evaluator&lt;/a&gt; wrote the highly cited report &lt;a href=&#34;https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Introduction To Mixed Methods In Impact Evaluation&lt;/em&gt;&lt;/a&gt;. If nothing else, take a look at the document to see what a well structured narrative and design looks like.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.interaction.org/wp-content/uploads/2019/03/Mixed-Methods-in-Impact-Evaluation-English.pdf&#34;&gt;&lt;img src=&#34;https://edp617.theoreticalphysed.com/example/13-example_files/mme-impact.png&#34; style=&#34;width:40.0%&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resources-for-constructing-final-reports&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Resources for Constructing Final Reports&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Here are some additional examples of &lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/examplereports2.zip&#34; target=&#34;_blank&#34;&gt;evaluation reports&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you are looking for some advice or indicators of reporting styles, take a look at this &lt;a href=&#34;https://www.betterevaluation.org/en/evaluation-options/final_reports&#34; target=&#34;_blank&#34;&gt;page&lt;/a&gt; at BetterEvaluation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take another look at the &lt;a href=&#34;https://wmich.edu/sites/default/files/attachments/u350/2018/eval-report-content-robertson-wingate.pdf&#34; target=&#34;_blank&#34;&gt;Checklist for Program
+Evaluation Report Content&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Short Road Ahead</title>
+      <link>https://edp617.theoreticalphysed.com/lesson/13-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/lesson/13-lesson/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meeting&#34;&gt;Meeting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #006269;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;meeting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meeting&lt;/h2&gt;
+&lt;p&gt;We should meet once before your evaluation ends. While I typically recommend that this occurs around the middle of your evaluation, that may not be the best for everyone. I will leave it up to each team to suggest suitable dates.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Short Road Ahead</title>
+      <link>https://edp617.theoreticalphysed.com/readings/13-readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edp617.theoreticalphysed.com/readings/13-readings/</guid>
+      <description>
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp617.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#read-papers&#34;&gt;Read Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#respond-to-posts&#34;&gt;Respond to Posts&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#note-about-the-responding-to-posts&#34;&gt;Note about the responding to posts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: &#34;&#34;;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+&lt;/style&gt;
+&lt;div id=&#34;read-papers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Read Papers&lt;/h2&gt;
+&lt;p&gt;First go ahead and download all of the papers before going through the list&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/readings/EDP617Week13Readings.zip&#34;&gt;Week 13 materials&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The first paper is a basic overview of mixed methods evaluations and the second relates to the handling and interpretation of data&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;center&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Title
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Citation
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Question
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Channel
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Mixed Methods Designs to Evaluate Interventions
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Mertens (2018)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Given the chance to redo your evaluation, how could you concievably set it up to be mixed?
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://2021edp617.slack.com/messages/mme&#34; target=&#34;_blank&#34;&gt;#mme&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Understanding Your Data
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 20em; &#34;&gt;
+Read Curtis, Webb-Dempsey, &amp;amp; Shambaugh (2010)
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Discuss a point about the reading that you identified with or were surprised by &lt;em&gt;and&lt;/em&gt; a note question about how others would discuss and/or present certain types of data.
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://2021edp617.slack.com/messages/understanding-data&#34; target=&#34;_blank&#34;&gt;#understanding-data&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;respond-to-posts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Respond to Posts&lt;/h2&gt;
+&lt;p&gt;Please create &lt;strong&gt;one response&lt;/strong&gt; apiece for the posts below on Slack about&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Your critique of a peers synthesis on &lt;a href=&#34;https://2021edp617.slack.com/archives/mixed-methods&#34; target=&#34;_blank&#34;&gt;#mixed-methods&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Within &lt;a href=&#34;https://2021edp617.slack.com/messages/including-kec-parts&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;#including-kec-parts&lt;/code&gt;&lt;/a&gt; if&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;if you identified mostly or fully with &lt;span style=&#34;color:#d9534f&#34;&gt;&lt;strong&gt;quantitative&lt;/strong&gt;&lt;/span&gt; methodological approaches in Week 11, then locate a person who identifies as &lt;span style=&#34;color:#428bca&#34;&gt;&lt;strong&gt;qualitative&lt;/strong&gt;&lt;/span&gt; and answer their question to the best of your ability.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;if you identified mostly or fully with &lt;span style=&#34;color:#428bca&#34;&gt;&lt;strong&gt;qualitative&lt;/strong&gt;&lt;/span&gt; methodological approaches in Week 11, then locate a person who identifies as &lt;span style=&#34;color:#d9534f&#34;&gt;&lt;strong&gt;quantitative&lt;/strong&gt;&lt;/span&gt; and answer their question to the best of your ability.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;note-about-the-responding-to-posts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Note about the responding to posts&lt;/h3&gt;
+&lt;p&gt;Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the &lt;code&gt;Reply in thread&lt;/code&gt; option when replying! If you need a reminder on how to do this, please click &lt;a href=&#34;https://edp617.theoreticalphysed.com/lesson/02-lesson/#responses&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Teachers served as the original audience for this narrative but the context will likely apply to your data&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -5636,7 +6273,7 @@ This page contains instructions on what to submit by on a weekly basis.
         &lt;/tr&gt;
         &lt;tr&gt;
             &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;April 6, 2021&lt;/td&gt;
-            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Maintaining&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;Fine Tuning Instruments&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
                 &lt;font color=&#34;f1f1f1&#34;&gt;
                     &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
@@ -5653,6 +6290,28 @@ This page contains instructions on what to submit by on a weekly basis.
               &lt;font color=&#34;cf4647&#34;&gt;
                     &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
             &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/12-due/&#34;&gt;
+              &lt;font color=&#34;2a6e84&#34;&gt;
+                    &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td align=&#34;right&#34; style=&#34;width:18%;text-align:right&#34;&gt;April 13, 2021&lt;/td&gt;
+            &lt;td style=&#34;width:50%;text-align:left&#34;&gt;The Short Road Ahead&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-book fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-chalkboard fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;
+                &lt;font color=&#34;f1f1f1&#34;&gt;
+                    &lt;i class=&#34;fas fa-lightbulb fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/font&gt;
+            &lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/assignment/13-assignment/&#34;&gt;
+              &lt;font color=&#34;cf4647&#34;&gt;
+                    &lt;i class=&#34;fas fa-tasks fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+            &lt;td align=&#34;center&#34; style=&#34;width:10%;text-align:center&#34;&gt;&lt;a href=&#34;https://edp617.theoreticalphysed.com/due/13-due/&#34;&gt;
               &lt;font color=&#34;2a6e84&#34;&gt;
                     &lt;i class=&#34;fas fa-folder-open fa-lg fa-fw&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
         &lt;/tr&gt;

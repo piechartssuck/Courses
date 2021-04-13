@@ -89,18 +89,18 @@ lessons:
     lesson: "11-lesson"
     due: "11-due"
 
-  - title: 'Maintaining'
+  - title: 'Fine Tuning Instruments'
     session: 12
     date: "April 6, 2021"
     assignment: "12-lesson"
     due: "12-due"
 
-  # - title: 'Tuning Instruments'
-  #   session: 13
-  #   date: "November 22, 2021"
-  #   assignment: "13-assignment"
-  #   due: "13-due"
-  #
+  - title: 'The Short Road Ahead'
+    session: 13
+    date: "April 13, 2021"
+    assignment: "13-assignment"
+    due: "13-due"
+
   # - title: 'Finals'
   #   session: 14
   #   date: "November 22, 2021"

@@ -1,0 +1,135 @@
+---
+title: "The Short Road Ahead"
+linktitle: "Week 13: The Short Road Ahead"
+menu:
+  content:
+    parent: Readings
+    weight: 13
+type: docs
+weight: 1
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+```
+
+## Read Papers
+
+First go ahead and download all of the papers before going through the list
+
+[Week 13 materials](/readings/EDP617Week13Readings.zip)
+
+The first paper is a basic overview of mixed methods evaluations and the second relates to the handling and interpretation of data^[Teachers served as the original audience for this narrative but the context will likely apply to your data]. 
+
+```{r echo=FALSE}
+
+papers <- tibble(
+  
+  title <- c('Mixed Methods Designs to Evaluate Interventions',
+             'Understanding Your Data'
+  ),
+  
+  Citation <- c(
+    "Mertens (2018)",
+    "Read Curtis, Webb-Dempsey, & Shambaugh (2010)"
+  ),
+  
+  question <- c(
+    "Given the chance to redo your evaluation, how could you concievably set it up to be mixed?",
+    "Discuss a point about the reading that you identified with or were surprised by *and* a note question about how others would discuss and/or present certain types of data."
+  ),
+  
+  hashtag <- c(
+    "[#mme](https://2021edp617.slack.com/messages/mme){target='_blank'}",
+    "[#understanding-data](https://2021edp617.slack.com/messages/understanding-data){target='_blank'}"
+    
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+papers %>%
+  kbl(col.names = c("Title", "Citation", "Question", "Channel"), 
+      "html", 
+      escape = FALSE,
+      align = 'llll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") 
+```
+</center>
+
+## Respond to Posts
+Please create **one response** apiece for the posts below on Slack about
+
+1. Your critique of a peers synthesis on  [#mixed-methods](https://2021edp617.slack.com/archives/mixed-methods){target='_blank'}
+
+2. Within [`#including-kec-parts`](https://2021edp617.slack.com/messages/including-kec-parts){target='_blank'} if
+  + if you identified mostly or fully with <span style="color:#d9534f">**quantitative**</span> methodological approaches in Week 11, then locate a person who identifies as  <span style="color:#428bca">**qualitative**</span> and answer their question to the best of your ability.
+
+  + if you identified mostly or fully with <span style="color:#428bca">**qualitative**</span> methodological approaches in Week 11, then locate a person who identifies as  <span style="color:#d9534f">**quantitative**</span>  and answer their question to the best of your ability.
+
+### Note about the responding to posts 
+Your responses to postings should follow the same basic criteria outlined in the original post. Remember to use the `Reply in thread` option when replying! If you need a reminder on how to do this, please click [here](/lesson/02-lesson/#responses).
+
