@@ -53,4 +53,4 @@ Many people have created many useful tools for selecting the correct chart type 
 
 ## Visualization in Tableau
 
-Because it is focused entirely on visualization (and because it's a well-supported commercial product), Tableau has a [phenomenal library of tutorials and training videos](https://www.tableau.com/learn/training){target="_blank"}. There's [a helpful collections of videos here](https://www.quora.com/What-are-some-good-video-tutorials-for-learning-Tableau){target="_blank"}, as well.
+Because it is focused entirely on visualization and a well-supported commercial product, Tableau has a [phenomenal library of tutorials and training videos](https://www.tableau.com/learn/training){target="_blank"}. There's [a helpful collections of videos here](https://www.quora.com/What-are-some-good-video-tutorials-for-learning-Tableau){target="_blank"}, as well.

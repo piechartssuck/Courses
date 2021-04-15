@@ -48,6 +48,8 @@ A popular (and increasingly standard) way for sharing your analyses and visualiz
 - [Health care indicators in Utah counties](https://juliasilge.com/blog/health-care-indicators/){target="_blank"}
 - [Mapping Fall Foliage](https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/){target="_blank"}
 - [Personal Blog](https://isabella-b.com/){target="_blank"} from [Isabella Benabaye](https://twitter.com/_isabellamb){target="_blank"} with some fun and colorful R and Python data visualizations
+- [R Charts](https://www.r-graph-gallery.com/){target="_blank"} is a repository of chart based visualizations with corresponding R code
+- [R Graph Gallery](https://www.r-graph-gallery.com/){target="_blank"} is a collection of visualizations with corresponding R code
 - [Sexism on the Silver Screen: Exploring film's gender divide](http://rpubs.com/Jwhitman/Final_Project){target="_blank"}
 - [Song lyrics across the United States](https://juliasilge.com/blog/song-lyrics-across/){target="_blank"}
 - [Text analysis of Trump's tweets confirms he writes only the (angrier) Android half](http://varianceexplained.org/r/trump-tweets/){target="_blank"} (with a [follow-up](http://varianceexplained.org/r/trump-followup/){target="_blank"})
