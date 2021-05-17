@@ -1,0 +1,35 @@
+﻿Group,Exploration,Lesson Page,Due by_long,Due by_short,Required,Course or Project Name,Chapters_long,Chapters_wide
+1,1,[Week 1](/datacamp/01-module/),5/23/21,5/23/21,checked,Introduction to R,Intro to basics,"Intro to basics, Vectors, Matrices, Factors, Data Frames, Lists"
+1,,,,,,,Vectors,
+1,,,,,,,Matrices,
+1,,,,,,,Factors,
+1,,,,,,,Data Frames,
+1,,,,,,,Lists,
+1,,,,,,,,
+1,,,5/23/21,,checked,Working with Data in the Tidyverse,Explore your data,"Explore your data, Tame your data, Tidy your data, Transform your data"
+1,,,,,,,Tame your data,
+1,,,,,,,Tidy your data,
+1,,,,,,,Transform your data,
+,,,,,,,,
+2,2,[Week 2](/datacamp/02-module/),5/30/21,9/13/20,checked,Introduction to the Tidyverse,Introduction to ideas of inference,"Introduction to ideas of inference, Completing a randomization test: gender discrimination, Hypothesis testing errors: opportunity cost, Confidence intervals"
+2,,,,,,,Completing a randomization test: gender discrimination,
+2,,,,,,,Hypothesis testing errors: opportunity cost,
+2,,,,,,,Confidence intervals,
+2,,,,,,,,
+2,,,5/30/21,,checked,Foundations of Inference,Explore your data,"Explore your data, Tame your data, Tidy your data, Transform your data"
+2,,,,,,,Tame your data,
+2,,,,,,,Tidy your data,
+2,,,,,,,Transform your data,
+,,,,,,,,
+3,3,[Week 3](/datacamp/03-module/),6/6/21,6/6/21,checked,*posting soon*,,
+,,,,,,,,
+4,4,[Week 4](/datacamp/04-module/),6/13/21,6/13/21,checked,*posting soon*,,
+,,,,,,,,
+5,5,[Week 5](/datacamp/05-module/),6/20/21,6/20/21,checked,*posting soon*,,
+,,,,,,,,
+6,6,[Week 6](/datacamp/06-module/),6/27/21,6/27/21,checked,*posting soon*,,
+,,,,,,,,
+EC1,EC1,,6/27/21,6/27/21,unchecked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
+EC1,,,,,,,Aesthetics,
+EC1,,,,,,,Geometries,
+EC1,,,,,,,Themes,

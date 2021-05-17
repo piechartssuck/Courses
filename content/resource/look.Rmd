@@ -1,0 +1,44 @@
+---
+title: General Criteria for Visualizations
+date: "2020-07-15"
+menu:
+  resource:
+    parent: Resources
+type: docs
+weight: 5
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+While there is no specific rubric, here is a basic outline of what to be looking out for in each task. Criteria will generally be graded on a competency-based scale roughly translating to 
+
++ **A: Exceeds expectations**, 
++ **B: Meets expectations**, 
++ **C: Needs improvement**, 
++ **D: Unsatisfactory**, and 
++ **F: Overall Failing**. 
+
+Of course this is a continuous scale so a combination of proficiencies may be assigned to work that falls between any two consecutive levels.
+
+<center>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+read_csv("rubricish.csv") %>% 
+      as_tibble() %>%
+      
+  kbl("html", 
+      escape = FALSE,
+      align = 'clllll') %>%
+  column_spec(1, 
+              bold = TRUE)
+```
+</center>
+
+

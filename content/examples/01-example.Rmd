@@ -1,0 +1,29 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  examples:
+    parent: Examples
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+For a group of people who love conciseness, evaluators often use tools with some complexity. A few are listed below.
+
+## Evaluation Checklists
+
+Evaluators love checklists and so much so that there is repository solely dedicated to housing them. Head over to [The Evaluation Center](https://wmich.edu/evaluation/checklists) at Western Michigan University to take a look.
+
+## Logic Models
+
+Logic models are simply a visual(ish) way to depict the moving parts of a program. Once constructed, it is a fairly easy way to guide parts of an evaluation and for stakeholders to see if changes need to occur. The [Program Development and Evaluation](https://fyi.extension.wisc.edu/programdevelopment/logic-models/) supported by the University of Wisconsin Extension Program is a fantastic resource for all things logic model.
+
+## A Whole Bunch of Methods
+
+For better or for worse, being an evaluator is akin to *being a jack of all trades but a master of none.* That is not meant to be demeaning in any way^[...or else I'd just be putting myself down!]. They are typically methodologists and/or have an innate ability to construct studies to determine the needs of a program. However evaluators are rarely content experts and even if they are are, the likelihood of evaluating something within our content is pretty low. Take a look at [Better Evaluation](https://www.betterevaluation.org/en) to get an idea of the breadth of methods and approaches evaluators need to know in order to do their job effectively.

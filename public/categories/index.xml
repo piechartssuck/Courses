@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Measurement/Evaluation in Educational Psychology</title>
-    <link>https://edp611.theoreticalphysed.com/categories/</link>
-      <atom:link href="https://edp611.theoreticalphysed.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://edp611.asocialdatascientist.com/categories/</link>
+      <atom:link href="https://edp611.asocialdatascientist.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://edp611.theoreticalphysed.com/img/social-image.png</url>
+      <url>https://edp611.asocialdatascientist.com/img/social-image.png</url>
       <title>Categories</title>
-      <link>https://edp611.theoreticalphysed.com/categories/</link>
+      <link>https://edp611.asocialdatascientist.com/categories/</link>
     </image>
     
   </channel>

@@ -1,16 +1,16 @@
 lessons:
   - title: '<span style="font-weight:bold">Content</span>'
     header: True
-  #
-  # - title: 'Does it Work and Why Does it Work?'
-  #   session: 1
-  #   date: "July 5, 2020"
-  #   readings: "01-readings"
-  #   lesson: "01-lesson"
-  #   example: "01-example"
-  #   assignment: "01-exercise"
-  #   due: "01-due"
-  #
+
+  - title: 'Does it Work and Why Does it Work?'
+    session: 1
+    date: "May 17, 2021"
+    readings: "01-readings"
+    lesson: "01-lesson"
+    example: "01-example"
+    assignment: "01-exercise"
+    due: "01-due"
+
   # - title: 'Neverending Designs, Measures, and Methods'
   #   session: 2
   #   date: "July 12, 2020"

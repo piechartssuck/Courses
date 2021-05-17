@@ -29,17 +29,25 @@ unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
 checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
 
 wk_post <- tibble(
-"eCampus?" = c(unchecked,
-               checked,
-               checked),
+"eCampus" = c(unchecked,
+              checked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            unchecked,
+            checked,
+            unchecked),
 
 Description = c("Complete modules in Data Camp that address the basic elements of R and tidying data.",
                 "Think about a population to test",
-                "Submit your Week 1 Reflections."),
+                "Create a post about a Sims study",
+                "Read and review some information"),
 
-Location = c("[Link](/lesson/01-lesson/#data-camp-1)",
-             "[Link](/assignment/#anchorwk1)",
-             "[Link](/readings/01-readings/#questions-to-reflect-on-1)")
+Location = c("[Link](/datacamp/01-module/)",
+             "[Link](/tasks/01-task/#final-project)",
+             "[Link](/readings/01-readings/)",
+             "[Link](/readings/01-readings/)")
 
 )
 ```
@@ -47,9 +55,12 @@ Location = c("[Link](/lesson/01-lesson/#data-camp-1)",
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(wk_post, 
       escape = FALSE,
-      align = 'clc') %>% 
+      align = 'cclc') %>% 
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
-  column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
 ```

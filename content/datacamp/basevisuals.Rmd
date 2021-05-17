@@ -1,0 +1,28 @@
+---
+title: "Base Visuals in R"
+author: "Dr. Abhik Roy"
+output: html_document
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Anything SPSS Can Do, R Can Do Better
+
+## Getting Prepped
+
+### Set your working directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+Go to the menu bar and select `Session > Set Working Directory > To Source File Location`. 
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+---
+title: "Scoring Data Camp"
+menu:
+  lesson:
+    parent: Overview
+    weight: 2
+type: docs
+weight: 1
+shiny: true
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+**Remember this is a graduate level class and your work should reflect that**. It is expected that all problems within the data camp lessons should attempted. While this is not a specific rubric, the following general criteria and benchmarks will be used when assessing your work. 
+
+```{r echo=FALSE}
+
+plus <- as.character(fa("plus", fill = "#5cb85c", height = "25px"))
+
+check <- as.character(fa("check", fill = "#0275d8", height = "25px"))
+
+minus <- as.character(fa("minus", fill = "#f0ad4e", height = "25px"))
+
+not <- as.character(fa("exclamation", fill = "#d9534f", height = "25px"))
+
+empty <- as.character(fa("times", fill = "#292b2c", height = "25px"))
+
+initials <- tibble(
+  
+  range <- c(plus, 
+             check,
+             minus, 
+             not,
+             empty
+  ),
+  
+  worth <- c("*11.5*",
+             "*10*",
+             "*5*",
+             "*0*",
+             "*0*"),
+  
+  criteria <- c(
+    
+    "Exercises are 100% completed. Every task was attempted and answered, and most answers are correct. Knitted document are clean and easy to follow. This indicates that your work is exceptional. These are not earned often.",
+
+"Exercises are 70–99% complete and most answers are correct or on point. This is the expected level of performance",
+
+"Exercises are less than 70% complete and/or most answers are incorrect or off-point. This indicates that you need to improve next time. Hopefully people will not earn this often.",
+
+"Exercises are generally incoherant or superficial.",
+
+"Exercises are unattepted or mostly incomplete."
+
+  ),
+
+.name_repair = "minimal"
+
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+initials %>%
+  kbl(
+    col.names = c("Marker", "Estimated Point Value", "Criteria"), 
+    "html", 
+    escape = FALSE,
+    align = 'ccl'
+  ) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "30em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

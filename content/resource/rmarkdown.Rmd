@@ -1,11 +1,10 @@
 ---
 title: Using R Markdown
-date: "2020-07-15"
 menu:
   resource:
     parent: Guides
 type: docs
-weight: 7
+weight: 8
 output:
   blogdown::html_page:
       toc: TRUE

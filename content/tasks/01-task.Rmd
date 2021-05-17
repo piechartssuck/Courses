@@ -1,0 +1,19 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Does it Work and Why Does it Work?"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Week 1: Think about assessment
+
+Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitative.

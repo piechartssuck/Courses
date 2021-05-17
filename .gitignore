@@ -1,3 +1,7 @@
 # Local Netlify folder
 .netlify
 .Rproj.user
+.DS_Store
+Thumbs.db
+/public/
+/resources/

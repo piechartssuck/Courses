@@ -3,30 +3,22 @@ title: "Does it Work and Why Does it Work?"
 linktitle: "Week 1: Does it Work and Why Does it Work?"
 menu:
   content:
-    parent: Course content
+    parent: Readings
     weight: 1
 type: docs
-bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
-slides: "01-slides"
 output:
   blogdown::html_page:
     toc: true
 ---
 
-## Readings
+## Note
 
-- The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
-- <i class="fas fa-book fa-fw"></i> Chapter 1-2 in James McDavid, *Program Evaluation and Performance Measurement* 
-- <i class="fas fa-book fa-fw"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html){target="_blank"} in Tony Albano, *Introduction to Educational and Psychological Measurement Using R* 
+This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
 
+## Literature
 
-### Questions to reflect on
+- <i class="fas fa-file fa-fw"></i> **Read** the [syllabus](/syllabus/)
+- <i class="fas fa-book fa-fw"></i> **Review** Part I: The Essence of Research in the Counseling Profession covering Chapters 1-4 in Balkin & Kleist.
+- **Read** through <i class="fas fa-book fa-fw"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html){target="_blank"} in Albano titled [an] *Introduction to Educational and Psychological Measurement Using R*. It is absolutely fine if you cannot understand some of what is presented, especially the syntax. Copy and paste the code into your R console to follow along. 
+- Read [Visser, et al. (2020)](/documents/Visser et al (2020).pdf) and answer the following question in a posting on the Slack channel  [#psychopathic-sims](https://2021edp611.slack.com/archives/C021WQ54BML): *Focusing on just the measures, what are your thoughts regarding the validity and reliablity of the study?*
 
-- How do we know what is true?
-- Does everything need evaluated?
-- Why do we perform program evaluations?
-- What is evaluation in a nutshell?
-- How do you choose what type of evaluation to administer?
-
-Please submit your narrative to [eCampus](https://ecampus.wvu.edu/){target="_blank"}.

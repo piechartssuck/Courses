@@ -1,0 +1,28 @@
+---
+title: Using Tableau
+menu:
+  resource:
+    parent: Guides
+type: docs
+weight: 10
+output:
+  blogdown::html_page:
+      toc: TRUE
+      fig_caption: yes
+---
+
+## A Few Notes About Tableau
+
+Searching for help with Tableau on Google is generally easier than R since you aren't searching for a letter. However, the first thing you may notice is that given [Tableau](https://www.tableau.com/){target="_blank"} is a proprietary software, there is severe lack of available free resources as opposed to R^[Which can also be overwhelming given the sheer number of available resources.]. As opposed to open source softwares, you may have difficulties in locating resources that are not commercially linked and worth an investigation. 
+
+Similar to how Apple operates, Tableau's parent company [Salesforce](https://www.salesforce.com/){target="_blank"} tightly controls the ecosystem. However for those who want to avoid coding from the ground up, one of major benefits of the visualization software is that it plays well with R. However even with that capability, the interaction is narrowly defined. It also has the largest commercial footprint of those who prefer to pay for a graphical user interface when rendering data visualizations. 
+
+If you use Twitter, post Tableau-related questions and concerns using [TableauSupport](https://twitter.com/TableauSupport){target="_blank"} using `@TableauSupport`. Also check out [StackOverflow](https://stackoverflow.com/){target="_blank"} (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) [Tableau Community](https://community.tableau.com/s/){target="_blank"}. People are extremely friendly and are willing to provide help as long as you have made a genuine attempt.
+
+## Learning and Copying Tableau
+
+- [**Sir Viz-a-Lot**](https://www.sirvizalot.com/){target="_blank"}: Dashboards and descriptions from [Matt Chabers](https://twitter.com/sirvizalot){target="_blank"} - a Tableau Zen Master. 
+- [**Tableau Public**](https://public.tableau.com/en-us/s/){target="_blank"}: Public repository of all things Tableau.
+- [**Tableau Training Videos**](https://www.tableau.com/learn/training/20211){target="_blank"}: Official material from the software developer.
+- [**VizWiz**](https://www.vizwiz.com/){target="_blank"}: Examples and help from [Andy Kriebel](https://twitter.com/VizWizBI){target="_blank"} - another Tableau Zen Master. 
+- [**VizWiz**](https://www.ryansleeper.com/){target="_blank"}: [Ryan Sleeper](https://twitter.com/ryanvizzes){target="_blank"} is the author of one of our course texts and provides tips and tricks on the functionality of Tableau.

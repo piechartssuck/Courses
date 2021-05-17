@@ -11,9 +11,10 @@ output:
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-library(dplyr)
-library(tibble)
-library(pander)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
 ```
 
 `r blogdown::shortcode("courseinfo")`
@@ -49,23 +50,34 @@ Learning R can be especially challenging at first—it's akin to learning a new 
 Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
 
 ## Course materials
-There are two texts and three software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
+There are four optional texts and two software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
 
 ### Texts
 
-We'll rely on the texts below:
+#### Optional Reference
 
-- McDavid, J. C., Huse, I., &amp; Hawthorn, L. R. L. (2019). *Program evaluation and performance measurement an introduction to practice* (3rd ed.). SAGE.
+To help minimize costs, we do not have a formal text. However we will rely on the following for readings and reference. All are available through the WVU library [WVU library](https://library.wvu.edu/){target="_blank"} in an online capacity barring the APA 7th edition handbook.
+
+- Balkin, R. S., &amp; Kleist, D. M. (2016). *Counseling Research: a Practitioner-Scholar Approach*. American Counseling Association. 
+
+- Albano, T. (2020). Introduction to Educational and Psychological Measurement Using R. [https://thetaminusb.com/intro-measurement-r/ ](https://thetaminusb.com/intro-measurement-r/). 
 
 - American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
 
-- Albano, T. (2020). Introduction to Educational and Psychological Measurement Using R. [https://thetaminusb.com/intro-measurement-r/ ](https://thetaminusb.com/intro-measurement-r/). 
+- Wickham, H., Navarro, D. & Pedersen, T.L. (2021). *ggplot2: Elegant Graphics for Data Analysis* (2nd and 3rd eds.). Springer.
+    - [Digital editions](https://ggplot2-book.org/index.html){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9783319242750
+    
+- Wickham, H. (2021). *R for Data Science* (1st ed.). O’Reilly Media.
+    - [Digital edition (web)](https://r4ds.had.co.nz/){target="_blank"} (free!)
+    - [Digital edition (WVU libraries)](https://libwvu.on.worldcat.org/oclc/966429425){target="_blank"} (free!)
+    - Hardcover edition (not free) - ISBN: 9781491910399
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
 Subscribing to the [R Weekly newsletter](https://rweekly.org/) provides many helpful tutorials about how to do R. This certainly is not a requirement.
 
-### Software
+There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.  
 
 #### R and RStudio
 
@@ -95,33 +107,36 @@ But there are multiple resources online to help.
 
 - Fourth searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter. 
 
-- Fifth we have a class chatroom which may be accessed via [Slack](2020edp611.slack.com) where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+- Fifth we have a class chatroom which may be accessed via [Slack](2021edp611.slack.com) where you can poise a question. **I will monitor Slack regularly and will respond relatively quickly.** Ask questions about the readings, exercises, and other course materials. You'll likely have similar questions as your peers and may be able to answer other peoples' questions too.
 
 - Sixth and lastly you can send items by Slack or email me with questions about content, R or whatever (after giving a graduate student effort of course). Please include the subject header **EDP 611 "the title of your email"** where the title of your email is given without the quotes. Know that I will not just give you the answer, but am happy to push you in the right direction. If you do email me, please include the following:
 
   - A brief description of the problem and what you have done thus far including the line number of the issue (if applicable).
   - A copy of your data set (if applicable).
-  - A copy of your script or Rmarkdown document with comments throughout so I know what you've tried historically leading up to the issue.
+  - A copy of your script or Rmarkdown document^[Please do not send a screenshot because neither R or I can run a picture of syntax.] with comments throughout so I know what you've tried historically leading up to the issue.
 
 I have a mail filter that will automatically bring your email to a top priority status.^[In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.] 
 
 You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you're more likely to remember things you've figured out rather than those you've been shown or told. 
 
-## Assignments and grades
+## Tasks and grades
 
-You can find descriptions for all the assignments on the [assignments page](/assignment/).
+You can find descriptions for all the assignments on the [tasks page](/tasks/).
+
+## Assignments and Grades
+
+You can find up to date descriptions for all the assignments on the [assignments page](/assignment/).
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
-  ~Points,  ~Assignment,
-  6 * 20 , "Reflections (6 × 20)",
-  6 * 20 , "Exercises (6 × 20)",
-  60      , "Situation 1",
-  60      , "Situation 2",
-  140     , "Final project"
-) %>%
-  mutate(Percent = Points / sum(Points),
-         Percent = scales::percent(Percent, accuracy = 1))
+  ~Percent,  ~Task, ~Location,
+  15, "R Training", "Data Camp",
+  15, "Reflections", "Slack Channel",
+  15, "R Measurement Task", "eCampus/Slack",
+  15, "Synchronous Meetings", "Zoom",
+  30, "Final Proposal", "eCampus/Slack", 
+  10, "Presentation of Proposal", "eCampus/Slack"
+) 
 
 grading <- tribble(
   ~Grade, ~Range,
@@ -133,32 +148,29 @@ grading <- tribble(
 )
 ```
 
-
-<div class="centered-table">
-
-
+<center>
+  
 ```{r show-assignments-table, echo=FALSE, results="asis"}
-assignments_total <- tibble(Assignment = "Total",
-                            Points = sum(assignments$Points),
-                            Percent = NA)
-
-bind_rows(assignments, assignments_total) %>% 
-  select(Assignment, Points, Percent) %>% 
-  pandoc.table(justify = "lcc", missing = "—")
+assignments %>%
+  kableExtra::kable(align='cl',
+                    col.names = c("Percent", "Task", "Location"),
+  ) %>%
+  kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em") %>%
+  column_spec(3, width = "12em")
 ```
-</div>
 
+</center>
+  
 <br />
-
-<div class="centered-table">
-
-```{r show-grades-table, echo=FALSE, results="asis"}
-grading %>%
-  pandoc.table(justify = "lc", 
-               col.names = c("Grade", "Range"))
-```
-
-<div>
+  
+<center>
 
 ### Your hours
 
