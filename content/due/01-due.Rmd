@@ -62,5 +62,6 @@ kable(wk_post,
   column_spec(3, width = "30em") %>%
   column_spec(4, width = "10em") %>%
   row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
 ```

@@ -19,7 +19,6 @@ faexample <-  as.character(fa("lightbulb", fill = "#eb7b59", height = "17px"))
 fatask <- as.character(fa("tasks", fill = "#cf4647", height = "17px"))
 fadue <- as.character(fa("folder-open", fill = "#2a6e84", height = "17px"))
 
-
 tableofcontent <- tibble(
   
   type <- c("Readings", 
