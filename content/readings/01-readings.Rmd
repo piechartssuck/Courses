@@ -158,7 +158,6 @@ readings %>%
 
 ### Review Some Texts
 
-
 ```{r echo=FALSE}
 
 document <- as.character(fa("file", fill = "#e86af0", height = "20px"))
