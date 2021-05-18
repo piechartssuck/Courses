@@ -248,7 +248,7 @@
   <meta property="og:description" content="A foundational course adressing how evaluation and measurement are used to study tests and programs."><meta property="og:image" content="https://edp611.asocialdatascientist.com/img/social-image.png">
   <meta property="twitter:image" content="https://edp611.asocialdatascientist.com/img/social-image.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2020-07-15T00:00:00&#43;00:00">
   
 
   
@@ -284,41 +284,34 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
 <script src="media/scripts/embedded-smart-player.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    $('a[href^="#"]').on('click', function(e) {
-      e.preventDefault();
-      var target = this.hash,
-        $target = $(target);
-        $(target + ' details').attr('open', true);
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-      }, 400, 'swing', function() {
-        window.location.hash = target;
-      });
-
-    });
-  });
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
 </script>
 
-
-
-
 <link rel="shortcut icon" href="https://edp611.asocialdatascientist.com/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp611.asocialdatascientist.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp611.asocialdatascientist.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp611.asocialdatascientist.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp611.asocialdatascientist.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp611.asocialdatascientist.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp611.asocialdatascientist.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp611.asocialdatascientist.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp611.asocialdatascientist.com/img/android-icon-192x192.png" />
 <link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-16x16.png" sizes="96x96" />
 <meta name="application-name" content="EDP 611: Measurement/Evaluation in Educational Psychology" />
 <meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="https://edp611.asocialdatascientist.com/img/mstile-144x144.png" />
+<meta name="msapplication-TileImage" content="https://edp611.asocialdatascientist.com/img/ms-icon-144x144.png" />
 
 
   <title>Measurement/Evaluation in Educational Psychology</title>
@@ -571,7 +564,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+          <a class="nav-link " href="/resources/"><span>Resources</span></a>
         </li>
 
         
@@ -722,7 +715,7 @@
   
   
 
-  <section id="hero" class="home-section wg-hero dark  " style="background-image: linear-gradient(#526189, #5a8fa9);" >
+  <section id="hero" class="home-section wg-hero dark  " style="background-image: linear-gradient(#373B44, #73C8A9);" >
     <div class="container">
       
 
@@ -748,7 +741,7 @@
     
     
     <p class="hero-note text-muted mb-0">
-      Summer II 2020<br>Counseling &amp; Learning Sciences<br>West Virginia University
+      Summer I 2021<br>Counseling &amp; Learning Sciences<br>West Virginia University
     </p>
     
 
@@ -817,7 +810,7 @@
             <li><i class="fas fa-user fa-fw"></i> <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener"> Dr. Abhik Roy</a></li>
             <li><i class="fas fa-university fa-fw"></i> Allen Hall 504O</li>
             <li><i class="fas fa-envelope fa-fw"></i> <a href="mailto:Abhik.Roy@mail.wvu.edu"> Abhik.Roy@mail.wvu.edu</a></li>
-            <li><i class="fab fa-twitter fa-fw"></i> <a href="https://twitter.com/DrTheoreticalPE" target="_blank" rel="noopener"> @DrTheoreticalPE</a></li>
+            <li><i class="fab fa-twitter fa-fw"></i> <a href="https://twitter.com/asocialdatasci" target="_blank" rel="noopener"> @asocialdatasci</a></li>
             <li><i class="fas fa-calendar-check fa-fw"></i> <a href="https://calendly.com/nopiecharts/short30" target="_blank" rel="noopener"> Schedule an appointment</a></li>
         </ul>
     </div>
@@ -827,8 +820,8 @@
 
         <ul class="icon-list">
             <li><i class="far fa-calendar fa-fw"></i> Forever (for the next six weeks)</li>
-            <li><i class="far fa-calendar-alt fa-fw"></i> Jun 29–Aug 7, 2020</li>
-            <li><i class="far fa-clock fa-fw"></i> You pick!</li>
+            <li><i class="far fa-calendar-alt fa-fw"></i> May 17–June 25, 2021</li>
+            <li><i class="far fa-clock fa-fw"></i> The present</li>
             <li><i class="fas fa-university fa-fw"></i> Online</li>
             <li><i class="fab fa-slack fa-fw"></i> <a href="https://2021edp611.slack.com" target="_blank" rel="noopener">Slack</a></li>
         </ul>
@@ -837,7 +830,7 @@
     <div class="col-md-4 contact-policy">
         <h3>Contacting me</h3>
 
-        <p>Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!</p>
+        <p>Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Hopefully life will back to normal soon!</p>
     </div>
 </div>
 
@@ -987,13 +980,13 @@
 
             <p>
                 <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next six weeks) &emsp;&emsp;
-                <i class="far fa-clock fa-fw"></i> You pick!
+                <i class="far fa-clock fa-fw"></i> The present
                 <br><i class="fas fa-university fa-fw"></i> Online
             </p>
         </div>
 
         <div class="col-md-5 credits">
-            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
             <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2020 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
 

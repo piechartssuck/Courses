@@ -10,9 +10,9 @@
             {{- if .header }}
 
             <td style="width:8%;text-align:center;font-weight:bold">Readings</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Lesson</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Example</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Assignment</td>
+            <td style="width:8%;text-align:center;font-weight:bold">DataCamp</td>
+            <td style="width:8%;text-align:center;font-weight:bold">Examples</td>
+            <td style="width:8%;text-align:center;font-weight:bold">Tasks</td>
             <td style="width:8%;text-align:center;font-weight:bold">Due</td>
 
             {{- else }}
@@ -28,8 +28,8 @@
             </td>
             {{- end }}
 
-            {{- if .lesson }}
-            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/lesson/{{ .lesson }}/">
+            {{- if .datacamp }}
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/datacamp/{{ .datacamp }}/">
               <font color="76487">
                     <i class="fas fa-chalkboard fa-lg fa-fw"></i></a></td>
             {{- else }}
@@ -39,8 +39,8 @@
             </td>
             {{- end }}
 
-            {{- if .example }}
-            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/example/{{ .example }}/">
+            {{- if .examples }}
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/examples/{{ .example }}/">
               <font color="eb7b59">
                     <i class="fas fa-lightbulb fa-lg fa-fw"></i></a></td>
             {{- else }}
@@ -50,8 +50,8 @@
             </td>
             {{- end }}
 
-            {{- if .assignment }}
-            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}/">
+            {{- if .tasks }}
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/tasks/{{ .task }}/">
               <font color="cf4647">
                     <i class="fas fa-tasks fa-lg fa-fw"></i></a></td>
             {{- else }}

@@ -42,7 +42,7 @@ First you need to install R itself (the engine).
     include_graphics("/img/install/install-r-links.png", error = FALSE)
     ```
 
-    - If you use macOS, scroll down to the first `.pkg` file in the list of files (as of this writing, it's `R-4.0.0.pkg`; as of right now but download the most current version.
+    - If you use macOS, scroll down to the first `.pkg` file in the list of files (as of this writing, it's `R-4.0.3.pkg`; as of right now but download the most current version.
     
         ```{r, echo=FALSE, out.width="100%"}
         include_graphics("/img/install/install-r-mac.png", error = FALSE)

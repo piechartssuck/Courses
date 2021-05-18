@@ -258,41 +258,34 @@
 
 
   <script src="https://kit.fontawesome.com/7b58dd72e9.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
 <script src="media/scripts/embedded-smart-player.min.js"></script>
 
 <script>
-  $(document).ready(function() {
-    $('a[href^="#"]').on('click', function(e) {
-      e.preventDefault();
-      var target = this.hash,
-        $target = $(target);
-        $(target + ' details').attr('open', true);
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-      }, 400, 'swing', function() {
-        window.location.hash = target;
-      });
-
-    });
-  });
+(function() {
+    if (document.location.hash) {
+        setTimeout(function() {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }, 10);
+    }
+})();
 </script>
 
-
-
-
 <link rel="shortcut icon" href="https://edp611.asocialdatascientist.com/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://edp611.asocialdatascientist.com/img/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://edp611.asocialdatascientist.com/img/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://edp611.asocialdatascientist.com/img/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://edp611.asocialdatascientist.com/img/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://edp611.asocialdatascientist.com/img/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://edp611.asocialdatascientist.com/img/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://edp611.asocialdatascientist.com/img/apple-icon-152.152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://edp611.asocialdatascientist.com/img/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://edp611.asocialdatascientist.com/img/android-icon-192x192.png" />
 <link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://edp611.asocialdatascientist.com/img/favicon-16x16.png" sizes="96x96" />
 <meta name="application-name" content="EDP 611: Measurement/Evaluation in Educational Psychology" />
 <meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="https://edp611.asocialdatascientist.com/img/mstile-144x144.png" />
+<meta name="msapplication-TileImage" content="https://edp611.asocialdatascientist.com/img/ms-icon-144x144.png" />
 
 
   <title>Categories | Measurement/Evaluation in Educational Psychology</title>
@@ -545,7 +538,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/resource/"><span>Resources</span></a>
+          <a class="nav-link " href="/resources/"><span>Resources</span></a>
         </li>
 
         
@@ -776,13 +769,13 @@
 
             <p>
                 <i class="far fa-calendar-alt fa-fw"></i> Forever (for the next six weeks) &emsp;&emsp;
-                <i class="far fa-clock fa-fw"></i> You pick!
+                <i class="far fa-clock fa-fw"></i> The present
                 <br><i class="fas fa-university fa-fw"></i> Online
             </p>
         </div>
 
         <div class="col-md-5 credits">
-            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
             <p>Content <i class="fab fa-creative-commons fa-fw"></i> 2020 <a href="https://lshd.wvu.edu/faculty-staff/roy" target="_blank" rel="noopener">Abhik Roy</a></p>
 

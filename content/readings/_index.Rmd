@@ -1,7 +1,7 @@
 ---
-title: "Content: Readings"
+title: "About the Readings"
 menu:
-  content:
+  readings:
     parent: Overview
     weight: 1
 type: docs
@@ -60,6 +60,7 @@ library(knitr)
 library(kableExtra)
 ```
 
+### First Timers Note
 Each class session has a set of required readings that you should complete ***before*** doing anything else. 
 
 ### Note about corresponding posts on Slack

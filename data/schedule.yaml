@@ -6,9 +6,9 @@ lessons:
     session: 1
     date: "May 17, 2021"
     readings: "01-readings"
-    lesson: "01-lesson"
+    lesson: "01-module"
     example: "01-example"
-    assignment: "01-exercise"
+    tasks: "01-tasks"
     due: "01-due"
 
   # - title: 'Neverending Designs, Measures, and Methods'

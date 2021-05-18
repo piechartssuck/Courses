@@ -22,7 +22,7 @@ fadue <- as.character(fa("folder-open", fill = "#2a6e84", height = "17px"))
 tableofcontent <- tibble(
   
   type <- c("Readings", 
-            "DataCamp",
+            "Data Camp",
             "Examples",
             "Tasks",
             "Due"),

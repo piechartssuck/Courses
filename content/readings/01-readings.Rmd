@@ -1,14 +1,17 @@
 ---
 title: "Does it Work and Why Does it Work?"
 linktitle: "Week 1: Does it Work and Why Does it Work?"
-menu:
-  content:
-    parent: Readings
-    weight: 1
-type: docs
 output:
   blogdown::html_page:
     toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
 ---
 <style>
   .hvr-sweep-to-left {

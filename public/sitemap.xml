@@ -2,15 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://edp611.asocialdatascientist.com/datacamp/</loc>
-  </url><url>
-    <loc>https://edp611.asocialdatascientist.com/tasks/</loc>
-  </url><url>
-    <loc>https://edp611.asocialdatascientist.com/readings/</loc>
+    <loc>https://edp611.asocialdatascientist.com/resources/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/examples/</loc>
   </url><url>
+    <loc>https://edp611.asocialdatascientist.com/datacamp/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/readings/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/tasks/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/citations/</loc>
+  </url><url>
     <loc>https://edp611.asocialdatascientist.com/datacamp/gradingish/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/datacamp/basevisuals/</loc>
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/due/</loc>
   </url><url>
@@ -20,15 +27,42 @@
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/examples/01-example/</loc>
   </url><url>
-    <loc>https://edp611.asocialdatascientist.com/tasks/01-task/</loc>
+    <loc>https://edp611.asocialdatascientist.com/readings/01-readings/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/tasks/01-tasks/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/data/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/design/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/install/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/look/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/markdown/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/r/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/rmarkdown/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/style/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/tableau/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/visualization/</loc>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://edp611.asocialdatascientist.com/resources/unzipping/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/authors/</loc>
   </url><url>
-    <loc>https://edp611.asocialdatascientist.com/datacamp/basevisuals/</loc>
-  </url><url>
     <loc>https://edp611.asocialdatascientist.com/categories/</loc>
-  </url><url>
-    <loc>https://edp611.asocialdatascientist.com/</loc>
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/author/dr.-abhik-roy/</loc>
   </url><url>
@@ -43,7 +77,5 @@
     <loc>https://edp611.asocialdatascientist.com/syllabus/</loc>
   </url><url>
     <loc>https://edp611.asocialdatascientist.com/tags/</loc>
-  </url><url>
-    <loc>https://edp611.asocialdatascientist.com/readings/01-readings/</loc>
   </url>
 </urlset>

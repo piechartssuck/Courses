@@ -1,25 +1,19 @@
 ---
-title: Tasks
-citeproc: true
-bibliography: ../../static/bib/references.bib
-link-citations: true
-csl: ../../static/bib/apa7th.csl
+title: "About the Tasks"
 menu:
   tasks:
     parent: Overview
     weight: 1
 type: docs
 weight: 1
-output:
-  blogdown::html_page:
-    toc: true
 ---
 
+### First Timers Note
 You will get the most of out this class if you:
 
 1. engage with the readings and materials,
 2. use R to complete any analysis,
-3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
+3. ask for help immediately after giving *it* (whatever *it* is) a good faith effort, and
 4. keep an open and honest line of communication with me and your peers if possible.
 
 ## Final proposal 

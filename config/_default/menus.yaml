@@ -21,7 +21,7 @@ main:
     url: /due/
     weight: 7
   - name: Resources
-    url: /resource/
+    url: /resources/
     weight: 8
   - name: Professor
     url: /professor/
@@ -41,7 +41,7 @@ readings:
 datacamp:
   - name: Overview
     weight: 1
-  - name: DataCamp
+  - name: Modules
     weight: 2
 examples:
   - name: Overview
@@ -53,12 +53,12 @@ due:
     weight: 1
   - name: Due?
     weight: 2
-dataCamp:
+tasks:
   - name: Overview
     weight: 1
-  - name: Modules
+  - name: Tasks
     weight: 2
-resource:
+resources:
   - name: Resources
     weight: 1
   - name: Guides
