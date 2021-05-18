@@ -79,6 +79,22 @@ library(kableExtra)
 
 ## Literature
 
+### Download Digital Copies
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week1Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 1 Readings",
+  button_label = "Download Readings",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
 ### Read Some Papers
 For each reading below, write a **single post** on Slack with the following:
 
@@ -90,24 +106,29 @@ slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}"
 
 readings <- tibble(
   
-  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6* 229–240.", 
-             "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
+  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6*, 229–240.", 
+             "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press.",
+             "Davidson, J. (2004). What is Evaluation? *Evaluation Methodology Basics: The Nuts and Bolts of Sound Evaluation*. Sage."
   ),
   
   post <- c("Focusing on just the measures, what are your thoughts regarding the validity and reliability of the study?",
-            "How is evaluation viewed in your field? Is it generally feared, welcomed, both, neither?"),
+            "How is evaluation viewed in your field? Is it generally feared, welcomed, both, neither?",
+            "*none*"),
+  
   channel <- c(
     "`#psychopathic-sims`",
-    "`#mathison`"                    
+    "`#mathison`",
+    "*not applicable*"
   ),
 
   link <- c(
-     paste0("![",slackico,"](/readings/01-readings_files/slack-ico.png){width=20px}",
+     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
     "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
     ),
-    paste0("[",slackico,"]",
+     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
     "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
-    )
+    ),
+    "*none*"
   ),
   
   .name_repair = "minimal"
@@ -122,26 +143,18 @@ readings %>%
   kbl(col.names = c("Reading", "Post", "Slack Channel", "Link"), 
       "html", 
       escape = FALSE,
-      align = 'lcl') %>%
+      align = 'llcc') %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "30em") %>%
-  column_spec(2, width = "10em")
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "5em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;')
 ```
 </center>
-
-```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "readings", "EDP611Week1Readings.zip")
-
-downloadthis::download_file(
-  path = loc,
-  output_name = "Week 1 Readings",
-  button_label = "Download the Papers",
-  button_type = "default",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-  )
-```
 
 ### Review Some Texts
 
@@ -156,16 +169,14 @@ site <- as.character(fa("link", fill = "	#a56af0", height = "20px"))
 
 review <- tibble(
   
-  source <- c("The syllabus (yes please read it!)", 
+  source <- c("The syllabus (did you listen to Snoop?)", 
               "CDC's introduction to evaluation with a focus on public health",
                 "Part I: The Essence of Research in the Counseling Profession covering Chapters 1-4 in Balkin & Kleist",
                 "Chapter I: Introduction to Educational and Psychological Measurement Using R in Albano"
   ),
   
   link <- c(
-   # "[document](/syllabus/){target='_blank'}",
-    paste0("[",document,"]", "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
-           ),
+    paste0("[",document,"]", "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"),
     paste0("[",book,"]",
     "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
     ),
