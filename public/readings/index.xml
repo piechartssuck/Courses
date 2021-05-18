@@ -25,7 +25,10 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#literature&#34;&gt;Literature&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#read-some-papers&#34;&gt;Read Some Papers&lt;/a&gt;&lt;/li&gt;
@@ -84,6 +87,15 @@
 &lt;li&gt;This week and only this week please complete the R &lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/&#34;&gt;training modules&lt;/a&gt; before reading the Albano text.&lt;/li&gt;
 &lt;li&gt;Please makes sure to review the &lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/#note-about-corresponding-posts-on-slack&#34;&gt;criteria for posts&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get Some Advice&lt;/h3&gt;
+&lt;p&gt;First things first:
+&lt;br&gt;
+&lt;br&gt;
+&lt;iframe src=&#34;https://edp611.asocialdatascientist.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;br&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp611.asocialdatascientist.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;literature&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Literature&lt;/h2&gt;
@@ -161,7 +173,7 @@ Link
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-The syllabus
+The syllabus (yes please read it!)
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://www.cdc.gov/eval/guide/introduction/index.htm&#34; target=&#34;_blank&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 384 512&#34; style=&#34;height:20px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e86af0;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;

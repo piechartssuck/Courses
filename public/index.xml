@@ -395,7 +395,10 @@ Review some literature about program evaluations and introductory materials on m
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes&#34;&gt;Notes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#get-some-advice&#34;&gt;Get Some Advice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#literature&#34;&gt;Literature&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#read-some-papers&#34;&gt;Read Some Papers&lt;/a&gt;&lt;/li&gt;
@@ -454,6 +457,15 @@ Review some literature about program evaluations and introductory materials on m
 &lt;li&gt;This week and only this week please complete the R &lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/&#34;&gt;training modules&lt;/a&gt; before reading the Albano text.&lt;/li&gt;
 &lt;li&gt;Please makes sure to review the &lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/#note-about-corresponding-posts-on-slack&#34;&gt;criteria for posts&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;get-some-advice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get Some Advice&lt;/h3&gt;
+&lt;p&gt;First things first:
+&lt;br&gt;
+&lt;br&gt;
+&lt;iframe src=&#34;https://edp611.asocialdatascientist.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;br&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp611.asocialdatascientist.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;literature&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Literature&lt;/h2&gt;
@@ -531,7 +543,7 @@ Link
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-The syllabus
+The syllabus (yes please read it!)
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://www.cdc.gov/eval/guide/introduction/index.htm&#34; target=&#34;_blank&#34;&gt;&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 384 512&#34; style=&#34;height:20px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#e86af0;overflow:visible;position:relative;&#34;&gt;&lt;path d=&#34;M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
@@ -768,7 +780,7 @@ Chapter I: Introduction to Educational and Psychological Measurement Using R in 
 &lt;li&gt;&lt;p&gt;Click on “Download R for &lt;code&gt;XXX&lt;/code&gt;”, where &lt;code&gt;XXX&lt;/code&gt; is either Mac or Windows:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp611.asocialdatascientist.com/img/install/install-r-links.png&#34; width=&#34;60%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;If you use macOS, scroll down to the first &lt;code&gt;.pkg&lt;/code&gt; file in the list of files (as of this writing, it’s &lt;code&gt;R-4.0.0.pkg&lt;/code&gt;; as of right now but download the most current version.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;If you use macOS, scroll down to the first &lt;code&gt;.pkg&lt;/code&gt; file in the list of files (as of this writing, it’s &lt;code&gt;R-4.0.3.pkg&lt;/code&gt;; as of right now but download the most current version.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp611.asocialdatascientist.com/img/install/install-r-mac.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you use Windows, click “base” (or click on the bolded “install R for the first time” link) and download it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://edp611.asocialdatascientist.com/img/install/install-r-windows.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2476,31 +2488,39 @@ eCampus/Slack
 &lt;/table&gt;
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;center&gt;
 &lt;div id=&#34;your-hours&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Your hours&lt;/h3&gt;
 &lt;p&gt;Please watch this video:&lt;/p&gt;
+&lt;center&gt;
 &lt;iframe src=&#34;https://player.vimeo.com/video/270014784&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; allow=&#34;fullscreen&#34; allowfullscreen style=&#34;display: block; margin: 0 auto 1rem;&#34;&gt;
 &lt;/iframe&gt;
+&lt;/center&gt;
 &lt;p&gt;Your hours (formerly known as office hours) are set times dedicated to you the student!&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;). This means that I will be &lt;del&gt;in my office&lt;/del&gt; at home waiting for you to &lt;del&gt;come by&lt;/del&gt; talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.&lt;/p&gt;
 &lt;p&gt;Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through either e-mail or Slack.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;class-conduct-and-expectations&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Class conduct and expectations&lt;/h3&gt;
-&lt;p&gt;Here are the rules, expectations, and policies that I came up or stole from other professors:&lt;/p&gt;
+&lt;p&gt;Here are the rules, expectations, and policies that I came up with or stole from other professors:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Late work&lt;/strong&gt;: Barring the final project, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Late work&lt;/strong&gt;: Barring the three main course tasks, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Participation&lt;/strong&gt;: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rubrics&lt;/strong&gt;: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Justifications&lt;/strong&gt;: On any submission, you must justiofy any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that &lt;em&gt;not only is the Earth flat, the core is actually made out of tiramisu and moscato&lt;/em&gt;, the first question you should be asking is &lt;em&gt;what’s your evidence?&lt;/em&gt; possibly followed by &lt;em&gt;is the core delicious?&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Rubrics&lt;/strong&gt;: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:&lt;br&gt;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric.&lt;/li&gt;
+&lt;li&gt;When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.&lt;/li&gt;
 &lt;li&gt;If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).&lt;/li&gt;
 &lt;li&gt;Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.&lt;/li&gt;
 &lt;li&gt;Unless you are in a very specific area, the real world does not use rubrics!
 &lt;br&gt;
 &lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technology use&lt;/strong&gt;: Use phones, computers, etc. responsibly. You’re all adults…well I am most of the time.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technology use&lt;/strong&gt;: Use phones, computers, etc. responsibly. We’re all adults&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;My philosophy&lt;/strong&gt;:&lt;br&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Just assume that all submissions are formal and must be submitted with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.&lt;/li&gt;
+&lt;li&gt;People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another class. If you care about data, fieldwork and learning a highly marketable practice, you’ve come to the right place.&lt;/li&gt;
+&lt;li&gt;There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;learning-and-knowledge-during-a-pandemic&#34; class=&#34;section level3&#34;&gt;
@@ -2515,7 +2535,7 @@ eCampus/Slack
 &lt;p&gt;Many, if not all of you will fall somewhere in the spectrum of somewhat to mostly. If you’re sitting on the absolute Yes end, then consider a career in survey research because it can be very fulfilling and lucrative. But if you find yourself on the absolute No end, then please contact me and let’s try to get you where you need to be. There are a lot of moving parts in this course and not being able to translate some of what you’ve learned into knowledge can have a cascading effect. And by now in your life, you should have a pretty good idea when anyone uses the term cascading, its rarely a good thing.&lt;/p&gt;
 &lt;p&gt;On top of what’s noted above and I’m not sure how to articulate this any better - life just sucks right now in general! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you’re probably more stressed than usual. So here is my promise to you:&lt;/p&gt;
 &lt;div class=&#34;text-center&#34;&gt;
-&lt;p&gt;&lt;strong&gt;If you keep an open line, show initiative, and let me know ahead of time if something is going not according to plan&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, I will do everything I can to help you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you keep an open line, show initiative, and let me know ahead of time if something is going not according to plan&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;, I will do everything I can to help you learn everything you were hoping to learn from this class!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;So what does that mean? Well I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, &lt;strong&gt;please please please do not stay silent!&lt;/strong&gt; As I said earlier, drop me a line!&lt;/p&gt;
 &lt;p&gt;I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, no parallel lines exist in 3D - ok maybe not that last one but its true and really easy to show. If you want to know, ask!). There is a lot to do in this course and some of the content can be frustrating, so make sure to take breaks, go relax, even curse my name if you have to - do whatever you need to stay healthy, balanced, and grounded during this crisis.&lt;/p&gt;
@@ -2628,7 +2648,8 @@ eCampus/Slack
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Please do not send a screenshot because neither R or I can run a picture of syntax.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;There is some misunderstanding about what office hours actually are! &lt;a href=&#34;https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/&#34; target=&#34;_blank&#34;&gt;For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I &lt;em&gt;should not&lt;/em&gt; be disturbed. This is not just a local issue!&lt;/a&gt;, which is the exact opposite of what they are for!&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;I realize sometimes this just isn’t possible so contact me as soon as you can.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Most of the time.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I realize sometimes this just isn’t possible so contact me as soon as you can.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

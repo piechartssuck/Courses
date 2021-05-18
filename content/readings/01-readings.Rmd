@@ -66,8 +66,16 @@ library(kableExtra)
 ```
 
 ## Notes
+
+### Class items
 - This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
 - Please makes sure to review the [criteria for posts](/readings/#note-about-corresponding-posts-on-slack).
+
+### Get Some Advice
+<center>
+<iframe src="/videos/snoop_syllabus.mp4" width="320" height="480" frameBorder="0">Read the syllabus.</iframe>
+</center>
+<br>Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible!
 
 ## Literature
 
@@ -148,7 +156,7 @@ site <- as.character(fa("link", fill = "	#a56af0", height = "20px"))
 
 review <- tibble(
   
-  source <- c("The syllabus", 
+  source <- c("The syllabus (yes please read it!)", 
               "CDC's introduction to evaluation with a focus on public health",
                 "Part I: The Essence of Research in the Counseling Profession covering Chapters 1-4 in Balkin & Kleist",
                 "Chapter I: Introduction to Educational and Psychological Measurement Using R in Albano"

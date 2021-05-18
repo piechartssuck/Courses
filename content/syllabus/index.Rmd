@@ -169,14 +169,14 @@ assignments %>%
 </center>
   
 <br />
-  
-<center>
 
 ### Your hours
 
 Please watch this video:
 
+<center>
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+</center>
 
 Your hours (formerly known as office hours) are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, particular graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed. This is not just a local issue!](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/){target="_blank"}, which is the exact opposite of what they are for!]). This means that I will be ~~in my office~~ at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
 
@@ -184,20 +184,24 @@ Because of the pandemic, we cannot meet in person. I can meet you online via Zoo
 
 ### Class conduct and expectations
 
-Here are the rules, expectations, and policies that I came up or stole from other professors:
+Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
-- **Late work**: Barring the final project, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
+- **Late work**: Barring the three main course tasks, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
 - **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.
-- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:
-
-  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), there is (typically) no such document as a rubric. 
+- **Justifications**: On any submission, you must justiofy any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *not only is the Earth flat, the core is actually made out of tiramisu and moscato*, the first question you should be asking is *what's your evidence?* possibly followed by *is the core delicious?*.
+- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
+  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't often provided.
   2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
   3. Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
-  4. Unless you are in a very specific area, the real world does not use rubrics! 
+  4. Unless you are in a very specific area, the real world does not use rubrics!
 <br>
 <br>
-- **Technology use**: Use phones, computers, etc. responsibly. You're all adults...well I am most of the time.
+- **Technology use**: Use phones, computers, etc. responsibly. We're all adults^[Most of the time.].
 
+- **My philosophy**:<br>
+  1. Just assume that all submissions are formal and must be submitted with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
+  2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another class. If you care about data, fieldwork and learning a highly marketable practice, you've come to the right place.
+  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
 
