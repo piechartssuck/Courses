@@ -72,3 +72,6 @@ tableofcontent %>%
 ## Weekly Overview 
 
 `r blogdown::shortcode("schedule")`
+
+### Need Help?
+I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts/short30){target="_blank"} or contact me within [Slack](http:/2021edp611.slack.com){target="_blank"} by tagging my name `@Dr. Abhik Roy` in a text box along with your message.

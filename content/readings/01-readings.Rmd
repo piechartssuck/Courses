@@ -10,15 +10,184 @@ output:
   blogdown::html_page:
     toc: true
 ---
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
 
-## Note
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
 
-This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Notes
+- This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
+- Please makes sure to review the [criteria for posts](/readings/#note-about-corresponding-posts-on-slack).
 
 ## Literature
 
-- <i class="fas fa-file fa-fw"></i> **Read** the [syllabus](/syllabus/)
-- <i class="fas fa-book fa-fw"></i> **Review** Part I: The Essence of Research in the Counseling Profession covering Chapters 1-4 in Balkin & Kleist.
-- **Read** through <i class="fas fa-book fa-fw"></i> [Chapter 1](https://www.thetaminusb.com/intro-measurement-r/introduction.html){target="_blank"} in Albano titled [an] *Introduction to Educational and Psychological Measurement Using R*. It is absolutely fine if you cannot understand some of what is presented, especially the syntax. Copy and paste the code into your R console to follow along. 
-- Read [Visser, et al. (2020)](/documents/Visser et al (2020).pdf) and answer the following question in a posting on the Slack channel  [#psychopathic-sims](https://2021edp611.slack.com/archives/C021WQ54BML): *Focusing on just the measures, what are your thoughts regarding the validity and reliablity of the study?*
+### Read Some Papers
+For each reading below, write a **single post** on Slack with the following:
+
+
+```{r echo=FALSE}
+
+slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}")
+
+
+readings <- tibble(
+  
+  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6* 229–240.", 
+             "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
+  ),
+  
+  post <- c("Focusing on just the measures, what are your thoughts regarding the validity and reliability of the study?",
+            "How is evaluation viewed in your field? Is it generally feared, welcomed, both, neither?"),
+  channel <- c(
+    "`#psychopathic-sims`",
+    "`#mathison`"                    
+  ),
+
+  link <- c(
+     paste0("![",slackico,"](/readings/01-readings_files/slack-ico.png){width=20px}",
+    "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
+    ),
+    paste0("[",slackico,"]",
+    "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Post", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lcl') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em")
+```
+</center>
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week1Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 1 Readings",
+  button_label = "Download the Papers",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Review Some Texts
+
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "20px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "20px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "20px"))
+
+review <- tibble(
+  
+  source <- c("The syllabus", 
+              "CDC's introduction to evaluation with a focus on public health",
+                "Part I: The Essence of Research in the Counseling Profession covering Chapters 1-4 in Balkin & Kleist",
+                "Chapter I: Introduction to Educational and Psychological Measurement Using R in Albano"
+  ),
+  
+  link <- c(
+   # "[document](/syllabus/){target='_blank'}",
+    paste0("[",document,"]", "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
+           ),
+    paste0("[",book,"]",
+    "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
+    ),
+    paste0("[",site,"]",
+    "(https://library.wvu.edu/){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/introduction.html)^[It is absolutely fine if you cannot understand some of what is presented, especially the syntax. Copy and paste the code into your R console to follow along.]"
+    )
+    
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  kbl(col.names = c("Review", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;')
+```
+</center>
+
 

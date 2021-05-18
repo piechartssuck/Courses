@@ -30,24 +30,32 @@ checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
 
 wk_post <- tibble(
 "eCampus" = c(unchecked,
+              unchecked,
+              unchecked,
               checked,
               unchecked,
               unchecked),
 
 "Slack" = c(unchecked,
             unchecked,
+            unchecked,
+            unchecked,
             checked,
             unchecked),
 
-Description = c("Complete modules in Data Camp that address the basic elements of R and tidying data.",
+Description = c("Introduce yourself in Slack under `#introduce-yourself`",
+                "Verify your Qualtrics account",
+                "Complete modules in Data Camp that address the basic elements of R and tidying data.",
                 "Think about a population to test",
-                "Create a post about a Sims study",
-                "Read and review some information"),
+                "Create a post apiece about a Sims study and evaluation verses research",
+                "Review some literature about program evaluations and introductory materials on measurement"),
 
-Location = c("[Link](/datacamp/01-module/)",
+Location = c("[Link](/tasks/01-task/#class-slack-account-access)",
+             "[Link](/tasks/01-task/#verify-qualtrics-account-login)",
+             "[Link](/datacamp/01-module/)",
              "[Link](/tasks/01-task/#final-project)",
-             "[Link](/readings/01-readings/)",
-             "[Link](/readings/01-readings/)")
+             "[Link](/readings/01-readings/#read-some-papers)",
+             "[Link](/readings/01-readings/#review-some-texts)")
 
 )
 ```

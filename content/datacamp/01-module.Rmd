@@ -14,7 +14,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Note
+## Notes
 
 ### for previous participants
 If you have participated in Data Camp before and would like to receive credit for assigned modules you have previously completed, make sure to login with the associated username. Please note that you must do this to be eligible.
@@ -22,7 +22,10 @@ If you have participated in Data Camp before and would like to receive credit fo
 ### for new participants
 Take your time with these modules. I suggest setting 8-10 hours for this initial set and to spread the walkthroughs out over the week if possible and it is conducive to your learning style. The first module gives you an understand of the R environment while the second deals with data wrangling and reshaping, namely making sure data is in a "tidy" format. We'll be using this idea moving forward in the course. Please reach out if you need help!
 
+## Installing R and RStudio
+Go to the [Installing R, RStudio, and tidyverse](/resource/install/) page under Resources to get both R and RStudio installed on your system.
+
 ## Data Camp
 This week please complete both the **Introduction to R** and **Introduction to the Tidyverse** courses on [Data Camp](https://www.datacamp.com/). 
 
-**
+

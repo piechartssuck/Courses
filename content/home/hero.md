@@ -13,14 +13,14 @@ hero_media: measure.png
 design:
   background:
     # Background gradient
-    gradient_start: '#526189'
-    gradient_end: '#5a8fa9'
+    gradient_start: '#373B44'
+    gradient_end: '#73C8A9'
 
     # Text color (true=light or false=dark).
     text_color_light: true
 
 cta_note:
-  label: Summer II 2020<br>Counseling & Learning Sciences<br>West Virginia University
+  label: Summer I 2021<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
 **A course providing a foundational look at how evaluation and measurement are used to study programs**

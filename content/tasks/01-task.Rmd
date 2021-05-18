@@ -14,6 +14,24 @@ editor_options:
   chunk_output_type: console
 ---
 
+## First Timers Note
+You'll see class related tasks posted here on a weekly basis. 
+
+### Class Slack Account Access
+Most important task of the week - well to me at least - is to
+
+  1. Go to the course [Slack](2021edp611.slack.com){target="_blank"} account 
+  2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
+  3. Head to to the channel [`#introduce-yourself`](https://2021edp611.slack.com/archives/C021YUZGC86){target="_blank"} and well introduce yourself by tell everyone about you, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:
+<br>
+*I teach course on data visualization BUT I am also 40% colorblind and getting worse!* 
+  4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
+<br>
+
+### Verify Qualtrics Account Login
+You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com){target="_blank"} and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102){target="_blank"} or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
+<br>
+
 ## Week 1: Think about assessment
 
-Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitative.
+Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitatively driven.

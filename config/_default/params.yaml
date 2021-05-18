@@ -95,7 +95,7 @@ course:
   number: "EDP 611"
   semester: "Summer I 2021"
   days: "Forever (for the next six weeks)"
-  time: "You pick!"
+  time: "The present"
   location: "Online"
   dates: "May 17–June 25, 2021"
   github: piechartssuck/Courses/tree/edp611
@@ -106,7 +106,7 @@ instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
   url: "https://lshd.wvu.edu/faculty-staff/roy"
-  twitter: DrTheoreticalPE
+  twitter: asocialdatasci
   github: piechartssuck
   office: "Allen Hall 504O"
   contact_policy: >-
