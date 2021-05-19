@@ -131,11 +131,11 @@ You can find up to date descriptions for all the assignments on the [assignments
 assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   15, "R Training", "Data Camp",
-  15, "Reflections", "Slack Channel",
-  15, "R Measurement Task", "eCampus/Slack",
-  15, "Synchronous Meetings", "Zoom",
-  30, "Final Proposal", "eCampus/Slack", 
-  10, "Presentation of Proposal", "eCampus/Slack"
+  15, "Reflections", "Slack",
+  15, "R Measurement EDA", "eCampus/Slack",
+  15, "Check-ins", "Zoom",
+  30, "Final Proposal Bits^[For more information, please check the [Tasks](/tasks/#final-proposal-bits) page]", "eCampus/Slack", 
+  10, "Presentation Bits", "eCampus/Slack"
 ) 
 
 grading <- tribble(
