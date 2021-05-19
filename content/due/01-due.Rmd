@@ -53,7 +53,7 @@ Description = c("Introduce yourself in Slack under `#introduce-yourself`",
 Location = c("[Link](/tasks/01-task/#class-slack-account-access)",
              "[Link](/tasks/01-task/#verify-qualtrics-account-login)",
              "[Link](/datacamp/01-module/)",
-             "[Link](/tasks/01-task/#final-project)",
+             "[Link](/tasks/01-tasks/#think-about-assessment)",
              "[Link](/readings/01-readings/#read-some-papers)",
              "[Link](/readings/01-readings/#review-some-texts)")
 
