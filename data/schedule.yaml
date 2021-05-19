@@ -6,8 +6,8 @@ lessons:
     session: 1
     date: "May 17, 2021"
     readings: "01-readings"
-    lesson: "01-module"
-    example: "01-example"
+    datacamp: "01-module"
+    examples: "01-example"
     tasks: "01-tasks"
     due: "01-due"
 
