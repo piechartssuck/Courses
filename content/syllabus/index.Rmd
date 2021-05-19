@@ -163,7 +163,13 @@ assignments %>%
                 full_width = FALSE) %>%
   column_spec(1, width = "5em") %>%
   column_spec(2, width = "12em") %>%
-  column_spec(3, width = "12em")
+  column_spec(3, width = "12em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
 
 </center>
@@ -186,9 +192,9 @@ Because of the pandemic, we cannot meet in person. I can meet you online via Zoo
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
-- **Late work**: Barring the three main course tasks, past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via eCampus. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
+- **Late work**: Barring the five main course tasks leading up to the proposal and the proposal itself, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/){target="_blank"}. There are no exceptions to this policy. Please note that I will not accept coursework by email or any other means.
 - **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you—if that means commenting and answering questions, neat; if it means sitting quietly and being focused, also neat; but if it means being being disrespectful or flaking off, not so neat.
-- **Justifications**: On any submission, you must justiofy any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *not only is the Earth flat, the core is actually made out of tiramisu and moscato*, the first question you should be asking is *what's your evidence?* possibly followed by *is the core delicious?*.
+- **Justifications**: On any submission, you must justify any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *not only is the Earth flat, the core is actually made out of tiramisu and moscato*, the first question you should be asking is *what's your evidence?* possibly followed by *is the core delicious?*.
 - **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
   1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't often provided.
   2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
@@ -205,29 +211,15 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 ### Learning and knowledge during a pandemic
 
-Ok I'm going to get a bit philosophical but it's not too deep and there's a point so please bear with me. Let's first start with something at the top of a syllabus that many people skip - the course objectives. Well now that you're no doubt excited excited, read the rest this rant to figure out if you have learned something or you actually know it.
+When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *retained* - but the ability to retain something doesn't imply that you know it. 
 
-When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *learned*. But learning isn't knowledge. 
-
-To save you from a long philosophical narrative on epistemology, in a nutshell we humans are not really good at evaluating a person's knowledge within a short timeframe...oh say like a semester. With that said you probably spend a lot of time with you, so you should be pretty good at knowing if you know something but you may not know how to figure out what you actually know. If your head doesn't hurt and you really want a good indicator that something you learned has become knowledge, ask this simple question that is often difficult to answer:
+To save you from a long philosophical narrative on epistemology, we humans aren't good at directly evaluating a person's knowledge within a short timeframe. In fact, we can only assess knowledge using *indicators* (e.g. exams, homework, projects, etc.) rather than direct measures. So 
 
 <div class="text-center">
-Can I explain *whatever* using basic everyday language so that a fourth grader can understand it?
+if you want to test whether you have retained or know a concept, then try explaining it in a way that a lay person can understand.
 </div>
 
-So the fourth grader isn't that important as much as self assessing if you can explain a concept to someone who lacks any basic understanding using every day language. This is basically what good teachers can do, in that they are able to take a high level concept that may be inaccessible to most of us and bring it down to a level we can all generally understand. 
-
-Many, if not all of you will fall somewhere in the spectrum of somewhat to mostly. If you're sitting on the absolute Yes end, then consider a career in survey research because it can be very fulfilling and lucrative. But if you find yourself on the absolute No end, then please contact me and let's try to get you where you need to be. There are a lot of moving parts in this course and not being able to translate some of what you've learned into knowledge can have a cascading effect. And by now in your life, you should have a pretty good idea when anyone uses the term cascading, its rarely a good thing.
-
-On top of what's noted above and I'm not sure how to articulate this any better - life just sucks right now in general! You may know people who have lost their jobs, tested positive for COVID-19, been hospitalized, or have even passed away. Additionally your personal responsibilities have probably shifted and for whatever reason or combination thereof, you're probably more stressed than usual. So here is my promise to you:
-
-<div class="text-center">
-**If you keep an open line, show initiative, and let me know ahead of time if something is going not according to plan^[I realize sometimes this just isn't possible so contact me as soon as you can.], I will do everything I can to help you learn everything you were hoping to learn from this class!**
-</div>
-
-So what does that mean? Well I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** As I said earlier, drop me a line!
-
-I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, no parallel lines exist in 3D - ok maybe not that last one but its true and really easy to show. If you want to know, ask!). There is a lot to do in this course and some of the content can be frustrating, so make sure to take breaks, go relax, even curse my name if you have to - do whatever you need to stay healthy, balanced, and grounded during this crisis.
+If you're finding that you are unable to do that, then I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** As I said earlier, drop me a line!
 
 ## Course policies
 
