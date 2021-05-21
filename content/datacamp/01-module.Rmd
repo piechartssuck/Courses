@@ -26,6 +26,6 @@ Take your time with these modules. I suggest setting 8-10 hours for this initial
 Go to the [Installing R, RStudio, and tidyverse](/resources/install/) page under Resources to get both R and RStudio installed on your system.
 
 ## Data Camp
-This week please complete both the **Introduction to R** and **Introduction to the Tidyverse** courses on [Data Camp](https://www.datacamp.com/). 
+This week please complete both the **Introduction to R** and **Working with Data in the Tidyverse** courses on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
 
 

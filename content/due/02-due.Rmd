@@ -1,0 +1,71 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### What to submit for Week 1
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+"eCampus" = c(unchecked,
+              checked,
+              unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            unchecked,
+            unchecked,
+            checked,
+            unchecked),
+
+Description = c("Complete modules in Data Camp that address more about tidying data and introduces basic statistics in R.",
+"Think about a population to test",
+"Review aspects of the basics of program evaluation if needed",
+"Respond to one of the posts from last week",
+"Review some literature on research designs and measurement properties in R"),
+
+Location = c("[Link](/datacamp/02-module/)",
+             "[Link](/tasks/02-tasks/#creating-an-argument)",
+"[Link](/tasks/02-tasks/#basics-of-evaluation)",
+"[Link](/readings/02-readings/#read-some-papers)",
+             "[Link](/readings/02-readings/#review-some-materials)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>% 
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```

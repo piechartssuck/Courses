@@ -1,0 +1,420 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  walkthroughs:
+    parent: Walkthroughs
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:	#003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+
+```{r echo=FALSE, message=FALSE, purl=FALSE}
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(downloadthis)
+library(fivethirtyeight)
+library(here)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+
+## Getting Prepped
+
+### Download Walthrough Materials^[Copying and pasting syntax from a browser can cause issues To avoid this, a script with all of the needed code presented in this walkthrough is provided in the download.]
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "files", "EDP611Week2Walkthrough.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 2 Walkthrough",
+  button_label = "Download Walkthrough",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+
+### Set your Working Directory
+
+Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
+
+1. Open up a new script by going to `File > New File > R Script`.
+2. Save it and any data like the `drinks.csv` file in a preferably empty folder and name it whatever you like.
+3. Go to the menu bar and select `Session > Set Working Directory > To Source File Location`.
+
+In this session, we will expand on the the `tidyverse` family of packages along with some help using data from the site [FiveThirtyEight](https://fivethirtyeight.com/){target="_blank"} `fivethirtyeight`. 
+
+If you have already downloaded `tidyverse`, then please skip ahead to the next paragraph. If not, please do the following:
+
+1. select **Tools > Install Packages**
+2. type in `tidyverse` and make sure that **Install dependencies** is selected.
+
+```{r, echo=FALSE, out.width="60%", purl=FALSE}
+include_graphics("/img/install/install-r-tidyverse.png", error = FALSE)
+```
+Alternatively, you can simply run the following command in the console
+
+```{r eval=FALSE, purl=FALSE}
+install.packages("tidyverse", dependencies = TRUE)
+```
+
+```{r, echo=FALSE, out.width="90%", purl=FALSE}
+include_graphics("/img/install/installtidy_console.png", error = FALSE)
+```
+In either case, now load up the package by typing in following in the script area 
+```{r eval=FALSE}
+library("tidyverse")
+```
+
+```{r, echo=FALSE, out.width="90%", purl=FALSE}
+include_graphics("/img/install/loadtidy_scriptarea.png", error = FALSE)
+```
+
+Now try doing the same for `fivethirtyeight` by running
+
+```{r eval=FALSE}
+install.packages("fivethirtyeight", dependencies = TRUE)
+```
+
+followed by 
+
+```{r eval=FALSE}
+library("fivethirtyeight")
+```
+
+Please note that once a package is on your computer, you never have to install it again unless it is somehow deleted. This means from now on you will only have to use the second command `library("THAT PACKAGE")` to use that package.
+
+Before moving on, here is a good place to reiterate how you can use `?` to find more information. When you look at the package list for `fiverthirtyeight`, not all of the names do a great job of describing what that data set consists of. To see this, type in `fiverthirtyeight::` and scroll through the pop up list of available data sets and commands. Let's say the data set `tarantino` caught your eye but you weren't really sure what it consisted of. Hovering over the set in that pop up list tells you that it *contains data behind the story A Complete Catalog Of Every Time Someone Cursed Or Bled Out In A Quentin Tarantino Movie*. 
+
+OK well that's a good start but to be able to do anything with that data, we really need to know what its variables are. To do this, run the command below
+
+```{r}
+?tarantino
+```
+
+You should have noticed the **Help** tab on the lower right hand window is prominent and there is a significant amount of information explaining the data set including the variable names and corresponding descriptions.
+
+### Data Files
+
+Data sets used in R are typically accessible in three ways, through these certainly are not the only approaches.
+
+```{r echo=FALSE, purl=FALSE}
+
+data_access <- 
+  tibble(
+  
+  approach <- c(
+    "Externally",
+    "Download",
+    "In-package^[*If applicable*]"
+  ),
+  
+  description <- c(
+     "You can get grab files directly from the Internet.^[There are situations where data does not exist in its own file, but rather as an within say a tabel on a webpage. In those cases, you can still grab, or scrape that data, but showing you how to do it is beyond the scope of this course. Given that, if you want to know, I'll be happy to show you.]",
+    "Used typically for examples, demonstartions and testing, many packages have data already included.",
+            "R specific file formats include `.RData` and `.rda` but it can load most, if not all types inlcuding popular choices such as a `.csv` `.xlsx`, and `.sav`."
+
+            ),
+  
+  example <- c(
+    "drinks data",
+    "drinks data",
+    "drinks data"
+    ),
+
+  command <- c(
+    'data("drinks", package = "fivethirtyeight")^[To see the entire list, you can run the command `data()`]',
+    'drinks <- read_csv("drinks.csv")',
+    'drinks <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv")'
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+
+<center>
+```{r, echo=FALSE}
+data_access %>%
+  kbl(col.names = c("Approach", "Description", "Example Data", "Command"), 
+      "html", 
+      escape = FALSE,
+      align = 'llll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "20em") 
+```
+</center>
+
+```{r, echo=FALSE}
+ data("drinks", package = "fivethirtyeight")
+```
+
+In any case, type the following into your console and you should the following output regardless of approach taken
+
+```{r}
+drinks
+```
+
+If you attempted to load the csv, then you may realize that RStudio puts up both `read.csv()` and `read_csv()` as possibilities. The former is what we call a base command, or one that is pre-built into R. However, you will likely want to stick to the latter which is from the `readr` package which is albeit faster and returns a `tibble` instead of a `data frame`. This is just a tidy data frame. You can check what type of variable you have by using `class(VARIABLE NAME)` on it. For example, the following
+
+```{R}
+class(drinks)
+```
+
+tells us that we not only have a data frame, but a tibble as well as well as some other formats we'll ignore for the time being. If you want more information, please see [Ch 10: Tibbles](http://r4ds.had.co.nz/tibbles.html#introduction-4){target="_blank"} in [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}.
+
+Note that we loaded the file directly from a web address URL, but say you had it as a local file on your computer in the same directory as your R script. The command 
+
+```{r eval=FALSE}
+drinks <- read_csv("drinks.csv")
+
+drinks
+```
+
+would work just as well. 
+
+### Chopping a Data Set Up
+You may already know that the single bracket, `[`, is useful to select rows and columns in simple cases.
+
+```{r}
+drinks[c(1, 2, 3, 4, 5), ]
+```
+
+There are `tidyverse` options to handle this via the package `dplyr` to select rows by number, to select rows by certain criteria, or to select columns.
+
+For example, to select rows 1--5, we can use the `slice()` command.
+
+```{r}
+slice(drinks, 1:5)
+```
+
+Base R allows you to choose the column `beer_servings` from the `drinks` data frame in a number of ways. For example, each of the following
+
+```{r eval=FALSE}
+drinks[, "beer_servings"]
+drinks$beer_servings
+drinks[["beer_servings"]]
+```
+
+yields 
+
+```{r echo=FALSE, eval=TRUE}
+drinks$beer_servings
+```
+
+Unlike `[`, the `[[` and `$` operators can only select a single column and return a vector.[^extract1]
+The `dplyr` function `select()` **always** returns a tibble, and never a vector, even if only one column is selected.
+
+For example, note that selecting rows 1--5 of the `beer_servings` column using base R gives us a vector.
+
+```{r}
+drinks[1:5, "beer_servings"]
+```
+
+Whereas in the `dplyr` world, the same series of functions can be performed using a pipe operator: `%>%` which retains the table like format.
+
+```{r}
+drinks %>%
+  slice(1:5) %>%
+  select(beer_servings)
+```
+
+This example may seem verbose, but later we can produce more complicated transformations of the data by chaining together simple functions. For example, it is far easier to use them to select multiple columns like so
+
+```{r}
+drinks %>%
+  slice(1:5) %>%
+  select(country, beer_servings)
+```
+
+or to get rid of a column
+
+```{r}
+drinks %>%
+  slice(1:5) %>%
+  select(-spirit_servings)
+```
+
+We'll talk more about pipes next week! 
+
+### Saving Objects
+
+There are two types of saves you should consider at this point
+
+- The workspace save
+- An output save
+
+The workspace save is everything you see in your RStudio window (e.g. the syntax, script, outputs, etc). When you close out of RStudio, you may be asked to save your workspace which essentially means the next time you load a saved script up, you'll pick up exactly where you left off. 
+
+While convenient, it is not recommended that do this. Like rebooting a computer, you really want to have a fresh start every time RStudio starts up. While certainly not mandated, you never know what piece of rogue commands could have affected your progress when you last saved the file. Opting not to save an image of your workspace removes all of the previous commands while keeping your script intact. 
+
+An output save occurs when you are trying to save a data set or result in a particular format. Firstly, you have to ensure that you have both downloaded and loaded a necessary package. For example, base R does not have an ability to read in and flatten SPSS files. However, installing and enabling the package `foreign` makes both reading in and writing to SPSS a cinch. 
+
+Let's say we want to export our `drinks` output to a csv file. Well luckily we have the package `readr` already loaded and it has the command `write_csv()` that does exactly what we want. The command requires that you note the variable name, `drinks`, and what you want to call it which in this case I am calling `new_drinks.csv`. If you are wondering, you absolutely have to out the format type at the end. 
+
+```{r eval=FALSE}
+write_csv(drinks, "new_drinks.csv")
+```
+
+Well that's great but say we wanted to save it as a SPSS file. Running
+
+```{r}
+?write_csv
+```
+
+doesn't yield any information about saving any data set or output as a SPSS file. If we run a simple Google search (e.g. with the terms *save SPSS R tidy*) and click on the first link, it seems like  packages `foreign` and `haven` saves a data frame as a SPSS file with the latter doing so in a tidy format - having packages that do keep your data tidy will make your life **so much easier**! Now we can just do the following 
+
+```{r eval=FALSE}
+write_sav(drinks, "new_drinks.sav") 
+```
+
+Now you are free to go use SPSS for some reason.
+
+### Style Guide
+
+Following a consistent coding style is important for your code to be readable by you and others. The preferred style is the [tidyverse style guide](http://style.tidyverse.org/){target="_blank"}, which differs slightly from [Google's R style guide](http://style.tidyverse.org/){target="_blank"}.
+
+-   The [lintr](https://github.com/jimhester/lintr){target="_blank"} package will check files for style errors.
+
+-   The [styler](https://github.com/r-lib/styler){target="_blank"} package provides functions for automatically formatting R code according to style guides.
+
+You will initially be expected to turn in a script with any submission where R is needed. Much like any writing, if your script is easy to read, then it is most likely easy to grade. A messy script without comments, spacing, and style may lead to misunderstandings. Long story short: make it look good and easy to interpret and your score will reflect that! With that said, you'll receive a template that will hopefully be helpful.
+
+If you want a warning about styling your script, open RStudio and go to the **Tools > Global Options > Code > Diagnostics** pane. Then check the box to activate style warnings. On this pane, there are other options that can be set in order to increase or decrease the amount of warnings while writing in RStudio.
+
+[^setwd]: For more on using projects read [Project-oriented workflow](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/){target="_blank"}.
+
+[^extract1]: Please see the discussion in
+[R for DataScience](http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame){target="_blank"} on how `tibble` objects differ from base `data.frame` objects in how the single bracket `[` is handled.

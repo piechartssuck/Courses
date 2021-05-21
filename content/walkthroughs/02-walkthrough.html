@@ -1,0 +1,408 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  walkthroughs:
+    parent: Walkthroughs
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#download-walthrough-materials">Download Walthrough Materials</a></li>
+<li><a href="#set-your-working-directory">Set your Working Directory</a></li>
+<li><a href="#data-files">Data Files</a></li>
+<li><a href="#chopping-a-data-set-up">Chopping a Data Set Up</a></li>
+<li><a href="#saving-objects">Saving Objects</a></li>
+<li><a href="#style-guide">Style Guide</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level2">
+<h2>Getting Prepped</h2>
+<div id="download-walthrough-materials" class="section level3">
+<h3>Download Walthrough Materials<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h3>
+<a href="data:application/zip;base64,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" download="Week 2 Walkthrough.zip">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download Walkthrough</button>
+</a>
+</div>
+<div id="set-your-working-directory" class="section level3">
+<h3>Set your Working Directory</h3>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it and any data like the <code>drinks.csv</code> file in a preferably empty folder and name it whatever you like.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+<p>In this session, we will expand on the the <code>tidyverse</code> family of packages along with some help using data from the site <a href="https://fivethirtyeight.com/" target="_blank">FiveThirtyEight</a> <code>fivethirtyeight</code>.</p>
+<p>If you have already downloaded <code>tidyverse</code>, then please skip ahead to the next paragraph. If not, please do the following:</p>
+<ol style="list-style-type: decimal">
+<li>select <strong>Tools &gt; Install Packages</strong></li>
+<li>type in <code>tidyverse</code> and make sure that <strong>Install dependencies</strong> is selected.</li>
+</ol>
+<p><img src="/img/install/install-r-tidyverse.png" width="60%" />
+Alternatively, you can simply run the following command in the console</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;, dependencies = TRUE)</code></pre>
+<p><img src="/img/install/installtidy_console.png" width="90%" />
+In either case, now load up the package by typing in following in the script area</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)</code></pre>
+<p><img src="/img/install/loadtidy_scriptarea.png" width="90%" /></p>
+<p>Now try doing the same for <code>fivethirtyeight</code> by running</p>
+<pre class="r"><code>install.packages(&quot;fivethirtyeight&quot;, dependencies = TRUE)</code></pre>
+<p>followed by</p>
+<pre class="r"><code>library(&quot;fivethirtyeight&quot;)</code></pre>
+<p>Please note that once a package is on your computer, you never have to install it again unless it is somehow deleted. This means from now on you will only have to use the second command <code>library("THAT PACKAGE")</code> to use that package.</p>
+<p>Before moving on, here is a good place to reiterate how you can use <code>?</code> to find more information. When you look at the package list for <code>fiverthirtyeight</code>, not all of the names do a great job of describing what that data set consists of. To see this, type in <code>fiverthirtyeight::</code> and scroll through the pop up list of available data sets and commands. Let’s say the data set <code>tarantino</code> caught your eye but you weren’t really sure what it consisted of. Hovering over the set in that pop up list tells you that it <em>contains data behind the story A Complete Catalog Of Every Time Someone Cursed Or Bled Out In A Quentin Tarantino Movie</em>.</p>
+<p>OK well that’s a good start but to be able to do anything with that data, we really need to know what its variables are. To do this, run the command below</p>
+<pre class="r"><code>?tarantino</code></pre>
+<p>You should have noticed the <strong>Help</strong> tab on the lower right hand window is prominent and there is a significant amount of information explaining the data set including the variable names and corresponding descriptions.</p>
+</div>
+<div id="data-files" class="section level3">
+<h3>Data Files</h3>
+<p>Data sets used in R are typically accessible in three ways, through these certainly are not the only approaches.</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Approach
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Example Data
+</th>
+<th style="text-align:left;">
+Command
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 30em; ">
+Externally
+</td>
+<td style="text-align:left;width: 30em; ">
+You can get grab files directly from the Internet.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+</td>
+<td style="text-align:left;width: 10em; ">
+drinks data
+</td>
+<td style="text-align:left;width: 20em; ">
+data(“drinks”, package = “fivethirtyeight”)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 30em; ">
+Download
+</td>
+<td style="text-align:left;width: 30em; ">
+Used typically for examples, demonstartions and testing, many packages have data already included.
+</td>
+<td style="text-align:left;width: 10em; ">
+drinks data
+</td>
+<td style="text-align:left;width: 20em; ">
+drinks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 30em; ">
+In-package<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>
+</td>
+<td style="text-align:left;width: 30em; ">
+R specific file formats include <code>.RData</code> and <code>.rda</code> but it can load most, if not all types inlcuding popular choices such as a <code>.csv</code> <code>.xlsx</code>, and <code>.sav</code>.
+</td>
+<td style="text-align:left;width: 10em; ">
+drinks data
+</td>
+<td style="text-align:left;width: 20em; ">
+drinks
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>In any case, type the following into your console and you should the following output regardless of approach taken</p>
+<pre class="r"><code>drinks</code></pre>
+<pre><code>## # A tibble: 193 x 5
+##    country      beer_servings spirit_servings wine_servings total_litres_of_pur…
+##    &lt;chr&gt;                &lt;int&gt;           &lt;int&gt;         &lt;int&gt;                &lt;dbl&gt;
+##  1 Afghanistan              0               0             0                  0  
+##  2 Albania                 89             132            54                  4.9
+##  3 Algeria                 25               0            14                  0.7
+##  4 Andorra                245             138           312                 12.4
+##  5 Angola                 217              57            45                  5.9
+##  6 Antigua &amp; B…           102             128            45                  4.9
+##  7 Argentina              193              25           221                  8.3
+##  8 Armenia                 21             179            11                  3.8
+##  9 Australia              261              72           212                 10.4
+## 10 Austria                279              75           191                  9.7
+## # … with 183 more rows</code></pre>
+<p>If you attempted to load the csv, then you may realize that RStudio puts up both <code>read.csv()</code> and <code>read_csv()</code> as possibilities. The former is what we call a base command, or one that is pre-built into R. However, you will likely want to stick to the latter which is from the <code>readr</code> package which is albeit faster and returns a <code>tibble</code> instead of a <code>data frame</code>. This is just a tidy data frame. You can check what type of variable you have by using <code>class(VARIABLE NAME)</code> on it. For example, the following</p>
+<pre class="r"><code>class(drinks)</code></pre>
+<pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<p>tells us that we not only have a data frame, but a tibble as well as well as some other formats we’ll ignore for the time being. If you want more information, please see <a href="http://r4ds.had.co.nz/tibbles.html#introduction-4" target="_blank">Ch 10: Tibbles</a> in <a href="http://r4ds.had.co.nz/" target="_blank">R for Data Science</a>.</p>
+<p>Note that we loaded the file directly from a web address URL, but say you had it as a local file on your computer in the same directory as your R script. The command</p>
+<pre class="r"><code>drinks &lt;- read_csv(&quot;drinks.csv&quot;)
+
+drinks</code></pre>
+<p>would work just as well.</p>
+</div>
+<div id="chopping-a-data-set-up" class="section level3">
+<h3>Chopping a Data Set Up</h3>
+<p>You may already know that the single bracket, <code>[</code>, is useful to select rows and columns in simple cases.</p>
+<pre class="r"><code>drinks[c(1, 2, 3, 4, 5), ]</code></pre>
+<pre><code>## # A tibble: 5 x 5
+##   country    beer_servings spirit_servings wine_servings total_litres_of_pure_a…
+##   &lt;chr&gt;              &lt;int&gt;           &lt;int&gt;         &lt;int&gt;                   &lt;dbl&gt;
+## 1 Afghanist…             0               0             0                     0  
+## 2 Albania               89             132            54                     4.9
+## 3 Algeria               25               0            14                     0.7
+## 4 Andorra              245             138           312                    12.4
+## 5 Angola               217              57            45                     5.9</code></pre>
+<p>There are <code>tidyverse</code> options to handle this via the package <code>dplyr</code> to select rows by number, to select rows by certain criteria, or to select columns.</p>
+<p>For example, to select rows 1–5, we can use the <code>slice()</code> command.</p>
+<pre class="r"><code>slice(drinks, 1:5)</code></pre>
+<pre><code>## # A tibble: 5 x 5
+##   country    beer_servings spirit_servings wine_servings total_litres_of_pure_a…
+##   &lt;chr&gt;              &lt;int&gt;           &lt;int&gt;         &lt;int&gt;                   &lt;dbl&gt;
+## 1 Afghanist…             0               0             0                     0  
+## 2 Albania               89             132            54                     4.9
+## 3 Algeria               25               0            14                     0.7
+## 4 Andorra              245             138           312                    12.4
+## 5 Angola               217              57            45                     5.9</code></pre>
+<p>Base R allows you to choose the column <code>beer_servings</code> from the <code>drinks</code> data frame in a number of ways. For example, each of the following</p>
+<pre class="r"><code>drinks[, &quot;beer_servings&quot;]
+drinks$beer_servings
+drinks[[&quot;beer_servings&quot;]]</code></pre>
+<p>yields</p>
+<pre><code>##   [1]   0  89  25 245 217 102 193  21 261 279  21 122  42   0 143 142 295 263
+##  [19]  34  23 167  76 173 245  31 231  25  88  37 144  57 147 240  17  15 130
+##  [37]  79 159   1  76   0 149 230  93 192 361   0  32 224  15  52 193 162   6
+##  [55]  52  92  18 224  20  77 263 127 347   8  52 346  31 133 199  53   9  28
+##  [73]  93   1  69 234 233   9   5   0   9 313  63  85  82  77   6 124  58  21
+##  [91]   0  31  62 281  20  82  19   0 343 236  26   8  13   0   5 149   0   0
+## [109]  98 238  62   0  77  31  12  47   5 376  49   5 251 203  78   3  42 188
+## [127] 169  22   0 306 285  44 213 163  71 343 194   1 140 109 297 247  43 194
+## [145] 171 120 105   0  56   0   9 283 157  25  60 196 270  56   0 225 284  16
+## [163]   8 128  90 152 185   5   2  99 106   1  36  36 197  51  51  19   6  45
+## [181] 206  16 219  36 249 115  25  21 333 111   6  32  64</code></pre>
+<p>Unlike <code>[</code>, the <code>[[</code> and <code>$</code> operators can only select a single column and return a vector.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>
+The <code>dplyr</code> function <code>select()</code> <strong>always</strong> returns a tibble, and never a vector, even if only one column is selected.</p>
+<p>For example, note that selecting rows 1–5 of the <code>beer_servings</code> column using base R gives us a vector.</p>
+<pre class="r"><code>drinks[1:5, &quot;beer_servings&quot;]</code></pre>
+<pre><code>## # A tibble: 5 x 1
+##   beer_servings
+##           &lt;int&gt;
+## 1             0
+## 2            89
+## 3            25
+## 4           245
+## 5           217</code></pre>
+<p>Whereas in the <code>dplyr</code> world, the same series of functions can be performed using a pipe operator: <code>%&gt;%</code> which retains the table like format.</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(beer_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 1
+##   beer_servings
+##           &lt;int&gt;
+## 1             0
+## 2            89
+## 3            25
+## 4           245
+## 5           217</code></pre>
+<p>This example may seem verbose, but later we can produce more complicated transformations of the data by chaining together simple functions. For example, it is far easier to use them to select multiple columns like so</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(country, beer_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   country     beer_servings
+##   &lt;chr&gt;               &lt;int&gt;
+## 1 Afghanistan             0
+## 2 Albania                89
+## 3 Algeria                25
+## 4 Andorra               245
+## 5 Angola                217</code></pre>
+<p>or to get rid of a column</p>
+<pre class="r"><code>drinks %&gt;%
+  slice(1:5) %&gt;%
+  select(-spirit_servings)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   country     beer_servings wine_servings total_litres_of_pure_alcohol
+##   &lt;chr&gt;               &lt;int&gt;         &lt;int&gt;                        &lt;dbl&gt;
+## 1 Afghanistan             0             0                          0  
+## 2 Albania                89            54                          4.9
+## 3 Algeria                25            14                          0.7
+## 4 Andorra               245           312                         12.4
+## 5 Angola                217            45                          5.9</code></pre>
+<p>We’ll talk more about pipes next week!</p>
+</div>
+<div id="saving-objects" class="section level3">
+<h3>Saving Objects</h3>
+<p>There are two types of saves you should consider at this point</p>
+<ul>
+<li>The workspace save</li>
+<li>An output save</li>
+</ul>
+<p>The workspace save is everything you see in your RStudio window (e.g. the syntax, script, outputs, etc). When you close out of RStudio, you may be asked to save your workspace which essentially means the next time you load a saved script up, you’ll pick up exactly where you left off.</p>
+<p>While convenient, it is not recommended that do this. Like rebooting a computer, you really want to have a fresh start every time RStudio starts up. While certainly not mandated, you never know what piece of rogue commands could have affected your progress when you last saved the file. Opting not to save an image of your workspace removes all of the previous commands while keeping your script intact.</p>
+<p>An output save occurs when you are trying to save a data set or result in a particular format. Firstly, you have to ensure that you have both downloaded and loaded a necessary package. For example, base R does not have an ability to read in and flatten SPSS files. However, installing and enabling the package <code>foreign</code> makes both reading in and writing to SPSS a cinch.</p>
+<p>Let’s say we want to export our <code>drinks</code> output to a csv file. Well luckily we have the package <code>readr</code> already loaded and it has the command <code>write_csv()</code> that does exactly what we want. The command requires that you note the variable name, <code>drinks</code>, and what you want to call it which in this case I am calling <code>new_drinks.csv</code>. If you are wondering, you absolutely have to out the format type at the end.</p>
+<pre class="r"><code>write_csv(drinks, &quot;new_drinks.csv&quot;)</code></pre>
+<p>Well that’s great but say we wanted to save it as a SPSS file. Running</p>
+<pre class="r"><code>?write_csv</code></pre>
+<p>doesn’t yield any information about saving any data set or output as a SPSS file. If we run a simple Google search (e.g. with the terms <em>save SPSS R tidy</em>) and click on the first link, it seems like packages <code>foreign</code> and <code>haven</code> saves a data frame as a SPSS file with the latter doing so in a tidy format - having packages that do keep your data tidy will make your life <strong>so much easier</strong>! Now we can just do the following</p>
+<pre class="r"><code>write_sav(drinks, &quot;new_drinks.sav&quot;) </code></pre>
+<p>Now you are free to go use SPSS for some reason.</p>
+</div>
+<div id="style-guide" class="section level3">
+<h3>Style Guide</h3>
+<p>Following a consistent coding style is important for your code to be readable by you and others. The preferred style is the <a href="http://style.tidyverse.org/" target="_blank">tidyverse style guide</a>, which differs slightly from <a href="http://style.tidyverse.org/" target="_blank">Google’s R style guide</a>.</p>
+<ul>
+<li><p>The <a href="https://github.com/jimhester/lintr" target="_blank">lintr</a> package will check files for style errors.</p></li>
+<li><p>The <a href="https://github.com/r-lib/styler" target="_blank">styler</a> package provides functions for automatically formatting R code according to style guides.</p></li>
+</ul>
+<p>You will initially be expected to turn in a script with any submission where R is needed. Much like any writing, if your script is easy to read, then it is most likely easy to grade. A messy script without comments, spacing, and style may lead to misunderstandings. Long story short: make it look good and easy to interpret and your score will reflect that! With that said, you’ll receive a template that will hopefully be helpful.</p>
+<p>If you want a warning about styling your script, open RStudio and go to the <strong>Tools &gt; Global Options &gt; Code &gt; Diagnostics</strong> pane. Then check the box to activate style warnings. On this pane, there are other options that can be set in order to increase or decrease the amount of warnings while writing in RStudio.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Copying and pasting syntax from a browser can cause issues To avoid this, a script with all of the needed code presented in this walkthrough is provided in the download.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>There are situations where data does not exist in its own file, but rather as an within say a tabel on a webpage. In those cases, you can still grab, or scrape that data, but showing you how to do it is beyond the scope of this course. Given that, if you want to know, I’ll be happy to show you.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>To see the entire list, you can run the command <code>data()</code><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p><em>If applicable</em><a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Please see the discussion in
+<a href="http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame" target="_blank">R for DataScience</a> on how <code>tibble</code> objects differ from base <code>data.frame</code> objects in how the single bracket <code>[</code> is handled.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

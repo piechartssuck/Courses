@@ -7,49 +7,49 @@ lessons:
     date: "May 17, 2021"
     readings: "01-readings"
     datacamp: "01-module"
-    examples: "01-example"
+    walkthroughs: "01-walkthrough"
     tasks: "01-tasks"
     due: "01-due"
 
-  # - title: 'Neverending Designs, Measures, and Methods'
-  #   session: 2
-  #   date: "July 12, 2020"
-  #   readings: "02-readings"
-  #   lesson: "02-lesson"
-  #   example: "02-example"
-  #   assignment: "02-exercise"
-  #   due: "02-due"
-  #
+  - title: 'The Basics'
+    session: 2
+    date: "May 24, 2021"
+    readings: "02-readings"
+    datacamp: "02-lesson"
+    walkthroughs: "02-walkthrough"
+    tasks: "02-exercise"
+    due: "02-due"
+
   # - title: 'Truthiness, Damned Truthiness, and Statistics'
   #   session: 3
   #   date: "July 19, 2020"
   #   readings: "03-readings"
-  #   lesson: "03-lesson"
-  #   example: "03-example"
-  #   assignment: "03-exercise"
+  #   datacamp: "03-lesson"
+  #   walkthroughs: "03-walkthrough"
+  #   tasks: "03-exercise"
   #   due: "03-due"
   #
   # - title: 'Pirates Cause Global Warming'
   #   session: 4
   #   date: "July 26, 2020"
   #   readings: "04-readings"
-  #   lesson: "04-lesson"
-  #   example: "04-example"
-  #   assignment: "04-exercise"
+  #   datacamp: "04-lesson"
+  #   walkthroughs: "04-walkthrough"
+  #   tasks: "04-exercise"
   #   due: "04-due"
   #
   # - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
   #   session: 5
   #   date: "August 2, 2020"
   #   readings: "05-readings"
-  #   lesson: "05-lesson"
-  #   example: "05-example"
-  #   assignment: "05-exercise"
+  #   datacamp: "05-lesson"
+  #   walkthroughs: "05-walkthrough"
+  #   tasks: "05-exercise"
   #   due: "05-due"
   #
   # - title: 'From a Certain Poimt of View... A Certain Point of View?'
   #   session: 6
   #   date: "August 9, 2020"
-  #   example: "06-example"
-  #   assignment: "06-exercise"
+  #   walkthroughs: "06-walkthrough"
+  #   tasks: "06-exercise"
   #   due: "06-due"

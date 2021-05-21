@@ -11,8 +11,8 @@ main:
   - name: DataCamp
     url: /datacamp/
     weight: 4
-  - name: Examples
-    url: /examples/
+  - name: Walkthroughs
+    url: /walkthroughs/
     weight: 5
   - name: Tasks
     url: /tasks/
@@ -43,10 +43,10 @@ datacamp:
     weight: 1
   - name: Modules
     weight: 2
-examples:
+walkthroughs:
   - name: Overview
     weight: 1
-  - name: Examples
+  - name: Walkthroughs
     weight: 2
 due:
   - name: Overview

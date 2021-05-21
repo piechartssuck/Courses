@@ -1,0 +1,90 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Creating an Argument
+
+Submit a one to three page proposal outlining specific questions that you would like to assess and then describe an instrument that would be used to assess those items. Include general details on what measures would be used. Submit this document using APA 7th Edition formatting to [eCampus]("https://ecampus.wvu.edu/"){target="_blank"}.
+
+The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#final-proposal). 
+
+## Responding
+Please create **one response** for each of the posts below on Slack. 
+
+```{r echo=FALSE}
+
+slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}")
+
+
+readings <- tibble(
+  
+  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6*, 229–240.", 
+             "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press."
+  ),
+  
+  channel <- c(
+    "`#psychopathic-sims`",
+    "`#mathison`"
+  ),
+
+  link <- c(
+     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
+    "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
+    ),
+     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
+    "(https://2021edp611.slack.com/archives/C021WQ54BML){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "50em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "2s0em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+
+## Basics of Evaluation 
+
+For those of you who may need a grounded introduction or reminder to evaluations, please view and listen to the **Criterial and Interpretive Evaluation** slideshow which has been ported over from my Program Evaluation class. This You can also download a [PDF](/slides/Criterial and Interpretive Evaluation/Criterial and Interpretive Evaluation.pdf){target="_blank"} of the presentation. 
+
+```{r echo = FALSE}
+knitr::include_url("/slides/Criterial and Interpretive Evaluation/Criterial-and-Interpretive-Evaluation.html")
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.

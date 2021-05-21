@@ -1,0 +1,20 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  datacamp:
+    parent: Modules
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete both and **Introduction to the Tidyverse** and **Foundations of Inference** courses on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
+
+
