@@ -262,6 +262,10 @@ div.warning:before {
     margin: 0 !important;
 }
 
+.navbar  {
+  overflow-x: auto;
+}
+
 /* Space after plotly widgets */
 .widgetframe {
     margin-bottom: 2em;

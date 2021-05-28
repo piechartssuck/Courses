@@ -9360,6 +9360,9 @@ div.warning:before {
   max-width: 100%;
   margin: 0 !important; }
 
+.navbar {
+  overflow-x: auto; }
+
 /* Space after plotly widgets */
 .widgetframe {
   margin-bottom: 2em; }
