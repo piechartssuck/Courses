@@ -165,7 +165,7 @@ review <- tibble(
     "(https://library.wvu.edu/){target='_blank'}"
     ),
     paste0("[",book,"]",
-    "(Measurement, Scales, and Scoring){target='_blank'}^[Again copy and paste the code into your R console to follow along and if you do not understand something please reach out.]"
+    "(https://www.thetaminusb.com/intro-measurement-r/measurement.html){target='_blank'}^[Again copy and paste the code into your R console to follow along and if you do not understand something please reach out.]"
     )
     
   ),
