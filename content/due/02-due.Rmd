@@ -21,7 +21,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-### What to submit for Week 1
+### Week 2 Overview
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))

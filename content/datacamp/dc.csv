@@ -11,23 +11,40 @@
 1,,,,,,,Tidy your data,
 1,,,,,,,Transform your data,
 ,,,,,,,,
-2,2,[Week 2](/datacamp/02-module/),5/30/21,9/13/20,checked,Introduction to the Tidyverse,Introduction to ideas of inference,"Introduction to ideas of inference, Completing a randomization test: gender discrimination, Hypothesis testing errors: opportunity cost, Confidence intervals"
-2,,,,,,,Completing a randomization test: gender discrimination,
-2,,,,,,,Hypothesis testing errors: opportunity cost,
-2,,,,,,,Confidence intervals,
+2,2,[Week 2](/datacamp/02-module/),5/30/21,9/13/20,checked,Introduction to the Tidyverse,Data wrangling,"Data wrangling, Data visualization, Grouping and summarizing, Types of visualizations"
+2,,,,,,,Data visualization,
+2,,,,,,,Grouping and summarizing,
+2,,,,,,,Types of visualizations,
 2,,,,,,,,
 2,,,5/30/21,,checked,Foundations of Inference,Introduction to ideas of inference,"Introduction to ideas of inference, Completing a randomization test: gender discrimination, Hypothesis testing errors: opportunity cost, Confidence intervals"
 2,,,,,,,Completing a randomization test: gender discrimination,
 2,,,,,,,Hypothesis testing errors: opportunity cost,
 2,,,,,,,Confidence intervals,
 ,,,,,,,,
-3,3,[Week 3](/datacamp/03-module/),6/6/21,6/6/21,checked,*posting soon*,,
+3,3,[Week 3](/datacamp/03-module/),6/6/21,6/6/21,checked,Data Manipulation with dplyr ,Transforming Data with dplyr,"Transforming Data with dplyr, Aggregating Data, Selecting and Transforming Data, Case Study: The babynames Dataset"
+3,,,,,,,Aggregating Data,
+3,,,,,,,Selecting and Transforming Data,
+3,,,,,,,Case Study: The babynames Dataset,
+3,,,,,,,,
+3,,,6/6/21,,checked,Introduction to Statistics in R,Summary Statistics,"Summary Statistics, Random Numbers and Probability, More Distributions and the Central Limit Theorem, Correlation and Experimental Design"
+3,,,,,,,Random Numbers and Probability,
+3,,,,,,,More Distributions and the Central Limit Theorem,
+3,,,,,,,Correlation and Experimental Design,
 ,,,,,,,,
-4,4,[Week 4](/datacamp/04-module/),6/13/21,6/13/21,checked,*posting soon*,,
+4,4,[Week 4](/datacamp/04-module/),6/13/21,6/13/21,checked,Introduction to Regression in R,Simple Linear Regression,"Simple Linear Regression, Predictions and model objects, Assessing model fit, Simple logistic regression"
+4,,,,,,,Predictions and model objects,
+4,,,,,,,Assessing model fit,
+4,,,,,,,Simple logistic regression,
 ,,,,,,,,
-5,5,[Week 5](/datacamp/05-module/),6/20/21,6/20/21,checked,*posting soon*,,
+5,5,[Week 5](/datacamp/05-module/),6/20/21,6/20/21,checked,Survey and Measurement Development in R,Preparing to analyze survey data,"Preparing to analyze survey data, Exploratory factor analysis & survey development, Confirmatory factor analysis & construct validation, "
+5,,,,,,,Exploratory factor analysis & survey development,
+5,,,,,,,Confirmatory factor analysis & construct validation,
+5,,,,,,,Criterion validity & replication,
 ,,,,,,,,
-6,6,[Week 6](/datacamp/06-module/),6/27/21,6/27/21,checked,*posting soon*,,
+6,6,[Week 6](/datacamp/06-module/),6/27/21,6/27/21,checked,Analyzing Survey Data in R,Introduction to survey data,"Introduction to survey data, Exploring categorical data, Exploring quantitative data, Modeling quantitative data"
+6,,,,,,,Exploring categorical data,
+6,,,,,,,Exploring quantitative data,
+6,,,,,,,Modeling quantitative data,
 ,,,,,,,,
 EC1,EC1,,6/27/21,6/27/21,unchecked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
 EC1,,,,,,,Aesthetics,

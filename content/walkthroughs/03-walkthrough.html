@@ -1,0 +1,1121 @@
+---
+title: "Personality Tests"
+linktitle: "Week 3: Personality Tests"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  walkthroughs:
+    parent: Walkthroughs
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#take-this">Take This</a></li>
+<li><a href="#read-up">Read Up</a></li>
+<li><a href="#data-files">Data Files</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#data-files-1">Data Files</a>
+<ul>
+<li><a href="#side-note-loading-the-entire-data-set">Side Note: Loading the Entire Data Set</a></li>
+</ul></li>
+<li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
+<li><a href="#reverse-coding">Reverse Coding</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+<li><a href="#computing-the-internal-consistency">Computing the Internal Consistency</a>
+<ul>
+<li><a href="#composite-reliability">Composite Reliability</a></li>
+<li><a href="#cronbachs-alpha">Cronbach’s alpha</a></li>
+<li><a href="#inter-item-correlation">Inter-item Correlation</a></li>
+<li><a href="#side-note-getting-a-jump-on-joins">Side Note: Getting a Jump on Joins</a></li>
+<li><a href="#item-total-correlation">Item-total Correlation</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #761756;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<script src="//yihui.org/js/math-code.js"></script>
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<div id="take-this" class="section level2">
+<h2>Take This</h2>
+<p>First things first, please go and take the <a href="https://openpsychometrics.org/tests/IPIP-BFFM/" target="_blank">Big Five Personality Test</a>.</p>
+</div>
+<div id="read-up" class="section level2">
+<h2>Read Up</h2>
+<p>Now go and read this short synopsis on the test from <a href="https://projects.fivethirtyeight.com/personality-quiz/" target="_blank">FiveThirtyEight</a>.</p>
+</div>
+<div id="data-files" class="section level2">
+<h2>Data Files</h2>
+<p>Please download the files we’ll need.</p>
+<a href="data:application/zip;base64,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" download="Week 3 Data and Script.zip">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download Data and Script</button>
+</a>
+</div>
+<div id="prerequisites" class="section level2 unnumbered">
+<h2>Prerequisites</h2>
+<p>Open up R and create a new script by going to <strong>File &gt; New File &gt; R Script</strong>. Save this in an easily accessible folder. Now unzip this week’s data set and take the files - <code>Big5data.csv</code>, <code>Big5codebook.csv</code>, <code>Big5measures.csv</code>, and <code>03-walkthrough</code> - and drop them all in a folder of their own. If you aren’t familiar with how directories and file paths work on a computer, consider keeping both your R script and data sets in the same folder. It just makes life easier.</p>
+<p>Before we load the libraries, we’re going to grab a package called <code>surveytools2</code> that is not on CRAN - the main R repository of packages. In any case, there is a command within the <code>surveytools2</code> package that will make our lives easier moving forward. To install it, please run the following commands</p>
+<pre class="r"><code>install.packages(&quot;remotes&quot;)
+
+remotes::install_github(&quot;peterhurford/surveytools2&quot;)</code></pre>
+<p>If you are asked to update any packages, please select <code>1: All</code>.</p>
+<p>Now please go ahead and load up the following libraries or download and load if needed</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)
+library(&quot;psych&quot;)
+library(&quot;corrr&quot;)
+library(&quot;surveytools2&quot;)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;surveytools2&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     replace</code></pre>
+<p>Then set the working directory to the location of the script by running</p>
+<pre class="r"><code>setwd(dirname(rstudioapi::getActiveDocumentContext()$path))</code></pre>
+<p>in your console or by selecting <strong>Session &gt; Set Working Directory &gt; To Source File Location</strong>.</p>
+</div>
+<div id="data-files-1" class="section level2">
+<h2>Data Files</h2>
+<p>We’ll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it <a href="https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip">here</a> but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file.</p>
+<div id="side-note-loading-the-entire-data-set" class="section level3">
+<h3>Side Note: Loading the Entire Data Set</h3>
+<p>If you want to give the entire data set a go, I am not certain how to load it in Excel but in R you can use</p>
+<pre class="r"><code>toobig_five_data &lt;- read_delim(&quot;data-final.csv&quot;, delim=&quot;\t&quot;) </code></pre>
+<p>to save it to the <code>big_five_data</code> variable which you can access by running</p>
+<pre class="r"><code>toobig_five_data</code></pre>
+<p>At this point you probably want to just open up the csv files in Excel and if that is what works, then by all means. While I try to run everything in R, sometimes its just easier to double click it. The problem really lies in the size of a data set. The larger the data set, the more power and time it takes for excel to load it up. With R you avoid this whole idea and the set loads up within seconds, rather than minutes. If you try loading the original data set in both R and Excel, the difference is very apparent.</p>
+<p>In any case, we will be working with data strictly in R, but never feel bad about opening and wrangling a data set using another application like Excel. For all of my snarkiness towards anything Microsoft, Excel has some nice qualities but don’t tell anyone I ever wrote that.</p>
+</div>
+</div>
+<div id="loading-a-local-data-set" class="section level2">
+<h2>Loading a Local Data Set</h2>
+<p>Let’s turn back to the data set we’ll be using. To load the data set, codebook, and measures, run the following</p>
+<pre class="r"><code>big_five_data &lt;- read_csv(&quot;Big5data.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   .default = col_double()
+## )
+## ℹ Use `spec()` for the full column specifications.</code></pre>
+<pre class="r"><code>big_five_codebook &lt;- read_csv(&quot;Big5codebook.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   ID = col_character(),
+##   Item = col_character()
+## )</code></pre>
+<pre class="r"><code>big_five_measures &lt;- read_csv(&quot;Big5measures.csv&quot;)</code></pre>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   Measure = col_double(),
+##   Description = col_character()
+## )</code></pre>
+<p>and take a look at each</p>
+<pre class="r"><code>big_five_data %&gt;%
+  head()</code></pre>
+<pre><code>## # A tibble: 6 x 50
+##    EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10  EST1  EST2  EST3
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     3     2     3     4     4     2     3     3     4     2     4     3     5
+## 2     1     5     1     5     1     4     1     5     4     5     4     2     4
+## 3     2     5     4     3     1     5     1     3     4     5     2     5     5
+## 4     2     3     3     3     3     2     2     4     2     3     5     1     5
+## 5     3     4     3     3     3     3     3     2     3     4     3     5     3
+## 6     3     1     5     1     4     1     5     4     4     2     5     2     5
+## # … with 37 more variables: EST4 &lt;dbl&gt;, EST5 &lt;dbl&gt;, EST6 &lt;dbl&gt;, EST7 &lt;dbl&gt;,
+## #   EST8 &lt;dbl&gt;, EST9 &lt;dbl&gt;, EST10 &lt;dbl&gt;, AGR1 &lt;dbl&gt;, AGR2 &lt;dbl&gt;, AGR3 &lt;dbl&gt;,
+## #   AGR4 &lt;dbl&gt;, AGR5 &lt;dbl&gt;, AGR6 &lt;dbl&gt;, AGR7 &lt;dbl&gt;, AGR8 &lt;dbl&gt;, AGR9 &lt;dbl&gt;,
+## #   AGR10 &lt;dbl&gt;, CSN1 &lt;dbl&gt;, CSN2 &lt;dbl&gt;, CSN3 &lt;dbl&gt;, CSN4 &lt;dbl&gt;, CSN5 &lt;dbl&gt;,
+## #   CSN6 &lt;dbl&gt;, CSN7 &lt;dbl&gt;, CSN8 &lt;dbl&gt;, CSN9 &lt;dbl&gt;, CSN10 &lt;dbl&gt;, OPN1 &lt;dbl&gt;,
+## #   OPN2 &lt;dbl&gt;, OPN3 &lt;dbl&gt;, OPN4 &lt;dbl&gt;, OPN5 &lt;dbl&gt;, OPN6 &lt;dbl&gt;, OPN7 &lt;dbl&gt;,
+## #   OPN8 &lt;dbl&gt;, OPN9 &lt;dbl&gt;, OPN10 &lt;dbl&gt;</code></pre>
+<p>with respondents self-report under the five factors Extroversion (<code>EXT</code>), Agreeableness (<code>AGR</code>), Conscientiousness (<code>CSN</code>), Emotional Stability (<code>EST</code>), and Intellect/Imagination (<code>OPN</code>).</p>
+<pre class="r"><code>big_five_codebook</code></pre>
+<pre><code>## # A tibble: 50 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.                   
+## # … with 40 more rows</code></pre>
+<pre class="r"><code>big_five_measures</code></pre>
+<pre><code>## # A tibble: 5 x 2
+##   Measure Description      
+##     &lt;dbl&gt; &lt;chr&gt;            
+## 1       5 Agree            
+## 2       4 Somewhat Agree   
+## 3       3 Neutral          
+## 4       2 Somewhat Disagree
+## 5       1 Disagree</code></pre>
+<p>For this walkthrough, let’s just concentrate on the Extroversion items which are given by <code>EXT.</code> That means we should probably pair down both the data set and codebook. For data sets with multiple columns, we can use the <code>select()</code> syntax. Moreover since we are looking at all of the columns that have <code>EXT</code>, we can pull only those using the <code>starts_with()</code> command. For more examples of options that can be used with <code>select()</code>, take a look <a href="https://dplyr.tidyverse.org/reference/select.html" target="_blank">here</a>.</p>
+<pre class="r"><code>big_five_data_EXT &lt;- big_five_data %&gt;%
+                     select(starts_with(&quot;EXT&quot;))</code></pre>
+<p>and then we’ll do something similar to the codebook. While we can’t simply select columns because all of the variables are in a single column. Much like in Excel, we can filter rows. To do this in R, we use the <code>filter()</code> command.</p>
+<pre class="r"><code>big_five_codebook_EXT &lt;- big_five_codebook %&gt;%
+                         filter(str_detect(ID, &quot;EXT&quot;))</code></pre>
+<pre class="r"><code>big_five_data_EXT</code></pre>
+<pre><code>## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     3     2     3     4     4     2     3     3     4     2
+##  2     1     5     1     5     1     4     1     5     4     5
+##  3     2     5     4     3     1     5     1     3     4     5
+##  4     2     3     3     3     3     2     2     4     2     3
+##  5     3     4     3     3     3     3     3     2     3     4
+##  6     3     1     5     1     4     1     5     4     4     2
+##  7     3     3     4     2     5     2     5     2     4     3
+##  8     3     4     1     3     0     4     1     4     2     5
+##  9     2     4     2     4     4     1     3     1     2     5
+## 10     3     4     4     2     3     2     3     5     1     4
+## # … with 90 more rows</code></pre>
+<pre class="r"><code>big_five_codebook_EXT</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.</code></pre>
+</div>
+<div id="reverse-coding" class="section level2">
+<h2>Reverse Coding</h2>
+<p>Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction.</p>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<p>For example both these questions might be used to measure the same underlying construct or idea.</p>
+<ol style="list-style-type: decimal">
+<li>I really like being alone</li>
+<li>I really <em>don’t</em> enjoy large gatherings</li>
+</ol>
+<p>In this situation, if we used the same response scale for each participants’ responses they would simply cancel out.</p>
+<p>When aligning the direction, we typically reverse code the one that has a negative, aka the negatively-keyed item. In this case is the second example since it includes the word <em>don’t</em>. There are exceptions to this rule, but they are narrowly defined. For example, someone who states that they “really <em>don’t</em> enjoy large gatherings” doesn’t automatically imply they like being alone. In fact, there are arguably an infinite number of possibilities of things they do like! The only time you can be code all items in either direction are in circumstances where there is a binary choice (e.g. Yes/No questions).</p>
+<p>But wait…there’s more! You also have to consider the intent of the questions and the participants. This second and final check is crucial to reporting reliable and consistent results.<br />
+:::</p>
+<p>Getting back to the main data set, let’s again look at the codebook.</p>
+<pre class="r"><code>big_five_codebook_EXT</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    ID    Item                                           
+##    &lt;chr&gt; &lt;chr&gt;                                          
+##  1 EXT1  I am the life of the party.                    
+##  2 EXT2  I don&#39;t talk a lot.                            
+##  3 EXT3  I feel comfortable around people.              
+##  4 EXT4  I keep in the background.                      
+##  5 EXT5  I start conversations.                         
+##  6 EXT6  I have little to say.                          
+##  7 EXT7  I talk to a lot of different people at parties.
+##  8 EXT8  I don&#39;t like to draw attention to myself.      
+##  9 EXT9  I don&#39;t mind being the center of attention.    
+## 10 EXT10 I am quiet around strangers.</code></pre>
+<p>Well it certainly looks like <code>EXT2</code>, <code>EXT4</code>, <code>EXT6</code>, <code>EXT8</code> and <code>EXT10</code> are all negative in the context of of assessing extroversion. Furthermore while <code>EXT9</code> includes the term <em>don’t</em>, it doesn’t orient the statement in a negative way so it stays the way it is.</p>
+<p>Remember that command we needed from the <code>surveytools2</code> package? Well it was to reverse code in a tidy way</p>
+<pre class="r"><code>big_five_data_EXT_rev &lt;- big_five_data_EXT %&gt;%
+                         mutate(EXT2 = reverse_code(EXT2),
+                                EXT4 = reverse_code(EXT4),
+                                EXT6 = reverse_code(EXT6),
+                                EXT8 = reverse_code(EXT8),
+                                EXT10 = reverse_code(EXT10))
+
+big_five_data_EXT_rev</code></pre>
+<pre><code>## # A tibble: 100 x 10
+##     EXT1  EXT2  EXT3  EXT4  EXT5  EXT6  EXT7  EXT8  EXT9 EXT10
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     3     4     3     1     4     3     3     2     4     3
+##  2     1     1     1     0     1     1     1     0     4     0
+##  3     2     1     4     2     1     0     1     2     4     0
+##  4     2     3     3     2     3     3     2     1     2     2
+##  5     3     2     3     2     3     2     3     3     3     1
+##  6     3     5     5     4     4     4     5     1     4     3
+##  7     3     3     4     3     5     3     5     3     4     2
+##  8     3     2     1     2     0     1     1     1     2     0
+##  9     2     2     2     1     4     4     3     4     2     0
+## 10     3     2     4     3     3     3     3     0     1     1
+## # … with 90 more rows</code></pre>
+<p>Let’s take a look at a sample of the first six rows between the two tables to see if the columns were indeed reverse coded.</p>
+<div align="center">
+<table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Original Data Set
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+EXT1
+</th>
+<th style="text-align:center;">
+EXT2
+</th>
+<th style="text-align:center;">
+EXT3
+</th>
+<th style="text-align:center;">
+EXT4
+</th>
+<th style="text-align:center;">
+EXT5
+</th>
+<th style="text-align:center;">
+EXT6
+</th>
+<th style="text-align:center;">
+EXT7
+</th>
+<th style="text-align:center;">
+EXT8
+</th>
+<th style="text-align:center;">
+EXT9
+</th>
+<th style="text-align:center;">
+EXT10
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+3
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+5
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+5
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+4
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+5
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+5
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+3
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+5
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+3
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+2
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+4
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+4
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+1
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+1
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+1
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+2
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Data Set with Reverse Coded Columns
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+EXT1
+</th>
+<th style="text-align:center;">
+EXT2
+</th>
+<th style="text-align:center;">
+EXT3
+</th>
+<th style="text-align:center;">
+EXT4
+</th>
+<th style="text-align:center;">
+EXT5
+</th>
+<th style="text-align:center;">
+EXT6
+</th>
+<th style="text-align:center;">
+EXT7
+</th>
+<th style="text-align:center;">
+EXT8
+</th>
+<th style="text-align:center;">
+EXT9
+</th>
+<th style="text-align:center;">
+EXT10
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+4
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+1
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+0
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+1
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+2
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+3
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+1
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;color: white !important;background-color: #52bf90 !important;">
+5
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;color: white !important;background-color: #49ab81 !important;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #419873 !important;">
+4
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;color: white !important;background-color: #398564 !important;">
+1
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;color: white !important;background-color: #317256 !important;">
+3
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>That looks correct! Notice that in the <a style="color: #FFFFFF; background-color: #419873">green</a> columns, the numbers flip along the neutral measure (3), or maybe a better observation is that the numerical complement is correct if adding two corresponding cells equals 5. If you have had any upper level mathematics courses, you may notice these as a modulo or mod 5 system.</p>
+</div>
+</div>
+<div id="computing-the-internal-consistency" class="section level2">
+<h2>Computing the Internal Consistency</h2>
+<p>There are many approaches when assessing reliability, namely those associated with interviews, experiments, surveys, trials, etc. Internal consistency is foremost one of many existing methods used to measure reliability, and it is typically useful in assessing items (e.g from a protocol, questionnaire, test, etc). It essentially <strong>estimates to what degree total scores on an instrument would change or vary if different items were used</strong>. Here are four but really three approaches used by a majority of practitioners:</p>
+<div id="composite-reliability" class="section level3">
+<h3>Composite Reliability</h3>
+<p>Getting a bit ahead of ourselves, composite reliability is based on the factor lodgings in a confirmatory factor analysis (CFA). We’ll cover this when we address CFAs soon!</p>
+</div>
+<div id="cronbachs-alpha" class="section level3">
+<h3>Cronbach’s alpha</h3>
+<p>By far the most utilized approach, it is also very procedural which is typically viewed as beneficial by many evaluators. There are many ways to tell R to compute alpha <span class="math inline">\(\left(\alpha\right)\)</span> but by far the simplest may be to use the <code>psych</code> package</p>
+<pre class="r"><code>psych::alpha(big_five_data_EXT_rev)</code></pre>
+<pre><code>## 
+## Reliability analysis   
+## Call: psych::alpha(x = big_five_data_EXT_rev)
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r
+##        0.9       0.9    0.91      0.48 9.1 0.015  2.7 0.95     0.49
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.87 0.9 0.93 
+## 
+##  Reliability if an item is dropped:
+##       raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r
+## EXT1       0.89      0.90    0.91      0.49 8.5    0.016 0.0123  0.50
+## EXT2       0.89      0.89    0.90      0.47 8.1    0.017 0.0115  0.49
+## EXT3       0.89      0.89    0.90      0.47 8.0    0.017 0.0111  0.49
+## EXT4       0.89      0.89    0.90      0.46 7.7    0.017 0.0126  0.45
+## EXT5       0.89      0.89    0.89      0.46 7.8    0.017 0.0098  0.46
+## EXT6       0.89      0.89    0.90      0.48 8.4    0.016 0.0104  0.49
+## EXT7       0.89      0.89    0.90      0.47 7.9    0.017 0.0119  0.46
+## EXT8       0.90      0.90    0.91      0.50 9.1    0.015 0.0092  0.50
+## EXT9       0.89      0.89    0.90      0.48 8.3    0.016 0.0128  0.50
+## EXT10      0.89      0.89    0.90      0.47 7.8    0.017 0.0120  0.47
+## 
+##  Item statistics 
+##         n raw.r std.r r.cor r.drop mean  sd
+## EXT1  100  0.67  0.67  0.61   0.59  2.8 1.2
+## EXT2  100  0.73  0.74  0.71   0.66  3.4 1.2
+## EXT3  100  0.75  0.75  0.72   0.68  3.2 1.3
+## EXT4  100  0.79  0.79  0.78   0.73  2.0 1.2
+## EXT5  100  0.79  0.79  0.78   0.73  3.3 1.3
+## EXT6  100  0.68  0.68  0.65   0.60  2.7 1.3
+## EXT7  100  0.78  0.77  0.74   0.70  2.9 1.5
+## EXT8  100  0.59  0.59  0.53   0.49  1.8 1.3
+## EXT9  100  0.71  0.71  0.67   0.63  3.3 1.3
+## EXT10 100  0.78  0.78  0.75   0.71  1.4 1.3
+## 
+## Non missing response frequency for each item
+##          0    1    2    3    4    5 miss
+## EXT1  0.01 0.18 0.19 0.34 0.21 0.07    0
+## EXT2  0.00 0.09 0.13 0.30 0.26 0.22    0
+## EXT3  0.00 0.14 0.17 0.17 0.34 0.18    0
+## EXT4  0.12 0.24 0.24 0.28 0.11 0.01    0
+## EXT5  0.02 0.11 0.13 0.20 0.38 0.16    0
+## EXT6  0.08 0.14 0.13 0.35 0.29 0.01    0
+## EXT7  0.01 0.24 0.13 0.27 0.16 0.19    0
+## EXT8  0.24 0.21 0.21 0.24 0.09 0.01    0
+## EXT9  0.01 0.11 0.20 0.15 0.33 0.20    0
+## EXT10 0.33 0.23 0.21 0.15 0.07 0.01    0</code></pre>
+<p>There is a lot there and most of those outcomes are useful, but for reliability we really care about the <code>raw_alpha</code>, or the <em>the standardized alpha based upon the correlations</em>. For a raw <span class="math inline">\(\alpha\)</span> score, the following breakdown is widely accepted but not without controversy.</p>
+<div align="center">
+<table>
+<thead>
+<tr class="header">
+<th>Cronbach’s Alpha</th>
+<th>Measure of Internal Consistency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\alpha \geq 0.90\)</span></td>
+<td>Excellent</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0.70 &gt;\alpha\geq0.90\)</span></td>
+<td>Good</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(0.80 &gt;\alpha\geq0.70\)</span></td>
+<td>Acceptable</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(0.70 &gt;\alpha\geq0.60\)</span></td>
+<td>Poor</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha &lt; 0.50\)</span></td>
+<td>Unacceptable</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that the thresholds themselves do not have any logical grounding, rather what is an acceptable threshold may be situation dependent.</p>
+<p>If you’d like to access the alpha value easily, implement this</p>
+<pre class="r"><code>psych::alpha(big_five_data_EXT_rev)$total$raw_alpha</code></pre>
+<pre><code>## [1] 0.9002546</code></pre>
+<p>which for a <strong>quick and dirty</strong> measure of reliability seems to be pretty Good!</p>
+</div>
+<div id="inter-item-correlation" class="section level3">
+<h3>Inter-item Correlation</h3>
+<p>This is foremost an <strong>average</strong> which uses correlations.</p>
+<pre class="r"><code>big_five_data_EXT_rev %&gt;%
+  correlate()</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre><code>## # A tibble: 10 x 11
+##    term    EXT1   EXT2   EXT3   EXT4   EXT5   EXT6   EXT7   EXT8   EXT9  EXT10
+##    &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1 EXT1  NA      0.363  0.443  0.494  0.454  0.289  0.546  0.363  0.478  0.435
+##  2 EXT2   0.363 NA      0.415  0.500  0.644  0.628  0.506  0.315  0.438  0.543
+##  3 EXT3   0.443  0.415 NA      0.577  0.631  0.379  0.566  0.295  0.496  0.629
+##  4 EXT4   0.494  0.500  0.577 NA      0.471  0.595  0.540  0.501  0.452  0.636
+##  5 EXT5   0.454  0.644  0.631  0.471 NA      0.495  0.649  0.246  0.582  0.551
+##  6 EXT6   0.289  0.628  0.379  0.595  0.495 NA      0.356  0.373  0.315  0.544
+##  7 EXT7   0.546  0.506  0.566  0.540  0.649  0.356 NA      0.359  0.559  0.509
+##  8 EXT8   0.363  0.315  0.295  0.501  0.246  0.373  0.359 NA      0.450  0.396
+##  9 EXT9   0.478  0.438  0.496  0.452  0.582  0.315  0.559  0.450 NA      0.391
+## 10 EXT10  0.435  0.543  0.629  0.636  0.551  0.544  0.509  0.396  0.391 NA</code></pre>
+<p>The package gives an <code>NA</code> for variables that try to correlate with themselves. By default each variable should be perfectly correlated with itself but who cares? With the diagonal owned by <code>NA</code>s, we can obtain the average correlation of each item with all others by computing the means for each column <code>EXT1</code> - <code>EXT10</code>.</p>
+<pre class="r"><code>inter_measure  &lt;- big_five_data_EXT_rev %&gt;% 
+                  correlate() %&gt;% 
+                  select(-term) %&gt;% 
+                  colMeans(na.rm = TRUE)</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>inter_measure </code></pre>
+<pre><code>##      EXT1      EXT2      EXT3      EXT4      EXT5      EXT6      EXT7      EXT8 
+## 0.4295075 0.4834744 0.4922734 0.5295312 0.5249037 0.4414833 0.5100294 0.3665847 
+##      EXT9     EXT10 
+## 0.4623084 0.5150927</code></pre>
+<p>We can check the variables that are more strongly correlated with the other items in the <code>EXT</code> group. The same information is presented by arranging categories and descending internal consistency measures, respectively.</p>
+<pre class="r"><code>big_five_correlations_cat &lt;- data.frame(inter_measure) %&gt;%
+                             rownames_to_column() %&gt;%
+                             as_tibble() %&gt;%
+                             arrange(desc(inter_measure)) 
+
+big_five_correlations_num &lt;- big_five_correlations_cat %&gt;%
+                             left_join(big_five_codebook, c(&quot;rowname&quot; = &quot;ID&quot;))
+
+big_five_correlations_cat</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    rowname inter_measure
+##    &lt;chr&gt;           &lt;dbl&gt;
+##  1 EXT4            0.530
+##  2 EXT5            0.525
+##  3 EXT10           0.515
+##  4 EXT7            0.510
+##  5 EXT3            0.492
+##  6 EXT2            0.483
+##  7 EXT9            0.462
+##  8 EXT6            0.441
+##  9 EXT1            0.430
+## 10 EXT8            0.367</code></pre>
+<pre class="r"><code>big_five_correlations_num </code></pre>
+<pre><code>## # A tibble: 10 x 3
+##    rowname inter_measure Item                                           
+##    &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;                                          
+##  1 EXT4            0.530 I keep in the background.                      
+##  2 EXT5            0.525 I start conversations.                         
+##  3 EXT10           0.515 I am quiet around strangers.                   
+##  4 EXT7            0.510 I talk to a lot of different people at parties.
+##  5 EXT3            0.492 I feel comfortable around people.              
+##  6 EXT2            0.483 I don&#39;t talk a lot.                            
+##  7 EXT9            0.462 I don&#39;t mind being the center of attention.    
+##  8 EXT6            0.441 I have little to say.                          
+##  9 EXT1            0.430 I am the life of the party.                    
+## 10 EXT8            0.367 I don&#39;t like to draw attention to myself.</code></pre>
+</div>
+<div id="side-note-getting-a-jump-on-joins" class="section level3">
+<h3>Side Note: Getting a Jump on Joins</h3>
+<p>We’ll talk about a <code>left_join()</code> and other types of <code>joins</code> next week but for now if you can’t wrap your head around what happened in that step, that’s fine! If you want to get a head start on <code>joins</code>, take a look at <a href="https://stat545.com/join-cheatsheet.html">STAT545</a>.</p>
+<p>In any case, it looks like <code>EXT4</code>, <code>EXT5</code>, <code>EXT10</code>, and <code>EXT7</code> have the strongest correlation. The list below has been arranged to represent the data in descending order of measure.</p>
+<div align="center">
+<table class="table table-striped table-hover table-condensed table-responsive" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Variable
+</th>
+<th style="text-align:center;">
+Internal Consistency Measure
+</th>
+<th style="text-align:center;">
+Item
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+EXT4
+</td>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+0.5295312
+</td>
+<td style="text-align:center;color: white !important;background-color: #5AA85C !important;">
+I keep in the background.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+EXT5
+</td>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+0.5249037
+</td>
+<td style="text-align:center;color: white !important;background-color: #599D68 !important;">
+I start conversations.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+EXT10
+</td>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+0.5150927
+</td>
+<td style="text-align:center;color: white !important;background-color: #56916F !important;">
+I am quiet around strangers.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+EXT7
+</td>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+0.5100294
+</td>
+<td style="text-align:center;color: white !important;background-color: #538572 !important;">
+I talk to a lot of different people at parties.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+EXT3
+</td>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+0.4922734
+</td>
+<td style="text-align:center;color: white !important;background-color: #4F7972 !important;">
+I feel comfortable around people.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+EXT2
+</td>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+0.4834744
+</td>
+<td style="text-align:center;color: white !important;background-color: #4B6C6D !important;">
+I don’t talk a lot.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+EXT9
+</td>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+0.4623084
+</td>
+<td style="text-align:center;color: white !important;background-color: #465B61 !important;">
+I don’t mind being the center of attention.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+EXT6
+</td>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+0.4414833
+</td>
+<td style="text-align:center;color: white !important;background-color: #404C55 !important;">
+I have little to say.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+EXT1
+</td>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+0.4295075
+</td>
+<td style="text-align:center;color: white !important;background-color: #393F49 !important;">
+I am the life of the party.
+</td>
+</tr>
+<tr>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+EXT8
+</td>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+0.3665847
+</td>
+<td style="text-align:center;color: white !important;background-color: #32333E !important;">
+I don’t like to draw attention to myself.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>and the overall average inter-item correlation can be found by</p>
+<pre class="r"><code>mean(inter_measure)</code></pre>
+<pre><code>## [1] 0.4755189</code></pre>
+</div>
+<div id="item-total-correlation" class="section level3">
+<h3>Item-total Correlation</h3>
+<p>The item-total correlation is similar to the correlation described previously. We are calculating the average but this time, we’re doing it by row rather than by column. To do that we sum</p>
+<pre class="r"><code>agg_scores &lt;- big_five_data_EXT_rev %&gt;% 
+              mutate(score = rowMeans(select(.,1:10))) %&gt;% 
+              correlate() %&gt;% 
+              focus(score) %&gt;%
+              arrange(desc(score))</code></pre>
+<pre><code>## 
+## Correlation method: &#39;pearson&#39;
+## Missing treated using: &#39;pairwise.complete.obs&#39;</code></pre>
+<pre class="r"><code>agg_scores</code></pre>
+<pre><code>## # A tibble: 10 x 2
+##    term  score
+##    &lt;chr&gt; &lt;dbl&gt;
+##  1 EXT4  0.791
+##  2 EXT5  0.789
+##  3 EXT7  0.776
+##  4 EXT10 0.775
+##  5 EXT3  0.749
+##  6 EXT2  0.732
+##  7 EXT9  0.714
+##  8 EXT6  0.680
+##  9 EXT1  0.666
+## 10 EXT8  0.594</code></pre>
+<p>Well that is quite enough for now. There are other ways to assess reliability. As you move along in the course, keep in mind that none of these could yield good measures for internal consistency. You may have to look around the internet for other R commands and packages that may be a better fit. As usual, you always have your peers and me if you get stuck!</p>
+</div>
+</div>

@@ -106,7 +106,7 @@ slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}"
 
 readings <- tibble(
   
-  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6*, 229–240.", 
+  paper <- c("Visser, B.A, Batinic, M., Worth, N., Book, A. & Toll, E. (2020). Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game. *Evolutionary Psychological Science 6*, 229–240.",
              "Mathison, S. (2006). What is the difference between evaluation and research - and why do we care? In N.L. Smith and P.R. Brandon (Eds.) *Fundamental issues in evaluation*. Guilford Press.",
              "Davidson, J. (2004). What is Evaluation? *Evaluation Methodology Basics: The Nuts and Bolts of Sound Evaluation*. Sage."
   ),

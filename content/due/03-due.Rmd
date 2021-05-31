@@ -1,0 +1,79 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Week 3 Overview
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+"eCampus" = c(unchecked,
+              checked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            unchecked,
+            checked,
+            unchecked,
+            unchecked,
+            unchecked),
+
+Description = c("Complete modules in Data Camp that addresses data wrangling and more basic statistics in R.",
+"Create a draft of your instrument",
+"Read a few papers on the Myers-Briggs Type Indicator and create a post",
+"Read chapters on quantitative data and testing",
+"Watch an optional video on the Myers-Briggs Type Indicator",
+"Go though an R walkthrough looking at recoding items through the lens of the Big Five personality traits"),
+
+Location = c("[Link](/datacamp/03-module/)",
+             "[Link](/tasks/03-tasks/#develop-a-draft)",
+"[Link](/readings/03-readings/#read-some-papers)",
+"[Link](/readings/03-readings/#review-some-materials)",
+"[Link](/readings/03-readings/#watch-an-optional-video)",
+             "[Link](/walkthroughs/03-walkthrough/)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>% 
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(6, extra_css = 'vertical-align: middle !important;') 
+```

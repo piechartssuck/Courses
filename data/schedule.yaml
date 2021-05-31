@@ -20,15 +20,15 @@ lessons:
     tasks: "02-exercise"
     due: "02-due"
 
-  # - title: 'Truthiness, Damned Truthiness, and Statistics'
-  #   session: 3
-  #   date: "July 19, 2020"
-  #   readings: "03-readings"
-  #   datacamp: "03-lesson"
-  #   walkthroughs: "03-walkthrough"
-  #   tasks: "03-exercise"
-  #   due: "03-due"
-  #
+  - title: 'Personality Tests'
+    session: 3
+    date: "May 31, 2021"
+    readings: "03-readings"
+    datacamp: "03-lesson"
+    walkthroughs: "03-walkthrough"
+    tasks: "03-exercise"
+    due: "03-due"
+
   # - title: 'Pirates Cause Global Warming'
   #   session: 4
   #   date: "July 26, 2020"

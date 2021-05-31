@@ -1,0 +1,67 @@
+---
+title: "Personality Tests"
+linktitle: "Week 3: Personality Tests"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+## Develop a Draft
+
+This is a two step-process:
+
+1. Create a draft of your instrument^[If the instrument is housed elsewhere (e.g. Qualtrics), then simply share it with me (e.g. by using the [Collaborate]("https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/") functionality.)] If you do not intent to administer your instrument electronically, submit a one page narrative describing your intended sampling frame (population, sample, and setting) and how you intend to reach said participants. Attach your instrument to the submission.
+
+2. In a word file, create a four column table like so
+
+```{r eval = TRUE, echo = FALSE}
+ex <- tibble(
+  
+  index = c(""),
+  
+  item = c(""),
+  
+  measure = c(""),
+  
+  group = c("")
+   
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+ex %>%
+  kbl() %>%
+  kable_minimal(full_width = FALSE, font_size = 20, html_font = "roboto")
+```
+</center>
+
+|           where 
+
+|           a. <span style="font-weight:bold; color:#343434">index</span> is an item number given in order of appearance.
+|           b. <span style="font-weight:bold; color:#343434">item</span> is a statement or question.
+|           c. <span style="font-weight:bold; color:#343434">measure</span> is the associated measure.
+|           d. <span style="font-weight:bold; color:#343434">group</span> is the associated group of items, if applicable.<br><br>
+
+Submit this document to [eCampus]("https://ecampus.wvu.edu/"){target="_blank"}.
+
+The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#final-proposal). 
+

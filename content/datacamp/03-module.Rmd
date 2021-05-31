@@ -1,0 +1,20 @@
+---
+title: "Personality Tests"
+linktitle: "Week 3: Personality Tests"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  datacamp:
+    parent: Modules
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete both and **Data Manipulation with dplyr** and **Introduction to Statistics in R** courses on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
+
+
