@@ -1,6 +1,6 @@
 ---
-title: "The Basics"
-linktitle: "Week 2: The Basics"
+title: "Personality Tests"
+linktitle: "Week 3: Personality Tests"
 output:
   blogdown::html_page:
     toc: true

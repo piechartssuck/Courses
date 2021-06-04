@@ -24,12 +24,12 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-to-submit-for-week-1&#34;&gt;What to submit for Week 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#week-1-overview&#34;&gt;Week 1 Overview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-to-submit-for-week-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What to submit for Week 1&lt;/h3&gt;
+&lt;div id=&#34;week-1-overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Week 1 Overview&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -174,12 +174,12 @@ Review some literature about program evaluations and introductory materials on m
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-to-submit-for-week-1&#34;&gt;What to submit for Week 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#week-2-overview&#34;&gt;Week 2 Overview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-to-submit-for-week-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What to submit for Week 1&lt;/h3&gt;
+&lt;div id=&#34;week-2-overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Week 2 Overview&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -306,12 +306,12 @@ Review some literature on research designs and measurement properties in R
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-to-submit-for-week-1&#34;&gt;What to submit for Week 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#week-3-overview&#34;&gt;Week 3 Overview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-to-submit-for-week-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;What to submit for Week 1&lt;/h3&gt;
+&lt;div id=&#34;week-3-overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Week 3 Overview&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -342,7 +342,7 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Complete modules in Data Camp that address more about tidying data and introduces basic statistics in R.
+Complete modules in Data Camp that addresses data wrangling and more basic statistics in R.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/03-module/&#34;&gt;Link&lt;/a&gt;
@@ -360,64 +360,82 @@ Complete modules in Data Camp that address more about tidying data and introduce
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Think about a population to test
+Create a draft of your instrument
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/02-tasks/#creating-an-argument&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/03-tasks/#develop-a-draft&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Review aspects of the basics of program evaluation if needed
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/02-tasks/#basics-of-evaluation&#34;&gt;Link&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
-&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
-&lt;/svg&gt;
-&lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
 &lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Respond to one of the posts from last week
+&lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
+Read a few papers on the Myers-Briggs Type Indicator and create a post
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/02-readings/#read-some-papers&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#read-some-papers&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
 &lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
 &lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
 &lt;/svg&gt;
 &lt;/td&gt;
-&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
-Review some literature on research designs and measurement properties in R
+&lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
+Read chapters on quantitative data and testing
 &lt;/td&gt;
-&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/02-readings/#review-some-materials&#34;&gt;Link&lt;/a&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#review-some-materials&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
+Watch an optional video on the Myers-Briggs Type Indicator
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#watch-an-optional-video&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
+Go though an R walkthrough looking at recoding items through the lens of the Big Five personality traits
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/walkthroughs/03-walkthrough/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
