@@ -1,0 +1,88 @@
+---
+title: "Conspiracies"
+linktitle: "Week 4: Conspiracies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  due:
+    parent: Due?
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Week 4 Overview
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#4682b4"))
+
+wk_post <- tibble(
+"eCampus" = c(unchecked,
+              checked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked),
+
+"Slack" = c(unchecked,
+            unchecked,
+            checked,
+            checked,
+            unchecked,
+            unchecked,
+            unchecked,
+            unchecked),
+
+Description = c("Complete a module in Data Camp that addresses regression using R.^[Even if you have not been introduced to the idea or believe yourself to need a great deal of assistance, the overall idea here is to get a feel for regression and what it can do. We'll use the general notion of regression to address areas of measurement in the remaining weeks.]",
+"Refine the draft of your instrument",
+"Respond to a post on personality tests",
+"Read a few papers on conspiracy theories and create a post",
+"Read chapters on evalutaion, measurement, and reliability",
+"Watch an optional video on assessing and measuring the belief structure of those who believe in conspriacies",
+"Take a tour of spurious correlations",
+"Go though an R walkthrough introducting the idea of an exploratory factor analysis"),
+
+Location = c("[Link](/datacamp/04-module/#data-camp)",
+             "[Link](/tasks/04-tasks/#refine-the-draft)",
+             "[Link](/tasks/04-tasks/#responding)",
+"[Link](/readings/04-readings/#read-some-papers)",
+"[Link](/readings/04-readings/#review-some-materials)",
+"[Link](/readings/04-readings/#watch-an-optional-video)",
+"[Link](/readings/04-readings/#something-fun)",
+             "[Link](/walkthroughs/04-walkthrough)")
+
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cclc') %>% 
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(6, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(7, extra_css = 'vertical-align: middle !important;') 
+```

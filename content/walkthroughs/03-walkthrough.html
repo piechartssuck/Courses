@@ -30,7 +30,7 @@ editor_options:
 <li><a href="#side-note-loading-the-entire-data-set">Side Note: Loading the Entire Data Set</a></li>
 </ul></li>
 <li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
-<li><a href="#reverse-coding">Reverse Coding</a>
+<li><a href="#method-reverse-coding">Method: Reverse Coding</a>
 <ul>
 <li><a href="#example">Example</a></li>
 </ul></li>
@@ -110,7 +110,7 @@ editor_options:
 </div>
 <div id="prerequisites" class="section level2 unnumbered">
 <h2>Prerequisites</h2>
-<p>Open up R and create a new script by going to <strong>File &gt; New File &gt; R Script</strong>. Save this in an easily accessible folder. Now unzip this week’s data set and take the files - <code>Big5data.csv</code>, <code>Big5codebook.csv</code>, <code>Big5measures.csv</code>, and <code>03-walkthrough</code> - and drop them all in a folder of their own. If you aren’t familiar with how directories and file paths work on a computer, consider keeping both your R script and data sets in the same folder. It just makes life easier.</p>
+<p>Open up RStudio and create a new script by going to <strong>File &gt; New File &gt; R Script</strong>. Save this in an easily accessible folder. Now unzip this week’s data set and take the files - <code>Big5data.csv</code>, <code>Big5codebook.csv</code>, <code>Big5measures.csv</code>, and <code>03-walkthrough</code> - and drop them all in a folder of their own. If you aren’t familiar with how directories and file paths work on a computer, consider keeping both your R script and data sets in the same folder. It just makes life easier.</p>
 <p>Before we load the libraries, we’re going to grab a package called <code>surveytools2</code> that is not on CRAN - the main R repository of packages. In any case, there is a command within the <code>surveytools2</code> package that will make our lives easier moving forward. To install it, please run the following commands</p>
 <pre class="r"><code>install.packages(&quot;remotes&quot;)
 
@@ -135,7 +135,7 @@ library(&quot;surveytools2&quot;)</code></pre>
 <p>We’ll be looking at a very truncated data set from the 2018 BigFive Personality Test. The full data set is a huge file with 1 million answers to the 50 personality items! You can access it <a href="https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip">here</a> but be warned that opening a file that size can take a long time or may even crash some computers depending on their processing power and RAM. It is a tab separated csv file.</p>
 <div id="side-note-loading-the-entire-data-set" class="section level3">
 <h3>Side Note: Loading the Entire Data Set</h3>
-<p>If you want to give the entire data set a go, I am not certain how to load it in Excel but in R you can use</p>
+<p>If you want to give the entire data set a go, I am not certain how to load it in Excel, but in RStudio you can use</p>
 <pre class="r"><code>toobig_five_data &lt;- read_delim(&quot;data-final.csv&quot;, delim=&quot;\t&quot;) </code></pre>
 <p>to save it to the <code>big_five_data</code> variable which you can access by running</p>
 <pre class="r"><code>toobig_five_data</code></pre>
@@ -247,8 +247,8 @@ library(&quot;surveytools2&quot;)</code></pre>
 ##  9 EXT9  I don&#39;t mind being the center of attention.    
 ## 10 EXT10 I am quiet around strangers.</code></pre>
 </div>
-<div id="reverse-coding" class="section level2">
-<h2>Reverse Coding</h2>
+<div id="method-reverse-coding" class="section level2">
+<h2>Method: Reverse Coding</h2>
 <p>Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction.</p>
 <div id="example" class="section level3">
 <h3>Example</h3>

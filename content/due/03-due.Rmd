@@ -50,7 +50,7 @@ Description = c("Complete modules in Data Camp that addresses data wrangling and
 "Watch an optional video on the Myers-Briggs Type Indicator",
 "Go though an R walkthrough looking at recoding items through the lens of the Big Five personality traits"),
 
-Location = c("[Link](/datacamp/03-module/)",
+Location = c("[Link](/datacamp/03-module/#data-camp)",
              "[Link](/tasks/03-tasks/#develop-a-draft)",
 "[Link](/readings/03-readings/#read-some-papers)",
 "[Link](/readings/03-readings/#review-some-materials)",

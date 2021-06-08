@@ -7,7 +7,7 @@ output:
 menu:
   walkthroughs:
     parent: Walkthroughs
-    weight: 2
+    weight: 3
 type: docs
 weight: 1
 editor_options: 
@@ -103,7 +103,7 @@ downloadthis::download_file(
 
 ## Prerequisites {-}
 
-Open up R and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `Big5data.csv`, `Big5codebook.csv`, `Big5measures.csv`, and `03-walkthrough` - and drop them all in a folder of their own. If you aren't familiar with how directories and file paths work on a computer, consider keeping both your R script and data sets in the same folder. It just makes life easier.
+Open up RStudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `Big5data.csv`, `Big5codebook.csv`, `Big5measures.csv`, and `03-walkthrough` - and drop them all in a folder of their own. If you aren't familiar with how directories and file paths work on a computer, consider keeping both your R script and data sets in the same folder. It just makes life easier.
 
 Before we load the libraries, we're going to grab a package called `surveytools2` that is not on CRAN - the main R repository of packages. In any case, there is a command within the `surveytools2` package that will make our lives easier moving forward. To install it, please run the following commands
 
@@ -139,7 +139,7 @@ https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip) but be warned
 
 ### Side Note: Loading the Entire Data Set
 
-If you want to give the entire data set a go, I am not certain how to load it in Excel but in R you can use
+If you want to give the entire data set a go, I am not certain how to load it in Excel, but in RStudio you can use
 
 ```{r eval=FALSE}
 toobig_five_data <- read_delim("data-final.csv", delim="\t") 
@@ -222,7 +222,7 @@ big_five_data_EXT
 big_five_codebook_EXT
 ```
 
-## Reverse Coding
+## Method: Reverse Coding
 
 Sometimes items can be worded ‘backwards’. In these situation, scales need to be reversed to point in the same direction. 
 

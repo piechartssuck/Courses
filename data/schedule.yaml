@@ -29,15 +29,15 @@ lessons:
     tasks: "03-exercise"
     due: "03-due"
 
-  # - title: 'Pirates Cause Global Warming'
-  #   session: 4
-  #   date: "July 26, 2020"
-  #   readings: "04-readings"
-  #   datacamp: "04-lesson"
-  #   walkthroughs: "04-walkthrough"
-  #   tasks: "04-exercise"
-  #   due: "04-due"
-  #
+  - title: 'Conspiracy Theories'
+    session: 4
+    date: "June 7, 2021"
+    readings: "04-readings"
+    datacamp: "04-lesson"
+    walkthroughs: "04-walkthrough"
+    tasks: "04-exercise"
+    due: "04-due"
+
   # - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
   #   session: 5
   #   date: "August 2, 2020"

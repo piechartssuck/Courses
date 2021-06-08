@@ -1,0 +1,351 @@
+---
+title: "Conspiracies"
+linktitle: "Week 4: Conspiracies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  walkthroughs:
+    parent: Walkthroughs
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #761756;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r setup, include=FALSE,purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+
+library(tidyverse)
+library(fivethirtyeight)
+library(psych)
+library(DT)
+library(reactable)
+library(knitr)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+```
+
+## Take This
+
+First things first, please go and take the [Generic Conspiracist Beliefs Scale](https://openpsychometrics.org/tests/GCBS/){target="_blank"}. 
+
+## Read Up
+
+Now go and read this short synopsis on this and other tests to assess what drives conspirators at [Psychology Today](https://www.psychologytoday.com/us/blog/experimentations/201810/what-makes-conspiracy-theorists-tick){target="_blank"}^[I am personally fond of the BSR.]. 
+
+## Data Files
+
+Please download the files we'll need.
+
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP611Week4Data&Script&Paper.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 4 Data and Script and Paper",
+  button_label = "Download Data and Script and Paper",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+
+
+## Prerequisites {-}
+
+Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `ConspiracyData.csv`, `ConspiracyCodebook.csv`, `ConspiracyMeasures.csv`, and `04-walkthrough` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we'll be using today.
+
+Before we load the libraries, we're going to grab a package called `psych` that is on CRAN. To install it, please run the following command in your console
+
+```{r eval = FALSE}
+install.packages("psych", dependencies = TRUE)
+```
+
+or you can simply use the dropdown menu by going to **Tools > Install Packages** and simply type in `psych`. Remember to have **Install dependencies** checkmarked! 
+
+If you would like to know more about the `psych` package and gain access to an extensive set of resources for personality and psychological tests, take a look at the [Personality Project](https://personality-project.org/r/psych/){target="_blank"}.
+
+Now please go ahead and load up the following libraries or download and load if needed
+
+```{r eval=FALSE}
+library("tidyverse")
+library("psych")
+library("reactable")
+library("polycor")
+```
+
+Then set the working directory to the location of the script by running
+
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+in your console or by selecting **Session > Set Working Directory > To Source File Location**.
+
+## Data Files
+
+We'll be looking at responses from a sample of 2449 people who took this test in 2016. 
+
+## Loading a Local Data Set
+
+To load the data set, codebook, and measures, run the following
+
+```{r eval=FALSE}
+conspiracy_data <- read_csv("ConspiracyData.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+conspiracy_data <- read_csv(here::here("static", "data", "ConspiracyData.csv"))
+```
+
+```{r eval=FALSE}
+conspiracy_codebook <- read_csv("ConspiracyCodebook.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+conspiracy_codebook <-
+  read_csv(here::here("static", "data", "ConspiracyCodebook.csv"))
+```
+
+```{r eval=FALSE}
+conspiracy_measures<- read_csv("ConspiracyMeasures.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+conspiracy_measures<-
+  read_csv(here::here("static", "data", "ConspiracyMeasures.csv"))
+```
+
+and take a look at each
+
+```{r}
+conspiracy_codebook %>%
+  head()
+```
+
+```{r}
+conspiracy_measures
+```
+
+or to see a nicer table that is also interactive, you can use the `reactable()` command from the aptly named `reactable` package for a more Excel like feel and functionality.
+
+```{r}
+reactable(conspiracy_measures)
+```
+
+```{r}
+reactable(conspiracy_codebook)
+```
+
+Well that is really long big and an annoyance if you want to find something. Let's fix it by specifying the number of rows that appear and give it a search box.
+
+```{r}
+reactable(conspiracy_codebook,
+          searchable = TRUE, 
+          defaultPageSize = 3)
+```
+
+Now that is certainly better but if you don't like it, just change the `3` in `defaultPageSize = 3`to whatever you want.  
+
+Moving on, what if the data set is big? Then we might have an even bigger problem in how to display it. Let's remind ourselves of the dimensions
+
+```{r}
+dim(conspiracy_data)
+```
+
+That's 2495 rows by 15 columns which is a pretty big data set and unlike the codebook, sometimes its nice to have options when it comes to looking at the number of rows and highlight the one I'm on. It may also be nice to save it as as something easier to recall like a word (aka a variable). You can probably see where this is going...
+
+```{r}
+thing <- reactable(conspiracy_data,
+                   searchable = TRUE, 
+                   defaultPageSize = 5,
+                   showPageSizeOptions = TRUE,
+                   highlight = TRUE)
+
+thing
+```
+
+That's a bit better, though its certainly not perfect. There are a lot of things you can change about the table to make it easier to use. If you want to know more take a look at this [vignette](https://glin.github.io/reactable/index.html){target="_blank"}. Don't be scared off by the syntax. Remember its open source so just copy and paste. Eventually if you want to change certain aspects, just start tweaking what's already there.
+
+For example, I think that reactable's ability toggle a table dark and light mode would be something nice to have. When you initially look at the [syntax](https://glin.github.io/reactable/articles/examples.html#nested-selectors){target="_blank"}, it looks pretty complicated, that is until you realize all you really have to do is copy the theme and functionality
+
+```{r}
+theme <- reactableTheme(
+  style = list(".dark &" = list(color = "#fff", background = "#282a36")),
+  cellStyle = list(".dark &" = list(borderColor = "rgba(255, 255, 255, 0.15)")),
+  headerStyle = list(".dark &" = list(borderColor = "rgba(255, 255, 255, 0.15)")),
+  paginationStyle = list(".dark &" = list(borderColor = "rgba(255, 255, 255, 0.15)")),
+  rowHighlightStyle = list(".dark &" = list(background = "rgba(255, 255, 255, 0.04)")),
+  pageButtonHoverStyle = list(".dark &" = list(background = "rgba(255, 255, 255, 0.08)")),
+  pageButtonActiveStyle = list(".dark &" = list(background = "rgba(255, 255, 255, 0.1)"))
+) # This was copied
+
+togglething <- reactable(conspiracy_data,
+                          searchable = TRUE, 
+                          defaultPageSize = 5,
+                          showPageSizeOptions = TRUE,
+                          highlight = TRUE,
+                          theme = theme) # I only added this last line
+
+tags$button(onclick = "document.querySelector('.themeable-tbl').classList.toggle('dark')",
+            "Toggle light/dark") # This was copied.
+
+div(class = "themeable-tbl dark", togglething) # This was copied and only the variable name changed.
+```
+
+<br>
+With very little effort, I have this table with a nice option to fool around with the aesthetics a bit and it all took about 10 seconds. This isn't unique! You have this ability with nearly everything in R. So don't code...just copy and tweak. OK enough of that, let's get back to 's get to our method of the day.
+
+## Method: Explanatory Factor Analysis
+
+Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items *hang out together* to create a construct? This is the underlying principle of a **factor analysis**, or **FA**. 
+
+The basic assumption of a **FA** is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.
+
+Moving forward, we're going to conduct what is known as a single-factor **explanatory factor analysis**, or **EFA**. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.
+
+### Example
+
+Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we'll use the popular `psych` package and the command `fa()`. 
+
+
+```{r}
+EFA <- fa(conspiracy_data)
+```
+
+and then to view the results 
+
+```{r}
+EFA
+```
+
+### Side Note
+
+That's a lot of information! While every item on here is important depending on need, we're going to skip the explanation of everything besides the column `MR1` in this course because without some solid background in statistics, the explanation of other item here are difficult to describe. In fact, a majority are not even relevant for our purposes.
+
+### Viewing and Visualizing Factors
+
+Each result using the `fa()` command actually gives you a list, and each element of the list contains specific information about the analysis, including factor loadings. *Factor loadings* represent the strength and of the relationship between each item and the underlying factor, and they can range from -1 to 1. We can see this by looking only at the first column
+
+```{r}
+EFA$loadings
+```
+
+You can also create a diagram of loadings. The `fa.diagram()` command takes the output from `fa()` and creates a diagram, called a *path diagram* to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.
+
+```{r}
+fa.diagram(EFA)
+```
+
+### Side Note: Lack of Pipes
+So why can't we just use pipes and `ggplot` here? Well the main problem can be found using this command
+
+```{r}
+class(EFA)
+```
+
+Notice that the `psych` package has its own data type called  "psych". Tidy involves data that is neatly in rows and columns. In any case, we'll stick to the default format for now. 
+
+You can actually use the `class()` syntax to figure out the data type for any variable in R.
+
+## Interpreting Factor Scores
+
+The `EFA` object we've created also contains a named list element, scores, which contains factor scores for each person. These values tell you how much of the construct each individual likely possesses^[Please note that factor scores are not computed for participants with missing data. We will deal with that issue next week.]  
+To see an example, lets first look at the raw data for the first six participants
+
+```{r}
+head(conspiracy_data)
+```
+
+or if you prefer, we can show this using
+
+```{r}
+reactable(head(conspiracy_data))
+```
+
+We can then apply `rowSums()` command to see the total scores for these respondents.
+
+```{r}
+conspiracy_data %>%
+  head() %>%
+  rowSums()
+```
+
+Then let's look at the first six participant factor scores to see the relationship between those and the responses.
+
+```{r}
+head(EFA$scores)
+```
+
+and with their descriptive summary
+```{r}
+summary(EFA$scores)
+```
+
+I can plot the density curve
+```{r}
+plot(density(EFA$scores, 
+             na.rm = TRUE), 
+     main = "Factor Scores")
+```
+
+to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population. However interpretations aren't conducted at the individual level, rather they are generalized across a larger sample. This means talking about any of these six participants separately would be complete nonsense. If you want to know what the  study said, look over the Brotherton, French & Pickering (2013) paper. 
+
+OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Next week we deal with missingness!

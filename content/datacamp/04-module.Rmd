@@ -1,0 +1,18 @@
+---
+title: "Conspiracies"
+linktitle: "Week 4: Conspiracies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  datacamp:
+    parent: Modules
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete the **Introduction to Regression in R ** course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 

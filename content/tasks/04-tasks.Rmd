@@ -1,0 +1,116 @@
+---
+title: "Conspiracies"
+linktitle: "Week 4: Conspiracies"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+## Refine the Draft
+
+Like last week, this is a also a two step-process:
+
+1. Refine your instrument if needed^[In the case where a new variant needs to be created, please remember to share it with me.] 
+
+2. In a word file, create a five column table like so 
+
+```{r eval = TRUE, echo = FALSE}
+ex <- tibble(
+  
+  index = c(""),
+  
+  item = c(""),
+  
+  measure = c(""),
+  
+  group = c(""),
+  
+  changes = c("")
+   
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+ex %>%
+  kbl() %>%
+  kable_minimal(full_width = FALSE, font_size = 20, html_font = "roboto")
+```
+</center>
+
+|           where 
+
+|           a. <span style="font-weight:bold; color:#343434">index</span> is an item number given in order of appearance.
+|           b. <span style="font-weight:bold; color:#343434">item</span> is a statement or question.
+|           c. <span style="font-weight:bold; color:#343434">measure</span> is the associated measure.
+|           d. <span style="font-weight:bold; color:#343434">group</span> is the associated group of items, if applicable.
+|           e. <span style="font-weight:bold; color:#343434">changes</span> is a brief description of any alterations performed, if applicable.<br><br>
+
+Submit this document to [eCampus]("https://ecampus.wvu.edu/"){target="_blank"}.
+
+The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#final-proposal). 
+
+## Responding
+Please create **one response** for the post below on Slack. 
+
+```{r echo=FALSE}
+
+slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}")
+
+
+readings <- tibble(
+  
+  paper <- c("Read over the paper and argument given by yoru peer. Describe areas you have agreements or disagreements with and provide at least two justifciations for your arguements from peer reviewed literature."
+  ),
+  
+  channel <- c(
+    "`#personality-tests`"
+  ),
+
+  link <- c(
+     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
+    "(https://2021edp611.slack.com/archives/C023W4BJT6D){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "50em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "2s0em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+

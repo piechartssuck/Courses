@@ -103,16 +103,14 @@ readings <- tibble(
   
   channel <- c(
     "`#personality-tests`",
-    "`#personality-tests`"
+    "*ditto*"
     ),
 
   link <- c(
     paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
     "(https://2021edp611.slack.com/archives/C023W4BJT6D){target='_blank'}"
     ),
-    paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
-    "(https://2021edp611.slack.com/archives/C023W4BJT6D){target='_blank'}"
-    )
+    "*ditto*"
   ),
   
   .name_repair = "minimal"
