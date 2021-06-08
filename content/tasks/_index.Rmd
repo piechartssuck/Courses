@@ -12,7 +12,7 @@ weight: 1
 You will get the most of out this class if you:
 
 1. engage with the readings and materials,
-2. use R to complete any analysis,
+2. use R to complete any analysis^[If you prefer to use another piece of software for analyses, please note that those are not supported in this course, in that I will likely not be able to provide guidance since there is likely a lack of familiarity. It is highly recommended that you attempt to replicate the results in whatever medium you choose. That will give you time to research what steps are needed and to make corrections if necessary.],
 3. ask for help immediately after giving *it* (whatever *it* is) a good faith effort, and
 4. keep an open and honest line of communication with me and your peers if possible.
 
@@ -54,7 +54,7 @@ Create a draft of your instrument^[If the instrument is housed elsewhere (e.g. Q
 <details><summary>Week 4. Refine the draft.</summary>
 <br>
 <p>
-Based on feedback, amend the instrument if necessary and resubmit for further assessment. Explicitly detail what changes were made using a matrix. After approval, administer the instrument for pilot testing.
+Based on feedback, amend the instrument if necessary and resubmit for further assessment. Explicitly detail what changes were made using a matrix. After approval, administer the instrument for a simulation of responses.
 </p>
 </details>
 </div>
@@ -64,7 +64,7 @@ Based on feedback, amend the instrument if necessary and resubmit for further as
 <details><summary>Week 5. Address a priori and post analyses.</summary>
 <br>
 <p>
-Submit a one to three page with a description of what approaches were used to assess validity and reliability, and all corresponding data and analyses by csv and an R script, respectively.
+Submit a one to three page with a description of what approaches were used to assess validity and reliability, a copy of your simulated data in a csv file, and an R script or a step-by-step set of instructions on what you did in the software package of your choice.
 </p>
 </details>
 </div>
@@ -74,7 +74,7 @@ Submit a one to three page with a description of what approaches were used to as
 <details><summary>Week 6. Refine and submit final instrument.</summary>
 <br>
 <p>
-After amending, submit the final version of your instrument.
+After amending, submit the final version of your instrument along with a final description of each measure given by item or group of items. Each measure must be justifiable either by the use of statistical analysis, literature review, or some combination thereof.
 </p>
 </details>
 </div>

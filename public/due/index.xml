@@ -345,7 +345,7 @@ Location
 Complete modules in Data Camp that addresses data wrangling and more basic statistics in R.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/03-module/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/03-module/#data-camp&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -456,12 +456,12 @@ Go though an R walkthrough looking at recoding items through the lens of the Big
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#week-3-overview&#34;&gt;Week 3 Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#week-4-overview&#34;&gt;Week 4 Overview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;week-3-overview&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Week 3 Overview&lt;/h3&gt;
+&lt;div id=&#34;week-4-overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Week 4 Overview&lt;/h3&gt;
 &lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -492,10 +492,10 @@ Location
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Complete modules in Data Camp that addresses data wrangling and more basic statistics in R.
+Complete a module in Data Camp that addresses regression using R.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/03-module/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/datacamp/04-module/#data-camp&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -510,10 +510,10 @@ Complete modules in Data Camp that addresses data wrangling and more basic stati
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Create a draft of your instrument
+Refine the draft of your instrument
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/03-tasks/#develop-a-draft&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/04-tasks/#refine-the-draft&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -528,10 +528,28 @@ Create a draft of your instrument
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Read a few papers on the Myers-Briggs Type Indicator and create a post
+Respond to a post on personality tests
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#read-some-papers&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/tasks/04-tasks/#responding&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
+Read a few papers on conspiracy theories and create a post
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/04-readings/#read-some-papers&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -546,10 +564,10 @@ Read a few papers on the Myers-Briggs Type Indicator and create a post
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Read chapters on quantitative data and testing
+Read chapters on evalutaion, measurement, and reliability
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#review-some-materials&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/04-readings/#review-some-materials&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -564,10 +582,10 @@ Read chapters on quantitative data and testing
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Watch an optional video on the Myers-Briggs Type Indicator
+Watch an optional video on assessing and measuring the belief structure of those who believe in conspriacies
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/03-readings/#watch-an-optional-video&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/04-readings/#watch-an-optional-video&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -582,14 +600,38 @@ Watch an optional video on the Myers-Briggs Type Indicator
 &lt;/svg&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:left;width: 30em; vertical-align: middle !important;&#34;&gt;
-Go though an R walkthrough looking at recoding items through the lens of the Big Five personality traits
+Take a tour of spurious correlations
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;width: 10em; vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://edp611.asocialdatascientist.com/walkthroughs/03-walkthrough/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/readings/04-readings/#something-fun&#34;&gt;Link&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;svg aria-hidden=&#34;true&#34; role=&#34;img&#34; viewbox=&#34;0 0 448 512&#34; style=&#34;height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;&#34;&gt;
+&lt;path d=&#34;M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z&#34;&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;width: 30em; &#34;&gt;
+Go though an R walkthrough introducting the idea of an exploratory factor analysis
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center;width: 10em; &#34;&gt;
+&lt;a href=&#34;https://edp611.asocialdatascientist.com/walkthroughs/04-walkthrough&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Even if you have not been introduced to the idea or believe yourself to need a great deal of assistance, the overall idea here is to get a feel for regression and what it can do. We’ll use the general notion of regression to address areas of measurement in the remaining weeks.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 </description>
     </item>
