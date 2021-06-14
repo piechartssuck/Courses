@@ -1,0 +1,411 @@
+---
+title: "Nerds"
+linktitle: "Week 5: Nerds"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  walkthroughs:
+    parent: Walkthroughs
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #761756;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r setup, include=FALSE,purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+
+library(tidyverse)
+library(naniar)
+library(mice)
+library(reactable)
+library(knitr)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+```
+
+## First Up
+
+Please make sure you complete the regression module on Data Camp before going through this. 
+
+## Take This
+
+First things first, please go and take the [Nerdy Personality Attributes Scale](https://openpsychometrics.org/tests/NPAS/){target="_blank"}. 
+
+## Read Up
+
+Now go and read the paper included in the download [An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks (Finister, Pollet, & Neave, 2020)](/readings/05-readings/#download-digital-copies){target="_blank"}. 
+
+## Data Files
+
+Please download the files we'll need.
+
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP611Week5Data&Script.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 5 Data and Script and Paper",
+  button_label = "Download Data and Script and Paper",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Prerequisites {-}
+
+Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `NerdyData.csv`, `NerdyCodebook_PM.csv`, `NerdyCodebook_TIPI.csv`, `nerdyMeasures_PM.csv`, and `nerdyMeasures_TIPI.csv` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we'll be using today.
+
+Before we load the libraries, we're going to grab three packages called `mice` and `naniar` that are on CRAN. To install them, please run the following command in your console
+
+```{r eval = FALSE}
+install.packages(c("mice", "naniar"), dependencies = TRUE)
+```
+
+or you can simply use the dropdown menu by going to **Tools > Install Packages** and type in `mice`, `naniar` or `mice` `naniar`. Remember to have **Install dependencies** checkmarked! 
+
+If you would like to know more about the `mice` package and/or the concept of imputation, take a look at the [Flexibile Imputation of Missing Data](https://stefvanbuuren.name/fimd/){target="_blank"} site.
+
+Now please go ahead and load up the following libraries or download and load if needed
+
+```{r eval=FALSE}
+library("tidyverse")
+library("mice")
+library("naniar")
+library("reactable")
+```
+
+Then set the working directory to the location of the script by running
+
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+in your console or by selecting **Session > Set Working Directory > To Source File Location**.
+
+## Data Files
+
+We'll be looking at responses from a sample of 2449 people who took this test in 2016. 
+
+## Loading a Local Data Set
+
+If you remember how to load a local dataset, then please skip this section
+
+```{r eval=FALSE}
+nerdy_data <- read_csv("NerdyDataMissing.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+nerdy_data <- read_csv(here::here("static", "data", "NerdyDataMissing.csv"))
+```
+
+```{r eval=FALSE}
+nerdy_pm_codebook <- read_csv("NerdyCodebook_PM.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+nerdy_pm_codebook <-
+  read_csv(here::here("static", "data", "NerdyCodebook_PM.csv"))
+```
+
+```{r eval=FALSE}
+nerdy_pm_measures <- read_csv("NerdyMeasures_PM.csv")
+```
+
+```{r echo=FALSE, purl=FALSE}
+nerdy_pm_measures <-
+  read_csv(here::here("static", "data", "NerdyMeasures_PM.csv"))
+```
+
+and take a look at the data
+
+```{r}
+nerdy_data %>%
+  head()
+```
+
+or via the `reactable()` package
+
+```{r}
+reactable(nerdy_data,
+          searchable = TRUE, 
+          defaultPageSize = 5,
+          showPageSizeOptions = TRUE,
+          highlight = TRUE)
+```
+
+as well as the codebook and measures
+
+```{r}
+nerdy_pm_codebook
+```
+
+```{r}
+nerdy_pm_measures
+```
+
+## Missingness
+
+You may be asking *why should I care about missing data?* and *can't I just delete them?* Great questions! 
+
+Some analyses like linear regression that you covered this week require complete observations, but still in most statistical software you won’t get an error when feeding the system with data containing missing values (cough cough but R does tell you there's an error cough cough). 
+
+Instead, most non R softwares automatically delete incomplete cases...and silently at that which is pretty rude. However, if you plan to say make conclusions about the entire data set. an interpretation just wouldn’t be appropriate since you cannot guarantee the same observations. Even worse, by dropping the observations completely we lose statistical power which in a nutshell results in a likelihood that you'll conclude that there isn't an effect when there is (aka a Type II error). Oh but it gets even better, the dropped observations could provide crucial information about the problem of interest resulting in biased results. 
+
+In practice, this can be the difference between being able to *conclude a treatment likely works* and *reporting maybe something happened but we don't know*. So missing data is a big problem that we still haven't been able to tackle directly yet^[...though recent advances in machine learning have brought us closer in the past three years than we have had in the past 50). 
+
+To tackle this issue, there are two prevailing philosophical approaches. On one side are those who believe that the data is what it is and you have to deal with what you get. On the other side you have those that believe a machine, whether it be using an algorithm by itself or coupled with artificial intelligence, can predict the likely values that should have been there given certain assumptions are met (which we cover in the next section)^[In all fairness, I am in this group and absolutely biased.]. 
+
+So for the latter group, there are a number of tactics that can be used to tackle this missingness issue, but the main three are
+
+1. **pairwise deletion**: a method in which data for a variable pertinent to a specific assessment are included, even if values for the same individual on other variables are missing.
+
+2. **listwise deletion**: a method in which an entire case record is excluded from statistical analysis if values are found to be missing for any variable of interest.
+
+3. **imputation**: a procedure for filling in missing values in a data set before analyzing the resultant completed data set.
+
+Most people in this camp use the deletion techniques as a last resort because there is wariness about removing data. In this walkthrough, we'll cover the last approach: imputation.
+
+## Assumptions
+
+If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). Well that really never goes away and for now^[Initial findings from a few recent machine learning approaches indicate that we may not have to classify data as MCAR, MAR, and MNAR, but those are preliminary and need to be scrutinized.], to use/not to be able to use any technique that deals with missing data, we have to determine if our data is
+
+```{r echo=FALSE,purl=FALSE}
+
+type <- tibble(
+  
+  missingness <- c(
+    "Missing Completely At Random",
+    "Missing At Random",
+    "Missing Not At Random"
+  ),
+  
+  short <- c("MCAR",
+             "MAR",
+             "MNAR"
+             ),
+
+  description <- c(
+    "The locations of missing values are random and not dependent on other data.",
+    "The locations of missing values are random BUT depend on some other observed data",
+    "There is a pattern to the missing values"
+    ),
+
+  highlights <- c(
+    "Strong assumptions; difficult or possibly impossible to detect",
+    "Neutral(ish) assumptions; possible to detect",
+    "Weak assumptions; easy to detect"
+    ),
+    
+  do <- c(
+    "Deletion techniques or imputation with confidence in reporting",
+    "Advanced imputation with caution in reporting.",
+    "An inability to report anything meaningful (get new or more data because this is bad)."
+    ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE,purl=FALSE}
+type %>%
+  kbl(col.names = c("Type", "Shorthand", "Description", "Traits", "What Can You Do?"), 
+      "html", 
+      escape = FALSE,
+      align = 'lllll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "30em") %>%
+  column_spec(5, width = "30em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+### Note
+
+Firstly, there is a lot that is not covered here. This is a high level topic that has hopefully been brought down to an understandable level, but in doing that some information is lost or has been set aside. This walkthrough is meant to get you thinking about a problem that many of us come across, but few of us know what to do about it. With that said, please reach out if you are interested in learning more or need clarifications.
+
+## What to Do About Missing Data
+
+In the real world, data involving humans is rarely results in a complete set of values. As you can imagine, this is nearly always the case when conducting surveys where respondents are free to skip questions^[You're first reaction may be to require respondents to address items -aka a forced response- but that almost always backfires resulting in a higher rate of nonresponses]. So what can you do? 
+
+### Testing for MCAR
+
+While it is difficult, if not impossible to figure out if a dataset is MCAR, we can use probability to determine if it could be. The best way to do this is to figure out a formula for the regression, and to test that - but we're not going to take that approach given the makeup of the course. A simpler, yet less robust way is to use a technique developed by [Little (1988)](https://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478722){target="_blank"} that basically gives is a probability that a data set is MCAR. But remember, there is always an associated probability that it may not be too!
+
+Using the `narniar` package, we can use the test. For those of you who have had a basic statistics course, the null hypothesis ($H_0$) is that the data is MCAR while the test statistic is a chi-squared ($\chi^2$) value.
+
+```{r}
+mcar_test(nerdy_data)
+```
+Given the high $p$-value, we can say that `nerdy_data` may be MCAR. To get an idea of the number of items that have missing values, you can use 
+
+```{r}
+n_var_miss(nerdy_data)
+```
+
+To view the missingness by item, we can use the following
+```{r}
+gg_miss_var(nerdy_data)
+```
+
+which just says all 26 columns have at least one missing value. To see common missingness by items, we can use
+```{r}
+gg_miss_upset(nerdy_data,
+              nsets = n_var_miss(nerdy_data))
+```
+
+where `nsets` are the number of columns which shows us
+
+* all of the variables with missing values
+* all of the common values that are missing
+* each combination of missing values occurs once
+
+but that is really difficult to read and we're just getting a feel for the missingness, so let's try limiting the  number of variables to say the top 5
+```{r}
+gg_miss_upset(nerdy_data,
+              nsets = 5)
+```
+
+OK that's better! Now its easier to see questions 15, 22, and 23 share a common missing value and so forth.
+
+We can even use `ggplot` to visualize this differently by item. First we have to add a column for the respondents by 
+
+```{r}
+nerdy_data_rowid <- nerdy_data %>% 
+                    rowid_to_column("respondent")
+```
+
+which just adds a column in front with unique ids.
+```{r}
+nerdy_data_rowid
+```
+
+And then let's visualize it for Q1
+```{r}
+ggplot(data = nerdy_data_rowid, 
+       aes(x = respondent,
+       y = Q1)) +
+  geom_miss_point()
+```
+
+or maybe its easier without the default grey background and bigger
+```{r}
+ggplot(data = nerdy_data_rowid, 
+       aes(x = respondent,
+       y = Q1)) +
+  geom_miss_point(size = 2) +
+  theme_minimal()
+```
+
+On a side note, yes the *x*-axis looks odd and we could fix it, but we're just exploring.
+
+### Multiple Imputation
+
+Run the command `mice()` from the aptly named `mice` package to impute a data set. Here `m` is the number of times your computer applies the imputation algorithm to the data set
+
+```{r, message=FALSE, results='hide'}
+nerdy_data_imputed <- mice(nerdy_data, 
+                              m = 15, 
+                              method = 'pmm')  %>%
+                           complete(1) %>%
+                           as_tibble()
+```
+
+```{r}
+nerdy_data_imputed
+```
+
+Now there are a lot of ways to impute data, some which will do a better job than others and dependent of what type of data you have. To see a list, just run `?mice::mice` and scroll about halfway down the help page. You can change the approach by replacing `pmm` in `method = 'pmm'` above. 
+
+Anyway is our new data set any better because it look like there are still missing values. Well let's take a look
+
+```{r}
+n_var_miss(nerdy_data_imputed)
+```
+
+```{r}
+gg_miss_var(nerdy_data_imputed)
+```
+
+```{r}
+gg_miss_upset(nerdy_data_imputed)
+```
+
+Oh that looks a lot better! We could change `m` or the `method` to get a more complete data set.
+
+## The Data
+I randomized missing data the original subset which can be seen by opening the `NerdyDataSubset.csv` file. To take a look at the original full data, take a look at `NerdyDataFull.csv`. The remaining files address measures and data from that set.
+
+## More About `narian`
+The `narian` package has alot of functionality not covered here. Take a look at the following for more help
+
+* [Getting Started with naniar](https://naniar.njtierney.com/articles/getting-started-w-naniar.html#introduction){target="_blank"}
+
+* [Gallery of Missing Data Visualisations](https://naniar.njtierney.com/articles/naniar-visualisation.html){target="_blank"}
+

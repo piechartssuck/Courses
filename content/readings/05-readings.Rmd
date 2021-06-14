@@ -1,0 +1,194 @@
+---
+title: "Nerds"
+linktitle: "Week 5: Nerds"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Literature
+
+### Download Digital Copies
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week5Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 5 Readings",
+  button_label = "Download Readings",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+
+```{r echo=FALSE}
+
+slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}")
+
+readings <- tibble(
+  
+  paper <- c(
+    "Finister, C., Pollet, T. V., & Neave, N. (2021). An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks. *The Social Science Journal*, 1-9.",
+    "McCain, J., Gentile, B., & Campbell, W. K. (2015). A Psychological Exploration of Engagement in Geek Culture. *PLOS ONE, 10*(11), e0142200."
+  ),
+  
+  post <- c("This week is related to critiquing. First read both articles and then pick one to critique, in particular scrutinize the measures used and use what we've covered oin the course as your justifications.",
+            "*ditto*"
+            ),
+
+  channel <- c(
+    "`#nerds`",
+    "*ditto*"
+    ),
+
+  link <- c(
+    paste0("[![",slackico,"](/readings/01-readings_files/slack-ico.png 'Slack Icon'){width=20px}]",
+    "(https://2021edp611.slack.com/archives/C024P7BHUHL){target='_blank'}"
+    ),
+  "*ditto*"
+    ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Post", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "5em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;')
+```
+</center>
+
+### Review Some Materials
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "20px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "20px"))
+
+site <- as.character(fa("link", fill = "#a56af0", height = "20px"))
+
+review <- tibble(
+  
+  source <- c("Chapter VI: Item Analysis^[While I hope you go through the R syntax to see examples of the concepts, the primary focus here is to introduce you to the idea of item difficulty]",
+              "Chapter IX: Validity"
+  ),
+  
+  link <- c(
+    paste0("[",site,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/validity.html){target='_blank'}"
+    )
+  ),
+
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  kbl(col.names = c("Review", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;')
+```
+</center>
+
+### Watch an Optional Video
+
+Here is a clip from a series called Crash Course Statistics where observational data collection methods are discussed including sampling, populations, and item design.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rf-fIpB4D50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>

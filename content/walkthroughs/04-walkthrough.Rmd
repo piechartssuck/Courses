@@ -202,7 +202,7 @@ reactable(conspiracy_codebook,
           defaultPageSize = 3)
 ```
 
-Now that is certainly better but if you don't like it, just change the `3` in `defaultPageSize = 3` to whatever you want. 
+Now that is certainly better but if you don't like it, just change the `3` in `defaultPageSize = 3` to whatever you want.
 
 Moving on, what if the data set is big? Then we might have an even bigger problem in how to display it. Let's remind ourselves of the dimensions
 
