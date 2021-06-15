@@ -38,15 +38,15 @@ lessons:
     tasks: "04-exercise"
     due: "04-due"
 
-  # - title: 'Factors! FACTORS! They’re Everywhere! Your Firearms Are Useless Against Them!'
-  #   session: 5
-  #   date: "August 2, 2020"
-  #   readings: "05-readings"
-  #   datacamp: "05-lesson"
-  #   walkthroughs: "05-walkthrough"
-  #   tasks: "05-exercise"
-  #   due: "05-due"
-  #
+  - title: 'Nerds'
+    session: 5
+    date: "June 14, 2021"
+    readings: "05-readings"
+    datacamp: "05-lesson"
+    walkthroughs: "05-walkthrough"
+    tasks: "05-exercise"
+    due: "05-due"
+
   # - title: 'From a Certain Poimt of View... A Certain Point of View?'
   #   session: 6
   #   date: "August 9, 2020"
