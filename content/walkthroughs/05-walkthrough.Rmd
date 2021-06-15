@@ -111,7 +111,7 @@ downloadthis::download_file(
 
 ## Prerequisites {-}
 
-Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `NerdyData.csv`, `NerdyCodebook_PM.csv`, `NerdyCodebook_TIPI.csv`, `nerdyMeasures_PM.csv`, and `nerdyMeasures_TIPI.csv` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we'll be using today.
+Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files that start with `Nerdy` and end a `.csv` - and drop them all in a folder of their own.
 
 Before we load the libraries, we're going to grab three packages called `mice` and `naniar` that are on CRAN. To install them, please run the following command in your console
 

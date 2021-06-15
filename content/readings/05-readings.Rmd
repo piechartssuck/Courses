@@ -97,7 +97,7 @@ readings <- tibble(
     "McCain, J., Gentile, B., & Campbell, W. K. (2015). A Psychological Exploration of Engagement in Geek Culture. *PLOS ONE, 10*(11), e0142200."
   ),
   
-  post <- c("This week is related to critiquing. First read both articles and then pick one to critique, in particular scrutinize the measures used and use what we've covered oin the course as your justifications.",
+  post <- c("This week is related to critiquing. First read both articles and then pick one to critique, in particular scrutinize the measures used and use what we've covered in the course as your justifications.",
             "*ditto*"
             ),
 
