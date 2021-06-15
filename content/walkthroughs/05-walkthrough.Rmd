@@ -142,7 +142,7 @@ in your console or by selecting **Session > Set Working Directory > To Source Fi
 
 ## Data Files
 
-We'll be looking at responses from a sample of 2449 people who took this test in 2016. 
+We'll be looking at responses from a subsample of 10 from 25442 people who took this test. 
 
 ## Loading a Local Data Set
 
