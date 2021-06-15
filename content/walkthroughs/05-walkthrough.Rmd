@@ -315,6 +315,7 @@ gg_miss_var(nerdy_data)
 ```
 
 which just says all 26 columns have at least one missing value. To see common missingness by items, we can use
+
 ```{r}
 gg_miss_upset(nerdy_data,
               nsets = n_var_miss(nerdy_data))
@@ -327,6 +328,7 @@ where `nsets` are the number of columns which shows us
 * each combination of missing values occurs once
 
 but that is really difficult to read and we're just getting a feel for the missingness, so let's try limiting the  number of variables to say the top 5
+
 ```{r}
 gg_miss_upset(nerdy_data,
               nsets = 5)
@@ -400,7 +402,7 @@ gg_miss_upset(nerdy_data_imputed)
 Oh that looks a lot better! We could change `m` or the `method` to get a more complete data set.
 
 ## The Data
-I randomized missing data the original subset which can be seen by opening the `NerdyDataSubset.csv` file. To take a look at the original full data, take a look at `NerdyDataFull.csv`. The remaining files address measures and data from that set.
+I randomized missing data the original subset which can be seen by opening the `NerdyDataSubset.csv` file. To take a look at the original full data, take a look at `NerdyDataFull.csv`. The remaining files address measures and data from that set.<br>
 
 ## More About the Packages
 
@@ -413,5 +415,3 @@ I randomized missing data the original subset which can be seen by opening the `
 2. The `mice` package is confusing at times and can hurt your head, but its by far one of the most versatile and powerful packages to impute data. So if you find yourself with missing data, it may be beneficial to dive in headfirst. To get acquainted, a couple vignettes can be found using the link below 
 
     * [miceVignettes](https://www.gerkovink.com/miceVignettes/){target="_blank"}
-
-
