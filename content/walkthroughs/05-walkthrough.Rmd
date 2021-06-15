@@ -223,9 +223,13 @@ So for the latter group, there are a number of tactics that can be used to tackl
 
 Most people in this camp use the deletion techniques as a last resort because there is wariness about removing data. In this walkthrough, we'll cover the last approach: imputation.
 
+### Note
+
+Please be aware that this idea of addressing missingness in a data set is a multifaceted issue, there is a lot that is not covered here, and in practice it is very easy to go down a *rabbit hole*. This walkthrough is written in a way that hopefully brings a high level topic down to an understandable level. In doing that, some information is lost or has been set aside for the sake of simplicity. With that said, view this through the lens of a problem that you might or will even likely come across. The issue is that few people know what to do about missing data so they either ignore or delete it without considering the ramifications. However if you are interested in learning more or need clarifications, please reach out!
+
 ## Assumptions
 
-If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). Well that really never goes away and for now^[Initial findings from a few recent machine learning approaches indicate that we may not have to classify data as MCAR, MAR, and MNAR, but those are preliminary and need to be scrutinized.], to use/not to be able to use any technique that deals with missing data, we have to determine if our data is
+If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
 
 ```{r echo=FALSE,purl=FALSE}
 
@@ -285,10 +289,6 @@ type %>%
   row_spec(3, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
-
-### Note
-
-Firstly, there is a lot that is not covered here. This is a high level topic that has hopefully been brought down to an understandable level, but in doing that some information is lost or has been set aside. This walkthrough is meant to get you thinking about a problem that many of us come across, but few of us know what to do about it. With that said, please reach out if you are interested in learning more or need clarifications.
 
 ## What to Do About Missing Data
 
