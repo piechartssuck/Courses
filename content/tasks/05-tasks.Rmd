@@ -28,7 +28,7 @@ showtext_auto()
 
 There are two items to submit this week
 
-1. Simulate a "large" data set using whatever software package you prefer. Below are some links to help you out for the software packages^[Reach out if you are unable to do this.]
+1. Simulate a "large" data set^[So what's a large data set? If you have an idea of what your population numbers might look like. then use that. Otherwise, I suggest starting at 100 cases per item.] using whatever software package you prefer. Below are some links to help you out for the software packages^[Reach out if you are unable to do this.]
 
     * [Excel](https://support.microsoft.com/en-us/office/randbetween-function-4cc7f0d1-87dc-4eb7-987f-a469ab381685){target="_blank"}
 

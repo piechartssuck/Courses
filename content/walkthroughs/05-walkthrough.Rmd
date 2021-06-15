@@ -402,10 +402,16 @@ Oh that looks a lot better! We could change `m` or the `method` to get a more co
 ## The Data
 I randomized missing data the original subset which can be seen by opening the `NerdyDataSubset.csv` file. To take a look at the original full data, take a look at `NerdyDataFull.csv`. The remaining files address measures and data from that set.
 
-## More About `narian`
-The `narian` package has alot of functionality not covered here. Take a look at the following for more help
+## More About the Packages
 
-* [Getting Started with naniar](https://naniar.njtierney.com/articles/getting-started-w-naniar.html#introduction){target="_blank"}
+1. The `narian` package has alot of functionality not covered here. Take a look at the following for more help
 
-* [Gallery of Missing Data Visualisations](https://naniar.njtierney.com/articles/naniar-visualisation.html){target="_blank"}
+    * [Getting Started with naniar](https://naniar.njtierney.com/articles/getting-started-w-naniar.html#introduction){target="_blank"}
+
+    * [Gallery of Missing Data Visualisations](https://naniar.njtierney.com/articles/naniar-visualisation.html){target="_blank"}
+
+2. The `mice` package is confusing at times and can hurt your head, but its by far one of the most versatile and powerful packages to impute data. So if you find yourself with missing data, it may be beneficial to dive in headfirst. To get acquainted, a couple vignettes can be found using the link below 
+
+    * [miceVignettes](https://www.gerkovink.com/miceVignettes/){target="_blank"}
+
 
