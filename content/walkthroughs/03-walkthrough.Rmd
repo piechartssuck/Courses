@@ -429,4 +429,8 @@ agg_scores <- big_five_data_EXT_rev %>%
 agg_scores
 ```
 
+## Let's Stop Here
 Well that is quite enough for now. There are other ways to assess reliability. As you move along in the course, keep in mind that none of these could yield good measures for internal consistency. You may have to look around the internet for other R commands and packages that may be a better fit. As usual, you always have your peers and me if you get stuck!
+
+## Looking Ahead
+Next week we get into uncovering underlying traits and groupings that a data set may have using a process called Exploratory Factor Analysis. While there certainly a level of complexity that has to be understood, the return in information you can get about a measurable data set far outweighs the cost.  

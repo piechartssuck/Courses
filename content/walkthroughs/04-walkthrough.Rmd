@@ -459,4 +459,8 @@ However interpretations aren't conducted at the individual level, rather they ar
 
 If you want to know what the study said broadly, please take a look over the Brotherton, French & Pickering (2013) paper. 
 
-OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Next week we deal with missingness!
+## Let's Stop Here
+OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Again this has been simplified, though it may not feel like it right now. Regardless when we lose complexity, a lot of the additional assumptions, benefits, possible outcomes, side effects, etc are lost as well so I encourage you to further explore EFAs and after you get "comfortable" with them, take a look at confirmatory factor analyses (CFAs) as well.
+
+## Looking Forward
+Recall that a factor analysis can only be performed on a full set of data, but what if you don't have that? Its something we deal with all of the time and we'll talk about how to deal with missingness next week!
