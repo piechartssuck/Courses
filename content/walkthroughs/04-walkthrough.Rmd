@@ -473,7 +473,7 @@ OK so we've conducted an EFA, but what I didn't tell you is that there are some 
 1. Each factor must only contain items explaining at least 10% of the variance in its respective factor.
 2. Each factor is recommended to have at least three items.
 3. Each factor must be interpreted in a reasonable and applicable way.
-4  It is recommended that your factoring do not have items that appear in multiple factors with a similar magnitude - aka the measure of an item on the factor.
+4. It is recommended that your factoring do not have items that appear in multiple factors with a similar factor loading.
 
 ## Let's Stop Here
 OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Again this has been simplified, though it may not feel like it right now. Regardless when we lose complexity, a lot of the additional assumptions, benefits, possible outcomes, side effects, etc are lost as well so I encourage you to further explore EFAs and after you get "comfortable" with them, take a look at confirmatory factor analyses (CFAs) as well.
