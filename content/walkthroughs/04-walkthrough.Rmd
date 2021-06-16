@@ -352,13 +352,21 @@ Each result using the `fa()` command actually gives you a list, and each element
 EFA$loadings
 ```
 
-You can also create a diagram of loadings. The `fa.diagram()` command takes the output from `fa()` and creates a diagram, called a *path diagram* to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.
+You can also create a diagram of loadings. The `fa.diagram()` command takes the output from `fa()` and creates a diagram, called a *path diagram* to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results where the factor loading are represented on the arrows going from each factor to their respective items.
 
 ```{r}
 fa.diagram(EFA)
 ```
 
-For those of you who may be wondering, those numbers on the lines going from the items to the factors is called a *factor loading*, which is the correlation between the observed score and the latent score. Generally, the higher the better since the square of factor loading can be directly translated as item reliability. The other number between the factors is called a *factor correlation* that I am definitely not going to cover here other than to say that it tells us how well the factors correlate with each other. Since you are just learning about EFAs, disregard both of these for right now and just focus on the underlying concept of a factor and possibly think about how amazing it is that an algorithm and statistical approach can group variables together simply from raw response data.
+For those of you who have some statistical background, *factor loadings* show the correlation between the observed score and the latent score. Generally, the higher the better since the square of factor loading can be directly translated as item reliability. The other number between the factors is called a *factor correlation* that I am definitely not going to cover here other than to say that it tells us how well the factors correlate with each other. Since you are just learning about EFAs, disregard both of these for right now and just focus on the underlying concept of a factor and possibly think about how amazing it is that an algorithm and statistical approach can group variables together simply from raw response data.
+
+### What if you only have a single factor?
+
+A single factor tells you that your items likely fit onto a single theoretical construct which is just a fancy way of saying a single category. Operationally that means they can be represented on one dimension/scale which is nice and easy, but you can't get much information out of the items beyond what they tell you individually. But this is not necessarily a bad thing and you can use the output to your advantage, in that you can
+
+1. use the factor analysis to help refine your scale like choosing only those items with higher loadings on the factor and removing those that are lower - i.e. by using some threshold to separate the higher values from the lower values you see on the arrows going from the factor to the items. 
+
+2. see if any of your items could be reverse-scored on the scale by determining any negative loadings on the factor - i.e. negative values you see on the arrows going from the factor to the items. 
 
 ### Side Note: Lack of Pipes
 So why can't we just use pipes and `ggplot` here? Well the main problem can be found using this command
