@@ -35,7 +35,7 @@ editor_options:
 <li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
 <li><a href="#method-explanatory-factor-analysis">Method: Explanatory Factor Analysis</a>
 <ul>
-<li><a href="#a-note">A Note</a></li>
+<li><a href="#a-few-things">A Few Things</a></li>
 <li><a href="#example">Example</a></li>
 <li><a href="#viewing-and-visualizing-factors">Viewing and Visualizing Factors</a></li>
 <li><a href="#side-note-lack-of-pipes">Side Note: Lack of Pipes</a></li>
@@ -45,6 +45,7 @@ editor_options:
 <li><a href="#using-items">…using Items</a></li>
 <li><a href="#using-participants">…using Participants</a></li>
 </ul></li>
+<li><a href="#caveaut">Caveaut</a></li>
 <li><a href="#lets-stop-here">Let’s Stop Here</a></li>
 <li><a href="#looking-forward">Looking Forward</a></li>
 </ul>
@@ -255,8 +256,8 @@ With very little effort, I have this table with a nice option to fool around wit
 <p>The basic assumption of a <strong>FA</strong> is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.</p>
 <p>Moving forward, we’re going to conduct what is known as a single-factor <strong>exploratory factor analysis</strong>, or <strong>EFA</strong>. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.</p>
 <p>In a nutshell, an EFA is just a statistical method used to uncover underlying categorizations, groups, structures often hidden within a data set. This is done by assessing measures and could easily serve as your group level data! As a result, you can measure the internal reliability of a measure as well.</p>
-<div id="a-note" class="section level3">
-<h3>A Note</h3>
+<div id="a-few-things" class="section level3">
+<h3>A Few Things</h3>
 <p>When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.</p>
 <center>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
@@ -322,7 +323,7 @@ Between items of the same scale
 </tbody>
 </table>
 </center>
-<p>Given that we’ll be only concentrating on the latter, you may have to run more than one EFA.</p>
+<p>Given that we’ll be only concentrating on the latter, you may have to run more than one EFA. After conducting the EFA, there are some things to consider if and when implementing your next one whihc we will cover at the end.</p>
 </div>
 <div id="example" class="section level3">
 <h3>Example</h3>
@@ -426,6 +427,7 @@ Between items of the same scale
 <p>You can also create a diagram of loadings. The <code>fa.diagram()</code> command takes the output from <code>fa()</code> and creates a diagram, called a <em>path diagram</em> to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.</p>
 <pre class="r"><code>fa.diagram(EFA)</code></pre>
 <p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>For those of you who may be wondering, those numbers on the lines going from the items to the factors is called a <em>factor loading</em>, which is the correlation between the observed score and the latent score. Generally, the higher the better since the square of factor loading can be directly translated as item reliability. The other number between the factors is called a <em>factor correlation</em> that I am definitely not going to cover here other than to say that it tells us how well the factors correlate with each other. Since you are just learning about EFAs, disregard both of these for right now and just focus on the underlying concept of a factor and possibly think about how amazing it is that an algorithm and statistical approach can group variables together simply from raw response data.</p>
 </div>
 <div id="side-note-lack-of-pipes" class="section level3">
 <h3>Side Note: Lack of Pipes</h3>
@@ -522,6 +524,16 @@ MR3_factor &lt;- conspiracy_codebook %&gt;%
 <p>If you want to know what the study said broadly, please take a look over the Brotherton, French &amp; Pickering (2013) paper.</p>
 </div>
 </div>
+<div id="caveaut" class="section level2">
+<h2>Caveaut</h2>
+<p>OK so we’ve conducted an EFA, but what I didn’t tell you is that there are some guidelines to think about before implementing one. For those who have not had a statistics course may consider skipping the first for now, though the basic idea of the <em>variance</em> is given in this footer<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<ol style="list-style-type: decimal">
+<li>Each factor must only contain items explaining at least 10% of the variance in its respective factor.</li>
+<li>Each factor is recommended to have at least three items.</li>
+<li>Each factor must be interpreted in a reasonable and applicable way.
+4 It is recommended that your factoring do not have items that appear in multiple factors with a similar magnitude - aka the measure of an item on the factor.</li>
+</ol>
+</div>
 <div id="lets-stop-here" class="section level2">
 <h2>Let’s Stop Here</h2>
 <p>OK that’s enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Again this has been simplified, though it may not feel like it right now. Regardless when we lose complexity, a lot of the additional assumptions, benefits, possible outcomes, side effects, etc are lost as well so I encourage you to further explore EFAs and after you get “comfortable” with them, take a look at confirmatory factor analyses (CFAs) as well.</p>
@@ -535,5 +547,6 @@ MR3_factor &lt;- conspiracy_codebook %&gt;%
 <ol>
 <li id="fn1"><p>I am personally fond of the BSR.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Yuck<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>We essentially want a way to describe the <em>spread of our data</em> from one end to another, or <em>dispersion</em>. We have some ways to do this such as mean, median, and mode but that doesn’t tell us the whole picture since these are just ways to describe the average. They essentially do not say anything about how far away from the mean, median, or mode is from the raw data since that varies - ergo the term <em>variance</em>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

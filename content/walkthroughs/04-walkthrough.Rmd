@@ -263,7 +263,7 @@ Moving forward, we're going to conduct what is known as a single-factor **explor
 
 In a nutshell, an EFA is just a statistical method used to uncover underlying categorizations, groups, structures often hidden within a data set. This is done by assessing measures and could easily serve as your group level data! As a result, you can measure the internal reliability of a measure as well.
 
-### A Note
+### A Few Things
 When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.
 
 ```{r, echo=FALSE}
@@ -313,8 +313,7 @@ lst %>%
 ```
 </center>
 
-Given that we'll be only concentrating on the latter, you may have to run more than one EFA.
-
+Given that we'll be only concentrating on the latter, you may have to run more than one EFA. After conducting the EFA, there are some things to consider if and when implementing your next one whihc we will cover at the end.
 
 ### Example
 
@@ -345,7 +344,6 @@ and then to view the results
 EFA
 ```
 
-
 ### Viewing and Visualizing Factors
 
 Each result using the `fa()` command actually gives you a list, and each element of the list contains specific information about the analysis, including factor loadings. *Factor loadings* represent the strength and of the relationship between each item and the underlying factor, and they can range from -1 to 1. We can see this by looking only at the first column
@@ -359,6 +357,8 @@ You can also create a diagram of loadings. The `fa.diagram()` command takes the 
 ```{r}
 fa.diagram(EFA)
 ```
+
+For those of you who may be wondering, those numbers on the lines going from the items to the factors is called a *factor loading*, which is the correlation between the observed score and the latent score. Generally, the higher the better since the square of factor loading can be directly translated as item reliability. The other number between the factors is called a *factor correlation* that I am definitely not going to cover here other than to say that it tells us how well the factors correlate with each other. Since you are just learning about EFAs, disregard both of these for right now and just focus on the underlying concept of a factor and possibly think about how amazing it is that an algorithm and statistical approach can group variables together simply from raw response data.
 
 ### Side Note: Lack of Pipes
 So why can't we just use pipes and `ggplot` here? Well the main problem can be found using this command
@@ -458,6 +458,14 @@ to get a feel for how the data looks. So what does it all mean? Well this was an
 However interpretations aren't conducted at the individual level, rather they are generalized across a larger sample. This means creating overarching statements about any of these ten participants separately would be complete nonsense, rather doing this can provide indicators of what you may see when implementing an EFA on the entire sample. 
 
 If you want to know what the study said broadly, please take a look over the Brotherton, French & Pickering (2013) paper. 
+
+## Caveaut
+OK so we've conducted an EFA, but what I didn't tell you is that there are some guidelines to think about before implementing one. For those who have not had a statistics course may consider skipping the first for now, though the basic idea of the *variance* is given in this footer^[We essentially want a way to describe the *spread of our data* from one end to another, or *dispersion*. We have some ways to do this such as mean, median, and mode but that doesn't tell us the whole picture since these are just ways to describe the average. They essentially do  not say anything about how far away from the mean, median, or mode is from the raw data since that varies - ergo the term *variance*.]
+
+1. Each factor must only contain items explaining at least 10% of the variance in its respective factor.
+2. Each factor is recommended to have at least three items.
+3. Each factor must be interpreted in a reasonable and applicable way.
+4  It is recommended that your factoring do not have items that appear in multiple factors with a similar magnitude - aka the measure of an item on the factor.
 
 ## Let's Stop Here
 OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Again this has been simplified, though it may not feel like it right now. Regardless when we lose complexity, a lot of the additional assumptions, benefits, possible outcomes, side effects, etc are lost as well so I encourage you to further explore EFAs and after you get "comfortable" with them, take a look at confirmatory factor analyses (CFAs) as well.
