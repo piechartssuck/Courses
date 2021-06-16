@@ -46,6 +46,7 @@ editor_options:
 <li><a href="#using-items">…using Items</a></li>
 <li><a href="#using-participants">…using Participants</a></li>
 </ul></li>
+<li><a href="#additional-things">Additional Things</a></li>
 <li><a href="#caveaut">Caveaut</a></li>
 <li><a href="#lets-stop-here">Let’s Stop Here</a></li>
 <li><a href="#looking-forward">Looking Forward</a></li>
@@ -528,10 +529,15 @@ MR3_factor &lt;- conspiracy_codebook %&gt;%
              na.rm = TRUE), 
      main = &quot;Factor Scores&quot;)</code></pre>
 <p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
-<p>to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population for the purposes of showing an example. You should always perform an EFA in your entire data set where applicable, unless there is an underlying reason not to.</p>
-<p>However interpretations aren’t conducted at the individual level, rather they are generalized across a larger sample. This means creating overarching statements about any of these ten participants separately would be complete nonsense, rather doing this can provide indicators of what you may see when implementing an EFA on the entire sample.</p>
-<p>If you want to know what the study said broadly, please take a look over the Brotherton, French &amp; Pickering (2013) paper.</p>
+<p>to get a feel for how the data looks. So what does it all mean with respect to the larger data set? Well nothing because EFAs only apply to the data that was used. This was an example of how to go about performing one so we used a very small subset of the entire population for the purposes of showing an example. To administer a proper one, we would go back and perform it on the entire 2449 row data set. In fact, as a general rule of thumb, you should always perform an EFA in your entire data set unless there is an underlying reason not to.</p>
 </div>
+</div>
+<div id="additional-things" class="section level2">
+<h2>Additional Things</h2>
+<ol style="list-style-type: decimal">
+<li><p>Even though we looked at how factors apply at to the participants, you should know that interpretations aren’t conducted at the individual level. This means creating overarching statements about any of these ten participants separately would be complete nonsense. However the benefit is when conducting one using a subset of a large data, you get information in the form of indicators - or to put it another way you get an idea of what an EFA on the entire data set may tell you. If you do this, just make sure to use a large enough random sample of the participants instead of what I did in the example.</p></li>
+<li><p>If you want to know what the study said broadly, please take a look over the Brotherton, French &amp; Pickering (2013) paper.</p></li>
+</ol>
 </div>
 <div id="caveaut" class="section level2">
 <h2>Caveaut</h2>
