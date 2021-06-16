@@ -22,6 +22,8 @@ editor_options:
 <script src="/rmarkdown-libs/reactwidget/react-tools.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/reactable-binding/reactable.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 <div id="TOC">
 <ul>
@@ -33,6 +35,7 @@ editor_options:
 <li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
 <li><a href="#method-explanatory-factor-analysis">Method: Explanatory Factor Analysis</a>
 <ul>
+<li><a href="#a-note">A Note</a></li>
 <li><a href="#example">Example</a></li>
 <li><a href="#side-note">Side Note</a></li>
 <li><a href="#viewing-and-visualizing-factors">Viewing and Visualizing Factors</a></li>
@@ -246,6 +249,98 @@ With very little effort, I have this table with a nice option to fool around wit
 <p>Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items <em>hang out together</em> to create a construct? This is the underlying principle of a <strong>factor analysis</strong>, or <strong>FA</strong>.</p>
 <p>The basic assumption of a <strong>FA</strong> is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.</p>
 <p>Moving forward, we’re going to conduct what is known as a single-factor <strong>explanatory factor analysis</strong>, or <strong>EFA</strong>. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.</p>
+<div id="a-note" class="section level3">
+<h3>A Note</h3>
+<p>When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.</p>
+<pre class="r"><code>lst &lt;- tibble(
+  
+  approach = c(&quot;Performed accounting for multiple scales&quot;,
+               &quot;Performed on scales that have been reduced&quot;,
+               &quot;Performed on grouped items with like scales&quot;
+               ),
+  
+  complexity = c(&quot;Most&quot;,
+                 &quot;Less&quot;,
+                 &quot;Minimal&quot;
+                 ),
+  
+  information = c(&quot;Information is lossless&quot;,
+                  &quot;Information gathered from higher order scales is lost due to reduction&quot;,
+                  &quot;Only information between items with the same scaling is retained&quot;
+                  ),
+  
+  get = c(&quot;Between items of the same AND different scales&quot;,
+         &quot;Between items of the same AND different scales at the lowest scaling&quot;,
+          &quot;Between items of the same scale&quot;
+         )
+  
+)</code></pre>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;vertical-align: middle !important;">
+EFA approach
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+Complexity
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+Retention
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Performed accounting for multiple scales
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Most
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Information is lossless
+</td>
+<td style="text-align:left;vertical-align: middle !important;">
+Between items of the same AND different scales
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Performed on scales that have been reduced
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Less
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Information gathered from higher order scales is lost due to reduction
+</td>
+<td style="text-align:left;vertical-align: middle !important;">
+Between items of the same AND different scales at the lowest scaling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Performed on grouped items with like scales
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Minimal
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Only information between items with the same scaling is retained
+</td>
+<td style="text-align:left;vertical-align: middle !important;">
+Between items of the same scale
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>the <em>robust</em> approach is to implement a factor analysis accounting for those differences, however it is somewhat of a complexity.</p>
+</div>
 <div id="example" class="section level3">
 <h3>Example</h3>
 <p>Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we’ll use the popular <code>psych</code> package and the command <code>fa()</code>.</p>
@@ -330,7 +425,7 @@ With very little effort, I have this table with a nice option to fool around wit
 ## Proportion Var 0.484</code></pre>
 <p>You can also create a diagram of loadings. The <code>fa.diagram()</code> command takes the output from <code>fa()</code> and creates a diagram, called a <em>path diagram</em> to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.</p>
 <pre class="r"><code>fa.diagram(EFA)</code></pre>
-<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 </div>
 <div id="side-note-lack-of-pipes" class="section level3">
 <h3>Side Note: Lack of Pipes</h3>
@@ -387,7 +482,7 @@ To see an example, lets first look at the raw data for the first six participant
 <pre class="r"><code>plot(density(EFA$scores, 
              na.rm = TRUE), 
      main = &quot;Factor Scores&quot;)</code></pre>
-<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p>to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population. However interpretations aren’t conducted at the individual level, rather they are generalized across a larger sample. This means talking about any of these six participants separately would be complete nonsense. If you want to know what the study said, look over the Brotherton, French &amp; Pickering (2013) paper.</p>
 <p>OK that’s enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Next week we deal with missingness!</p>
 </div>

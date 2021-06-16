@@ -261,6 +261,57 @@ The basic assumption of a **FA** is that for a collection of observed variables,
 
 Moving forward, we're going to conduct what is known as a single-factor **explanatory factor analysis**, or **EFA**. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.
 
+### A Note
+When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.
+
+```{r}
+
+lst <- tibble(
+  
+  approach = c("Performed accounting for multiple scales",
+               "Performed on scales that have been reduced",
+               "Performed on grouped items with like scales"
+               ),
+  
+  complexity = c("Most",
+                 "Less",
+                 "Minimal"
+                 ),
+  
+  information = c("Information is lossless",
+                  "Information gathered from higher order scales is lost due to reduction",
+                  "Only information between items with the same scaling is retained"
+                  ),
+  
+  get = c("Between items of the same AND different scales",
+         "Between items of the same AND different scales at the lowest scaling",
+          "Between items of the same scale"
+         )
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE,purl=FALSE}
+lst %>%
+  kbl(col.names = c("EFA approach", "Complexity", "Retention", "Description"), 
+      "html", 
+      escape = FALSE,
+      align = 'llll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+the *robust* approach is to implement a factor analysis accounting for those differences, however it is somewhat of a  complexity. 
+
 ### Example
 
 Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we'll use the popular `psych` package and the command `fa()`. 
