@@ -37,11 +37,14 @@ editor_options:
 <ul>
 <li><a href="#a-note">A Note</a></li>
 <li><a href="#example">Example</a></li>
-<li><a href="#side-note">Side Note</a></li>
 <li><a href="#viewing-and-visualizing-factors">Viewing and Visualizing Factors</a></li>
 <li><a href="#side-note-lack-of-pipes">Side Note: Lack of Pipes</a></li>
 </ul></li>
-<li><a href="#interpreting-factor-scores">Interpreting Factor Scores</a></li>
+<li><a href="#interpreting-factor-scores">Interpreting Factor Scores</a>
+<ul>
+<li><a href="#using-items">…using Items</a></li>
+<li><a href="#using-participants">…using Participants</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -248,7 +251,8 @@ With very little effort, I have this table with a nice option to fool around wit
 <h2>Method: Explanatory Factor Analysis</h2>
 <p>Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items <em>hang out together</em> to create a construct? This is the underlying principle of a <strong>factor analysis</strong>, or <strong>FA</strong>.</p>
 <p>The basic assumption of a <strong>FA</strong> is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.</p>
-<p>Moving forward, we’re going to conduct what is known as a single-factor <strong>explanatory factor analysis</strong>, or <strong>EFA</strong>. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.</p>
+<p>Moving forward, we’re going to conduct what is known as a single-factor <strong>exploratory factor analysis</strong>, or <strong>EFA</strong>. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.</p>
+<p>In a nutshell, an EFA is just a statistical method used to uncover underlying categorizations, groups, structures often hidden within a data set. This is done by assessing measures and could easily serve as your group level data! As a result, you can measure the internal reliability of a measure as well.</p>
 <div id="a-note" class="section level3">
 <h3>A Note</h3>
 <p>When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.</p>
@@ -316,63 +320,79 @@ Between items of the same scale
 </tbody>
 </table>
 </center>
-<p>Given that we’ll be only concentrating</p>
+<p>Given that we’ll be only concentrating on the latter, you may have to run more than one EFA.</p>
 </div>
 <div id="example" class="section level3">
 <h3>Example</h3>
-<p>Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we’ll use the popular <code>psych</code> package and the command <code>fa()</code>.</p>
-<pre class="r"><code>EFA &lt;- fa(conspiracy_data)</code></pre>
+<p>Theoretically a five-point likert scale will have five underlying factors, or one for each choice. However in practice, this is rarely the case and we tend to treat the scale as an upper limit - ergo we can’t have more than five factors. So to decide on the number of factors, we use what is called a scree plot. Let’s do this for the first ten rows of our data set.</p>
+<pre class="r"><code>conspiracy_data_10 &lt;- conspiracy_data %&gt;%
+                      head(n=10)</code></pre>
+<pre class="r"><code>scree(conspiracy_data_10)</code></pre>
+<pre><code>## In smc, smcs &lt; 0 were set to .0
+## In smc, smcs &lt; 0 were set to .0
+## In smc, smcs &lt; 0 were set to .0</code></pre>
+<pre><code>## In factor.scores, the correlation matrix is singular, an approximation is used</code></pre>
+<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>We’re going to ignore the <em>y</em>-axis and just look at where the open circle seems to cross that horizontal line. It looks like this happens around 3, so we can that there are likely three factors.</p>
+<p>Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we’ll use the popular <code>psych</code> package and the command <code>fa()</code> where we define the number of factors by <code>nfactors</code>.</p>
+<pre class="r"><code>EFA &lt;- fa(conspiracy_data_10,
+          nfactors = 3)</code></pre>
+<pre><code>## In smc, smcs &lt; 0 were set to .0
+## In smc, smcs &lt; 0 were set to .0
+## In smc, smcs &lt; 0 were set to .0</code></pre>
+<pre><code>## Loading required namespace: GPArotation</code></pre>
+<pre><code>## In factor.scores, the correlation matrix is singular, an approximation is used</code></pre>
 <p>and then to view the results</p>
 <pre class="r"><code>EFA</code></pre>
 <pre><code>## Factor Analysis using method =  minres
-## Call: fa(r = conspiracy_data)
+## Call: fa(r = conspiracy_data_10, nfactors = 3)
 ## Standardized loadings (pattern matrix) based upon correlation matrix
-##      MR1   h2   u2 com
-## Q1  0.70 0.49 0.51   1
-## Q2  0.72 0.52 0.48   1
-## Q3  0.64 0.41 0.59   1
-## Q4  0.77 0.59 0.41   1
-## Q5  0.67 0.45 0.55   1
-## Q6  0.75 0.56 0.44   1
-## Q7  0.73 0.54 0.46   1
-## Q8  0.65 0.43 0.57   1
-## Q9  0.70 0.48 0.52   1
-## Q10 0.56 0.32 0.68   1
-## Q11 0.72 0.52 0.48   1
-## Q12 0.79 0.62 0.38   1
-## Q13 0.68 0.46 0.54   1
-## Q14 0.74 0.55 0.45   1
-## Q15 0.57 0.33 0.67   1
+##       MR1   MR2   MR3   h2     u2 com
+## Q1   0.79  0.19  0.08 0.94 0.0613 1.1
+## Q2   0.69  0.16  0.19 0.87 0.1253 1.3
+## Q3  -0.01  0.93 -0.04 0.84 0.1636 1.0
+## Q4   0.41  0.61  0.05 0.89 0.1061 1.8
+## Q5   0.68  0.37  0.04 0.95 0.0497 1.5
+## Q6  -0.02 -0.07  0.97 0.87 0.1318 1.0
+## Q7   0.93  0.12 -0.06 0.94 0.0629 1.0
+## Q8   0.15  0.78  0.03 0.80 0.2037 1.1
+## Q9   0.71 -0.29  0.09 0.43 0.5680 1.4
+## Q10  0.33 -0.12  0.77 0.99 0.0068 1.4
+## Q11  0.92 -0.03  0.09 0.95 0.0501 1.0
+## Q12  1.02 -0.10 -0.01 0.92 0.0760 1.0
+## Q13  0.05  0.82  0.15 0.84 0.1632 1.1
+## Q14  0.81  0.12  0.10 0.92 0.0754 1.1
+## Q15 -0.06  0.17  0.94 0.94 0.0626 1.1
 ## 
-##                 MR1
-## SS loadings    7.27
-## Proportion Var 0.48
+##                        MR1  MR2  MR3
+## SS loadings           6.68 3.41 3.00
+## Proportion Var        0.45 0.23 0.20
+## Cumulative Var        0.45 0.67 0.87
+## Proportion Explained  0.51 0.26 0.23
+## Cumulative Proportion 0.51 0.77 1.00
 ## 
-## Mean item complexity =  1
-## Test of the hypothesis that 1 factor is sufficient.
+##  With factor correlations of 
+##      MR1  MR2  MR3
+## MR1 1.00 0.59 0.73
+## MR2 0.59 1.00 0.31
+## MR3 0.73 0.31 1.00
 ## 
-## The degrees of freedom for the null model are  105  and the objective function was  9.31 with Chi Square of  23173.8
-## The degrees of freedom for the model are 90  and the objective function was  1.93 
+## Mean item complexity =  1.2
+## Test of the hypothesis that 3 factors are sufficient.
 ## 
-## The root mean square of the residuals (RMSR) is  0.08 
-## The df corrected root mean square of the residuals is  0.09 
+## The degrees of freedom for the null model are  105  and the objective function was  165.97 with Chi Square of  525.57
+## The degrees of freedom for the model are 63  and the objective function was  140.43 
 ## 
-## The harmonic number of observations is  2495 with the empirical chi square  3398.99  with prob &lt;  0 
-## The total number of observations was  2495  with Likelihood Chi Square =  4809.34  with prob &lt;  0 
+## The root mean square of the residuals (RMSR) is  0.04 
+## The df corrected root mean square of the residuals is  0.05 
 ## 
-## Tucker Lewis Index of factoring reliability =  0.761
-## RMSEA index =  0.145  and the 90 % confidence intervals are  0.142 0.149
-## BIC =  4105.36
-## Fit based upon off diagonal values = 0.97
-## Measures of factor score adequacy             
-##                                                    MR1
-## Correlation of (regression) scores with factors   0.97
-## Multiple R square of scores with factors          0.94
-## Minimum correlation of possible factor scores     0.87</code></pre>
-</div>
-<div id="side-note" class="section level3">
-<h3>Side Note</h3>
-<p>That’s a lot of information! While every item on here is important depending on need, we’re going to skip the explanation of everything besides the column <code>MR1</code> in this course because without some solid background in statistics, the explanation of other item here are difficult to describe. In fact, a majority are not even relevant for our purposes.</p>
+## The harmonic number of observations is  10 with the empirical chi square  3.45  with prob &lt;  1 
+## The total number of observations was  10  with Likelihood Chi Square =  163.84  with prob &lt;  6.5e-11 
+## 
+## Tucker Lewis Index of factoring reliability =  -0.896
+## RMSEA index =  0.386  and the 90 % confidence intervals are  0.343 0.501
+## BIC =  18.77
+## Fit based upon off diagonal values = 1</code></pre>
 </div>
 <div id="viewing-and-visualizing-factors" class="section level3">
 <h3>Viewing and Visualizing Factors</h3>
@@ -380,29 +400,30 @@ Between items of the same scale
 <pre class="r"><code>EFA$loadings</code></pre>
 <pre><code>## 
 ## Loadings:
-##     MR1  
-## Q1  0.703
-## Q2  0.719
-## Q3  0.638
-## Q4  0.770
-## Q5  0.672
-## Q6  0.746
-## Q7  0.734
-## Q8  0.654
-## Q9  0.695
-## Q10 0.565
-## Q11 0.719
-## Q12 0.786
-## Q13 0.679
-## Q14 0.743
-## Q15 0.574
+##     MR1    MR2    MR3   
+## Q1   0.786  0.194       
+## Q2   0.686  0.164  0.189
+## Q3          0.934       
+## Q4   0.414  0.613       
+## Q5   0.685  0.371       
+## Q6                 0.966
+## Q7   0.935  0.115       
+## Q8   0.151  0.782       
+## Q9   0.712 -0.287       
+## Q10  0.331 -0.116  0.774
+## Q11  0.924              
+## Q12  1.025              
+## Q13         0.825  0.149
+## Q14  0.811  0.125       
+## Q15         0.175  0.944
 ## 
-##                  MR1
-## SS loadings    7.267
-## Proportion Var 0.484</code></pre>
+##                  MR1   MR2   MR3
+## SS loadings    5.809 2.913 2.521
+## Proportion Var 0.387 0.194 0.168
+## Cumulative Var 0.387 0.581 0.750</code></pre>
 <p>You can also create a diagram of loadings. The <code>fa.diagram()</code> command takes the output from <code>fa()</code> and creates a diagram, called a <em>path diagram</em> to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results.</p>
 <pre class="r"><code>fa.diagram(EFA)</code></pre>
-<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 </div>
 <div id="side-note-lack-of-pipes" class="section level3">
 <h3>Side Note: Lack of Pipes</h3>
@@ -411,13 +432,47 @@ Between items of the same scale
 <pre><code>## [1] &quot;psych&quot; &quot;fa&quot;</code></pre>
 <p>Notice that the <code>psych</code> package has its own data type called “psych”. Tidy involves data that is neatly in rows and columns. In any case, we’ll stick to the default format for now.</p>
 <p>You can actually use the <code>class()</code> syntax to figure out the data type for any variable in R.</p>
+<p>Anyway getting back to the issue, we have three factors consisting of certain items. Now the final step is to go back and decide compartmentalize <code>MR1</code>, <code>MR2</code>, and <code>MR3</code> based on how the questions are grouped.</p>
 </div>
 </div>
 <div id="interpreting-factor-scores" class="section level2">
 <h2>Interpreting Factor Scores</h2>
-<p>The <code>EFA</code> object we’ve created also contains a named list element, scores, which contains factor scores for each person. These values tell you how much of the construct each individual likely possesses<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a><br />
-To see an example, lets first look at the raw data for the first six participants</p>
-<pre class="r"><code>head(conspiracy_data)</code></pre>
+<div id="using-items" class="section level3">
+<h3>…using Items</h3>
+<p>Let’s take a look at the codebook, but this time look at them by items within factors</p>
+<pre class="r"><code>MR1_factor &lt;- conspiracy_codebook %&gt;%
+  filter(str_detect(Item, paste(c(&quot;Q12&quot;, &quot;Q7&quot;, &quot;Q11&quot;, &quot;Q14&quot;, &quot;Q1&quot;, &quot;Q9&quot;, &quot;Q2&quot;, &quot;Q5&quot;), collapse = &#39;|&#39;)))
+
+MR2_factor &lt;- conspiracy_codebook %&gt;%
+  filter(str_detect(Item, paste(c(&quot;Q3&quot;, &quot;Q13&quot;, &quot;Q8&quot;, &quot;Q4&quot;), collapse = &#39;|&#39;)))
+
+MR3_factor &lt;- conspiracy_codebook %&gt;%
+  filter(str_detect(Item, paste(c(&quot;Q6&quot;, &quot;Q15&quot;, &quot;Q10&quot;), collapse = &#39;|&#39;)))</code></pre>
+<p>If you’re interested, the <code>|</code> is called a logical operator and it means the word <strong><em>or</em></strong>. Information about other operators can be found <a href="https://www.statmethods.net/management/operators.html" target="_blank">here</a>.</p>
+<pre class="r"><code>reactable(MR1_factor,
+          defaultPageSize = 11)</code></pre>
+<div id="htmlwidget-6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Item":["Q1","Q2","Q5","Q7","Q9","Q10","Q11","Q12","Q13","Q14","Q15"],"Description":["The government is involved in the murder of innocent citizens and/or well-known public figures, and keeps this a secret","The power held by heads of state is second to that of small unknown groups who really control world politics","Groups of scientists manipulate, fabricate, or suppress evidence in order to deceive the public","A small, secret group of people is responsible for making all major world decisions, such as going to war","Technology with mind-control capacities is used on people without their knowledge","New and advanced technology which would harm current industry is being suppressed","The government uses people as patsies to hide its involvement in criminal activity","Certain significant events have been the result of the activity of a small group who secretly manipulate world events","Some UFO sightings and rumors are planned or staged in order to distract the public from real alien contact","Experiments involving new drugs or technologies are routinely carried out on the public without their knowledge or consent","A lot of important information is deliberately concealed from the public out of self-interest"]},"columns":[{"accessor":"Item","name":"Item","type":"character"},{"accessor":"Description","name":"Description","type":"character"}],"defaultPageSize":11,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5e0e721168029887045522cd3740f197","key":"5e0e721168029887045522cd3740f197"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>reactable(MR2_factor)</code></pre>
+<div id="htmlwidget-7" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Item":["Q3","Q4","Q8","Q13"],"Description":["Secret organizations communicate with extraterrestrials, but keep this fact from the public","The spread of certain viruses and/or diseases is the result of the deliberate, concealed efforts of some organization","Evidence of alien contact is being concealed from the public","Some UFO sightings and rumors are planned or staged in order to distract the public from real alien contact"]},"columns":[{"accessor":"Item","name":"Item","type":"character"},{"accessor":"Description","name":"Description","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f815e61b5fbe2abe74e3702a687109ba","key":"f815e61b5fbe2abe74e3702a687109ba"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>reactable(MR3_factor)</code></pre>
+<div id="htmlwidget-8" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Item":["Q6","Q10","Q15"],"Description":["The government permits or perpetrates acts of terrorism on its own soil, disguising its involvement","New and advanced technology which would harm current industry is being suppressed","A lot of important information is deliberately concealed from the public out of self-interest"]},"columns":[{"accessor":"Item","name":"Item","type":"character"},{"accessor":"Description","name":"Description","type":"character"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"196c75eeca4ab127784b0f11935c10c7","key":"196c75eeca4ab127784b0f11935c10c7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<p>We could say that</p>
+<ol style="list-style-type: decimal">
+<li><code>MR1</code> = <em>information control by groups</em></li>
+<li><code>MR2</code> = <em>hiding information from the public</em></li>
+<li><code>MR3</code> = <em>acts of self-interest to suppress information</em></li>
+</ol>
+<p>Of course there are many interpretations so yours may differ. Regardless the idea should always be in the context of your original purpose and research questions.</p>
+<p>The additional benefit here is that these interpretations can serve as <em>natural groupings</em>, or ones that are derived from, rather than labeling them prior to a statistical analysis.</p>
+</div>
+<div id="using-participants" class="section level3">
+<h3>…using Participants</h3>
+<p>An EFA contains information about factor scores for each participant in your data set These scores are indicators of how much or how little of the factor each participant likely possesses. Please note that factor scores are not calculated for respondents with missing data. That issue will be tackled in next week’s walkthrough. Anyway let’s take a look at our data by calculating the total scores.</p>
+<p>To see an example, lets first look at the raw data for the first six participants</p>
+<pre class="r"><code>head(conspiracy_data_10)</code></pre>
 <pre><code>## # A tibble: 6 x 15
 ##      Q1    Q2    Q3    Q4    Q5    Q6    Q7    Q8    Q9   Q10   Q11   Q12   Q13
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -429,45 +484,47 @@ To see an example, lets first look at the raw data for the first six participant
 ## 6     1     1     1     1     1     1     1     1     1     1     1     1     1
 ## # … with 2 more variables: Q14 &lt;dbl&gt;, Q15 &lt;dbl&gt;</code></pre>
 <p>or if you prefer, we can show this using</p>
-<pre class="r"><code>reactable(head(conspiracy_data))</code></pre>
-<div id="htmlwidget-6" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Q1":[5,5,2,5,5,1],"Q2":[5,5,4,4,4,1],"Q3":[3,5,1,1,1,1],"Q4":[5,5,2,2,4,1],"Q5":[5,5,2,4,4,1],"Q6":[5,3,2,5,5,1],"Q7":[5,5,4,4,4,1],"Q8":[3,5,2,1,3,1],"Q9":[4,1,2,4,1,1],"Q10":[5,4,4,5,5,1],"Q11":[5,4,2,5,5,1],"Q12":[5,5,4,5,5,1],"Q13":[3,4,0,1,3,1],"Q14":[5,4,2,4,5,1],"Q15":[5,5,4,5,5,1]},"columns":[{"accessor":"Q1","name":"Q1","type":"numeric"},{"accessor":"Q2","name":"Q2","type":"numeric"},{"accessor":"Q3","name":"Q3","type":"numeric"},{"accessor":"Q4","name":"Q4","type":"numeric"},{"accessor":"Q5","name":"Q5","type":"numeric"},{"accessor":"Q6","name":"Q6","type":"numeric"},{"accessor":"Q7","name":"Q7","type":"numeric"},{"accessor":"Q8","name":"Q8","type":"numeric"},{"accessor":"Q9","name":"Q9","type":"numeric"},{"accessor":"Q10","name":"Q10","type":"numeric"},{"accessor":"Q11","name":"Q11","type":"numeric"},{"accessor":"Q12","name":"Q12","type":"numeric"},{"accessor":"Q13","name":"Q13","type":"numeric"},{"accessor":"Q14","name":"Q14","type":"numeric"},{"accessor":"Q15","name":"Q15","type":"numeric"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f1187ae18923888def15d97cbfb927f5","key":"f1187ae18923888def15d97cbfb927f5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>reactable(conspiracy_data_10)</code></pre>
+<div id="htmlwidget-9" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Q1":[5,5,2,5,5,1,4,5,1,1],"Q2":[5,5,4,4,4,1,3,4,1,2],"Q3":[3,5,1,1,1,1,3,3,1,1],"Q4":[5,5,2,2,4,1,3,3,1,1],"Q5":[5,5,2,4,4,1,4,4,1,1],"Q6":[5,3,2,5,5,1,3,5,1,5],"Q7":[5,5,4,4,4,1,3,5,1,1],"Q8":[3,5,2,1,3,1,4,5,1,1],"Q9":[4,1,2,4,1,1,2,5,1,1],"Q10":[5,4,4,5,5,1,3,5,1,4],"Q11":[5,4,2,5,5,1,3,5,1,1],"Q12":[5,5,4,5,5,1,2,5,1,1],"Q13":[3,4,0,1,3,1,2,3,1,1],"Q14":[5,4,2,4,5,1,3,4,1,1],"Q15":[5,5,4,5,5,1,4,5,1,5]},"columns":[{"accessor":"Q1","name":"Q1","type":"numeric"},{"accessor":"Q2","name":"Q2","type":"numeric"},{"accessor":"Q3","name":"Q3","type":"numeric"},{"accessor":"Q4","name":"Q4","type":"numeric"},{"accessor":"Q5","name":"Q5","type":"numeric"},{"accessor":"Q6","name":"Q6","type":"numeric"},{"accessor":"Q7","name":"Q7","type":"numeric"},{"accessor":"Q8","name":"Q8","type":"numeric"},{"accessor":"Q9","name":"Q9","type":"numeric"},{"accessor":"Q10","name":"Q10","type":"numeric"},{"accessor":"Q11","name":"Q11","type":"numeric"},{"accessor":"Q12","name":"Q12","type":"numeric"},{"accessor":"Q13","name":"Q13","type":"numeric"},{"accessor":"Q14","name":"Q14","type":"numeric"},{"accessor":"Q15","name":"Q15","type":"numeric"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"a36d1b249cb0aa146924f5b6e9de3e72","key":"a36d1b249cb0aa146924f5b6e9de3e72"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <p>We can then apply <code>rowSums()</code> command to see the total scores for these respondents.</p>
-<pre class="r"><code>conspiracy_data %&gt;%
+<pre class="r"><code>conspiracy_data_10 %&gt;%
   head() %&gt;%
   rowSums()</code></pre>
 <pre><code>## [1] 68 65 37 55 59 15</code></pre>
 <p>Then let’s look at the first six participant factor scores to see the relationship between those and the responses.</p>
 <pre class="r"><code>head(EFA$scores)</code></pre>
-<pre><code>##             MR1
-## [1,]  1.5614675
-## [2,]  1.3432026
-## [3,] -0.3960355
-## [4,]  0.7478868
-## [5,]  1.0435203
-## [6,] -1.7290812</code></pre>
+<pre><code>##             MR1        MR2        MR3
+## [1,]  0.9424517  0.8902524  0.7404219
+## [2,]  0.7800917  1.8475388  0.1314532
+## [3,] -0.1400622 -0.8264001 -0.2598484
+## [4,]  0.8861106 -0.9053159  0.8159931
+## [5,]  0.8020422  0.1576844  0.8300740
+## [6,] -1.3316336 -0.7584980 -1.6976942</code></pre>
 <p>and with their descriptive summary</p>
 <pre class="r"><code>summary(EFA$scores)</code></pre>
-<pre><code>##       MR1           
-##  Min.   :-1.854703  
-##  1st Qu.:-0.783260  
-##  Median :-0.001971  
-##  Mean   : 0.000000  
-##  3rd Qu.: 0.728568  
-##  Max.   : 1.949580</code></pre>
+<pre><code>##       MR1               MR2               MR3         
+##  Min.   :-1.3316   Min.   :-0.9210   Min.   :-1.6977  
+##  1st Qu.:-1.0170   1st Qu.:-0.8094   1st Qu.:-0.2542  
+##  Median : 0.3200   Median :-0.3004   Median : 0.3749  
+##  Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+##  3rd Qu.: 0.8336   3rd Qu.: 0.6661   3rd Qu.: 0.7523  
+##  Max.   : 0.9425   Max.   : 1.8475   Max.   : 0.8301</code></pre>
 <p>I can plot the density curve</p>
 <pre class="r"><code>plot(density(EFA$scores, 
              na.rm = TRUE), 
      main = &quot;Factor Scores&quot;)</code></pre>
-<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
-<p>to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population. However interpretations aren’t conducted at the individual level, rather they are generalized across a larger sample. This means talking about any of these six participants separately would be complete nonsense. If you want to know what the study said, look over the Brotherton, French &amp; Pickering (2013) paper.</p>
+<p><img src="/walkthroughs/04-walkthrough_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population for the purposes of shwoing an example. You should always perform an EFA in your entire data set where applicable, unless there is an underlying reason not to.</p>
+<p>However interpretations aren’t conducted at the individual level, rather they are generalized across a larger sample. This means creating overarching statements about any of these ten participants separately would be complete nonsense, rather doing this can provide indicators of what you may see when implementing an EFA on the entire sample.</p>
+<p>If you want to know what the study said broadly, please take a look over the Brotherton, French &amp; Pickering (2013) paper.</p>
 <p>OK that’s enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Next week we deal with missingness!</p>
+</div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>I am personally fond of the BSR.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Yuck<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Please note that factor scores are not computed for participants with missing data. We will deal with that issue next week.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

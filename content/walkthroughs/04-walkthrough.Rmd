@@ -259,7 +259,9 @@ Suppose you are conducting a survey and you want to know whether the items in th
 
 The basic assumption of a **FA** is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.
 
-Moving forward, we're going to conduct what is known as a single-factor **explanatory factor analysis**, or **EFA**. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.
+Moving forward, we're going to conduct what is known as a single-factor **exploratory factor analysis**, or **EFA**. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.
+
+In a nutshell, an EFA is just a statistical method used to uncover underlying categorizations, groups, structures often hidden within a data set. This is done by assessing measures and could easily serve as your group level data! As a result, you can measure the internal reliability of a measure as well.
 
 ### A Note
 When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.
@@ -311,15 +313,30 @@ lst %>%
 ```
 </center>
 
-Given that we'll be only concentrating
+Given that we'll be only concentrating on the latter, you may have to run more than one EFA.
+
 
 ### Example
 
-Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we'll use the popular `psych` package and the command `fa()`. 
-
+Theoretically a five-point likert scale will have five underlying factors, or one for each choice. However in practice, this is rarely the case and we tend to treat the scale as an upper limit - ergo we can't have more than five factors. So to decide on the number of factors, we use what is called a scree plot. Let's do this for the first ten rows of our data set.
 
 ```{r}
-EFA <- fa(conspiracy_data)
+conspiracy_data_10 <- conspiracy_data %>%
+                      head(n=10)
+```
+
+```{r, warning=FALSE}
+scree(conspiracy_data_10)
+```
+
+We're going to ignore the *y*-axis and just look at where the open circle seems to cross that horizontal line. It looks like this happens around 3, so we can that there are likely three factors.
+
+Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we'll use the popular `psych` package and the command `fa()` where we define the number of factors by `nfactors`. 
+
+
+```{r, warning=FALSE}
+EFA <- fa(conspiracy_data_10,
+          nfactors = 3)
 ```
 
 and then to view the results 
@@ -328,9 +345,6 @@ and then to view the results
 EFA
 ```
 
-### Side Note
-
-That's a lot of information! While every item on here is important depending on need, we're going to skip the explanation of everything besides the column `MR1` in this course because without some solid background in statistics, the explanation of other item here are difficult to describe. In fact, a majority are not even relevant for our purposes.
 
 ### Viewing and Visualizing Factors
 
@@ -357,25 +371,66 @@ Notice that the `psych` package has its own data type called  "psych". Tidy invo
 
 You can actually use the `class()` syntax to figure out the data type for any variable in R.
 
+Anyway getting back to the issue, we have three factors consisting of certain items. Now the final step is to go back and decide compartmentalize `MR1`, `MR2`, and `MR3` based on how the questions are grouped.
+
 ## Interpreting Factor Scores
 
-The `EFA` object we've created also contains a named list element, scores, which contains factor scores for each person. These values tell you how much of the construct each individual likely possesses^[Please note that factor scores are not computed for participants with missing data. We will deal with that issue next week.]  
+### ...using Items
+
+Let's take a look at the codebook, but this time look at them by items within factors
+
+```{r}
+MR1_factor <- conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q12", "Q7", "Q11", "Q14", "Q1", "Q9", "Q2", "Q5"), collapse = '|')))
+
+MR2_factor <- conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q3", "Q13", "Q8", "Q4"), collapse = '|')))
+
+MR3_factor <- conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q6", "Q15", "Q10"), collapse = '|')))
+```
+
+If you're interested, the `|` is called a logical operator and it means the word ***or***. Information about other operators can be found [here](https://www.statmethods.net/management/operators.html){target="_blank"}.
+
+```{r}
+reactable(MR1_factor,
+          defaultPageSize = 11)
+
+reactable(MR2_factor)
+
+reactable(MR3_factor)
+```
+
+We could say that 
+
+1. `MR1` = *information control by groups*
+2. `MR2` = *hiding information from the public*
+3. `MR3` = *acts of self-interest to suppress information* 
+
+Of course there are many interpretations so yours may differ. Regardless the idea should always be in the context of your original purpose and research questions.
+
+The additional benefit here is that these interpretations can serve as *natural groupings*, or ones that are derived from, rather than labeling them prior to a statistical analysis. 
+
+### ...using Participants
+
+An EFA contains information about factor scores for each participant in your data set These scores are indicators of how much or how little of the factor each participant likely possesses. Please note that factor scores are not calculated for respondents with missing data. That issue will be tackled in next week's walkthrough. Anyway let's take a look at our data by calculating the total scores.
+
 To see an example, lets first look at the raw data for the first six participants
 
 ```{r}
-head(conspiracy_data)
+head(conspiracy_data_10)
 ```
 
 or if you prefer, we can show this using
 
 ```{r}
-reactable(head(conspiracy_data))
+reactable(conspiracy_data_10)
 ```
 
 We can then apply `rowSums()` command to see the total scores for these respondents.
 
 ```{r}
-conspiracy_data %>%
+conspiracy_data_10 %>%
   head() %>%
   rowSums()
 ```
@@ -398,6 +453,10 @@ plot(density(EFA$scores,
      main = "Factor Scores")
 ```
 
-to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population. However interpretations aren't conducted at the individual level, rather they are generalized across a larger sample. This means talking about any of these six participants separately would be complete nonsense. If you want to know what the  study said, look over the Brotherton, French & Pickering (2013) paper. 
+to get a feel for how the data looks. So what does it all mean? Well this was an example of how to go about performing one so we used a very small subset of the entire population for the purposes of shwoing an example. You should always perform an EFA in your entire data set where applicable, unless there is an underlying reason not to. 
+
+However interpretations aren't conducted at the individual level, rather they are generalized across a larger sample. This means creating overarching statements about any of these ten participants separately would be complete nonsense, rather doing this can provide indicators of what you may see when implementing an EFA on the entire sample. 
+
+If you want to know what the study said broadly, please take a look over the Brotherton, French & Pickering (2013) paper. 
 
 OK that's enough. Factor analysis can be quite useful, but it is also often overused and interpretations are made beyond the scope of EFAs can actually tell us. Next week we deal with missingness!
