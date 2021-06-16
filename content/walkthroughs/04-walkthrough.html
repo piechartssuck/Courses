@@ -252,29 +252,6 @@ With very little effort, I have this table with a nice option to fool around wit
 <div id="a-note" class="section level3">
 <h3>A Note</h3>
 <p>When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.</p>
-<pre class="r"><code>lst &lt;- tibble(
-  
-  approach = c(&quot;Performed accounting for multiple scales&quot;,
-               &quot;Performed on scales that have been reduced&quot;,
-               &quot;Performed on grouped items with like scales&quot;
-               ),
-  
-  complexity = c(&quot;Most&quot;,
-                 &quot;Less&quot;,
-                 &quot;Minimal&quot;
-                 ),
-  
-  information = c(&quot;Information is lossless&quot;,
-                  &quot;Information gathered from higher order scales is lost due to reduction&quot;,
-                  &quot;Only information between items with the same scaling is retained&quot;
-                  ),
-  
-  get = c(&quot;Between items of the same AND different scales&quot;,
-         &quot;Between items of the same AND different scales at the lowest scaling&quot;,
-          &quot;Between items of the same scale&quot;
-         )
-  
-)</code></pre>
 <center>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -304,7 +281,7 @@ Most
 <td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Information is lossless
 </td>
-<td style="text-align:left;vertical-align: middle !important;">
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Between items of the same AND different scales
 </td>
 </tr>
@@ -318,7 +295,7 @@ Less
 <td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Information gathered from higher order scales is lost due to reduction
 </td>
-<td style="text-align:left;vertical-align: middle !important;">
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Between items of the same AND different scales at the lowest scaling
 </td>
 </tr>
@@ -332,14 +309,14 @@ Minimal
 <td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Only information between items with the same scaling is retained
 </td>
-<td style="text-align:left;vertical-align: middle !important;">
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
 Between items of the same scale
 </td>
 </tr>
 </tbody>
 </table>
 </center>
-<p>the <em>robust</em> approach is to implement a factor analysis accounting for those differences, however it is somewhat of a complexity.</p>
+<p>Given that we’ll be only concentrating</p>
 </div>
 <div id="example" class="section level3">
 <h3>Example</h3>

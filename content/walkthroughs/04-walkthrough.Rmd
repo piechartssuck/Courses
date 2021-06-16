@@ -264,7 +264,7 @@ Moving forward, we're going to conduct what is known as a single-factor **explan
 ### A Note
 When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.
 
-```{r}
+```{r, echo=FALSE}
 
 lst <- tibble(
   
@@ -303,6 +303,7 @@ lst %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "10em") %>%
   column_spec(3, width = "30em") %>%
+  column_spec(4, width = "30em") %>%
   row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
@@ -310,7 +311,7 @@ lst %>%
 ```
 </center>
 
-the *robust* approach is to implement a factor analysis accounting for those differences, however it is somewhat of a  complexity. 
+Given that we'll be only concentrating
 
 ### Example
 
