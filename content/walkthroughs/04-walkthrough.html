@@ -33,7 +33,7 @@ editor_options:
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#data-files-1">Data Files</a></li>
 <li><a href="#loading-a-local-data-set">Loading a Local Data Set</a></li>
-<li><a href="#method-explanatory-factor-analysis">Method: Explanatory Factor Analysis</a>
+<li><a href="#method-exploratory-factor-analysis-efa">Method: Exploratory Factor Analysis (EFA)</a>
 <ul>
 <li><a href="#a-few-things">A Few Things</a></li>
 <li><a href="#example">Example</a></li>
@@ -252,8 +252,8 @@ tags$button(onclick = &quot;document.querySelector(&#39;.themeable-tbl&#39;).cla
 <p><br>
 With very little effort, I have this table with a nice option to fool around with the aesthetics a bit and it all took about 10 seconds. This isn’t unique! You have this ability with nearly everything in R. So don’t code…just copy and tweak. You learn R by tinkering and using it, not by having nightmares about coding<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. OK enough of that, let’s get to our method of the day.</p>
 </div>
-<div id="method-explanatory-factor-analysis" class="section level2">
-<h2>Method: Explanatory Factor Analysis</h2>
+<div id="method-exploratory-factor-analysis-efa" class="section level2">
+<h2>Method: Exploratory Factor Analysis (EFA)</h2>
 <p>Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items <em>hang out together</em> to create a construct? This is the underlying principle of a <strong>factor analysis</strong>, or <strong>FA</strong>.</p>
 <p>The basic assumption of a <strong>FA</strong> is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.</p>
 <p>Moving forward, we’re going to conduct what is known as a single-factor <strong>exploratory factor analysis</strong>, or <strong>EFA</strong>. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.</p>

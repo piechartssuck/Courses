@@ -253,7 +253,7 @@ div(class = "themeable-tbl dark", togglething) # This was copied and only the va
 <br>
 With very little effort, I have this table with a nice option to fool around with the aesthetics a bit and it all took about 10 seconds. This isn't unique! You have this ability with nearly everything in R. So don't code...just copy and tweak. You learn R by tinkering and using it, not by having nightmares about coding^[Yuck]. OK enough of that, let's get to our method of the day.
 
-## Method: Explanatory Factor Analysis
+## Method: Exploratory Factor Analysis (EFA)
 
 Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items *hang out together* to create a construct? This is the underlying principle of a **factor analysis**, or **FA**. 
 
