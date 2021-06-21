@@ -20,7 +20,7 @@ library(fontawesome)
 `r blogdown::shortcode("courseinfo")`
 
 
-## Course objectives
+## Course Objectives
 
 **You can measure anything (well mostly)** Without a basic understanding of measures, you may not be sitting here today! Measurement is a principle trait and whether it is hard wired, learned, or some combination of both, its absence makes quantitative data impossible to classify. But even in cases where measures are available, how can we know if they are consistent and accurate? Without these checks, instruments such as surveys could never be constructed, much less yield results that could be generalized. 
 
@@ -40,16 +40,16 @@ Additionally, this class will expose you to [R](https://cran.r-project.org/)—o
 
 ## FAQ
 
-### Is the course content difficult?
+### *Is the course content difficult?*
 You've probably heard an answer like this before: *At times some of the material can be dense.* Well that isn't much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
 
-### Is R difficult?
+### *Is R difficult?*
 Learning R can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
 
-### What if I find a mistake?
-Tell me! I strive to be error free but like everyone else, make silly mistakes. This includes grammar and spelling errors as well! 
+### *What if I find a mistake?*
+Tell me! I strive to be error free but unfortunately like everyone else, make silly mistakes including grammar and spelling errors as well! 
 
-## Course materials
+## Materials
 There are four optional texts and two software packages necessary for this course. With that said, you will receive some supplementary materials in the course as well.
 
 ### Texts
@@ -93,7 +93,7 @@ The service is convenient, but please keep in mind that it can be slow and is no
 
 You can [find instructions for installing R, RStudio, and all the tidyverse packages here](/resource/install/).
 
-### Note: Online help
+### Online Help
 
 Data science and statistical programming can be difficult. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
 
@@ -119,13 +119,9 @@ I have a mail filter that will automatically bring your email to a top priority 
 
 You should absolutely expect to struggle at times, but there is no better and more satisfying feeling than figuring things out for yourself! In the long run, you're more likely to remember things you've figured out rather than those you've been shown or told. 
 
-## Tasks and grades
+## Tasks
 
-You can find descriptions for all the assignments on the [tasks page](/tasks/).
-
-## Assignments and Grades
-
-You can find up to date descriptions for all the assignments on the [assignments page](/assignment/).
+You can find up to date descriptions for all the tasks on the [tasks page](/tasks/).
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
@@ -175,10 +171,33 @@ assignments %>%
 
 </center>
 
-*Note: The Elevator Pitch, Abstract, and Instrument together is considered to be your final task titled* ***Revise & Resubmit***.
+*Note: The Abstract and Instrument are scored from a combination of six weekly [tasks](https://edp611.asocialdatascientist.com/tasks/). The Elevator Pitch, Abstract and Instrument together is considered to be your final task titled* ***Revise & Resubmit***.
 <br />
 
-### Your hours
+## Grading
+
+```{r grades, echo=FALSE}
+grading <- tribble(
+  ~Grade, ~Range,
+  "A",  "90–100%",
+  "B",  "80%-89%",  
+  "C",  "70–79%",
+  "D",  "60–69%", 
+  "F",  "< 60%"
+)
+```
+
+<center>
+
+```{r show-grades-table, echo=FALSE, results="asis"}
+grading %>%
+  kableExtra::kable(justify = "lc", 
+               col.names = c("Grade", "Range"))
+```
+
+</center>
+
+## Your Hours
 
 Please watch this video:
 
@@ -190,7 +209,7 @@ Your hours (formerly known as office hours) are set times dedicated to you the s
 
 Because of the pandemic, we cannot meet in person. I can meet you online via Zoom. You can request a meeting through either e-mail or Slack. 
 
-### Class conduct and expectations
+## Conduct and Expectations
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
@@ -211,7 +230,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
   2. People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another class. If you care about data, fieldwork and learning a highly marketable practice, you've come to the right place.
   3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
-### Learning and knowledge during a pandemic
+### Learning and Knowledge During a Pandemic
 
 When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *retained* - but the ability to retain something doesn't imply that you know it. 
 
@@ -223,7 +242,7 @@ if you want to test whether you have retained or know a concept, then try explai
 
 If you're finding that you are unable to do that, then I will absolutely make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under these current pandemic conditions, I try to stay flexible and lenient with grading and course expectations. Furthermore, if you feel like you are behind or not understanding everything, **please please please do not stay silent!** As I said earlier, drop me a line!
 
-## Course policies
+## Course Policies
 
 <div class="text-center">
 **Its pretty simple: Be nice. Be honest. Don't cheat. Stay in touch. Be a good human.**
@@ -233,7 +252,7 @@ We will also follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campu
 
 This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus** and will send notifications if course tasks are affected.
 
-## COVID-19 Statement
+### COVID-19 statement
 
 WVU is committed to maintaining a safe learning environment for all students, faculty, and staff. Should campus operations change because of health concerns related to the COVID-19 pandemic, it is possible that this course will move to a fully online delivery format. If that occurs, students will be advised of technical and/or equipment requirements, including remote proctoring software.
 
