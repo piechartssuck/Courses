@@ -72,3 +72,5 @@ kable(wk_post,
   row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
+
+*Please remember to submit the task by 11:59 PM this Friday.*
