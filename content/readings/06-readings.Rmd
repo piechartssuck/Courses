@@ -1,0 +1,72 @@
+---
+title: "Now You Know"
+linktitle: "Week 6: Now You Know"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+  
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(downloadthis)
+```
+
+## SAPA Project (Optional)
+
+If you are interested in a personality test that is ongoing, free and run by faculty at an academic institution, take a look and consider participating the [SAPA Project](https://www.sapa-project.org/){target="_blank"} part of the [Personality Project](https://personality-project.org/){target="_blank"}^[The same people who created and maintain the `psych` package.]. They also share their [de-identified data](https://dataverse.harvard.edu/dataverse/SAPA-Project){target="_blank"} if you are interested.

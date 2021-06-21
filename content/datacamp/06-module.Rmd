@@ -1,0 +1,20 @@
+---
+title: "Now You Know"
+linktitle: "Week 6: Now You Know"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  datacamp:
+    parent: Modules
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete the **Analyzing Survey Data in R** course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
+
+Also remember you are eligible for extra credit after completing the optional **Introduction to Data Visualization with ggplot2** course.

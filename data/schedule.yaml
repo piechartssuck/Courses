@@ -17,7 +17,7 @@ lessons:
     readings: "02-readings"
     datacamp: "02-lesson"
     walkthroughs: "02-walkthrough"
-    tasks: "02-exercise"
+    tasks: "02-tasks"
     due: "02-due"
 
   - title: 'Personality Tests'
@@ -26,7 +26,7 @@ lessons:
     readings: "03-readings"
     datacamp: "03-lesson"
     walkthroughs: "03-walkthrough"
-    tasks: "03-exercise"
+    tasks: "03-tasks"
     due: "03-due"
 
   - title: 'Conspiracy Theories'
@@ -35,7 +35,7 @@ lessons:
     readings: "04-readings"
     datacamp: "04-lesson"
     walkthroughs: "04-walkthrough"
-    tasks: "04-exercise"
+    tasks: "04-tasks"
     due: "04-due"
 
   - title: 'Nerds'
@@ -44,12 +44,13 @@ lessons:
     readings: "05-readings"
     datacamp: "05-lesson"
     walkthroughs: "05-walkthrough"
-    tasks: "05-exercise"
+    tasks: "05-tasks"
     due: "05-due"
 
-  # - title: 'From a Certain Poimt of View... A Certain Point of View?'
-  #   session: 6
-  #   date: "August 9, 2020"
-  #   walkthroughs: "06-walkthrough"
-  #   tasks: "06-exercise"
-  #   due: "06-due"
+  - title: 'Now You Know'
+    session: 6
+    date: "August 9, 2020"
+    readings: "06-readings"
+    datacamp: "06-lesson"
+    tasks: "06-tasks"
+    due: "06-due"

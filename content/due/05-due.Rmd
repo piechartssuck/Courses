@@ -7,7 +7,7 @@ output:
 menu:
   due:
     parent: Due?
-    weight: 4
+    weight: 5
 type: docs
 weight: 1
 editor_options: 
@@ -56,9 +56,9 @@ Description = c("Complete a module in Data Camp that addresses survey design usi
 Location = c("[Link](/datacamp/05-module/#data-camp)",
              "[Link](/tasks/05-tasks/#test-for-validity-and-reliability)",
              "[Link](/tasks/05-tasks/#responding)",
-"[Link](/readings/05-readings/#read-some-papers)",
-"[Link](/readings/05-readings/#review-some-materials)",
-"[Link](/readings/05-readings/#watch-an-optional-video)",
+             "[Link](/readings/05-readings/#read-some-papers)",
+             "[Link](/readings/05-readings/#review-some-materials)",
+             "[Link](/readings/05-readings/#watch-an-optional-video)",
              "[Link](/walkthroughs/05-walkthrough)")
 
 )
