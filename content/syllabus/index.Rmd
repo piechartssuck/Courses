@@ -148,7 +148,6 @@ grading <- tribble(
 )
 ```
 
-*Note: The Elevator Pitch, Abstract, and Instrument together is considered to be your final*
 
 <center>
 
@@ -175,7 +174,8 @@ assignments %>%
 ```
 
 </center>
-  
+
+*Note: The Elevator Pitch, Abstract, and Instrument together is considered to be your final task titled* ***Revise & Resubmit***.
 <br />
 
 ### Your hours
