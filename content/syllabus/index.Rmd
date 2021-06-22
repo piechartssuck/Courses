@@ -134,8 +134,8 @@ assignments <- tribble(
   15, "Reflections", "Slack",
   15, "R Measurement EDA", "eCampus/Slack",
   15, "Check-ins", "Zoom",
-  30, "Final Proposal Bits^[For more information, please check the [Tasks](/tasks/#final-proposal-bits) page]", "eCampus/Slack", 
-  10, "Presentation Bits", "eCampus/Slack"
+  30, "Abstract and Instrument", "eCampus/Slack", 
+  10, "Elevator Pitch", "eCampus/Slack"
 ) 
 
 grading <- tribble(
@@ -148,8 +148,10 @@ grading <- tribble(
 )
 ```
 
+*Note: The Elevator Pitch, Abstract, and Instrument together is considered to be your final*
+
 <center>
-  
+
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
   kableExtra::kable(align='cl',
