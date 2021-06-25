@@ -118,7 +118,7 @@ ex %>%
 |           a. <span style="font-weight:bold; color:#343434">item</span> is the question item given in order of appearance.
 |           b. <span style="font-weight:bold; color:#343434">measure</span> is the possible measure you observe.
 |           c. <span style="font-weight:bold; color:#343434">scale</span> is a full note of the scale used.
-|           d. <span style="font-weight:bold; color:#343434">changes</span> is a brief description of any alterations or amendments you see that could be done to improve the item, if applicable.
+|           d. <span style="font-weight:bold; color:#343434">group</span> is your interpreted factor group^[unless you have prevalidated groups].
 
 ## Responding
 Please create **one response** for the post below on Slack. 
